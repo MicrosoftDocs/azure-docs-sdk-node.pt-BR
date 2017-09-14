@@ -1,0 +1,4 @@
+| | |
+|---|---|
+| <span data-ttu-id="b2406-101">**Gerenciamento de máquinas virtuais**</span><span class="sxs-lookup"><span data-stu-id="b2406-101">**Virtual machine management**</span></span> ||
+| [<span data-ttu-id="b2406-102">Exemplos de gerenciamento de máquinas virtuais do Azure com o Node.js</span><span class="sxs-lookup"><span data-stu-id="b2406-102">Azure virtual machines management sample with Node.js</span></span>](https://github.com/Azure-Samples/storage-blob-node-getting-started) | <span data-ttu-id="b2406-103">Demonstra como criar, listar, reiniciar e excluir as máquinas virtuais.</span><span class="sxs-lookup"><span data-stu-id="b2406-103">Demonstrates how to create, list, restart, and delete virtual machines.</span></span> |

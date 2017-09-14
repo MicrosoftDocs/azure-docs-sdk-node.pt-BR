@@ -1,0 +1,5 @@
+
+* [<span data-ttu-id="c9a70-101">Introdução ao Serviço de Blobs do Azure no Node.js</span><span class="sxs-lookup"><span data-stu-id="c9a70-101">Getting Started with Azure Blob Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-blob-node-getting-started/)
+* [<span data-ttu-id="c9a70-102">Introdução ao Serviço de Arquivos do Azure no Node.js</span><span class="sxs-lookup"><span data-stu-id="c9a70-102">Getting Started with Azure File Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-file-node-getting-started/)
+* [<span data-ttu-id="c9a70-103">Introdução ao serviço Fila do Azure no Node.js</span><span class="sxs-lookup"><span data-stu-id="c9a70-103">Getting Started with Azure Queue Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-queue-node-getting-started/)
+* [<span data-ttu-id="c9a70-104">Introdução ao serviço Tabela do Azure no Node.js</span><span class="sxs-lookup"><span data-stu-id="c9a70-104">Getting Started with Azure Table Service in Node.js</span></span>](https://azure.microsoft.com/resources/samples/storage-table-node-getting-started/)
