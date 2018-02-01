@@ -1,29 +1,22 @@
 ---
 title: "Módulos do Azure Operational Insights para Node.js"
 description: "Referência dos módulos de Insights Operacionais do Azure para Node.js"
-keywords: Azure, SDK, API, Insights Operacionais, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
-ms.openlocfilehash: e7f7ee30509125a131346039c1245eb9fa6cb6b1
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7baa7f2f976cec9d9592231f193eede87a122532
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-operational-insights-modules-for-nodejs"></a>Módulos do Azure Operational Insights para Node.js
-
-## <a name="overview"></a>Visão geral
-
-## <a name="management-package"></a>Pacote de gerenciamento
-
-### <a name="install-the-npm-module"></a>Instalar o módulo npm
 
 Usar npm para instalar o módulo de Insights Operacionais do Azure para Node.js
 

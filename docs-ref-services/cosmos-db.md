@@ -1,29 +1,26 @@
 ---
 title: "Módulos do Azure Cosmos DB para Node.js"
 description: "Referência dos módulos do Azure Cosmos DB para Node.js"
-keywords: Azure,SDK,API, Cosmos DB, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
-ms.openlocfilehash: 1f545f89b5304b611dbe1ed9cb86052c112f13c1
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 575c276ec755dabe8e7b9ed76ba98ef8073c4f1b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>Módulos do Azure Cosmos DB para Node.js
 
-## <a name="overview"></a>Visão geral
-
 O BD Cosmos do Azure é o multimodelo de banco de dados distribuído globalmente da Microsoft. O Azure Cosmos DB permite que você dimensione a taxa de transferência e o armazenamento de maneira elástica e independente em qualquer número de regiões geográficas do Azure. Ele oferece garantias de taxa de transferência, disponibilidade, latência e consistência com SLAs (contratos de nível de serviço) abrangentes, algo que nenhum outro serviço de banco de dados pode oferecer.
 
-O BD Cosmos do Azure contém um mecanismo de banco de dados otimizado para gravação, governado por recursos, independente de esquemas que dá suporte a vários modelos de dados de forma nativa: chave-valor, documentos, gráficos e colunares. Ele também dá suporte a várias APIs para acessar dados incluindo MongoDB, SQL do DocumentDB, Gremlin (versão prévia) e Tabelas do Azure (versão prévia), de forma extensível.
+O Azure Cosmos DB contém um mecanismo de banco de dados otimizado para gravação, governado por recursos, independente de esquemas que dá suporte a vários modelos de dados de forma nativa: chave-valor, documentos, grafos e colunares. Ele também dá suporte a várias APIs para acessar dados incluindo MongoDB, SQL do DocumentDB, Gremlin (versão prévia) e Tabelas do Azure (versão prévia), de forma extensível.
 
 ## <a name="management-package"></a>Pacote de Gerenciamento
 

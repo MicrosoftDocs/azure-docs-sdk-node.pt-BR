@@ -1,25 +1,22 @@
 ---
 title: "Módulos de Barramento de Serviço do Azure para Node.js"
 description: "Referência de módulos do Barramento de Serviço do Azure para Node.js"
-keywords: "Azure, SDK, API, Barramento de Serviço, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Bus
-ms.openlocfilehash: 4d1bbe917512d2ad5383081bef2c28a33541f28c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 792e51acf2577649432b26e4b840bc1d40b7abaf
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a>Módulos de Barramento de Serviço do Azure para Node.js
-
-## <a name="overview"></a>Visão geral
 
 O Barramento de Serviço do Azure é uma plataforma de nuvem de mensagens assíncronas que permite enviar dados entre sistemas separados.
 

@@ -1,25 +1,22 @@
 ---
 title: "Módulos do Azure HDInsight para Node.js"
 description: "Referência dos módulos do Azure HDInsight para Node.js"
-keywords: Azure, SDK, API, HDInsight, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: HDInsight
-ms.openlocfilehash: 1df988e98def42dcf33e90b4c3debece8cbe85e3
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 897ef2e3d2316a1f6f5637027ac2a2211c556f7a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a>Módulos do Azure HDInsight para Node.js
-
-## <a name="overview"></a>Visão geral
 
 O Azure HDInsight é uma distribuição em nuvem dos componentes do Hadoop da HDP (Hortonworks Data Platform). O Apache Hadoop era a estrutura de código-fonte original para processamento distribuído e análise de grandes conjuntos de dados em clusters de computadores.
 

@@ -1,25 +1,22 @@
 ---
 title: "Módulos de Agendador do Azure para Node.js"
 description: "Referência dos módulos de Agendador do Azure para Node.js"
-keywords: Azure, SDK, API, Agendador, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
-ms.openlocfilehash: 3070612721dc434b8c3d7c3200f0666755fd4ce8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 539337abd2fff3830cb022a49aff374e877a08ee
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-scheduler-modules-for-nodejs"></a>Módulos de Agendador do Azure para Node.js
-
-## <a name="overview"></a>Visão geral
 
 O Agendador do Azure cria, mantém e invoca o trabalho agendado por meio de HTTP, HTTPS, uma fila de armazenamento ou do [Barramento de Serviço do Azure](/azure/service-bus-messaging/service-bus-messaging-overview).
 

@@ -1,25 +1,22 @@
 ---
 title: "Módulos de Mapa do Serviço do Azure para Node.js"
 description: "Referência dos módulos de Mapa do Serviço do Azure para Node.js"
-keywords: "Azure, SDK, API, Mapa do Serviço, Node.js"
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
-ms.openlocfilehash: 330cbceb07ba8bea65c1059a1edb3cd9c69653bc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 3f858e52f7a97ff77959825a1be993ef52f96e57
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a>Módulos de Mapa do Serviço do Azure para Node.js
-
-## <a name="overview"></a>Visão geral
 
 O Mapa do Serviço detecta automaticamente os componentes de aplicativos em sistemas Windows e Linux e mapeia a comunicação entre os serviços. O Mapa do Serviço mostra conexões entre servidores, processos e portas em qualquer arquitetura conectada a TCP sem nenhuma configuração necessária além da instalação de um agente.
 

@@ -1,20 +1,19 @@
 ---
 title: "Módulos do Azure para Node.js"
 description: "Visão geral dos módulos de serviço e gerenciamento do Azure para Node.js"
-keywords: "Azure, Node.js, SDK, API, gerenciamento, cliente, serviços"
-author: TomArcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 56dc4f4f36d4e0e9a2d40b38ff8f0b1f9690818c
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 6041303dcb8734cc17052756d291efa6b4c2269e
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-modules-for-nodejs"></a>Módulos do Azure para Node.js
 
@@ -85,7 +84,7 @@ Examine as [instruções de instalação](node-sdk-azure-install.md) para obter 
 
 ## <a name="connect-to-azure-services"></a>Conectar-se aos serviços do Azure
 
-Além de usar os módulos do Azure para criar e gerenciar recursos no Azure, você também pode usar pacotes para se conectar e usar os serviços de nuvem do Azure em seus aplicativos. Por exemplo, você pode atualizar um Banco de Dados SQL de tabela ou carregar arquivos no Armazenamento do Azure. Selecione o pacote de que você precisa para um serviço específico na [lista completa](node-sdk-azure-install.md) e visite a [central de desenvolvedores do Node.js](https://azure.microsoft.com/develop/nodejs/) para obter tutoriais e código de exemplo para aprender a usar os módulos em seus aplicativos.
+Além de usar os módulos do Azure para criar e gerenciar recursos no Azure, você também pode usar pacotes para se conectar e usar os serviços de nuvem do Azure em seus aplicativos. Por exemplo, você pode atualizar um Banco de Dados SQL de tabela ou carregar arquivos no Armazenamento do Azure. Selecione o pacote necessário para um serviço específico na [lista completa](node-sdk-azure-install.md) e visite a [central de desenvolvedores do Node.js](https://azure.microsoft.com/develop/nodejs/) para obter tutoriais e códigos de exemplo para aprender a usar os módulos em seus aplicativos.
 
 Por exemplo, para imprimir o conteúdo de cada blob em um contêiner de armazenamento do Azure:
 
@@ -106,4 +105,4 @@ Os exemplos a seguir abordam tarefas comuns com os módulos de gerenciamento do 
 - [Aplicativos Web](node-samples-services-web-and-mobile.md)
 - [Banco de Dados SQL](node-samples-services-database.md)
    
-Uma [referência](https://docs.microsoft.com/nodejs/api) está disponível para todos os módulos nos módulos de serviço e de gerenciamento. Novos recursos, alterações significativas, e instruções de migração de versões anteriores estão disponíveis nas [notas de versão](https://github.com/Azure/azure-sdk-for-node/releases).
+Uma [referência](https://docs.microsoft.com/javascript/api) está disponível para todos os módulos nos módulos de serviço e de gerenciamento. Novos recursos, alterações significativas, e instruções de migração de versões anteriores estão disponíveis nas [notas de versão](https://github.com/Azure/azure-sdk-for-node/releases).
