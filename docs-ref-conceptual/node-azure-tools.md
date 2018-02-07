@@ -2,35 +2,48 @@
 title: Ferramentas para desenvolvedores do Node.js no Azure | Microsoft Docs
 description: Instalar as ferramentas individuais para o desenvolvimento em Node.js no Azure
 services: multiple
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
-ms.date: 07/14/2017
-ms.author: tarcher
-ms.openlocfilehash: 587e0d4f7e7362875d75acad78cba2f03c9b63b5
-ms.sourcegitcommit: c49cb091b0176ec92e920e70a366be57465ea719
+ms.date: 11/07/2017
+ms.author: cshoe
+ms.openlocfilehash: e9fe95ce6c02d50a70ea51284174c938796148fe
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-tools-for-nodejs-developers"></a><span data-ttu-id="5b18c-103">Ferramentas do Azure para desenvolvedores Node.js</span><span class="sxs-lookup"><span data-stu-id="5b18c-103">Azure tools for Node.js developers</span></span>
-<span data-ttu-id="5b18c-104">Recomendamos essas excelentes ferramentas para desenvolver usando Node.js no Azure, independentemente do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="5b18c-104">We recommend these great tools to develop using Node.js on Azure, no matter what your operating system is.</span></span>
+# <a name="azure-tools-for-nodejs-developers"></a><span data-ttu-id="5e7a6-103">Ferramentas do Azure para desenvolvedores Node.js</span><span class="sxs-lookup"><span data-stu-id="5e7a6-103">Azure tools for Node.js developers</span></span>
+<span data-ttu-id="5e7a6-104">As ferramentas a seguir são recomendadas para o desenvolvimento com o Azure em Node.js.</span><span class="sxs-lookup"><span data-stu-id="5e7a6-104">The following tools are recommended for developing with Azure on Node.js.</span></span>
 
-### <a name="optional-install-the-azure-cli"></a><span data-ttu-id="5b18c-105">Opcional: Instalar a CLI do Azure</span><span class="sxs-lookup"><span data-stu-id="5b18c-105">Optional: Install the Azure CLI</span></span>
-<span data-ttu-id="5b18c-106">A CLI do Azure é otimizada para gerenciar os recursos do Azure na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="5b18c-106">Azure CLI is optimized for managing Azure resources from the command line.</span></span>
+## <a name="azure-cli"></a><span data-ttu-id="5e7a6-105">CLI do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-105">Azure CLI</span></span>
+<span data-ttu-id="5e7a6-106">A CLI do Azure é otimizada para gerenciar os recursos do Azure na linha de comando.</span><span class="sxs-lookup"><span data-stu-id="5e7a6-106">Azure CLI is optimized for managing Azure resources from the command line.</span></span>
 
 ![CLI](media/node-azure-tools/cli.png)
  
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="5b18c-108">Instalar a CLI 2.0 do Azure</span><span class="sxs-lookup"><span data-stu-id="5b18c-108">Install the Azure CLI 2.0</span></span>](https://docs.microsoft.com/cli/azure/install-az-cli2)
+> [<span data-ttu-id="5e7a6-108">Instalar a CLI 2.0 do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-108">Install the Azure CLI 2.0</span></span>](https://docs.microsoft.com/cli/azure/install-az-cli2)
 
-### <a name="optional-install-visual-studio-code"></a><span data-ttu-id="5b18c-109">Opcional: Instalar o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5b18c-109">Optional: Install Visual Studio Code</span></span>
-<span data-ttu-id="5b18c-110">Editar e depurar aplicativos Node.js em qualquer sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="5b18c-110">Edit and debug Node.js apps on any OS.</span></span>
+## <a name="visual-studio-code"></a><span data-ttu-id="5e7a6-109">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5e7a6-109">Visual Studio Code</span></span>
+<span data-ttu-id="5e7a6-110">Editar e depurar aplicativos Node.js em qualquer sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="5e7a6-110">Edit and debug Node.js apps on any OS.</span></span>
 
 ![Visual Studio Code](media/node-azure-tools/vs-code.png)
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="5b18c-112">Baixar o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5b18c-112">Download Visual Studio Code</span></span>](https://code.visualstudio.com)
+> [<span data-ttu-id="5e7a6-112">Baixar o Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5e7a6-112">Download Visual Studio Code</span></span>](https://code.visualstudio.com)
+
+### <a name="azure-extensions"></a><span data-ttu-id="5e7a6-113">Extensões do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-113">Azure Extensions</span></span>
+<span data-ttu-id="5e7a6-114">Use as seguintes extensões livres para a interface com os serviços do Azure diretamente no Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="5e7a6-114">Use the following free extensions to interface with Azure services directly in Visual Studio Code.</span></span>
+
+| <span data-ttu-id="5e7a6-115">Ferramenta</span><span class="sxs-lookup"><span data-stu-id="5e7a6-115">Tool</span></span> | <span data-ttu-id="5e7a6-116">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="5e7a6-116">Description</span></span>  |
+|:---------:|---------|
+| [<span data-ttu-id="5e7a6-117">Funções do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-117">Azure Functions</span></span>](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> <span data-ttu-id="5e7a6-118">[![Ferramentas do Azure Functions](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)</span><span class="sxs-lookup"><span data-stu-id="5e7a6-118">[![Azure Functions Tools](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)</span></span> | <span data-ttu-id="5e7a6-119">Criar, gerenciar, exibir, depurar e implantar funções</span><span class="sxs-lookup"><span data-stu-id="5e7a6-119">Create, manage, view, debug, and deploy functions</span></span>|
+| [<span data-ttu-id="5e7a6-120">Serviço de Aplicativo do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-120">Azure App Service</span></span>](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> <span data-ttu-id="5e7a6-121">[![Ferramentas do Serviço de Aplicativo](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)</span><span class="sxs-lookup"><span data-stu-id="5e7a6-121">[![App Service Tools](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)</span></span> | <span data-ttu-id="5e7a6-122">Procure sites e o portal do Azure, crie novos sites (Linux apenas em Node.js) e implante para slots</span><span class="sxs-lookup"><span data-stu-id="5e7a6-122">Browse sites and the Azure portal, create new sites (Linux on Node.js only) and deploy to slots</span></span> |
+| [<span data-ttu-id="5e7a6-123">Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="5e7a6-123">Cosmos DB </span></span>](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> <span data-ttu-id="5e7a6-124">[![Ferramentas do Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)</span><span class="sxs-lookup"><span data-stu-id="5e7a6-124">[![Cosmos DB Tools](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)</span></span>| <span data-ttu-id="5e7a6-125">Criar, navegar e atualizar bancos de dados de vários modelos globalmente distribuídos no Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-125">Create, browse, and update globally distributed, multi-model databases in Azure</span></span> |
+| [<span data-ttu-id="5e7a6-126">Docker</span><span class="sxs-lookup"><span data-stu-id="5e7a6-126">Docker</span></span>](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> <span data-ttu-id="5e7a6-127">[![Ferramentas do Cosmos DB](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)</span><span class="sxs-lookup"><span data-stu-id="5e7a6-127">[![Cosmos DB Tools](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)</span></span>| <span data-ttu-id="5e7a6-128">Gerenciar contêineres do Docker e imagens, Hub do Docker e registro de contêiner do Azure</span><span class="sxs-lookup"><span data-stu-id="5e7a6-128">Manage Docker containers and images, Docker Hub, and Azure container registry</span></span> |
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="5e7a6-129">Obter mais extensões do Azure no marketplace do Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="5e7a6-129">Get more Azure extensions in the Visual Studio Code marketplace</span></span>](https://marketplace.visualstudio.com/search?term=azure&target=VSCode&category=All%20categories&sortBy=Relevance)
