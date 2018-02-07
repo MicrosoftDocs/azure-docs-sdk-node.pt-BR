@@ -1,20 +1,20 @@
 ---
-title: Tutoriais para usar o armazenamento do Azure com Node.js
+title: Armazenamento do Azure com tutoriais do Node.js
 description: "Tutoriais para conexão e uso do armazenamento do Azure com Node.js."
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 7c833fb41e4449f3eb014917cd6243316b007c87
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 797b1f2a1c4a5206e6b0c7234642e26f14f5a5d6
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="tutorials-for-using-azure-storage-with-nodejs"></a>Tutoriais para usar o armazenamento do Azure com Node.js
+# <a name="azure-storage-with-nodejs-tutorials"></a>Armazenamento do Azure com tutoriais do Node.js
 
 A tabela a seguir contém links para tutoriais detalhados para a conexão e uso do armazenamento do Azure com Node.js.
 

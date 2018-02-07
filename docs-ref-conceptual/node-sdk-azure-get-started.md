@@ -1,26 +1,25 @@
 ---
 title: "Introdução aos módulos do Azure para Node.js"
-description: "Introdução ao uso básico dos módulos do Azure para Node.js com sua própria assinatura do Azure."
-keywords: "Azure, Node, SDK, API, introdução, node.js"
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Introdução à autenticação e ao gerenciamento de recursos com módulos do Azure para Node.js"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introdução aos módulos do Azure para Node.js
 
-Este guia orienta você durante a instalação de módulos Node.js do Azure, a autenticação no Azure com uma entidade de serviço e a execução do código de exemplo que cria recursos na sua assinatura do Azure e conecta-se aos serviços de nuvem do Azure.
+Este guia demonstra a instalação de módulos Node.js do Azure, a autenticação no Azure com uma entidade de serviço e a execução do código de exemplo que cria recursos na sua assinatura do Azure e se conecta aos serviços de nuvem do Azure.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>pré-requisitos
 
 - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/)
 - [Node.js](https://nodejs.org)
@@ -264,7 +263,7 @@ Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources
 
 ## <a name="reference"></a>Referência 
 
-Uma [referência](/nodejs/api/overview/azure/?view=azure-node-2.0.0) está disponível para todos os pacotes.
+Uma [referência](/javascript/api/overview/azure/) está disponível para todos os pacotes.
 
 ## <a name="get-help-and-give-feedback"></a>Obter ajuda e fazer comentários
 
