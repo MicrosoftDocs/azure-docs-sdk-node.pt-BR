@@ -1,3 +1,3 @@
 | | |
 |--|--|
-| [<span data-ttu-id="aaae2-101">Trechos de código do Node.js usando PostgreSQL</span><span class="sxs-lookup"><span data-stu-id="aaae2-101">Node.js code snippets using PostgreSQL</span></span>](https://www.npmjs.com/package/pg) | <span data-ttu-id="aaae2-102">Saiba como criar um pool, executar uma consulta, obter um cliente exclusivo e muito mais.</span><span class="sxs-lookup"><span data-stu-id="aaae2-102">Learn how to create a pool, execute a query, obtain an exclusive client, and more.</span></span>
+| [Trechos de código do Node.js usando PostgreSQL](https://www.npmjs.com/package/pg) | Saiba como criar um pool, executar uma consulta, obter um cliente exclusivo e muito mais.
