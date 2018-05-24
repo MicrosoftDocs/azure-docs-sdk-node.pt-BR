@@ -1,39 +1,39 @@
 ---
-title: "Módulos do Azure Machine Learning para Node.js"
-description: "Referência dos módulos do Azure Machine Learning para Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Módulos do Azure Machine Learning para Node.js
+description: Referência dos módulos do Azure Machine Learning para Node.js
+author: hning86
+ms.author: haining
+manager: mwinkle
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 82f731971505250f1d637ae32b4c7a83ff24fccf
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 7dfa6d8fa633863fe834ce73462584e79c312c5d
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="6a772-103">Módulos do Azure Machine Learning para Node.js</span><span class="sxs-lookup"><span data-stu-id="6a772-103">Azure Machine Learning modules for Node.js</span></span>
+# <a name="azure-machine-learning-modules-for-nodejs"></a><span data-ttu-id="da0ee-103">Módulos do Azure Machine Learning para Node.js</span><span class="sxs-lookup"><span data-stu-id="da0ee-103">Azure Machine Learning modules for Node.js</span></span>
 
-<span data-ttu-id="6a772-104">O aprendizado de máquina é uma técnica da ciência de dados que ajuda os computadores a aprenderem com os dados existentes para preverem as tendências, resultados e futuros comportamentos.</span><span class="sxs-lookup"><span data-stu-id="6a772-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="6a772-105">Essas estimativas ou previsões de aprendizado de máquina podem tornar aplicativos e dispositivos mais inteligentes.</span><span class="sxs-lookup"><span data-stu-id="6a772-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="6a772-106">Quando você faz compras online, o aprendizado de máquina ajuda a recomendar outros produtos que podem lhe agradar com base no que você já comprou.</span><span class="sxs-lookup"><span data-stu-id="6a772-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="6a772-107">Ao passar seu cartão de crédito, o aprendizado de máquina compara a transação com um banco de dados de transações e ajuda a detectar fraudes.</span><span class="sxs-lookup"><span data-stu-id="6a772-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="6a772-108">Quando o aspirador de pó robô aspira uma sala, o aprendizado de máquina ajuda a decidir se o trabalho é feito ou não.</span><span class="sxs-lookup"><span data-stu-id="6a772-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
+<span data-ttu-id="da0ee-104">O aprendizado de máquina é uma técnica da ciência de dados que ajuda os computadores a aprenderem com os dados existentes para preverem as tendências, resultados e futuros comportamentos.</span><span class="sxs-lookup"><span data-stu-id="da0ee-104">Machine learning is a technique of data science that helps computers learn from existing data in order to forecast future behaviors, outcomes, and trends.</span></span> <span data-ttu-id="da0ee-105">Essas estimativas ou previsões de aprendizado de máquina podem tornar aplicativos e dispositivos mais inteligentes.</span><span class="sxs-lookup"><span data-stu-id="da0ee-105">These forecasts or predictions from machine learning can make apps and devices smarter.</span></span> <span data-ttu-id="da0ee-106">Quando você faz compras online, o aprendizado de máquina ajuda a recomendar outros produtos que podem lhe agradar com base no que você já comprou.</span><span class="sxs-lookup"><span data-stu-id="da0ee-106">When you shop online, machine learning helps recommend other products you might like based on what you've purchased.</span></span> <span data-ttu-id="da0ee-107">Ao passar seu cartão de crédito, o aprendizado de máquina compara a transação com um banco de dados de transações e ajuda a detectar fraudes.</span><span class="sxs-lookup"><span data-stu-id="da0ee-107">When your credit card is swiped, machine learning compares the transaction to a database of transactions and helps detect fraud.</span></span> <span data-ttu-id="da0ee-108">Quando o aspirador de pó robô aspira uma sala, o aprendizado de máquina ajuda a decidir se o trabalho é feito ou não.</span><span class="sxs-lookup"><span data-stu-id="da0ee-108">When your robot vacuum cleaner vacuums a room, machine learning helps it decide whether the job is done.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="6a772-109">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="6a772-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="da0ee-109">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="da0ee-109">Management Package</span></span>
 
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="6a772-110">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="6a772-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="da0ee-110">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="da0ee-110">Install the npm module</span></span>
 
-<span data-ttu-id="6a772-111">Instalar o módulo npm do Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="6a772-111">Install the Azure Machine Learning npm module</span></span>
+<span data-ttu-id="da0ee-111">Instalar o módulo npm do Azure Machine Learning</span><span class="sxs-lookup"><span data-stu-id="da0ee-111">Install the Azure Machine Learning npm module</span></span>
 
 ```bash
 npm install azure-arm-machinelearning
 ```
 
-### <a name="example"></a><span data-ttu-id="6a772-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6a772-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="da0ee-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="da0ee-112">Example</span></span>
 
-<span data-ttu-id="6a772-113">Este exemplo lista todos os planos do compromisso de machine learning.</span><span class="sxs-lookup"><span data-stu-id="6a772-113">This example lists all machine learning committment plans.</span></span>
+<span data-ttu-id="da0ee-113">Este exemplo lista todos os planos do compromisso de machine learning.</span><span class="sxs-lookup"><span data-stu-id="da0ee-113">This example lists all machine learning committment plans.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="6a772-114">Exemplos</span><span class="sxs-lookup"><span data-stu-id="6a772-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="da0ee-114">Exemplos</span><span class="sxs-lookup"><span data-stu-id="da0ee-114">Samples</span></span>
 
-<span data-ttu-id="6a772-115">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="6a772-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="da0ee-115">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="da0ee-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
