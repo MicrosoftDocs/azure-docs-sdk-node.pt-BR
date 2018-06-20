@@ -16,6 +16,7 @@ ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33849949"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>Bibliotecas de Grade de Eventos do Azure para Node.js
 

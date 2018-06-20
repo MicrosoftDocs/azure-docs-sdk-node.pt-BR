@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220658"
 ---
 # <a name="nodejs-code-samples-for-azure-app-service-management-modules"></a>Exemplos de código do Node.js para módulos de gerenciamento de Serviço de Aplicativo do Azure
 

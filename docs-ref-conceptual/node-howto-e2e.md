@@ -1,6 +1,6 @@
 ---
 title: Desenvolvimento em Node.js com o Visual Studio Code e o Azure
-description: "Tutorial completo ilustrando como criar, colocar em contêineres com o Docker e implantar no Azure, um aplicativo em Node.js"
+description: Tutorial completo ilustrando como criar, colocar em contêineres com o Docker e implantar no Azure, um aplicativo em Node.js
 services: multiple
 author: tomarcher
 manager: douge
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "20908136"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Desenvolvimento em Node.js com o Visual Studio Code e o Azure
 

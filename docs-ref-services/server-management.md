@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260419"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Módulos de Gerenciamento do Servidor do Azure para Node.js
 

@@ -1,6 +1,6 @@
 ---
-title: "Exemplos de código de cobrança do Azure para Node.js"
-description: "Código de exemplo demonstrando como adicionar a funcionalidade de Cobrança do Azure com o Node.js."
+title: Exemplos de código de cobrança do Azure para Node.js
+description: Código de exemplo demonstrando como adicionar a funcionalidade de Cobrança do Azure com o Node.js.
 author: ityer
 manager: limorl
 ms.devlang: nodejs
@@ -13,6 +13,7 @@ ms.sourcegitcommit: 37edf026ed6d21abd1cf45a65b3b0329a8bdf18d
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29781772"
 ---
 # <a name="azure-billing-with-nodejs-code-samples"></a>Cobrança do Azure com exemplos de código do Node.js
 
