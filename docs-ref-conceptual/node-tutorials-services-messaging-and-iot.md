@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220748"
 ---
 # <a name="azure-messaging-and-internet-of-things-iot-with-nodejs-tutorials"></a><span data-ttu-id="adcfb-103">Sistema mensagens do Azure e a Internet das Coisas (IoT) com tutoriais do Node.js</span><span class="sxs-lookup"><span data-stu-id="adcfb-103">Azure messaging and Internet of Things (IoT) with Node.js tutorials</span></span>
 

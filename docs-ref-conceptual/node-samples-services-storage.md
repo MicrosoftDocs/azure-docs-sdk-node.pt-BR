@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220608"
 ---
 # <a name="azure-storage-with-nodejs-code-samples"></a><span data-ttu-id="79d76-103">Armazenamento do Azure com exemplos de código do Node.js</span><span class="sxs-lookup"><span data-stu-id="79d76-103">Azure storage with Node.js code samples</span></span>
 

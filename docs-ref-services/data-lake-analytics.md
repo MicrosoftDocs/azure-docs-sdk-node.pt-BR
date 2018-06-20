@@ -1,6 +1,6 @@
 ---
-title: "Módulos do Azure Data Lake Analytics para Node.js"
-description: "Referência dos módulos do Azure Data Lake Analytics para Node.js"
+title: Módulos do Azure Data Lake Analytics para Node.js
+description: Referência dos módulos do Azure Data Lake Analytics para Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116961"
 ---
 # <a name="azure-data-lake-analytics-modules-for-nodejs"></a><span data-ttu-id="1428b-103">Módulos do Azure Data Lake Analytics para Node.js</span><span class="sxs-lookup"><span data-stu-id="1428b-103">Azure Data Lake Analytics modules for Node.js</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266593"
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="96d9e-103">Módulos de Azure Key Vault para Node.js</span><span class="sxs-lookup"><span data-stu-id="96d9e-103">Azure Key Vault modules for Node.js</span></span>
 
