@@ -1,0 +1,223 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1a17d95148ab4e672b27e5293f0fef6fef77df68
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047130"
+items:
+- uid: azure-asm-sql
+  name: azure-asm-sql
+  langs:
+  - js
+  type: package
+  summary: ''
+  children:
+  - azure-asm-sql.SqlServiceClient
+  - azure-asm-sql.SqlService
+  - azure-asm-sql.SqlManagementService
+  - azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  - azure-asm-sql.ServerOperations~ServerOperations
+  - azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  - azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  - azure-asm-sql.QuotaOperations~QuotaOperations
+  - azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  - azure-asm-sql.DatabaseOperations~DatabaseOperations
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  - azure-asm-sql.DacOperations~DacOperations
+  - azure-asm-sql.SqlManagementClient~SqlManagementClient
+  - azure-asm-sql.createSqlService
+  - azure-asm-sql.createSqlManagementService
+  - azure-asm-sql.SqlManagementClient
+  - azure-asm-sql.createSqlManagementClient
+  - azure-asm-sql.createCertificateCloudCredentials
+- uid: azure-asm-sql.createSqlManagementService
+  id: azure-asm-sql.createSqlManagementService
+  name: createSqlManagementService(subscriptionId, authentication, hostOptions)
+  summary: Cria um novo <xref:azure-asm-sql.SqlManagementService> objeto.
+  fullName: azure-asm-sql.createSqlManagementService(subscriptionId, authentication, hostOptions)
+  type: Function
+  syntax:
+    parameters:
+    - id: subscriptionId
+      type:
+      - string
+      description: A ID da assinatura para a conta.
+    - id: authentication
+      type:
+      - object
+      description: >-
+        O objeto de autenticação para o cliente.
+
+        Você deve usar o keyfile/certfile ou keyvalue/certvalue para fornecer um certificado de gerenciamento para autenticar solicitações de serviço.
+    - id: authentication.keyfile
+      type:
+      - string
+      description: O caminho para um arquivo que contém o PEM codificado em chave
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: O caminho para um arquivo que contém o PEM de certificado codificado em
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: Uma cadeia de caracteres que contém o PEM codificado em chave
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: Certificado codificado em uma cadeia de caracteres que contém o PEM
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: As opções de host para substituir os padrões.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: O ponto de extremidade de gerenciamento.
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: A versão de API a ser usado.
+      optional: true
+    return:
+      type:
+      - azure-asm-sql.SqlManagementService
+      description: Um novo objeto SqlManagementService.
+    content: function createSqlManagementService(subscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementClient
+  id: azure-asm-sql.SqlManagementClient
+  name: SqlManagementClient
+  summary: Cliente de SqlManagementClient gerado exporta.
+  fullName: azure-asm-sql.SqlManagementClient
+  type: Member
+  syntax:
+    content: SqlManagementClient
+  langs:
+  - js
+- uid: azure-asm-sql.createSqlManagementClient
+  id: azure-asm-sql.createSqlManagementClient
+  name: createSqlManagementClient(baseUri, filters)
+  summary: >-
+    Cria um novo <xref:azure-asm-sql.SqlManagementClient> objeto.
+
+
+    Observação: Essas APIs ainda estão em desenvolvimento e não devem ser usados.
+  fullName: azure-asm-sql.createSqlManagementClient(baseUri, filters)
+  type: Function
+  syntax:
+    parameters:
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: O identificador da assinatura.
+      optional: true
+    - id: credentials.cert
+      type:
+      - string
+      description: O valor do certificado.
+      optional: true
+    - id: credentials.key
+      type:
+      - string
+      description: O valor da chave.
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: O uri de base.
+      optional: true
+    - id: filters
+      type:
+      - array
+      description: Matriz opcional de filtros do serviço
+      optional: true
+    return:
+      type:
+      - azure-asm-sql.SqlManagementClient
+      description: Um novo objeto SqlManagementClient.
+    content: function createSqlManagementClient(baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-sql.createCertificateCloudCredentials
+  id: azure-asm-sql.createCertificateCloudCredentials
+  name: createCertificateCloudCredentials()
+  summary: >-
+    Cria um novo objeto CertificateCloudCredentials.
+
+    Qualquer um par de cert / necessidade de ser passar ou um local de arquivo pem de valores de chave.
+  fullName: azure-asm-sql.createCertificateCloudCredentials()
+  type: Function
+  syntax:
+    parameters:
+    - id: credentials.subscription
+      type:
+      - string
+      description: O identificador da assinatura.
+    - id: credentials.cert
+      type:
+      - string
+      description: O certificado.
+      optional: true
+    - id: credentials.key
+      type:
+      - string
+      description: A chave do certificado.
+      optional: true
+    - id: credentials.pem
+      type:
+      - string
+      description: O conteúdo do arquivo PEM.
+      optional: true
+    return:
+      type:
+      - azure-asm-sql.CertificateCloudCredentials
+      description: ''
+    content: function createCertificateCloudCredentials()
+  langs:
+  - js
+references:
+- uid: azure-asm-sql.SqlServiceClient
+  name: SqlServiceClient
+- uid: azure-asm-sql.SqlService
+  name: SqlService
+- uid: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+- uid: azure-asm-sql.ServiceObjectiveOperations~ServiceObjectiveOperations
+  name: ServiceObjectiveOperations
+- uid: azure-asm-sql.ServerOperations~ServerOperations
+  name: ServerOperations
+- uid: azure-asm-sql.RestoreDatabaseOperations~RestoreDatabaseOperations
+  name: RestoreDatabaseOperations
+- uid: azure-asm-sql.RestorableDroppedDatabaseOperations~RestorableDroppedDatabaseOperations
+  name: RestorableDroppedDatabaseOperations
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations
+- uid: azure-asm-sql.QuotaOperations~QuotaOperations
+  name: QuotaOperations
+- uid: azure-asm-sql.FirewallRuleOperations~FirewallRuleOperations
+  name: FirewallRuleOperations
+- uid: azure-asm-sql.DatabaseOperations~DatabaseOperations
+  name: DatabaseOperations
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations
+- uid: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations
+- uid: azure-asm-sql.SqlManagementClient~SqlManagementClient
+  name: SqlManagementClient
+- uid: azure-asm-sql.createSqlService
+  name: createSqlService

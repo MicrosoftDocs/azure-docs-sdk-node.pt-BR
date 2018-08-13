@@ -1,0 +1,271 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e06222d0ec191b66b287ffe6fe9148fbe92ec6f7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047436"
+items:
+- uid: azure-common.ServiceClient
+  id: azure-common.ServiceClient
+  name: ServiceClient
+  summary: <span data-ttu-id="feafa-101">Cria um novo objeto ServiceClient.</span><span class="sxs-lookup"><span data-stu-id="feafa-101">Creates a new ServiceClient object.</span></span>
+  fullName: azure-common.ServiceClient
+  type: Class
+  children:
+  - azure-common.ServiceClient.#ctor
+  - azure-common.ServiceClient#setHost
+  - azure-common.ServiceClient#performChunkedRequest
+  - azure-common.ServiceClient#performRequest
+  - azure-common.ServiceClient#performRequestOutputStream
+  - azure-common.ServiceClient#performRequestInputStream
+  - azure-common.ServiceClient#withFilter
+  - azure-common.ServiceClient#parseMetadataHeaders
+  - azure-common.ServiceClient.isEmulated
+  langs:
+  - js
+- id: azure-common.ServiceClient.#ctor
+  uid: azure-common.ServiceClient.#ctor
+  parent: azure-common.ServiceClient
+  name: ServiceClient(host, authenticationProvider)
+  fullName: azure-common.ServiceClient.ServiceClient(host, authenticationProvider)
+  summary: <span data-ttu-id="feafa-102">Cria um novo objeto ServiceClient.</span><span class="sxs-lookup"><span data-stu-id="feafa-102">Creates a new ServiceClient object.</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="feafa-103">O host para o serviço.</span><span class="sxs-lookup"><span data-stu-id="feafa-103">The host for the service.</span></span>
+    - id: authenticationProvider
+      type:
+      - object
+      description: <span data-ttu-id="feafa-104">O objeto de provedor de autenticação (por exemplo, sharedkey / sharedkeytable / sharedaccesssignature).</span><span class="sxs-lookup"><span data-stu-id="feafa-104">The authentication provider object (e.g. sharedkey / sharedkeytable / sharedaccesssignature).</span></span>
+    content: new ServiceClient(host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#setHost
+  id: azure-common.ServiceClient#setHost
+  parent: azure-common.ServiceClient
+  name: setHost(host)
+  summary: <span data-ttu-id="feafa-105">Define um host para o serviço.</span><span class="sxs-lookup"><span data-stu-id="feafa-105">Sets a host for the service.</span></span>
+  fullName: azure-common.ServiceClient.setHost(host)
+  type: Function
+  syntax:
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="feafa-106">O host para o serviço.</span><span class="sxs-lookup"><span data-stu-id="feafa-106">The host for the service.</span></span>
+    content: function setHost(host)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performChunkedRequest
+  id: azure-common.ServiceClient#performChunkedRequest
+  parent: azure-common.ServiceClient
+  name: performChunkedRequest(webResource, outputData, options, callback)
+  summary: <span data-ttu-id="feafa-107">Executa uma solicitação de serviço REST por meio de HTTP esperando um fluxo de entrada.</span><span class="sxs-lookup"><span data-stu-id="feafa-107">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performChunkedRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="feafa-108">Webresource na qual executar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-108">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="feafa-109">Os dados de solicitação saída como uma cadeia de caracteres bruto.</span><span class="sxs-lookup"><span data-stu-id="feafa-109">The outgoing request data as a raw string.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="feafa-110">As opções de solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-110">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="feafa-111">O intervalo de tempo limite, em milissegundos, para usar para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-111">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="feafa-112">A função de retorno de chamada de resposta em partes.</span><span class="sxs-lookup"><span data-stu-id="feafa-112">The chunked response callback function.</span></span>
+    content: function performChunkedRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequest
+  id: azure-common.ServiceClient#performRequest
+  parent: azure-common.ServiceClient
+  name: performRequest(webResource, outputData, options, callback)
+  summary: <span data-ttu-id="feafa-113">Executa uma solicitação de serviço REST por meio de HTTP esperando um fluxo de entrada.</span><span class="sxs-lookup"><span data-stu-id="feafa-113">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequest(webResource, outputData, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="feafa-114">Webresource na qual executar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-114">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="feafa-115">Os dados de solicitação saída como uma cadeia de caracteres bruto.</span><span class="sxs-lookup"><span data-stu-id="feafa-115">The outgoing request data as a raw string.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="feafa-116">As opções de solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-116">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="feafa-117">O intervalo de tempo limite, em milissegundos, para usar para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-117">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="feafa-118">A função de retorno de chamada de resposta.</span><span class="sxs-lookup"><span data-stu-id="feafa-118">The response callback function.</span></span>
+    content: function performRequest(webResource, outputData, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestOutputStream
+  id: azure-common.ServiceClient#performRequestOutputStream
+  parent: azure-common.ServiceClient
+  name: performRequestOutputStream(webResource, outputStream, options, callback)
+  summary: <span data-ttu-id="feafa-119">Executa uma solicitação de serviço REST por meio de HTTP esperando um fluxo de entrada.</span><span class="sxs-lookup"><span data-stu-id="feafa-119">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequestOutputStream(webResource, outputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="feafa-120">Webresource na qual executar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-120">The webresource on which to perform the request.</span></span>
+    - id: outputStream
+      type:
+      - azure-common.Stream
+      description: <span data-ttu-id="feafa-121">Os dados de solicitação saída como um fluxo.</span><span class="sxs-lookup"><span data-stu-id="feafa-121">The outgoing request data as a stream.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="feafa-122">As opções de solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-122">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="feafa-123">O intervalo de tempo limite, em milissegundos, para usar para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-123">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="feafa-124">A função de retorno de chamada de resposta.</span><span class="sxs-lookup"><span data-stu-id="feafa-124">The response callback function.</span></span>
+    content: function performRequestOutputStream(webResource, outputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#performRequestInputStream
+  id: azure-common.ServiceClient#performRequestInputStream
+  parent: azure-common.ServiceClient
+  name: performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  summary: <span data-ttu-id="feafa-125">Executa uma solicitação de serviço REST por meio de HTTP esperando um fluxo de entrada.</span><span class="sxs-lookup"><span data-stu-id="feafa-125">Performs a REST service request through HTTP expecting an input stream.</span></span>
+  fullName: azure-common.ServiceClient.performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webResource
+      type:
+      - azure-common.WebResource
+      description: <span data-ttu-id="feafa-126">Webresource na qual executar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-126">The webresource on which to perform the request.</span></span>
+    - id: outputData
+      type:
+      - string
+      description: <span data-ttu-id="feafa-127">Os dados de solicitação saída como uma cadeia de caracteres bruto.</span><span class="sxs-lookup"><span data-stu-id="feafa-127">The outgoing request data as a raw string.</span></span>
+    - id: inputStream
+      type:
+      - azure-common.Stream
+      description: <span data-ttu-id="feafa-128">Os dados de resposta de entrada como um fluxo.</span><span class="sxs-lookup"><span data-stu-id="feafa-128">The ingoing response data as a stream.</span></span>
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="feafa-129">As opções de solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-129">The request options.</span></span>
+      optional: true
+    - id: options.timeoutIntervalInMs
+      type:
+      - azure-common.int
+      description: <span data-ttu-id="feafa-130">O intervalo de tempo limite, em milissegundos, para usar para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="feafa-130">The timeout interval, in milliseconds, to use for the request.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="feafa-131">A função de retorno de chamada de resposta.</span><span class="sxs-lookup"><span data-stu-id="feafa-131">The response callback function.</span></span>
+    content: function performRequestInputStream(webResource, outputData, inputStream, options, callback)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#withFilter
+  id: azure-common.ServiceClient#withFilter
+  parent: azure-common.ServiceClient
+  name: withFilter(filter)
+  summary: >-
+    <span data-ttu-id="feafa-132">Associe esse ServiceClient uma operação de filtragem.</span><span class="sxs-lookup"><span data-stu-id="feafa-132">Associate a filtering operation with this ServiceClient.</span></span> <span data-ttu-id="feafa-133">As operações de filtragem podem incluir registro em log, repetição automática, etc. Operações do filtro são objetos que implementam um método com a assinatura:</span><span class="sxs-lookup"><span data-stu-id="feafa-133">Filtering operations can include logging, automatically retrying, etc. Filter operations are objects that implement a method with the signature:</span></span>
+
+        "function handle (requestOptions, next)".
+
+    <span data-ttu-id="feafa-134">Após fazer seu pré-processamento nas opções de solicitação, o método precisará chamar "next", passando um retorno de chamada com a seguinte assinatura: assinatura:</span><span class="sxs-lookup"><span data-stu-id="feafa-134">After doing its preprocessing on the request options, the method needs to call "next" passing a callback with the following signature: signature:</span></span>
+
+        "function (returnObject, finalCallback, next)"
+
+    <span data-ttu-id="feafa-135">Nesse retorno de chamada, e após processar o returnObject (a resposta da solicitação ao servidor), o retorno de chamada precisará invocar avançar, se ele existir, para continuar processando outros filtros ou simplesmente invocar finalCallback para terminar a invocação de serviço.</span><span class="sxs-lookup"><span data-stu-id="feafa-135">In this callback, and after processing the returnObject (the response from the request to the server), the callback needs to either invoke next if it exists to continue processing other filters or simply invoke finalCallback otherwise to end up the service invocation.</span></span>
+  fullName: azure-common.ServiceClient.withFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - Object
+      description: <span data-ttu-id="feafa-136">O novo objeto de filtro.</span><span class="sxs-lookup"><span data-stu-id="feafa-136">The new filter object.</span></span>
+    return:
+      type:
+      - azure-common.ServiceClient
+      description: <span data-ttu-id="feafa-137">Um novo cliente de serviço com o filtro aplicado.</span><span class="sxs-lookup"><span data-stu-id="feafa-137">A new service client with the filter applied.</span></span>
+    content: function withFilter(filter)
+  langs:
+  - js
+- uid: azure-common.ServiceClient#parseMetadataHeaders
+  id: azure-common.ServiceClient#parseMetadataHeaders
+  parent: azure-common.ServiceClient
+  name: parseMetadataHeaders(headers)
+  summary: <span data-ttu-id="feafa-138">Recupera os cabeçalhos de metadados de cabeçalhos de resposta.</span><span class="sxs-lookup"><span data-stu-id="feafa-138">Retrieves the metadata headers from the response headers.</span></span>
+  fullName: azure-common.ServiceClient.parseMetadataHeaders(headers)
+  type: Function
+  syntax:
+    parameters:
+    - id: headers
+      type:
+      - object
+      description: <span data-ttu-id="feafa-139">Os cabeçalhos de metadados.</span><span class="sxs-lookup"><span data-stu-id="feafa-139">The metadata headers.</span></span>
+    return:
+      type:
+      - object
+      description: <span data-ttu-id="feafa-140">Um objeto com os cabeçalhos de metadados (sem o prefixo "x - ms-").</span><span class="sxs-lookup"><span data-stu-id="feafa-140">An object with the metadata headers (without the "x-ms-" prefix).</span></span>
+    content: function parseMetadataHeaders(headers)
+  langs:
+  - js
+- uid: azure-common.ServiceClient.isEmulated
+  id: azure-common.ServiceClient.isEmulated
+  parent: azure-common.ServiceClient
+  name: isEmulated()
+  summary: <span data-ttu-id="feafa-141">Obtém que o valor da variável de ambiente para é emulado.</span><span class="sxs-lookup"><span data-stu-id="feafa-141">Gets the value of the environment variable for is emulated.</span></span>
+  fullName: azure-common.ServiceClient.isEmulated()
+  type: Function
+  syntax:
+    return:
+      type:
+      - azure-common.bool
+      description: <span data-ttu-id="feafa-142">True se o cliente do serviço está em execução em um ambiente emulado. False caso contrário.</span><span class="sxs-lookup"><span data-stu-id="feafa-142">True if the service client is running on an emulated environment; false otherwise.</span></span>
+    content: function isEmulated()
+  langs:
+  - js
+references:
+- uid: azure-common.WebResource
+  name: WebResource
+  fullName: azure-common.WebResource
+  isExternal: false

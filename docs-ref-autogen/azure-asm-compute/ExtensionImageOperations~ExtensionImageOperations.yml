@@ -1,0 +1,929 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac1e20f410103a7d8236e85e78387bc84acda4ef
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047299"
+items:
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations
+  summary: >-
+    <span data-ttu-id="afe6b-101">A API de gerenciamento de serviços inclui operações para gerenciar o serviço e as imagens de extensão de máquina virtual em sua assinatura do publicador.</span><span class="sxs-lookup"><span data-stu-id="afe6b-101">The Service Management API includes operations for managing the service and virtual machine extension images in your publisher subscription.</span></span>
+
+    <span data-ttu-id="afe6b-102">__Observação__: uma instância dessa classe é criada automaticamente para uma instância do [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.</span><span class="sxs-lookup"><span data-stu-id="afe6b-102">__NOTE__: An instance of this class is automatically created for an instance of the [ComputeManagementClient] {@link ComputeManagementClient~ComputeManagementClient}.</span></span>
+
+    <span data-ttu-id="afe6b-103">Consulte [extensionImages] {@link ComputeManagementClient ~ ComputeManagementClient #extensionImages}.</span><span class="sxs-lookup"><span data-stu-id="afe6b-103">See [extensionImages] {@link ComputeManagementClient~ComputeManagementClient#extensionImages}.</span></span>
+
+    <span data-ttu-id="afe6b-104">Inicializa uma nova instância da classe ExtensionImageOperations.</span><span class="sxs-lookup"><span data-stu-id="afe6b-104">Initializes a new instance of the ExtensionImageOperations class.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  - azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.#ctor
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: ExtensionImageOperations(client)
+  fullName: azure-asm-compute.ExtensionImageOperations.ExtensionImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: <span data-ttu-id="afe6b-105">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="afe6b-105">Reference to the service client.</span></span>
+    content: new ExtensionImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginRegistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginRegistering(parameters, callback)
+  summary: <span data-ttu-id="afe6b-106">Registre uma nova extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-106">Register a new extension.</span></span> <span data-ttu-id="afe6b-107">Uma extensão é identificada pela combinação de suas ProviderNamespace e o tipo (cadeia de caracteres diferencia maiusculas de minúsculas).</span><span class="sxs-lookup"><span data-stu-id="afe6b-107">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="afe6b-108">Ele não tem permissão para registrar uma extensão com a mesma identidade (isto é, combinação de ProviderNamespace e tipo) de uma extensão já registrado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-108">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="afe6b-109">Para registrar a nova versão de uma extensão existente, a API de atualização de extensão deve ser usada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-109">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginRegistering(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="afe6b-110">Parâmetros fornecidos para a operação registrar imagem da extensão de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="afe6b-110">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-111">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-111">Required.</span></span> <span data-ttu-id="afe6b-112">O namespace do provedor da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-112">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-113">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-113">Required.</span></span> <span data-ttu-id="afe6b-114">O tipo da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-114">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-115">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-115">Required.</span></span> <span data-ttu-id="afe6b-116">A versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-116">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-117">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-117">Required.</span></span> <span data-ttu-id="afe6b-118">Um rótulo de uma linha da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-118">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-119">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-119">Required.</span></span> <span data-ttu-id="afe6b-120">Os recursos de hospedagem com suporte.</span><span class="sxs-lookup"><span data-stu-id="afe6b-120">The supported hosting resources.</span></span> <span data-ttu-id="afe6b-121">Ele deve conter 'WebRole' e/ou 'WorkerRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-121">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="afe6b-122">Por exemplo</span><span class="sxs-lookup"><span data-stu-id="afe6b-122">E.g.</span></span>
+
+        <span data-ttu-id="afe6b-123">' WebRole | WorkerRole' ou ' WebRole | WorkerRole | VmRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-123">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-124">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-124">Required.</span></span> <span data-ttu-id="afe6b-125">Cadeia de caracteres URI que aponta para o pacote ZIP da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-125">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="afe6b-126">O pacote ZIP deve incluir a extensão do executável e outros arquivos de suporte e o manifesto PluginManifest.xml.</span><span class="sxs-lookup"><span data-stu-id="afe6b-126">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="afe6b-127">Valor de MediaLink deve apontar para uma URL (Http ou Https) em um armazenamento de BLOBs do Azure e podem ser baixado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-127">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="afe6b-128">Windows Azure copiará o pacote de extensão deste local de origem e replicá-la para todas as regiões.</span><span class="sxs-lookup"><span data-stu-id="afe6b-128">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="afe6b-129">O tempo típico para a conclusão da replicação é de 20 minutos.</span><span class="sxs-lookup"><span data-stu-id="afe6b-129">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="afe6b-130">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-130">Optional.</span></span> <span data-ttu-id="afe6b-131">Parâmetros do certificado para criptografar os dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-131">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="afe6b-132">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-132">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-133">Necessário para a declaração de certificado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-133">Required for certificate declaration.</span></span> <span data-ttu-id="afe6b-134">O local de repositório de certificados do Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-134">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-135">Seu valor deve ser 'LocalMachine' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-135">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-136">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-136">Optional.</span></span> <span data-ttu-id="afe6b-137">O nome do repositório de certificado Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-137">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-138">Seu valor deve ser 'My' se presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-138">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="afe6b-139">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-139">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-140">Se a impressão digital é necessária para o certificado para criptografia ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-140">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="afe6b-141">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-141">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-142">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-142">Optional.</span></span> <span data-ttu-id="afe6b-143">O algoritmo de impressão digital do certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-143">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-144">Seu valor deve ser 'sha1' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-144">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="afe6b-145">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-145">Optional.</span></span> <span data-ttu-id="afe6b-146">Declarado pontos de extremidade para adicionar automaticamente a cada implantação com essa extensão adicionada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-146">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-147">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-147">Optional.</span></span> <span data-ttu-id="afe6b-148">Uma lista de pontos de extremidade de entrada necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-148">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-149">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-149">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-150">Cada ponto de extremidade de entrada será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-150">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-151">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-151">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-152">Uma lista de pontos de extremidade internos necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-152">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-153">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-153">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-154">Cada ponto de extremidade interno será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-154">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-155">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-155">Optional.</span></span> <span data-ttu-id="afe6b-156">Uma lista de pontos de extremidade de entrada de instância exigido por essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-156">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="afe6b-157">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-157">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-158">Cada ponto de extremidade de entrada de instância será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-158">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-159">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-159">Optional.</span></span> <span data-ttu-id="afe6b-160">O esquema XSD de dados de configuração pública.</span><span class="sxs-lookup"><span data-stu-id="afe6b-160">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-161">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-161">Optional.</span></span> <span data-ttu-id="afe6b-162">O esquema XSD de dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-162">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-163">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-163">Required.</span></span> <span data-ttu-id="afe6b-164">Descrição detalhada da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-164">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-165">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-165">Optional.</span></span> <span data-ttu-id="afe6b-166">Texto do nome do publicador.</span><span class="sxs-lookup"><span data-stu-id="afe6b-166">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="afe6b-167">Publisher pode defini-lo para qualquer data arbitrária, e isso é apenas para fins de exibição.</span><span class="sxs-lookup"><span data-stu-id="afe6b-167">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="afe6b-168">Se não for especificado pelo publicador, o Azure atribuirá automaticamente a hora UTC quando a solicitação de extensão foi recebida.</span><span class="sxs-lookup"><span data-stu-id="afe6b-168">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-169">Declarado usados dentro da VM convidada pela extensão de recursos locais.</span><span class="sxs-lookup"><span data-stu-id="afe6b-169">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="afe6b-170">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-170">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-171">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-171">Optional.</span></span> <span data-ttu-id="afe6b-172">Seu valor deve ser 'verdadeiro' ou 'false' (diferencia maiusculas de minúsculas) quando definido como 'true', a inicialização da função será bloqueado até que a instalação da extensão é concluída.</span><span class="sxs-lookup"><span data-stu-id="afe6b-172">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="afe6b-173">Este sinalizador deve ser definido como 'true' quando a função não pode iniciar sem a extensão que está sendo instalada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-173">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="afe6b-174">Se definido como 'false' (valor padrão), a função será iniciada sem aguardar a conclusão da instalação de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-174">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="afe6b-175">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-175">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-176">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-176">Optional.</span></span> <span data-ttu-id="afe6b-177">Se isso for definido como 'true' a extensão não é visível para uso público, ou seja, que estão sendo retornados da lista da API.</span><span class="sxs-lookup"><span data-stu-id="afe6b-177">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="afe6b-178">Ele pode ser acessado ainda referindo-se a caixa de combinação de ProviderNamespace, tipo e versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-178">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="afe6b-179">Portanto, uma extensão interna destina-se apenas para fins de teste.</span><span class="sxs-lookup"><span data-stu-id="afe6b-179">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="afe6b-180">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-180">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-181">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-181">Optional.</span></span> <span data-ttu-id="afe6b-182">Um exemplo de configuração para a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-182">A sample configuration for the extension.</span></span> <span data-ttu-id="afe6b-183">Ele pode ser baixado por usuários, e o usuário pode substituir por parâmetros de entrada personalizados.</span><span class="sxs-lookup"><span data-stu-id="afe6b-183">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="afe6b-184">O exemplo de configuração deve ser suficientemente comentado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-184">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="afe6b-185">Se os dados de configuração estão em formato XML, em seguida, o elemento de nível de documento XML deve ser 'Configuração' e os dados de configuração pública opcional correspondem a um elemento filho de 'PublicConfig' e os dados de configuração privada opcional correspondem a um filho elemento de 'PrivateConfig'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-185">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="afe6b-186">Os dados de configuração de exemplo devem ser validados em relação ao esquema de configuração pública e privada pelo editor.</span><span class="sxs-lookup"><span data-stu-id="afe6b-186">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-187">Indica se esta versão da extensão foi replicada para todas as regiões ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-187">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="afe6b-188">Se for true, a versão da extensão determinado pode ser usada ao criar ou atualizar implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-188">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-189">Caso contrário, a versão de determinada extensão pode causar falha na criação ou atualização de implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-189">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-190">O tempo típico é de 20 minutos para uma extensão recentemente registrado ou atualizado recentemente replicar completamente pelo Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-190">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-191">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-191">Optional.</span></span> <span data-ttu-id="afe6b-192">Cadeia de caracteres de URL que aponta para o EULA (contrato de licença de usuário final) dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-192">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="afe6b-193">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-193">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="afe6b-194">Se o software requer que qualquer EULAs adicionais, um link para os termos de licença deve ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="afe6b-194">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-195">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-195">Optional.</span></span> <span data-ttu-id="afe6b-196">Cadeia de caracteres de URL que aponta para o documento de privacidade dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-196">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="afe6b-197">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-197">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="afe6b-198">Se o software coleta todos os dados e transferências de VM convidada, um documento de privacidade adicionais pode ser necessárias.</span><span class="sxs-lookup"><span data-stu-id="afe6b-198">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-199">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-199">Optional.</span></span> <span data-ttu-id="afe6b-200">Cadeia de caracteres de URL que aponta para a home page nesta versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-200">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="afe6b-201">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-201">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="afe6b-202">A home page deve ter informações de uso e informações de contato para suporte ao cliente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-202">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-203">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-203">Optional.</span></span> <span data-ttu-id="afe6b-204">Se isso for definido como 'true' a extensão deve receber a configuração baseada em JSON.</span><span class="sxs-lookup"><span data-stu-id="afe6b-204">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="afe6b-205">Se isso for definido como 'false' a extensão deve receber a configuração baseada em XML.</span><span class="sxs-lookup"><span data-stu-id="afe6b-205">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="afe6b-206">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-206">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-207">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-207">Optional.</span></span> <span data-ttu-id="afe6b-208">Se isso for definido como 'true', que a versão da extensão não é possível fazer upgrade das outras versões principais em implantações do Active Directory.</span><span class="sxs-lookup"><span data-stu-id="afe6b-208">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="afe6b-209">Se o valor for 'false' ou nem estiver presente, a versão da extensão pode ser atualizada para qualquer outra versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-209">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="afe6b-210">Não há suporte para o downgrade.</span><span class="sxs-lookup"><span data-stu-id="afe6b-210">Downgrade is not supported.</span></span> <span data-ttu-id="afe6b-211">O valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-211">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-212">Propriedade de cadeia de caracteres que indica o sistema operacional que dá suporte a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-212">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="afe6b-213">Valores atuais são 'Windows' ou 'Linux'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-213">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-214">Propriedade de cadeia de caracteres que contém o nome da empresa/organização que publica a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-214">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-215">Propriedade de cadeia de caracteres que contém o nome das regiões necessárias para a fatia.</span><span class="sxs-lookup"><span data-stu-id="afe6b-215">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-216">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-216">The response stream.</span></span>
+    content: function beginRegistering(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUnregistering
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUnregistering(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="afe6b-217">Cancelar o registro de uma versão de uma extensão que foi registrada anteriormente usando a extensão de registrar ou atualizar APIs de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-217">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="afe6b-218">Uma versão de extensão é identificada pela combinação de suas ProviderNamespace, tipo e versão que são especificados ao registrar a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-218">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="afe6b-219">O cancelamento do registro é permitido apenas para extensões internas, ou seja, as extensões para o qual o campo IsInternalExtension é definido como 'true' durante o registro ou durante uma atualização.</span><span class="sxs-lookup"><span data-stu-id="afe6b-219">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="afe6b-220">Há uma cota (15) no número de extensões que podem ser registrados por assinatura.</span><span class="sxs-lookup"><span data-stu-id="afe6b-220">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="afe6b-221">Se sua assinatura for executado fora da cota, você será menos avançados a necessidade de cancelar o registro de algumas das extensões internas ou entre em contato com o Azure (mesmo email usado para se tornar um editor) para aumentar a cota.</span><span class="sxs-lookup"><span data-stu-id="afe6b-221">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUnregistering(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-222">O namespace do provedor da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-222">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-223">O tipo da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-223">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-224">A versão da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-224">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-225">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-225">The response stream.</span></span>
+    content: function beginUnregistering(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#beginUpdating
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: beginUpdating(parameters, callback)
+  summary: <span data-ttu-id="afe6b-226">Atualize uma nova extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-226">Update a new extension.</span></span> <span data-ttu-id="afe6b-227">Ele tem permissão para atualizar uma extensão que já tinha sido registrada com a mesma identidade (isto é, combinação de ProviderNamespace e tipo), mas com versão diferente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-227">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="afe6b-228">Falhará se a extensão de atualização tem uma identidade que não foi registrada antes ou já existe uma extensão com a mesma identidade e a mesma versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-228">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.beginUpdating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="afe6b-229">Parâmetros fornecidos para a operação Atualizar imagem de extensão de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="afe6b-229">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-230">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-230">Required.</span></span> <span data-ttu-id="afe6b-231">O namespace do provedor da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-231">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-232">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-232">Required.</span></span> <span data-ttu-id="afe6b-233">O tipo da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-233">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-234">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-234">Required.</span></span> <span data-ttu-id="afe6b-235">A versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-235">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-236">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-236">Required.</span></span> <span data-ttu-id="afe6b-237">Um rótulo de uma linha da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-237">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-238">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-238">Required.</span></span> <span data-ttu-id="afe6b-239">Os recursos de hospedagem com suporte.</span><span class="sxs-lookup"><span data-stu-id="afe6b-239">The supported hosting resources.</span></span> <span data-ttu-id="afe6b-240">Ele deve conter 'WebRole' e/ou 'WorkerRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-240">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="afe6b-241">Por exemplo</span><span class="sxs-lookup"><span data-stu-id="afe6b-241">E.g.</span></span>
+
+        <span data-ttu-id="afe6b-242">' WebRole | WorkerRole' ou ' WebRole | WorkerRole | VmRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-242">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-243">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-243">Required.</span></span> <span data-ttu-id="afe6b-244">Cadeia de caracteres URI que aponta para o pacote ZIP da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-244">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="afe6b-245">O pacote ZIP deve incluir a extensão do executável e outros arquivos de suporte e o manifesto PluginManifest.xml.</span><span class="sxs-lookup"><span data-stu-id="afe6b-245">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="afe6b-246">Valor de MediaLink deve apontar para uma URL (Http ou Https) em um armazenamento de BLOBs do Azure e podem ser baixado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-246">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="afe6b-247">Windows Azure copiará o pacote de extensão deste local de origem e replicá-la para todas as regiões.</span><span class="sxs-lookup"><span data-stu-id="afe6b-247">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="afe6b-248">O tempo típico para a conclusão da replicação é de 20 minutos.</span><span class="sxs-lookup"><span data-stu-id="afe6b-248">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="afe6b-249">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-249">Optional.</span></span> <span data-ttu-id="afe6b-250">Parâmetros do certificado para criptografar os dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-250">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="afe6b-251">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-251">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-252">Necessário para a declaração de certificado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-252">Required for certificate declaration.</span></span> <span data-ttu-id="afe6b-253">O local de repositório de certificados do Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-253">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-254">Seu valor deve ser 'LocalMachine' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-254">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-255">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-255">Optional.</span></span> <span data-ttu-id="afe6b-256">O nome do repositório de certificado Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-256">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-257">Seu valor deve ser 'My' se presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-257">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="afe6b-258">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-258">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-259">Se a impressão digital é necessária para o certificado para criptografia ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-259">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="afe6b-260">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-260">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-261">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-261">Optional.</span></span> <span data-ttu-id="afe6b-262">O algoritmo de impressão digital do certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-262">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-263">Seu valor deve ser 'sha1' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-263">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="afe6b-264">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-264">Optional.</span></span> <span data-ttu-id="afe6b-265">Declarado pontos de extremidade para adicionar automaticamente a cada implantação com essa extensão adicionada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-265">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-266">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-266">Optional.</span></span> <span data-ttu-id="afe6b-267">Uma lista de pontos de extremidade de entrada necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-267">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-268">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-268">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-269">Cada ponto de extremidade de entrada será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-269">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-270">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-270">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-271">Uma lista de pontos de extremidade internos necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-271">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-272">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-272">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-273">Cada ponto de extremidade interno será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-273">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-274">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-274">Optional.</span></span> <span data-ttu-id="afe6b-275">Uma lista de pontos de extremidade de entrada de instância exigido por essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-275">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="afe6b-276">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-276">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-277">Cada ponto de extremidade de entrada de instância será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-277">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-278">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-278">Optional.</span></span> <span data-ttu-id="afe6b-279">O esquema XSD de dados de configuração pública.</span><span class="sxs-lookup"><span data-stu-id="afe6b-279">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-280">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-280">Optional.</span></span> <span data-ttu-id="afe6b-281">O esquema XSD de dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-281">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-282">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-282">Required.</span></span> <span data-ttu-id="afe6b-283">Descrição detalhada da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-283">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-284">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-284">Optional.</span></span> <span data-ttu-id="afe6b-285">Texto do nome do publicador.</span><span class="sxs-lookup"><span data-stu-id="afe6b-285">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="afe6b-286">Publisher pode defini-lo para qualquer data arbitrária, e isso é apenas para fins de exibição.</span><span class="sxs-lookup"><span data-stu-id="afe6b-286">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="afe6b-287">Se não for especificado pelo publicador, o Azure atribuirá automaticamente a hora UTC quando a solicitação de extensão foi recebida.</span><span class="sxs-lookup"><span data-stu-id="afe6b-287">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-288">Declarado usados dentro da VM convidada pela extensão de recursos locais.</span><span class="sxs-lookup"><span data-stu-id="afe6b-288">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="afe6b-289">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-289">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-290">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-290">Optional.</span></span> <span data-ttu-id="afe6b-291">Seu valor deve ser 'verdadeiro' ou 'false' (diferencia maiusculas de minúsculas) quando definido como 'true', a inicialização da função será bloqueado até que a instalação da extensão é concluída.</span><span class="sxs-lookup"><span data-stu-id="afe6b-291">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="afe6b-292">Este sinalizador deve ser definido como 'true' quando a função não pode iniciar sem a extensão que está sendo instalada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-292">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="afe6b-293">Se definido como 'false' (valor padrão), a função será iniciada sem aguardar a conclusão da instalação de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-293">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="afe6b-294">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-294">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-295">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-295">Optional.</span></span> <span data-ttu-id="afe6b-296">Se isso for definido como 'true' a extensão não é visível para uso público, ou seja, que estão sendo retornados da lista da API.</span><span class="sxs-lookup"><span data-stu-id="afe6b-296">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="afe6b-297">Ele pode ser acessado ainda referindo-se a caixa de combinação de ProviderNamespace, tipo e versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-297">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="afe6b-298">Portanto, uma extensão interna destina-se apenas para fins de teste.</span><span class="sxs-lookup"><span data-stu-id="afe6b-298">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="afe6b-299">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-299">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-300">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-300">Optional.</span></span> <span data-ttu-id="afe6b-301">Um exemplo de configuração para a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-301">A sample configuration for the extension.</span></span> <span data-ttu-id="afe6b-302">Ele pode ser baixado por usuários, e o usuário pode substituir por parâmetros de entrada personalizados.</span><span class="sxs-lookup"><span data-stu-id="afe6b-302">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="afe6b-303">O exemplo de configuração deve ser suficientemente comentado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-303">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="afe6b-304">Se os dados de configuração estão em formato XML, em seguida, o elemento de nível de documento XML deve ser 'Configuração' e os dados de configuração pública opcional correspondem a um elemento filho de 'PublicConfig' e os dados de configuração privada opcional correspondem a um filho elemento de 'PrivateConfig'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-304">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="afe6b-305">Os dados de configuração de exemplo devem ser validados em relação ao esquema de configuração pública e privada pelo editor.</span><span class="sxs-lookup"><span data-stu-id="afe6b-305">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-306">Indica se esta versão da extensão foi replicada para todas as regiões ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-306">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="afe6b-307">Se for true, a versão da extensão determinado pode ser usada ao criar ou atualizar implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-307">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-308">Caso contrário, a versão de determinada extensão pode causar falha na criação ou atualização de implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-308">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-309">O tempo típico é de 20 minutos para uma extensão recentemente registrado ou atualizado recentemente replicar completamente pelo Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-309">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-310">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-310">Optional.</span></span> <span data-ttu-id="afe6b-311">Cadeia de caracteres de URL que aponta para o EULA (contrato de licença de usuário final) dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-311">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="afe6b-312">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-312">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="afe6b-313">Se o software requer que qualquer EULAs adicionais, um link para os termos de licença deve ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="afe6b-313">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-314">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-314">Optional.</span></span> <span data-ttu-id="afe6b-315">Cadeia de caracteres de URL que aponta para o documento de privacidade dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-315">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="afe6b-316">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-316">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="afe6b-317">Se o software coleta todos os dados e transferências de VM convidada, um documento de privacidade adicionais pode ser necessárias.</span><span class="sxs-lookup"><span data-stu-id="afe6b-317">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-318">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-318">Optional.</span></span> <span data-ttu-id="afe6b-319">Cadeia de caracteres de URL que aponta para a home page nesta versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-319">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="afe6b-320">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-320">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="afe6b-321">A home page deve ter informações de uso e informações de contato para suporte ao cliente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-321">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-322">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-322">Optional.</span></span> <span data-ttu-id="afe6b-323">Se isso for definido como 'true' a extensão deve receber a configuração baseada em JSON.</span><span class="sxs-lookup"><span data-stu-id="afe6b-323">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="afe6b-324">Se isso for definido como 'false' a extensão deve receber a configuração baseada em XML.</span><span class="sxs-lookup"><span data-stu-id="afe6b-324">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="afe6b-325">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-325">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-326">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-326">Optional.</span></span> <span data-ttu-id="afe6b-327">Se isso for definido como 'true', que a versão da extensão não é possível fazer upgrade das outras versões principais em implantações do Active Directory.</span><span class="sxs-lookup"><span data-stu-id="afe6b-327">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="afe6b-328">Se o valor for 'false' ou nem estiver presente, a versão da extensão pode ser atualizada para qualquer outra versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-328">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="afe6b-329">Não há suporte para o downgrade.</span><span class="sxs-lookup"><span data-stu-id="afe6b-329">Downgrade is not supported.</span></span> <span data-ttu-id="afe6b-330">O valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-330">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-331">Propriedade de cadeia de caracteres que indica o sistema operacional que dá suporte a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-331">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="afe6b-332">Valores atuais são 'Windows' ou 'Linux'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-332">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-333">Propriedade de cadeia de caracteres que contém o nome da empresa/organização que publica a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-333">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-334">Propriedade de cadeia de caracteres que contém o nome das regiões necessárias para a fatia.</span><span class="sxs-lookup"><span data-stu-id="afe6b-334">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-335">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-335">The response stream.</span></span>
+    content: function beginUpdating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#register
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: register(parameters, callback)
+  summary: <span data-ttu-id="afe6b-336">Registre uma nova extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-336">Register a new extension.</span></span> <span data-ttu-id="afe6b-337">Uma extensão é identificada pela combinação de suas ProviderNamespace e o tipo (cadeia de caracteres diferencia maiusculas de minúsculas).</span><span class="sxs-lookup"><span data-stu-id="afe6b-337">An extension is identified by the combination of its ProviderNamespace and Type (case-sensitive string).</span></span> <span data-ttu-id="afe6b-338">Ele não tem permissão para registrar uma extensão com a mesma identidade (isto é, combinação de ProviderNamespace e tipo) de uma extensão já registrado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-338">It is not allowed to register an extension with the same identity (i.e. combination of ProviderNamespace and Type) of an already-registered extension.</span></span> <span data-ttu-id="afe6b-339">Para registrar a nova versão de uma extensão existente, a API de atualização de extensão deve ser usada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-339">To register new version of an existing extension, the Update Extension API should be used.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.register(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageRegisterParameters
+      description: <span data-ttu-id="afe6b-340">Parâmetros fornecidos para a operação registrar imagem da extensão de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="afe6b-340">Parameters supplied to the Register Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-341">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-341">Required.</span></span> <span data-ttu-id="afe6b-342">O namespace do provedor da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-342">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-343">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-343">Required.</span></span> <span data-ttu-id="afe6b-344">O tipo da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-344">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-345">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-345">Required.</span></span> <span data-ttu-id="afe6b-346">A versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-346">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-347">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-347">Required.</span></span> <span data-ttu-id="afe6b-348">Um rótulo de uma linha da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-348">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-349">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-349">Required.</span></span> <span data-ttu-id="afe6b-350">Os recursos de hospedagem com suporte.</span><span class="sxs-lookup"><span data-stu-id="afe6b-350">The supported hosting resources.</span></span> <span data-ttu-id="afe6b-351">Ele deve conter 'WebRole' e/ou 'WorkerRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-351">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="afe6b-352">Por exemplo</span><span class="sxs-lookup"><span data-stu-id="afe6b-352">E.g.</span></span>
+
+        <span data-ttu-id="afe6b-353">' WebRole | WorkerRole' ou ' WebRole | WorkerRole | VmRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-353">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-354">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-354">Required.</span></span> <span data-ttu-id="afe6b-355">Cadeia de caracteres URI que aponta para o pacote ZIP da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-355">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="afe6b-356">O pacote ZIP deve incluir a extensão do executável e outros arquivos de suporte e o manifesto PluginManifest.xml.</span><span class="sxs-lookup"><span data-stu-id="afe6b-356">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="afe6b-357">Valor de MediaLink deve apontar para uma URL (Http ou Https) em um armazenamento de BLOBs do Azure e podem ser baixado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-357">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="afe6b-358">Windows Azure copiará o pacote de extensão deste local de origem e replicá-la para todas as regiões.</span><span class="sxs-lookup"><span data-stu-id="afe6b-358">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="afe6b-359">O tempo típico para a conclusão da replicação é de 20 minutos.</span><span class="sxs-lookup"><span data-stu-id="afe6b-359">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="afe6b-360">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-360">Optional.</span></span> <span data-ttu-id="afe6b-361">Parâmetros do certificado para criptografar os dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-361">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="afe6b-362">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-362">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-363">Necessário para a declaração de certificado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-363">Required for certificate declaration.</span></span> <span data-ttu-id="afe6b-364">O local de repositório de certificados do Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-364">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-365">Seu valor deve ser 'LocalMachine' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-365">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-366">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-366">Optional.</span></span> <span data-ttu-id="afe6b-367">O nome do repositório de certificado Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-367">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-368">Seu valor deve ser 'My' se presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-368">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="afe6b-369">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-369">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-370">Se a impressão digital é necessária para o certificado para criptografia ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-370">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="afe6b-371">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-371">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-372">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-372">Optional.</span></span> <span data-ttu-id="afe6b-373">O algoritmo de impressão digital do certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-373">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-374">Seu valor deve ser 'sha1' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-374">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="afe6b-375">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-375">Optional.</span></span> <span data-ttu-id="afe6b-376">Declarado pontos de extremidade para adicionar automaticamente a cada implantação com essa extensão adicionada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-376">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-377">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-377">Optional.</span></span> <span data-ttu-id="afe6b-378">Uma lista de pontos de extremidade de entrada necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-378">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-379">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-379">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-380">Cada ponto de extremidade de entrada será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-380">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-381">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-381">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-382">Uma lista de pontos de extremidade internos necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-382">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-383">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-383">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-384">Cada ponto de extremidade interno será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-384">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-385">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-385">Optional.</span></span> <span data-ttu-id="afe6b-386">Uma lista de pontos de extremidade de entrada de instância exigido por essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-386">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="afe6b-387">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-387">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-388">Cada ponto de extremidade de entrada de instância será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-388">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-389">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-389">Optional.</span></span> <span data-ttu-id="afe6b-390">O esquema XSD de dados de configuração pública.</span><span class="sxs-lookup"><span data-stu-id="afe6b-390">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-391">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-391">Optional.</span></span> <span data-ttu-id="afe6b-392">O esquema XSD de dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-392">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-393">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-393">Required.</span></span> <span data-ttu-id="afe6b-394">Descrição detalhada da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-394">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-395">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-395">Optional.</span></span> <span data-ttu-id="afe6b-396">Texto do nome do publicador.</span><span class="sxs-lookup"><span data-stu-id="afe6b-396">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="afe6b-397">Publisher pode defini-lo para qualquer data arbitrária, e isso é apenas para fins de exibição.</span><span class="sxs-lookup"><span data-stu-id="afe6b-397">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="afe6b-398">Se não for especificado pelo publicador, o Azure atribuirá automaticamente a hora UTC quando a solicitação de extensão foi recebida.</span><span class="sxs-lookup"><span data-stu-id="afe6b-398">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-399">Declarado usados dentro da VM convidada pela extensão de recursos locais.</span><span class="sxs-lookup"><span data-stu-id="afe6b-399">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="afe6b-400">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-400">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-401">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-401">Optional.</span></span> <span data-ttu-id="afe6b-402">Seu valor deve ser 'verdadeiro' ou 'false' (diferencia maiusculas de minúsculas) quando definido como 'true', a inicialização da função será bloqueado até que a instalação da extensão é concluída.</span><span class="sxs-lookup"><span data-stu-id="afe6b-402">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="afe6b-403">Este sinalizador deve ser definido como 'true' quando a função não pode iniciar sem a extensão que está sendo instalada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-403">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="afe6b-404">Se definido como 'false' (valor padrão), a função será iniciada sem aguardar a conclusão da instalação de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-404">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="afe6b-405">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-405">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-406">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-406">Optional.</span></span> <span data-ttu-id="afe6b-407">Se isso for definido como 'true' a extensão não é visível para uso público, ou seja, que estão sendo retornados da lista da API.</span><span class="sxs-lookup"><span data-stu-id="afe6b-407">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="afe6b-408">Ele pode ser acessado ainda referindo-se a caixa de combinação de ProviderNamespace, tipo e versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-408">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="afe6b-409">Portanto, uma extensão interna destina-se apenas para fins de teste.</span><span class="sxs-lookup"><span data-stu-id="afe6b-409">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="afe6b-410">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-410">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-411">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-411">Optional.</span></span> <span data-ttu-id="afe6b-412">Um exemplo de configuração para a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-412">A sample configuration for the extension.</span></span> <span data-ttu-id="afe6b-413">Ele pode ser baixado por usuários, e o usuário pode substituir por parâmetros de entrada personalizados.</span><span class="sxs-lookup"><span data-stu-id="afe6b-413">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="afe6b-414">O exemplo de configuração deve ser suficientemente comentado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-414">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="afe6b-415">Se os dados de configuração estão em formato XML, em seguida, o elemento de nível de documento XML deve ser 'Configuração' e os dados de configuração pública opcional correspondem a um elemento filho de 'PublicConfig' e os dados de configuração privada opcional correspondem a um filho elemento de 'PrivateConfig'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-415">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="afe6b-416">Os dados de configuração de exemplo devem ser validados em relação ao esquema de configuração pública e privada pelo editor.</span><span class="sxs-lookup"><span data-stu-id="afe6b-416">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-417">Indica se esta versão da extensão foi replicada para todas as regiões ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-417">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="afe6b-418">Se for true, a versão da extensão determinado pode ser usada ao criar ou atualizar implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-418">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-419">Caso contrário, a versão de determinada extensão pode causar falha na criação ou atualização de implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-419">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-420">O tempo típico é de 20 minutos para uma extensão recentemente registrado ou atualizado recentemente replicar completamente pelo Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-420">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-421">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-421">Optional.</span></span> <span data-ttu-id="afe6b-422">Cadeia de caracteres de URL que aponta para o EULA (contrato de licença de usuário final) dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-422">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="afe6b-423">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-423">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="afe6b-424">Se o software requer que qualquer EULAs adicionais, um link para os termos de licença deve ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="afe6b-424">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-425">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-425">Optional.</span></span> <span data-ttu-id="afe6b-426">Cadeia de caracteres de URL que aponta para o documento de privacidade dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-426">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="afe6b-427">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-427">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="afe6b-428">Se o software coleta todos os dados e transferências de VM convidada, um documento de privacidade adicionais pode ser necessárias.</span><span class="sxs-lookup"><span data-stu-id="afe6b-428">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-429">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-429">Optional.</span></span> <span data-ttu-id="afe6b-430">Cadeia de caracteres de URL que aponta para a home page nesta versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-430">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="afe6b-431">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-431">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="afe6b-432">A home page deve ter informações de uso e informações de contato para suporte ao cliente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-432">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-433">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-433">Optional.</span></span> <span data-ttu-id="afe6b-434">Se isso for definido como 'true' a extensão deve receber a configuração baseada em JSON.</span><span class="sxs-lookup"><span data-stu-id="afe6b-434">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="afe6b-435">Se isso for definido como 'false' a extensão deve receber a configuração baseada em XML.</span><span class="sxs-lookup"><span data-stu-id="afe6b-435">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="afe6b-436">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-436">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-437">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-437">Optional.</span></span> <span data-ttu-id="afe6b-438">Se isso for definido como 'true', que a versão da extensão não é possível fazer upgrade das outras versões principais em implantações do Active Directory.</span><span class="sxs-lookup"><span data-stu-id="afe6b-438">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="afe6b-439">Se o valor for 'false' ou nem estiver presente, a versão da extensão pode ser atualizada para qualquer outra versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-439">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="afe6b-440">Não há suporte para o downgrade.</span><span class="sxs-lookup"><span data-stu-id="afe6b-440">Downgrade is not supported.</span></span> <span data-ttu-id="afe6b-441">O valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-441">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-442">Propriedade de cadeia de caracteres que indica o sistema operacional que dá suporte a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-442">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="afe6b-443">Valores atuais são 'Windows' ou 'Linux'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-443">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-444">Propriedade de cadeia de caracteres que contém o nome da empresa/organização que publica a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-444">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-445">Propriedade de cadeia de caracteres que contém o nome das regiões necessárias para a fatia.</span><span class="sxs-lookup"><span data-stu-id="afe6b-445">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-446">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-446">The response stream.</span></span>
+    content: function register(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#unregister
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: unregister(providerNamespace, type, version, callback)
+  summary: >-
+    <span data-ttu-id="afe6b-447">Cancelar o registro de uma versão de uma extensão que foi registrada anteriormente usando a extensão de registrar ou atualizar APIs de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-447">Unregister a version of an extension that was previously registered using either the Register Extension or Update Extension APIs.</span></span> <span data-ttu-id="afe6b-448">Uma versão de extensão é identificada pela combinação de suas ProviderNamespace, tipo e versão que são especificados ao registrar a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-448">An extension version is identified by the combination of its ProviderNamespace, Type and Version which are specified when registering the extension.</span></span>
+
+    <span data-ttu-id="afe6b-449">O cancelamento do registro é permitido apenas para extensões internas, ou seja, as extensões para o qual o campo IsInternalExtension é definido como 'true' durante o registro ou durante uma atualização.</span><span class="sxs-lookup"><span data-stu-id="afe6b-449">Unregistering is only allowed for internal extensions, that is, the extensions for which the IsInternalExtension field is set to 'true' during registration or during an update.</span></span> <span data-ttu-id="afe6b-450">Há uma cota (15) no número de extensões que podem ser registrados por assinatura.</span><span class="sxs-lookup"><span data-stu-id="afe6b-450">There is a quota (15) on the number of extensions that can be registered per subscription.</span></span> <span data-ttu-id="afe6b-451">Se sua assinatura for executado fora da cota, você será menos avançados a necessidade de cancelar o registro de algumas das extensões internas ou entre em contato com o Azure (mesmo email usado para se tornar um editor) para aumentar a cota.</span><span class="sxs-lookup"><span data-stu-id="afe6b-451">If your subscription runs out of quota, you will wither need to unregister some of the internal extensions or contact Azure (same email used to become a publisher)  to increase the quota.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.unregister(providerNamespace, type, version, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-452">O namespace do provedor da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-452">The provider namespace of the extension image to unregister.</span></span>
+    - id: type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-453">O tipo da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-453">The type of the extension image to unregister.</span></span>
+    - id: version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-454">A versão da imagem de extensão para cancelar o registro.</span><span class="sxs-lookup"><span data-stu-id="afe6b-454">The version of the extension image to unregister.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-455">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-455">The response stream.</span></span>
+    content: function unregister(providerNamespace, type, version, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  id: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations#update
+  parent: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations
+  name: update(parameters, callback)
+  summary: <span data-ttu-id="afe6b-456">Atualize uma nova extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-456">Update a new extension.</span></span> <span data-ttu-id="afe6b-457">Ele tem permissão para atualizar uma extensão que já tinha sido registrada com a mesma identidade (isto é, combinação de ProviderNamespace e tipo), mas com versão diferente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-457">It is allowed to update an extension which had already been registered with the same identity (i.e. combination of ProviderNamespace and Type) but with different version.</span></span> <span data-ttu-id="afe6b-458">Falhará se a extensão de atualização tem uma identidade que não foi registrada antes ou já existe uma extensão com a mesma identidade e a mesma versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-458">It will fail if the extension to update has an identity that has not been registered before, or there is already an extension with the same identity and same version.</span></span>
+  fullName: azure-asm-compute.ExtensionImageOperations~ExtensionImageOperations.update(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ExtensionImageUpdateParameters
+      description: <span data-ttu-id="afe6b-459">Parâmetros fornecidos para a operação Atualizar imagem de extensão de máquina Virtual.</span><span class="sxs-lookup"><span data-stu-id="afe6b-459">Parameters supplied to the Update Virtual Machine Extension Image operation.</span></span>
+    - id: parameters.providerNameSpace
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-460">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-460">Required.</span></span> <span data-ttu-id="afe6b-461">O namespace do provedor da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-461">The provider namespace of the extension.</span></span>
+    - id: parameters.type
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-462">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-462">Required.</span></span> <span data-ttu-id="afe6b-463">O tipo da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-463">The type of the extension.</span></span>
+    - id: parameters.version
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-464">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-464">Required.</span></span> <span data-ttu-id="afe6b-465">A versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-465">The version of the extension.</span></span>
+    - id: parameters.label
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-466">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-466">Required.</span></span> <span data-ttu-id="afe6b-467">Um rótulo de uma linha da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-467">A one line label of the extension.</span></span>
+      optional: true
+    - id: parameters.hostingResources
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-468">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-468">Required.</span></span> <span data-ttu-id="afe6b-469">Os recursos de hospedagem com suporte.</span><span class="sxs-lookup"><span data-stu-id="afe6b-469">The supported hosting resources.</span></span> <span data-ttu-id="afe6b-470">Ele deve conter 'WebRole' e/ou 'WorkerRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-470">It must contain 'WebRole' and/or 'WorkerRole'.</span></span> <span data-ttu-id="afe6b-471">Por exemplo</span><span class="sxs-lookup"><span data-stu-id="afe6b-471">E.g.</span></span>
+
+        <span data-ttu-id="afe6b-472">' WebRole | WorkerRole' ou ' WebRole | WorkerRole | VmRole'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-472">'WebRole|WorkerRole' or 'WebRole|WorkerRole|VmRole'.</span></span>
+      optional: true
+    - id: parameters.mediaLink
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-473">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-473">Required.</span></span> <span data-ttu-id="afe6b-474">Cadeia de caracteres URI que aponta para o pacote ZIP da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-474">URI string pointing to the ZIP package of the extension.</span></span> <span data-ttu-id="afe6b-475">O pacote ZIP deve incluir a extensão do executável e outros arquivos de suporte e o manifesto PluginManifest.xml.</span><span class="sxs-lookup"><span data-stu-id="afe6b-475">The ZIP package has to include the extension executable and other supporting files, and the PluginManifest.xml manifest.</span></span> <span data-ttu-id="afe6b-476">Valor de MediaLink deve apontar para uma URL (Http ou Https) em um armazenamento de BLOBs do Azure e podem ser baixado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-476">MediaLink value must point to a URL (either Http or Https) in a Azure blob storage and is downloadable.</span></span> <span data-ttu-id="afe6b-477">Windows Azure copiará o pacote de extensão deste local de origem e replicá-la para todas as regiões.</span><span class="sxs-lookup"><span data-stu-id="afe6b-477">Windows Azure will copy the extension package from this source location and replicate it to all regions.</span></span> <span data-ttu-id="afe6b-478">O tempo típico para a conclusão da replicação é de 20 minutos.</span><span class="sxs-lookup"><span data-stu-id="afe6b-478">The typical time for replication to complete is 20 minutes.</span></span>
+      optional: true
+    - id: parameters.certificate
+      type:
+      - azure-asm-compute.ExtensionCertificateConfiguration
+      description: <span data-ttu-id="afe6b-479">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-479">Optional.</span></span> <span data-ttu-id="afe6b-480">Parâmetros do certificado para criptografar os dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-480">Parameters of the the certificate for encrypting the private configuration data.</span></span> <span data-ttu-id="afe6b-481">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-481">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.certificate.storeLocation
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-482">Necessário para a declaração de certificado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-482">Required for certificate declaration.</span></span> <span data-ttu-id="afe6b-483">O local de repositório de certificados do Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-483">The Windows certificate store location to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-484">Seu valor deve ser 'LocalMachine' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-484">Its value has to be 'LocalMachine' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.storeName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-485">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-485">Optional.</span></span> <span data-ttu-id="afe6b-486">O nome do repositório de certificado Windows para instalar o certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-486">The Windows certificate store name to install the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-487">Seu valor deve ser 'My' se presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-487">Its value has to be 'My' if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintRequired
+      type:
+      - boolean
+      description: >-
+        <span data-ttu-id="afe6b-488">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-488">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-489">Se a impressão digital é necessária para o certificado para criptografia ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-489">Whether thumbprint is required for the certificate for encryption or not.</span></span>
+
+        <span data-ttu-id="afe6b-490">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-490">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.certificate.thumbprintAlgorithm
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-491">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-491">Optional.</span></span> <span data-ttu-id="afe6b-492">O algoritmo de impressão digital do certificado para criptografia, se necessário.</span><span class="sxs-lookup"><span data-stu-id="afe6b-492">The thumbprint algorithm of the certificate for encryption, if required.</span></span> <span data-ttu-id="afe6b-493">Seu valor deve ser 'sha1' se estiver presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-493">Its value has to be 'sha1' if present.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints
+      type:
+      - azure-asm-compute.ExtensionEndpointConfiguration
+      description: <span data-ttu-id="afe6b-494">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-494">Optional.</span></span> <span data-ttu-id="afe6b-495">Declarado pontos de extremidade para adicionar automaticamente a cada implantação com essa extensão adicionada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-495">Declared endpoints to automatically add to each deployment with this extension added.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.inputEndpoints
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-496">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-496">Optional.</span></span> <span data-ttu-id="afe6b-497">Uma lista de pontos de extremidade de entrada necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-497">A list of input endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-498">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-498">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-499">Cada ponto de extremidade de entrada será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-499">Each input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.internalEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-500">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-500">Optional.</span></span>
+
+        <span data-ttu-id="afe6b-501">Uma lista de pontos de extremidade internos necessários para essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-501">A list of internal endpoints required by this extension.</span></span> <span data-ttu-id="afe6b-502">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-502">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-503">Cada ponto de extremidade interno será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-503">Each internal endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.extensionEndpoints.instanceInputEndpoints
+      type:
+      - array
+      description: >-
+        <span data-ttu-id="afe6b-504">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-504">Optional.</span></span> <span data-ttu-id="afe6b-505">Uma lista de pontos de extremidade de entrada de instância exigido por essa extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-505">A list of instance input endpoints required by this extension.</span></span>
+
+        <span data-ttu-id="afe6b-506">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-506">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span> <span data-ttu-id="afe6b-507">Cada ponto de extremidade de entrada de instância será adicionado automaticamente a definição de serviço da implantação utilizando esta extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-507">Each instance input endpoint will be automatically added to the service definition of the deployment utilizing this extension.</span></span>
+      optional: true
+    - id: parameters.publicConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-508">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-508">Optional.</span></span> <span data-ttu-id="afe6b-509">O esquema XSD de dados de configuração pública.</span><span class="sxs-lookup"><span data-stu-id="afe6b-509">The XSD schema of public configuration data.</span></span>
+      optional: true
+    - id: parameters.privateConfigurationSchema
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-510">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-510">Optional.</span></span> <span data-ttu-id="afe6b-511">O esquema XSD de dados de configuração privada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-511">The XSD schema of private configuration data.</span></span>
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-512">Obrigatório.</span><span class="sxs-lookup"><span data-stu-id="afe6b-512">Required.</span></span> <span data-ttu-id="afe6b-513">Descrição detalhada da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-513">Detailed description of the extension.</span></span>
+      optional: true
+    - id: parameters.publisherName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-514">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-514">Optional.</span></span> <span data-ttu-id="afe6b-515">Texto do nome do publicador.</span><span class="sxs-lookup"><span data-stu-id="afe6b-515">Publisher name text.</span></span>
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: <span data-ttu-id="afe6b-516">Publisher pode defini-lo para qualquer data arbitrária, e isso é apenas para fins de exibição.</span><span class="sxs-lookup"><span data-stu-id="afe6b-516">Publisher can set it to any arbitrary date, and this is only for display purpose.</span></span> <span data-ttu-id="afe6b-517">Se não for especificado pelo publicador, o Azure atribuirá automaticamente a hora UTC quando a solicitação de extensão foi recebida.</span><span class="sxs-lookup"><span data-stu-id="afe6b-517">If not specified by publisher, Azure will automatically assign the UTC time when the extension request was received.</span></span>
+      optional: true
+    - id: parameters.localResources
+      type:
+      - array
+      description: <span data-ttu-id="afe6b-518">Declarado usados dentro da VM convidada pela extensão de recursos locais.</span><span class="sxs-lookup"><span data-stu-id="afe6b-518">Declared local resources used inside guest VM by the extension.</span></span> <span data-ttu-id="afe6b-519">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-519">Optional.</span></span>
+      optional: true
+    - id: parameters.blockRoleUponFailure
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-520">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-520">Optional.</span></span> <span data-ttu-id="afe6b-521">Seu valor deve ser 'verdadeiro' ou 'false' (diferencia maiusculas de minúsculas) quando definido como 'true', a inicialização da função será bloqueado até que a instalação da extensão é concluída.</span><span class="sxs-lookup"><span data-stu-id="afe6b-521">Its value has to be 'true' or 'false' (case-sensitive) When set to 'true', the role startup will be blocked till the extension installation completes.</span></span> <span data-ttu-id="afe6b-522">Este sinalizador deve ser definido como 'true' quando a função não pode iniciar sem a extensão que está sendo instalada.</span><span class="sxs-lookup"><span data-stu-id="afe6b-522">This flag should be set to 'true' when the role cannot start without the extension being installed.</span></span> <span data-ttu-id="afe6b-523">Se definido como 'false' (valor padrão), a função será iniciada sem aguardar a conclusão da instalação de extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-523">If set to 'false' (default value), the role will be started without waiting for the extension installation to complete.</span></span> <span data-ttu-id="afe6b-524">WebRole com suporte no ou WorkerRole, mas ignorados em VmRole.</span><span class="sxs-lookup"><span data-stu-id="afe6b-524">Supported on WebRole or WorkerRole, but ignored on VmRole.</span></span>
+      optional: true
+    - id: parameters.isInternalExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-525">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-525">Optional.</span></span> <span data-ttu-id="afe6b-526">Se isso for definido como 'true' a extensão não é visível para uso público, ou seja, que estão sendo retornados da lista da API.</span><span class="sxs-lookup"><span data-stu-id="afe6b-526">If this is set to 'true' the extension is not visible for public use, i.e. being returned from list API's.</span></span> <span data-ttu-id="afe6b-527">Ele pode ser acessado ainda referindo-se a caixa de combinação de ProviderNamespace, tipo e versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-527">It can be still accessed by referring to the ProviderNamespace, Type & Version combo.</span></span> <span data-ttu-id="afe6b-528">Portanto, uma extensão interna destina-se apenas para fins de teste.</span><span class="sxs-lookup"><span data-stu-id="afe6b-528">Therefore an internal extension is intended only for testing purpose.</span></span> <span data-ttu-id="afe6b-529">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-529">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.sampleConfig
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-530">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-530">Optional.</span></span> <span data-ttu-id="afe6b-531">Um exemplo de configuração para a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-531">A sample configuration for the extension.</span></span> <span data-ttu-id="afe6b-532">Ele pode ser baixado por usuários, e o usuário pode substituir por parâmetros de entrada personalizados.</span><span class="sxs-lookup"><span data-stu-id="afe6b-532">It can be downloaded by users, and the user can replace with customized input parameters.</span></span> <span data-ttu-id="afe6b-533">O exemplo de configuração deve ser suficientemente comentado.</span><span class="sxs-lookup"><span data-stu-id="afe6b-533">The sample configuration should be sufficiently commented.</span></span> <span data-ttu-id="afe6b-534">Se os dados de configuração estão em formato XML, em seguida, o elemento de nível de documento XML deve ser 'Configuração' e os dados de configuração pública opcional correspondem a um elemento filho de 'PublicConfig' e os dados de configuração privada opcional correspondem a um filho elemento de 'PrivateConfig'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-534">If configuration data are in XML format, then the XML document-level element must be 'Configuration', and the optional public configuration data corresponds to a child element of 'PublicConfig', and the optional private configuration data corresponds to a child element of 'PrivateConfig'.</span></span> <span data-ttu-id="afe6b-535">Os dados de configuração de exemplo devem ser validados em relação ao esquema de configuração pública e privada pelo editor.</span><span class="sxs-lookup"><span data-stu-id="afe6b-535">The sample configuration data should be validated against public and private configuration schema by the publisher.</span></span>
+      optional: true
+    - id: parameters.replicationCompleted
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-536">Indica se esta versão da extensão foi replicada para todas as regiões ou não.</span><span class="sxs-lookup"><span data-stu-id="afe6b-536">Indicates whether this version of extension has been replicated to all regions or not.</span></span> <span data-ttu-id="afe6b-537">Se for true, a versão da extensão determinado pode ser usada ao criar ou atualizar implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-537">If true, then the given extension version can be used in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-538">Caso contrário, a versão de determinada extensão pode causar falha na criação ou atualização de implantações.</span><span class="sxs-lookup"><span data-stu-id="afe6b-538">Otherwise, the given extension version might cause failure in creating or updating deployments.</span></span> <span data-ttu-id="afe6b-539">O tempo típico é de 20 minutos para uma extensão recentemente registrado ou atualizado recentemente replicar completamente pelo Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-539">The typical time is 20 minutes for a newly-registered or newly-updated extension to replicate completely by Azure.</span></span>
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-540">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-540">Optional.</span></span> <span data-ttu-id="afe6b-541">Cadeia de caracteres de URL que aponta para o EULA (contrato de licença de usuário final) dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-541">URL string pointing to the EULA (End User License Agreement) of this version of extension.</span></span> <span data-ttu-id="afe6b-542">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Windows Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-542">This is optionally specified by the third-party publishing the extension instead of Windows Azure.</span></span> <span data-ttu-id="afe6b-543">Se o software requer que qualquer EULAs adicionais, um link para os termos de licença deve ser fornecido.</span><span class="sxs-lookup"><span data-stu-id="afe6b-543">If the software requires any additional EULAs, a link to the EULA should be provided.</span></span>
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="afe6b-544">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-544">Optional.</span></span> <span data-ttu-id="afe6b-545">Cadeia de caracteres de URL que aponta para o documento de privacidade dessa versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-545">URL string pointing to privacy document of this version of extension.</span></span> <span data-ttu-id="afe6b-546">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-546">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span>
+
+        <span data-ttu-id="afe6b-547">Se o software coleta todos os dados e transferências de VM convidada, um documento de privacidade adicionais pode ser necessárias.</span><span class="sxs-lookup"><span data-stu-id="afe6b-547">If the software collects any data and transfers out the guest VM, then an additional privacy document might be needed.</span></span>
+      optional: true
+    - id: parameters.homepageUri
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-548">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-548">Optional.</span></span> <span data-ttu-id="afe6b-549">Cadeia de caracteres de URL que aponta para a home page nesta versão da extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-549">URL string pointing to homepage of this version of extension.</span></span> <span data-ttu-id="afe6b-550">Isso é especificado, opcionalmente, por terceiros publicar a extensão em vez do Azure.</span><span class="sxs-lookup"><span data-stu-id="afe6b-550">This is optionally specified by the third-party publishing the extension instead of Azure.</span></span> <span data-ttu-id="afe6b-551">A home page deve ter informações de uso e informações de contato para suporte ao cliente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-551">The homepage should have usage information and contact information for customer support.</span></span>
+      optional: true
+    - id: parameters.isJsonExtension
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-552">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-552">Optional.</span></span> <span data-ttu-id="afe6b-553">Se isso for definido como 'true' a extensão deve receber a configuração baseada em JSON.</span><span class="sxs-lookup"><span data-stu-id="afe6b-553">If this is set to 'true' the extension is expected to receive JSON based configuration.</span></span> <span data-ttu-id="afe6b-554">Se isso for definido como 'false' a extensão deve receber a configuração baseada em XML.</span><span class="sxs-lookup"><span data-stu-id="afe6b-554">If this is set to 'false' the extension is expected to receive XML based configuration.</span></span> <span data-ttu-id="afe6b-555">Seu valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-555">Its value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.disallowMajorVersionUpgrade
+      type:
+      - boolean
+      description: <span data-ttu-id="afe6b-556">Opcional.</span><span class="sxs-lookup"><span data-stu-id="afe6b-556">Optional.</span></span> <span data-ttu-id="afe6b-557">Se isso for definido como 'true', que a versão da extensão não é possível fazer upgrade das outras versões principais em implantações do Active Directory.</span><span class="sxs-lookup"><span data-stu-id="afe6b-557">If this is set to 'true' the extension version cannot be upgraded to from other major versions in active deployments.</span></span> <span data-ttu-id="afe6b-558">Se o valor for 'false' ou nem estiver presente, a versão da extensão pode ser atualizada para qualquer outra versão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-558">If the value is 'false' or nor present, the extension version can be upgraded to from any other version.</span></span> <span data-ttu-id="afe6b-559">Não há suporte para o downgrade.</span><span class="sxs-lookup"><span data-stu-id="afe6b-559">Downgrade is not supported.</span></span> <span data-ttu-id="afe6b-560">O valor deve ser 'true' ou 'false' if (diferencia maiusculas de minúsculas) presente.</span><span class="sxs-lookup"><span data-stu-id="afe6b-560">The value has to be 'true' or 'false' (case-sensitive) if present.</span></span>
+      optional: true
+    - id: parameters.supportedOS
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-561">Propriedade de cadeia de caracteres que indica o sistema operacional que dá suporte a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-561">String property indicating the OS which the extension supports.</span></span> <span data-ttu-id="afe6b-562">Valores atuais são 'Windows' ou 'Linux'.</span><span class="sxs-lookup"><span data-stu-id="afe6b-562">Current values are 'Windows' or 'Linux'.</span></span>
+      optional: true
+    - id: parameters.companyName
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-563">Propriedade de cadeia de caracteres que contém o nome da empresa/organização que publica a extensão.</span><span class="sxs-lookup"><span data-stu-id="afe6b-563">String property containing the name of the company/organization who publishes the extension.</span></span>
+      optional: true
+    - id: parameters.regions
+      type:
+      - string
+      description: <span data-ttu-id="afe6b-564">Propriedade de cadeia de caracteres que contém o nome das regiões necessárias para a fatia.</span><span class="sxs-lookup"><span data-stu-id="afe6b-564">String property containing the name of the regions required for the slice.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: <span data-ttu-id="afe6b-565">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="afe6b-565">The response stream.</span></span>
+    content: function update(parameters, callback)
+  langs:
+  - js
