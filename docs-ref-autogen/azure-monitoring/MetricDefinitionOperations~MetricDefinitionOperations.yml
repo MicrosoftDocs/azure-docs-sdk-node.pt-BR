@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b03b07d10aee18b8151433a563ad0dfbdff1f115
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047429"
+items:
+- uid: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations
+  id: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations
+  name: MetricDefinitionOperations
+  summary: >-
+    __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [MetricsClient] <xref:azure-monitoring.MetricsClient~MetricsClient>.
+
+    Consulte [metricDefinitions] {@link MetricsClient ~ MetricsClient #metricDefinitions}.
+
+    Inicializa uma nova instância da classe MetricDefinitionOperations.
+  fullName: azure-monitoring.MetricDefinitionOperations
+  type: Class
+  children:
+  - azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations.#ctor
+  - azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations#list
+  langs:
+  - js
+- id: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations.#ctor
+  uid: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations.#ctor
+  parent: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations
+  name: MetricDefinitionOperations(client)
+  fullName: azure-monitoring.MetricDefinitionOperations.MetricDefinitionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedMetricsClient
+      description: Referência para o cliente do serviço.
+    content: new MetricDefinitionOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations#list
+  id: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations#list
+  parent: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations
+  name: list(resourceId, metricNames, metricNamespace, callback)
+  summary: A operação de lista de definições da métrica lista as definições de métrica para o recurso.
+  fullName: azure-monitoring.MetricDefinitionOperations~MetricDefinitionOperations.list(resourceId, metricNames, metricNamespace, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: resourceId
+      type:
+      - string
+      description: A id do recurso. A id de recurso pode ser criada usando a classe de construtor de id de recurso em utilitários
+    - id: metricNames
+      type:
+      - Array
+      description: Os nomes das métricas.
+      optional: true
+    - id: metricNamespace
+      type:
+      - string
+      description: O namespace das métricas. O valor é null ou WindowsAzure.Availability.WindowsAzure.Availability retorna as definições de métrica para métricas de monitoramento de ponto de extremidade
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: O fluxo de resposta.
+    content: function list(resourceId, metricNames, metricNamespace, callback)
+  langs:
+  - js

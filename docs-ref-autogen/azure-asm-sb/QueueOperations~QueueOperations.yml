@@ -1,0 +1,471 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e46f0fcf1c3a688b4a2234840c62b9c527faea6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047284"
+items:
+- uid: azure-asm-sb.QueueOperations~QueueOperations
+  id: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations
+  summary: >-
+    A API de gerenciamento do barramento de serviço inclui operações para gerenciar as filas do barramento de serviço.
+
+    __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    Consulte [filas] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #queues}.
+
+    Inicializa uma nova instância da classe QueueOperations.
+  fullName: azure-asm-sb.QueueOperations
+  type: Class
+  children:
+  - azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  - azure-asm-sb.QueueOperations~QueueOperations#create
+  - azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  - azure-asm-sb.QueueOperations~QueueOperations#get
+  - azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  - azure-asm-sb.QueueOperations~QueueOperations#list
+  - azure-asm-sb.QueueOperations~QueueOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  uid: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations(client)
+  fullName: azure-asm-sb.QueueOperations.QueueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Referência para o cliente do serviço.
+    content: new QueueOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#create
+  id: azure-asm-sb.QueueOperations~QueueOperations#create
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: create(namespaceName, queue, callback)
+  summary: Cria uma nova fila. Depois de criado, o manifesto do recurso dessa fila é imutável. Esta operação é idempotente. Repetir a chamada de criação depois que uma fila com o mesmo nome tiver sido criada com êxito, resultará em uma mensagem de erro 409 Conflito.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx para obter mais informações)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.create(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueueCreateParameters
+      description: A fila do barramento de serviço.
+    - id: queue.name
+      type:
+      - string
+      description: O nome da fila.
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        Determina a quantidade de tempo em segundos no qual uma mensagem deve ser bloqueada para processamento por um receptor.
+
+        Após esse período, a mensagem é desbloqueada e fica disponível para consumo pelo próximo receptor. Configurável somente no momento da criação de fila: * intervalo: 0 - 5 minutos. 0 significa que a mensagem não está bloqueada * padrão: 30 segundos
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Especifica o tamanho máximo da fila em megabytes. Qualquer tentativa de enfileirar uma mensagem que fará com que a fila exceda esse valor falhará. Você só pode definir esse parâmetro no momento da criação de fila usando os seguintes valores: * intervalo: 1 – 1024 (valores válidos são 1024, 2048, 3072, 4096, 5120) * padrão: 1 * 1024 (valores válidos são 1024, 2048, 3072, 4096, 5120)'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Configurável somente no fila criação período. * padrão para fila durável: false'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: 'Configurável somente no momento da criação de fila. Se estiver definido como true, a fila será SessionReceiver reconhecimento de sessão e somente terá suporte. Filas de reconhecimento de sessão não têm suporte por meio de REST.* padrão para fila durável: false'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: 'Dependendo se as mensagens mortas estão habilitadas, uma mensagem é automaticamente movida para a propriedade DeadLetterQueue ou excluída se ele foi armazenado na fila por mais tempo que o tempo especificado. Esse valor é substituído por um TTL especificado na mensagem se e somente se o TTL da mensagem é menor que o TTL definido na fila. Esse valor é imutável depois que a fila foi criada: * intervalo: 1 segundo - TimeSpan.MaxValue* padrão: TimeSpan. MaxValue'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: 'Esse campo controla como o barramento de serviço lida com uma mensagem cujo TTL tenha expirado. Se ele estiver habilitado e uma mensagem expirar, o barramento de serviço move a mensagem da fila na subfila da fila aceitas. Se desabilitada, mensagem será permanentemente excluída da fila. Configurável somente no tempo. de criação de fila * padrão: false'
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Especifica o período de tempo durante o qual o barramento de serviço detecta a duplicação de mensagem: * intervalo: 1 segundo – 7 dias * padrão: 10 minutos'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: O número máximo de vezes que uma mensagem SB tentará entregar antes de estar inativo considerada morta ou descartada.
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: Habilita ou desabilita o lado de serviço, comportamento de lote ao realizar operações para a fila específica. Quando habilitado, o barramento de serviço coleta/agrupa várias operações para o back-end para ser mais eficiente de conexão. Se o usuário deseja menor latência de operação, em seguida, eles podem desativar esse recurso.
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: 'Reflete os bytes reais que as mensagens na fila atualmente ocupam com relação à quota.* da fila intervalo: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: Exibe o número de mensagens atualmente na fila.
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: Especifica se o acesso anônimo é permitido.
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: Obtém as regras de autorização para a descrição.
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: Obtém ou define o status atual da fila (habilitado ou desabilitado). Quando uma fila for desabilitada, essa fila não pode enviar ou receber mensagens.
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: Obtém ou define se a fila dá suporte à ordenação.
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Estatísticas de fila atual.
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: O número atual de mensagens ativas.
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: O número atual de mensagens mortas letras.
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: O número atual de mensagens agendadas.
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: O número atual de letras de mensagens mortas de transferência.
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: O número atual de mensagens de transferência.
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: Implementado.
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: O status de disponibilidade atual da fila.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function create(namespaceName, queue, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  id: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: deleteMethod(namespaceName, queueName, callback)
+  summary: Exclui uma fila existente. Essa operação também removerá todos os estados associados incluindo mensagens na fila.  (consulte http://msdn.microsoft.com/en-us/library/hh780747.aspx para obter mais informações)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.deleteMethod(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: queueName
+      type:
+      - string
+      description: O nome da fila.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function deleteMethod(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#get
+  id: azure-asm-sb.QueueOperations~QueueOperations#get
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: get(namespaceName, queueName, callback)
+  summary: A descrição da fila é um documento AtomPub XML que define a semântica desejada para uma assinatura. A descrição da fila contém as propriedades a seguir. Para obter mais informações, consulte o tópico de propriedades QueueDescription.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx para obter mais informações)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.get(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: queueName
+      type:
+      - string
+      description: O nome da fila.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function get(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  id: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: getConnectionDetails(namespaceName, queueName, callback)
+  summary: Obtém o conjunto de cadeias de caracteres de conexão para uma fila.
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.getConnectionDetails(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: queueName
+      type:
+      - string
+      description: O nome da fila.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function getConnectionDetails(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#list
+  id: azure-asm-sb.QueueOperations~QueueOperations#list
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: list(namespaceName, callback)
+  summary: Enumera as filas no namespace de serviço. O resultado é retornado em páginas, cada uma contendo até 100 filas. Se o namespace contiver mais de 100 filas, um feed é retornado que contém a primeira página e um link Avançar com o URI para exibir a próxima página de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp para obter mais informações)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#update
+  id: azure-asm-sb.QueueOperations~QueueOperations#update
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: update(namespaceName, queue, callback)
+  summary: Atualiza a descrição da fila e faz uma chamada para atualizar as entradas de banco de dados correspondentes.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx para obter mais informações)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.update(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueue
+      description: A fila do barramento de serviço.
+    - id: queue.name
+      type:
+      - string
+      description: O nome da fila.
+      optional: true
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        Determina a quantidade de tempo em segundos no qual uma mensagem deve ser bloqueada para processamento por um receptor.
+
+        Após esse período, a mensagem é desbloqueada e fica disponível para consumo pelo próximo receptor. Configurável somente no momento da criação de fila: * intervalo: 0 - 5 minutos. 0 significa que a mensagem não está bloqueada * padrão: 30 segundos
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Especifica o tamanho máximo da fila em megabytes. Qualquer tentativa de enfileirar uma mensagem que fará com que a fila exceda esse valor falhará. Você só pode definir esse parâmetro no momento da criação de fila usando os seguintes valores: * intervalo: 1 – 1024 (valores válidos são 1024, 2048, 3072, 4096, 5120) * padrão: 1 * 1024 (valores válidos são 1024, 2048, 3072, 4096, 5120)'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Configurável somente no fila criação período. * padrão para fila durável: false'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: 'Configurável somente no momento da criação de fila. Se estiver definido como true, a fila será SessionReceiver reconhecimento de sessão e somente terá suporte. Filas de reconhecimento de sessão não têm suporte por meio de REST.* padrão para fila durável: false'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: 'Dependendo se as mensagens mortas estão habilitadas, uma mensagem é automaticamente movida para a propriedade DeadLetterQueue ou excluída se ele foi armazenado na fila por mais tempo que o tempo especificado. Esse valor é substituído por um TTL especificado na mensagem se e somente se o TTL da mensagem é menor que o TTL definido na fila. Esse valor é imutável depois que a fila foi criada: * intervalo: 1 segundo - TimeSpan.MaxValue* padrão: TimeSpan. MaxValue'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: 'Esse campo controla como o barramento de serviço lida com uma mensagem cujo TTL tenha expirado. Se ele estiver habilitado e uma mensagem expirar, o barramento de serviço move a mensagem da fila na subfila da fila aceitas. Se desabilitada, mensagem será permanentemente excluída da fila. Configurável somente no tempo. de criação de fila * padrão: false'
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Especifica o período de tempo durante o qual o barramento de serviço detecta a duplicação de mensagem: * intervalo: 1 segundo – 7 dias * padrão: 10 minutos'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: O número máximo de vezes que uma mensagem SB tentará entregar antes de estar inativo considerada morta ou descartada.
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: Habilita ou desabilita o lado de serviço, comportamento de lote ao realizar operações para a fila específica. Quando habilitado, o barramento de serviço coleta/agrupa várias operações para o back-end para ser mais eficiente de conexão. Se o usuário deseja menor latência de operação, em seguida, eles podem desativar esse recurso.
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: 'Reflete os bytes reais que as mensagens na fila atualmente ocupam com relação à quota.* da fila intervalo: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: Exibe o número de mensagens atualmente na fila.
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: Especifica se o acesso anônimo é permitido.
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: Obtém as regras de autorização para a descrição.
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: Obtém ou define o status atual da fila (habilitado ou desabilitado). Quando uma fila for desabilitada, essa fila não pode enviar ou receber mensagens.
+      optional: true
+    - id: queue.createdAt
+      type:
+      - date
+      description: A hora em que a fila foi criada no.
+      optional: true
+    - id: queue.updatedAt
+      type:
+      - date
+      description: A hora em que a fila foi atualizada pela última vez.
+      optional: true
+    - id: queue.accessedAt
+      type:
+      - date
+      description: A hora em que a fila foi acessado pela última vez.
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: Obtém ou define se a fila dá suporte à ordenação.
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Estatísticas de fila atual.
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: O número atual de mensagens ativas.
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: O número atual de mensagens mortas letras.
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: O número atual de mensagens agendadas.
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: O número atual de letras de mensagens mortas de transferência.
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: O número atual de mensagens de transferência.
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: Implementado.
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: O status de disponibilidade atual da fila.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function update(namespaceName, queue, callback)
+  langs:
+  - js

@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 82ac43fa4a47c8e1ec095e02ad0b2e021d2f53e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047550"
+items:
+- uid: documentdb.RangePartitionResolver
+  id: documentdb.RangePartitionResolver
+  name: RangePartitionResolver
+  summary: RangePartitionResolver implementa particionamento usando um mapa de partições de intervalos de valores para um link de coleção no serviço de banco de dados do Azure Cosmos DB.
+  fullName: documentdb.RangePartitionResolver
+  type: Class
+  children:
+  - documentdb.RangePartitionResolver.#ctor
+  - documentdb.RangePartitionResolver#getPartitionKey
+  - documentdb.RangePartitionResolver#resolveForCreate
+  - documentdb.RangePartitionResolver#resolveForRead
+  langs:
+  - js
+- id: documentdb.RangePartitionResolver.#ctor
+  uid: documentdb.RangePartitionResolver.#ctor
+  parent: documentdb.RangePartitionResolver
+  name: RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  fullName: documentdb.RangePartitionResolver.RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  summary: RangePartitionResolver implementa particionamento usando um mapa de partições de intervalos de valores para um link de coleção no serviço de banco de dados do Azure Cosmos DB.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: partitionKeyExtractor
+      type:
+      - string
+      - function
+      description: >-
+        Se partitionKeyExtractor for uma cadeia de caracteres, ele deve ser o nome da propriedade do documento para executar o hash no.
+
+        Se partitionKeyExtractor for uma função, ele deve ser uma função para extrair a chave de partição de um objeto.
+    - id: partitionKeyMap
+      type:
+      - Array
+      description: O mapa de intervalo para o link de coleção que é usado para particionar as solicitações.
+    - id: compareFunction
+      type:
+      - function
+      description: Função opcional que aceita dois argumentos x e y e retorna um valor negativo se x < y, zero se x = y, ou um valor positivo se x > y.
+    content: new RangePartitionResolver(partitionKeyExtractor, partitionKeyMap, compareFunction)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#getPartitionKey
+  id: documentdb.RangePartitionResolver#getPartitionKey
+  parent: documentdb.RangePartitionResolver
+  name: getPartitionKey(document)
+  summary: Extrai a chave de partição do documento especificado usando o partitionKeyExtractor
+  fullName: documentdb.RangePartitionResolver.getPartitionKey(document)
+  type: Function
+  syntax:
+    parameters:
+    - id: document
+      type:
+      - object
+      description: O documento do qual extrair a chave de partição.
+    return:
+      description: ''
+    content: function getPartitionKey(document)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForCreate
+  id: documentdb.RangePartitionResolver#resolveForCreate
+  parent: documentdb.RangePartitionResolver
+  name: resolveForCreate(partitionKey)
+  summary: Considerando retorna de chave, uma partição no link da coleção correto para a criação de um documento usando o mapa de partições de intervalo.
+  fullName: documentdb.RangePartitionResolver.resolveForCreate(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: Usado para determinar a coleção de destino para criar a chave de partição
+    return:
+      type:
+      - string
+      description: '- O link da coleção de destino que será usado para criação de documentos.'
+    content: function resolveForCreate(partitionKey)
+  langs:
+  - js
+- uid: documentdb.RangePartitionResolver#resolveForRead
+  id: documentdb.RangePartitionResolver#resolveForRead
+  parent: documentdb.RangePartitionResolver
+  name: resolveForRead(partitionKey)
+  summary: Dada uma lista de links de coleção para ler do usando o mapa de partições de intervalo de retorna de chave, uma partição.
+  fullName: documentdb.RangePartitionResolver.resolveForRead(partitionKey)
+  type: Function
+  syntax:
+    parameters:
+    - id: partitionKey
+      type:
+      - documentdb.any
+      description: A chave de partição usada para determinar a coleção de destino para consulta
+    return:
+      type:
+      - documentdb.Array.<string>
+      description: '- A lista de links da coleção de destino.'
+    content: function resolveForRead(partitionKey)
+  langs:
+  - js

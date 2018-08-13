@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047280"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    A API de gerenciamento do barramento de serviço inclui operações para gerenciar namespaces de barramento de serviço.
+
+    __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    Consulte [namespaces] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}.
+
+    Inicializa uma nova instância da classe NamespaceOperations.
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Referência para o cliente do serviço.
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: Verifica a disponibilidade do namespace de serviço específico em todas as assinaturas do Windows Azure. Isso é útil porque o nome de domínio é criado com base no nome do namespace de serviço.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: Cria um novo namespace de serviço. Depois de criar, o manifesto do recurso desse namespace é imutável. Esta operação é idempotente.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: region
+      type:
+      - string
+      description: A região de namespace.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: A operação de regra de autorização de namespace de criação cria uma regra de autorização para um namespace
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: A regra de autorização de acesso compartilhado.
+    - id: rule.keyName
+      type:
+      - string
+      description: O nome da chave que foi usado.
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: A chave primária que foi usada.
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: A chave secundária que foi usada.
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: O tipo da declaração.
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: O valor da declaração.
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: Os direitos associados à regra.
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: A hora em que a regra de autorização foi criada.
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: A hora mais recente em que a regra foi atualizada.
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: O número de revisão para a regra.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: Cria um novo namespace de serviço. Depois de criar, o manifesto do recurso desse namespace é imutável. Esta operação é idempotente.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: O namespace do barramento de serviço.
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: A região de namespace.
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: Ou não a autenticação do ACS é necessária para o barramento de serviço.
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: Obtém ou define o tipo de namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: Exclui um namespace existente. Essa operação também remove todas as entidades associadas, incluindo filas, tópicos, pontos de retransmissão e mensagens armazenadas nesse namespace.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: A operação de regra de autorização de namespace delete Exclui uma regra de autorização para um namespace
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: ruleName
+      type:
+      - string
+      description: O nome da regra.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: Retorna a descrição para o namespace especificado.  (consulte http://msdn.microsoft.com/library/azure/dn140232.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: A operação de regra de autorização get obtém uma regra de autorização para um namespace pelo nome.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O namespace para obter a regra de autorização para.
+    - id: entityName
+      type:
+      - string
+      description: O nome da entidade para obter a regra de autorização para.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: A descrição do namespace é um documento AtomPub XML que define a semântica desejada para um namespace de serviço. A descrição do namespace contém as propriedades a seguir.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: Lista os namespaces disponíveis.  (consulte http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx para obter mais informações)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: A operação de regras de autorização de get obtém as regras de autorização para um namespace.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O namespace para obter a regra de autorização para.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: A operação de regra de autorização de atualização atualiza uma regra de autorização para um namespace.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: O nome do namespace.
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: Regra de autorização de acesso atualizado.
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: O nome da chave que foi usado.
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: A chave primária que foi usada.
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: A chave secundária que foi usada.
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: O tipo da declaração.
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: O valor da declaração.
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: Os direitos associados à regra.
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: A hora em que a regra de autorização foi criada.
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: A hora mais recente em que a regra foi atualizada.
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: O número de revisão para a regra.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: O fluxo de resposta.
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

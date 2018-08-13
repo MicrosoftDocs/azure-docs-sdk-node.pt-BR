@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6b8a50936268ca625ed3d0ccc06359f0bc9e3171
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047127"
+items:
+- uid: azure-asm-storage
+  name: azure-asm-storage
+  langs:
+  - js
+  type: package
+  summary: ''
+  children:
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  - azure-asm-storage.StorageManagementClient~StorageManagementClient
+  - azure-asm-storage.createStorageManagementClient
+  - azure-asm-storage.createCertificateCloudCredentials
+- uid: azure-asm-storage.createStorageManagementClient
+  id: azure-asm-storage.createStorageManagementClient
+  name: createStorageManagementClient(baseUri, filters)
+  summary: >-
+    Cria um novo <xref:azure-asm-storage.StorageManagementClient> objeto.
+
+
+    Observação: Essas APIs ainda estão em desenvolvimento e não devem ser usados.
+  fullName: azure-asm-storage.createStorageManagementClient(baseUri, filters)
+  type: Function
+  syntax:
+    parameters:
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: O identificador da assinatura.
+      optional: true
+    - id: credentials.cert
+      type:
+      - string
+      description: O valor do certificado.
+      optional: true
+    - id: credentials.key
+      type:
+      - string
+      description: O valor da chave.
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: O uri de base.
+      optional: true
+    - id: filters
+      type:
+      - array
+      description: Matriz opcional de filtros do serviço
+      optional: true
+    return:
+      type:
+      - azure-asm-storage.StorageManagementClient
+      description: Um novo objeto StorageManagementClient.
+    content: function createStorageManagementClient(baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-storage.createCertificateCloudCredentials
+  id: azure-asm-storage.createCertificateCloudCredentials
+  name: createCertificateCloudCredentials()
+  summary: >-
+    Cria um novo objeto CertificateCloudCredentials.
+
+    Qualquer um par de cert / necessidade de ser passar ou um local de arquivo pem de valores de chave.
+  fullName: azure-asm-storage.createCertificateCloudCredentials()
+  type: Function
+  syntax:
+    parameters:
+    - id: credentials.subscription
+      type:
+      - string
+      description: O identificador da assinatura.
+    - id: credentials.cert
+      type:
+      - string
+      description: O certificado.
+      optional: true
+    - id: credentials.key
+      type:
+      - string
+      description: A chave do certificado.
+      optional: true
+    - id: credentials.pem
+      type:
+      - string
+      description: O conteúdo do arquivo PEM.
+      optional: true
+    return:
+      type:
+      - azure-asm-storage.CertificateCloudCredentials
+      description: ''
+    content: function createCertificateCloudCredentials()
+  langs:
+  - js
+references:
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations
+- uid: azure-asm-storage.StorageManagementClient~StorageManagementClient
+  name: StorageManagementClient

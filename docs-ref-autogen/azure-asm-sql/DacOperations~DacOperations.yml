@@ -1,0 +1,283 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 835bcd8155995b68ec858110637230050a0cdec2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047380"
+items:
+- uid: azure-asm-sql.DacOperations~DacOperations
+  id: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations
+  summary: >-
+    Inclui operações para importar e exportar bancos de dados SQL do Azure para dentro e fora do armazenamento de BLOBs do Azure.
+
+    __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    Consulte [dac] <xref:azure-asm-sql.SqlManagementClient~SqlManagementClient%23dac>.
+
+    Inicializa uma nova instância da classe DacOperations.
+  fullName: azure-asm-sql.DacOperations
+  type: Class
+  children:
+  - azure-asm-sql.DacOperations~DacOperations.#ctor
+  - azure-asm-sql.DacOperations~DacOperations#exportMethod
+  - azure-asm-sql.DacOperations~DacOperations#getStatus
+  - azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  - azure-asm-sql.DacOperations~DacOperations#importMethod
+  langs:
+  - js
+- id: azure-asm-sql.DacOperations~DacOperations.#ctor
+  uid: azure-asm-sql.DacOperations~DacOperations.#ctor
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: DacOperations(client)
+  fullName: azure-asm-sql.DacOperations.DacOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Referência para o cliente do serviço.
+    content: new DacOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  id: azure-asm-sql.DacOperations~DacOperations#exportMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: exportMethod(serverName, parametersOrCallback, callback)
+  summary: Exporta um banco de dados do SQL Azure em um arquivo DACPAC no armazenamento de BLOBs do Azure.
+  fullName: azure-asm-sql.DacOperations~DacOperations.exportMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: O nome do servidor de banco de dados SQL do Azure no qual reside o banco de dados para exportar.
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacExportParameters
+      description: Os parâmetros necessários para iniciar a solicitação de exportação.
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: Obtém ou define as informações de credenciais necessárias para a configuração em que o arquivo DACPAC será exportado para no armazenamento de BLOBs do Azure.
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: Obtém ou define o URI de onde o arquivo DACPAC deve ser armazenado no armazenamento de BLOBs do Azure.
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: Obtém ou define a chave de acesso da conta de armazenamento do Azure.
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: Obtém ou define as informações de conexão necessárias para o banco de dados do SQL Azure.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: Obtém ou define o nome do banco de dados a serem exportados.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: Obtém ou define a senha do usuário do administrador de banco de dados.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: Obtém ou define o nome do servidor de banco de dados SQL do Azure em que reside o banco de dados.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: Obtém ou define o nome de usuário do usuário de administrador de banco de dados.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: O fluxo de resposta.
+    content: function exportMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatus
+  id: azure-asm-sql.DacOperations~DacOperations#getStatus
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  summary: Obtém o status da operação de importação ou exportação no servidor especificado com a ID de solicitação correspondente.  A ID da solicitação é fornecida nas respostas da operação de importação ou exportação.
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: O nome do servidor no qual está ocorrendo a operação de importação ou exportação.
+    - id: fullyQualifiedServerName
+      type:
+      - string
+      description: >-
+        O nome de domínio totalmente qualificado do servidor de banco de dados SQL do Azure em que a operação está ocorrendo.
+
+        Exemplo: a9s7f7s9d3.database.windows.net
+    - id: username
+      type:
+      - string
+      description: O nome de usuário de administrador para o servidor de banco de dados SQL do Azure.
+    - id: password
+      type:
+      - string
+      description: A senha de administrador para o servidor de banco de dados SQL do Azure.
+    - id: requestId
+      type:
+      - string
+      description: >-
+        A ID de solicitação da operação que está sendo consultada.
+
+        A ID da solicitação é obtida das respostas das operações de importação e exportação.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: O fluxo de resposta.
+    content: function getStatus(serverName, fullyQualifiedServerName, username, password, requestId, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  id: azure-asm-sql.DacOperations~DacOperations#getStatusPost
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: getStatusPost(serverName, parameters, callback)
+  summary: Obtém o status da operação de importação ou exportação no servidor especificado com a ID de solicitação correspondente.  A ID da solicitação é fornecida nas respostas da operação de importação ou exportação.
+  fullName: azure-asm-sql.DacOperations~DacOperations.getStatusPost(serverName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: O nome do servidor no qual está ocorrendo a operação de importação ou exportação.
+    - id: parameters
+      type:
+      - azure-asm-sql.DacGetStatusParameters
+      description: Os parâmetros necessários para obter o status de uma importação ou operação de exportação.
+    - id: parameters.serverName
+      type:
+      - string
+      description: Obtém ou define o nome totalmente qualificado do servidor de banco de dados SQL em que a operação de importação ou exportação está ocorrendo.
+    - id: parameters.userName
+      type:
+      - string
+      description: Obtém ou define o nome de usuário para o servidor de banco de dados SQL em que a operação de importação ou exportação está ocorrendo.
+    - id: parameters.password
+      type:
+      - string
+      description: Obtém ou define a senha para o servidor de banco de dados SQL em que a operação de importação ou exportação está ocorrendo.
+    - id: parameters.requestId
+      type:
+      - string
+      description: Obtém ou define a Id para a operação de importação ou exportação do que consultar o status.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: O fluxo de resposta.
+    content: function getStatusPost(serverName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DacOperations~DacOperations#importMethod
+  id: azure-asm-sql.DacOperations~DacOperations#importMethod
+  parent: azure-asm-sql.DacOperations~DacOperations
+  name: importMethod(serverName, parametersOrCallback, callback)
+  summary: Inicia uma importação de um arquivo DACPAC do armazenamento de BLOBs do Azure em um banco de dados do SQL Azure.
+  fullName: azure-asm-sql.DacOperations~DacOperations.importMethod(serverName, parametersOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: O nome do servidor de banco de dados SQL do Azure para o qual o banco de dados está sendo importado.
+    - id: parametersOrCallback
+      type:
+      - azure-asm-sql.DacImportParameters
+      description: Os parâmetros necessários para iniciou a solicitação de importação.
+      optional: true
+    - id: parametersOrCallback.azureEdition
+      type:
+      - string
+      description: Obtém ou define a edição do banco de dados que será criado após a importação.
+      optional: true
+    - id: parametersOrCallback.blobCredentials
+      type:
+      - azure-asm-sql.BlobCredentialsParameter
+      description: Obtém ou define as credenciais para recuperar o DACPAC do armazenamento de BLOBs do Azure.
+      optional: true
+    - id: parametersOrCallback.blobCredentials.uri
+      type:
+      - string
+      description: Obtém ou define o URI do arquivo DACPAC armazenado no armazenamento de BLOBs do Azure a serem importados.
+      optional: true
+    - id: parametersOrCallback.blobCredentials.storageAccessKey
+      type:
+      - string
+      description: Obtém ou define a chave de acesso para a conta de armazenamento de BLOBs do Azure onde o arquivo DACPAC é armazenado.
+      optional: true
+    - id: parametersOrCallback.connectionInfo
+      type:
+      - azure-asm-sql.ConnectionInfoParameter
+      description: Obtém ou define as informações de conexão necessárias para conectar-se ao SQL Azure e criar um banco de dados para importar.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.databaseName
+      type:
+      - string
+      description: Obtém ou define o nome do banco de dados para o qual o arquivo DACPAC será importado.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.password
+      type:
+      - string
+      description: Obtém ou define a senha do administrador do servidor.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.serverName
+      type:
+      - string
+      description: Obtém ou define o nome do servidor de banco de dados SQL do Azure onde o banco de dados importado será criado.
+      optional: true
+    - id: parametersOrCallback.connectionInfo.userName
+      type:
+      - string
+      description: Obtém ou define o nome de usuário da administração de servidor.
+      optional: true
+    - id: parametersOrCallback.databaseSizeInGB
+      type:
+      - number
+      description: Obtém ou define o tamanho do banco de dados que será criado após a importação.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: O fluxo de resposta.
+    content: function importMethod(serverName, parametersOrCallback, callback)
+  langs:
+  - js

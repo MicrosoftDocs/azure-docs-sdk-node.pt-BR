@@ -1,0 +1,533 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 205aa019bf97d2699ccdd3695309082a90514a54
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047383"
+items:
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations
+  summary: >-
+    A API de gerenciamento de serviços inclui operações para gerenciar as contas de armazenamento abaixo de sua assinatura.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460790.aspx para obter mais informações) __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [StorageManagementClient] {@link StorageManagementClient ~ StorageManagementClient}.
+
+    Consulte [storageAccounts] {@link StorageManagementClient ~ StorageManagementClient #storageAccounts}.
+
+    Inicializa uma nova instância da classe StorageAccountOperations.
+  fullName: azure-asm-storage.StorageAccountOperations
+  type: Class
+  children:
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  - azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.#ctor
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: StorageAccountOperations(client)
+  fullName: azure-asm-storage.StorageAccountOperations.StorageAccountOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedStorageManagementClient
+      description: Referência para o cliente do serviço.
+    content: new StorageAccountOperations(client)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#abortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: abortMigration(storageAccountName, callback)
+  summary: Anule a migração de conta de armazenamento api valida e anula a determinada conta de armazenamento do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.abortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function abortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginAbortMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginAbortMigration(storageAccountName, callback)
+  summary: Anule a migração de conta de armazenamento api valida e anula a determinada conta de armazenamento do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginAbortMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function beginAbortMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCommitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCommitMigration(storageAccountName, callback)
+  summary: Confirme migração de conta de armazenamento api valida e confirma a determinada conta de armazenamento do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCommitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function beginCommitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginCreating
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginCreating(parameters, callback)
+  summary: A operação de começar a criação de conta de armazenamento cria uma nova conta de armazenamento no Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: Parâmetros fornecidos para a operação de começar a criação de conta de armazenamento.
+    - id: parameters.name
+      type:
+      - string
+      description: 'Um nome para a conta de armazenamento, exclusivo no Azure. Nomes de conta de armazenamento devem ter entre 3 e 24 caracteres de comprimento e devem usar números e letras minúsculas apenas. Esse nome é o nome do prefixo DNS e pode ser usado para acessar blobs, filas e tabelas na conta de armazenamento. Por exemplo: http://ServiceName.blob.core.windows.net/mycontainer/.'
+    - id: parameters.description
+      type:
+      - string
+      description: Uma descrição para a conta de armazenamento. A descrição pode ter até 1024 caracteres.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Um nome para a conta de armazenamento especificada como cadeia de caracteres codificada abase64. O nome pode ser de até 100 caracteres. O nome pode ser usado identificar a conta de armazenamento para suas finalidades de acompanhamento.
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: O nome de um grupo de afinidade existente na assinatura especificada. Necessário se o local não está especificado. Você pode incluir um local ou o AffinityGroup elemento no corpo da solicitação, mas não ambos. Para listar grupos de afinidade disponíveis, use a operação de listar grupos de afinidade.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: O local em que a conta de armazenamento é criada. Necessário se AffinityGroup não for especificado. Você pode incluir um local ou o AffinityGroup elemento no corpo da solicitação, mas não ambos. Para listar os locais disponíveis, use a operação listar locais.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Representa o nome de uma propriedade de conta de armazenamento estendido. Cada propriedade estendida deve ter um nome definido e um valor. Você pode ter um máximo de 50 propriedades estendidas como pares nome/valor. O comprimento máximo do elemento nome é de 64 caracteres, somente caracteres alfanuméricos e sublinhados são válidos no nome e o nome deve começar com uma letra. Tentar usar outros caracteres, começar o nome com um caractere diferente de letra ou inserir um nome que seja idêntico de outra propriedade estendida de propriedade da mesma conta de armazenamento resultará em um status código (erro 400 Solicitação incorreta). Cada valor de propriedade estendida tem um comprimento máximo de 255 caracteres.
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "Especifica se a conta comporta armazenamento com redundância, armazenamento com redundância geográfica, armazenamento com redundância de zona ou armazenamento com redundância geográfica de acesso de leitura. Os valores possíveis são: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' e 'Standard_RAGRS'."
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#beginPrepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: beginPrepareMigration(storageAccountName, callback)
+  summary: Prepare a conta de armazenamento, migração api valida e prepara-se a conta de armazenamento específica do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.beginPrepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function beginPrepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#checkNameAvailability
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: checkNameAvailability(accountName, callback)
+  summary: A operação Verificar disponibilidade do nome verifica se um nome de conta de armazenamento está disponível para uso no Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj154125.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.checkNameAvailability(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: O nome da conta de armazenamento desejada para verificar a disponibilidade.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function checkNameAvailability(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#commitMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: commitMigration(storageAccountName, callback)
+  summary: Confirme migração de conta de armazenamento api valida e confirma a determinada conta de armazenamento do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.commitMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function commitMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#create
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: create(parameters, callback)
+  summary: A operação Criar conta de armazenamento cria uma nova conta de armazenamento no Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264518.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountCreateParameters
+      description: Parâmetros fornecidos para a operação Criar conta de armazenamento.
+    - id: parameters.name
+      type:
+      - string
+      description: 'Um nome para a conta de armazenamento, exclusivo no Azure. Nomes de conta de armazenamento devem ter entre 3 e 24 caracteres de comprimento e devem usar números e letras minúsculas apenas. Esse nome é o nome do prefixo DNS e pode ser usado para acessar blobs, filas e tabelas na conta de armazenamento. Por exemplo: http://ServiceName.blob.core.windows.net/mycontainer/.'
+    - id: parameters.description
+      type:
+      - string
+      description: Uma descrição para a conta de armazenamento. A descrição pode ter até 1024 caracteres.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Um nome para a conta de armazenamento especificada como cadeia de caracteres codificada abase64. O nome pode ser de até 100 caracteres. O nome pode ser usado identificar a conta de armazenamento para suas finalidades de acompanhamento.
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: O nome de um grupo de afinidade existente na assinatura especificada. Necessário se o local não está especificado. Você pode incluir um local ou o AffinityGroup elemento no corpo da solicitação, mas não ambos. Para listar grupos de afinidade disponíveis, use a operação de listar grupos de afinidade.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: O local em que a conta de armazenamento é criada. Necessário se AffinityGroup não for especificado. Você pode incluir um local ou o AffinityGroup elemento no corpo da solicitação, mas não ambos. Para listar os locais disponíveis, use a operação listar locais.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Representa o nome de uma propriedade de conta de armazenamento estendido. Cada propriedade estendida deve ter um nome definido e um valor. Você pode ter um máximo de 50 propriedades estendidas como pares nome/valor. O comprimento máximo do elemento nome é de 64 caracteres, somente caracteres alfanuméricos e sublinhados são válidos no nome e o nome deve começar com uma letra. Tentar usar outros caracteres, começar o nome com um caractere diferente de letra ou inserir um nome que seja idêntico de outra propriedade estendida de propriedade da mesma conta de armazenamento resultará em um status código (erro 400 Solicitação incorreta). Cada valor de propriedade estendida tem um comprimento máximo de 255 caracteres.
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "Especifica se a conta comporta armazenamento com redundância, armazenamento com redundância geográfica, armazenamento com redundância de zona ou armazenamento com redundância geográfica de acesso de leitura. Os valores possíveis são: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' e 'Standard_RAGRS'."
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#deleteMethod
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: deleteMethod(accountName, callback)
+  summary: A operação excluir conta de armazenamento exclui a conta de armazenamento do Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264517.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.deleteMethod(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: O nome da conta de armazenamento a ser excluído.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function deleteMethod(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#get
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: get(accountName, callback)
+  summary: A operação obter propriedades de conta de armazenamento retorna as propriedades do sistema para a conta de armazenamento especificada.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460802.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.get(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: Nome da conta de armazenamento para obter as propriedades para.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function get(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#getKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: getKeys(accountName, callback)
+  summary: A operação obter chaves de armazenamento retorna as chaves de acesso primária e secundária para a conta de armazenamento especificada.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460785.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.getKeys(accountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: O nome da conta de armazenamento desejada.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function getKeys(accountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#list
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: list(callback)
+  summary: A operação de listar contas de armazenamento lista as contas de armazenamento disponíveis na assinatura atual.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460787.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#prepareMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: prepareMigration(storageAccountName, callback)
+  summary: Prepare a conta de armazenamento, migração api valida e prepara-se a conta de armazenamento específica do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.prepareMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function prepareMigration(storageAccountName, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#regenerateKeys
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: regenerateKeys(parameters, callback)
+  summary: A operação regenerar chaves regenera a chave de acesso primária ou secundária da conta de armazenamento especificado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/ee460795.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.regenerateKeys(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountRegenerateKeysParameters
+      description: Parâmetros fornecidos para a operação regenerar chaves.
+    - id: parameters.name
+      type:
+      - string
+      description: O nome da conta de armazenamento desejada.
+    - id: parameters.keyType
+      type:
+      - azure-asm-storage.StorageKeyType
+      description: Especifica qual chave deve ser regenerada.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function regenerateKeys(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#update
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: update(accountName, parameters, callback)
+  summary: A operação de conta de armazenamento de atualização atualiza o rótulo e a descrição e habilita ou desabilita o status de replicação geográfica para uma conta de armazenamento do Azure.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/hh264516.aspx para obter mais informações)
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.update(accountName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: accountName
+      type:
+      - string
+      description: Nome da conta de armazenamento para atualizar.
+    - id: parameters
+      type:
+      - azure-asm-storage.StorageAccountUpdateParameters
+      description: Parâmetros fornecidos para a operação de atualizar a conta de armazenamento.
+    - id: parameters.description
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Um nome para a conta de armazenamento codificada em base64. O nome pode ser de até 100 caracteres. O nome pode ser usado identificar a conta de armazenamento para suas finalidades de acompanhamento.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Representa o nome de uma propriedade de conta de armazenamento estendido. Cada propriedade estendida deve ter um nome definido e um valor. Você pode ter um máximo de 50 propriedades estendidas como pares nome/valor. O comprimento máximo do elemento nome é de 64 caracteres, somente caracteres alfanuméricos e sublinhados são válidos no nome e o nome deve começar com uma letra. Tentar usar outros caracteres, começar o nome com um caractere diferente de letra ou inserir um nome que seja idêntico de outra propriedade estendida de propriedade da mesma conta de armazenamento resultará em um status código (erro 400 Solicitação incorreta). Cada valor de propriedade estendida tem um comprimento máximo de 255 caracteres. Você pode excluir uma propriedade estendida ao definir o valor como NULL.
+      optional: true
+    - id: parameters.accountType
+      type:
+      - string
+      description: "Especifica se a conta comporta armazenamento com redundância, armazenamento com redundância geográfica, armazenamento com redundância de zona ou armazenamento com redundância geográfica de acesso de leitura. Os valores possíveis são: 'Standard_LRS', 'Standard_ZRS', 'Standard_GRS' e 'Standard_RAGRS'."
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function update(accountName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  id: azure-asm-storage.StorageAccountOperations~StorageAccountOperations#validateMigration
+  parent: azure-asm-storage.StorageAccountOperations~StorageAccountOperations
+  name: validateMigration(storageAccountName, callback)
+  summary: Validar migração de conta de armazenamento api valida a conta de armazenamento específica do IaaS clássico para migração de ARM.
+  fullName: azure-asm-storage.StorageAccountOperations~StorageAccountOperations.validateMigration(storageAccountName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: storageAccountName
+      type:
+      - string
+      description: Nome da conta de armazenamento a serem migrados.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-storage.Stream
+      description: O fluxo de resposta.
+    content: function validateMigration(storageAccountName, callback)
+  langs:
+  - js

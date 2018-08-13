@@ -1,0 +1,508 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0e839634bf45a6ca21fbdf7120bdb9d631febf5b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047443"
+items:
+- uid: azure-sb.NotificationHubService
+  id: azure-sb.NotificationHubService
+  name: NotificationHubService
+  summary: >-
+    O NotificationHubService permite que você envie notificações por push para iOS, Android e Windows Store dispositivos.
+
+
+    Para obter mais informações sobre os Hubs de notificação, bem como tarefas focalizadas informações sobre como usá-los a partir de aplicativos do Node. js, consulte [como usar Hubs de notificação do barramento de serviço](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-notification-hubs/).
+  fullName: azure-sb.NotificationHubService
+  type: Class
+  children:
+  - azure-sb.NotificationHubService.#ctor
+  - azure-sb.NotificationHubService#wns
+  - azure-sb.NotificationHubService#apns
+  - azure-sb.NotificationHubService#gcm
+  - azure-sb.NotificationHubService#mpns
+  - azure-sb.NotificationHubService#send
+  - azure-sb.NotificationHubService#createRegistrationId
+  - azure-sb.NotificationHubService#getRegistration
+  - azure-sb.NotificationHubService#deleteRegistration
+  - azure-sb.NotificationHubService#updateRegistration
+  - azure-sb.NotificationHubService#createOrUpdateRegistration
+  - azure-sb.NotificationHubService#listRegistrations
+  - azure-sb.NotificationHubService#listRegistrationsByTag
+  - azure-sb.NotificationHubService#createOrUpdateInstallation
+  - azure-sb.NotificationHubService#patchInstallation
+  - azure-sb.NotificationHubService#deleteInstallation
+  - azure-sb.NotificationHubService#getInstallation
+  langs:
+  - js
+- id: azure-sb.NotificationHubService.#ctor
+  uid: azure-sb.NotificationHubService.#ctor
+  parent: azure-sb.NotificationHubService
+  name: NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  fullName: azure-sb.NotificationHubService.NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  summary: Cria um novo objeto NotificationHubService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: hubName
+      type:
+      - string
+      description: O nome do hub de notificação.
+    - id: endpointOrConnectionString
+      type:
+      - string
+      description: A cadeia barramento de serviço ponto de extremidade ou a conexão.
+      optional: true
+    - id: sharedAccessKeyName
+      type:
+      - string
+      description: O notificação hub acesso compartilhado nome da chave.
+      optional: true
+    - id: sharedAccessKeyValue
+      type:
+      - string
+      description: O notificação compartilhado do hub acesso valor de chave.
+      optional: true
+    content: new NotificationHubService(hubName, endpointOrConnectionString, sharedAccessKeyName, sharedAccessKeyValue)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#wns
+  id: azure-sb.NotificationHubService#wns
+  parent: azure-sb.NotificationHubService
+  name: wns
+  summary: Fornece acesso a métodos para enviar notificações para WNS (para aplicativos da Windows Store) e criar/atualizar os registros de aplicativos da Windows Store.
+  fullName: azure-sb.NotificationHubService.wns
+  type: Member
+  syntax:
+    return:
+      type:
+      - WnsService
+    content: wns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#apns
+  id: azure-sb.NotificationHubService#apns
+  parent: azure-sb.NotificationHubService
+  name: apns
+  summary: Fornece acesso a métodos para enviar notificações para APNs (para aplicativos iOS) e criar/atualizar os registros de aplicativos do iOS.
+  fullName: azure-sb.NotificationHubService.apns
+  type: Member
+  syntax:
+    return:
+      type:
+      - ApnsService
+    content: apns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#gcm
+  id: azure-sb.NotificationHubService#gcm
+  parent: azure-sb.NotificationHubService
+  name: gcm
+  summary: Fornece acesso a métodos para enviar notificações para o GCM (para aplicativos Android) e criar/atualizar os registros de aplicativos Android.
+  fullName: azure-sb.NotificationHubService.gcm
+  type: Member
+  syntax:
+    return:
+      type:
+      - GcmService
+    content: gcm
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#mpns
+  id: azure-sb.NotificationHubService#mpns
+  parent: azure-sb.NotificationHubService
+  name: mpns
+  summary: Fornece acesso a métodos para enviar notificações para MPNS (para aplicativos do Windows Phone) e criar/atualizar os registros de aplicativos do Windows Phone.
+  fullName: azure-sb.NotificationHubService.mpns
+  type: Member
+  syntax:
+    return:
+      type:
+      - MpnsService
+    content: mpns
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#send
+  id: azure-sb.NotificationHubService#send
+  parent: azure-sb.NotificationHubService
+  name: send(tags, payload, options, callback)
+  summary: Envia uma mensagem de modelo.
+  fullName: azure-sb.NotificationHubService.send(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        Uma única marca ou expressão de marca.
+
+        Se for null difundirá a todos os registros neste hub
+    - id: payload
+      type:
+      - object
+      - string
+      description: O conteúdo da mensagem.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - string
+      description: Cabeçalhos adicionais.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function send(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createRegistrationId
+  id: azure-sb.NotificationHubService#createRegistrationId
+  parent: azure-sb.NotificationHubService
+  name: createRegistrationId(callback)
+  summary: Cria um identificador de registro.
+  fullName: azure-sb.NotificationHubService.createRegistrationId(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createRegistrationId(callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getRegistration
+  id: azure-sb.NotificationHubService#getRegistration
+  parent: azure-sb.NotificationHubService
+  name: getRegistration(registrationId, options, callback)
+  summary: Recupera um registro.
+  fullName: azure-sb.NotificationHubService.getRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function getRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteRegistration
+  id: azure-sb.NotificationHubService#deleteRegistration
+  parent: azure-sb.NotificationHubService
+  name: deleteRegistration(registrationId, options, callback)
+  summary: Exclui um registro.
+  fullName: azure-sb.NotificationHubService.deleteRegistration(registrationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: A etag.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function deleteRegistration(registrationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#updateRegistration
+  id: azure-sb.NotificationHubService#updateRegistration
+  parent: azure-sb.NotificationHubService
+  name: updateRegistration(registration, options, callback)
+  summary: Atualiza um registro.
+  fullName: azure-sb.NotificationHubService.updateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - object
+      description: O registro a ser atualizado.
+    - id: registration.RegistrationId
+      type:
+      - object
+      description: Id de registro a ser atualizado
+    - id: registration._.ContentRootElement
+      type:
+      - object
+      description: 'Tipo de registro. Tipos permitidos: WindowsRegistrationDescription, WindowsTemplateRegistrationDescription, AppleRegistrationDescription, AppleTemplateRegistrationDescription, GcmRegistrationDescription, GcmTemplateRegistrationDescription, MpnsRegistrationDescription, MpnsTemplateRegistrationDescription.'
+    - id: registration.ChannelUri
+      type:
+      - object
+      description: Somente se registro do Windows ou do Mpns
+    - id: registration.DeviceToken
+      type:
+      - object
+      description: Somente se o registro do Apple
+    - id: registration.GcmRegistrationId
+      type:
+      - object
+      description: Somente se o registro de Gcm
+    - id: registration.Tags
+      type:
+      - object
+      description: Lista separada por vírgulas de marcas (sem espaços)
+    - id: registration.BodyTemplate
+      type:
+      - object
+      description: Somente se o registro de modelo
+    - id: registration.WnsHeaders
+      type:
+      - object
+      description: Somente se o registro de modelo do Windows
+    - id: registration.MpnsHeaders
+      type:
+      - object
+      description: Somente se o registro de modelo Mpns
+    - id: registration.Expiry
+      type:
+      - object
+      description: Somente se o registro de modelo da Apple
+    - id: registration.ApnsHeaders
+      type:
+      - object
+      description: Somente se o registro de modelo da Apple
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: A etag.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function updateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateRegistration
+  id: azure-sb.NotificationHubService#createOrUpdateRegistration
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateRegistration(registration, options, callback)
+  summary: Cria ou atualiza um registro.
+  fullName: azure-sb.NotificationHubService.createOrUpdateRegistration(registration, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registration
+      type:
+      - string
+      description: O registro a ser atualizado.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: A etag.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createOrUpdateRegistration(registration, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrations
+  id: azure-sb.NotificationHubService#listRegistrations
+  parent: azure-sb.NotificationHubService
+  name: listRegistrations(options, callback)
+  summary: Registros da lista.
+  fullName: azure-sb.NotificationHubService.listRegistrations(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Especifica o número máximo de registro a obter da chamada.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Especifica o número de registros a ignorar na chamada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function listRegistrations(options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#listRegistrationsByTag
+  id: azure-sb.NotificationHubService#listRegistrationsByTag
+  parent: azure-sb.NotificationHubService
+  name: listRegistrationsByTag(tag, options, callback)
+  summary: Recupera um registro por marca.
+  fullName: azure-sb.NotificationHubService.listRegistrationsByTag(tag, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tag
+      type:
+      - string
+      description: A marca de registro.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Especifica o número máximo de registro a obter da chamada.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Especifica o número de registros a ignorar na chamada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function listRegistrationsByTag(tag, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#createOrUpdateInstallation
+  id: azure-sb.NotificationHubService#createOrUpdateInstallation
+  parent: azure-sb.NotificationHubService
+  name: createOrUpdateInstallation(installation, options, callback)
+  summary: Cria ou atualiza uma instalação.
+  fullName: azure-sb.NotificationHubService.createOrUpdateInstallation(installation, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installation
+      type:
+      - string
+      description: A instalação para criar/atualizar.
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createOrUpdateInstallation(installation, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#patchInstallation
+  id: azure-sb.NotificationHubService#patchInstallation
+  parent: azure-sb.NotificationHubService
+  name: patchInstallation(installationId, partialUpdateOperations, options, callback)
+  summary: Patches uma instalação existente.
+  fullName: azure-sb.NotificationHubService.patchInstallation(installationId, partialUpdateOperations, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: Id de instalação
+    - id: partialUpdateOperations
+      type:
+      - array
+      description: Lista de operações parciais para corrigir uma instalação existente
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function patchInstallation(installationId, partialUpdateOperations, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#deleteInstallation
+  id: azure-sb.NotificationHubService#deleteInstallation
+  parent: azure-sb.NotificationHubService
+  name: deleteInstallation(installationId, options, callback)
+  summary: Exclui uma instalação existente.
+  fullName: azure-sb.NotificationHubService.deleteInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: Id de instalação
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function deleteInstallation(installationId, options, callback)
+  langs:
+  - js
+- uid: azure-sb.NotificationHubService#getInstallation
+  id: azure-sb.NotificationHubService#getInstallation
+  parent: azure-sb.NotificationHubService
+  name: getInstallation(installationId, options, callback)
+  summary: Obtém uma instalação pela sua Id
+  fullName: azure-sb.NotificationHubService.getInstallation(installationId, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: installationId
+      type:
+      - string
+      description: Id de instalação
+    - id: options
+      type:
+      - object
+      description: A função de retorno de chamada ou de opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function getInstallation(installationId, options, callback)
+  langs:
+  - js

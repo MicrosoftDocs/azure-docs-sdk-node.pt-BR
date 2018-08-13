@@ -1,0 +1,989 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2edf9f5bc2da7407d7a8e5e49124d9284317f648
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047446"
+items:
+- uid: azure-sb.MpnsService
+  id: azure-sb.MpnsService
+  name: MpnsService
+  summary: A classe MpnsService é usada para enviar notificações usando o [Microsoft Push Notification Service](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558).
+  fullName: azure-sb.MpnsService
+  type: Class
+  children:
+  - azure-sb.MpnsService.#ctor
+  - azure-sb.MpnsService#createNativeRegistration
+  - azure-sb.MpnsService#createOrUpdateNativeRegistration
+  - azure-sb.MpnsService#createFlipTileRegistration
+  - azure-sb.MpnsService#createTileRegistration
+  - azure-sb.MpnsService#createToastRegistration
+  - azure-sb.MpnsService#createRawTemplateRegistration
+  - azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.MpnsService#updateFlipTileRegistration
+  - azure-sb.MpnsService#updateTileRegistration
+  - azure-sb.MpnsService#updatesToastRegistration
+  - azure-sb.MpnsService#updatesRawTemplateRegistration
+  - azure-sb.MpnsService#listRegistrationsByChannel
+  - azure-sb.MpnsService#sendFlipTile
+  - azure-sb.MpnsService#sendTile
+  - azure-sb.MpnsService#sendToast
+  - azure-sb.MpnsService#send
+  langs:
+  - js
+- id: azure-sb.MpnsService.#ctor
+  uid: azure-sb.MpnsService.#ctor
+  parent: azure-sb.MpnsService
+  name: MpnsService(notificationHubService)
+  fullName: azure-sb.MpnsService.MpnsService(notificationHubService)
+  summary: >-
+    Cria um novo objeto MpnsService.
+
+
+    __Observação__: uma instância desse objeto é criada automaticamente quando um <xref:azure-sb.NotificationHubService> objeto é criado. Consulte <xref:azure-sb.NotificationHubService%23gcm>.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: O serviço de hub de notificação.
+    content: new MpnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createNativeRegistration
+  id: azure-sb.MpnsService#createNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createNativeRegistration(channel, tags, options, callback)
+  summary: Cria um registro MPNS nativo.
+  fullName: azure-sb.MpnsService.createNativeRegistration(channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O uri de canal do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  id: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  summary: Cria ou atualiza um registro MPNS nativo.
+  fullName: azure-sb.MpnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O uri de canal do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createFlipTileRegistration
+  id: azure-sb.MpnsService#createFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: createFlipTileRegistration(channel, tags, template, options, callback)
+  summary: Cria um registro com um modelo de FlipTile (versão apenas Windows Phone 7.8 ou posterior). Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.createFlipTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: template.count
+      type:
+      - string
+      description: O número que aparece no bloco.
+    - id: template.title
+      type:
+      - string
+      description: O texto do título do bloco.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: template.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: template.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: template.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é reduzido ao seu tamanho pequeno.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é expandido para seu tamanho maior.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Conteúdo do bloco de trás quando o bloco é expandido para seu tamanho maior.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: O URI da imagem para o verso do bloco quando ele é expandido para seu tamanho maior.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createFlipTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createTileRegistration
+  id: azure-sb.MpnsService#createTileRegistration
+  parent: azure-sb.MpnsService
+  name: createTileRegistration(channel, tags, template, options, callback)
+  summary: Cria um registro com um modelo de bloco. Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: template.count
+      type:
+      - string
+      description: O número que aparece no bloco.
+    - id: template.title
+      type:
+      - string
+      description: O texto do título do bloco.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: template.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: template.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: template.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createToastRegistration
+  id: azure-sb.MpnsService#createToastRegistration
+  parent: azure-sb.MpnsService
+  name: createToastRegistration(channel, tags, template, options, callback)
+  summary: Cria um registro com um modelo de notificação do sistema para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createToastRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.text1
+      type:
+      - string
+      description: Texto1
+    - id: template.text2
+      type:
+      - string
+      description: Texto2
+    - id: template.param
+      type:
+      - string
+      description: (opcional) (Somente para a versão do Windows Phone 7.5 ou posterior)
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToastRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createRawTemplateRegistration
+  id: azure-sb.MpnsService#createRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createRawTemplateRegistration(channel, tags, template, options, callback)
+  summary: Cria um registro de modelo bruto.
+  fullName: azure-sb.MpnsService.createRawTemplateRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O uri de canal do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - json
+      description: O modelo do registro.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Cria um registro de modelo bruto.
+  fullName: azure-sb.MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O uri de canal do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - json
+      description: O modelo do registro.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateFlipTileRegistration
+  id: azure-sb.MpnsService#updateFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Atualiza um registro com um modelo de FlipTile (versão apenas Windows Phone 7.8 ou posterior). Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: template.count
+      type:
+      - string
+      description: O número que aparece no bloco.
+    - id: template.title
+      type:
+      - string
+      description: O texto do título do bloco.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: template.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: template.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: template.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é reduzido ao seu tamanho pequeno.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é expandido para seu tamanho maior.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Conteúdo do bloco de trás quando o bloco é expandido para seu tamanho maior.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: O URI da imagem para o verso do bloco quando ele é expandido para seu tamanho maior.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateTileRegistration
+  id: azure-sb.MpnsService#updateTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Atualiza um registro com um modelo de bloco. Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: template.count
+      type:
+      - string
+      description: O número que aparece no bloco.
+    - id: template.title
+      type:
+      - string
+      description: O texto do título do bloco.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: template.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: template.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: template.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesToastRegistration
+  id: azure-sb.MpnsService#updatesToastRegistration
+  parent: azure-sb.MpnsService
+  name: updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Atualiza um registro com um modelo de notificação do sistema. Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - object
+      description: O modelo de registro.
+    - id: template.text1
+      type:
+      - string
+      description: Texto1
+    - id: template.text2
+      type:
+      - string
+      description: Texto2
+    - id: template.param
+      type:
+      - string
+      description: (opcional) (Somente para a versão do Windows Phone 7.5 ou posterior)
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesRawTemplateRegistration
+  id: azure-sb.MpnsService#updatesRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Atualiza um registro de modelo bruto.
+  fullName: azure-sb.MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: template
+      type:
+      - json
+      description: O modelo do registro.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns a incluir.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: O etag a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#listRegistrationsByChannel
+  id: azure-sb.MpnsService#listRegistrationsByChannel
+  parent: azure-sb.MpnsService
+  name: listRegistrationsByChannel(channel, options, callback)
+  summary: Recupera um registro por canal.
+  fullName: azure-sb.MpnsService.listRegistrationsByChannel(channel, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: O ChannelUri.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Especifica o número máximo de registro a obter da chamada.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Especifica o número de registros a ignorar na chamada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendFlipTile
+  id: azure-sb.MpnsService#sendFlipTile
+  parent: azure-sb.MpnsService
+  name: sendFlipTile(tags, payload, options, callback)
+  summary: Envia uma notificação de FlipTile (versão apenas Windows Phone 7.8 ou posterior). Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.sendFlipTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Uma única marca ou expressão de marca.
+    - id: payload
+      type:
+      - object
+      description: O conteúdo da mensagem.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: payload.count
+      type:
+      - string
+      description: O número que aparece no bloco.
+    - id: payload.title
+      type:
+      - string
+      description: O texto do título do bloco.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: payload.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: payload.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: payload.smallBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é reduzido ao seu tamanho pequeno.
+    - id: payload.wideBackgroundImage
+      type:
+      - string
+      description: O URI para a imagem de plano de fundo para o bloco quando ele é expandido para seu tamanho maior.
+    - id: payload.wideBackContent
+      type:
+      - string
+      description: Conteúdo do bloco de trás quando o bloco é expandido para seu tamanho maior.
+    - id: payload.wideBackBackgroundImage
+      type:
+      - string
+      description: O URI da imagem para o verso do bloco quando ele é expandido para seu tamanho maior.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendFlipTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendTile
+  id: azure-sb.MpnsService#sendTile
+  parent: azure-sb.MpnsService
+  name: sendTile(tags, payload, options, callback)
+  summary: Envia uma notificação de bloco. Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Uma única marca ou expressão de marca.
+    - id: payload
+      type:
+      - object
+      description: O conteúdo da mensagem.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: O URI da imagem do plano de fundo para o bloco.
+    - id: payload.count
+      type:
+      - string
+      description: o número que aparece no bloco.
+    - id: payload.title
+      type:
+      - string
+      description: o texto do título do bloco.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: O URI da imagem que é mostrada no verso do bloco.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Título para o lado de trás do bloco.
+    - id: payload.backContent
+      type:
+      - string
+      description: Texto do verso do bloco.
+    - id: payload.id
+      type:
+      - string
+      description: ID de um bloco relacionado secundário.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendToast
+  id: azure-sb.MpnsService#sendToast
+  parent: azure-sb.MpnsService
+  name: sendToast(tags, payload, options, callback)
+  summary: Envia uma notificação do sistema. Para obter mais informações, consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendToast(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Uma única marca ou expressão de marca.
+    - id: payload
+      type:
+      - object
+      description: O conteúdo da mensagem.
+    - id: payload.text1
+      type:
+      - string
+      description: Texto1
+    - id: payload.text2
+      type:
+      - string
+      description: Texto2
+    - id: payload.param
+      type:
+      - string
+      description: (opcional) (Somente para a versão do Windows Phone 7.5 ou posterior)
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#send
+  id: azure-sb.MpnsService#send
+  parent: azure-sb.MpnsService
+  name: send(tags, payload, targetName, notificationClass, options, callback)
+  summary: Envia uma notificação MPNS personalizada. Use esse método se você quiser ter total controle sobre a carga.
+  fullName: azure-sb.MpnsService.send(tags, payload, targetName, notificationClass, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Uma única marca ou expressão de marca.
+    - id: payload
+      type:
+      - string
+      description: O conteúdo da mensagem XML.
+    - id: targetName
+      type:
+      - string
+      description: O nome de destino.
+    - id: notificationClass
+      type:
+      - string
+      description: A classe de notificação.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: A função de retorno de chamada.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, targetName, notificationClass, options, callback)
+  langs:
+  - js

@@ -1,0 +1,442 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 94474b9236dc6e17df2e02d3d799841deb9f8621
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047445"
+items:
+- uid: azure-sb.ApnsService
+  id: azure-sb.ApnsService
+  name: ApnsService
+  summary: >-
+    A classe ApnsService é usada para enviar notificações usando o Apple Push Notification Service (APNS).
+
+    Esse serviço é usado para se comunicar com o dispositivo iOS.
+  fullName: azure-sb.ApnsService
+  type: Class
+  children:
+  - azure-sb.ApnsService.#ctor
+  - azure-sb.ApnsService#send
+  - azure-sb.ApnsService#createNativeRegistration
+  - azure-sb.ApnsService#createOrUpdateNativeRegistration
+  - azure-sb.ApnsService#createTemplateRegistration
+  - azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  - azure-sb.ApnsService#updateTemplateRegistration
+  - azure-sb.ApnsService#listRegistrationsByToken
+  langs:
+  - js
+- id: azure-sb.ApnsService.#ctor
+  uid: azure-sb.ApnsService.#ctor
+  parent: azure-sb.ApnsService
+  name: ApnsService(notificationHubService)
+  fullName: azure-sb.ApnsService.ApnsService(notificationHubService)
+  summary: >-
+    Cria um novo objeto ApnsService usando especificado <xref:azure-sb.NotificationHubService> objeto.
+
+
+
+    __Observação__: uma instância desse objeto é criada automaticamente quando um <xref:azure-sb.NotificationHubService> objeto é criado. Consulte <xref:azure-sb.NotificationHubService%23apns>.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: O serviço de hub de notificação.
+    content: new ApnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#send
+  id: azure-sb.ApnsService#send
+  parent: azure-sb.ApnsService
+  name: send(tags, payload, optionsOrCallback, callback)
+  summary: Envia uma notificação de APNS.
+  fullName: azure-sb.ApnsService.send(tags, payload, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: >-
+        Uma única marca ou expressão de marca.
+
+        Se for null difundirá a todos os registros neste hub
+    - id: payload
+      type:
+      - object
+      - string
+      description: >-
+        O conteúdo da mensagem JSON conforme especificado abaixo.
+
+        Se a carga é uma cadeia de caracteres, siga o formato APNS como em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: payload.expiry
+      type:
+      - date
+      description: A data de expiração. (no W3C DTF, AAAA-MM-DDThh:mmTZD (por exemplo, 1997-07-16T19:20 + 01:00))
+      optional: true
+    - id: payload.aps
+      type:
+      - object
+      description: Se o membro 'aps' for fornecido, o objeto é entregue ao APNS como-está após a expiração é processada. O objeto é considerado como segue o formato APNS em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: payload.badge
+      type:
+      - number
+      description: Se o membro 'aps' não for fornecido, o número a ser exibido no ícone do aplicativo.
+      optional: true
+    - id: payload.alert
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o texto do alerta.
+      optional: true
+    - id: payload.sound
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o som de nome de arquivo.
+      optional: true
+    - id: payload.payload
+      type:
+      - object
+      description: Se o membro 'aps' não for fornecido, o objeto de carga que contém o texto de notificação.
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: A função de retorno de chamada ou de opções de solicitação.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Os cabeçalhos de apns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function send(tags, payload, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createNativeRegistration
+  id: azure-sb.ApnsService#createNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createNativeRegistration(token, tags, options, callback)
+  summary: Cria um registro nativo.
+  fullName: azure-sb.ApnsService.createNativeRegistration(token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createNativeRegistration(token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  id: azure-sb.ApnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  summary: Cria ou atualiza um registro nativo.
+  fullName: azure-sb.ApnsService.createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas (lista separada por vírgulas, sem espaços).
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createOrUpdateNativeRegistration(registrationId, token, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createTemplateRegistration
+  id: azure-sb.ApnsService#createTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  summary: Cria um registro de modelo.
+  fullName: azure-sb.ApnsService.createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: tags
+      type:
+      - string
+      - array
+      description: As marcas.
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        O conteúdo da mensagem JSON conforme especificado abaixo.
+
+        Se a carga é uma cadeia de caracteres, siga o formato APNS como em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: A data de expiração.
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: Se o membro 'aps' for fornecido, o registro é entregue ao hub de notificação como-está após a expiração é processada. O objeto é considerado como segue o formato APNS em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: Se o membro 'aps' não for fornecido, o número a ser exibido no ícone do aplicativo.
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o texto do alerta.
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o som de nome de arquivo.
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: Se o membro 'aps' não for fornecido, o objeto de carga que contém o texto de notificação.
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: A função de retorno de chamada ou de opções de solicitação.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Os cabeçalhos de apns a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createTemplateRegistration(token, tags, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  id: azure-sb.ApnsService#createOrUpdateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  summary: Cria ou atualiza um registro de modelo.
+  fullName: azure-sb.ApnsService.createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        O conteúdo da mensagem JSON conforme especificado abaixo.
+
+        Se a carga é uma cadeia de caracteres, siga o formato APNS como em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: A data de expiração.
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: Se o membro 'aps' for fornecido, o registro é entregue ao hub de notificação como-está após a expiração é processada. O objeto é considerado como segue o formato APNS em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: Se o membro 'aps' não for fornecido, o número a ser exibido no ícone do aplicativo.
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o texto do alerta.
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o som de nome de arquivo.
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: Se o membro 'aps' não for fornecido, o objeto de carga que contém o texto de notificação.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Os cabeçalhos de apns a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function createOrUpdateTemplateRegistration(registrationId, token, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#updateTemplateRegistration
+  id: azure-sb.ApnsService#updateTemplateRegistration
+  parent: azure-sb.ApnsService
+  name: updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  summary: Atualiza um registro de modelo.
+  fullName: azure-sb.ApnsService.updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: O identificador de registro.
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: template
+      type:
+      - object
+      - string
+      description: >-
+        O conteúdo da mensagem JSON conforme especificado abaixo.
+
+        Se a carga é uma cadeia de caracteres, siga o formato APNS como em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+    - id: template.expiry
+      type:
+      - date
+      description: A data de expiração.
+      optional: true
+    - id: template.aps
+      type:
+      - object
+      description: Se o membro 'aps' for fornecido, o registro é entregue ao hub de notificação como-está após a expiração é processada. O objeto é considerado como segue o formato APNS em https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html#//apple_ref/doc/uid/TP40008194-CH100-SW1
+      optional: true
+    - id: template.badge
+      type:
+      - number
+      description: Se o membro 'aps' não for fornecido, o número a ser exibido no ícone do aplicativo.
+      optional: true
+    - id: template.alert
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o texto do alerta.
+      optional: true
+    - id: template.sound
+      type:
+      - string
+      description: Se o membro 'aps' não for fornecido, o som de nome de arquivo.
+      optional: true
+    - id: template.payload
+      type:
+      - object
+      description: Se o membro 'aps' não for fornecido, o objeto de carga que contém o texto de notificação.
+      optional: true
+    - id: optionsOrCallback
+      type:
+      - object
+      - function
+      description: A função de retorno de chamada ou de opções de solicitação.
+      optional: true
+    - id: optionsOrCallback.headers
+      type:
+      - object
+      - function
+      description: Os cabeçalhos de apns a incluir.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function updateTemplateRegistration(registrationId, token, template, optionsOrCallback, callback)
+  langs:
+  - js
+- uid: azure-sb.ApnsService#listRegistrationsByToken
+  id: azure-sb.ApnsService#listRegistrationsByToken
+  parent: azure-sb.ApnsService
+  name: listRegistrationsByToken(token, options, callback)
+  summary: Recupera um registro por token do dispositivo.
+  fullName: azure-sb.ApnsService.listRegistrationsByToken(token, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: token
+      type:
+      - string
+      description: O token do dispositivo.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação. As propriedades adicionais serão passadas como cabeçalhos.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Especifica o número máximo de registro a obter da chamada.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Especifica o número de registros a ignorar na chamada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` conterá informações se ocorrer um erro; Caso contrário, `response` conterá informações relacionadas a essa operação.'
+    content: function listRegistrationsByToken(token, options, callback)
+  langs:
+  - js

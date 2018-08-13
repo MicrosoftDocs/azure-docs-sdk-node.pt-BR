@@ -1,0 +1,667 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 07102ad61d689fe64b8deed07cbf15bcc4b6f4e4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047295"
+items:
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations
+  summary: >-
+    A API de gerenciamento de serviços inclui operações para gerenciar os discos em sua assinatura.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157188.aspx para obter mais informações) __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [virtualMachineDisks] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineDisks}.
+
+    Inicializa uma nova instância da classe VirtualMachineDiskOperations.
+  fullName: azure-asm-compute.VirtualMachineDiskOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  - azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: VirtualMachineDiskOperations(client)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations.VirtualMachineDiskOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referência para o cliente do serviço.
+    content: new VirtualMachineDiskOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginCreatingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    A operação de criar o disco de dados adiciona um disco de dados a uma máquina virtual.
+
+    Há três maneiras de criar o disco de dados usando a operação de adicionar disco de dados. Opção 1 – anexar um disco de dados vazio para a função especificando o rótulo do disco e o local da imagem do disco. Não inclua os elementos DiskName e SourceMediaLink no corpo da solicitação. Inclua o elemento MediaLink e referencie um blob que está na mesma região geográfica que a função. Você também pode omitir o elemento MediaLink. Nesse uso, o Azure criará o disco de dados na conta de armazenamento configurada como padrão para a função. Opção 2 – anexar um disco de dados existente que está no repositório de imagens. Não inclua os elementos DiskName e SourceMediaLink no corpo da solicitação. Especifique o disco de dados para usar, incluindo o elemento DiskName. Observação: Se incluídos no corpo da resposta, os elementos MediaLink e LogicalDiskSizeInGB serão ignorados. Opção 3 - especificar o local de um blob em sua conta de armazenamento que contêm uma imagem de disco para usar. Inclua o elemento SourceMediaLink. Observação: Se isincluded o elemento MediaLink, ele será ignorado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função para adicionar o disco de dados.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: Parâmetros fornecidos para a operação de criar o disco de dados de máquina Virtual.
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 'Especifica o comportamento do blob de disco de dados para maior eficiência de leitura/gravação de cache da plataforma. O padrão é ReadOnly. Os valores possíveis são: None, ReadOnly ou ReadWrite. Aviso: A definição dessa propriedade afeta a consistência do disco.'
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica a descrição do disco de dados. Quando você anexa um disco, ao referenciar diretamente uma mídia usando o elemento MediaLink ou especificando o tamanho do disco de destino, você pode usar o elemento DiskLabel para personalizar a propriedade de nome do disco de dados de destino.
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica o nome do disco. O Azure usa o disco especificado para criar o disco de dados para a máquina e preenche esse campo com o nome do disco.
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: Especifica o número de unidade lógica (LUN) para o disco. O LUN especifica o local em que a unidade de dados aparece quando montada para uso pela máquina virtual. Os valores válidos de LUN são 0 a 15.
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: Especifica o tamanho, em GB, de um disco vazio a ser anexado à função. O disco pode ser criado como parte do disco de anexação ou criar uma chamada de função VM, especificando o valor para essa propriedade. Azure cria o disco vazio com base na preferência de tamanho e anexa o disco recém-criado à função.
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure onde a mídia para o disco está localizada. O local de blob deve pertencer à conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: Especifica o local de um blob no armazenamento da conta que está montado como um disco de dados quando a máquina virtual é criada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginCreatingDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginDeletingDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: A operação de iniciar a exclusão de disco de dados remove o disco de dados especificado de uma máquina virtual.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função para excluir o disco de dados do.
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: O número de unidade lógica do disco.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Especifica que o blob de origem para o disco também deve ser excluído do armazenamento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginDeletingDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#beginUpdatingDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: beginUpdatingDisk(name, parameters, callback)
+  summary: A operação de adicionar disco adiciona um disco ao repositório de imagens de usuário. O disco pode ser um disco do sistema operacional ou um disco de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.beginUpdatingDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome do disco que está sendo atualizado.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: Parâmetros fornecidos para a operação de atualizar o disco de máquina Virtual.
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 'Especifica se o disco contém um sistema operacional. Observação: Apenas um disco com um sistema operacional instalado pode ser montado como unidade de sistema operacional.'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 'O tipo de sistema operacional do disco. Os valores possíveis são: Linux ou Windows.'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica o nome amigável do disco.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure. O local do blob deve pertencer a uma conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica um nome para o disco. O Azure usa o nome para identificar o disco durante a criação de máquinas virtuais do disco.
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: Redimensiona o blob subjacente para o tamanho indicado em GB. Para usar a propriedade ResizedSizeInGB, o cabeçalho de versão deve ser pelo menos 2014-10-01.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginUpdatingDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  summary: >-
+    A operação de criar o disco de dados adiciona um disco de dados a uma máquina virtual.
+
+    Há três maneiras de criar o disco de dados usando a operação de adicionar disco de dados. Opção 1 – anexar um disco de dados vazio para a função especificando o rótulo do disco e o local da imagem do disco. Não inclua os elementos DiskName e SourceMediaLink no corpo da solicitação. Inclua o elemento MediaLink e referencie um blob que está na mesma região geográfica que a função. Você também pode omitir o elemento MediaLink. Nesse uso, o Azure criará o disco de dados na conta de armazenamento configurada como padrão para a função. Opção 2 – anexar um disco de dados existente que está no repositório de imagens. Não inclua os elementos DiskName e SourceMediaLink no corpo da solicitação. Especifique o disco de dados para usar, incluindo o elemento DiskName. Observação: Se incluídos no corpo da resposta, os elementos MediaLink e LogicalDiskSizeInGB serão ignorados. Opção 3 - especificar o local de um blob em sua conta de armazenamento que contêm uma imagem de disco para usar. Inclua o elemento SourceMediaLink. Observação: Se isincluded o elemento MediaLink, ele será ignorado.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157199.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função para adicionar o disco de dados.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskCreateParameters
+      description: Parâmetros fornecidos para a operação de criar o disco de dados de máquina Virtual.
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 'Especifica o comportamento do blob de disco de dados para maior eficiência de leitura/gravação de cache da plataforma. O padrão é ReadOnly. Os valores possíveis são: None, ReadOnly ou ReadWrite. Aviso: A definição dessa propriedade afeta a consistência do disco.'
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica a descrição do disco de dados. Quando você anexa um disco, ao referenciar diretamente uma mídia usando o elemento MediaLink ou especificando o tamanho do disco de destino, você pode usar o elemento DiskLabel para personalizar a propriedade de nome do disco de dados de destino.
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica o nome do disco. O Azure usa o disco especificado para criar o disco de dados para a máquina e preenche esse campo com o nome do disco.
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: Especifica o número de unidade lógica (LUN) para o disco. O LUN especifica o local em que a unidade de dados aparece quando montada para uso pela máquina virtual. Os valores válidos de LUN são 0 a 15.
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: Especifica o tamanho, em GB, de um disco vazio a ser anexado à função. O disco pode ser criado como parte do disco de anexação ou criar uma chamada de função VM, especificando o valor para essa propriedade. Azure cria o disco vazio com base na preferência de tamanho e anexa o disco recém-criado à função.
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure onde a mídia para o disco está localizada. O local de blob deve pertencer à conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+    - id: parameters.sourceMediaLinkUri
+      type:
+      - string
+      description: Especifica o local de um blob no armazenamento da conta que está montado como um disco de dados quando a máquina virtual é criada.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function createDataDisk(serviceName, deploymentName, roleName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#createDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: createDisk(parameters, callback)
+  summary: A operação Criar disco adiciona um disco ao repositório de imagens de usuário. O disco pode ser um disco do sistema operacional ou um disco de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.createDisk(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskCreateParameters
+      description: Parâmetros fornecidos para a operação de criar o disco de máquina Virtual.
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 'O tipo de sistema operacional do disco. Os valores possíveis são: Linux ou Windows.'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica o nome amigável do disco.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure. O local do blob deve pertencer a uma conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica um nome para o disco. O Azure usa o nome para identificar o disco durante a criação de máquinas virtuais do disco.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function createDisk(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  summary: A operação Excluir disco de dados remove o disco de dados especificado de uma máquina virtual.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157179.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função para excluir o disco de dados do.
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: O número de unidade lógica do disco.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Especifica que o blob de origem para o disco também deve ser excluído do armazenamento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function deleteDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#deleteDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: deleteDisk(name, deleteFromStorage, callback)
+  summary: A operação de excluir o disco exclui o disco de dados ou sistema operacional especificado do repositório da imagem.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157200.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.deleteDisk(name, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome do disco a ser excluído.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Especifica que o blob de origem para o disco também deve ser excluído do armazenamento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function deleteDisk(name, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  summary: A operação obter disco de dados recupera o disco de dados especificado de uma máquina virtual.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157180.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função.
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: O número de unidade lógica do disco.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function getDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#getDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: getDisk(name, callback)
+  summary: >-
+    A operação obter disco recupera um disco do repositório de imagens de usuário.
+
+    O disco pode ser um disco do sistema operacional ou um disco de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.getDisk(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome do disco.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function getDisk(name, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#listDisks
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: listDisks(callback)
+  summary: A operação de listar os discos recupera uma lista dos discos no repositório da imagem.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157176.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.listDisks(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function listDisks(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDataDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  summary: A operação de disco de dados de atualização atualiza o disco de dados especificado anexado à máquina virtual especificada.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157190.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: O nome do seu serviço.
+    - id: deploymentName
+      type:
+      - string
+      description: O nome da implantação.
+    - id: roleName
+      type:
+      - string
+      description: O nome da função para adicionar o disco de dados.
+    - id: logicalUnitNumber
+      type:
+      - Number
+      description: O número de unidade lógica do disco.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDataDiskUpdateParameters
+      description: Parâmetros fornecidos para a operação de disco de dados de máquina Virtual de atualização.
+    - id: parameters.hostCaching
+      type:
+      - string
+      description: 'Especifica o comportamento do blob de disco de dados para maior eficiência de leitura/gravação de cache da plataforma. O padrão é ReadOnly. Os valores possíveis são: None, ReadOnly ou ReadWrite. Aviso: A definição dessa propriedade afeta a consistência do disco.'
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica a descrição do disco de dados. Quando você anexa um disco, ao referenciar diretamente uma mídia usando o elemento MediaLink ou especificando o tamanho do disco de destino, você pode usar o elemento DiskLabel para personalizar a propriedade de nome do disco de dados de destino.
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica o nome do disco. O Azure usa o disco especificado para criar o disco de dados para a máquina e preenche esse campo com o nome do disco.
+      optional: true
+    - id: parameters.logicalUnitNumber
+      type:
+      - number
+      description: Especifica o número de unidade lógica (LUN) para o disco. O LUN especifica o local em que a unidade de dados aparece quando montada para uso pela máquina virtual. Os valores válidos de LUN são 0 a 15.
+      optional: true
+    - id: parameters.logicalDiskSizeInGB
+      type:
+      - number
+      description: Especifica o tamanho, em GB, de um disco vazio a ser anexado à função. O disco pode ser criado como parte do disco de anexação ou criar uma chamada de função VM, especificando o valor para essa propriedade. Azure cria o disco vazio com base na preferência de tamanho e anexa o disco recém-criado à função.
+      optional: true
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento de BLOBs do Azure onde a mídia para o disco está localizada. O local de blob deve pertencer à conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function updateDataDisk(serviceName, deploymentName, roleName, logicalUnitNumber, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDisk
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDisk(name, parameters, callback)
+  summary: A operação de adicionar disco adiciona um disco ao repositório de imagens de usuário. O disco pode ser um disco do sistema operacional ou um disco de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDisk(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome do disco que está sendo atualizado.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: Parâmetros fornecidos para a operação de atualizar o disco de máquina Virtual.
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 'Especifica se o disco contém um sistema operacional. Observação: Apenas um disco com um sistema operacional instalado pode ser montado como unidade de sistema operacional.'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 'O tipo de sistema operacional do disco. Os valores possíveis são: Linux ou Windows.'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica o nome amigável do disco.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure. O local do blob deve pertencer a uma conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica um nome para o disco. O Azure usa o nome para identificar o disco durante a criação de máquinas virtuais do disco.
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: Redimensiona o blob subjacente para o tamanho indicado em GB. Para usar a propriedade ResizedSizeInGB, o cabeçalho de versão deve ser pelo menos 2014-10-01.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function updateDisk(name, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  id: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations#updateDiskSize
+  parent: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations
+  name: updateDiskSize(name, parameters, callback)
+  summary: A operação de adicionar disco adiciona um disco ao repositório de imagens de usuário. O disco pode ser um disco do sistema operacional ou um disco de dados.  (consulte http://msdn.microsoft.com/en-us/library/windowsazure/jj157178.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineDiskOperations~VirtualMachineDiskOperations.updateDiskSize(name, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome do disco que está sendo atualizado.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineDiskUpdateParameters
+      description: Parâmetros fornecidos para a operação de atualizar o disco de máquina Virtual.
+    - id: parameters.hasOperatingSystem
+      type:
+      - boolean
+      description: 'Especifica se o disco contém um sistema operacional. Observação: Apenas um disco com um sistema operacional instalado pode ser montado como unidade de sistema operacional.'
+      optional: true
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 'O tipo de sistema operacional do disco. Os valores possíveis são: Linux ou Windows.'
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica o nome amigável do disco.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Especifica o local do blob no armazenamento do Azure. O local do blob deve pertencer a uma conta de armazenamento na assinatura especificada pelo valor SubscriptionId na chamada da operação. Exemplo: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+      optional: true
+    - id: parameters.name
+      type:
+      - string
+      description: Especifica um nome para o disco. O Azure usa o nome para identificar o disco durante a criação de máquinas virtuais do disco.
+    - id: parameters.resizedSizeInGB
+      type:
+      - number
+      description: Redimensiona o blob subjacente para o tamanho indicado em GB. Para usar a propriedade ResizedSizeInGB, o cabeçalho de versão deve ser pelo menos 2014-10-01.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function updateDiskSize(name, parameters, callback)
+  langs:
+  - js
