@@ -1,0 +1,650 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c6ef9703a9adb8cdfbe177c9633b510ca7807f87
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40047290"
+items:
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: VirtualMachineVMImageOperations
+  summary: >-
+    A API de gerenciamento de serviços inclui operações para gerenciar os modelos de máquina virtual em sua assinatura.
+
+    __Observação__: uma instância dessa classe é criada automaticamente para uma instância do [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    Consulte [virtualMachineVMImages] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineVMImages}.
+
+    Inicializa uma nova instância da classe VirtualMachineVMImageOperations.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  - azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: VirtualMachineVMImageOperations(client)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations.VirtualMachineVMImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Referência para o cliente do serviço.
+    content: new VirtualMachineVMImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginCreating
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginCreating(parameters, callback)
+  summary: A operação de criar a imagem de VM cria uma imagem de VM que no repositório da imagem.  (consulte http://msdn.microsoft.com/en-us/library/azure/dn775054.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageCreateParameters
+      description: Operação de criação de parâmetros fornecidos para a imagem VM da máquina virtual.
+    - id: parameters.name
+      type:
+      - string
+      description: Obtém ou define o nome da imagem.
+    - id: parameters.label
+      type:
+      - string
+      description: Obtém ou define um identificador para a imagem.
+    - id: parameters.description
+      type:
+      - string
+      description: Obtém ou define a descrição da imagem.
+      optional: true
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationCreateParameters
+      description: Obtém ou define informações de configuração para o disco do sistema operacional que está associado com a imagem.
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: Obtém ou define o comportamento de cache da plataforma do blob de disco do sistema operacional para maior eficiência de leitura/gravação.
+      optional: true
+    - id: parameters.oSDiskConfiguration.oSState
+      type:
+      - string
+      description: Obtém ou define o estado do sistema operacional da imagem.
+    - id: parameters.oSDiskConfiguration.os
+      type:
+      - string
+      description: Obtém ou define o sistema operacional da imagem.
+    - id: parameters.oSDiskConfiguration.mediaLink
+      type:
+      - string
+      description: Obtém ou define o local do blob no armazenamento do Windows Azure. O local do blob pertence a uma conta de armazenamento na assinatura especificada pelo valor < id da assinatura > na chamada da operação.
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: Especifica informações de configuração para os discos de dados que estão associados com a imagem. Uma imagem de VM pode não ter discos de dados associados a ele.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: Obtém ou define o idioma da imagem.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Obtém ou define um valor que pode ser usado para agrupar imagens da VM.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Obtém ou define o tamanho a ser usado para a máquina Virtual criada a partir da imagem da VM.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Obtém ou define o contrato de licença de usuário final que está associado com a imagem. O valor para esse elemento é uma cadeia de caracteres, mas é recomendável que o valor ser uma URL que aponta para um EULA.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Obtém ou define o URI para o ícone que é exibido para a imagem no Portal de gerenciamento.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Obtém ou define o URI para o ícone pequeno que é exibido para a imagem no Portal de gerenciamento.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Obtém ou define o URI que aponta para um documento que contém a política de privacidade relacionada à imagem.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Obtém ou define a data em que a imagem foi adicionada ao repositório de imagens.
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Obtém ou define se as imagens de VM deve ser listadas no portal.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginDeleting
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginDeleting(vmImageName, deleteFromStorage, callback)
+  summary: A operação de começar a imagem de máquina Virtual excluindo exclui a imagem de máquina virtual especificada.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginDeleting(vmImageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para excluir.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Especifica que o blob de origem para a imagem também deve ser excluído do armazenamento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginDeleting(vmImageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginSharing
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginSharing(vmImageName, permission, callback)
+  summary: Compartilhe uma imagem VM já replicada. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginSharing(vmImageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para compartilhar.
+    - id: permission
+      type:
+      - string
+      description: 'O permissão de compartilhamento: pública, msdn ou privada.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginSharing(vmImageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#beginUnreplicating
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: beginUnreplicating(vmImageName, callback)
+  summary: 'Unreplicate uma imagem VM em vários locais de destino. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo. Observação: A operação remove as cópias publicadas do usuário a imagem da VM. Ele não remove o imagem VM de usuário real. Para remover o imagem VM de usuário real, o publicador precisará chamar excluir imagem da VM.'
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.beginUnreplicating(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 'O nome da imagem de máquina virtual para replicar. Observação: O nome da imagem VM deve ser a imagem de VM, não o nome publicado da imagem da VM de usuário.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function beginUnreplicating(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#create
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: create(parameters, callback)
+  summary: A operação de criar a imagem de VM cria uma imagem de VM que no repositório da imagem.  (consulte http://msdn.microsoft.com/en-us/library/azure/dn775054.aspx para obter mais informações)
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageCreateParameters
+      description: Parâmetros fornecidos para a operação de criar a imagem de máquina Virtual.
+    - id: parameters.name
+      type:
+      - string
+      description: Obtém ou define o nome da imagem.
+    - id: parameters.label
+      type:
+      - string
+      description: Obtém ou define um identificador para a imagem.
+    - id: parameters.description
+      type:
+      - string
+      description: Obtém ou define a descrição da imagem.
+      optional: true
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationCreateParameters
+      description: Obtém ou define informações de configuração para o disco do sistema operacional que está associado com a imagem.
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: Obtém ou define o comportamento de cache da plataforma do blob de disco do sistema operacional para maior eficiência de leitura/gravação.
+      optional: true
+    - id: parameters.oSDiskConfiguration.oSState
+      type:
+      - string
+      description: Obtém ou define o estado do sistema operacional da imagem.
+    - id: parameters.oSDiskConfiguration.os
+      type:
+      - string
+      description: Obtém ou define o sistema operacional da imagem.
+    - id: parameters.oSDiskConfiguration.mediaLink
+      type:
+      - string
+      description: Obtém ou define o local do blob no armazenamento do Windows Azure. O local do blob pertence a uma conta de armazenamento na assinatura especificada pelo valor < id da assinatura > na chamada da operação.
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: Especifica informações de configuração para os discos de dados que estão associados com a imagem. Uma imagem de VM pode não ter discos de dados associados a ele.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: Obtém ou define o idioma da imagem.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Obtém ou define um valor que pode ser usado para agrupar imagens da VM.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Obtém ou define o tamanho a ser usado para a máquina Virtual criada a partir da imagem da VM.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Obtém ou define o contrato de licença de usuário final que está associado com a imagem. O valor para esse elemento é uma cadeia de caracteres, mas é recomendável que o valor ser uma URL que aponta para um EULA.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Obtém ou define o URI para o ícone que é exibido para a imagem no Portal de gerenciamento.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Obtém ou define o URI para o ícone pequeno que é exibido para a imagem no Portal de gerenciamento.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Obtém ou define o URI que aponta para um documento que contém a política de privacidade relacionada à imagem.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Obtém ou define a data em que a imagem foi adicionada ao repositório de imagens.
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Obtém ou define se as imagens de VM deve ser listadas no portal.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: deleteMethod(vmImageName, deleteFromStorage, callback)
+  summary: A operação de excluir a imagem de máquina Virtual exclui a imagem de máquina virtual especificada.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.deleteMethod(vmImageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para excluir.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Especifica que o blob de origem para a imagem também deve ser excluído do armazenamento.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function deleteMethod(vmImageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#getDetails
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: getDetails(vmImageName, callback)
+  summary: Obtém as propriedades do VMImage e seus detalhes de replicação. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.getDetails(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para replicar.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function getDetails(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#list
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: list(callback)
+  summary: A operação de listar imagens de máquina Virtual recupera uma lista de imagens de máquina virtual.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#replicate
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: replicate(vmImageName, parameters, callback)
+  summary: Replica uma imagem de VM em vários locais de destino. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.replicate(vmImageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para replicar.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageReplicateParameters
+      description: Parâmetros fornecidos para a operação de replicar a imagem de máquina Virtual.
+    - id: parameters.targetLocations
+      type:
+      - array
+      description: 'Os locais regionais do destino de replicação. Observação: As regiões no corpo da solicitação não são aditivas. Se uma imagem de VM já tenha sido replicada para regiões A, B e C e é feita uma solicitação para replicar a regiões A e D, a imagem de VM permanecerá na região A, serão replicados na região D e será não replicadas de regiões B e C.'
+    - id: parameters.computeImageAttributes
+      type:
+      - azure-asm-compute.ComputeImageAttributes
+      description: Os atributos de imagem de computação. Os metadados que é necessário para essa imagem a ser useablein a combinação de Microsoft. Compute Provider.The de valores fornecida para a oferta, Sku e versão devem ser exclusivo para um publicador.
+    - id: parameters.computeImageAttributes.offer
+      type:
+      - string
+      description: Obtém ou define o nome do publicador definido da oferta. Os caracteres permitidos são letras maiusculas ou minúsculas, dígitos, hypen(-), ponto (.). O comprimento máximo permitido é de 64 caracteres.
+    - id: parameters.computeImageAttributes.sku
+      type:
+      - string
+      description: Obtém ou define o nome do publicador definido do Sku. Os caracteres permitidos são letras maiusculas ou minúsculas, dígitos, hypen(-), ponto (.). O comprimento máximo permitido é de 64 caracteres.
+    - id: parameters.computeImageAttributes.version
+      type:
+      - string
+      description: "Obtém ou define a versão do publicador definido da imagem. Os caracteres permitidos são dígitos e o período. Formato: <MajorVersion>.<MinorVersion>.<Patch>Exemplo: '1.0.0' ou '1.1.0' número de versão de 3 a seguir o padrão da maioria do RPs.See http://semver.org/."
+    - id: parameters.marketplaceImageAttributes
+      type:
+      - azure-asm-compute.MarketplaceImageAttributes
+      description: Os atributos de imagem de mercado. Os metadados que é necessário para a VM do Marketplace originado imagesto ser utilizável no provedor Microsoft. Compute.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.publisherId
+      type:
+      - string
+      description: Obtém ou define o ID do publicador Isso é o nome do publicador do provedor Microsoft. Compute a ser usado para a imagem.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan
+      type:
+      - azure-asm-compute.Plan
+      description: Obtém ou define o contexto de compra de qualquer artefato 3ª de terceiros.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.name
+      type:
+      - string
+      description: Obtém ou define um nome definido pelo usuário do 3º artefato de terceiros que foi adquirido.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.publisher
+      type:
+      - string
+      description: Obtém ou define o Editor do artefato 3ª parte que está sendo bought.E.g. Contoso.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.product
+      type:
+      - string
+      description: Obtém ou define o 3º artefato de terceiros que está sendo procured.E.g. Northwind.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function replicate(vmImageName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#share
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: share(vmImageName, permission, callback)
+  summary: Compartilhe uma imagem VM já replicada. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.share(vmImageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual para compartilhar.
+    - id: permission
+      type:
+      - string
+      description: 'O permissão de compartilhamento: pública, msdn ou privada.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function share(vmImageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#unreplicate
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: unreplicate(vmImageName, callback)
+  summary: 'Unreplicate uma imagem VM em vários locais de destino. Esta operação é apenas para os publicadores. Você precisa ser registrado como um editor de imagem com o Windows Azure para ser capaz de chamá-lo. Observação: A operação remove as cópias publicadas do usuário a imagem da VM. Ele não remove o imagem VM de usuário real. Para remover o imagem VM de usuário real, o publicador precisará chamar excluir imagem da VM.'
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.unreplicate(vmImageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: vmImageName
+      type:
+      - string
+      description: 'O nome da imagem de máquina virtual para replicar. Observação: O nome da imagem VM deve ser a imagem de VM, não o nome publicado da imagem da VM de usuário.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function unreplicate(vmImageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  id: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations#update
+  parent: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations
+  name: update(imageName, parameters, callback)
+  summary: As atualizações de operação de atualizar a imagem de VM uma VM de imagem que no repositório da imagem.
+  fullName: azure-asm-compute.VirtualMachineVMImageOperations~VirtualMachineVMImageOperations.update(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: O nome da imagem de máquina virtual a ser atualizado.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineVMImageUpdateParameters
+      description: Parâmetros fornecidos para a operação de atualizar a imagem de máquina Virtual.
+    - id: parameters.label
+      type:
+      - string
+      description: Especifica o nome amigável da imagem a ser atualizada. Você não pode usar essa operação para atualizar as imagens fornecidas pela plataforma do Azure.
+    - id: parameters.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfigurationUpdateParameters
+      description: Opcional. A configuração de disco do sistema operacional.
+      optional: true
+    - id: parameters.oSDiskConfiguration.hostCaching
+      type:
+      - string
+      description: Especifica o comportamento de cache da plataforma do blob de disco do sistema operacional para maior eficiência de leitura/gravação.
+      optional: true
+    - id: parameters.dataDiskConfigurations
+      type:
+      - array
+      description: Opcional. As configurações de disco de dados.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Especifica a descrição da imagem do sistema operacional.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: Especifica o idioma da imagem.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Especifica um valor que pode ser usado para agrupar imagens do sistema operacional.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Especifica o tamanho a ser usado para a máquina virtual que é criada a partir da imagem do sistema operacional.
+      optional: true
+    - id: parameters.eula
+      type:
+      - string
+      description: Especifica o contrato de licença de usuário final que está associado com a imagem. O valor para esse elemento é uma cadeia de caracteres, mas é recomendável que o valor ser uma URL que aponta para um EULA.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Especifica o URI para o ícone que é exibido para a imagem no Portal de gerenciamento.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Especifica o URI para o ícone pequeno que é exibido quando a imagem é apresentada no Portal de gerenciamento do Azure.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Especifica o URI que aponta para um documento que contém a política de privacidade relacionada à imagem do sistema operacional.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Especifica a data quando a imagem do sistema operacional foi adicionada ao repositório de imagens.
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Opcional. Verdadeiro ou falso.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: O fluxo de resposta.
+    content: function update(imageName, parameters, callback)
+  langs:
+  - js
