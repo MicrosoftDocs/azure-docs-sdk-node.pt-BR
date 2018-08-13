@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b153f4bffb05f3df1f8560dcf62917df2f9fec9d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40050538"
+items:
+- uid: azure-iothub.create
+  name: create
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Cria um token de assinatura de acesso compartilhado para autenticar uma conexão de serviço com um hub IoT do Azure.
+  syntax:
+    content: 'function create(host: string, policy: string, key: string, expiry: string | number)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Nome do host do hub IoT do Azure.
+    - id: policy
+      type:
+      - string
+      description: Nome da política para usar para se conectar ao hub IoT do Azure (normalmente `ServiceConnect`, `iothubowner` etc. Ver [controlar o acesso ao hub IoT do Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security).
+    - id: key
+      type:
+      - string
+      description: Chave simétrica a ser usada para criar tokens de assinatura de acesso compartilhado.
+    - id: expiry
+      type:
+      - string | number
+      description: >
+        Hora de expiração para o token que será criado.
+    return:
+      type:
+      - SharedAccessSignature
+  package: azure-iothub
