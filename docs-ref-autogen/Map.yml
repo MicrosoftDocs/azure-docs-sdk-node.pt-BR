@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cd438a0f25cad04e83f61f106242f9a99370ed7a
+ms.sourcegitcommit: 2691652cbb661d4f24339767775a72b2c061b790
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "40047709"
+items:
+- uid: azure-atlas-javscript-sdk.Map
+  name: Map
+  fullName: Map
+  children:
+  - azure-atlas-javscript-sdk.Map.addEventListener
+  - azure-atlas-javscript-sdk.Map.addEventListener_1
+  - azure-atlas-javscript-sdk.Map.addHtml
+  - azure-atlas-javscript-sdk.Map.addLinestrings
+  - azure-atlas-javscript-sdk.Map.addPins
+  - azure-atlas-javscript-sdk.Map.addPolygons
+  - azure-atlas-javscript-sdk.Map.addRaster
+  - azure-atlas-javscript-sdk.Map.getCamera
+  - azure-atlas-javscript-sdk.Map.getCanvas
+  - azure-atlas-javscript-sdk.Map.getCanvasContainer
+  - azure-atlas-javscript-sdk.Map.getLayers
+  - azure-atlas-javscript-sdk.Map.getMapContainer
+  - azure-atlas-javscript-sdk.Map.getServiceOptions
+  - azure-atlas-javscript-sdk.Map.getStyle
+  - azure-atlas-javscript-sdk.Map.getTraffic
+  - azure-atlas-javscript-sdk.Map.getUserInteraction
+  - azure-atlas-javscript-sdk.Map.constructor
+  - azure-atlas-javscript-sdk.Map.removeEventListener
+  - azure-atlas-javscript-sdk.Map.removeEventListener_1
+  - azure-atlas-javscript-sdk.Map.removeHtml
+  - azure-atlas-javscript-sdk.Map.removeLayers
+  - azure-atlas-javscript-sdk.Map.setCamera
+  - azure-atlas-javscript-sdk.Map.setCameraBounds
+  - azure-atlas-javscript-sdk.Map.setStyle
+  - azure-atlas-javscript-sdk.Map.setTraffic
+  - azure-atlas-javscript-sdk.Map.setUserInteraction
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+- uid: azure-atlas-javscript-sdk.Map.addEventListener
+  name: addEventListener
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione um ouvinte de eventos para o mapa. Se nenhuma camada for especificada, o ouvinte de eventos será adicionado ao contêiner de tela de mapa; Caso contrário, o ouvinte de eventos será adicionado à camada especificada do mapa.
+  syntax:
+    content: 'function addEventListener(type: string, callback: any)'
+    parameters:
+    - id: type
+      type:
+      - string
+      description: O tipo de ouvinte de evento. @todo É necessário especificá-las.
+    - id: callback
+      type:
+      - any
+      description: >
+        O retorno de chamada seja acionado quando o evento ocorre.
+- uid: azure-atlas-javscript-sdk.Map.addEventListener_1
+  name: addEventListener
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione um ouvinte de eventos para o mapa. Se nenhuma camada for especificada, o ouvinte de eventos será adicionado ao contêiner de tela de mapa; Caso contrário, o ouvinte de eventos será adicionado à camada especificada do mapa.
+  syntax:
+    content: 'function addEventListener(type: string, layer: string, callback: any)'
+    parameters:
+    - id: type
+      type:
+      - string
+      description: ''
+    - id: layer
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - any
+      description: ''
+- uid: azure-atlas-javscript-sdk.Map.addHtml
+  name: addHtml
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adiciona um HTMLElement personalizado para o mapa em uma posição especificada.
+  syntax:
+    content: 'function addHtml(element: HTMLElement, position: Position)'
+    parameters:
+    - id: element
+      type:
+      - HTMLElement
+      description: HTMLElement para adicionar.
+    - id: position
+      type:
+      - '@azure-atlas-javscript-sdk.Position'
+      description: >
+        A posição para colocar o elemento.
+    return:
+      type:
+      - string
+- uid: azure-atlas-javscript-sdk.Map.addLinestrings
+  name: addLinestrings
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione um conjunto de linestrings ao mapa. Se a camada já existir, as opções especificadas anteriormente pelo usuário usará como padrão os valores anteriores. Caso contrário, eles usarão como padrão para os valores padrão de [[LinestringLayerOptions]].
+  syntax:
+    content: 'function addLinestrings(linestrings: Array<Feature<LineString>>, options?: LinestringLayerOptions)'
+    parameters:
+    - id: linestrings
+      type:
+      - Array<@azure-atlas-javscript-sdk.Feature<LineString>>
+      description: Linestrings para adicionar.
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.LinestringLayerOptions'
+      description: >
+        As opções de camada para adicionar o linestrings ao mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.addPins
+  name: addPins
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione uma coleção de pontos no mapa como pinos. Se a camada já existir, as opções especificadas anteriormente pelo usuário usará como padrão os valores anteriores. Caso contrário, eles usarão como padrão para os valores padrão de [[PinLayerOptions]].
+  syntax:
+    content: 'function addPins(pins: Array<Feature<Point>>, options?: PinLayerOptions)'
+    parameters:
+    - id: pins
+      type:
+      - Array<@azure-atlas-javscript-sdk.Feature<@azure-atlas-javscript-sdk.Point>>
+      description: Os pontos a adicionar.
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.PinLayerOptions'
+      description: >
+        As opções de camada para adicionar os pinos no mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.addPolygons
+  name: addPolygons
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione uma coleção de polígonos no mapa. Se a camada já existir, as opções especificadas anteriormente pelo usuário usará como padrão os valores anteriores. Caso contrário, eles usarão como padrão para os valores padrão de [[PolygonLayerOptions]].
+  syntax:
+    content: 'function addPolygons(polygons: Array<Feature<Polygon>>, options?: PolygonLayerOptions)'
+    parameters:
+    - id: polygons
+      type:
+      - Array<@azure-atlas-javscript-sdk.Feature<Polygon>>
+      description: Os polígonos para adicionar.
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.PolygonLayerOptions'
+      description: >
+        As opções de camada para adicionar os polígonos no mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.addRaster
+  name: addRaster
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adiciona uma camada de varredura para o mapa. Se a camada já existir, as opções especificadas anteriormente pelo usuário usará como padrão os valores anteriores. Caso contrário, eles usarão como padrão para os valores padrão de [[RasterLayerOptions]].
+  syntax:
+    content: 'function addRaster(tileSources: string[], options?: RasterLayerOptions)'
+    parameters:
+    - id: tileSources
+      type:
+      - string[]
+      description: Uma lista de pontos de extremidade especificado como cadeias de caracteres da qual varredura imagens podem ser solicitadas. Os pontos de extremidade podem ser parametrizados com as marcas '{z}', '{x}' e '{y}' para especificar o zoom, índice x e y-índice do bloco necessário, respectivamente. O controle de mapa de solicitação e colocar os blocos que estão contidos no visor do mapa.
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.RasterLayerOptions'
+      description: >
+        As opções para definir a camada de varredura para adicionar.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.getCamera
+  name: getCamera
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna propriedades atual da câmera.
+  syntax:
+    content: function getCamera()
+    parameters: []
+- uid: azure-atlas-javscript-sdk.Map.getCanvas
+  name: getCanvas
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna o HTMLCanvasElement que o mapa é desenhado.
+  syntax:
+    content: function getCanvas()
+    parameters: []
+    return:
+      type:
+      - HTMLCanvasElement
+- uid: azure-atlas-javscript-sdk.Map.getCanvasContainer
+  name: getCanvasContainer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna o HTMLElement que contém HTMLCanvasElement do mapa. Eventos do mapa (por exemplo, Panorâmica e zoom) são anexados a este elemento.
+  syntax:
+    content: function getCanvasContainer()
+    parameters: []
+    return:
+      type:
+      - HTMLElement
+- uid: azure-atlas-javscript-sdk.Map.getLayers
+  name: getLayers
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna uma lista de camadas do mapa de baixo para cima.
+  syntax:
+    content: function getLayers()
+    parameters: []
+- uid: azure-atlas-javscript-sdk.Map.getMapContainer
+  name: getMapContainer
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna o HTMLElement que contém o mapa.
+  syntax:
+    content: function getMapContainer()
+    parameters: []
+    return:
+      type:
+      - HTMLElement
+- uid: azure-atlas-javscript-sdk.Map.getServiceOptions
+  name: getServiceOptions
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna as opções de serviço com o qual o controle de mapa foi inicializado.
+  syntax:
+    content: function getServiceOptions()
+    parameters: []
+    return:
+      type:
+      - '@azure-atlas-javscript-sdk.ServiceOptions'
+- uid: azure-atlas-javscript-sdk.Map.getStyle
+  name: getStyle
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorna o mapa de configurações de estilo do controle atual.
+  syntax:
+    content: function getStyle()
+    parameters: []
+    return:
+      type:
+      - '@azure-atlas-javscript-sdk.StyleOptions'
+- uid: azure-atlas-javscript-sdk.Map.getTraffic
+  name: getTraffic
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorne o mapa de configurações de tráfego atual do controle.
+  syntax:
+    content: function getTraffic()
+    parameters: []
+    return:
+      type:
+      - '@azure-atlas-javscript-sdk.TrafficOptions'
+- uid: azure-atlas-javscript-sdk.Map.getUserInteraction
+  name: getUserInteraction
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Retorne o mapa interação manipulador configurações do usuário atual do controle.
+  syntax:
+    content: function getUserInteraction()
+    parameters: []
+    return:
+      type:
+      - '@azure-atlas-javscript-sdk.UserInteractionOptions'
+- uid: azure-atlas-javscript-sdk.Map.constructor
+  name: Map
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Exibe um mapa no contêiner especificado.
+  syntax:
+    content: 'new Map(container: string, options: function)'
+    parameters:
+    - id: container
+      type:
+      - string
+      description: A id do elemento no qual o mapa deve ser exibido.
+    - id: options
+      type:
+      - function
+      description: >
+        Opções para a exibição inicial e interactability com o mapa.
+- uid: azure-atlas-javscript-sdk.Map.removeEventListener
+  name: removeEventListener
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Remova um ouvinte de evento do mapa para o tipo especificado e o retorno de chamada.
+  syntax:
+    content: 'function removeEventListener(type: string, callback: any)'
+    parameters:
+    - id: type
+      type:
+      - string
+      description: O tipo de ouvinte de eventos.
+    - id: callback
+      type:
+      - any
+      description: >
+        O retorno de chamada do ouvinte de eventos.
+- uid: azure-atlas-javscript-sdk.Map.removeEventListener_1
+  name: removeEventListener
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Remova um ouvinte de evento do mapa para o tipo especificado e o retorno de chamada.
+  syntax:
+    content: 'function removeEventListener(type: string, layer: string, callback: any)'
+    parameters:
+    - id: type
+      type:
+      - string
+      description: ''
+    - id: layer
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - any
+      description: ''
+- uid: azure-atlas-javscript-sdk.Map.removeHtml
+  name: removeHtml
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Remove um HTMLElement personalizado do mapa.
+  syntax:
+    content: 'function removeHtml(elementId: string)'
+    parameters:
+    - id: elementId
+      type:
+      - string
+      description: >
+        A id do elemento a ser removido.
+- uid: azure-atlas-javscript-sdk.Map.removeLayers
+  name: removeLayers
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Remove uma coleção de camadas do mapa.
+  syntax:
+    content: 'function removeLayers(layerNames: string[])'
+    parameters:
+    - id: layerNames
+      type:
+      - string[]
+      description: >
+        Uma matriz de nomes de camada a ser removido do mapa.
+- uid: azure-atlas-javscript-sdk.Map.setCamera
+  name: setCamera
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Defina a câmera do controle de mapa com uma transição animada. As opções especificadas não serão padrão para seus valores atuais.
+  syntax:
+    content: 'function setCamera(options?: function)'
+    parameters:
+    - id: options
+      type:
+      - function
+      description: >
+        As opções para definir a câmera do mapa e para a animação de qualquer exiba a alteração.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.setCameraBounds
+  name: setCameraBounds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Defina os limites de câmera do controle de mapa.
+  syntax:
+    content: 'function setCameraBounds(options?: CameraBoundsOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.CameraBoundsOptions'
+      description: >
+        As opções para configurar limites de câmera do mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.setStyle
+  name: setStyle
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Defina opções de estilo do controle de mapa. As opções especificadas não serão padrão para seus valores atuais.
+  syntax:
+    content: 'function setStyle(options?: StyleOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.StyleOptions'
+      description: >
+        As opções para configurar o estilo de controle de mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.setTraffic
+  name: setTraffic
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Defina as opções de tráfego para o mapa. As opções especificadas não serão padrão para seus valores atuais.
+  syntax:
+    content: 'function setTraffic(options?: TrafficOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.TrafficOptions'
+      description: >
+        Exibem as opções para definir o tráfego do mapa.
+      optional: true
+- uid: azure-atlas-javscript-sdk.Map.setUserInteraction
+  name: setUserInteraction
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Defina o mapa de manipuladores de interação do usuário do controle. As opções especificadas não serão padrão para seus valores atuais.
+  syntax:
+    content: 'function setUserInteraction(options?: UserInteractionOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure-atlas-javscript-sdk.UserInteractionOptions'
+      description: >
+        As opções para habilitar/desabilitar os manipuladores de interação do usuário.
+      optional: true

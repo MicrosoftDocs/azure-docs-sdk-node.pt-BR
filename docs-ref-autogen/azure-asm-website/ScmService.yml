@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8bff819eb4af3d06c65d4dd4ecc13349835e08f0
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40047718"
+items:
+- uid: azure-asm-website.ScmService
+  id: azure-asm-website.ScmService
+  name: ScmService
+  summary: O objeto ScmService permite que você execute operações de gerenciamento de repositórios de Sites da Web do Microsoft Azure.
+  fullName: azure-asm-website.ScmService
+  type: Class
+  children:
+  - azure-asm-website.ScmService.#ctor
+  - azure-asm-website.ScmService#getDumpToStream
+  - azure-asm-website.ScmService#getLogStream
+  langs:
+  - js
+- id: azure-asm-website.ScmService.#ctor
+  uid: azure-asm-website.ScmService.#ctor
+  parent: azure-asm-website.ScmService
+  name: ScmService(authentication, hostOptions)
+  fullName: azure-asm-website.ScmService.ScmService(authentication, hostOptions)
+  summary: Cria um novo objeto ScmService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: authentication
+      type:
+      - object
+      description: >-
+        O objeto de autenticação para o cliente.
+
+        Você deve usar a autenticação/frase secreta para autenticação básica.
+    - id: authentication.user
+      type:
+      - string
+      description: O nome de usuário de autenticação básica.
+      optional: true
+    - id: authentication.pass
+      type:
+      - string
+      description: A senha de autenticação básica.
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: As opções de host para substituir os padrões.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: O ponto de extremidade de repositório do SCM.
+      optional: true
+    content: new ScmService(authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getDumpToStream
+  id: azure-asm-website.ScmService#getDumpToStream
+  parent: azure-asm-website.ScmService
+  name: getDumpToStream(callback)
+  summary: Obtenha um despejo de log.
+  fullName: azure-asm-website.ScmService.getDumpToStream(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` conterá informações se ocorrer um erro; Caso contrário, `results` conterá a lista de espaços na Web.
+                                                              `response` contém informações relacionadas a essa operação.
+    content: function getDumpToStream(callback)
+  langs:
+  - js
+- uid: azure-asm-website.ScmService#getLogStream
+  id: azure-asm-website.ScmService#getLogStream
+  parent: azure-asm-website.ScmService
+  name: getLogStream(path, options, callback)
+  summary: Obtenha o fluxo de log.
+  fullName: azure-asm-website.ScmService.getLogStream(path, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: path
+      type:
+      - object
+      description: O caminho de fluxo de log.
+    - id: options
+      type:
+      - object
+      description: As opções de solicitação.
+      optional: true
+    - id: options.filter
+      type:
+      - azure-asm-website.int
+      description: O filtro de fluxo de log.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` conterá informações se ocorrer um erro; Caso contrário, `results` conterá a lista de espaços na Web.
+                                                              `response` contém informações relacionadas a essa operação.
+    content: function getLogStream(path, options, callback)
+  langs:
+  - js

@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 345d4aba2a62e1299bfbc896e1d6304120aa5fc2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40048316"
+items:
+- uid: '@azure/cosmos.ConsistencyLevel'
+  name: ConsistencyLevel
+  fullName: ConsistencyLevel
+  children:
+  - '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  - '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  - '@azure/cosmos.ConsistencyLevel.Eventual'
+  - '@azure/cosmos.ConsistencyLevel.Session'
+  - '@azure/cosmos.ConsistencyLevel.Strong'
+  langs:
+  - typeScript
+  type: enum
+  summary: >
+    Representa os níveis de consistência tem suportados para operações de cliente do Azure Cosmos DB.<br>
+
+    O ConsistencyLevel solicitado deve corresponder ou ser mais fraca do que o que é provisionada para a conta de banco de dados.
+
+    Níveis de consistência.
+
+    Níveis de consistência por ordem de intensidade são fortes, BoundedStaleness, sessão, prefixo consistente e Eventual.
+
+
+    Consulte https://aka.ms/cosmos-consistency para obter mais documentação sobre os níveis de consistência.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  name: BoundedStaleness
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    Desatualização limitada garante que as leituras não são muito desatualizadas.
+
+    Isso pode ser configurado com base no número de operações (MaxStalenessPrefix) ou de tempo (MaxStalenessIntervalInSeconds).
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  name: ConsistentPrefix
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    Consistência ConsistentPrefix garante que leituras retornarão algum prefixo de todas as gravações sem intervalos.
+
+    Todas as gravações ser eventualmente estarão disponíveis para leituras.'
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Eventual'
+  name: Eventual
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    A consistência eventual garante que leituras retornará um subconjunto de gravações.
+
+    Todas as gravações ser eventualmente estarão disponíveis para leituras.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Session'
+  name: Session
+  children: []
+  langs:
+  - typeScript
+  summary: Leituras monotônicas garante a consistência de sessão (você nunca ler os dados antigos, em seguida, novo e antigo novamente), gravações monotônicas (gravações são ordenadas) e leia suas gravações (suas gravações são imediatamente visíveis para as leituras) dentro de um único de sessão.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Strong'
+  name: Strong
+  children: []
+  langs:
+  - typeScript
+  summary: Garantias de coerência forte que operações de leitura sempre retornam o valor que foi gravado pela última vez.
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'

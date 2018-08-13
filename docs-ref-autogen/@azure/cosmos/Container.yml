@@ -1,0 +1,371 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8d085c8c928b40486992ef118d6155a39853015e
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40048195"
+items:
+- uid: '@azure/cosmos.Container'
+  name: Container
+  fullName: Container
+  children:
+  - '@azure/cosmos.Container.conflict'
+  - '@azure/cosmos.Container.database'
+  - '@azure/cosmos.Container.delete'
+  - '@azure/cosmos.Container.id'
+  - '@azure/cosmos.Container.item'
+  - '@azure/cosmos.Container.items'
+  - '@azure/cosmos.Container.read'
+  - '@azure/cosmos.Container.replace'
+  - '@azure/cosmos.Container.storedProcedure'
+  - '@azure/cosmos.Container.storedProcedures'
+  - '@azure/cosmos.Container.trigger'
+  - '@azure/cosmos.Container.triggers'
+  - '@azure/cosmos.Container.url'
+  - '@azure/cosmos.Container.userDefinedFunction'
+  - '@azure/cosmos.Container.userDefinedFunctions'
+  langs:
+  - typeScript
+  type: class
+  summary: Operações de leitura, substituindo ou excluindo um contêiner existente específico por id.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.conflict'
+  name: conflict
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Usado para ler, substituir ou excluir uma versão específica, existente <xref:Conflict> por id. Use `.conflicts` para criar nova entra em conflito, ou consultar/leitura de todos os conflitos.
+  syntax:
+    content: 'function conflict(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        A id do <xref:Conflict>.
+    return:
+      type:
+      - '@azure/cosmos.Conflict'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.database'
+  name: database
+  fullName: database
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'database: Database'
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.delete'
+  name: delete
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Excluir o contêiner
+  syntax:
+    content: 'function delete(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.id'
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.item'
+  name: item
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Usado para ler, substituir ou excluir uma versão específica, existente <xref:Item> por id. Use `.items` para criação de novos itens ou consultar/leitura de todos os itens.
+  syntax:
+    content: 'function item(id: string, partitionKey?: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: A id do <xref:Item>.
+    - id: partitionKey
+      type:
+      - string
+      description: A chave de partição do <xref:Item>. (Necessário para contêineres particionados).
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.Item'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.items'
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Operações para criação de novos itens e leitura/consulta todos os itens para ler, substituindo ou excluindo um item existente, usam `.item(id)`.
+  syntax:
+    content: 'items: Items'
+    return:
+      type:
+      - '@azure/cosmos.Items'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.read'
+  name: read
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Ler definição do contêiner
+  syntax:
+    content: 'function read(options?: RequestOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.replace'
+  name: replace
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Substitua a definição do contêiner
+  syntax:
+    content: 'function replace(body: ContainerDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.ContainerDefinition'
+      description: ''
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.storedProcedure'
+  name: storedProcedure
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Usado para ler, substituir ou excluir uma versão específica, existente <xref:StoredProcedure> por id. Use `.storedProcedures` para criar novos procedimentos armazenados ou consultas/leitura de todos os procedimentos armazenados.
+  syntax:
+    content: 'function storedProcedure(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        A id do <xref:StoredProcedure>.
+    return:
+      type:
+      - '@azure/cosmos.StoredProcedure'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.storedProcedures'
+  name: storedProcedures
+  fullName: storedProcedures
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Operações para criar novos procedimentos armazenados e leitura/consulta todos os procedimentos armazenados.
+
+    Para leitura, substituição ou exclusão de um procedimento armazenado existente, use `.storedProcedure(id)`.
+  syntax:
+    content: 'storedProcedures: StoredProcedures'
+    return:
+      type:
+      - '@azure/cosmos.StoredProcedures'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.trigger'
+  name: trigger
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Usado para ler, substituir ou excluir uma versão específica, existente <xref:Trigger> por id. Use `.triggers` para criação de novos disparadores ou consultar/leitura de todos os gatilhos.
+  syntax:
+    content: 'function trigger(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        A id do <xref:Trigger>.
+    return:
+      type:
+      - '@azure/cosmos.Trigger'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.triggers'
+  name: triggers
+  fullName: triggers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Operações para criação de novos disparadores e todos os gatilhos de leitura/consulta.
+
+    Para ler, substituindo ou excluindo um gatilho existente, use `.trigger(id)`.
+  syntax:
+    content: 'triggers: Triggers'
+    return:
+      type:
+      - '@azure/cosmos.Triggers'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.url'
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Retorna uma URL de referência para o recurso. Usado para vincular nas permissões.
+  syntax:
+    content: 'url: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.userDefinedFunction'
+  name: userDefinedFunction
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Usado para ler, substituir ou excluir uma versão específica, existente <xref:UserDefinedFunction> por id. Use `.userDefinedFunctions` para criar novas funções definidas pelo usuário, ou consultar/leitura de todas as funções definidas pelo usuário.
+  syntax:
+    content: 'function userDefinedFunction(id: string)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: >
+        A id do <xref:UserDefinedFunction>.
+    return:
+      type:
+      - '@azure/cosmos.UserDefinedFunction'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.userDefinedFunctions'
+  name: userDefinedFunctions
+  fullName: userDefinedFunctions
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Funções definidas pelo operações para criação de novo usuário e leitura/consultas de usuário de todas as funções definidas pelo.
+
+    Para ler, substituindo ou excluindo uma função definida pelo usuário existente, use `.userDefinedFunction(id)`.
+  syntax:
+    content: 'userDefinedFunctions: UserDefinedFunctions'
+    return:
+      type:
+      - '@azure/cosmos.UserDefinedFunctions'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.Database'
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: '@azure/cosmos.Items'
+  spec.typeScript:
+  - name: Items
+    fullName: Items
+    uid: '@azure/cosmos.Items'
+- uid: '@azure/cosmos.StoredProcedures'
+  spec.typeScript:
+  - name: StoredProcedures
+    fullName: StoredProcedures
+    uid: '@azure/cosmos.StoredProcedures'
+- uid: '@azure/cosmos.Triggers'
+  spec.typeScript:
+  - name: Triggers
+    fullName: Triggers
+    uid: '@azure/cosmos.Triggers'
+- uid: '@azure/cosmos.UserDefinedFunctions'
+  spec.typeScript:
+  - name: UserDefinedFunctions
+    fullName: UserDefinedFunctions
+    uid: '@azure/cosmos.UserDefinedFunctions'
+- uid: '@azure/cosmos.Conflict'
+  spec.typeScript:
+  - name: Conflict
+    fullName: Conflict
+    uid: '@azure/cosmos.Conflict'
+- uid: '@azure/cosmos.RequestOptions'
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.ContainerResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ContainerResponse
+    fullName: ContainerResponse
+    uid: '@azure/cosmos.ContainerResponse'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/cosmos.Item'
+  spec.typeScript:
+  - name: Item
+    fullName: Item
+    uid: '@azure/cosmos.Item'
+- uid: '@azure/cosmos.ContainerDefinition'
+  spec.typeScript:
+  - name: ContainerDefinition
+    fullName: ContainerDefinition
+    uid: '@azure/cosmos.ContainerDefinition'
+- uid: '@azure/cosmos.StoredProcedure'
+  spec.typeScript:
+  - name: StoredProcedure
+    fullName: StoredProcedure
+    uid: '@azure/cosmos.StoredProcedure'
+- uid: '@azure/cosmos.Trigger'
+  spec.typeScript:
+  - name: Trigger
+    fullName: Trigger
+    uid: '@azure/cosmos.Trigger'
+- uid: '@azure/cosmos.UserDefinedFunction'
+  spec.typeScript:
+  - name: UserDefinedFunction
+    fullName: UserDefinedFunction
+    uid: '@azure/cosmos.UserDefinedFunction'
