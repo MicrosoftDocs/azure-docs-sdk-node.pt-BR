@@ -1,0 +1,812 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6fa2e2901b7265c9426541584abde0d99339d194
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40047730"
+items:
+- uid: azure-scheduler.JobOperations~JobOperations
+  id: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    <span data-ttu-id="bf408-101">__Observação__: uma instância dessa classe é criada automaticamente para uma instância do [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>.</span><span class="sxs-lookup"><span data-stu-id="bf408-101">__NOTE__: An instance of this class is automatically created for an instance of the [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>.</span></span>
+
+    <span data-ttu-id="bf408-102">Consulte [trabalhos] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>.</span><span class="sxs-lookup"><span data-stu-id="bf408-102">See [jobs] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>.</span></span>
+
+    <span data-ttu-id="bf408-103">Inicializa uma nova instância da classe JobOperations.</span><span class="sxs-lookup"><span data-stu-id="bf408-103">Initializes a new instance of the JobOperations class.</span></span>
+  fullName: azure-scheduler.JobOperations
+  type: Class
+  children:
+  - azure-scheduler.JobOperations~JobOperations.#ctor
+  - azure-scheduler.JobOperations~JobOperations#create
+  - azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  - azure-scheduler.JobOperations~JobOperations#deleteMethod
+  - azure-scheduler.JobOperations~JobOperations#get
+  - azure-scheduler.JobOperations~JobOperations#getHistory
+  - azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  - azure-scheduler.JobOperations~JobOperations#list
+  - azure-scheduler.JobOperations~JobOperations#listWithFilter
+  - azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  - azure-scheduler.JobOperations~JobOperations#updateState
+  langs:
+  - js
+- id: azure-scheduler.JobOperations~JobOperations.#ctor
+  uid: azure-scheduler.JobOperations~JobOperations.#ctor
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-scheduler.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerClient
+      description: <span data-ttu-id="bf408-104">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="bf408-104">Reference to the service client.</span></span>
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#create
+  id: azure-scheduler.JobOperations~JobOperations#create
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: create(parameters, callback)
+  summary: <span data-ttu-id="bf408-105">Cria um novo trabalho, permitindo que o serviço gerar uma id de trabalho. Use CreateOrUpdate se uma id de trabalho escolhido pelo usuário é necessária.</span><span class="sxs-lookup"><span data-stu-id="bf408-105">Creates a new Job, allowing the service to generate a job id. Use CreateOrUpdate if a user-chosen job id is required.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateParameters
+      description: <span data-ttu-id="bf408-106">Parâmetros especificam a definição de trabalho para uma operação de criar o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-106">Parameters specifying the job definition for a Create Job operation.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="bf408-107">Hora de início para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-107">Start time for the job.</span></span>  <span data-ttu-id="bf408-108">Definido como ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="bf408-108">Defined as ISO-8601.</span></span>
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: <span data-ttu-id="bf408-109">Ação a ser invocada para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-109">Action to invoke for the job.</span></span>
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="bf408-110">Tipo de ação.</span><span class="sxs-lookup"><span data-stu-id="bf408-110">Type of action.</span></span> <span data-ttu-id="bf408-111">Pode ser um dos http, https, storageQueue.</span><span class="sxs-lookup"><span data-stu-id="bf408-111">Can be one of http, https, storageQueue.</span></span>
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: <span data-ttu-id="bf408-112">Política de repetição para a ação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-112">Retry Policy for the job action.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: <span data-ttu-id="bf408-113">O tipo de repetição da política de repetição.</span><span class="sxs-lookup"><span data-stu-id="bf408-113">The Retry Type of the Retry Policy.</span></span> <span data-ttu-id="bf408-114">Pode ser 'fixed' ou 'none'.</span><span class="sxs-lookup"><span data-stu-id="bf408-114">Can be either 'fixed' or 'none'.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: <span data-ttu-id="bf408-115">O intervalo entre repetições.</span><span class="sxs-lookup"><span data-stu-id="bf408-115">The interval between retries.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: <span data-ttu-id="bf408-116">Número de vezes que uma nova tentativa deve ser tentada.</span><span class="sxs-lookup"><span data-stu-id="bf408-116">Number of times a retry should be attempted.</span></span>
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: <span data-ttu-id="bf408-117">Ação de erro para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-117">Error Action for the job.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="bf408-118">Tipo de ação.</span><span class="sxs-lookup"><span data-stu-id="bf408-118">Type of action.</span></span> <span data-ttu-id="bf408-119">Pode ser um dos http, https, storageQueue.</span><span class="sxs-lookup"><span data-stu-id="bf408-119">Can be one of http, https, storageQueue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="bf408-120">Solicitação para um tipo de ação de http ou https.</span><span class="sxs-lookup"><span data-stu-id="bf408-120">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="bf408-121">Obtém ou define o Uri do ponto de extremidade para invocar.</span><span class="sxs-lookup"><span data-stu-id="bf408-121">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: <span data-ttu-id="bf408-122">Obtém ou define o método, por exemplo, GET, PUT, POST, DELETE de Http.</span><span class="sxs-lookup"><span data-stu-id="bf408-122">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="bf408-123">Obtém ou define os pares de valor de nome de cabeçalho para fornecer com a ação de http/https.</span><span class="sxs-lookup"><span data-stu-id="bf408-123">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: <span data-ttu-id="bf408-124">Obtém ou define o corpo da solicitação.</span><span class="sxs-lookup"><span data-stu-id="bf408-124">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="bf408-125">Obtém ou define a solicitação de autenticação.</span><span class="sxs-lookup"><span data-stu-id="bf408-125">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="bf408-126">Especifica o tipo de autenticação</span><span class="sxs-lookup"><span data-stu-id="bf408-126">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="bf408-127">Tipo de conteúdo para uma ação de mensagem da fila e fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-127">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-128">Nome da conta de armazenamento para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-128">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-129">Nome da fila para enviar para.</span><span class="sxs-lookup"><span data-stu-id="bf408-129">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="bf408-130">Chave SAS da conta de armazenamento enviar a mensagem à fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-130">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="bf408-131">Conteúdo da mensagem a ser enviada para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-131">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="bf408-132">Solicitação para um tipo de ação de http ou https.</span><span class="sxs-lookup"><span data-stu-id="bf408-132">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="bf408-133">Obtém ou define o Uri do ponto de extremidade para invocar.</span><span class="sxs-lookup"><span data-stu-id="bf408-133">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: <span data-ttu-id="bf408-134">Obtém ou define o método, por exemplo, GET, PUT, POST, DELETE de Http.</span><span class="sxs-lookup"><span data-stu-id="bf408-134">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="bf408-135">Obtém ou define os pares de valor de nome de cabeçalho para fornecer com a ação de http/https.</span><span class="sxs-lookup"><span data-stu-id="bf408-135">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: <span data-ttu-id="bf408-136">Obtém ou define o corpo da solicitação.</span><span class="sxs-lookup"><span data-stu-id="bf408-136">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="bf408-137">Obtém ou define a solicitação de autenticação.</span><span class="sxs-lookup"><span data-stu-id="bf408-137">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="bf408-138">Especifica o tipo de autenticação</span><span class="sxs-lookup"><span data-stu-id="bf408-138">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="bf408-139">Tipo de conteúdo para uma ação de mensagem da fila e fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-139">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-140">Nome da conta de armazenamento para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-140">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-141">Nome da fila para enviar para.</span><span class="sxs-lookup"><span data-stu-id="bf408-141">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="bf408-142">Chave SAS da conta de armazenamento enviar a mensagem à fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-142">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="bf408-143">Conteúdo da mensagem a ser enviada para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-143">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: <span data-ttu-id="bf408-144">Agenda de recorrência para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-144">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: <span data-ttu-id="bf408-145">A frequência de recorrência.</span><span class="sxs-lookup"><span data-stu-id="bf408-145">The frequency of recurrence.</span></span>
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="bf408-146">Intervalo de recorrência na frequência determinada.</span><span class="sxs-lookup"><span data-stu-id="bf408-146">Interval of the recurrence at the given frequency.</span></span>
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: <span data-ttu-id="bf408-147">Contagem de ocorrências que será executado.</span><span class="sxs-lookup"><span data-stu-id="bf408-147">Count of occurrences that will execute.</span></span> <span data-ttu-id="bf408-148">Opcional.</span><span class="sxs-lookup"><span data-stu-id="bf408-148">Optional.</span></span> <span data-ttu-id="bf408-149">Padrão será executado infinitamente</span><span class="sxs-lookup"><span data-stu-id="bf408-149">Default will recur infinitely</span></span>
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: <span data-ttu-id="bf408-150">Hora no formato ISO 8601 após o qual não há mais ocorrências serão executado.</span><span class="sxs-lookup"><span data-stu-id="bf408-150">Time in ISO-8601 format after which no more occurrences will execute.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: <span data-ttu-id="bf408-151">Agenda de recorrência para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-151">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: <span data-ttu-id="bf408-152">Minutos da hora em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-152">Minutes of the hour that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: <span data-ttu-id="bf408-153">Horas do dia em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-153">Hours of the day that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: <span data-ttu-id="bf408-154">Dias da semana em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-154">Days of the week that the job should execute on.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: <span data-ttu-id="bf408-155">Meses que o trabalho deve ser executada no.</span><span class="sxs-lookup"><span data-stu-id="bf408-155">Months that the job should execute in.</span></span>  <span data-ttu-id="bf408-156">Deve estar entre 1 e 12.</span><span class="sxs-lookup"><span data-stu-id="bf408-156">Must be between 1 and 12.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: <span data-ttu-id="bf408-157">Dias do mês em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-157">Days of the month that the job should execute on.</span></span>  <span data-ttu-id="bf408-158">Deve estar entre 1 e 31.</span><span class="sxs-lookup"><span data-stu-id="bf408-158">Must be between 1 and 31.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: <span data-ttu-id="bf408-159">Ocorrências de dias em um mês.</span><span class="sxs-lookup"><span data-stu-id="bf408-159">Occurrences of days within a month.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-160">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-160">The response stream.</span></span>
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  id: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: createOrUpdate(jobId, parameters, callback)
+  summary: <span data-ttu-id="bf408-161">Cria um novo trabalho com uma id de trabalho fornecido pelo usuário ou atualiza um trabalho existente, substituindo sua definição com que o especificado.</span><span class="sxs-lookup"><span data-stu-id="bf408-161">Creates a new Job with a user-provided job id, or updates an existing job, replacing its definition with that specified.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-162">ID do trabalho para criar ou atualizar.</span><span class="sxs-lookup"><span data-stu-id="bf408-162">Id of the job to create or update.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateOrUpdateParameters
+      description: <span data-ttu-id="bf408-163">Parâmetros especificam a definição de trabalho para uma operação de Job de CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="bf408-163">Parameters specifying the job definition for a CreateOrUpdate Job operation.</span></span>
+    - id: parameters.startTime
+      type:
+      - date
+      description: <span data-ttu-id="bf408-164">Hora de início para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-164">Start time for the job.</span></span> <span data-ttu-id="bf408-165">Definido como ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="bf408-165">Defined as ISO-8601.</span></span>
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: <span data-ttu-id="bf408-166">Ação a ser invocada para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-166">Action to invoke for the job.</span></span>
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="bf408-167">Tipo de ação.</span><span class="sxs-lookup"><span data-stu-id="bf408-167">Type of action.</span></span> <span data-ttu-id="bf408-168">Pode ser um dos http, https, storageQueue.</span><span class="sxs-lookup"><span data-stu-id="bf408-168">Can be one of http, https, storageQueue.</span></span>
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: <span data-ttu-id="bf408-169">Política de repetição para a ação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-169">Retry Policy for the job action.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: <span data-ttu-id="bf408-170">O tipo de repetição da política de repetição.</span><span class="sxs-lookup"><span data-stu-id="bf408-170">The Retry Type of the Retry Policy.</span></span> <span data-ttu-id="bf408-171">Pode ser 'fixed' ou 'none'.</span><span class="sxs-lookup"><span data-stu-id="bf408-171">Can be either 'fixed' or 'none'.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: <span data-ttu-id="bf408-172">O intervalo entre repetições.</span><span class="sxs-lookup"><span data-stu-id="bf408-172">The interval between retries.</span></span>
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: <span data-ttu-id="bf408-173">Número de vezes que uma nova tentativa deve ser tentada.</span><span class="sxs-lookup"><span data-stu-id="bf408-173">Number of times a retry should be attempted.</span></span>
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: <span data-ttu-id="bf408-174">Ação de erro para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-174">Error Action for the job.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: <span data-ttu-id="bf408-175">Tipo de ação.</span><span class="sxs-lookup"><span data-stu-id="bf408-175">Type of action.</span></span> <span data-ttu-id="bf408-176">Pode ser um dos http, https, storageQueue.</span><span class="sxs-lookup"><span data-stu-id="bf408-176">Can be one of http, https, storageQueue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="bf408-177">Solicitação para um tipo de ação de http ou https.</span><span class="sxs-lookup"><span data-stu-id="bf408-177">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="bf408-178">Obtém ou define o Uri do ponto de extremidade para invocar.</span><span class="sxs-lookup"><span data-stu-id="bf408-178">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: <span data-ttu-id="bf408-179">Obtém ou define o método, por exemplo, GET, PUT, POST, DELETE de Http.</span><span class="sxs-lookup"><span data-stu-id="bf408-179">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="bf408-180">Obtém ou define os pares de valor de nome de cabeçalho para fornecer com a ação de http/https.</span><span class="sxs-lookup"><span data-stu-id="bf408-180">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: <span data-ttu-id="bf408-181">Obtém ou define o corpo da solicitação.</span><span class="sxs-lookup"><span data-stu-id="bf408-181">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="bf408-182">Obtém ou define a solicitação de autenticação.</span><span class="sxs-lookup"><span data-stu-id="bf408-182">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="bf408-183">Especifica o tipo de autenticação</span><span class="sxs-lookup"><span data-stu-id="bf408-183">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="bf408-184">Tipo de conteúdo para uma ação de mensagem da fila e fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-184">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-185">Nome da conta de armazenamento para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-185">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-186">Nome da fila para enviar para.</span><span class="sxs-lookup"><span data-stu-id="bf408-186">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="bf408-187">Chave SAS da conta de armazenamento enviar a mensagem à fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-187">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="bf408-188">Conteúdo da mensagem a ser enviada para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-188">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: <span data-ttu-id="bf408-189">Solicitação para um tipo de ação de http ou https.</span><span class="sxs-lookup"><span data-stu-id="bf408-189">Request for a http or https action type.</span></span>
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: <span data-ttu-id="bf408-190">Obtém ou define o Uri do ponto de extremidade para invocar.</span><span class="sxs-lookup"><span data-stu-id="bf408-190">Gets or sets Uri of the endpoint to invoke.</span></span>
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: <span data-ttu-id="bf408-191">Obtém ou define o método, por exemplo, GET, PUT, POST, DELETE de Http.</span><span class="sxs-lookup"><span data-stu-id="bf408-191">Gets or sets Http method e.g. GET, PUT, POST, DELETE.</span></span>
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: <span data-ttu-id="bf408-192">Obtém ou define os pares de valor de nome de cabeçalho para fornecer com a ação de http/https.</span><span class="sxs-lookup"><span data-stu-id="bf408-192">Gets or sets Header name value pairs to supply with the http/https action.</span></span>
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: <span data-ttu-id="bf408-193">Obtém ou define o corpo da solicitação.</span><span class="sxs-lookup"><span data-stu-id="bf408-193">Gets or sets the request body.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: <span data-ttu-id="bf408-194">Obtém ou define a solicitação de autenticação.</span><span class="sxs-lookup"><span data-stu-id="bf408-194">Gets or sets the request authentication.</span></span>
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: <span data-ttu-id="bf408-195">Especifica o tipo de autenticação</span><span class="sxs-lookup"><span data-stu-id="bf408-195">Specifies the authentication type</span></span>
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: <span data-ttu-id="bf408-196">Tipo de conteúdo para uma ação de mensagem da fila e fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-196">Queue and content for a queue message action type.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-197">Nome da conta de armazenamento para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-197">Name of the storage account for the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: <span data-ttu-id="bf408-198">Nome da fila para enviar para.</span><span class="sxs-lookup"><span data-stu-id="bf408-198">Name of the queue to send to.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: <span data-ttu-id="bf408-199">Chave SAS da conta de armazenamento enviar a mensagem à fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-199">SAS key for the storage account to send message to the queue.</span></span>
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: <span data-ttu-id="bf408-200">Conteúdo da mensagem a ser enviada para a fila.</span><span class="sxs-lookup"><span data-stu-id="bf408-200">Content of the message to send to the queue.</span></span>
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: <span data-ttu-id="bf408-201">Agenda de recorrência para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-201">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: <span data-ttu-id="bf408-202">A frequência de recorrência.</span><span class="sxs-lookup"><span data-stu-id="bf408-202">The frequency of recurrence.</span></span>
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: <span data-ttu-id="bf408-203">Intervalo de recorrência na frequência determinada.</span><span class="sxs-lookup"><span data-stu-id="bf408-203">Interval of the recurrence at the given frequency.</span></span>
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: <span data-ttu-id="bf408-204">Contagem de ocorrências que será executado.</span><span class="sxs-lookup"><span data-stu-id="bf408-204">Count of occurrences that will execute.</span></span> <span data-ttu-id="bf408-205">Opcional.</span><span class="sxs-lookup"><span data-stu-id="bf408-205">Optional.</span></span> <span data-ttu-id="bf408-206">Padrão será executado infinitamente</span><span class="sxs-lookup"><span data-stu-id="bf408-206">Default will recur infinitely</span></span>
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: <span data-ttu-id="bf408-207">Hora no formato ISO 8601 após o qual não há mais ocorrências serão executado.</span><span class="sxs-lookup"><span data-stu-id="bf408-207">Time in ISO-8601 format after which no more occurrences will execute.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: <span data-ttu-id="bf408-208">Agenda de recorrência para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-208">Recurrence schedule for the job.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: <span data-ttu-id="bf408-209">Minutos da hora em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-209">Minutes of the hour that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: <span data-ttu-id="bf408-210">Horas do dia em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-210">Hours of the day that the job should execute at.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: <span data-ttu-id="bf408-211">Dias da semana em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-211">Days of the week that the job should execute on.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: <span data-ttu-id="bf408-212">Meses que o trabalho deve ser executada no.</span><span class="sxs-lookup"><span data-stu-id="bf408-212">Months that the job should execute in.</span></span>  <span data-ttu-id="bf408-213">Deve estar entre 1 e 12.</span><span class="sxs-lookup"><span data-stu-id="bf408-213">Must be between 1 and 12.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: <span data-ttu-id="bf408-214">Dias do mês em que o trabalho deve ser executado em.</span><span class="sxs-lookup"><span data-stu-id="bf408-214">Days of the month that the job should execute on.</span></span>  <span data-ttu-id="bf408-215">Deve estar entre 1 e 31.</span><span class="sxs-lookup"><span data-stu-id="bf408-215">Must be between 1 and 31.</span></span>
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: <span data-ttu-id="bf408-216">Ocorrências de dias em um mês.</span><span class="sxs-lookup"><span data-stu-id="bf408-216">Occurrences of days within a month.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-217">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-217">The response stream.</span></span>
+    content: function createOrUpdate(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  id: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: deleteMethod(jobId, callback)
+  summary: <span data-ttu-id="bf408-218">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-218">Deletes a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.deleteMethod(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-219">ID do trabalho a excluir.</span><span class="sxs-lookup"><span data-stu-id="bf408-219">Id of the job to delete.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-220">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-220">The response stream.</span></span>
+    content: function deleteMethod(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#get
+  id: azure-scheduler.JobOperations~JobOperations#get
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: get(jobId, callback)
+  summary: <span data-ttu-id="bf408-221">Obter a definição e o status de um trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-221">Get the definition and status of a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.get(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-222">ID do trabalho para obter.</span><span class="sxs-lookup"><span data-stu-id="bf408-222">Id of the job to get.</span></span>
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-223">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-223">The response stream.</span></span>
+    content: function get(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistory
+  id: azure-scheduler.JobOperations~JobOperations#getHistory
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistory(jobId, parameters, callback)
+  summary: <span data-ttu-id="bf408-224">Obter o histórico de execução de um trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-224">Get the execution history of a Job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistory(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-225">ID do trabalho para obter o histórico de.</span><span class="sxs-lookup"><span data-stu-id="bf408-225">Id of the job to get the history of.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryParameters
+      description: <span data-ttu-id="bf408-226">Parâmetros fornecidos para a operação obter histórico de trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-226">Parameters supplied to the Get Job History operation.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="bf408-227">Especifique o índice (baseado em 0) da lista de histórico do qual começar solicitando entradas.</span><span class="sxs-lookup"><span data-stu-id="bf408-227">Specify the (0-based) index of the history list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="bf408-228">Especifique o número de entradas de histórico para solicitar, do intervalo [1..100].</span><span class="sxs-lookup"><span data-stu-id="bf408-228">Specify the number of history entries to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-229">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-229">The response stream.</span></span>
+    content: function getHistory(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistoryWithFilter(jobId, parameters, callback)
+  summary: <span data-ttu-id="bf408-230">Obter o histórico de execução de um trabalho com um filtro de Status do trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-230">Get the execution history of a Job with a filter on the job Status.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-231">ID do trabalho para obter o histórico de.</span><span class="sxs-lookup"><span data-stu-id="bf408-231">Id of the job to get the history of.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryWithFilterParameters
+      description: <span data-ttu-id="bf408-232">Parâmetros fornecidos para a operação obter histórico de trabalho com o filtro.</span><span class="sxs-lookup"><span data-stu-id="bf408-232">Parameters supplied to the Get Job History With Filter operation.</span></span>
+    - id: parameters.status
+      type:
+      - azure-scheduler.JobHistoryStatus
+      description: <span data-ttu-id="bf408-233">Filtre o histórico do trabalho para que ele seja somente tentativas de execução de trabalho retornado tendo um Status específico, 'concluído' ou 'Falha'.</span><span class="sxs-lookup"><span data-stu-id="bf408-233">Filter the job history to have it only return job execution attempts having a particular Status, 'completed' or 'failed'.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="bf408-234">Especifique o índice (baseado em 0) da lista de histórico do qual começar solicitando entradas.</span><span class="sxs-lookup"><span data-stu-id="bf408-234">Specify the (0-based) index of the history list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="bf408-235">Especifique o número de entradas de histórico para solicitar, do intervalo [1..100].</span><span class="sxs-lookup"><span data-stu-id="bf408-235">Specify the number of history entries to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-236">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-236">The response stream.</span></span>
+    content: function getHistoryWithFilter(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#list
+  id: azure-scheduler.JobOperations~JobOperations#list
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: list(parameters, callback)
+  summary: <span data-ttu-id="bf408-237">Obter a lista de todos os trabalhos em uma coleção de trabalhos.</span><span class="sxs-lookup"><span data-stu-id="bf408-237">Get the list of all jobs in a job collection.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.list(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListParameters
+      description: <span data-ttu-id="bf408-238">Parâmetros fornecidos para a operação listar trabalhos.</span><span class="sxs-lookup"><span data-stu-id="bf408-238">Parameters supplied to the List Jobs operation.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="bf408-239">Especifique o índice (baseado em 0) da lista de trabalhos do qual começar solicitando entradas.</span><span class="sxs-lookup"><span data-stu-id="bf408-239">Specify the (0-based) index of the job list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="bf408-240">Especifique o número de trabalhos a solicitação, do intervalo [1..100].</span><span class="sxs-lookup"><span data-stu-id="bf408-240">Specify the number of jobs to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-241">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-241">The response stream.</span></span>
+    content: function list(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: listWithFilter(parameters, callback)
+  summary: <span data-ttu-id="bf408-242">Obter a lista de trabalhos em uma coleção de trabalho correspondentes a um filtro de estado do trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-242">Get the list of jobs in a job collection matching a filter on job state.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.listWithFilter(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListWithFilterParameters
+      description: <span data-ttu-id="bf408-243">Parâmetros fornecidos para os trabalhos de lista com a operação de filtro.</span><span class="sxs-lookup"><span data-stu-id="bf408-243">Parameters supplied to the List Jobs with filter operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: <span data-ttu-id="bf408-244">Filtre o histórico do trabalho para que ele seja tentativas de execução do trabalho retornam apenas ter um estado específico, habilitado, desabilitado, com falha ou concluído.</span><span class="sxs-lookup"><span data-stu-id="bf408-244">Filter the job history to have it only return job execution attempts having a particular State, enabled, disabled, faulted, or completed.</span></span>
+    - id: parameters.skip
+      type:
+      - number
+      description: <span data-ttu-id="bf408-245">Especifique o índice (baseado em 0) da lista de trabalhos do qual começar solicitando entradas.</span><span class="sxs-lookup"><span data-stu-id="bf408-245">Specify the (0-based) index of the job list from which to begin requesting entries.</span></span>
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: <span data-ttu-id="bf408-246">Especifique o número de trabalhos a solicitação, do intervalo [1..100].</span><span class="sxs-lookup"><span data-stu-id="bf408-246">Specify the number of jobs to request, in the of range [1..100].</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-247">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-247">The response stream.</span></span>
+    content: function listWithFilter(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  id: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateJobCollectionState(parameters, callback)
+  summary: <span data-ttu-id="bf408-248">Atualize o estado de todos os trabalhos em coleções de um trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-248">Update the state of all jobs in a job collections.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.updateJobCollectionState(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCollectionJobsUpdateStateParameters
+      description: <span data-ttu-id="bf408-249">Parâmetros fornecidos para a operação de estado de trabalhos de atualização.</span><span class="sxs-lookup"><span data-stu-id="bf408-249">Parameters supplied to the Update Jobs State operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "<span data-ttu-id=\"bf408-250\">Novo estado para atualizar para: 'enabled' ou 'Desativado'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf408-250\">New state to update to: 'enabled' or 'disabled'.</span></span>"
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-251">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-251">The response stream.</span></span>
+    content: function updateJobCollectionState(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateState
+  id: azure-scheduler.JobOperations~JobOperations#updateState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateState(jobId, parameters, callback)
+  summary: <span data-ttu-id="bf408-252">Atualize o estado de um trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-252">Update the state of a job.</span></span>
+  fullName: azure-scheduler.JobOperations~JobOperations.updateState(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: <span data-ttu-id="bf408-253">ID do trabalho para atualizar.</span><span class="sxs-lookup"><span data-stu-id="bf408-253">Id of the job to update.</span></span>
+    - id: parameters
+      type:
+      - azure-scheduler.JobUpdateStateParameters
+      description: <span data-ttu-id="bf408-254">Parâmetros fornecidos para a operação de estado do trabalho de atualização.</span><span class="sxs-lookup"><span data-stu-id="bf408-254">Parameters supplied to the Update Job State operation.</span></span>
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: "<span data-ttu-id=\"bf408-255\">Novo estado para atualizar para: 'enabled' ou 'Desativado'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"bf408-255\">New state to update to: 'enabled' or 'disabled'.</span></span>"
+    - id: parameters.updateStateReason
+      type:
+      - string
+      description: <span data-ttu-id="bf408-256">Uma descrição das circunstâncias associado com essa atualização de estado do trabalho.</span><span class="sxs-lookup"><span data-stu-id="bf408-256">A description of the circumstances associated with this job state update.</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: <span data-ttu-id="bf408-257">O fluxo de resposta.</span><span class="sxs-lookup"><span data-stu-id="bf408-257">The response stream.</span></span>
+    content: function updateState(jobId, parameters, callback)
+  langs:
+  - js
