@@ -1,0 +1,235 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac59113a4e21ca00c9b26de26ebb08038ca0645a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40050663"
+items:
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses
+  name: ProtectedItemOperationStatuses
+  fullName: ProtectedItemOperationStatuses
+  children:
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_1
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_2
+  - azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.getWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1efa5-101">Busca o status de uma operação, como disparar um backup, restaurar.</span><span class="sxs-lookup"><span data-stu-id="1efa5-101">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="1efa5-102">O status pode ser em andamento, concluído ou falha.</span><span class="sxs-lookup"><span data-stu-id="1efa5-102">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="1efa5-103">Você pode se referir à enumeração OperationStatus para todos os possíveis estados da operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-103">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="1efa5-104">Algumas operações criam trabalhos.</span><span class="sxs-lookup"><span data-stu-id="1efa5-104">Some operations create jobs.</span></span> <span data-ttu-id="1efa5-105">Esse método retorna a lista de trabalhos associados à operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-105">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-106">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-106">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-107">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="1efa5-107">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-108">Nome de malha associado com o item de backup.</span><span class="sxs-lookup"><span data-stu-id="1efa5-108">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-109">Nome do contêiner associado ao item de backup.</span><span class="sxs-lookup"><span data-stu-id="1efa5-109">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-110">Nome do item de backup cujos detalhes estão a ser obtido.</span><span class="sxs-lookup"><span data-stu-id="1efa5-110">Backup item name whose details are to be fetched.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-111">OperationID representa a operação cujo status deve ser obtido.</span><span class="sxs-lookup"><span data-stu-id="1efa5-111">OperationID represents the operation whose status needs to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_1
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1efa5-112">Busca o status de uma operação, como disparar um backup, restaurar.</span><span class="sxs-lookup"><span data-stu-id="1efa5-112">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="1efa5-113">O status pode ser em andamento, concluído ou falha.</span><span class="sxs-lookup"><span data-stu-id="1efa5-113">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="1efa5-114">Você pode se referir à enumeração OperationStatus para todos os possíveis estados da operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-114">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="1efa5-115">Algumas operações criam trabalhos.</span><span class="sxs-lookup"><span data-stu-id="1efa5-115">Some operations create jobs.</span></span> <span data-ttu-id="1efa5-116">Esse método retorna a lista de trabalhos associados à operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-116">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, callback: ServiceCallback<OperationStatus>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.get_2
+  name: get
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1efa5-117">Busca o status de uma operação, como disparar um backup, restaurar.</span><span class="sxs-lookup"><span data-stu-id="1efa5-117">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="1efa5-118">O status pode ser em andamento, concluído ou falha.</span><span class="sxs-lookup"><span data-stu-id="1efa5-118">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="1efa5-119">Você pode se referir à enumeração OperationStatus para todos os possíveis estados da operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-119">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="1efa5-120">Algumas operações criam trabalhos.</span><span class="sxs-lookup"><span data-stu-id="1efa5-120">Some operations create jobs.</span></span> <span data-ttu-id="1efa5-121">Esse método retorna a lista de trabalhos associados à operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-121">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options: function, callback: ServiceCallback<OperationStatus>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ProtectedItemOperationStatuses.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="1efa5-122">Busca o status de uma operação, como disparar um backup, restaurar.</span><span class="sxs-lookup"><span data-stu-id="1efa5-122">Fetches the status of an operation such as triggering a backup, restore.</span></span> <span data-ttu-id="1efa5-123">O status pode ser em andamento, concluído ou falha.</span><span class="sxs-lookup"><span data-stu-id="1efa5-123">The status can be in progress, completed or failed.</span></span> <span data-ttu-id="1efa5-124">Você pode se referir à enumeração OperationStatus para todos os possíveis estados da operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-124">You can refer to the OperationStatus enum for all the possible states of the operation.</span></span> <span data-ttu-id="1efa5-125">Algumas operações criam trabalhos.</span><span class="sxs-lookup"><span data-stu-id="1efa5-125">Some operations create jobs.</span></span> <span data-ttu-id="1efa5-126">Esse método retorna a lista de trabalhos associados à operação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-126">This method returns the list of jobs associated with the operation.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, operationId: string, options?: function)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-127">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="1efa5-127">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-128">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="1efa5-128">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-129">Nome de malha associado com o item de backup.</span><span class="sxs-lookup"><span data-stu-id="1efa5-129">Fabric name associated with the backup item.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-130">Nome do contêiner associado ao item de backup.</span><span class="sxs-lookup"><span data-stu-id="1efa5-130">Container name associated with the backup item.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-131">Nome do item de backup cujos detalhes estão a ser obtido.</span><span class="sxs-lookup"><span data-stu-id="1efa5-131">Backup item name whose details are to be fetched.</span></span>
+    - id: operationId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="1efa5-132">OperationID representa a operação cujo status deve ser obtido.</span><span class="sxs-lookup"><span data-stu-id="1efa5-132">OperationID represents the operation whose status needs to be fetched.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.OperationStatus>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: Promise<azure-arm-recoveryservicesbackup.OperationStatus>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-recoveryservicesbackup.OperationStatus>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-recoveryservicesbackup.OperationStatus>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: OperationStatus
+    fullName: OperationStatus
+    uid: azure-arm-recoveryservicesbackup.OperationStatus
+  - name: '>>'
+    fullName: '>>'

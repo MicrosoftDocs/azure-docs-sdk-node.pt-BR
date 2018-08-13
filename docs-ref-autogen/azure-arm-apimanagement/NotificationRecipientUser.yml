@@ -1,0 +1,670 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8c02827961a4425b7057825840272d631f1861fc
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40048920"
+items:
+- uid: azure-arm-apimanagement.NotificationRecipientUser
+  name: NotificationRecipientUser
+  fullName: NotificationRecipientUser
+  children:
+  - azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists
+  - azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists_2
+  - azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists_1
+  - azure-arm-apimanagement.NotificationRecipientUser.checkEntityExistsWithHttpOperationResponse
+  - azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate
+  - azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate_1
+  - azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate_2
+  - azure-arm-apimanagement.NotificationRecipientUser.createOrUpdateWithHttpOperationResponse
+  - azure-arm-apimanagement.NotificationRecipientUser.deleteMethod
+  - azure-arm-apimanagement.NotificationRecipientUser.deleteMethod_1
+  - azure-arm-apimanagement.NotificationRecipientUser.deleteMethod_2
+  - azure-arm-apimanagement.NotificationRecipientUser.deleteMethodWithHttpOperationResponse
+  - azure-arm-apimanagement.NotificationRecipientUser.listByNotification
+  - azure-arm-apimanagement.NotificationRecipientUser.listByNotification_1
+  - azure-arm-apimanagement.NotificationRecipientUser.listByNotification_2
+  - azure-arm-apimanagement.NotificationRecipientUser.listByNotificationWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists
+  name: checkEntityExists
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-101">Determine se o usuário do destinatário de notificação está inscrito para a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-101">Determine if the Notification Recipient User is subscribed to the notification.</span></span>
+  syntax:
+    content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-102">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-103">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-103">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-104">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-104">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-105">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-105">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-106">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-106">User identifier.</span></span> <span data-ttu-id="dfffe-107">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-107">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<boolean>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists_2
+  name: checkEntityExists
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-108">Determine se o usuário do destinatário de notificação está inscrito para a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-108">Determine if the Notification Recipient User is subscribed to the notification.</span></span>
+  syntax:
+    content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options: function, callback: ServiceCallback<boolean>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<boolean>
+      description: ''
+    return:
+      type:
+      - Promise<boolean>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.checkEntityExists_1
+  name: checkEntityExists
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-109">Determine se o usuário do destinatário de notificação está inscrito para a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-109">Determine if the Notification Recipient User is subscribed to the notification.</span></span>
+  syntax:
+    content: 'function checkEntityExists(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, callback: ServiceCallback<boolean>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<boolean>
+      description: ''
+    return:
+      type:
+      - Promise<boolean>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.checkEntityExistsWithHttpOperationResponse
+  name: checkEntityExistsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-110">Determine se o usuário do destinatário de notificação está inscrito para a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-110">Determine if the Notification Recipient User is subscribed to the notification.</span></span>
+  syntax:
+    content: 'function checkEntityExistsWithHttpOperationResponse(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-111">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-111">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-112">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-112">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-113">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-113">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-114">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-114">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-115">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-115">User identifier.</span></span> <span data-ttu-id="dfffe-116">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-116">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<boolean>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-117">Adiciona o usuário de gerenciamento de API à lista de destinatários da notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-117">Adds the API Management User to the list of Recipients for the Notification.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-118">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-118">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-119">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-119">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-120">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-120">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-121">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-121">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-122">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-122">User identifier.</span></span> <span data-ttu-id="dfffe-123">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-123">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate_1
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-124">Adiciona o usuário de gerenciamento de API à lista de destinatários da notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-124">Adds the API Management User to the list of Recipients for the Notification.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, callback: ServiceCallback<RecipientUserContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.RecipientUserContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.createOrUpdate_2
+  name: createOrUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-125">Adiciona o usuário de gerenciamento de API à lista de destinatários da notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-125">Adds the API Management User to the list of Recipients for the Notification.</span></span>
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options: function, callback: ServiceCallback<RecipientUserContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.RecipientUserContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserContract>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-126">Adiciona o usuário de gerenciamento de API à lista de destinatários da notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-126">Adds the API Management User to the list of Recipients for the Notification.</span></span>
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-127">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-127">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-128">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-128">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-129">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-129">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-130">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-130">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-131">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-131">User identifier.</span></span> <span data-ttu-id="dfffe-132">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-132">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.RecipientUserContract>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.deleteMethod
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-133">Remove o usuário de gerenciamento de API da lista de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-133">Removes the API Management user from the list of Notification.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-134">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-134">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-135">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-135">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-136">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-136">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-137">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-137">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-138">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-138">User identifier.</span></span> <span data-ttu-id="dfffe-139">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-139">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.deleteMethod_1
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-140">Remove o usuário de gerenciamento de API da lista de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-140">Removes the API Management user from the list of Notification.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.deleteMethod_2
+  name: deleteMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-141">Remove o usuário de gerenciamento de API da lista de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-141">Removes the API Management user from the list of Notification.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-142">Remove o usuário de gerenciamento de API da lista de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-142">Removes the API Management user from the list of Notification.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, notificationName: string, uid: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-143">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-143">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-144">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-144">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-145">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-145">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-146">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-146">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: uid
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-147">Identificador de usuário.</span><span class="sxs-lookup"><span data-stu-id="dfffe-147">User identifier.</span></span> <span data-ttu-id="dfffe-148">Deve ser exclusivo na instância atual do serviço de gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-148">Must be unique in the current API Management service instance.</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.listByNotification
+  name: listByNotification
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-149">Obtém a lista do usuário do destinatário de notificação assinou a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-149">Gets the list of the Notification Recipient User subscribed to the notification.</span></span>
+  syntax:
+    content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-150">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-150">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-151">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-151">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-152">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-152">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-153">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-153">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.listByNotification_1
+  name: listByNotification
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-154">Obtém a lista do usuário do destinatário de notificação assinou a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-154">Gets the list of the Notification Recipient User subscribed to the notification.</span></span>
+  syntax:
+    content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: string, callback: ServiceCallback<RecipientUserCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.RecipientUserCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.listByNotification_2
+  name: listByNotification
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-155">Obtém a lista do usuário do destinatário de notificação assinou a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-155">Gets the list of the Notification Recipient User subscribed to the notification.</span></span>
+  syntax:
+    content: 'function listByNotification(resourceGroupName: string, serviceName: string, notificationName: string, options: function, callback: ServiceCallback<RecipientUserCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: notificationName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.RecipientUserCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.RecipientUserCollection>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.NotificationRecipientUser.listByNotificationWithHttpOperationResponse
+  name: listByNotificationWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="dfffe-156">Obtém a lista do usuário do destinatário de notificação assinou a notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-156">Gets the list of the Notification Recipient User subscribed to the notification.</span></span>
+  syntax:
+    content: 'function listByNotificationWithHttpOperationResponse(resourceGroupName: string, serviceName: string, notificationName: string, options?: function)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-157">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="dfffe-157">The name of the resource group.</span></span>
+    - id: serviceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-158">O nome do serviço Gerenciamento de API.</span><span class="sxs-lookup"><span data-stu-id="dfffe-158">The name of the API Management service.</span></span>
+    - id: notificationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="dfffe-159">Identificador de nome de notificação.</span><span class="sxs-lookup"><span data-stu-id="dfffe-159">Notification Name Identifier.</span></span> <span data-ttu-id="dfffe-160">Os valores possíveis incluem: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'Cco', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', ' QuotaLimitApproachingPublisherNotificationMessage'</span><span class="sxs-lookup"><span data-stu-id="dfffe-160">Possible values include: 'RequestPublisherNotificationMessage', 'PurchasePublisherNotificationMessage', 'NewApplicationNotificationMessage', 'BCC', 'NewIssuePublisherNotificationMessage', 'AccountClosedPublisher', 'QuotaLimitApproachingPublisherNotificationMessage'</span></span>
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.RecipientUserCollection>>
+  package: azure-arm-apimanagement
+references:
+- uid: Promise<azure-arm-apimanagement.RecipientUserContract>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RecipientUserContract
+    fullName: RecipientUserContract
+    uid: azure-arm-apimanagement.RecipientUserContract
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.RecipientUserContract>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RecipientUserContract
+    fullName: RecipientUserContract
+    uid: azure-arm-apimanagement.RecipientUserContract
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.RecipientUserContract>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RecipientUserContract
+    fullName: RecipientUserContract
+    uid: azure-arm-apimanagement.RecipientUserContract
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-apimanagement.RecipientUserCollection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RecipientUserCollection
+    fullName: RecipientUserCollection
+    uid: azure-arm-apimanagement.RecipientUserCollection
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.RecipientUserCollection>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RecipientUserCollection
+    fullName: RecipientUserCollection
+    uid: azure-arm-apimanagement.RecipientUserCollection
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.RecipientUserCollection>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RecipientUserCollection
+    fullName: RecipientUserCollection
+    uid: azure-arm-apimanagement.RecipientUserCollection
+  - name: '>>'
+    fullName: '>>'
