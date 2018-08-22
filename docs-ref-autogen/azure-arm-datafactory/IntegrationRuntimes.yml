@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 11653afe9c8c4a422ac1494551bebf01c8cbe3f9
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 2aa2f985e3acb65c13b9498c33083859100ddf81
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40050311"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41702364"
 items:
 - uid: azure-arm-datafactory.IntegrationRuntimes
   name: IntegrationRuntimes
@@ -58,10 +58,10 @@ items:
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey_2
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKeyWithHttpOperationResponse
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  - azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
   - azure-arm-datafactory.IntegrationRuntimes.start
   - azure-arm-datafactory.IntegrationRuntimes.start_1
   - azure-arm-datafactory.IntegrationRuntimes.start_2
@@ -93,28 +93,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-101">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-101">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-101">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-101">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-102">The resource group name.</span></span>
+        <span data-ttu-id="9a041-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-102">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-103">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-103">The factory name.</span></span>
+        <span data-ttu-id="9a041-103">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-103">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-104">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-104">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-104">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-104">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -127,7 +127,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-105">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-105">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-105">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-105">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -157,9 +157,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-106">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-106">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-106">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-106">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -175,7 +175,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -191,28 +191,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-107">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-107">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-107">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-107">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-108">The resource group name.</span></span>
+        <span data-ttu-id="9a041-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-108">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-109">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-109">The factory name.</span></span>
+        <span data-ttu-id="9a041-109">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-109">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-110">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-110">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-110">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-110">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,28 +225,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-111">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-111">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-111">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-111">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-112">The resource group name.</span></span>
+        <span data-ttu-id="9a041-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-112">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-113">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-113">The factory name.</span></span>
+        <span data-ttu-id="9a041-113">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-113">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-114">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-114">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-114">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-114">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -259,7 +259,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-115">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-115">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-115">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-115">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -289,9 +289,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-116">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-116">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-116">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-116">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -307,7 +307,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -323,28 +323,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-117">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-117">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-117">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-117">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-118">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-118">The resource group name.</span></span>
+        <span data-ttu-id="9a041-118">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-118">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-119">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-119">The factory name.</span></span>
+        <span data-ttu-id="9a041-119">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-119">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-120">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-120">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-120">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-120">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -357,7 +357,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-121">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-121">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-121">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-121">Creates or updates an integration runtime.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
@@ -391,33 +391,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-122">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-122">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-122">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-122">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-123">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-123">The resource group name.</span></span>
+        <span data-ttu-id="9a041-123">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-123">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-124">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-124">The factory name.</span></span>
+        <span data-ttu-id="9a041-124">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-124">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-125">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-125">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-125">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-125">The integration runtime name.</span></span>
     - id: integrationRuntime
       type:
       - azure-arm-datafactory.IntegrationRuntimeResource
       description: >
-        <span data-ttu-id="f8b10-126">Definição de recurso de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-126">Integration runtime resource definition.</span></span>
+        <span data-ttu-id="9a041-126">Definição de recurso de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-126">Integration runtime resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -430,9 +430,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-127">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-127">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-127">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-127">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -452,7 +452,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -468,33 +468,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-128">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-128">Creates or updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-128">Cria ou atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-128">Creates or updates an integration runtime.</span></span>
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-129">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-129">The resource group name.</span></span>
+        <span data-ttu-id="9a041-129">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-129">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-130">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-130">The factory name.</span></span>
+        <span data-ttu-id="9a041-130">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-130">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-131">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-131">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-131">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-131">The integration runtime name.</span></span>
     - id: integrationRuntime
       type:
       - azure-arm-datafactory.IntegrationRuntimeResource
       description: >
-        <span data-ttu-id="f8b10-132">Definição de recurso de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-132">Integration runtime resource definition.</span></span>
+        <span data-ttu-id="9a041-132">Definição de recurso de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-132">Integration runtime resource definition.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -507,9 +507,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-133">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-133">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-133">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-133">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -525,7 +525,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -541,28 +541,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-134">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-134">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-134">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-134">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-135">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-135">The resource group name.</span></span>
+        <span data-ttu-id="9a041-135">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-135">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-136">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-136">The factory name.</span></span>
+        <span data-ttu-id="9a041-136">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-136">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-137">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-137">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-137">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-137">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -575,7 +575,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-138">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-138">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-138">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-138">Deletes an integration runtime.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -605,28 +605,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-139">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-139">Deletes an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-139">Exclui um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-139">Deletes an integration runtime.</span></span>
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-140">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-140">The resource group name.</span></span>
+        <span data-ttu-id="9a041-140">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-140">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-141">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-141">The factory name.</span></span>
+        <span data-ttu-id="9a041-141">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-141">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-142">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-142">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-142">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-142">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -639,7 +639,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-143">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-143">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-143">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-143">Gets an integration runtime.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
@@ -669,9 +669,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-144">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-144">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-144">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-144">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -687,7 +687,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -703,28 +703,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-145">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-145">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-145">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-145">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-146">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-146">The resource group name.</span></span>
+        <span data-ttu-id="9a041-146">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-146">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-147">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-147">The factory name.</span></span>
+        <span data-ttu-id="9a041-147">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-147">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-148">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-148">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-148">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-148">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -737,28 +737,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-149">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="f8b10-149">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="9a041-149">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="9a041-149">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-150">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-150">The resource group name.</span></span>
+        <span data-ttu-id="9a041-150">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-150">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-151">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-151">The factory name.</span></span>
+        <span data-ttu-id="9a041-151">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-151">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-152">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-152">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-152">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-152">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -771,9 +771,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-153">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="f8b10-153">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="9a041-153">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="9a041-153">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -789,7 +789,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -805,7 +805,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-154">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="f8b10-154">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="9a041-154">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="9a041-154">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
     content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
     parameters:
@@ -835,28 +835,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-155">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="f8b10-155">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
+  summary: <span data-ttu-id="9a041-155">Obtém o local de informações de conexão de tempo de execução de integração para criptografar as credenciais de fonte de dados local.</span><span class="sxs-lookup"><span data-stu-id="9a041-155">Gets the on-premises integration runtime connection information for encrypting the on-premises data source credentials.</span></span>
   syntax:
-    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-156">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-156">The resource group name.</span></span>
+        <span data-ttu-id="9a041-156">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-156">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-157">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-157">The factory name.</span></span>
+        <span data-ttu-id="9a041-157">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-157">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-158">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-158">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-158">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-158">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -869,7 +869,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-159">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-159">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-159">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-159">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
     content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
     parameters:
@@ -899,28 +899,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-160">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-160">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-160">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-160">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-161">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-161">The resource group name.</span></span>
+        <span data-ttu-id="9a041-161">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-161">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-162">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-162">The factory name.</span></span>
+        <span data-ttu-id="9a041-162">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-162">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-163">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-163">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-163">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-163">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -933,9 +933,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-164">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-164">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-164">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-164">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -951,7 +951,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -967,28 +967,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-165">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-165">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-165">Obtenha o tempo de execução de integração que dados de monitoramento, que inclui os dados de monitor para todos os nós sob este tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-165">Get the integration runtime monitoring data, which includes the monitor data for all the nodes under this integration runtime.</span></span>
   syntax:
-    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-166">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-166">The resource group name.</span></span>
+        <span data-ttu-id="9a041-166">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-166">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-167">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-167">The factory name.</span></span>
+        <span data-ttu-id="9a041-167">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-167">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-168">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-168">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-168">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-168">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1001,7 +1001,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-169">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-169">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-169">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-169">Gets detailed status information for an integration runtime.</span></span>
   syntax:
     content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -1031,9 +1031,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-170">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-170">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-170">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-170">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1049,7 +1049,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1065,28 +1065,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-171">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-171">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-171">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-171">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-172">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-172">The resource group name.</span></span>
+        <span data-ttu-id="9a041-172">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-172">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-173">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-173">The factory name.</span></span>
+        <span data-ttu-id="9a041-173">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-173">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-174">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-174">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-174">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-174">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1099,28 +1099,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-175">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-175">Gets detailed status information for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-175">Obtém informações de status detalhadas para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-175">Gets detailed status information for an integration runtime.</span></span>
   syntax:
-    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-176">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-176">The resource group name.</span></span>
+        <span data-ttu-id="9a041-176">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-176">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-177">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-177">The factory name.</span></span>
+        <span data-ttu-id="9a041-177">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-177">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-178">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-178">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-178">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-178">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1133,28 +1133,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-179">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-179">Gets an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-179">Obtém um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-179">Gets an integration runtime.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-180">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-180">The resource group name.</span></span>
+        <span data-ttu-id="9a041-180">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-180">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-181">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-181">The factory name.</span></span>
+        <span data-ttu-id="9a041-181">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-181">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-182">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-182">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-182">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-182">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1167,28 +1167,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-183">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-183">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-183">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-183">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-184">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-184">The resource group name.</span></span>
+        <span data-ttu-id="9a041-184">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-184">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-185">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-185">The factory name.</span></span>
+        <span data-ttu-id="9a041-185">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-185">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-186">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-186">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-186">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-186">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1201,7 +1201,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-187">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-187">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-187">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-187">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
     content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
@@ -1231,9 +1231,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-188">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-188">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-188">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-188">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1249,7 +1249,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1265,28 +1265,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-189">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-189">Retrieves the authentication keys for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-189">Recupera as chaves de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-189">Retrieves the authentication keys for an integration runtime.</span></span>
   syntax:
-    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-190">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-190">The resource group name.</span></span>
+        <span data-ttu-id="9a041-190">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-190">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-191">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-191">The factory name.</span></span>
+        <span data-ttu-id="9a041-191">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-191">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-192">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-192">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-192">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-192">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1299,23 +1299,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-193">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-193">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-193">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-193">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-194">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-194">The resource group name.</span></span>
+        <span data-ttu-id="9a041-194">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-194">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-195">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-195">The factory name.</span></span>
+        <span data-ttu-id="9a041-195">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-195">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1328,7 +1328,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-196">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-196">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-196">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-196">Lists integration runtimes.</span></span>
   syntax:
     content: 'function listByFactory(resourceGroupName: string, factoryName: string, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
@@ -1354,9 +1354,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-197">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-197">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-197">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-197">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1368,7 +1368,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1384,18 +1384,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-198">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-198">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-198">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-198">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-199">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="f8b10-199">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="9a041-199">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9a041-199">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1408,7 +1408,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-200">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-200">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-200">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-200">Lists integration runtimes.</span></span>
   syntax:
     content: 'function listByFactoryNext(nextPageLink: string, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
@@ -1430,9 +1430,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-201">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-201">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-201">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-201">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactoryNext(nextPageLink: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1440,7 +1440,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1456,18 +1456,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-202">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-202">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-202">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-202">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-203">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="f8b10-203">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="9a041-203">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9a041-203">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1480,23 +1480,23 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-204">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-204">Lists integration runtimes.</span></span>
+  summary: <span data-ttu-id="9a041-204">Lista os tempos de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-204">Lists integration runtimes.</span></span>
   syntax:
-    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-205">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-205">The resource group name.</span></span>
+        <span data-ttu-id="9a041-205">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-205">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-206">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-206">The factory name.</span></span>
+        <span data-ttu-id="9a041-206">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-206">The factory name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1509,7 +1509,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-207">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-207">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-207">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-207">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
     content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
@@ -1543,9 +1543,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-208">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-208">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-208">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-208">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1565,7 +1565,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1581,33 +1581,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-209">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-209">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-209">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-209">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-210">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-210">The resource group name.</span></span>
+        <span data-ttu-id="9a041-210">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-210">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-211">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-211">The factory name.</span></span>
+        <span data-ttu-id="9a041-211">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-211">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-212">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-212">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-212">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-212">The integration runtime name.</span></span>
     - id: regenerateKeyParameters
       type:
       - azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
       description: >
-        <span data-ttu-id="f8b10-213">Os parâmetros para regenerar a chave de autenticação do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-213">The parameters for regenerating integration runtime authentication key.</span></span>
+        <span data-ttu-id="9a041-213">Os parâmetros para regenerar a chave de autenticação do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-213">The parameters for regenerating integration runtime authentication key.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1620,87 +1620,87 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-214">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-214">Regenerates the authentication key for an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-214">Regenera a chave de autenticação para um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-214">Regenerates the authentication key for an integration runtime.</span></span>
   syntax:
-    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-215">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-215">The resource group name.</span></span>
+        <span data-ttu-id="9a041-215">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-215">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-216">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-216">The factory name.</span></span>
+        <span data-ttu-id="9a041-216">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-216">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-217">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-217">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-217">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-217">The integration runtime name.</span></span>
     - id: regenerateKeyParameters
       type:
       - azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
       description: >
-        <span data-ttu-id="f8b10-218">Os parâmetros para regenerar a chave de autenticação do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-218">The parameters for regenerating integration runtime authentication key.</span></span>
+        <span data-ttu-id="9a041-218">Os parâmetros para regenerar a chave de autenticação do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-218">The parameters for regenerating integration runtime authentication key.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeAuthKeys>>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-219">Remova um nó de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-219">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-219">Remova todos os tempos de execução de integração vinculado no data factory específico em um tempo de execução de integração auto-hospedado.</span><span class="sxs-lookup"><span data-stu-id="9a041-219">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-220">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-220">The resource group name.</span></span>
+        <span data-ttu-id="9a041-220">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-220">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-221">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-221">The factory name.</span></span>
+        <span data-ttu-id="9a041-221">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-221">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-222">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-222">The integration runtime name.</span></span>
-    - id: removeNodeParameters
+        <span data-ttu-id="9a041-222">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-222">The integration runtime name.</span></span>
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="f8b10-223">O nome do nó a ser removido de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-223">The name of the node to be removed from an integration runtime.</span></span>
+        <span data-ttu-id="9a041-223">O nome da fábrica de dados para o tempo de execução de integração vinculada.</span><span class="sxs-lookup"><span data-stu-id="9a041-223">The data factory name for the linked integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-224">Remova um nó de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-224">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-224">Remova todos os tempos de execução de integração vinculado no data factory específico em um tempo de execução de integração auto-hospedado.</span><span class="sxs-lookup"><span data-stu-id="9a041-224">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1714,13 +1714,13 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1730,15 +1730,15 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-225">Remova um nó de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-225">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-225">Remova todos os tempos de execução de integração vinculado no data factory específico em um tempo de execução de integração auto-hospedado.</span><span class="sxs-lookup"><span data-stu-id="9a041-225">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1752,9 +1752,9 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: callback
       type:
@@ -1764,39 +1764,39 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
-  name: removeNodeWithHttpOperationResponse
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
+  name: removeLinksWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-226">Remova um nó de tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-226">Remove a node from integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-226">Remova todos os tempos de execução de integração vinculado no data factory específico em um tempo de execução de integração auto-hospedado.</span><span class="sxs-lookup"><span data-stu-id="9a041-226">Remove all linked integration runtimes under specific data factory in a self-hosted integration runtime.</span></span>
   syntax:
-    content: 'function removeNodeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinksWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-227">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-227">The resource group name.</span></span>
+        <span data-ttu-id="9a041-227">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-227">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-228">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-228">The factory name.</span></span>
+        <span data-ttu-id="9a041-228">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-228">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-229">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-229">The integration runtime name.</span></span>
-    - id: removeNodeParameters
+        <span data-ttu-id="9a041-229">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-229">The integration runtime name.</span></span>
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="f8b10-230">O nome do nó a ser removido de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-230">The name of the node to be removed from an integration runtime.</span></span>
+        <span data-ttu-id="9a041-230">O nome da fábrica de dados para o tempo de execução de integração vinculada.</span><span class="sxs-lookup"><span data-stu-id="9a041-230">The data factory name for the linked integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1809,28 +1809,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-231">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-231">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-231">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-231">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-232">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-232">The resource group name.</span></span>
+        <span data-ttu-id="9a041-232">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-232">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-233">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-233">The factory name.</span></span>
+        <span data-ttu-id="9a041-233">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-233">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-234">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-234">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-234">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-234">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1843,7 +1843,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-235">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-235">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-235">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-235">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
@@ -1873,9 +1873,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-236">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-236">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-236">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-236">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1891,7 +1891,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1907,28 +1907,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-237">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-237">Starts a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-237">Inicia um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-237">Starts a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-238">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-238">The resource group name.</span></span>
+        <span data-ttu-id="9a041-238">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-238">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-239">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-239">The factory name.</span></span>
+        <span data-ttu-id="9a041-239">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-239">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-240">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-240">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-240">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-240">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1941,28 +1941,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-241">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-241">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-241">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-241">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-242">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-242">The resource group name.</span></span>
+        <span data-ttu-id="9a041-242">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-242">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-243">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-243">The factory name.</span></span>
+        <span data-ttu-id="9a041-243">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-243">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-244">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-244">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-244">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-244">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1975,9 +1975,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-245">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-245">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-245">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-245">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1993,7 +1993,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2009,7 +2009,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-246">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-246">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-246">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-246">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
     content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2039,28 +2039,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-247">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="f8b10-247">Stops a ManagedReserved type integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-247">Interrompe um tempo de execução de integração de tipo ManagedReserved.</span><span class="sxs-lookup"><span data-stu-id="9a041-247">Stops a ManagedReserved type integration runtime.</span></span>
   syntax:
-    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-248">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-248">The resource group name.</span></span>
+        <span data-ttu-id="9a041-248">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-248">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-249">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-249">The factory name.</span></span>
+        <span data-ttu-id="9a041-249">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-249">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-250">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-250">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-250">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-250">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2073,28 +2073,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-251">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="f8b10-251">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="f8b10-252">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="f8b10-252">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="9a041-251">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="9a041-251">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="9a041-252">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="9a041-252">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-253">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-253">The resource group name.</span></span>
+        <span data-ttu-id="9a041-253">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-253">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-254">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-254">The factory name.</span></span>
+        <span data-ttu-id="9a041-254">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-254">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-255">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-255">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-255">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-255">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2107,7 +2107,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-256">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="f8b10-256">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="f8b10-257">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="f8b10-257">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="9a041-256">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="9a041-256">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="9a041-257">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="9a041-257">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
     content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2137,9 +2137,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-258">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="f8b10-258">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="f8b10-259">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="f8b10-259">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="9a041-258">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="9a041-258">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="9a041-259">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="9a041-259">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2155,7 +2155,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2171,28 +2171,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-260">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="f8b10-260">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="f8b10-261">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="f8b10-261">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
+  summary: <span data-ttu-id="9a041-260">Forçar o tempo de execução de integração para sincronizar as credenciais em nós de integration runtime, e isso substituirá as credenciais em todos os nós de trabalho com aqueles disponíveis no nó do dispatcher.</span><span class="sxs-lookup"><span data-stu-id="9a041-260">Force the integration runtime to synchronize credentials across integration runtime nodes, and this will override the credentials across all worker nodes with those available on the dispatcher node.</span></span> <span data-ttu-id="9a041-261">Se você já tiver o arquivo de backup mais recente de credencial, você deve importá-lo (preferencial) manualmente em qualquer nó de tempo de execução de integração auto-hospedado que usar essa API diretamente.</span><span class="sxs-lookup"><span data-stu-id="9a041-261">If you already have the latest credential backup file, you should manually import it (preferred) on any self-hosted integration runtime node than using this API directly.</span></span>
   syntax:
-    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-262">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-262">The resource group name.</span></span>
+        <span data-ttu-id="9a041-262">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-262">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-263">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-263">The factory name.</span></span>
+        <span data-ttu-id="9a041-263">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-263">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-264">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-264">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-264">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-264">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2205,38 +2205,38 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-265">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-265">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-265">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-265">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-266">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-266">The resource group name.</span></span>
+        <span data-ttu-id="9a041-266">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-266">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-267">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-267">The factory name.</span></span>
+        <span data-ttu-id="9a041-267">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-267">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-268">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-268">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-268">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-268">The integration runtime name.</span></span>
     - id: updateIntegrationRuntimeRequest
       type:
       - azure-arm-datafactory.UpdateIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="f8b10-269">Os parâmetros para a atualização de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-269">The parameters for updating an integration runtime.</span></span>
+        <span data-ttu-id="9a041-269">Os parâmetros para a atualização de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-269">The parameters for updating an integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_1
   name: update
@@ -2244,9 +2244,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-270">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-270">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-270">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-270">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2266,11 +2266,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_2
   name: update
@@ -2278,9 +2278,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-271">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-271">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-271">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-271">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2300,15 +2300,15 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.updateWithHttpOperationResponse
   name: updateWithHttpOperationResponse
@@ -2316,38 +2316,38 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-272">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-272">Updates an integration runtime.</span></span>
+  summary: <span data-ttu-id="9a041-272">Atualiza um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-272">Updates an integration runtime.</span></span>
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-273">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-273">The resource group name.</span></span>
+        <span data-ttu-id="9a041-273">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-273">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-274">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-274">The factory name.</span></span>
+        <span data-ttu-id="9a041-274">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-274">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-275">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-275">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-275">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-275">The integration runtime name.</span></span>
     - id: updateIntegrationRuntimeRequest
       type:
       - azure-arm-datafactory.UpdateIntegrationRuntimeRequest
       description: >
-        <span data-ttu-id="f8b10-276">Os parâmetros para a atualização de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-276">The parameters for updating an integration runtime.</span></span>
+        <span data-ttu-id="9a041-276">Os parâmetros para a atualização de um tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-276">The parameters for updating an integration runtime.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeStatusResponse>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeResource>>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.upgrade
   name: upgrade
@@ -2355,28 +2355,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-277">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="f8b10-277">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="9a041-277">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="9a041-277">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-278">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-278">The resource group name.</span></span>
+        <span data-ttu-id="9a041-278">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-278">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-279">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-279">The factory name.</span></span>
+        <span data-ttu-id="9a041-279">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-279">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-280">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-280">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-280">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-280">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2389,7 +2389,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-281">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="f8b10-281">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="9a041-281">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="9a041-281">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
     content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, callback: ServiceCallback<void>)'
     parameters:
@@ -2419,9 +2419,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-282">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="f8b10-282">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="9a041-282">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="9a041-282">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2437,7 +2437,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2453,28 +2453,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="f8b10-283">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="f8b10-283">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
+  summary: <span data-ttu-id="9a041-283">Atualize o integration runtime auto-hospedado para a versão mais recente, se disponível.</span><span class="sxs-lookup"><span data-stu-id="9a041-283">Upgrade self-hosted integration runtime to latest version if availably.</span></span>
   syntax:
-    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-284">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="f8b10-284">The resource group name.</span></span>
+        <span data-ttu-id="9a041-284">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="9a041-284">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-285">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="f8b10-285">The factory name.</span></span>
+        <span data-ttu-id="9a041-285">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="9a041-285">The factory name.</span></span>
     - id: integrationRuntimeName
       type:
       - string
       description: >
-        <span data-ttu-id="f8b10-286">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="f8b10-286">The integration runtime name.</span></span>
+        <span data-ttu-id="9a041-286">O nome do tempo de execução de integração.</span><span class="sxs-lookup"><span data-stu-id="9a041-286">The integration runtime name.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2654,11 +2654,11 @@ references:
   - name: IntegrationRuntimeRegenerateKeyParameters
     fullName: IntegrationRuntimeRegenerateKeyParameters
     uid: azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
-- uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+- uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
   spec.typeScript:
-  - name: IntegrationRuntimeRemoveNodeRequest
-    fullName: IntegrationRuntimeRemoveNodeRequest
-    uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+  - name: LinkedIntegrationRuntimeRequest
+    fullName: LinkedIntegrationRuntimeRequest
+    uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
 - uid: azure-arm-datafactory.UpdateIntegrationRuntimeRequest
   spec.typeScript:
   - name: UpdateIntegrationRuntimeRequest
