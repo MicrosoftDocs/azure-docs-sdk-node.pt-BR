@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d9f21b055e48d2ddc596045ca4e0fcc01ba48301
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 233bc52eb6a4f0f6cbf0a3003b5aaf82ad0a36f4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40048887"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690295"
 items:
 - uid: azure-arm-eventgrid.EventSubscriptions
   name: EventSubscriptions
@@ -91,26 +91,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: function)'
+    content: 'function beginCreateOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-101">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="ff876-101">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="ff876-102">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-102">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-103">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-103">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-101">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="e0656-101">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="e0656-102">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-102">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-103">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-103">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-104">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-104">Name of the event subscription.</span></span> <span data-ttu-id="ff876-105">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="ff876-105">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
+        <span data-ttu-id="e0656-104">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-104">Name of the event subscription.</span></span> <span data-ttu-id="e0656-105">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="e0656-105">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
     - id: eventSubscriptionInfo
       type:
       - azure-arm-eventgrid.EventSubscription
       description: >
-        <span data-ttu-id="ff876-106">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="ff876-106">Event subscription properties containing the destination and filter information</span></span>
+        <span data-ttu-id="e0656-106">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="e0656-106">Event subscription properties containing the destination and filter information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -155,7 +155,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options: function, callback: ServiceCallback<EventSubscription>)'
+    content: 'function beginCreateOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options: Object, callback: ServiceCallback<EventSubscription>)'
     parameters:
     - id: scope
       type:
@@ -171,7 +171,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -189,26 +189,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: function)'
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-107">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="ff876-107">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="ff876-108">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-108">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-109">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-109">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-107">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="e0656-107">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="e0656-108">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-108">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-109">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-109">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-110">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-110">Name of the event subscription.</span></span> <span data-ttu-id="ff876-111">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="ff876-111">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
+        <span data-ttu-id="e0656-110">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-110">Name of the event subscription.</span></span> <span data-ttu-id="e0656-111">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="e0656-111">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
     - id: eventSubscriptionInfo
       type:
       - azure-arm-eventgrid.EventSubscription
       description: >
-        <span data-ttu-id="ff876-112">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="ff876-112">Event subscription properties containing the destination and filter information</span></span>
+        <span data-ttu-id="e0656-112">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="e0656-112">Event subscription properties containing the destination and filter information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -223,21 +223,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginDeleteMethod(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function beginDeleteMethod(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-113">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-113">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-114">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-114">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-115">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-115">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-113">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-113">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-114">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-114">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-115">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-115">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-116">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-116">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-116">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-116">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -278,7 +278,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginDeleteMethod(scope: string, eventSubscriptionName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginDeleteMethod(scope: string, eventSubscriptionName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: scope
       type:
@@ -290,7 +290,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -308,21 +308,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginDeleteMethodWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function beginDeleteMethodWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-117">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-117">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-118">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-118">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-119">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-119">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-117">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-117">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-118">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-118">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-119">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-119">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-120">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-120">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-120">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-120">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -367,7 +367,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options: function, callback: ServiceCallback<EventSubscription>)'
+    content: 'function beginUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options: Object, callback: ServiceCallback<EventSubscription>)'
     parameters:
     - id: scope
       type:
@@ -383,7 +383,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -401,26 +401,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: function)'
+    content: 'function beginUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-121">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="ff876-121">The scope of existing event subscription.</span></span> <span data-ttu-id="ff876-122">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-122">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-123">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-123">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-121">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="e0656-121">The scope of existing event subscription.</span></span> <span data-ttu-id="e0656-122">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-122">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-123">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-123">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-124">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-124">Name of the event subscription to be updated</span></span>
+        <span data-ttu-id="e0656-124">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-124">Name of the event subscription to be updated</span></span>
     - id: eventSubscriptionUpdateParameters
       type:
       - azure-arm-eventgrid.EventSubscriptionUpdateParameters
       description: >
-        <span data-ttu-id="ff876-125">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-125">Updated event subscription information</span></span>
+        <span data-ttu-id="e0656-125">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-125">Updated event subscription information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -435,26 +435,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: function)'
+    content: 'function beginUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-126">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="ff876-126">The scope of existing event subscription.</span></span> <span data-ttu-id="ff876-127">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-127">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-128">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-128">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-126">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="e0656-126">The scope of existing event subscription.</span></span> <span data-ttu-id="e0656-127">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-127">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-128">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-128">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-129">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-129">Name of the event subscription to be updated</span></span>
+        <span data-ttu-id="e0656-129">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-129">Name of the event subscription to be updated</span></span>
     - id: eventSubscriptionUpdateParameters
       type:
       - azure-arm-eventgrid.EventSubscriptionUpdateParameters
       description: >
-        <span data-ttu-id="ff876-130">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-130">Updated event subscription information</span></span>
+        <span data-ttu-id="e0656-130">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-130">Updated event subscription information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -469,26 +469,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: function)'
+    content: 'function createOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-131">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="ff876-131">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="ff876-132">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-132">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-133">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-133">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-131">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="e0656-131">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="e0656-132">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-132">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-133">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-133">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-134">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-134">Name of the event subscription.</span></span> <span data-ttu-id="ff876-135">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="ff876-135">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
+        <span data-ttu-id="e0656-134">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-134">Name of the event subscription.</span></span> <span data-ttu-id="e0656-135">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="e0656-135">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
     - id: eventSubscriptionInfo
       type:
       - azure-arm-eventgrid.EventSubscription
       description: >
-        <span data-ttu-id="ff876-136">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="ff876-136">Event subscription properties containing the destination and filter information</span></span>
+        <span data-ttu-id="e0656-136">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="e0656-136">Event subscription properties containing the destination and filter information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -533,7 +533,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options: function, callback: ServiceCallback<EventSubscription>)'
+    content: 'function createOrUpdate(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options: Object, callback: ServiceCallback<EventSubscription>)'
     parameters:
     - id: scope
       type:
@@ -549,7 +549,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -567,26 +567,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionInfo: EventSubscription, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-137">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="ff876-137">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="ff876-138">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-138">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-139">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-139">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-137">O identificador do recurso ao qual a assinatura do evento precisa ser criado ou atualizado.</span><span class="sxs-lookup"><span data-stu-id="e0656-137">The identifier of the resource to which the event subscription needs to be created or updated.</span></span> <span data-ttu-id="e0656-138">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-138">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-139">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-139">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-140">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-140">Name of the event subscription.</span></span> <span data-ttu-id="ff876-141">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="ff876-141">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
+        <span data-ttu-id="e0656-140">Nome da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-140">Name of the event subscription.</span></span> <span data-ttu-id="e0656-141">Nomes de assinatura de evento devem ter entre 3 e 64 caracteres de comprimento e devem usar apenas letras alfanuméricas.</span><span class="sxs-lookup"><span data-stu-id="e0656-141">Event subscription names must be between 3 and 64 characters in length and should use alphanumeric letters only.</span></span>
     - id: eventSubscriptionInfo
       type:
       - azure-arm-eventgrid.EventSubscription
       description: >
-        <span data-ttu-id="ff876-142">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="ff876-142">Event subscription properties containing the destination and filter information</span></span>
+        <span data-ttu-id="e0656-142">Propriedades de assinatura de evento que contém as informações de filtro e de destino</span><span class="sxs-lookup"><span data-stu-id="e0656-142">Event subscription properties containing the destination and filter information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -627,21 +627,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function deleteMethod(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-143">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-143">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-144">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-144">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-145">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-145">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-143">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-143">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-144">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-144">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-145">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-145">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-146">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-146">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-146">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-146">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -656,7 +656,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(scope: string, eventSubscriptionName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(scope: string, eventSubscriptionName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: scope
       type:
@@ -668,7 +668,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -686,21 +686,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-147">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-147">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-148">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-148">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-149">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-149">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-147">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-147">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-148">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-148">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-149">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-149">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-150">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-150">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-150">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-150">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -741,21 +741,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function get(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-151">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-151">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-152">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-152">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-153">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-153">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-151">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-151">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-152">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-152">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-153">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-153">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-154">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-154">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-154">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-154">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -770,7 +770,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(scope: string, eventSubscriptionName: string, options: function, callback: ServiceCallback<EventSubscription>)'
+    content: 'function get(scope: string, eventSubscriptionName: string, options: Object, callback: ServiceCallback<EventSubscription>)'
     parameters:
     - id: scope
       type:
@@ -782,7 +782,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -800,21 +800,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function getFullUrl(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function getFullUrl(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-155">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-155">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-156">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-156">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-157">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-157">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-155">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-155">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-156">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-156">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-157">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-157">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-158">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-158">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-158">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-158">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -855,7 +855,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function getFullUrl(scope: string, eventSubscriptionName: string, options: function, callback: ServiceCallback<EventSubscriptionFullUrl>)'
+    content: 'function getFullUrl(scope: string, eventSubscriptionName: string, options: Object, callback: ServiceCallback<EventSubscriptionFullUrl>)'
     parameters:
     - id: scope
       type:
@@ -867,7 +867,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -885,21 +885,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function getFullUrlWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function getFullUrlWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-159">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-159">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-160">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-160">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-161">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-161">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-159">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-159">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-160">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-160">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-161">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-161">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-162">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-162">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-162">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-162">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -914,21 +914,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function getWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(scope: string, eventSubscriptionName: string, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-163">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="ff876-163">The scope of the event subscription.</span></span> <span data-ttu-id="ff876-164">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-164">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-165">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-165">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-163">O escopo da assinatura do evento.</span><span class="sxs-lookup"><span data-stu-id="e0656-163">The scope of the event subscription.</span></span> <span data-ttu-id="e0656-164">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-164">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-165">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-165">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-166">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="ff876-166">Name of the event subscription</span></span>
+        <span data-ttu-id="e0656-166">Nome da assinatura do evento</span><span class="sxs-lookup"><span data-stu-id="e0656-166">Name of the event subscription</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -943,31 +943,31 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listByResource(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options?: function)'
+    content: 'function listByResource(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-167">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-167">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-167">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-167">The name of the resource group within the user's subscription.</span></span>
     - id: providerNamespace
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-168">Namespace do provedor do tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-168">Namespace of the provider of the topic</span></span>
+        <span data-ttu-id="e0656-168">Namespace do provedor do tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-168">Namespace of the provider of the topic</span></span>
     - id: resourceTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-169">Nome do tipo de recurso</span><span class="sxs-lookup"><span data-stu-id="ff876-169">Name of the resource type</span></span>
+        <span data-ttu-id="e0656-169">Nome do tipo de recurso</span><span class="sxs-lookup"><span data-stu-id="e0656-169">Name of the resource type</span></span>
     - id: resourceName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-170">Nome do recurso</span><span class="sxs-lookup"><span data-stu-id="ff876-170">Name of the resource</span></span>
+        <span data-ttu-id="e0656-170">Nome do recurso</span><span class="sxs-lookup"><span data-stu-id="e0656-170">Name of the resource</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1016,7 +1016,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listByResource(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listByResource(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1036,7 +1036,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1054,31 +1054,31 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listByResourceWithHttpOperationResponse(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options?: function)'
+    content: 'function listByResourceWithHttpOperationResponse(resourceGroupName: string, providerNamespace: string, resourceTypeName: string, resourceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-171">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-171">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-171">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-171">The name of the resource group within the user's subscription.</span></span>
     - id: providerNamespace
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-172">Namespace do provedor do tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-172">Namespace of the provider of the topic</span></span>
+        <span data-ttu-id="e0656-172">Namespace do provedor do tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-172">Namespace of the provider of the topic</span></span>
     - id: resourceTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-173">Nome do tipo de recurso</span><span class="sxs-lookup"><span data-stu-id="ff876-173">Name of the resource type</span></span>
+        <span data-ttu-id="e0656-173">Nome do tipo de recurso</span><span class="sxs-lookup"><span data-stu-id="e0656-173">Name of the resource type</span></span>
     - id: resourceName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-174">Nome do recurso</span><span class="sxs-lookup"><span data-stu-id="ff876-174">Name of the resource</span></span>
+        <span data-ttu-id="e0656-174">Nome do recurso</span><span class="sxs-lookup"><span data-stu-id="e0656-174">Name of the resource</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1093,16 +1093,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listGlobalByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-175">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-175">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-175">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-175">The name of the resource group within the user's subscription.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1139,7 +1139,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listGlobalByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1147,7 +1147,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1165,21 +1165,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroupForTopicType(resourceGroupName: string, topicTypeName: string, options?: function)'
+    content: 'function listGlobalByResourceGroupForTopicType(resourceGroupName: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-176">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-176">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-176">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-176">The name of the resource group within the user's subscription.</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-177">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-177">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-177">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-177">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1220,7 +1220,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroupForTopicType(resourceGroupName: string, topicTypeName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listGlobalByResourceGroupForTopicType(resourceGroupName: string, topicTypeName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1232,7 +1232,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1250,21 +1250,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroupForTopicTypeWithHttpOperationResponse(resourceGroupName: string, topicTypeName: string, options?: function)'
+    content: 'function listGlobalByResourceGroupForTopicTypeWithHttpOperationResponse(resourceGroupName: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-178">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-178">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-178">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-178">The name of the resource group within the user's subscription.</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-179">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-179">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-179">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-179">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1279,16 +1279,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listGlobalByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-180">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-180">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-180">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-180">The name of the resource group within the user's subscription.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1321,11 +1321,11 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscription(options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listGlobalBySubscription(options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1343,11 +1343,11 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscription(options?: function)'
+    content: 'function listGlobalBySubscription(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1384,16 +1384,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscriptionForTopicType(topicTypeName: string, options?: function)'
+    content: 'function listGlobalBySubscriptionForTopicType(topicTypeName: string, options?: Object)'
     parameters:
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-181">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-181">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-181">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-181">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1408,7 +1408,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscriptionForTopicType(topicTypeName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listGlobalBySubscriptionForTopicType(topicTypeName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: topicTypeName
       type:
@@ -1416,7 +1416,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1434,16 +1434,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscriptionForTopicTypeWithHttpOperationResponse(topicTypeName: string, options?: function)'
+    content: 'function listGlobalBySubscriptionForTopicTypeWithHttpOperationResponse(topicTypeName: string, options?: Object)'
     parameters:
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-182">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-182">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-182">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-182">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1458,11 +1458,11 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listGlobalBySubscriptionWithHttpOperationResponse(options?: function)'
+    content: 'function listGlobalBySubscriptionWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1477,21 +1477,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroup(resourceGroupName: string, location: string, options?: function)'
+    content: 'function listRegionalByResourceGroup(resourceGroupName: string, location: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-183">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-183">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-183">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-183">The name of the resource group within the user's subscription.</span></span>
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-184">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-184">Name of the location</span></span>
+        <span data-ttu-id="e0656-184">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-184">Name of the location</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1532,7 +1532,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroup(resourceGroupName: string, location: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listRegionalByResourceGroup(resourceGroupName: string, location: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1544,7 +1544,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1562,26 +1562,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroupForTopicType(resourceGroupName: string, location: string, topicTypeName: string, options?: function)'
+    content: 'function listRegionalByResourceGroupForTopicType(resourceGroupName: string, location: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-185">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-185">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-185">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-185">The name of the resource group within the user's subscription.</span></span>
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-186">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-186">Name of the location</span></span>
+        <span data-ttu-id="e0656-186">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-186">Name of the location</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-187">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-187">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-187">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-187">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1626,7 +1626,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroupForTopicType(resourceGroupName: string, location: string, topicTypeName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listRegionalByResourceGroupForTopicType(resourceGroupName: string, location: string, topicTypeName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1642,7 +1642,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1660,26 +1660,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroupForTopicTypeWithHttpOperationResponse(resourceGroupName: string, location: string, topicTypeName: string, options?: function)'
+    content: 'function listRegionalByResourceGroupForTopicTypeWithHttpOperationResponse(resourceGroupName: string, location: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-188">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-188">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-188">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-188">The name of the resource group within the user's subscription.</span></span>
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-189">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-189">Name of the location</span></span>
+        <span data-ttu-id="e0656-189">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-189">Name of the location</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-190">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-190">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-190">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-190">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1694,21 +1694,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalByResourceGroupWithHttpOperationResponse(resourceGroupName: string, location: string, options?: function)'
+    content: 'function listRegionalByResourceGroupWithHttpOperationResponse(resourceGroupName: string, location: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-191">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="ff876-191">The name of the resource group within the user's subscription.</span></span>
+        <span data-ttu-id="e0656-191">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="e0656-191">The name of the resource group within the user's subscription.</span></span>
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-192">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-192">Name of the location</span></span>
+        <span data-ttu-id="e0656-192">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-192">Name of the location</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1723,16 +1723,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscription(location: string, options?: function)'
+    content: 'function listRegionalBySubscription(location: string, options?: Object)'
     parameters:
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-193">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-193">Name of the location</span></span>
+        <span data-ttu-id="e0656-193">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-193">Name of the location</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1769,7 +1769,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscription(location: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listRegionalBySubscription(location: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: location
       type:
@@ -1777,7 +1777,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1795,21 +1795,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscriptionForTopicType(location: string, topicTypeName: string, options?: function)'
+    content: 'function listRegionalBySubscriptionForTopicType(location: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-194">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-194">Name of the location</span></span>
+        <span data-ttu-id="e0656-194">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-194">Name of the location</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-195">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-195">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-195">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-195">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1850,7 +1850,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscriptionForTopicType(location: string, topicTypeName: string, options: function, callback: ServiceCallback<EventSubscriptionsListResult>)'
+    content: 'function listRegionalBySubscriptionForTopicType(location: string, topicTypeName: string, options: Object, callback: ServiceCallback<EventSubscriptionsListResult>)'
     parameters:
     - id: location
       type:
@@ -1862,7 +1862,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1880,21 +1880,21 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscriptionForTopicTypeWithHttpOperationResponse(location: string, topicTypeName: string, options?: function)'
+    content: 'function listRegionalBySubscriptionForTopicTypeWithHttpOperationResponse(location: string, topicTypeName: string, options?: Object)'
     parameters:
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-196">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-196">Name of the location</span></span>
+        <span data-ttu-id="e0656-196">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-196">Name of the location</span></span>
     - id: topicTypeName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-197">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="ff876-197">Name of the topic type</span></span>
+        <span data-ttu-id="e0656-197">Nome do tipo de tópico</span><span class="sxs-lookup"><span data-stu-id="e0656-197">Name of the topic type</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1909,16 +1909,16 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listRegionalBySubscriptionWithHttpOperationResponse(location: string, options?: function)'
+    content: 'function listRegionalBySubscriptionWithHttpOperationResponse(location: string, options?: Object)'
     parameters:
     - id: location
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-198">Nome do local</span><span class="sxs-lookup"><span data-stu-id="ff876-198">Name of the location</span></span>
+        <span data-ttu-id="e0656-198">Nome do local</span><span class="sxs-lookup"><span data-stu-id="e0656-198">Name of the location</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1933,26 +1933,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function update(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: function)'
+    content: 'function update(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-199">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="ff876-199">The scope of existing event subscription.</span></span> <span data-ttu-id="ff876-200">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-200">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-201">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-201">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-199">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="e0656-199">The scope of existing event subscription.</span></span> <span data-ttu-id="e0656-200">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-200">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-201">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-201">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-202">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-202">Name of the event subscription to be updated</span></span>
+        <span data-ttu-id="e0656-202">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-202">Name of the event subscription to be updated</span></span>
     - id: eventSubscriptionUpdateParameters
       type:
       - azure-arm-eventgrid.EventSubscriptionUpdateParameters
       description: >
-        <span data-ttu-id="ff876-203">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-203">Updated event subscription information</span></span>
+        <span data-ttu-id="e0656-203">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-203">Updated event subscription information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1997,7 +1997,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function update(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options: function, callback: ServiceCallback<EventSubscription>)'
+    content: 'function update(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options: Object, callback: ServiceCallback<EventSubscription>)'
     parameters:
     - id: scope
       type:
@@ -2013,7 +2013,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2031,26 +2031,26 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function updateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: function)'
+    content: 'function updateWithHttpOperationResponse(scope: string, eventSubscriptionName: string, eventSubscriptionUpdateParameters: EventSubscriptionUpdateParameters, options?: Object)'
     parameters:
     - id: scope
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-204">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="ff876-204">The scope of existing event subscription.</span></span> <span data-ttu-id="ff876-205">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-205">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="ff876-206">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="ff876-206">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
+        <span data-ttu-id="e0656-204">O escopo da assinatura de evento existente.</span><span class="sxs-lookup"><span data-stu-id="e0656-204">The scope of existing event subscription.</span></span> <span data-ttu-id="e0656-205">O escopo pode ser uma assinatura, ou um grupo de recursos ou um recurso de nível superior que pertencem a um namespace do provedor de recursos ou um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-205">The scope can be a subscription, or a resource group, or a top level resource belonging to a resource provider namespace, or an EventGrid topic.</span></span> <span data-ttu-id="e0656-206">Por exemplo, use ' / assinaturas / {subscriptionId} /' para uma assinatura, '/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}' para um grupo de recursos e ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} / provedores / {resourceProviderNamespace} / {resourceType} / {resourceName}' para um recurso, e ' / subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' para um tópico EventGrid.</span><span class="sxs-lookup"><span data-stu-id="e0656-206">For example, use '/subscriptions/{subscriptionId}/' for a subscription, '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for a resource group, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}' for a resource, and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/topics/{topicName}' for an EventGrid topic.</span></span>
     - id: eventSubscriptionName
       type:
       - string
       description: >
-        <span data-ttu-id="ff876-207">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-207">Name of the event subscription to be updated</span></span>
+        <span data-ttu-id="e0656-207">Nome da assinatura do evento a ser atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-207">Name of the event subscription to be updated</span></span>
     - id: eventSubscriptionUpdateParameters
       type:
       - azure-arm-eventgrid.EventSubscriptionUpdateParameters
       description: >
-        <span data-ttu-id="ff876-208">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="ff876-208">Updated event subscription information</span></span>
+        <span data-ttu-id="e0656-208">Informações de assinatura de evento atualizado</span><span class="sxs-lookup"><span data-stu-id="e0656-208">Updated event subscription information</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
