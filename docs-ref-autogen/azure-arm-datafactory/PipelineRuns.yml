@@ -1,15 +1,19 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 34b77db26e0b2df4ab2c6bc258a7ee3abda6ce33
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: b924471adf87c77218daa61e2391fc7c0df183e9
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40047921"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41547673"
 items:
 - uid: azure-arm-datafactory.PipelineRuns
   name: PipelineRuns
   fullName: PipelineRuns
   children:
+  - azure-arm-datafactory.PipelineRuns.cancel
+  - azure-arm-datafactory.PipelineRuns.cancel_2
+  - azure-arm-datafactory.PipelineRuns.cancel_1
+  - azure-arm-datafactory.PipelineRuns.cancelWithHttpOperationResponse
   - azure-arm-datafactory.PipelineRuns.get
   - azure-arm-datafactory.PipelineRuns.get_1
   - azure-arm-datafactory.PipelineRuns.get_2
@@ -23,34 +27,166 @@ items:
   type: interface
   summary: ''
   package: azure-arm-datafactory
+- uid: azure-arm-datafactory.PipelineRuns.cancel
+  name: cancel
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="20914-101">Cancelar um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-101">Cancel a pipeline run by its run ID.</span></span>
+  syntax:
+    content: 'function cancel(resourceGroupName: string, factoryName: string, runId: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-102">The resource group name.</span></span>
+    - id: factoryName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-103">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-103">The factory name.</span></span>
+    - id: runId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-104">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-104">The pipeline run identifier.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datafactory
+- uid: azure-arm-datafactory.PipelineRuns.cancel_2
+  name: cancel
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="20914-105">Cancelar um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-105">Cancel a pipeline run by its run ID.</span></span>
+  syntax:
+    content: 'function cancel(resourceGroupName: string, factoryName: string, runId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: factoryName
+      type:
+      - string
+      description: ''
+    - id: runId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datafactory
+- uid: azure-arm-datafactory.PipelineRuns.cancel_1
+  name: cancel
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="20914-106">Cancelar um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-106">Cancel a pipeline run by its run ID.</span></span>
+  syntax:
+    content: 'function cancel(resourceGroupName: string, factoryName: string, runId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: factoryName
+      type:
+      - string
+      description: ''
+    - id: runId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-datafactory
+- uid: azure-arm-datafactory.PipelineRuns.cancelWithHttpOperationResponse
+  name: cancelWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="20914-107">Cancelar um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-107">Cancel a pipeline run by its run ID.</span></span>
+  syntax:
+    content: 'function cancelWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-108">The resource group name.</span></span>
+    - id: factoryName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-109">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-109">The factory name.</span></span>
+    - id: runId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="20914-110">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-110">The pipeline run identifier.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-datafactory
 - uid: azure-arm-datafactory.PipelineRuns.get
   name: get
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-101">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="56d84-101">Get a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="20914-111">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-111">Get a pipeline run by its run ID.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, runId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="56d84-102">The resource group name.</span></span>
+        <span data-ttu-id="20914-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-112">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-103">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="56d84-103">The factory name.</span></span>
+        <span data-ttu-id="20914-113">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-113">The factory name.</span></span>
     - id: runId
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-104">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="56d84-104">The pipeline run identifier.</span></span>
+        <span data-ttu-id="20914-114">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-114">The pipeline run identifier.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -63,7 +199,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-105">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="56d84-105">Get a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="20914-115">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-115">Get a pipeline run by its run ID.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, factoryName: string, runId: string, callback: ServiceCallback<PipelineRun>)'
     parameters:
@@ -93,9 +229,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-106">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="56d84-106">Get a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="20914-116">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-116">Get a pipeline run by its run ID.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, runId: string, options: function, callback: ServiceCallback<PipelineRun>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, runId: string, options: Object, callback: ServiceCallback<PipelineRun>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -111,7 +247,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -127,28 +263,28 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-107">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="56d84-107">Get a pipeline run by its run ID.</span></span>
+  summary: <span data-ttu-id="20914-117">Obter um pipeline de execução por sua ID de execução.</span><span class="sxs-lookup"><span data-stu-id="20914-117">Get a pipeline run by its run ID.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="56d84-108">The resource group name.</span></span>
+        <span data-ttu-id="20914-118">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-118">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-109">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="56d84-109">The factory name.</span></span>
+        <span data-ttu-id="20914-119">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-119">The factory name.</span></span>
     - id: runId
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-110">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="56d84-110">The pipeline run identifier.</span></span>
+        <span data-ttu-id="20914-120">O identificador de execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-120">The pipeline run identifier.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -161,33 +297,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-111">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="56d84-111">Query pipeline runs in the factory based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="20914-121">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="20914-121">Query pipeline runs in the factory based on input filter conditions.</span></span>
   syntax:
-    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: PipelineRunFilterParameters, options?: function)'
+    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: RunFilterParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="56d84-112">The resource group name.</span></span>
+        <span data-ttu-id="20914-122">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-122">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-113">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="56d84-113">The factory name.</span></span>
+        <span data-ttu-id="20914-123">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-123">The factory name.</span></span>
     - id: filterParameters
       type:
-      - azure-arm-datafactory.PipelineRunFilterParameters
+      - azure-arm-datafactory.RunFilterParameters
       description: >
-        <span data-ttu-id="56d84-114">Parâmetros para filtrar a execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="56d84-114">Parameters to filter the pipeline run.</span></span>
+        <span data-ttu-id="20914-124">Parâmetros para filtrar a execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-124">Parameters to filter the pipeline run.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<azure-arm-datafactory.PipelineRunQueryResponse>
+      - Promise<azure-arm-datafactory.PipelineRunsQueryResponse>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.PipelineRuns.queryByFactory_1
   name: queryByFactory
@@ -195,9 +331,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-115">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="56d84-115">Query pipeline runs in the factory based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="20914-125">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="20914-125">Query pipeline runs in the factory based on input filter conditions.</span></span>
   syntax:
-    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: PipelineRunFilterParameters, callback: ServiceCallback<PipelineRunQueryResponse>)'
+    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: RunFilterParameters, callback: ServiceCallback<PipelineRunsQueryResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -209,15 +345,15 @@ items:
       description: ''
     - id: filterParameters
       type:
-      - azure-arm-datafactory.PipelineRunFilterParameters
+      - azure-arm-datafactory.RunFilterParameters
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.PipelineRunQueryResponse>
+      - ServiceCallback<azure-arm-datafactory.PipelineRunsQueryResponse>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.PipelineRunQueryResponse>
+      - Promise<azure-arm-datafactory.PipelineRunsQueryResponse>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.PipelineRuns.queryByFactory_2
   name: queryByFactory
@@ -225,9 +361,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-116">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="56d84-116">Query pipeline runs in the factory based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="20914-126">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="20914-126">Query pipeline runs in the factory based on input filter conditions.</span></span>
   syntax:
-    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: PipelineRunFilterParameters, options: function, callback: ServiceCallback<PipelineRunQueryResponse>)'
+    content: 'function queryByFactory(resourceGroupName: string, factoryName: string, filterParameters: RunFilterParameters, options: Object, callback: ServiceCallback<PipelineRunsQueryResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -239,19 +375,19 @@ items:
       description: ''
     - id: filterParameters
       type:
-      - azure-arm-datafactory.PipelineRunFilterParameters
+      - azure-arm-datafactory.RunFilterParameters
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.PipelineRunQueryResponse>
+      - ServiceCallback<azure-arm-datafactory.PipelineRunsQueryResponse>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.PipelineRunQueryResponse>
+      - Promise<azure-arm-datafactory.PipelineRunsQueryResponse>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.PipelineRuns.queryByFactoryWithHttpOperationResponse
   name: queryByFactoryWithHttpOperationResponse
@@ -259,33 +395,33 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="56d84-117">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="56d84-117">Query pipeline runs in the factory based on input filter conditions.</span></span>
+  summary: <span data-ttu-id="20914-127">Pipeline de consulta é executada na fábrica com base nas condições de filtro de entrada.</span><span class="sxs-lookup"><span data-stu-id="20914-127">Query pipeline runs in the factory based on input filter conditions.</span></span>
   syntax:
-    content: 'function queryByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, filterParameters: PipelineRunFilterParameters, options?: function)'
+    content: 'function queryByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, filterParameters: RunFilterParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-118">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="56d84-118">The resource group name.</span></span>
+        <span data-ttu-id="20914-128">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="20914-128">The resource group name.</span></span>
     - id: factoryName
       type:
       - string
       description: >
-        <span data-ttu-id="56d84-119">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="56d84-119">The factory name.</span></span>
+        <span data-ttu-id="20914-129">O nome de fábrica.</span><span class="sxs-lookup"><span data-stu-id="20914-129">The factory name.</span></span>
     - id: filterParameters
       type:
-      - azure-arm-datafactory.PipelineRunFilterParameters
+      - azure-arm-datafactory.RunFilterParameters
       description: >
-        <span data-ttu-id="56d84-120">Parâmetros para filtrar a execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="56d84-120">Parameters to filter the pipeline run.</span></span>
+        <span data-ttu-id="20914-130">Parâmetros para filtrar a execução do pipeline.</span><span class="sxs-lookup"><span data-stu-id="20914-130">Parameters to filter the pipeline run.</span></span>
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.PipelineRunQueryResponse>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.PipelineRunsQueryResponse>>
   package: azure-arm-datafactory
 references:
 - uid: Promise<azure-arm-datafactory.PipelineRun>
@@ -315,35 +451,35 @@ references:
     uid: azure-arm-datafactory.PipelineRun
   - name: '>>'
     fullName: '>>'
-- uid: azure-arm-datafactory.PipelineRunFilterParameters
+- uid: azure-arm-datafactory.RunFilterParameters
   spec.typeScript:
-  - name: PipelineRunFilterParameters
-    fullName: PipelineRunFilterParameters
-    uid: azure-arm-datafactory.PipelineRunFilterParameters
-- uid: Promise<azure-arm-datafactory.PipelineRunQueryResponse>
+  - name: RunFilterParameters
+    fullName: RunFilterParameters
+    uid: azure-arm-datafactory.RunFilterParameters
+- uid: Promise<azure-arm-datafactory.PipelineRunsQueryResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: PipelineRunQueryResponse
-    fullName: PipelineRunQueryResponse
-    uid: azure-arm-datafactory.PipelineRunQueryResponse
+  - name: PipelineRunsQueryResponse
+    fullName: PipelineRunsQueryResponse
+    uid: azure-arm-datafactory.PipelineRunsQueryResponse
   - name: '>'
     fullName: '>'
-- uid: ServiceCallback<azure-arm-datafactory.PipelineRunQueryResponse>
+- uid: ServiceCallback<azure-arm-datafactory.PipelineRunsQueryResponse>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: PipelineRunQueryResponse
-    fullName: PipelineRunQueryResponse
-    uid: azure-arm-datafactory.PipelineRunQueryResponse
+  - name: PipelineRunsQueryResponse
+    fullName: PipelineRunsQueryResponse
+    uid: azure-arm-datafactory.PipelineRunsQueryResponse
   - name: '>'
     fullName: '>'
-- uid: Promise<HttpOperationResponse<azure-arm-datafactory.PipelineRunQueryResponse>>
+- uid: Promise<HttpOperationResponse<azure-arm-datafactory.PipelineRunsQueryResponse>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: PipelineRunQueryResponse
-    fullName: PipelineRunQueryResponse
-    uid: azure-arm-datafactory.PipelineRunQueryResponse
+  - name: PipelineRunsQueryResponse
+    fullName: PipelineRunsQueryResponse
+    uid: azure-arm-datafactory.PipelineRunsQueryResponse
   - name: '>>'
     fullName: '>>'
