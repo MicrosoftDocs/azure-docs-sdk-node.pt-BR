@@ -35,7 +35,7 @@ npm install azure-arm-powerbiembedded
 
 ### <a name="example"></a>Exemplo
 
-Este exemplo cria uma coleção de espaço de trabalho em um grupo de recursos existente.
+Este exemplo cria uma coleção de workspaces em um grupo de recursos existente.
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');

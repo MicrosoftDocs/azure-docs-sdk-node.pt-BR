@@ -27,7 +27,7 @@ npm install azure-arm-operationalinsights
 
 ### <a name="example"></a>Exemplo 
 
-Este exemplo cria um cliente, conecta-se ao Insights Operacionais e recupera uma lista de espaços de trabalho por um grupo de recursos especificado.
+Este exemplo cria um cliente, conecta-se ao Insights Operacionais e recupera uma lista de workspaces por um grupo de recursos especificado.
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
