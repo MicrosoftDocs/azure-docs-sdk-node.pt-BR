@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 81958e3d928eb2fe7d391044e3242492e54a1011
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 98d52e21332138512d40ff2de9f5d3388fa596e4
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220538"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49675941"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Criar uma entidade de serviço do Azure com Node.js 
 
@@ -122,7 +122,7 @@ Para criar programaticamente uma entidade de serviço usando JavaScript, use o [
 
 ## <a name="using-the-service-principal"></a>Como usar a entidade de serviço
 
-Quando você tem uma entidade de serviço, o trecho de código JavaScript a seguir ilustra como usar as chaves de entidade de serviço para se autenticar com o SDK do Azure para Node.js. Modifique estes espaços reservados: &lt;clientId ou appId >, &lt;secret ou password > e &lt;domain ou tenant >,
+Quando você tem uma entidade de serviço, o snippet de código JavaScript a seguir ilustra como usar as chaves de entidade de serviço para se autenticar com o SDK do Azure para Node.js. Modifique estes espaços reservados: &lt;clientId ou appId >, &lt;secret ou password > e &lt;domain ou tenant >,
 
 ```javascript
 const Azure = require('azure');
