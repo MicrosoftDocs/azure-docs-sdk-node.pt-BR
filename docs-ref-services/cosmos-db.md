@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
 ms.openlocfilehash: 2e2813bb3b213de4066b2a3bc971586667a83f68
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49731949"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50334334"
 ---
-# <a name="azure-cosmos-db-modules-for-nodejs"></a><span data-ttu-id="f9fae-103">Módulos do Azure Cosmos DB para Node.js</span><span class="sxs-lookup"><span data-stu-id="f9fae-103">Azure Cosmos DB Modules for Node.js</span></span>
+# <a name="azure-cosmos-db-modules-for-nodejs"></a><span data-ttu-id="b0f1f-103">Módulos do Azure Cosmos DB para Node.js</span><span class="sxs-lookup"><span data-stu-id="b0f1f-103">Azure Cosmos DB Modules for Node.js</span></span>
 
-<span data-ttu-id="f9fae-104">O BD Cosmos do Azure é o multimodelo de banco de dados distribuído globalmente da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="f9fae-104">Azure Cosmos DB is Microsoft's globally distributed, multi-model database.</span></span> <span data-ttu-id="f9fae-105">O Azure Cosmos DB permite que você dimensione a taxa de transferência e o armazenamento de maneira elástica e independente em qualquer número de regiões geográficas do Azure.</span><span class="sxs-lookup"><span data-stu-id="f9fae-105">Azure Cosmos DB enables you to elastically and independently scale throughput and storage across any number of Azure's geographic regions.</span></span> <span data-ttu-id="f9fae-106">Ele oferece garantias de taxa de transferência, disponibilidade, latência e consistência com SLAs (contratos de nível de serviço) abrangentes, algo que nenhum outro serviço de banco de dados pode oferecer.</span><span class="sxs-lookup"><span data-stu-id="f9fae-106">It offers throughput, latency, availability, and consistency guarantees with comprehensive service level agreements (SLAs), something no other database service can offer.</span></span>
+<span data-ttu-id="b0f1f-104">O BD Cosmos do Azure é o multimodelo de banco de dados distribuído globalmente da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-104">Azure Cosmos DB is Microsoft's globally distributed, multi-model database.</span></span> <span data-ttu-id="b0f1f-105">O Azure Cosmos DB permite que você dimensione a taxa de transferência e o armazenamento de maneira elástica e independente em qualquer número de regiões geográficas do Azure.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-105">Azure Cosmos DB enables you to elastically and independently scale throughput and storage across any number of Azure's geographic regions.</span></span> <span data-ttu-id="b0f1f-106">Ele oferece garantias de taxa de transferência, disponibilidade, latência e consistência com SLAs (contratos de nível de serviço) abrangentes, algo que nenhum outro serviço de banco de dados pode oferecer.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-106">It offers throughput, latency, availability, and consistency guarantees with comprehensive service level agreements (SLAs), something no other database service can offer.</span></span>
 
-<span data-ttu-id="f9fae-107">O Azure Cosmos DB contém um mecanismo de banco de dados otimizado para gravação, governado por recursos, independente de esquemas que dá suporte a vários modelos de dados de forma nativa: chave-valor, documentos, grafos e colunares.</span><span class="sxs-lookup"><span data-stu-id="f9fae-107">Azure Cosmos DB contains a write optimized, resource governed, schema-agnostic database engine that natively supports multiple data models: key-value, documents, graphs, and columnar.</span></span> <span data-ttu-id="f9fae-108">Ele também dá suporte a muitas APIs para acessar dados, incluindo MongoDB, SQL, Gremlin/Graph, Tabelas do Azure e Cassandra (versão prévia), de forma extensível.</span><span class="sxs-lookup"><span data-stu-id="f9fae-108">It also supports many APIs for accessing data including MongoDB, SQL, Gremlin/Graph, Azure Tables, and Cassandra (preview) in an extensible manner.</span></span>
+<span data-ttu-id="b0f1f-107">O Azure Cosmos DB contém um mecanismo de banco de dados otimizado para gravação, governado por recursos, independente de esquemas que dá suporte a vários modelos de dados de forma nativa: chave-valor, documentos, grafos e colunares.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-107">Azure Cosmos DB contains a write optimized, resource governed, schema-agnostic database engine that natively supports multiple data models: key-value, documents, graphs, and columnar.</span></span> <span data-ttu-id="b0f1f-108">Ele também dá suporte a muitas APIs para acessar dados, incluindo MongoDB, SQL, Gremlin/Graph, Tabelas do Azure e Cassandra (versão prévia), de forma extensível.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-108">It also supports many APIs for accessing data including MongoDB, SQL, Gremlin/Graph, Azure Tables, and Cassandra (preview) in an extensible manner.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="f9fae-109">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="f9fae-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="b0f1f-109">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="b0f1f-109">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="f9fae-110">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="f9fae-110">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="b0f1f-110">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="b0f1f-110">Install the npm module</span></span> 
 
-<span data-ttu-id="f9fae-111">Instalar o módulo npm do Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="f9fae-111">Install the Azure Cosmos DB npm module.</span></span>
+<span data-ttu-id="b0f1f-111">Instalar o módulo npm do Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-111">Install the Azure Cosmos DB npm module.</span></span>
 
 ```bash
 npm install azure-arm-documentdb
 ```
 
-### <a name="example"></a><span data-ttu-id="f9fae-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f9fae-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="b0f1f-112">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b0f1f-112">Example</span></span>
 
-<span data-ttu-id="f9fae-113">Este exemplo lista todas as contas do Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="f9fae-113">This example lists all Azure Cosmos DB accounts.</span></span>
+<span data-ttu-id="b0f1f-113">Este exemplo lista todas as contas do Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-113">This example lists all Azure Cosmos DB accounts.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,9 +51,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="f9fae-114">Exemplos</span><span class="sxs-lookup"><span data-stu-id="f9fae-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="b0f1f-114">Exemplos</span><span class="sxs-lookup"><span data-stu-id="b0f1f-114">Samples</span></span>
 
-* [<span data-ttu-id="f9fae-115">Desenvolvimento de um aplicativo Node.js usando o Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="f9fae-115">Developing a Node.js app using Azure Cosmos DB</span></span>](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/)
-* [<span data-ttu-id="f9fae-116">Desenvolvimento de um aplicativo Node.js usando o Azure Cosmos DB - Gremlin</span><span class="sxs-lookup"><span data-stu-id="f9fae-116">Developing a Node.js app using Azure Cosmos DB - Gremlin</span></span>](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/)
+* [<span data-ttu-id="b0f1f-115">Desenvolvimento de um aplicativo Node.js usando o Azure Cosmos DB</span><span class="sxs-lookup"><span data-stu-id="b0f1f-115">Developing a Node.js app using Azure Cosmos DB</span></span>](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-nodejs-getting-started/)
+* [<span data-ttu-id="b0f1f-116">Desenvolvimento de um aplicativo Node.js usando o Azure Cosmos DB - Gremlin</span><span class="sxs-lookup"><span data-stu-id="b0f1f-116">Developing a Node.js app using Azure Cosmos DB - Gremlin</span></span>](https://azure.microsoft.com/resources/samples/azure-cosmos-db-graph-nodejs-getting-started/)
 
-<span data-ttu-id="f9fae-117">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="f9fae-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="b0f1f-117">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="b0f1f-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

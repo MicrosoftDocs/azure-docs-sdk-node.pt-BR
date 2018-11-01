@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
 ms.openlocfilehash: 9a842919fddb3d6448d5a4e951dc58dd0d3211e0
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49747471"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50406472"
 ---
-# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="dafc5-103">Módulos de Agendador do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="dafc5-103">Azure Scheduler modules for Node.js</span></span>
+# <a name="azure-scheduler-modules-for-nodejs"></a><span data-ttu-id="155e5-103">Módulos de Agendador do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="155e5-103">Azure Scheduler modules for Node.js</span></span>
 
-<span data-ttu-id="dafc5-104">O Agendador do Azure cria, mantém e invoca o trabalho agendado por meio de HTTP, HTTPS, uma fila de armazenamento ou do [Barramento de Serviço do Azure](/azure/service-bus-messaging/service-bus-messaging-overview).</span><span class="sxs-lookup"><span data-stu-id="dafc5-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
+<span data-ttu-id="155e5-104">O Agendador do Azure cria, mantém e invoca o trabalho agendado por meio de HTTP, HTTPS, uma fila de armazenamento ou do [Barramento de Serviço do Azure](/azure/service-bus-messaging/service-bus-messaging-overview).</span><span class="sxs-lookup"><span data-stu-id="155e5-104">Azure Scheduler creates, maintains, and invokes scheduled work via HTTP, HTTPS, a storage queue, or the [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview).</span></span>
 
-<span data-ttu-id="dafc5-105">Saiba mais sobre o [Agendador do Azure](/azure/scheduler/scheduler-intro).</span><span class="sxs-lookup"><span data-stu-id="dafc5-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
+<span data-ttu-id="155e5-105">Saiba mais sobre o [Agendador do Azure](/azure/scheduler/scheduler-intro).</span><span class="sxs-lookup"><span data-stu-id="155e5-105">Learn more about [Azure Scheduler](/azure/scheduler/scheduler-intro).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="dafc5-106">Pacote de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="dafc5-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="155e5-106">Pacote de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="155e5-106">Management package</span></span>
 
-<span data-ttu-id="dafc5-107">Crie, mantenha e invoque o trabalho agendado em vários canais de comunicação com a API de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="dafc5-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
+<span data-ttu-id="155e5-107">Crie, mantenha e invoque o trabalho agendado em vários canais de comunicação com a API de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="155e5-107">Create, maintain, and invoke scheduled work across various communication channels with the management API.</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="dafc5-108">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="dafc5-108">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="155e5-108">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="155e5-108">Install the npm module</span></span>
 
-<span data-ttu-id="dafc5-109">Instalar o módulo npm de Agendador do Azure</span><span class="sxs-lookup"><span data-stu-id="dafc5-109">Install the Azure Scheduler npm module</span></span>
+<span data-ttu-id="155e5-109">Instalar o módulo npm de Agendador do Azure</span><span class="sxs-lookup"><span data-stu-id="155e5-109">Install the Azure Scheduler npm module</span></span>
 
 ```bash
 npm install azure-arm-scheduler
 ```
 
-### <a name="example"></a><span data-ttu-id="dafc5-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="dafc5-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="155e5-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="155e5-110">Example</span></span>
 
-<span data-ttu-id="dafc5-111">Este exemplo lista os agendadores atuais.</span><span class="sxs-lookup"><span data-stu-id="dafc5-111">This examples lists the current schedulers.</span></span>
+<span data-ttu-id="155e5-111">Este exemplo lista os agendadores atuais.</span><span class="sxs-lookup"><span data-stu-id="155e5-111">This examples lists the current schedulers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure')
@@ -57,6 +57,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 })
 ```
 
-## <a name="samples"></a><span data-ttu-id="dafc5-112">Exemplos</span><span class="sxs-lookup"><span data-stu-id="dafc5-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="155e5-112">Exemplos</span><span class="sxs-lookup"><span data-stu-id="155e5-112">Samples</span></span>
 
-<span data-ttu-id="dafc5-113">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="dafc5-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="155e5-113">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="155e5-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
