@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
 ms.openlocfilehash: e712bf500bef94327f49a05e4ae31e5d3eb0400d
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49674261"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50294199"
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Módulos de Gerenciamento do Servidor do Azure para Node.js
 
