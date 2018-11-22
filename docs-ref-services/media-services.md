@@ -11,34 +11,34 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
 ms.openlocfilehash: bfd4402c215a81c9ed8753cfe9ad9dbfaa52bd6f
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51374980"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52145801"
 ---
-# <a name="azure-media-services-modules-for-nodejs"></a><span data-ttu-id="689f7-103">Módulos de Serviços de Mídia do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="689f7-103">Azure Media Services modules for Node.js</span></span>
+# <a name="azure-media-services-modules-for-nodejs"></a><span data-ttu-id="06639-103">Módulos de Serviços de Mídia do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="06639-103">Azure Media Services modules for Node.js</span></span>
 
-<span data-ttu-id="689f7-104">Os Serviços de Mídia do Azure são uma plataforma extensível baseada em nuvem que permite aos desenvolvedores compilar aplicativos de gerenciamento e entrega de mídia escalonável.</span><span class="sxs-lookup"><span data-stu-id="689f7-104">Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications.</span></span> <span data-ttu-id="689f7-105">Os serviços de mídia se baseiam em APIs REST que permitem que você carregue com segurança, armazene, codifique e empacote o conteúdo de áudio ou vídeo para entrega de streaming sob demanda e ao vivo para vários clientes (por exemplo, TV, PCs e dispositivos móveis).</span><span class="sxs-lookup"><span data-stu-id="689f7-105">Media Services is based on REST APIs that enable you to securely upload, store, encode, and package video or audio content for both on-demand and live streaming delivery to various clients (for example, TV, PC, and mobile devices).</span></span>
+<span data-ttu-id="06639-104">Os Serviços de Mídia do Azure são uma plataforma extensível baseada em nuvem que permite aos desenvolvedores compilar aplicativos de gerenciamento e entrega de mídia escalonável.</span><span class="sxs-lookup"><span data-stu-id="06639-104">Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications.</span></span> <span data-ttu-id="06639-105">Os serviços de mídia se baseiam em APIs REST que permitem que você carregue com segurança, armazene, codifique e empacote o conteúdo de áudio ou vídeo para entrega de streaming sob demanda e ao vivo para vários clientes (por exemplo, TV, PCs e dispositivos móveis).</span><span class="sxs-lookup"><span data-stu-id="06639-105">Media Services is based on REST APIs that enable you to securely upload, store, encode, and package video or audio content for both on-demand and live streaming delivery to various clients (for example, TV, PC, and mobile devices).</span></span>
 
-<span data-ttu-id="689f7-106">Com os Serviços de Mídia do Azure, você pode:</span><span class="sxs-lookup"><span data-stu-id="689f7-106">With Azure Media Services, you can:</span></span>
-- <span data-ttu-id="689f7-107">Compilar fluxos de trabalho de ponta a ponta usando completamente os Serviços de Mídia.</span><span class="sxs-lookup"><span data-stu-id="689f7-107">Build end-to-end workflows using entirely Media Services.</span></span> 
-- <span data-ttu-id="689f7-108">Use componentes de terceiros para algumas partes do seu fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="689f7-108">Use third-party components for some parts of your workflow.</span></span> <span data-ttu-id="689f7-109">Por exemplo, codifique usando um codificador de terceiros.</span><span class="sxs-lookup"><span data-stu-id="689f7-109">For example, encode using a third-party encoder.</span></span> <span data-ttu-id="689f7-110">Em seguida, carregue, proteja, empacote e entregue usando os serviços de mídia.</span><span class="sxs-lookup"><span data-stu-id="689f7-110">Then, upload, protect, package, deliver using Media Services.</span></span>
-- <span data-ttu-id="689f7-111">Transmita seu conteúdo ao vivo ou forneça conteúdo sob demanda.</span><span class="sxs-lookup"><span data-stu-id="689f7-111">Stream your content live or deliver content on-demand.</span></span> <span data-ttu-id="689f7-112">O tópico também está vinculado a outros tópicos relevantes.</span><span class="sxs-lookup"><span data-stu-id="689f7-112">The topic also links to other relevant topics.</span></span>
+<span data-ttu-id="06639-106">Com os Serviços de Mídia do Azure, você pode:</span><span class="sxs-lookup"><span data-stu-id="06639-106">With Azure Media Services, you can:</span></span>
+- <span data-ttu-id="06639-107">Compilar fluxos de trabalho de ponta a ponta usando completamente os Serviços de Mídia.</span><span class="sxs-lookup"><span data-stu-id="06639-107">Build end-to-end workflows using entirely Media Services.</span></span> 
+- <span data-ttu-id="06639-108">Use componentes de terceiros para algumas partes do seu fluxo de trabalho.</span><span class="sxs-lookup"><span data-stu-id="06639-108">Use third-party components for some parts of your workflow.</span></span> <span data-ttu-id="06639-109">Por exemplo, codifique usando um codificador de terceiros.</span><span class="sxs-lookup"><span data-stu-id="06639-109">For example, encode using a third-party encoder.</span></span> <span data-ttu-id="06639-110">Em seguida, carregue, proteja, empacote e entregue usando os serviços de mídia.</span><span class="sxs-lookup"><span data-stu-id="06639-110">Then, upload, protect, package, deliver using Media Services.</span></span>
+- <span data-ttu-id="06639-111">Transmita seu conteúdo ao vivo ou forneça conteúdo sob demanda.</span><span class="sxs-lookup"><span data-stu-id="06639-111">Stream your content live or deliver content on-demand.</span></span> <span data-ttu-id="06639-112">O tópico também está vinculado a outros tópicos relevantes.</span><span class="sxs-lookup"><span data-stu-id="06639-112">The topic also links to other relevant topics.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="689f7-113">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="689f7-113">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="06639-113">Pacote de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="06639-113">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="689f7-114">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="689f7-114">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="06639-114">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="06639-114">Install the npm module</span></span>
 
-<span data-ttu-id="689f7-115">Instalar o módulo npm de serviços de mídia do Azure</span><span class="sxs-lookup"><span data-stu-id="689f7-115">Install the Azure media services npm module</span></span>
+<span data-ttu-id="06639-115">Instalar o módulo npm de serviços de mídia do Azure</span><span class="sxs-lookup"><span data-stu-id="06639-115">Install the Azure media services npm module</span></span>
 
 ```bash
 npm install azure-arm-mediaservices
 ```
 
-### <a name="example"></a><span data-ttu-id="689f7-116">Exemplo</span><span class="sxs-lookup"><span data-stu-id="689f7-116">Example</span></span>
+### <a name="example"></a><span data-ttu-id="06639-116">Exemplo</span><span class="sxs-lookup"><span data-stu-id="06639-116">Example</span></span>
 
-<span data-ttu-id="689f7-117">Este exemplo lista todos os serviços de mídia para um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="689f7-117">This example lists all media services for a resource group.</span></span>
+<span data-ttu-id="06639-117">Este exemplo lista todos os serviços de mídia para um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="06639-117">This example lists all media services for a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="689f7-118">Exemplos</span><span class="sxs-lookup"><span data-stu-id="689f7-118">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="06639-118">Exemplos</span><span class="sxs-lookup"><span data-stu-id="06639-118">Samples</span></span>
 
-<span data-ttu-id="689f7-119">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="689f7-119">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="06639-119">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="06639-119">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
