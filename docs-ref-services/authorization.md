@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
 ms.openlocfilehash: 0b0ecd088d8b7728e56f352597e2db038678945f
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51480840"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52048371"
 ---
-# <a name="azure-authorization-modules-for-nodejs"></a><span data-ttu-id="a1b58-103">Módulos de Autorização do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="a1b58-103">Azure Authorization modules for Node.js</span></span>
+# <a name="azure-authorization-modules-for-nodejs"></a><span data-ttu-id="af615-103">Módulos de Autorização do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="af615-103">Azure Authorization modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="a1b58-104">Visão geral</span><span class="sxs-lookup"><span data-stu-id="a1b58-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="af615-104">Visão geral</span><span class="sxs-lookup"><span data-stu-id="af615-104">Overview</span></span>
 
-<span data-ttu-id="a1b58-105">A Autenticação/Autorização do Serviço de Aplicativo do Azure é um recurso que oferece uma maneira para seu aplicativo conectar usuários de forma que o código não precise ser alterado no back-end do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="a1b58-105">Azure App Service Authentication / Authorization is a feature that provides a way for your application to sign in users so that code doesn't have to be changed on the app backend.</span></span> <span data-ttu-id="a1b58-106">A autorização fornece uma maneira fácil de proteger o aplicativo e trabalhar com dados por usuário.</span><span class="sxs-lookup"><span data-stu-id="a1b58-106">Authorization provides an easy way to protect your application and work with per-user data.</span></span>
+<span data-ttu-id="af615-105">A Autenticação/Autorização do Serviço de Aplicativo do Azure é um recurso que oferece uma maneira para seu aplicativo conectar usuários de forma que o código não precise ser alterado no back-end do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="af615-105">Azure App Service Authentication / Authorization is a feature that provides a way for your application to sign in users so that code doesn't have to be changed on the app backend.</span></span> <span data-ttu-id="af615-106">A autorização fornece uma maneira fácil de proteger o aplicativo e trabalhar com dados por usuário.</span><span class="sxs-lookup"><span data-stu-id="af615-106">Authorization provides an easy way to protect your application and work with per-user data.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="a1b58-107">Pacote de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="a1b58-107">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="af615-107">Pacote de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="af615-107">Management package</span></span>
 
-<span data-ttu-id="a1b58-108">Use npm para instalar os módulos de Autorização do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="a1b58-108">Use npm to install the Azure Authorization modules for Node.js</span></span>
+<span data-ttu-id="af615-108">Use npm para instalar os módulos de Autorização do Azure para Node.js</span><span class="sxs-lookup"><span data-stu-id="af615-108">Use npm to install the Azure Authorization modules for Node.js</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="a1b58-109">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="a1b58-109">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="af615-109">Instalar o módulo npm</span><span class="sxs-lookup"><span data-stu-id="af615-109">Install the npm module</span></span>
 
-<span data-ttu-id="a1b58-110">Instalar o módulo npm de autorização do Azure</span><span class="sxs-lookup"><span data-stu-id="a1b58-110">Install the Azure authorization npm module</span></span>
+<span data-ttu-id="af615-110">Instalar o módulo npm de autorização do Azure</span><span class="sxs-lookup"><span data-stu-id="af615-110">Install the Azure authorization npm module</span></span>
 
 ```bash
 npm install azure-arm-authorization
 ```
 
-### <a name="example"></a><span data-ttu-id="a1b58-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a1b58-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="af615-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="af615-111">Example</span></span>
 
-<span data-ttu-id="a1b58-112">Este exemplo lista todas as atribuições de função para o grupo de recursos solicitado.</span><span class="sxs-lookup"><span data-stu-id="a1b58-112">This example lists all role assignments for the requested resource group.</span></span>
+<span data-ttu-id="af615-112">Este exemplo lista todas as atribuições de função para o grupo de recursos solicitado.</span><span class="sxs-lookup"><span data-stu-id="af615-112">This example lists all role assignments for the requested resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="a1b58-113">Exemplos</span><span class="sxs-lookup"><span data-stu-id="a1b58-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="af615-113">Exemplos</span><span class="sxs-lookup"><span data-stu-id="af615-113">Samples</span></span>
 
-<span data-ttu-id="a1b58-114">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="a1b58-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="af615-114">Explore mais [códigos Node.js de exemplo](https://azure.microsoft.com/resources/samples/?platform=nodejs) que você pode usar em seus aplicativos.</span><span class="sxs-lookup"><span data-stu-id="af615-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
