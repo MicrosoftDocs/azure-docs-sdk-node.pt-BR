@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4557e6fbf7a07e424f47a9df6388b7ffe440975
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52075226"
+items:
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  fullName: ReconfigurationInformation
+  children:
+  - azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  - azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="d1516-101">Informações sobre a reconfiguração atual como fase, tipo, a função de configuração anterior da réplica e reconfiguração de data/hora inicial.</span><span class="sxs-lookup"><span data-stu-id="d1516-101">Information about current reconfiguration like phase, type, previous configuration role of replica and reconfiguration start date time.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.previousConfigurationRole
+  name: previousConfigurationRole
+  fullName: previousConfigurationRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"d1516-102\">Função da réplica antes de reconfiguração iniciado.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-102\">Replica role before reconfiguration started.</span></span> <span data-ttu-id=\"d1516-103\">Os valores possíveis incluem: 'Unknown', 'None', 'Primary', 'IdleSecondary', 'ActiveSecondary'</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-103\">Possible values include: 'Unknown', 'None', 'Primary', 'IdleSecondary', 'ActiveSecondary'</span></span>"
+  optional: true
+  syntax:
+    content: 'previousConfigurationRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationPhase
+  name: reconfigurationPhase
+  fullName: reconfigurationPhase
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"d1516-104\">Fase atual da reconfiguração em andamento.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-104\">Current phase of ongoing reconfiguration.</span></span> <span data-ttu-id=\"d1516-105\">Se nenhuma reconfiguração estiver ocorrendo, em seguida, esse valor será \"None\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-105\">If no reconfiguration is taking place then this value will be \"None\".</span></span> <span data-ttu-id=\"d1516-106\">Os valores possíveis incluem: 'Unknown', 'None', 'Phase0', 'Phase1', 'Phase2', 'Phase3', 'Phase4', 'AbortPhaseZero'</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-106\">Possible values include: 'Unknown', 'None', 'Phase0', 'Phase1', 'Phase2', 'Phase3', 'Phase4', 'AbortPhaseZero'</span></span>"
+  optional: true
+  syntax:
+    content: 'reconfigurationPhase?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationStartTimeUtc
+  name: reconfigurationStartTimeUtc
+  fullName: reconfigurationStartTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d1516-107">Hora de início (em UTC) da reconfiguração em andamento.</span><span class="sxs-lookup"><span data-stu-id="d1516-107">Start time (in UTC) of the ongoing reconfiguration.</span></span> <span data-ttu-id="d1516-108">Se nenhuma reconfiguração estiver ocorrendo, em seguida, esse valor será zero data e hora.</span><span class="sxs-lookup"><span data-stu-id="d1516-108">If no reconfiguration is taking place then this value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'reconfigurationStartTimeUtc?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReconfigurationInformation.reconfigurationType
+  name: reconfigurationType
+  fullName: reconfigurationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"d1516-109\">Tipo de reconfiguração em andamento atual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-109\">Type of current ongoing reconfiguration.</span></span> <span data-ttu-id=\"d1516-110\">Se nenhuma reconfiguração estiver ocorrendo, em seguida, esse valor será \"None\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-110\">If no reconfiguration is taking place then this value will be \"None\".</span></span> <span data-ttu-id=\"d1516-111\">Os valores possíveis incluem: 'Unknown', 'SwapPrimary', 'Failover', 'Outro'</span><span class=\"sxs-lookup\"><span data-stu-id=\"d1516-111\">Possible values include: 'Unknown', 'SwapPrimary', 'Failover', 'Other'</span></span>"
+  optional: true
+  syntax:
+    content: 'reconfigurationType?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

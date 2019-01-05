@@ -1,0 +1,318 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 03759da9e8d767d0d8971b01fde29555842a4fad
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52107601"
+items:
+- uid: azure-servicefabric.NodeInfo
+  name: NodeInfo
+  fullName: NodeInfo
+  children:
+  - azure-servicefabric.NodeInfo.codeVersion
+  - azure-servicefabric.NodeInfo.configVersion
+  - azure-servicefabric.NodeInfo.faultDomain
+  - azure-servicefabric.NodeInfo.healthState
+  - azure-servicefabric.NodeInfo.id
+  - azure-servicefabric.NodeInfo.instanceId
+  - azure-servicefabric.NodeInfo.ipAddressOrFQDN
+  - azure-servicefabric.NodeInfo.isSeedNode
+  - azure-servicefabric.NodeInfo.isStopped
+  - azure-servicefabric.NodeInfo.name
+  - azure-servicefabric.NodeInfo.nodeDeactivationInfo
+  - azure-servicefabric.NodeInfo.nodeDownAt
+  - azure-servicefabric.NodeInfo.nodeDownTimeInSeconds
+  - azure-servicefabric.NodeInfo.nodeStatus
+  - azure-servicefabric.NodeInfo.nodeUpAt
+  - azure-servicefabric.NodeInfo.nodeUpTimeInSeconds
+  - azure-servicefabric.NodeInfo.type
+  - azure-servicefabric.NodeInfo.upgradeDomain
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="2cd6a-101">Informações sobre um nó no cluster do Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-101">Information about a node in Service Fabric cluster.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.codeVersion
+  name: codeVersion
+  fullName: codeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-102">A versão dos binários do Service Fabric que o nó está em execução.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-102">The version of Service Fabric binaries that the node is running.</span></span>
+  optional: true
+  syntax:
+    content: 'codeVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.configVersion
+  name: configVersion
+  fullName: configVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-103">A versão do manifesto do cluster do Service Fabric que o nó está usando.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-103">The version of Service Fabric cluster manifest that the node is using.</span></span>
+  optional: true
+  syntax:
+    content: 'configVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.faultDomain
+  name: faultDomain
+  fullName: faultDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-104">O domínio de falha do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-104">The fault domain of the node.</span></span>
+  optional: true
+  syntax:
+    content: 'faultDomain?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"2cd6a-105\">O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'</span><span class=\"sxs-lookup\"><span data-stu-id=\"2cd6a-105\">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>"
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-106">Uma ID interna usada pelo Service Fabric para identificar exclusivamente um nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-106">An internal ID used by Service Fabric to uniquely identify a node.</span></span> <span data-ttu-id="2cd6a-107">Id do nó determinística, é gerada do nome do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-107">Node Id is deterministically generated from node name.</span></span>
+  optional: true
+  syntax:
+    content: 'id?: NodeId'
+    return:
+      type:
+      - azure-servicefabric.NodeId
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-108">A ID que representa a instância do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-108">The ID representing the node instance.</span></span> <span data-ttu-id="2cd6a-109">Enquanto a ID do nó de forma determinista é gerada do nome do nó e permanece o mesma entre as reinicializações, a ID da instância é alterado sempre que o nó for reiniciado.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-109">While the ID of the node is deterministically generated from the node name and remains same across restarts, the InstanceId changes every time node restarts.</span></span>
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.ipAddressOrFQDN
+  name: ipAddressOrFQDN
+  fullName: ipAddressOrFQDN
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-110">O endereço IP ou nome de domínio totalmente qualificado do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-110">The IP address or fully qualified domain name of the node.</span></span>
+  optional: true
+  syntax:
+    content: 'ipAddressOrFQDN?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.isSeedNode
+  name: isSeedNode
+  fullName: isSeedNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-111">Indica se o nó é um nó de propagação ou não.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-111">Indicates if the node is a seed node or not.</span></span> <span data-ttu-id="2cd6a-112">Retorna VERDADEIRO se o nó for um nó de propagação, caso contrário, false.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-112">Returns true if the node is a seed node, otherwise false.</span></span> <span data-ttu-id="2cd6a-113">Um quorum de nós de semente são necessários para a operação correta de cluster do Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-113">A quorum of seed nodes are required for proper operation of Service Fabric cluster.</span></span>
+  optional: true
+  syntax:
+    content: 'isSeedNode?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.isStopped
+  name: isStopped
+  fullName: isStopped
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-114">Indica se o nó for interrompido, chamando a API de nó de parada ou não.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-114">Indicates if the node is stopped by calling stop node API or not.</span></span> <span data-ttu-id="2cd6a-115">Retorna VERDADEIRO se o nó for parado, caso contrário, false.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-115">Returns true if the node is stopped, otherwise false.</span></span>
+  optional: true
+  syntax:
+    content: 'isStopped?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-116">O nome de um nó do Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-116">The name of a Service Fabric node.</span></span>
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDeactivationInfo
+  name: nodeDeactivationInfo
+  fullName: nodeDeactivationInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-117">Informações sobre a desativação do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-117">Information about the node deactivation.</span></span> <span data-ttu-id="2cd6a-118">Essas informações são válidas para um nó que está passando por uma desativação ou já foi desativado.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-118">This information is valid for a node that is undergoing deactivation or has already been deactivated.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeDeactivationInfo?: NodeDeactivationInfo'
+    return:
+      type:
+      - azure-servicefabric.NodeDeactivationInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDownAt
+  name: nodeDownAt
+  fullName: nodeDownAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-119">Data e hora em UTC quando o nó foi desativado.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-119">Date time in UTC when the node went down.</span></span> <span data-ttu-id="2cd6a-120">Se nunca tiver sido o nó para baixo, em seguida, esse valor será zero tempo de data.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-120">If node has never been down then this value will be zero date time.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeDownAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeDownTimeInSeconds
+  name: nodeDownTimeInSeconds
+  fullName: nodeDownTimeInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-121">Tempo em segundos, desde que o nó esteve em busca de NodeStatus.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-121">Time in seconds since the node has been in NodeStatus Down.</span></span> <span data-ttu-id="2cd6a-122">O valor zero indica que o nó não é baixo NodeStatus.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-122">Value zero indicates node is not NodeStatus Down.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeDownTimeInSeconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeStatus
+  name: nodeStatus
+  fullName: nodeStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"2cd6a-123\">O status do nó.</span><span class=\"sxs-lookup\"><span data-stu-id=\"2cd6a-123\">The status of the node.</span></span> <span data-ttu-id=\"2cd6a-124\">Os valores possíveis incluem: 'Inválido', 'Up', 'abaixo', 'Habilitar', 'Desabilitar', 'Desabilitado', 'Unknown', 'Removido'</span><span class=\"sxs-lookup\"><span data-stu-id=\"2cd6a-124\">Possible values include: 'Invalid', 'Up', 'Down', 'Enabling', 'Disabling', 'Disabled', 'Unknown', 'Removed'</span></span>"
+  optional: true
+  syntax:
+    content: 'nodeStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeUpAt
+  name: nodeUpAt
+  fullName: nodeUpAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-125">Data e hora em UTC quando o nó surgiu.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-125">Date time in UTC when the node came up.</span></span> <span data-ttu-id="2cd6a-126">Se o nó nunca tiver sido backup, em seguida, esse valor será zero tempo de data.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-126">If the node has never been up then this value will be zero date time.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeUpAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.nodeUpTimeInSeconds
+  name: nodeUpTimeInSeconds
+  fullName: nodeUpTimeInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-127">Tempo em segundos, desde que o nó foi até NodeStatus.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-127">Time in seconds since the node has been in NodeStatus Up.</span></span> <span data-ttu-id="2cd6a-128">O valor zero indica que o nó não está funcional.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-128">Value zero indicates that the node is not Up.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeUpTimeInSeconds?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-129">O tipo do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-129">The type of the node.</span></span>
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeInfo.upgradeDomain
+  name: upgradeDomain
+  fullName: upgradeDomain
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="2cd6a-130">O domínio de atualização do nó.</span><span class="sxs-lookup"><span data-stu-id="2cd6a-130">The upgrade domain of the node.</span></span>
+  optional: true
+  syntax:
+    content: 'upgradeDomain?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.NodeId
+  name: NodeId
+  spec.typeScript:
+  - name: NodeId
+    fullName: NodeId
+    uid: azure-servicefabric.NodeId
+- uid: azure-servicefabric.NodeDeactivationInfo
+  name: NodeDeactivationInfo
+  spec.typeScript:
+  - name: NodeDeactivationInfo
+    fullName: NodeDeactivationInfo
+    uid: azure-servicefabric.NodeDeactivationInfo

@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: aebd07dd9f7c35e7e22ab27782bf2d6a74d8d9d0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057921"
+items:
+- uid: azure-servicefabric.DeployedServiceReplicaInfo
+  name: DeployedServiceReplicaInfo
+  fullName: DeployedServiceReplicaInfo
+  children:
+  - azure-servicefabric.DeployedServiceReplicaInfo.address
+  - azure-servicefabric.DeployedServiceReplicaInfo.codePackageName
+  - azure-servicefabric.DeployedServiceReplicaInfo.hostProcessId
+  - azure-servicefabric.DeployedServiceReplicaInfo.partitionId
+  - azure-servicefabric.DeployedServiceReplicaInfo.replicaStatus
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceKind
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceManifestName
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceName
+  - azure-servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId
+  - azure-servicefabric.DeployedServiceReplicaInfo.serviceTypeName
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="97109-101">Informações sobre uma réplica de serviço do Service Fabric implantada em um nó.</span><span class="sxs-lookup"><span data-stu-id="97109-101">Information about a Service Fabric service replica deployed on a node.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.address
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-102">O último endereço retornado pela réplica em aberto ou ChangeRole.</span><span class="sxs-lookup"><span data-stu-id="97109-102">The last address returned by the replica in Open or ChangeRole.</span></span>
+  optional: true
+  syntax:
+    content: 'address?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.codePackageName
+  name: codePackageName
+  fullName: codePackageName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-103">O nome do pacote de código que hospeda esta réplica.</span><span class="sxs-lookup"><span data-stu-id="97109-103">The name of the code package that hosts this replica.</span></span>
+  optional: true
+  syntax:
+    content: 'codePackageName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.hostProcessId
+  name: hostProcessId
+  fullName: hostProcessId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-104">ID do processo de host do processo que está hospedando a réplica.</span><span class="sxs-lookup"><span data-stu-id="97109-104">Host process ID of the process that is hosting the replica.</span></span> <span data-ttu-id="97109-105">Isso será zero se a réplica está inoperante.</span><span class="sxs-lookup"><span data-stu-id="97109-105">This will be zero if the replica is down.</span></span> <span data-ttu-id="97109-106">Essa ID de processo do host será de kernel diferente em contêineres do hyper-v.</span><span class="sxs-lookup"><span data-stu-id="97109-106">In hyper-v containers this host process ID will be from different kernel.</span></span>
+  optional: true
+  syntax:
+    content: 'hostProcessId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-107">Uma ID interna usada pelo Service Fabric para identificar exclusivamente uma partição.</span><span class="sxs-lookup"><span data-stu-id="97109-107">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="97109-108">Isso é um GUID gerado aleatoriamente quando o serviço foi criado.</span><span class="sxs-lookup"><span data-stu-id="97109-108">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="97109-109">A ID de partição é exclusiva e não altera o tempo de vida do serviço.</span><span class="sxs-lookup"><span data-stu-id="97109-109">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="97109-110">Se o mesmo serviço foi excluído e recriado as IDs de suas partições seria diferente.</span><span class="sxs-lookup"><span data-stu-id="97109-110">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.replicaStatus
+  name: replicaStatus
+  fullName: replicaStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"97109-111\">O status de uma réplica de um serviço.</span><span class=\"sxs-lookup\"><span data-stu-id=\"97109-111\">The status of a replica of a service.</span></span> <span data-ttu-id=\"97109-112\">Os valores possíveis incluem: 'Inválido', 'InBuild', 'Espera', 'Pronto', 'Inativo', 'Solto'</span><span class=\"sxs-lookup\"><span data-stu-id=\"97109-112\">Possible values include: 'Invalid', 'InBuild', 'Standby', 'Ready', 'Down', 'Dropped'</span></span>"
+  optional: true
+  syntax:
+    content: 'replicaStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-113">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="97109-113">Polymorphic Discriminator</span></span>
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-114">O nome do manifesto do serviço no qual esse tipo de serviço é definido.</span><span class="sxs-lookup"><span data-stu-id="97109-114">The name of the service manifest in which this service type is defined.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceManifestName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceName
+  name: serviceName
+  fullName: serviceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-115">O nome completo do serviço com ' fabric:' Esquema de URI.</span><span class="sxs-lookup"><span data-stu-id="97109-115">The full name of the service with 'fabric:' URI scheme.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-116">ActivationId de um pacote de serviço implantado.</span><span class="sxs-lookup"><span data-stu-id="97109-116">The ActivationId of a deployed service package.</span></span> <span data-ttu-id="97109-117">Se ServicePackageActivationMode especificado no momento da criação do serviço é 'SharedProcess' (ou se não for especificado, caso em que o padrão será 'SharedProcess'), o valor de ServicePackageActivationId sempre é uma cadeia de caracteres vazia.</span><span class="sxs-lookup"><span data-stu-id="97109-117">If ServicePackageActivationMode specified at the time of creating the service is 'SharedProcess' (or if it is not specified, in which case it defaults to 'SharedProcess'), then value of ServicePackageActivationId is always an empty string.</span></span>
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServiceReplicaInfo.serviceTypeName
+  name: serviceTypeName
+  fullName: serviceTypeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="97109-118">Nome do tipo de serviço conforme especificado no manifesto do serviço.</span><span class="sxs-lookup"><span data-stu-id="97109-118">Name of the service type as specified in the service manifest.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceTypeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
