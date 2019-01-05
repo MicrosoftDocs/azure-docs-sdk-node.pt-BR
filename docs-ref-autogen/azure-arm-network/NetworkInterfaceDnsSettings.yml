@@ -1,0 +1,97 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1cd25ad1e1b4790c82642bbdd0a9f4b795b82ca3
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53680520"
+items:
+- uid: azure-arm-network.NetworkInterfaceDnsSettings
+  name: NetworkInterfaceDnsSettings
+  fullName: NetworkInterfaceDnsSettings
+  children:
+  - azure-arm-network.NetworkInterfaceDnsSettings.appliedDnsServers
+  - azure-arm-network.NetworkInterfaceDnsSettings.dnsServers
+  - azure-arm-network.NetworkInterfaceDnsSettings.internalDnsNameLabel
+  - azure-arm-network.NetworkInterfaceDnsSettings.internalDomainNameSuffix
+  - azure-arm-network.NetworkInterfaceDnsSettings.internalFqdn
+  langs:
+  - typeScript
+  type: interface
+  summary: Configurações de DNS de um adaptador de rede.
+  package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceDnsSettings.appliedDnsServers
+  name: appliedDnsServers
+  fullName: appliedDnsServers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se a VM que usa esta NIC for parte de um conjunto de disponibilidade, essa lista terá a união de todos os servidores DNS de todas as NICs que fazem parte do conjunto de disponibilidade. Essa propriedade é o que é configurado em cada uma dessas VMs.
+  optional: true
+  syntax:
+    content: 'appliedDnsServers?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceDnsSettings.dnsServers
+  name: dnsServers
+  fullName: dnsServers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de endereços IP de servidores DNS. Use "AzureProvidedDNS" para alternar para o azure fornecidas a resolução de DNS. O valor "AzureProvidedDNS" não pode ser combinado com outros IPs, ele deve ser o único valor na coleção dnsServers.
+  optional: true
+  syntax:
+    content: 'dnsServers?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceDnsSettings.internalDnsNameLabel
+  name: internalDnsNameLabel
+  fullName: internalDnsNameLabel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nome DNS relativo para esta NIC usada para comunicações internas entre VMs na mesma rede virtual.
+  optional: true
+  syntax:
+    content: 'internalDnsNameLabel?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceDnsSettings.internalDomainNameSuffix
+  name: internalDomainNameSuffix
+  fullName: internalDomainNameSuffix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Mesmo se internalDnsNameLabel não for especificado, uma entrada DNS é criada para a NIC primária da VM. Esse nome DNS pode ser construída concatenando o nome da VM com o valor de internalDomainNameSuffix.
+  optional: true
+  syntax:
+    content: 'internalDomainNameSuffix?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceDnsSettings.internalFqdn
+  name: internalFqdn
+  fullName: internalFqdn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Nome DNS totalmente qualificado que dão suporte a comunicações internas entre VMs na mesma rede virtual.
+  optional: true
+  syntax:
+    content: 'internalFqdn?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
