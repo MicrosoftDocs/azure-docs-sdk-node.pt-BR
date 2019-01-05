@@ -1,0 +1,358 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5777e998a9726c2c811e04d5dc0efbc786c7eacd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141241"
+items:
+- uid: azure-servicefabric.RepairTask
+  name: RepairTask
+  fullName: RepairTask
+  children:
+  - azure-servicefabric.RepairTask.action
+  - azure-servicefabric.RepairTask.description
+  - azure-servicefabric.RepairTask.executor
+  - azure-servicefabric.RepairTask.executorData
+  - azure-servicefabric.RepairTask.flags
+  - azure-servicefabric.RepairTask.history
+  - azure-servicefabric.RepairTask.impact
+  - azure-servicefabric.RepairTask.performPreparingHealthCheck
+  - azure-servicefabric.RepairTask.performRestoringHealthCheck
+  - azure-servicefabric.RepairTask.preparingHealthCheckState
+  - azure-servicefabric.RepairTask.restoringHealthCheckState
+  - azure-servicefabric.RepairTask.resultCode
+  - azure-servicefabric.RepairTask.resultDetails
+  - azure-servicefabric.RepairTask.resultStatus
+  - azure-servicefabric.RepairTask.state
+  - azure-servicefabric.RepairTask.target
+  - azure-servicefabric.RepairTask.taskId
+  - azure-servicefabric.RepairTask.version
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    <span data-ttu-id="b888e-101">Representa uma tarefa de reparo, que inclui informações sobre que tipo de reparo foi solicitado, o que é seu progresso e qual era seu resultado final.</span><span class="sxs-lookup"><span data-stu-id="b888e-101">Represents a repair task, which includes information about what kind of repair was requested, what its progress is, and what its final result was.</span></span>
+
+    <span data-ttu-id="b888e-102">Esse tipo dá suporte à plataforma do Service Fabric; ele não deve ser usado diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="b888e-102">This type supports the Service Fabric platform; it is not meant to be used directly from your code.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.action
+  name: action
+  fullName: action
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-103">A ação de reparo solicitada.</span><span class="sxs-lookup"><span data-stu-id="b888e-103">The requested repair action.</span></span> <span data-ttu-id="b888e-104">Deve ser especificado quando a tarefa de reparo é criada, e é definida de uma vez imutável.</span><span class="sxs-lookup"><span data-stu-id="b888e-104">Must be specified when the repair task is created, and is immutable once set.</span></span>
+  syntax:
+    content: 'action: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.description
+  name: description
+  fullName: description
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-105">Uma descrição da finalidade da tarefa de reparo, ou outros detalhes informativos.</span><span class="sxs-lookup"><span data-stu-id="b888e-105">A description of the purpose of the repair task, or other informational details.</span></span>
+
+    <span data-ttu-id="b888e-106">Pode ser definido quando a tarefa de reparo é criada e é imutável depois de definido.</span><span class="sxs-lookup"><span data-stu-id="b888e-106">May be set when the repair task is created, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'description?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executor
+  name: executor
+  fullName: executor
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-107">O nome do executor de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-107">The name of the repair executor.</span></span> <span data-ttu-id="b888e-108">Deve ser especificado em solicitada e estados posteriores e é imutável depois de definido.</span><span class="sxs-lookup"><span data-stu-id="b888e-108">Must be specified in Claimed and later states, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'executor?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.executorData
+  name: executorData
+  fullName: executorData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-109">Uma cadeia de caracteres de dados que o executor de reparo pode usar para armazenar seu estado interno.</span><span class="sxs-lookup"><span data-stu-id="b888e-109">A data string that the repair executor can use to store its internal state.</span></span>
+  optional: true
+  syntax:
+    content: 'executorData?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-110">Um bitwise OR dos valores a seguir, que fornece detalhes adicionais sobre o status da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-110">A bitwise-OR of the following values, which gives additional details about the status of the repair task.</span></span>
+
+    - <span data-ttu-id="b888e-111">1 - cancelamento do reparo foi solicitado</span><span class="sxs-lookup"><span data-stu-id="b888e-111">1 - Cancellation of the repair has been requested</span></span>
+
+    - <span data-ttu-id="b888e-112">2 - anulação do reparo foi solicitado</span><span class="sxs-lookup"><span data-stu-id="b888e-112">2 - Abort of the repair has been requested</span></span>
+
+    - <span data-ttu-id="b888e-113">4 - aprovação do reparo foi forçada por meio de solicitação do cliente</span><span class="sxs-lookup"><span data-stu-id="b888e-113">4 - Approval of the repair was forced via client request</span></span>
+  optional: true
+  syntax:
+    content: 'flags?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.history
+  name: history
+  fullName: history
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-114">Um objeto que contém os carimbos de hora de transições de estado da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-114">An object that contains timestamps of the repair task's state transitions.</span></span>
+
+    <span data-ttu-id="b888e-115">Esses carimbos de hora são atualizados pelo sistema e não podem ser modificados diretamente.</span><span class="sxs-lookup"><span data-stu-id="b888e-115">These timestamps are updated by the system, and cannot be directly modified.</span></span>
+  optional: true
+  syntax:
+    content: 'history?: RepairTaskHistory'
+    return:
+      type:
+      - azure-servicefabric.RepairTaskHistory
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.impact
+  name: impact
+  fullName: impact
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-116">O objeto de impacto determina quais ações o sistema para se preparar para o impacto do reparo, antes de execução do reparo de aprovação.</span><span class="sxs-lookup"><span data-stu-id="b888e-116">The impact object determines what actions the system will take to prepare for the impact of the repair, prior to approving execution of the repair.</span></span>
+
+    <span data-ttu-id="b888e-117">Impacto deve ser especificado pelo executor de reparo quando a transição para o estado de preparação, e é definida de uma vez imutável.</span><span class="sxs-lookup"><span data-stu-id="b888e-117">Impact must be specified by the repair executor when transitioning to the Preparing state, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'impact?: RepairImpactDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairImpactDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performPreparingHealthCheck
+  name: performPreparingHealthCheck
+  fullName: performPreparingHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-118">Um valor para determinar se as verificações de integridade serão executadas quando a tarefa de reparo entra no estado de preparação.</span><span class="sxs-lookup"><span data-stu-id="b888e-118">A value to determine if health checks will be performed when the repair task enters the Preparing state.</span></span>
+  optional: true
+  syntax:
+    content: 'performPreparingHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.performRestoringHealthCheck
+  name: performRestoringHealthCheck
+  fullName: performRestoringHealthCheck
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-119">Um valor para determinar se as verificações de integridade serão executadas quando a tarefa de reparo entra em estado Restoring.</span><span class="sxs-lookup"><span data-stu-id="b888e-119">A value to determine if health checks will be performed when the repair task enters the Restoring state.</span></span>
+  optional: true
+  syntax:
+    content: 'performRestoringHealthCheck?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.preparingHealthCheckState
+  name: preparingHealthCheckState
+  fullName: preparingHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-120">O estado de fluxo de trabalho da verificação de integridade quando a tarefa de reparo está no estado de preparação.</span><span class="sxs-lookup"><span data-stu-id="b888e-120">The workflow state of the health check when the repair task is in the Preparing state.</span></span>
+
+    <span data-ttu-id="b888e-121">Os valores possíveis incluem: 'NotStarted', 'InProgress', 'Êxito', 'ignorada', 'TimedOut'</span><span class="sxs-lookup"><span data-stu-id="b888e-121">Possible values include: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span></span>
+  optional: true
+  syntax:
+    content: 'preparingHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.restoringHealthCheckState
+  name: restoringHealthCheckState
+  fullName: restoringHealthCheckState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-122">O estado de fluxo de trabalho da verificação de integridade quando a tarefa de reparo está em estado Restoring.</span><span class="sxs-lookup"><span data-stu-id="b888e-122">The workflow state of the health check when the repair task is in the Restoring state.</span></span>
+
+    <span data-ttu-id="b888e-123">Os valores possíveis incluem: 'NotStarted', 'InProgress', 'Êxito', 'ignorada', 'TimedOut'</span><span class="sxs-lookup"><span data-stu-id="b888e-123">Possible values include: 'NotStarted', 'InProgress', 'Succeeded', 'Skipped', 'TimedOut'</span></span>
+  optional: true
+  syntax:
+    content: 'restoringHealthCheckState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultCode
+  name: resultCode
+  fullName: resultCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-124">Um valor numérico, fornecendo detalhes adicionais sobre o resultado da execução da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-124">A numeric value providing additional details about the result of the repair task execution.</span></span>
+
+    <span data-ttu-id="b888e-125">Pode ser especificado no Restoring e estados posteriores e é imutável depois de definido.</span><span class="sxs-lookup"><span data-stu-id="b888e-125">May be specified in the Restoring and later states, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'resultCode?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultDetails
+  name: resultDetails
+  fullName: resultDetails
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-126">Uma cadeia de caracteres fornecendo detalhes adicionais sobre o resultado da execução da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-126">A string providing additional details about the result of the repair task execution.</span></span>
+
+    <span data-ttu-id="b888e-127">Pode ser especificado no Restoring e estados posteriores e é imutável depois de definido.</span><span class="sxs-lookup"><span data-stu-id="b888e-127">May be specified in the Restoring and later states, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'resultDetails?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.resultStatus
+  name: resultStatus
+  fullName: resultStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"b888e-128\">Um valor que descreve o resultado geral da execução da tarefa de reparo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-128\">A value describing the overall result of the repair task execution.</span></span> <span data-ttu-id=\"b888e-129\">Deve ser especificado no Restoring e estados posteriores e é imutável depois de definido.</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-129\">Must be specified in the Restoring and later states, and is immutable once set.</span></span> <span data-ttu-id=\"b888e-130\">Os valores possíveis incluem: 'Inválido', 'bem-sucedido', 'Cancelado', 'Interrompido', 'Falha', 'Pendente'</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-130\">Possible values include: 'Invalid', 'Succeeded', 'Cancelled', 'Interrupted', 'Failed', 'Pending'</span></span>"
+  optional: true
+  syntax:
+    content: 'resultStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"b888e-131\">O estado de fluxo de trabalho da tarefa de reparo.</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-131\">The workflow state of the repair task.</span></span> <span data-ttu-id=\"b888e-132\">Válido estados iniciais são criadas, solicitada e preparando.</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-132\">Valid initial states are Created, Claimed, and Preparing.</span></span> <span data-ttu-id=\"b888e-133\">Os valores possíveis incluem: 'Inválido', 'Criado', 'solicitadas', 'Preparar', 'aprovado', 'Executar', 'Restaurar', 'Concluído'</span><span class=\"sxs-lookup\"><span data-stu-id=\"b888e-133\">Possible values include: 'Invalid', 'Created', 'Claimed', 'Preparing', 'Approved', 'Executing', 'Restoring', 'Completed'</span></span>"
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.target
+  name: target
+  fullName: target
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-134">O objeto de destino determina quais ações o sistema para se preparar para o impacto do reparo, antes de execução do reparo de aprovação.</span><span class="sxs-lookup"><span data-stu-id="b888e-134">The target object determines what actions the system will take to prepare for the impact of the repair, prior to approving execution of the repair.</span></span>
+
+    <span data-ttu-id="b888e-135">Pode ser definido quando a tarefa de reparo é criada e é imutável depois de definido.</span><span class="sxs-lookup"><span data-stu-id="b888e-135">May be set when the repair task is created, and is immutable once set.</span></span>
+  optional: true
+  syntax:
+    content: 'target?: RepairTargetDescriptionBase'
+    return:
+      type:
+      - azure-servicefabric.RepairTargetDescriptionBase
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.taskId
+  name: taskId
+  fullName: taskId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b888e-136">A ID da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-136">The ID of the repair task.</span></span>
+  syntax:
+    content: 'taskId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RepairTask.version
+  name: version
+  fullName: version
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b888e-137">A versão da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-137">The version of the repair task.</span></span>
+
+    <span data-ttu-id="b888e-138">Ao criar uma nova tarefa de reparo, a versão deve ser definida como zero.</span><span class="sxs-lookup"><span data-stu-id="b888e-138">When creating a new repair task, the version must be set to zero.</span></span>  <span data-ttu-id="b888e-139">Ao atualizar uma tarefa de reparo, a versão é usada para concorrência otimista verificações.</span><span class="sxs-lookup"><span data-stu-id="b888e-139">When updating a repair task, the version is used for optimistic concurrency checks.</span></span>  <span data-ttu-id="b888e-140">Se a versão é definida como zero, a atualização não verificará para conflitos de gravação.</span><span class="sxs-lookup"><span data-stu-id="b888e-140">If the version is set to zero, the update will not check for write conflicts.</span></span>  <span data-ttu-id="b888e-141">Se a versão for definida como um valor diferente de zero, a atualização só terá êxito se esse valor corresponde a versão atual da tarefa de reparo.</span><span class="sxs-lookup"><span data-stu-id="b888e-141">If the version is set to a non-zero value, then the update will only succeed if the actual current version of the repair task matches this value.</span></span>
+  optional: true
+  syntax:
+    content: 'version?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RepairTaskHistory
+  name: RepairTaskHistory
+  spec.typeScript:
+  - name: RepairTaskHistory
+    fullName: RepairTaskHistory
+    uid: azure-servicefabric.RepairTaskHistory
+- uid: azure-servicefabric.RepairImpactDescriptionBase
+  name: RepairImpactDescriptionBase
+  spec.typeScript:
+  - name: RepairImpactDescriptionBase
+    fullName: RepairImpactDescriptionBase
+    uid: azure-servicefabric.RepairImpactDescriptionBase
+- uid: azure-servicefabric.RepairTargetDescriptionBase
+  name: RepairTargetDescriptionBase
+  spec.typeScript:
+  - name: RepairTargetDescriptionBase
+    fullName: RepairTargetDescriptionBase
+    uid: azure-servicefabric.RepairTargetDescriptionBase
