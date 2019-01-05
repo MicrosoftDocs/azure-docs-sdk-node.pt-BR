@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 341e3b0b6b4e5d0988dcc034d0604aff3d6b02ef
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061221"
+items:
+- uid: azure-servicefabric.ServiceUpdateDescription
+  name: ServiceUpdateDescription
+  fullName: ServiceUpdateDescription
+  children:
+  - azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  - azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  - azure-servicefabric.ServiceUpdateDescription.flags
+  - azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  - azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  - azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  - azure-servicefabric.ServiceUpdateDescription.serviceKind
+  - azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  langs:
+  - typeScript
+  type: interface
+  summary: Um ServiceUpdateDescription contém todas as informações necessárias para atualizar um serviço.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.correlationScheme
+  name: correlationScheme
+  fullName: correlationScheme
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O esquema de correlação.
+  optional: true
+  syntax:
+    content: 'correlationScheme?: ServiceCorrelationDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceCorrelationDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.defaultMoveCost
+  name: defaultMoveCost
+  fullName: defaultMoveCost
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "O custo de movimentação para o serviço. Os valores possíveis incluem: 'Zero', 'Mínimo', 'Médio', 'High'"
+  optional: true
+  syntax:
+    content: 'defaultMoveCost?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.flags
+  name: flags
+  fullName: flags
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Sinalizadores que indica se a outras propriedades são definidas. Cada uma das propriedades associadas corresponde a um sinalizador especificado abaixo, que, se definido, indique que a propriedade é especificada.
+
+    Essa propriedade pode ser uma combinação desses sinalizadores obtidos usando o operador de 'OR' bit a bit.
+
+    Por exemplo, se o valor fornecido for 6, em seguida, os sinalizadores para ReplicaRestartWaitDuration (2) e QuorumLossWaitDuration (4) são definidos.
+
+    - Nenhum - não indica que todas as outras propriedades são definidas. O valor é zero.
+
+    - TargetReplicaSetSize/InstanceCount - indica se a propriedade TargetReplicaSetSize (para serviços com monitoração de estado) ou a propriedade InstanceCount (para serviços sem monitoração de estado) está definida. O valor é 1.
+
+    - ReplicaRestartWaitDuration - indica o ReplicaRestartWaitDuration propriedade está definida. O valor é 2.
+
+    - QuorumLossWaitDuration - indica o QuorumLossWaitDuration propriedade está definida. O valor é
+
+    4.
+
+    - StandByReplicaKeepDuration - indica que o StandByReplicaKeepDuration propriedade está definida. O valor é 8.
+
+    - MinReplicaSetSize - indica o MinReplicaSetSize propriedade está definida. O valor é 16.
+
+    - PlacementConstraints - indica o PlacementConstraints propriedade está definida. O valor é 32.
+
+    - PlacementPolicyList - indica o ServicePlacementPolicies propriedade está definida. O valor é
+
+    64.
+
+    - Correlação - indica o CorrelationScheme propriedade está definida. O valor é 128.
+
+    - As métricas - indica o ServiceLoadMetrics propriedade está definida. O valor é 256.
+
+    - DefaultMoveCost - indica o DefaultMoveCost propriedade está definida. O valor é 512.
+
+    - ScalingPolicy - indica o ScalingPolicies propriedade está definida. O valor é 1024.
+  optional: true
+  syntax:
+    content: 'flags?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.loadMetrics
+  name: loadMetrics
+  fullName: loadMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: As métricas de carga do serviço.
+  optional: true
+  syntax:
+    content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceLoadMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.placementConstraints
+  name: placementConstraints
+  fullName: placementConstraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'As restrições de posicionamento como uma cadeia de caracteres. As restrições de posicionamento são expressões boolianas nas propriedades de nó, e permitem restringir um serviço a nós específicos com base nos requisitos do serviço. Por exemplo, para colocar um serviço em nós em que NodeType é azul especifique o seguinte: "NodeColor == blue)".'
+  optional: true
+  syntax:
+    content: 'placementConstraints?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.scalingPolicies
+  name: scalingPolicies
+  fullName: scalingPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Políticas de dimensionamento para este serviço.
+  optional: true
+  syntax:
+    content: 'scalingPolicies?: ScalingPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ScalingPolicyDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.serviceKind
+  name: serviceKind
+  fullName: serviceKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Discriminador polimórfico
+  syntax:
+    content: 'serviceKind: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceUpdateDescription.servicePlacementPolicies
+  name: servicePlacementPolicies
+  fullName: servicePlacementPolicies
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: As políticas de posicionamento de serviço.
+  optional: true
+  syntax:
+    content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ServicePlacementPolicyDescription[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceCorrelationDescription[]
+  name: ServiceCorrelationDescription[]
+  spec.typeScript:
+  - name: ServiceCorrelationDescription
+    fullName: ServiceCorrelationDescription
+    uid: azure-servicefabric.ServiceCorrelationDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceLoadMetricDescription[]
+  name: ServiceLoadMetricDescription[]
+  spec.typeScript:
+  - name: ServiceLoadMetricDescription
+    fullName: ServiceLoadMetricDescription
+    uid: azure-servicefabric.ServiceLoadMetricDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ScalingPolicyDescription[]
+  name: ScalingPolicyDescription[]
+  spec.typeScript:
+  - name: ScalingPolicyDescription
+    fullName: ScalingPolicyDescription
+    uid: azure-servicefabric.ScalingPolicyDescription
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServicePlacementPolicyDescription[]
+  name: ServicePlacementPolicyDescription[]
+  spec.typeScript:
+  - name: ServicePlacementPolicyDescription
+    fullName: ServicePlacementPolicyDescription
+    uid: azure-servicefabric.ServicePlacementPolicyDescription
+  - name: '[]'
+    fullName: '[]'
