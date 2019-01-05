@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: af32c4a39fd7e794559661f55c43f5ee3c48b89e
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53662870"
+items:
+- uid: azure-batch.JobUpdateParameter
+  name: JobUpdateParameter
+  fullName: JobUpdateParameter
+  children:
+  - azure-batch.JobUpdateParameter.constraints
+  - azure-batch.JobUpdateParameter.metadata
+  - azure-batch.JobUpdateParameter.onAllTasksComplete
+  - azure-batch.JobUpdateParameter.poolInfo
+  - azure-batch.JobUpdateParameter.priority
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se omitido, as restrições serão limpas.
+  optional: true
+  syntax:
+    content: 'constraints?: JobConstraints'
+    return:
+      type:
+      - azure-batch.JobConstraints
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se omitido, ele usa o valor padrão de uma lista vazia; Na verdade, os metadados existentes é excluído.
+  optional: true
+  syntax:
+    content: 'metadata?: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.onAllTasksComplete
+  name: onAllTasksComplete
+  fullName: onAllTasksComplete
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Se omitido, o comportamento de preenchimento é definido como noaction. Se o valor atual é terminatejob, isso é um erro porque o comportamento de conclusão do trabalho não pode ser alterado de terminatejob para noaction. Você não pode alterar o valor de terminatejob para noaction - ou seja, depois que tiver consultado encerramento automático de trabalho, você não pode desativá-lo novamente. Se você tentar fazer isso, a solicitação falhará e o status de retorna lote código 400 (solicitação incorreta) e uma resposta de erro 'valor de propriedade inválido'. Se você não especificar esse elemento em uma solicitação PUT, equivale a passar noaction. Esse é um erro se o valor atual é terminatejob.
+
+    Os valores possíveis incluem: 'noAction', 'terminateJob'
+  optional: true
+  syntax:
+    content: 'onAllTasksComplete?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.poolInfo
+  name: poolInfo
+  fullName: poolInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Você pode alterar o pool para um trabalho somente quando o trabalho está desabilitado. A chamada de trabalho de atualização falhará se você incluir o elemento poolInfo e o trabalho não está desabilitado. Se você especificar uma especificação de autoPoolSpecification no poolInfo, apenas a propriedade keepAlive pode ser atualizada e, em seguida, somente se o pool automático tem um poolLifetimeOption do trabalho.
+  syntax:
+    content: 'poolInfo: PoolInformation'
+    return:
+      type:
+      - azure-batch.PoolInformation
+  package: azure-batch
+- uid: azure-batch.JobUpdateParameter.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Os valores de prioridade podem variar de -1000 a 1000, sendo-1000 a prioridade mais baixa e 1000 a prioridade mais alta. Se omitido, ele é definido como o valor padrão 0.
+  optional: true
+  syntax:
+    content: 'priority?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+references:
+- uid: azure-batch.JobConstraints
+  name: JobConstraints
+  spec.typeScript:
+  - name: JobConstraints
+    fullName: JobConstraints
+    uid: azure-batch.JobConstraints
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.PoolInformation
+  name: PoolInformation
+  spec.typeScript:
+  - name: PoolInformation
+    fullName: PoolInformation
+    uid: azure-batch.PoolInformation

@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 23728e9820412b40379ec6addffb3fc8fa84affd
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53686740"
+items:
+- uid: '@azure/cosmos.ChangeFeedOptions'
+  name: ChangeFeedOptions
+  fullName: ChangeFeedOptions
+  children:
+  - '@azure/cosmos.ChangeFeedOptions.continuation'
+  - '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  - '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  - '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  - '@azure/cosmos.ChangeFeedOptions.startTime'
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    Especifica opções para a alteração de feed de algumas dessas opções controlam onde e quando para começar a ler o feed de alterações. A ordem de precedência é:
+
+    - continuação
+
+    - startTime
+
+    - startFromBeginning
+
+
+    Se nenhuma dessas opções forem definidas, ele começará a ler as alterações desde a primeira `ChangeFeedIterator.executeNext()` chamar.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.continuation'
+  name: continuation
+  fullName: continuation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    O token de continuação para iniciar a partir.
+
+    Isso é equivalente ao valor de etag e continuação das `ChangeFeedResponse`
+  optional: true
+  syntax:
+    content: 'continuation?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.maxItemCount'
+  name: maxItemCount
+  fullName: maxItemCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Quantidade máxima de itens a serem retornados por página
+  optional: true
+  syntax:
+    content: 'maxItemCount?: number'
+    return:
+      type:
+      - number
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.sessionToken'
+  name: sessionToken
+  fullName: sessionToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O token de sessão a ser usado. Se não for especificado, usará o token de sessão capturado mais recente para começar.
+  optional: true
+  syntax:
+    content: 'sessionToken?: string'
+    return:
+      type:
+      - string
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startFromBeginning'
+  name: startFromBeginning
+  fullName: startFromBeginning
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Indica se deve começar do zero ou não.
+  optional: true
+  syntax:
+    content: 'startFromBeginning?: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ChangeFeedOptions.startTime'
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Especificado hora de início para começar a ler as alterações do.
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: '@azure/cosmos'
