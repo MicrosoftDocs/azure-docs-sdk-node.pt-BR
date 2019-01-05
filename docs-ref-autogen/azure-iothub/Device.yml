@@ -1,0 +1,280 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 32c6c81b23aa4caa7ac4abc3aa19580c9c914f3a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52004362"
+items:
+- uid: azure-iothub.Device
+  name: Device
+  fullName: Device
+  children:
+  - azure-iothub.Device.Authentication
+  - azure-iothub.Device.authentication
+  - azure-iothub.Device.Capabilities
+  - azure-iothub.Device.capabilities
+  - azure-iothub.Device.cloudToDeviceMessageCount
+  - azure-iothub.Device.ConnectionState
+  - azure-iothub.Device.connectionState
+  - azure-iothub.Device.connectionStateUpdatedTime
+  - azure-iothub.Device.constructor
+  - azure-iothub.Device.deviceId
+  - azure-iothub.Device.DeviceStatus
+  - azure-iothub.Device.etag
+  - azure-iothub.Device.generationId
+  - azure-iothub.Device.lastActivityTime
+  - azure-iothub.Device.status
+  - azure-iothub.Device.statusReason
+  - azure-iothub.Device.statusUpdatedTime
+  - azure-iothub.Device.X509Thumbprints
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="a2616-101">Cria uma representação de um dispositivo para uso com o [registro de identidade do dispositivo](xref:azure-iothub.Registry) APIs.</span><span class="sxs-lookup"><span data-stu-id="a2616-101">Creates a representation of a device for use with the [device identity registry](xref:azure-iothub.Registry) APIs.</span></span>
+
+    <span data-ttu-id="a2616-102">**Essa classe foi preterida** porque o [registro de identidade do dispositivo](xref:azure-iothub.Registry) pode trabalhar diretamente com objetos JSON que contém uma descrição parcial do dispositivo, não necessariamente o objeto completo.</span><span class="sxs-lookup"><span data-stu-id="a2616-102">**This class is deprecated** because the [device identity registry](xref:azure-iothub.Registry) can work directly with JSON objects containing a partial description of the device, not necessarily the full object.</span></span> <span data-ttu-id="a2616-103">Na parte superior dessa classe foi lançada inicialmente com um erro de digitação no `symmetricKey` (era padrão Pascal-case, em vez de em camel case) o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="a2616-103">On top of that initially this class was shipped with a typo on the `symmetricKey` property name (it was pascal-cased instead of camel-cased).</span></span> <span data-ttu-id="a2616-104">O SDK é manter essa classe ao redor para não danificará o código existente, mas serão removido em uma atualização futura versão principal e os clientes devem usar em vez disso, os objetos do JSON simples.</span><span class="sxs-lookup"><span data-stu-id="a2616-104">The SDK is keeping this class around in order not to break existing code but this will be removed in a future major version update and customers should instead use plain JSON objects.</span></span>
+  package: azure-iothub
+  deprecated:
+    content: ''
+- uid: azure-iothub.Device.authentication
+  name: authentication
+  fullName: authentication
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-105">Contém as chaves simétricas usadas para autenticar este dispositivo.</span><span class="sxs-lookup"><span data-stu-id="a2616-105">Contains the symmetric keys used to authenticate this device.</span></span>
+  optional: true
+  syntax:
+    content: 'authentication?: Authentication'
+    return:
+      type:
+      - azure-iothub.Device.Authentication
+  package: azure-iothub
+- uid: azure-iothub.Device.capabilities
+  name: capabilities
+  fullName: capabilities
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-106">Contém os recursos deste dispositivo.</span><span class="sxs-lookup"><span data-stu-id="a2616-106">Contains the capabilities of this device.</span></span>
+  optional: true
+  syntax:
+    content: 'capabilities?: Capabilities'
+    return:
+      type:
+      - azure-iothub.Device.Capabilities
+  package: azure-iothub
+- uid: azure-iothub.Device.cloudToDeviceMessageCount
+  name: cloudToDeviceMessageCount
+  fullName: cloudToDeviceMessageCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-107">Número de mensagens c2d aguardando por entregue ao dispositivo.</span><span class="sxs-lookup"><span data-stu-id="a2616-107">Number of c2d messages waiting to by delivered to the device.</span></span>
+  optional: true
+  syntax:
+    content: 'cloudToDeviceMessageCount?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.connectionState
+  name: connectionState
+  fullName: connectionState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="a2616-108">Se o dispositivo é 'conectado' ou 'desconectado'.</span><span class="sxs-lookup"><span data-stu-id="a2616-108">Whether the device is 'connected' or 'disconnected'.</span></span> <span data-ttu-id="a2616-109">Não é recomendável usar essa propriedade para determinar se o dispositivo está realmente conectado no momento que, uma vez que a conexão do dispositivo pode ter atingido o tempo limite e o hub IoT pode não ter detectado-lo ou se o dispositivo estiver usando HTTPS para se conectar.</span><span class="sxs-lookup"><span data-stu-id="a2616-109">It is not recommended to use this property to determine if the device is actually connected right now though, since the device connection may have timed out and the IoT hub may not have detected it, or if the device is using HTTPS to connect.</span></span>
+
+    <span data-ttu-id="a2616-110">Se você tiver uma necessidade de monitorar as conexões de dispositivo, o recomentado que forma é usar o [monitoramento de operações](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-operations-monitoring) recurso do hub.</span><span class="sxs-lookup"><span data-stu-id="a2616-110">If you have a need to monitor device connections, the recommneded way is to use the [operations monitoring](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-operations-monitoring) feature of your hub.</span></span>
+  optional: true
+  syntax:
+    content: 'connectionState?: Device.ConnectionState'
+    return:
+      type:
+      - azure-iothub.Device.ConnectionState
+  package: azure-iothub
+- uid: azure-iothub.Device.connectionStateUpdatedTime
+  name: connectionStateUpdatedTime
+  fullName: connectionStateUpdatedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-111">Carimbo de hora que representa a hora da última `connectionState` alterado.</span><span class="sxs-lookup"><span data-stu-id="a2616-111">Timestamp representing the last time `connectionState` changed.</span></span>
+  optional: true
+  syntax:
+    content: 'connectionStateUpdatedTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.constructor
+  name: Device(any)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a2616-112">Criar um novo <xref:azure-iothub.Device> objeto.</span><span class="sxs-lookup"><span data-stu-id="a2616-112">Instantiate a new <xref:azure-iothub.Device> object.</span></span>
+  syntax:
+    content: 'new Device(jsonData?: any)'
+    parameters:
+    - id: jsonData
+      type:
+      - any
+      description: >
+        <span data-ttu-id="a2616-113">Uma representação opcional JSON de dispositivo, que será mapeado para propriedades no objeto.</span><span class="sxs-lookup"><span data-stu-id="a2616-113">An optional JSON representation of the device, which will be mapped to properties in the object.</span></span> <span data-ttu-id="a2616-114">Se nenhum argumento for fornecido, as propriedades do dispositivo serão ser atribuídas valores padrão.</span><span class="sxs-lookup"><span data-stu-id="a2616-114">If no argument is provided, Device properties will be assigned default values.</span></span>
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Device.deviceId
+  name: deviceId
+  fullName: deviceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-115">Identificador de dispositivo exclusivo, como ela existe no registro do dispositivo do hub IoT do Azure.</span><span class="sxs-lookup"><span data-stu-id="a2616-115">Unique device identifier as it exists in the Azure IoT hub device registry.</span></span>
+  syntax:
+    content: 'deviceId: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-116">Marca da entidade fraca atribuída a essa descrição de identidade do dispositivo</span><span class="sxs-lookup"><span data-stu-id="a2616-116">Weak entity tag assigned to this device identity description</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.generationId
+  name: generationId
+  fullName: generationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-117">Usado para resolver a ambiguidade de dispositivos que tenham sido excluído/recriado com o mesmo `deviceId`</span><span class="sxs-lookup"><span data-stu-id="a2616-117">Used to disambiguate devices that have been deleted/recreated with the same `deviceId`</span></span>
+  optional: true
+  syntax:
+    content: 'generationId?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.lastActivityTime
+  name: lastActivityTime
+  fullName: lastActivityTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-118">Carimbo de hora que representa a última vez que o dispositivo autenticado, enviou uma mensagem ou recebeu uma mensagem.</span><span class="sxs-lookup"><span data-stu-id="a2616-118">Timestamp representing the last time the device authenticated, sent a message, or received a message.</span></span>
+  optional: true
+  syntax:
+    content: 'lastActivityTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-119">'enabled' (dispositivo autorizado a se conectar, poderá enviar/receber mensagens) ou 'Desativado'.</span><span class="sxs-lookup"><span data-stu-id="a2616-119">'enabled' (device authorized to connect, can send/receive messages) or 'disabled'.</span></span>
+  optional: true
+  syntax:
+    content: 'status?: Device.DeviceStatus'
+    return:
+      type:
+      - azure-iothub.Device.DeviceStatus
+  package: azure-iothub
+- uid: azure-iothub.Device.statusReason
+  name: statusReason
+  fullName: statusReason
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-120">cadeia de caracteres de 128 caracteres definida quando o dispositivo é desativado.</span><span class="sxs-lookup"><span data-stu-id="a2616-120">128-character string set when the device is disabled.</span></span>
+  optional: true
+  syntax:
+    content: 'statusReason?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Device.statusUpdatedTime
+  name: statusUpdatedTime
+  fullName: statusUpdatedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="a2616-121">Carimbo de hora que representa a hora da última `status` alterado.</span><span class="sxs-lookup"><span data-stu-id="a2616-121">Timestamp representing the last time `status` changed.</span></span>
+  optional: true
+  syntax:
+    content: 'statusUpdatedTime?: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+references:
+- uid: azure-iothub.Device.X509Thumbprints
+  name: X509Thumbprints
+  spec.typeScript:
+  - name: X509Thumbprints
+    fullName: X509Thumbprints
+    uid: azure-iothub.Device.X509Thumbprints
+- uid: azure-iothub.Device.Authentication
+  name: Authentication
+  spec.typeScript:
+  - name: Authentication
+    fullName: Authentication
+    uid: azure-iothub.Device.Authentication
+- uid: azure-iothub.Device.Capabilities
+  name: Capabilities
+  spec.typeScript:
+  - name: Capabilities
+    fullName: Capabilities
+    uid: azure-iothub.Device.Capabilities
+- uid: azure-iothub.Device.ConnectionState
+  name: ConnectionState
+  spec.typeScript:
+  - name: ConnectionState
+    fullName: ConnectionState
+    uid: azure-iothub.Device.ConnectionState
+- uid: azure-iothub.Device.DeviceStatus
+  name: DeviceStatus
+  spec.typeScript:
+  - name: DeviceStatus
+    fullName: DeviceStatus
+    uid: azure-iothub.Device.DeviceStatus
+- uid: azure-iothub.Device.Authentication
+  name: Authentication
+- uid: azure-iothub.Device.Capabilities
+  name: Capabilities
+- uid: azure-iothub.Device.X509Thumbprints
+  name: X509Thumbprints
+- uid: azure-iothub.Device.ConnectionState
+  name: ConnectionState
+- uid: azure-iothub.Device.DeviceStatus
+  name: DeviceStatus
