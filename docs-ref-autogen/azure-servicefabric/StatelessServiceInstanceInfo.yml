@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b57738d56dac837baf295e45aa54b744a2fa462f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52168641"
+items:
+- uid: azure-servicefabric.StatelessServiceInstanceInfo
+  name: StatelessServiceInstanceInfo
+  fullName: StatelessServiceInstanceInfo
+  children:
+  - azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: Representa uma instância de serviço sem monitoração de estado. Isso inclui informações sobre a identidade, status, integridade, nome do nó, tempo de atividade e outros detalhes sobre a instância.
+  extends:
+    name: azure-servicefabric.ReplicaInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID de uma instância de serviço sem estado. InstanceId é usada pelo Service Fabric para identificar exclusivamente uma instância de uma partição de um serviço sem monitoração de estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da instância. Se a instância tiver feito failover no mesmo ou em outro nó, ele receberá um valor diferente para a ID da instância.
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaInfo
+  name: ReplicaInfo
+  spec.typeScript:
+  - name: ReplicaInfo
+    fullName: ReplicaInfo
+    uid: azure-servicefabric.ReplicaInfo

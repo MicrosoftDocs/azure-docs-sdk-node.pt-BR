@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e9f0e155b5058c68b44227cef47a4e2ebc7b4775
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52125271"
+items:
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription
+  name: TimeBasedBackupScheduleDescription
+  fullName: TimeBasedBackupScheduleDescription
+  children:
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+  - azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+  langs:
+  - typeScript
+  type: interface
+  summary: Descreve a agenda de backup de tempo com base.
+  extends:
+    name: azure-servicefabric.BackupScheduleDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runDays
+  name: runDays
+  fullName: runDays
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de dias de uma semana quando disparar o backup periódico. Isso é válido somente quando o tipo de frequência de agendamento de backup for semanal.
+  optional: true
+  syntax:
+    content: 'runDays?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.runTimes
+  name: runTimes
+  fullName: runTimes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Representa a lista de hora exata durante o dia no formato ISO8601. Como ' 19: 00:00' representa '7 PM' durante o dia. Data especificada, juntamente com a hora será ignorada."
+  syntax:
+    content: 'runTimes: Date[]'
+    return:
+      type:
+      - Date[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType
+  name: scheduleFrequencyType
+  fullName: scheduleFrequencyType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Descreve a frequência com a qual executar o tempo com base em agendamento de backup. Os valores possíveis incluem: 'Inválido', 'Diariamente', 'Semanalmente'"
+  syntax:
+    content: 'scheduleFrequencyType: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.BackupScheduleDescription
+  name: BackupScheduleDescription
+  spec.typeScript:
+  - name: BackupScheduleDescription
+    fullName: BackupScheduleDescription
+    uid: azure-servicefabric.BackupScheduleDescription
