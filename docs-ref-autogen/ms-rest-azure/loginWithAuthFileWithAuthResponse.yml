@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a231e02e8ae83d5235fa223097d17b42061ff207
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126011"
+items:
+- uid: ms-rest-azure.loginWithAuthFileWithAuthResponse
+  name: loginWithAuthFileWithAuthResponse(AuthFileOptions)
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    Antes de usar esse método instale a cli az de https://github.com/Azure/azure-cli/releases. Em seguida, execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+
+    Se você quiser criar sp para um nuvem/ambiente diferente, em seguida, execute:
+
+    1. lista de nuvem do AZ
+
+    2. nuvem de AZ definido – n <name of the environment>
+
+    3. AZ ad sp create-for-rbac - sdk-auth > auth.json se a entidade de serviço já foi criada, em seguida, logon com as informações de entidade de serviço:
+
+    3. logon AZ – entidade de serviço - u <clientId> -p <clientSecret> - t <tenantId>
+
+    4. conta AZ Mostrar - sdk-auth > auth.json
+
+
+    Autentica usando as informações de entidade de serviço fornecidas no arquivo de autenticação. Esse método será definida a subscriptionId no arquivo de autenticação para o usuário fornecido a variável de ambiente no parâmetro de opções ou o padrão 'AZURE_SUBSCRIPTION_ID'.
+  syntax:
+    content: 'function loginWithAuthFileWithAuthResponse(options?: AuthFileOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.AuthFileOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<ms-rest-azure.AuthResponse>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.AuthFileOptions
+  name: AuthFileOptions
+  spec.typeScript:
+  - name: AuthFileOptions
+    fullName: AuthFileOptions
+    uid: ms-rest-azure.AuthFileOptions
+- uid: Promise<ms-rest-azure.AuthResponse>
+  name: AuthResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AuthResponse
+    fullName: AuthResponse
+    uid: ms-rest-azure.AuthResponse
+  - name: '>'
+    fullName: '>'

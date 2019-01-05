@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5b26e2e8d37b7e100c33489055ed7e76cdaf2099
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 718b5e201a01e0a07231aa2a48f11df17d286ec6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685265"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52167841"
 items:
 - uid: adal-node.AuthenticationContext
   name: AuthenticationContext
@@ -15,8 +15,8 @@ items:
   - adal-node.AuthenticationContext.acquireTokenWithClientCertificate
   - adal-node.AuthenticationContext.acquireTokenWithClientCredentials
   - adal-node.AuthenticationContext.acquireTokenWithDeviceCode
-  - adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
   - adal-node.AuthenticationContext.acquireTokenWithRefreshToken
+  - adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
   - adal-node.AuthenticationContext.acquireTokenWithUsernamePassword
   - adal-node.AuthenticationContext.acquireUserCode
   - adal-node.AuthenticationContext.constructor
@@ -31,7 +31,7 @@ items:
   summary: ''
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireToken
-  name: acquireToken
+  name: acquireToken(string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -59,7 +59,7 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithAuthorizationCode
-  name: acquireTokenWithAuthorizationCode
+  name: acquireTokenWithAuthorizationCode(string, string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -95,7 +95,7 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithClientCertificate
-  name: acquireTokenWithClientCertificate
+  name: acquireTokenWithClientCertificate(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -127,7 +127,7 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithClientCredentials
-  name: acquireTokenWithClientCredentials
+  name: acquireTokenWithClientCredentials(string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -155,7 +155,7 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithDeviceCode
-  name: acquireTokenWithDeviceCode
+  name: acquireTokenWithDeviceCode(string, string, UserCodeInfo, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -182,8 +182,36 @@ items:
       description: >
         A função de retorno de chamada.
   package: adal-node
+- uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken
+  name: acquireTokenWithRefreshToken(string, string, string, AcquireTokenCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Obtém um novo token de acesso por meio de um token de atualização emitido anteriormente.
+  syntax:
+    content: 'function acquireTokenWithRefreshToken(refreshToken: string, clientId: string, resource: string, callback: AcquireTokenCallback)'
+    parameters:
+    - id: refreshToken
+      type:
+      - string
+      description: Um token de atualização em uma resposta de tokne de uma chamada anterior do acquireToken.
+    - id: clientId
+      type:
+      - string
+      description: Id do cliente OAuth do aplicativo de chamada.
+    - id: resource
+      type:
+      - string
+      description: O recurso do OAuth para o qual um token está sendo a solicitação.  Esse parâmetro é opcional e pode ser definido como null.
+    - id: callback
+      type:
+      - adal-node.AcquireTokenCallback
+      description: >
+        A função de retorno de chamada.
+  package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken_1
-  name: acquireTokenWithRefreshToken
+  name: acquireTokenWithRefreshToken(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -213,36 +241,8 @@ items:
       - adal-node.AcquireTokenCallback
       description: ''
   package: adal-node
-- uid: adal-node.AuthenticationContext.acquireTokenWithRefreshToken
-  name: acquireTokenWithRefreshToken
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Obtém um novo token de acesso por meio de um token de atualização emitido anteriormente.
-  syntax:
-    content: 'function acquireTokenWithRefreshToken(refreshToken: string, clientId: string, resource: string, callback: AcquireTokenCallback)'
-    parameters:
-    - id: refreshToken
-      type:
-      - string
-      description: Um token de atualização em uma resposta de tokne de uma chamada anterior do acquireToken.
-    - id: clientId
-      type:
-      - string
-      description: Id do cliente OAuth do aplicativo de chamada.
-    - id: resource
-      type:
-      - string
-      description: O recurso do OAuth para o qual um token está sendo a solicitação.  Esse parâmetro é opcional e pode ser definido como null.
-    - id: callback
-      type:
-      - adal-node.AcquireTokenCallback
-      description: >
-        A função de retorno de chamada.
-  package: adal-node
 - uid: adal-node.AuthenticationContext.acquireTokenWithUsernamePassword
-  name: acquireTokenWithUsernamePassword
+  name: acquireTokenWithUsernamePassword(string, string, string, string, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -274,7 +274,7 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.acquireUserCode
-  name: acquireUserCode
+  name: acquireUserCode(string, string, string, AcquireUserCodeCallback)
   children: []
   type: method
   langs:
@@ -302,14 +302,14 @@ items:
         A função de retorno de chamada.
   package: adal-node
 - uid: adal-node.AuthenticationContext.constructor
-  name: AuthenticationContext
+  name: AuthenticationContext(string, undefined | false | true, TokenCache)
   children: []
   type: constructor
   langs:
   - typeScript
   summary: Cria um novo objeto de AuthenticationContext.  Por padrão, a autoridade será verificada em relação a uma lista de autoridades de conhecidos do Azure Active Directory.  Se a autoridade não é reconhecida como uma dessas autoridades bem conhecidas, em seguida, aquisição de token falhará.  Esse comportamento pode ser desativado por meio do parâmetro validateAuthority abaixo.
   syntax:
-    content: 'new AuthenticationContext(authority: string, validateAuthority?: boolean, cache?: TokenCache)'
+    content: 'new AuthenticationContext(authority: string, validateAuthority?: undefined | false | true, cache?: TokenCache)'
     parameters:
     - id: authority
       type:
@@ -317,7 +317,7 @@ items:
       description: Uma URL que identifica uma autoridade de token.
     - id: validateAuthority
       type:
-      - boolean
+      - undefined | false | true
       description: ''
       optional: true
     - id: cache
@@ -355,7 +355,7 @@ items:
       - adal-node.TokenCache
   package: adal-node
 - uid: adal-node.AuthenticationContext.cancelRequestToGetTokenWithDeviceCode
-  name: cancelRequestToGetTokenWithDeviceCode
+  name: cancelRequestToGetTokenWithDeviceCode(UserCodeInfo, AcquireTokenCallback)
   children: []
   type: method
   langs:
@@ -404,21 +404,25 @@ items:
   package: adal-node
 references:
 - uid: adal-node.TokenCache
+  name: TokenCache
   spec.typeScript:
   - name: TokenCache
     fullName: TokenCache
     uid: adal-node.TokenCache
 - uid: adal-node.AcquireTokenCallback
+  name: AcquireTokenCallback
   spec.typeScript:
   - name: AcquireTokenCallback
     fullName: AcquireTokenCallback
     uid: adal-node.AcquireTokenCallback
 - uid: adal-node.UserCodeInfo
+  name: UserCodeInfo
   spec.typeScript:
   - name: UserCodeInfo
     fullName: UserCodeInfo
     uid: adal-node.UserCodeInfo
 - uid: adal-node.AcquireUserCodeCallback
+  name: AcquireUserCodeCallback
   spec.typeScript:
   - name: AcquireUserCodeCallback
     fullName: AcquireUserCodeCallback

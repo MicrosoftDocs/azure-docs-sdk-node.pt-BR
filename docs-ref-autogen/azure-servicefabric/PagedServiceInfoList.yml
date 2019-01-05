@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7e79e004ceed2fcd086fd7d3095bfa9e2a778daa
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52151341"
+items:
+- uid: azure-servicefabric.PagedServiceInfoList
+  name: PagedServiceInfoList
+  fullName: PagedServiceInfoList
+  children:
+  - azure-servicefabric.PagedServiceInfoList.continuationToken
+  - azure-servicefabric.PagedServiceInfoList.items
+  langs:
+  - typeScript
+  type: interface
+  summary: A lista de serviços no cluster para um aplicativo. A lista é paginada quando todos os resultados não couberem em uma única mensagem. O próximo conjunto de resultados pode ser obtido executando a mesma consulta com o token de continuação fornecido nessa lista.
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedServiceInfoList.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados. O token de continuação é incluído na resposta da API quando os resultados do sistema não couberem em uma única resposta. Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados.
+
+    Se não houver nenhum mais resultados, o token de continuação não está incluído na resposta.
+  optional: true
+  syntax:
+    content: 'continuationToken?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.PagedServiceInfoList.items
+  name: items
+  fullName: items
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de informações do serviço.
+  optional: true
+  syntax:
+    content: 'items?: ServiceInfo[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceInfo[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceInfo[]
+  name: ServiceInfo[]
+  spec.typeScript:
+  - name: ServiceInfo
+    fullName: ServiceInfo
+    uid: azure-servicefabric.ServiceInfo
+  - name: '[]'
+    fullName: '[]'
