@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4277010b2babd7dd5c15af4eb4ef2eff99c846b5
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53677260"
+items:
+- uid: azure-batch.JobScheduleExecutionInformation
+  name: JobScheduleExecutionInformation
+  fullName: JobScheduleExecutionInformation
+  children:
+  - azure-batch.JobScheduleExecutionInformation.endTime
+  - azure-batch.JobScheduleExecutionInformation.nextRunTime
+  - azure-batch.JobScheduleExecutionInformation.recentJob
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Essa propriedade é definida somente se a agenda de trabalho estiver no estado concluído.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.nextRunTime
+  name: nextRunTime
+  fullName: nextRunTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Esta propriedade é significativa somente se a agenda está no estado ativo quando chegar a hora. Por exemplo, se a agenda estiver desabilitada, nenhum trabalho será criado no cumprimento do nextRunTime, a menos que o trabalho está habilitado antes disso.
+  optional: true
+  syntax:
+    content: 'nextRunTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobScheduleExecutionInformation.recentJob
+  name: recentJob
+  fullName: recentJob
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Essa propriedade está presente apenas se pelo menos um trabalho foi executada sob a agenda.
+  optional: true
+  syntax:
+    content: 'recentJob?: RecentJob'
+    return:
+      type:
+      - azure-batch.RecentJob
+  package: azure-batch
+references:
+- uid: azure-batch.RecentJob
+  name: RecentJob
+  spec.typeScript:
+  - name: RecentJob
+    fullName: RecentJob
+    uid: azure-batch.RecentJob

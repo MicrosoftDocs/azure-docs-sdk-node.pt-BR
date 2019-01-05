@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 170e0bf52f9fd6a1932224d4dbcbe8432a029b98
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52085771"
+items:
+- uid: azure-servicefabric.ApplicationCapacityDescription
+  name: ApplicationCapacityDescription
+  fullName: ApplicationCapacityDescription
+  children:
+  - azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  - azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  - azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Descreve informações de capacidade para os serviços desse aplicativo. Essa descrição pode ser usada para descrever a seguir.
+
+    - Reservar a capacidade para os serviços em nós
+
+    - Limitando o número total de nós que podem ser executados em serviços desse aplicativo
+
+    - Limitando as métricas de capacidade personalizadas para limitar o consumo total dessa métrica dos serviços do aplicativo
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.applicationMetrics
+  name: applicationMetrics
+  fullName: applicationMetrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de descrição de métrica de capacidade do aplicativo.
+  optional: true
+  syntax:
+    content: 'applicationMetrics?: ApplicationMetricDescription[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationMetricDescription[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.maximumNodes
+  name: maximumNodes
+  fullName: maximumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O número máximo de nós que o Service Fabric reservará como capacidade para este aplicativo.
+
+    Observe que isso não significa que os serviços desse aplicativo serão colocados em todos os nós. Por padrão, o valor dessa propriedade é zero e significa que os serviços podem ser colocados em qualquer nó.
+  optional: true
+  syntax:
+    content: 'maximumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationCapacityDescription.minimumNodes
+  name: minimumNodes
+  fullName: minimumNodes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O número mínimo de nós que o Service Fabric reservará como capacidade para este aplicativo.
+
+    Observe que isso não significa que os serviços desse aplicativo serão colocados em todos os nós. Se essa propriedade é definida como zero, nenhuma capacidade será reservada. O valor dessa propriedade não pode ser maior que o valor da propriedade MaximumNodes.
+  optional: true
+  syntax:
+    content: 'minimumNodes?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationMetricDescription[]
+  name: ApplicationMetricDescription[]
+  spec.typeScript:
+  - name: ApplicationMetricDescription
+    fullName: ApplicationMetricDescription
+    uid: azure-servicefabric.ApplicationMetricDescription
+  - name: '[]'
+    fullName: '[]'

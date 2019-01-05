@@ -1,0 +1,231 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1170452791677275d567768cac21a4eb151a4f2d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53671960"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  fullName: SpeechTranslationConfig
+  children:
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  langs:
+  - typeScript
+  type: class
+  summary: Configuração da conversão de fala.
+  extends:
+    name: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.addTargetLanguage
+  name: addTargetLanguage(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Adicione um idioma de destino (texto) para converter em.
+  syntax:
+    content: 'function addTargetLanguage(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: >
+        A linguagem, como de-DE
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define o token de autorização.
+
+    Se isso estiver definido, a chave de assinatura será ignorada.
+
+    Usuário precisa para se certificar de que o token de autorização fornecido é válido e não expirou.
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Descarte de recursos associados.
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromAuthorizationToken
+  name: fromAuthorizationToken(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Instância estática do SpeechTranslationConfig retornado, passando a região de token e de serviço de autorização.
+
+    Observação: O chamador precisa garantir que o token de autorização é válido. Antes do token de autorização expira, o chamador precisa atualizá-lo definindo o authorizationToken de propriedade com um novo token válido. Caso contrário, todos os identificadores criados por essa instância SpeechTranslationConfig irá encontrar erros durante o reconhecimento.
+  syntax:
+    content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+    parameters:
+    - id: authorizationToken
+      type:
+      - string
+      description: O token de autorização.
+    - id: region
+      type:
+      - string
+      description: O nome da região (consulte a <a href="https://aka.ms/csspeech/region">página de região</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromEndpoint
+  name: fromEndpoint(URL, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Cria uma instância da configuração de tradução de fala com o ponto de extremidade especificado e a chave de assinatura.
+
+    Este método destina-se somente para usuários que usam um ponto de extremidade de serviço não padrão ou os parâmetros.
+
+    Observação: As propriedades de consulta especificadas na URL do ponto de extremidade não são alteradas, mesmo se eles são definidos por quaisquer outras APIs. Por exemplo, se o idioma é definido no uri como parâmetro de consulta "language = de-DE" e também é definida pela propriedade speechRecognitionLanguage, a configuração de idioma no uri terá precedência e a linguagem eficaz é "de-DE".
+
+    Somente as propriedades que não são especificadas no ponto de extremidade URL pode ser definida por outras APIs.
+  syntax:
+    content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+    parameters:
+    - id: endpoint
+      type:
+      - URL
+      description: O ponto de extremidade de serviço para se conectar ao.
+    - id: subscriptionKey
+      type:
+      - string
+      description: A chave de assinatura.
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.fromSubscription
+  name: fromSubscription(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Instância estática SpeechTranslationConfig retornada passando uma chave de assinatura e região do serviço.
+  syntax:
+    content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+    parameters:
+    - id: subscriptionKey
+      type:
+      - string
+      description: A chave de assinatura.
+    - id: region
+      type:
+      - string
+      description: O nome da região (consulte a <a href="https://aka.ms/csspeech/region">página de região</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.setProperty
+  name: setProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Define uma propriedade nomeada como valor
+  syntax:
+    content: 'function setProperty(name: string, value: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: O nome da propriedade.
+    - id: value
+      type:
+      - string
+      description: >
+        O valor.
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define o token de autorização.
+
+    Se isso estiver definido, a chave de assinatura será ignorada.
+
+    Usuário precisa para se certificar de que o token de autorização fornecido é válido e não expirou.
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.targetLanguages
+  name: targetLanguages
+  fullName: targetLanguages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Adicione um idioma de destino (texto) para converter em.
+  syntax:
+    content: 'public targetLanguages: string[]'
+    return:
+      type:
+      - string[]
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig.voiceName
+  name: voiceName
+  fullName: voiceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Conjuntos de voz do idioma traduzido, habilitar a saída de síntese de voz.
+  syntax:
+    content: 'public voiceName: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  spec.typeScript:
+  - name: SpeechConfig
+    fullName: SpeechConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  spec.typeScript:
+  - name: SpeechTranslationConfig
+    fullName: SpeechTranslationConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig

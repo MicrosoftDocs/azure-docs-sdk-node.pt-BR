@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fbf83409e62f7acedc3729ce9102713395482bd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083891"
+items:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  name: DeployedApplicationHealthStateFilter
+  fullName: DeployedApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define os critérios de correspondência para determinar se um aplicativo implantado deve ser incluído como um filho de um aplicativo no bloco de integridade do cluster.
+
+    Os aplicativos implantados são retornados apenas se o aplicativo pai corresponde a um filtro especificado na descrição de consulta de parte do cluster integridade.
+
+    Um filtro pode corresponder a zero, um ou vários aplicativos implantados, dependendo de suas propriedades.
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.deployedServicePackageFilters
+  name: deployedServicePackageFilters
+  fullName: deployedServicePackageFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define uma lista de filtros que especificam qual serviço implantado pacotes a serem incluídas no bloco de integridade do cluster retornado como filhos do aplicativo primário implantado. Pacotes de serviço implantados são retornados somente se o pai um filtro de correspondências de aplicativo implantado.
+
+    Se a lista estiver vazia, nenhum pacote de serviço implantado é retornado. Todos os pacotes de serviço implantados são usados para avaliar o pai implantado o estado de integridade agregado do aplicativo, independentemente dos filtros de entrada.
+
+    O filtro de aplicativo implantado pode especificar vários filtros de pacote de serviço implantado.
+
+    Por exemplo, ele pode especificar um filtro para retornar todos os pacotes de serviço implantado com o estado de integridade erro e outro filtro sempre incluir um pacote de serviço implantado em um nó.
+  optional: true
+  syntax:
+    content: 'deployedServicePackageFilters?: DeployedServicePackageHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    O filtro para o estado de integridade dos aplicativos implantados. Ele permite que aplicativos selecionando implantados se elas corresponderem os estados de integridade desejadas.
+
+    Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade. Somente os aplicativos implantados que correspondem ao filtro são retornados. Todos os aplicativos implantados são usados para avaliar o estado de integridade agregado do cluster.
+
+    Se não for especificado, o valor padrão é None, a menos que o nome do nó é especificado. Se o filtro tem valor padrão e o nome do nó é especificado, o aplicativo implantado correspondente será retornado.
+
+    Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+
+    Por exemplo, se o valor fornecido for 6, ela corresponde a aplicativos implantados com o valor de HealthState Okey (2) e Warning (4).
+
+    - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+
+    - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+
+    - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+
+    - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+
+    - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+
+    - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O nome do nó em que o aplicativo é implantado para corresponderem ao filtro.
+
+    Se for especificado, o filtro é aplicado apenas para o aplicativo implantado no nó especificado.
+
+    Se o aplicativo não é implantado no nó com o nome especificado, nenhum aplicativo implantado será retornado no bloco de integridade de cluster com base nesse filtro.
+
+    Caso contrário, o aplicativo implantado está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.
+
+    Se não for especificados, todos implantados aplicativos que correspondem aos filtros pai (se houver) são levados em consideração e comparados com os outros membros de filtro, como o filtro de estado de integridade.
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServicePackageHealthStateFilter[]
+  name: DeployedServicePackageHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    uid: azure-servicefabric.DeployedServicePackageHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

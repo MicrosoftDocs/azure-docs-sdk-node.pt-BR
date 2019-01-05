@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d40d05884ed7fd066e3ac1c88e2393db5b8dea34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063801"
+items:
+- uid: azure-servicefabric.ApplicationHealthStateFilter
+  name: ApplicationHealthStateFilter
+  fullName: ApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  - azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define os critérios de correspondência para determinar se um aplicativo deve ser incluído no bloco de integridade do cluster.
+
+    Um filtro pode corresponder a zero, um ou vários aplicativos, dependendo de suas propriedades.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  name: applicationNameFilter
+  fullName: applicationNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O nome do aplicativo que corresponde ao filtro, como um uri de malha. O filtro é aplicado apenas para o aplicativo especificado, se ele existir.
+
+    Se o aplicativo não existir, nenhum aplicativo é retornado no bloco de integridade de cluster com base nesse filtro.
+
+    Se o aplicativo já existir, ele está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.
+
+    Se não for especificado, todos os aplicativos são comparados com os outros membros de filtro, como o filtro de estado de integridade.
+  optional: true
+  syntax:
+    content: 'applicationNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  name: applicationTypeNameFilter
+  fullName: applicationTypeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    O nome do tipo de aplicativo que corresponde ao filtro.
+
+    Se for especificado, o filtro é aplicado somente aos aplicativos do tipo de aplicativo selecionado, se houver alguma.
+
+    Se nenhum aplicativo do tipo de aplicativo especificado existir, nenhum aplicativo é retornado no bloco de integridade de cluster com base nesse filtro.
+
+    Cada aplicativo do tipo de aplicativo especificado está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.
+
+    Se não for especificado, todos os aplicativos são comparados com os outros membros de filtro, como o filtro de estado de integridade.
+  optional: true
+  syntax:
+    content: 'applicationTypeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  name: deployedApplicationFilters
+  fullName: deployedApplicationFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define uma lista de filtros que especificam quais aplicativos implantados para ser incluído na integridade do cluster retornado partes como filhos do aplicativo. Os aplicativos implantados são retornados apenas se o aplicativo pai corresponde a um filtro.
+
+    Se a lista estiver vazia, não há aplicativos implantados são retornados. Todos os aplicativos implantados são usados para avaliar o estado de integridade do agregado do aplicativo pai, independentemente dos filtros de entrada.
+
+    O filtro de aplicativo pode especificar vários filtros de aplicativo implantado.
+
+    Por exemplo, ele pode especificar um filtro para retornar todos os aplicativos implantados com o estado de integridade erro e outro filtro para incluir sempre um aplicativo implantado em um nó especificado.
+  optional: true
+  syntax:
+    content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    O filtro para o estado de integridade dos aplicativos. Ele permite selecionar os aplicativos se elas corresponderem os estados de integridade desejadas.
+
+    Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade. São retornados apenas aplicativos que correspondem ao filtro. Todos os aplicativos são usados para avaliar o estado de integridade agregado do cluster.
+
+    Se não for especificado, o valor padrão é None, a menos que o nome do aplicativo ou o nome do tipo de aplicativo são especificados. Se o filtro tem valor padrão e o nome do aplicativo for especificado, o aplicativo correspondente será retornado.
+
+    Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+
+    Por exemplo, se o valor fornecido for 6, ela corresponde a aplicativos com o valor de HealthState de Okey (2) e Warning (4).
+
+    - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+
+    - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+
+    - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+
+    - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+
+    - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+
+    - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  name: serviceFilters
+  fullName: serviceFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Define uma lista de filtros que especificam quais serviços a serem incluídos na integridade do cluster retornado partes como filhos do aplicativo. Os serviços serão retornados apenas se o aplicativo pai corresponde a um filtro.
+
+    Se a lista estiver vazia, nenhum serviço será retornado. Todos os serviços são usados para avaliar o estado de integridade do agregado do aplicativo pai, independentemente dos filtros de entrada.
+
+    O filtro de aplicativo pode especificar vários filtros de serviço.
+
+    Por exemplo, ele pode especificar um filtro para retornar todos os serviços com estado de integridade erro e outro filtro para incluir sempre um serviço identificado pelo nome do serviço.
+  optional: true
+  syntax:
+    content: 'serviceFilters?: ServiceHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceHealthStateFilter[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  name: DeployedApplicationHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceHealthStateFilter[]
+  name: ServiceHealthStateFilter[]
+  spec.typeScript:
+  - name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    uid: azure-servicefabric.ServiceHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

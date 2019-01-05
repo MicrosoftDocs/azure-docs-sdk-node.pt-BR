@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7ee2030edfb8d3fd7e62c662828dd18a49186c00
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52072913"
+items:
+- uid: azure-servicefabric.StatelessServiceInstanceHealth
+  name: StatelessServiceInstanceHealth
+  fullName: StatelessServiceInstanceHealth
+  children:
+  - azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Representa a integridade da instância do serviço sem monitoração de estado.
+
+    Contém o estado de integridade da instância agregada, os eventos de integridade e as avaliações não íntegras.
+  extends:
+    name: azure-servicefabric.ReplicaHealth
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatelessServiceInstanceHealth.instanceId
+  name: instanceId
+  fullName: instanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ID de uma instância de serviço sem estado. InstanceId é usada pelo Service Fabric para identificar exclusivamente uma instância de uma partição de um serviço sem monitoração de estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da instância. Se a instância tiver feito failover no mesmo ou em outro nó, ele receberá um valor diferente para a ID da instância.
+  optional: true
+  syntax:
+    content: 'instanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ReplicaHealth
+  name: ReplicaHealth
+  spec.typeScript:
+  - name: ReplicaHealth
+    fullName: ReplicaHealth
+    uid: azure-servicefabric.ReplicaHealth
