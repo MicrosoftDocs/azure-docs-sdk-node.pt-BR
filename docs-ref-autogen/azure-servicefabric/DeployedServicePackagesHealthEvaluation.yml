@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bda85c14edc5f5596f4b47bef968982dbf494d0d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52125261"
+items:
+- uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation
+  name: DeployedServicePackagesHealthEvaluation
+  fullName: DeployedServicePackagesHealthEvaluation
+  children:
+  - azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+  - azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="15d28-101">Representa a avaliação de integridade para pacotes de serviço implantado, que contém as avaliações de integridade para cada pacote de serviço implantados não íntegros que afetados atual estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="15d28-101">Represents health evaluation for deployed service packages, containing health evaluations for each unhealthy deployed service package that impacted current aggregated health state.</span></span> <span data-ttu-id="15d28-102">Pode ser retornado ao avaliar a integridade do aplicativo implantado e o estado de integridade agregada é erro ou aviso.</span><span class="sxs-lookup"><span data-stu-id="15d28-102">Can be returned when evaluating deployed application health and the aggregated health state is either Error or Warning.</span></span>
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+  name: totalCount
+  fullName: totalCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="15d28-103">Número total de pacotes de serviço implantados do aplicativo implantado no repositório de integridade.</span><span class="sxs-lookup"><span data-stu-id="15d28-103">Total number of deployed service packages of the deployed application in the health store.</span></span>
+  optional: true
+  syntax:
+    content: 'totalCount?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="15d28-104">Lista de avaliações não íntegras que levou ao estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="15d28-104">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="15d28-105">Inclui o DeployedServicePackageHealthEvaluation não íntegro que afetados a integridade agregada.</span><span class="sxs-lookup"><span data-stu-id="15d28-105">Includes all the unhealthy DeployedServicePackageHealthEvaluation that impacted the aggregated health.</span></span>
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'

@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 96cb705d36e6681b1094de40896cede7e5c6e511
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52094691"
+items:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  fullName: CompleteLease
+  children:
+  - '@azure/event-processor-host.CompleteLease.constructor'
+  - '@azure/event-processor-host.CompleteLease.epoch'
+  - '@azure/event-processor-host.CompleteLease.getInfo'
+  - '@azure/event-processor-host.CompleteLease.incrementEpoch'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="49816-101">Descreve uma concessão completa.</span><span class="sxs-lookup"><span data-stu-id="49816-101">Describes a Complete Lease.</span></span>
+  extends:
+    name: '@azure/event-processor-host.BaseLease'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CompleteLease.constructor'
+  name: CompleteLease(CompleteLeaseInfo)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49816-102">Cria uma instância da concessão.</span><span class="sxs-lookup"><span data-stu-id="49816-102">Creates an instance of the Lease.</span></span>
+  syntax:
+    content: 'new CompleteLease(info: CompleteLeaseInfo)'
+    parameters:
+    - id: info
+      type:
+      - '@azure/event-processor-host.CompleteLeaseInfo'
+      description: >
+        <span data-ttu-id="49816-103">As informações de concessão.</span><span class="sxs-lookup"><span data-stu-id="49816-103">The Lease info.</span></span>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CompleteLease.epoch'
+  name: epoch
+  fullName: epoch
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="49816-104">época de {number} o epoch(time) da concessão, que é um valor que você pode usar para determinar o proprietário do mais recente de uma partição entre os nós de concorrentes.</span><span class="sxs-lookup"><span data-stu-id="49816-104">{number} epoch The epoch(time) of the lease, which is a value you can use to determine the most recent owner of a partition between competing nodes.</span></span>
+  syntax:
+    content: 'epoch: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CompleteLease.getInfo'
+  name: getInfo()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49816-105">Obtém as informações de concessão.</span><span class="sxs-lookup"><span data-stu-id="49816-105">Gets the lease information.</span></span>
+  syntax:
+    content: function getInfo()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-processor-host.CompleteLeaseInfo'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CompleteLease.incrementEpoch'
+  name: incrementEpoch()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="49816-106">Incrementa o valor da época em 1.</span><span class="sxs-lookup"><span data-stu-id="49816-106">Increments the value of epoch by 1.</span></span>
+  syntax:
+    content: function incrementEpoch()
+    parameters: []
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.BaseLease'
+  name: BaseLease
+  spec.typeScript:
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+- uid: '@azure/event-processor-host.CompleteLeaseInfo'
+  name: CompleteLeaseInfo
+  spec.typeScript:
+  - name: CompleteLeaseInfo
+    fullName: CompleteLeaseInfo
+    uid: '@azure/event-processor-host.CompleteLeaseInfo'

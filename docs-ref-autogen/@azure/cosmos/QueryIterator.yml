@@ -1,0 +1,200 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ef0a15814adb8ac1c36af0e1f26ebfb7d4ea6fca
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52062801"
+items:
+- uid: '@azure/cosmos.QueryIterator'
+  name: QueryIterator
+  fullName: QueryIterator<T>
+  children:
+  - '@azure/cosmos.QueryIterator.current'
+  - '@azure/cosmos.QueryIterator.executeNext'
+  - '@azure/cosmos.QueryIterator.forEach'
+  - '@azure/cosmos.QueryIterator.getAsyncIterator'
+  - '@azure/cosmos.QueryIterator.hasMoreResults'
+  - '@azure/cosmos.QueryIterator.nextItem'
+  - '@azure/cosmos.QueryIterator.reset'
+  - '@azure/cosmos.QueryIterator.toArray'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="ea206-101">Representa um objeto QueryIterator, um implmenetation de resposta de consulta ou feed que permite a passagem e iterar sobre a resposta no serviço de banco de dados do Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="ea206-101">Represents a QueryIterator Object, an implmenetation of feed or query response that enables traversal and iterating over the response in the Azure Cosmos DB database service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.current'
+  name: current()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ea206-102">Recupere o elemento atual no QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="ea206-102">Retrieve the current element on the QueryIterator.</span></span>
+  syntax:
+    content: function current()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.executeNext'
+  name: executeNext()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ea206-103">Recuperar o próximo lote de feed e passá-los como uma matriz para uma função</span><span class="sxs-lookup"><span data-stu-id="ea206-103">Retrieve the next batch of the feed and pass them as an array to a function</span></span>
+  syntax:
+    content: function executeNext()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.forEach'
+  name: 'forEach((result: T, headers?: IHeaders, index?: number) => boolean | void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="ea206-104">Chama um retorno de chamada especificado para cada item retornado pela consulta.</span><span class="sxs-lookup"><span data-stu-id="ea206-104">Calls a specified callback for each item returned from the query.</span></span>
+
+    <span data-ttu-id="ea206-105">É executado em série; cada retorno de chamada bloqueia a próxima.</span><span class="sxs-lookup"><span data-stu-id="ea206-105">Runs serially; each callback blocks the next.</span></span>
+  syntax:
+    content: 'function forEach(callback: (result: T, headers?: IHeaders, index?: number) => boolean | void)'
+    parameters:
+    - id: callback
+      type:
+      - '(result: T, headers?: IHeaders, index?: number) => boolean | void'
+      description: >
+        <span data-ttu-id="ea206-106">O retorno de chamada especificado.</span><span class="sxs-lookup"><span data-stu-id="ea206-106">Specified callback.</span></span>
+
+        <span data-ttu-id="ea206-107">Param primeiro é o resultado, segundo param (opcional) é o estado atual do objeto de cabeçalhos, param de terceiro (opcional) é o índice atual.</span><span class="sxs-lookup"><span data-stu-id="ea206-107">First param is the result, second param (optional) is the current headers object state, third param (optional) is current index.</span></span>
+
+        <span data-ttu-id="ea206-108">Mais nenhum retorno de chamada será chamado se um deles resulta false.</span><span class="sxs-lookup"><span data-stu-id="ea206-108">No more callbacks will be called if one of them results false.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.getAsyncIterator'
+  name: getAsyncIterator()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="ea206-109">Obtém um iterador assíncrono que produzirá resultados até a conclusão.</span><span class="sxs-lookup"><span data-stu-id="ea206-109">Gets an async iterator that will yield results until completion.</span></span>
+
+    <span data-ttu-id="ea206-110">OBSERVAÇÃO:  AsyncIterators são um recurso novo muito e você talvez precise usar polyfils/etc. para usá-los em seu código.</span><span class="sxs-lookup"><span data-stu-id="ea206-110">NOTE: AsyncIterators are a very new feature and you might need to use polyfils/etc. in order to use them in your code.</span></span>
+
+
+    <span data-ttu-id="ea206-111">Se você estiver usando o TypeScript, você pode usar o suporte retroativo a seguir como longa como destino ES6 ou superior e está em execução no nó de 6 ou superior.</span><span class="sxs-lookup"><span data-stu-id="ea206-111">If you're using TypeScript, you can use the following polyfill as long as you target ES6 or higher and are running on Node 6 or higher.</span></span>
+
+
+    ```typescript
+
+    if (!Symbol || !Symbol.asyncIterator) {
+      (Symbol as any).asyncIterator = Symbol.for("Symbol.asyncIterator");
+    }
+
+    ```
+  syntax:
+    content: function getAsyncIterator()
+    parameters: []
+    return:
+      type:
+      - AsyncIterable<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.hasMoreResults'
+  name: hasMoreResults()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function hasMoreResults()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+  deprecated:
+    content: >-
+      Instead check if nextItem() or current() returns undefined.
+
+
+      Determine if there are still remaining resources to processs based on the value of the continuation token or the\
+
+      elements remaining on the current batch in the QueryIterator.
+- uid: '@azure/cosmos.QueryIterator.nextItem'
+  name: nextItem()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ea206-112">Execute uma função fornecida no próximo elemento no QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="ea206-112">Execute a provided function on the next element in the QueryIterator.</span></span>
+  syntax:
+    content: function nextItem()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.reset'
+  name: reset()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ea206-113">Redefina o QueryIterator para o início e limpe todos os recursos dentro dele</span><span class="sxs-lookup"><span data-stu-id="ea206-113">Reset the QueryIterator to the beginning and clear all the resources inside it</span></span>
+  syntax:
+    content: function reset()
+    parameters: []
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.toArray'
+  name: toArray()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="ea206-114">Recuperar todos os elementos do feed e passá-los como uma matriz para uma função</span><span class="sxs-lookup"><span data-stu-id="ea206-114">Retrieve all the elements of the feed and pass them as an array to a function</span></span>
+  syntax:
+    content: function toArray()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T[]>>
+  package: '@azure/cosmos'
+references:
+- uid: Promise<@azure/cosmos.Response<T>>
+  name: Response<T>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: AsyncIterable<@azure/cosmos.Response<T>>
+  name: Response<T>>
+  spec.typeScript:
+  - name: AsyncIterable<
+    fullName: AsyncIterable<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: Promise<@azure/cosmos.Response<T[]>>
+  name: Response<T[]>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T[]>>
+    fullName: <T[]>>
