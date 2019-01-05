@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8c8588649c89c7b6e03617078edef832eebd5f1b
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678752"
+items:
+- uid: azure-arm-network.PublicIPAddressDnsSettings
+  name: PublicIPAddressDnsSettings
+  fullName: PublicIPAddressDnsSettings
+  children:
+  - azure-arm-network.PublicIPAddressDnsSettings.domainNameLabel
+  - azure-arm-network.PublicIPAddressDnsSettings.fqdn
+  - azure-arm-network.PublicIPAddressDnsSettings.reverseFqdn
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="280e2-101">Contém o FQDN do registro DNS associado com o endereço IP público</span><span class="sxs-lookup"><span data-stu-id="280e2-101">Contains FQDN of the DNS record associated with the public IP address</span></span>
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.domainNameLabel
+  name: domainNameLabel
+  fullName: domainNameLabel
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="280e2-102">Obtém ou define o rótulo de nome de domínio. A concatenação de rótulo de nome de domínio e a zona DNS regionalizada compõem o nome de domínio totalmente qualificado associado com o endereço IP público.</span><span class="sxs-lookup"><span data-stu-id="280e2-102">Gets or sets the Domain name label.The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address.</span></span> <span data-ttu-id="280e2-103">Se um rótulo de nome de domínio for especificado, um registro DNS é criado para o IP público no sistema DNS do Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="280e2-103">If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.</span></span>
+  optional: true
+  syntax:
+    content: 'domainNameLabel?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.fqdn
+  name: fqdn
+  fullName: fqdn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="280e2-104">Obtém o FQDN, nome de domínio totalmente qualificado do registro DNS associado com o IP público.</span><span class="sxs-lookup"><span data-stu-id="280e2-104">Gets the FQDN, Fully qualified domain name of the A DNS record associated with the public IP.</span></span>
+
+    <span data-ttu-id="280e2-105">Isso é a concatenação da domainNameLabel e da zona DNS regionalizada.</span><span class="sxs-lookup"><span data-stu-id="280e2-105">This is the concatenation of the domainNameLabel and the regionalized DNS zone.</span></span>
+  optional: true
+  syntax:
+    content: 'fqdn?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.PublicIPAddressDnsSettings.reverseFqdn
+  name: reverseFqdn
+  fullName: reverseFqdn
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="280e2-106">Obtém ou define o FQDN reverso.</span><span class="sxs-lookup"><span data-stu-id="280e2-106">Gets or Sets the Reverse FQDN.</span></span> <span data-ttu-id="280e2-107">Um visível pelo usuário, nome de domínio que seja resolvido para esse endereço IP público totalmente qualificado.</span><span class="sxs-lookup"><span data-stu-id="280e2-107">A user-visible, fully qualified domain name that resolves to this public IP address.</span></span> <span data-ttu-id="280e2-108">Se o reverseFqdn for especificado, um registro de PTR DNS é criado apontando do endereço IP no domínio in-addr para o FQDN inverso.</span><span class="sxs-lookup"><span data-stu-id="280e2-108">If the reverseFqdn is specified, then a PTR DNS record is created pointing from the IP address in the in-addr.arpa domain to the reverse FQDN.</span></span>
+  optional: true
+  syntax:
+    content: 'reverseFqdn?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network

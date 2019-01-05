@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ac978cb530aed286b2542882777941ef7b17d24d
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53686142"
+items:
+- uid: azure-batch.JobNetworkConfiguration
+  name: JobNetworkConfiguration
+  fullName: JobNetworkConfiguration
+  children:
+  - azure-batch.JobNetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobNetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="7d587-101">Isso só é suportado para trabalhos em execução em pools de VirtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="7d587-101">This is only supported for jobs running on VirtualMachineConfiguration pools.</span></span>
+
+    <span data-ttu-id="7d587-102">Isso é o formato /subscriptions/ {subscription} ResourceGroups {grupo} /providers/ {provider} /virtualNetworks/ {network} / Subnets / {sub-rede}.</span><span class="sxs-lookup"><span data-stu-id="7d587-102">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+
+    <span data-ttu-id="7d587-103">A rede virtual deve estar na mesma região e assinatura como a conta do lote do Azure.</span><span class="sxs-lookup"><span data-stu-id="7d587-103">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+
+    <span data-ttu-id="7d587-104">A sub-rede especificada deve ter endereços IP suficientes livres para acomodar o número de nós que executará tarefas do trabalho.</span><span class="sxs-lookup"><span data-stu-id="7d587-104">The specified subnet should have enough free IP addresses to accommodate the number of nodes which will run tasks from the job.</span></span> <span data-ttu-id="7d587-105">Para obter mais detalhes, consulte https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.</span><span class="sxs-lookup"><span data-stu-id="7d587-105">For more details, see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.</span></span>
+  syntax:
+    content: 'subnetId: string'
+    return:
+      type:
+      - string
+  package: azure-batch
