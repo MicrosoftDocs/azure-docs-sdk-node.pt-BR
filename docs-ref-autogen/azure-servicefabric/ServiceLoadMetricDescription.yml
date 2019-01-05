@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d28cd447cc9b0c5edfabcf7f0cb6a801809f796
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52064931"
+items:
+- uid: azure-servicefabric.ServiceLoadMetricDescription
+  name: ServiceLoadMetricDescription
+  fullName: ServiceLoadMetricDescription
+  children:
+  - azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.name
+  - azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.weight
+  langs:
+  - typeScript
+  type: interface
+  summary: Especifica um serviço de uma métrica para balancear a carga durante o tempo de execução.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  name: defaultLoad
+  fullName: defaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Usado apenas para serviços sem monitoração de estado. O valor padrão de carga, como um número, o que esse serviço cria para esta métrica.
+  optional: true
+  syntax:
+    content: 'defaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O nome da métrica. Se o serviço opta por relatar carga durante o tempo de execução, o nome da métrica de carga deve corresponder ao nome especificado exatamente no nome. Observe que os nomes de métrica diferenciam maiusculas de minúsculas.
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  name: primaryDefaultLoad
+  fullName: primaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Usado apenas para serviços com monitoração de estado. O valor padrão de carga, como um número, o que esse serviço cria para esta métrica quando se trata de uma réplica primária.
+  optional: true
+  syntax:
+    content: 'primaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  name: secondaryDefaultLoad
+  fullName: secondaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Usado apenas para serviços com monitoração de estado. O valor padrão de carga, como um número, o que esse serviço cria para esta métrica quando se trata de uma réplica secundária.
+  optional: true
+  syntax:
+    content: 'secondaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.weight
+  name: weight
+  fullName: weight
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "O serviço de carga métrica peso relativo, em comparação comparado outras métricas configuradas para esse serviço, como um número. Os valores possíveis incluem: 'Zero', 'Mínimo', 'Médio', 'High'"
+  optional: true
+  syntax:
+    content: 'weight?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
