@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a231e02e8ae83d5235fa223097d17b42061ff207
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126011"
+items:
+- uid: ms-rest-azure.loginWithAuthFileWithAuthResponse
+  name: loginWithAuthFileWithAuthResponse(AuthFileOptions)
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a4fa5-101">Antes de usar esse método instale a cli az de https://github.com/Azure/azure-cli/releases.</span><span class="sxs-lookup"><span data-stu-id="a4fa5-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="a4fa5-102">Em seguida, execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span><span class="sxs-lookup"><span data-stu-id="a4fa5-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+
+    <span data-ttu-id="a4fa5-103">Se você quiser criar sp para um nuvem/ambiente diferente, em seguida, execute:</span><span class="sxs-lookup"><span data-stu-id="a4fa5-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+
+    1. <span data-ttu-id="a4fa5-104">lista de nuvem do AZ</span><span class="sxs-lookup"><span data-stu-id="a4fa5-104">az cloud list</span></span>
+
+    2. <span data-ttu-id="a4fa5-105">nuvem de AZ definido – n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="a4fa5-105">az cloud set –n <name of the environment></span></span>
+
+    3. <span data-ttu-id="a4fa5-106">AZ ad sp create-for-rbac - sdk-auth > auth.json se a entidade de serviço já foi criada, em seguida, logon com as informações de entidade de serviço:</span><span class="sxs-lookup"><span data-stu-id="a4fa5-106">az ad sp create-for-rbac --sdk-auth > auth.json If the service principal is already created then login with service principal info:</span></span>
+
+    3. <span data-ttu-id="a4fa5-107">logon AZ – entidade de serviço - u <clientId> -p <clientSecret> - t <tenantId></span><span class="sxs-lookup"><span data-stu-id="a4fa5-107">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+
+    4. <span data-ttu-id="a4fa5-108">conta AZ Mostrar - sdk-auth > auth.json</span><span class="sxs-lookup"><span data-stu-id="a4fa5-108">az account show --sdk-auth > auth.json</span></span>
+
+
+    <span data-ttu-id="a4fa5-109">Autentica usando as informações de entidade de serviço fornecidas no arquivo de autenticação.</span><span class="sxs-lookup"><span data-stu-id="a4fa5-109">Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="a4fa5-110">Esse método será definida a subscriptionId no arquivo de autenticação para o usuário fornecido a variável de ambiente no parâmetro de opções ou o padrão 'AZURE_SUBSCRIPTION_ID'.</span><span class="sxs-lookup"><span data-stu-id="a4fa5-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default 'AZURE_SUBSCRIPTION_ID'.</span></span>
+  syntax:
+    content: 'function loginWithAuthFileWithAuthResponse(options?: AuthFileOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.AuthFileOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<ms-rest-azure.AuthResponse>
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.AuthFileOptions
+  name: AuthFileOptions
+  spec.typeScript:
+  - name: AuthFileOptions
+    fullName: AuthFileOptions
+    uid: ms-rest-azure.AuthFileOptions
+- uid: Promise<ms-rest-azure.AuthResponse>
+  name: AuthResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: AuthResponse
+    fullName: AuthResponse
+    uid: ms-rest-azure.AuthResponse
+  - name: '>'
+    fullName: '>'

@@ -1,0 +1,446 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f421b5bdf7a913d501c4c1b11aa369c76f4e4f99
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52149621"
+items:
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections
+  name: ItemLevelRecoveryConnections
+  fullName: ItemLevelRecoveryConnections
+  children:
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provisionWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revokeWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision
+  name: provision(string, string, string, string, string, string, ILRRequestResource, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-101">Provisiona um script que chama uma conexão iSCSI aos dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-101">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="602ce-102">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperáveis e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-102">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="602ce-103">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-103">This is an asynchronous operation.</span></span> <span data-ttu-id="602ce-104">Para saber o status de provisionamento, chame a API de GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="602ce-104">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-105">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="602ce-105">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-106">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="602ce-106">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-107">Nome de malha associado com os itens submetidos a backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-107">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-108">Nome do contêiner associado aos itens de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-108">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-109">Nome do item cujas arquivos/pastas são a ser restaurado o backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-109">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-110">ID do ponto de recuperação que representa dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-110">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="602ce-111">conexão iSCSI será provisionado para esses dados de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-111">iSCSI connection will be provisioned for this backed up data.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: >
+        <span data-ttu-id="602ce-112">solicitação de recurso de ILR</span><span class="sxs-lookup"><span data-stu-id="602ce-112">resource ILR request</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2
+  name: provision(string, string, string, string, string, string, ILRRequestResource, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-113">Provisiona um script que chama uma conexão iSCSI aos dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-113">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="602ce-114">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperáveis e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-114">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="602ce-115">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-115">This is an asynchronous operation.</span></span> <span data-ttu-id="602ce-116">Para saber o status de provisionamento, chame a API de GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="602ce-116">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1
+  name: provision(string, string, string, string, string, string, ILRRequestResource, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-117">Provisiona um script que chama uma conexão iSCSI aos dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-117">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="602ce-118">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperáveis e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-118">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="602ce-119">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-119">This is an asynchronous operation.</span></span> <span data-ttu-id="602ce-120">Para saber o status de provisionamento, chame a API de GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="602ce-120">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provisionWithHttpOperationResponse
+  name: provisionWithHttpOperationResponse(string, string, string, string, string, string, ILRRequestResource, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-121">Provisiona um script que chama uma conexão iSCSI aos dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-121">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="602ce-122">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperáveis e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-122">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="602ce-123">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-123">This is an asynchronous operation.</span></span> <span data-ttu-id="602ce-124">Para saber o status de provisionamento, chame a API de GetProtectedItemOperationResult.</span><span class="sxs-lookup"><span data-stu-id="602ce-124">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provisionWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-125">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="602ce-125">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-126">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="602ce-126">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-127">Nome de malha associado com os itens submetidos a backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-127">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-128">Nome do contêiner associado aos itens de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-128">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-129">Nome do item cujas arquivos/pastas são a ser restaurado o backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-129">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-130">ID do ponto de recuperação que representa dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-130">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="602ce-131">conexão iSCSI será provisionado para esses dados de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-131">iSCSI connection will be provisioned for this backed up data.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: >
+        <span data-ttu-id="602ce-132">solicitação de recurso de ILR</span><span class="sxs-lookup"><span data-stu-id="602ce-132">resource ILR request</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke
+  name: revoke(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-133">Revoga uma conexão iSCSI que pode ser usado para baixar um script.</span><span class="sxs-lookup"><span data-stu-id="602ce-133">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="602ce-134">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperados e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-134">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="602ce-135">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-135">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-136">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="602ce-136">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-137">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="602ce-137">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-138">Nome de malha associado com os itens submetidos a backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-138">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-139">Nome do contêiner associado aos itens de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-139">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-140">Nome do item cujas arquivos/pastas são a ser restaurado o backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-140">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-141">ID do ponto de recuperação que representa dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-141">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="602ce-142">conexão iSCSI será revogada esses dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-142">iSCSI connection will be revoked for this backed up data.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2
+  name: revoke(string, string, string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-143">Revoga uma conexão iSCSI que pode ser usado para baixar um script.</span><span class="sxs-lookup"><span data-stu-id="602ce-143">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="602ce-144">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperados e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-144">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="602ce-145">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-145">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1
+  name: revoke(string, string, string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-146">Revoga uma conexão iSCSI que pode ser usado para baixar um script.</span><span class="sxs-lookup"><span data-stu-id="602ce-146">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="602ce-147">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperados e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-147">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="602ce-148">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-148">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revokeWithHttpOperationResponse
+  name: revokeWithHttpOperationResponse(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="602ce-149">Revoga uma conexão iSCSI que pode ser usado para baixar um script.</span><span class="sxs-lookup"><span data-stu-id="602ce-149">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="602ce-150">Executando esse script é aberto um Explorador de arquivos, exibindo todos os arquivos recuperados e pastas.</span><span class="sxs-lookup"><span data-stu-id="602ce-150">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="602ce-151">Esta é uma operação assíncrona.</span><span class="sxs-lookup"><span data-stu-id="602ce-151">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revokeWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-152">O nome do cofre dos serviços de recuperação.</span><span class="sxs-lookup"><span data-stu-id="602ce-152">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-153">O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.</span><span class="sxs-lookup"><span data-stu-id="602ce-153">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-154">Nome de malha associado com os itens submetidos a backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-154">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-155">Nome do contêiner associado aos itens de backups.</span><span class="sxs-lookup"><span data-stu-id="602ce-155">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-156">Nome do item cujas arquivos/pastas são a ser restaurado o backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-156">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="602ce-157">ID do ponto de recuperação que representa dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-157">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="602ce-158">conexão iSCSI será revogada esses dados de backup.</span><span class="sxs-lookup"><span data-stu-id="602ce-158">iSCSI connection will be revoked for this backed up data.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: azure-arm-recoveryservicesbackup.ILRRequestResource
+  name: ILRRequestResource
+  spec.typeScript:
+  - name: ILRRequestResource
+    fullName: ILRRequestResource
+    uid: azure-arm-recoveryservicesbackup.ILRRequestResource

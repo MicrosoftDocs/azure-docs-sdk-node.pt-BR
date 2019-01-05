@@ -1,0 +1,2026 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f7a27675f2b6677ec661282181b71eaaecf12e35
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52033851"
+items:
+- uid: azure-arm-batchai.Jobs
+  name: Jobs
+  fullName: Jobs
+  children:
+  - azure-arm-batchai.Jobs.beginCreate
+  - azure-arm-batchai.Jobs.beginCreate_2
+  - azure-arm-batchai.Jobs.beginCreate_1
+  - azure-arm-batchai.Jobs.beginCreateWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.beginDeleteMethod
+  - azure-arm-batchai.Jobs.beginDeleteMethod_2
+  - azure-arm-batchai.Jobs.beginDeleteMethod_1
+  - azure-arm-batchai.Jobs.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.beginTerminate
+  - azure-arm-batchai.Jobs.beginTerminate_2
+  - azure-arm-batchai.Jobs.beginTerminate_1
+  - azure-arm-batchai.Jobs.beginTerminateWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.create
+  - azure-arm-batchai.Jobs.create_2
+  - azure-arm-batchai.Jobs.create_1
+  - azure-arm-batchai.Jobs.createWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.deleteMethod
+  - azure-arm-batchai.Jobs.deleteMethod_2
+  - azure-arm-batchai.Jobs.deleteMethod_1
+  - azure-arm-batchai.Jobs.deleteMethodWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.get
+  - azure-arm-batchai.Jobs.get_2
+  - azure-arm-batchai.Jobs.get_1
+  - azure-arm-batchai.Jobs.getWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listByExperiment
+  - azure-arm-batchai.Jobs.listByExperiment_2
+  - azure-arm-batchai.Jobs.listByExperiment_1
+  - azure-arm-batchai.Jobs.listByExperimentNext
+  - azure-arm-batchai.Jobs.listByExperimentNext_2
+  - azure-arm-batchai.Jobs.listByExperimentNext_1
+  - azure-arm-batchai.Jobs.listByExperimentNextWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listByExperimentWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listOutputFiles
+  - azure-arm-batchai.Jobs.listOutputFiles_2
+  - azure-arm-batchai.Jobs.listOutputFiles_1
+  - azure-arm-batchai.Jobs.listOutputFilesNext
+  - azure-arm-batchai.Jobs.listOutputFilesNext_2
+  - azure-arm-batchai.Jobs.listOutputFilesNext_1
+  - azure-arm-batchai.Jobs.listOutputFilesNextWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listOutputFilesWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listRemoteLoginInformation
+  - azure-arm-batchai.Jobs.listRemoteLoginInformation_2
+  - azure-arm-batchai.Jobs.listRemoteLoginInformation_1
+  - azure-arm-batchai.Jobs.listRemoteLoginInformationNext
+  - azure-arm-batchai.Jobs.listRemoteLoginInformationNext_2
+  - azure-arm-batchai.Jobs.listRemoteLoginInformationNext_1
+  - azure-arm-batchai.Jobs.listRemoteLoginInformationNextWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.listRemoteLoginInformationWithHttpOperationResponse
+  - azure-arm-batchai.Jobs.terminate
+  - azure-arm-batchai.Jobs.terminate_2
+  - azure-arm-batchai.Jobs.terminate_1
+  - azure-arm-batchai.Jobs.terminateWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginCreate
+  name: beginCreate(string, string, string, string, JobCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-101">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-101">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-102">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-102">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-103">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-103">The name of the workspace.</span></span> <span data-ttu-id="778f6-104">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-104">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-105">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-105">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-106">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-106">The name of the experiment.</span></span> <span data-ttu-id="778f6-107">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-107">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-108">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-108">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-109">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-109">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-110">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-110">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-111">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-111">The name must be from 1 through 64 characters long.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: >
+        <span data-ttu-id="778f6-112">Os parâmetros para fornecer para a criação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-112">The parameters to provide for job creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginCreate_2
+  name: beginCreate(string, string, string, string, JobCreateParameters, Object, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-113">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-113">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options: Object, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginCreate_1
+  name: beginCreate(string, string, string, string, JobCreateParameters, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-114">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-114">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function beginCreate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginCreateWithHttpOperationResponse
+  name: beginCreateWithHttpOperationResponse(string, string, string, string, JobCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-115">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-115">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-116">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-116">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-117">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-117">The name of the workspace.</span></span> <span data-ttu-id="778f6-118">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-118">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-119">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-119">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-120">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-120">The name of the experiment.</span></span> <span data-ttu-id="778f6-121">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-121">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-122">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-122">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-123">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-123">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-124">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-124">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-125">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-125">The name must be from 1 through 64 characters long.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: >
+        <span data-ttu-id="778f6-126">Os parâmetros para fornecer para a criação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-126">The parameters to provide for job creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.Job>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginDeleteMethod
+  name: beginDeleteMethod(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-127">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-127">Deletes a Job.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-128">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-128">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-129">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-129">The name of the workspace.</span></span> <span data-ttu-id="778f6-130">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-130">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-131">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-131">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-132">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-132">The name of the experiment.</span></span> <span data-ttu-id="778f6-133">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-133">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-134">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-134">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-135">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-135">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-136">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-136">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-137">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-137">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginDeleteMethod_2
+  name: beginDeleteMethod(string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-138">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-138">Deletes a Job.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-139">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-139">Deletes a Job.</span></span>
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-140">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-140">Deletes a Job.</span></span>
+  syntax:
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-141">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-141">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-142">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-142">The name of the workspace.</span></span> <span data-ttu-id="778f6-143">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-143">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-144">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-144">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-145">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-145">The name of the experiment.</span></span> <span data-ttu-id="778f6-146">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-146">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-147">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-147">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-148">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-148">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-149">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-149">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-150">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-150">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginTerminate
+  name: beginTerminate(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-151">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-151">Terminates a job.</span></span>
+  syntax:
+    content: 'function beginTerminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-152">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-152">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-153">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-153">The name of the workspace.</span></span> <span data-ttu-id="778f6-154">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-154">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-155">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-155">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-156">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-156">The name of the experiment.</span></span> <span data-ttu-id="778f6-157">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-157">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-158">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-158">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-159">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-159">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-160">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-160">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-161">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-161">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginTerminate_2
+  name: beginTerminate(string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-162">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-162">Terminates a job.</span></span>
+  syntax:
+    content: 'function beginTerminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginTerminate_1
+  name: beginTerminate(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-163">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-163">Terminates a job.</span></span>
+  syntax:
+    content: 'function beginTerminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.beginTerminateWithHttpOperationResponse
+  name: beginTerminateWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-164">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-164">Terminates a job.</span></span>
+  syntax:
+    content: 'function beginTerminateWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-165">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-165">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-166">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-166">The name of the workspace.</span></span> <span data-ttu-id="778f6-167">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-167">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-168">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-168">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-169">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-169">The name of the experiment.</span></span> <span data-ttu-id="778f6-170">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-170">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-171">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-171">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-172">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-172">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-173">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-173">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-174">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-174">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.create
+  name: create(string, string, string, string, JobCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-175">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-175">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-176">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-176">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-177">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-177">The name of the workspace.</span></span> <span data-ttu-id="778f6-178">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-178">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-179">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-179">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-180">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-180">The name of the experiment.</span></span> <span data-ttu-id="778f6-181">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-181">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-182">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-182">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-183">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-183">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-184">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-184">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-185">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-185">The name must be from 1 through 64 characters long.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: >
+        <span data-ttu-id="778f6-186">Os parâmetros para fornecer para a criação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-186">The parameters to provide for job creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.create_2
+  name: create(string, string, string, string, JobCreateParameters, Object, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-187">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-187">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options: Object, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.create_1
+  name: create(string, string, string, string, JobCreateParameters, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-188">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-188">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function create(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(string, string, string, string, JobCreateParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-189">Cria um trabalho no teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-189">Creates a Job in the given Experiment.</span></span>
+  syntax:
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, parameters: JobCreateParameters, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-190">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-190">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-191">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-191">The name of the workspace.</span></span> <span data-ttu-id="778f6-192">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-192">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-193">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-193">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-194">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-194">The name of the experiment.</span></span> <span data-ttu-id="778f6-195">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-195">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-196">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-196">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-197">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-197">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-198">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-198">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-199">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-199">The name must be from 1 through 64 characters long.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-batchai.JobCreateParameters
+      description: >
+        <span data-ttu-id="778f6-200">Os parâmetros para fornecer para a criação do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-200">The parameters to provide for job creation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.Job>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.deleteMethod
+  name: deleteMethod(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-201">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-201">Deletes a Job.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-202">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-202">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-203">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-203">The name of the workspace.</span></span> <span data-ttu-id="778f6-204">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-204">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-205">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-205">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-206">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-206">The name of the experiment.</span></span> <span data-ttu-id="778f6-207">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-207">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-208">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-208">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-209">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-209">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-210">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-210">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-211">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-211">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.deleteMethod_2
+  name: deleteMethod(string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-212">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-212">Deletes a Job.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.deleteMethod_1
+  name: deleteMethod(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-213">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-213">Deletes a Job.</span></span>
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-214">Exclui um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-214">Deletes a Job.</span></span>
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-215">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-215">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-216">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-216">The name of the workspace.</span></span> <span data-ttu-id="778f6-217">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-217">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-218">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-218">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-219">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-219">The name of the experiment.</span></span> <span data-ttu-id="778f6-220">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-220">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-221">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-221">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-222">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-222">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-223">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-223">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-224">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-224">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.get
+  name: get(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-225">Obtém informações sobre um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-225">Gets information about a Job.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-226">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-226">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-227">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-227">The name of the workspace.</span></span> <span data-ttu-id="778f6-228">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-228">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-229">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-229">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-230">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-230">The name of the experiment.</span></span> <span data-ttu-id="778f6-231">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-231">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-232">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-232">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-233">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-233">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-234">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-234">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-235">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-235">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.get_2
+  name: get(string, string, string, string, Object, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-236">Obtém informações sobre um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-236">Gets information about a Job.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.get_1
+  name: get(string, string, string, string, ServiceCallback<Job>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-237">Obtém informações sobre um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-237">Gets information about a Job.</span></span>
+  syntax:
+    content: 'function get(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.Job>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-238">Obtém informações sobre um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-238">Gets information about a Job.</span></span>
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-239">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-239">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-240">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-240">The name of the workspace.</span></span> <span data-ttu-id="778f6-241">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-241">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-242">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-242">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-243">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-243">The name of the experiment.</span></span> <span data-ttu-id="778f6-244">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-244">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-245">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-245">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-246">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-246">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-247">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-247">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-248">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-248">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.Job>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperiment
+  name: listByExperiment(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-249">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-249">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-250">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-250">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-251">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-251">The name of the workspace.</span></span> <span data-ttu-id="778f6-252">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-252">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-253">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-253">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-254">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-254">The name of the experiment.</span></span> <span data-ttu-id="778f6-255">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-255">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-256">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-256">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperiment_2
+  name: listByExperiment(string, string, string, Object, ServiceCallback<JobListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-257">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-257">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, options: Object, callback: ServiceCallback<JobListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.JobListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperiment_1
+  name: listByExperiment(string, string, string, ServiceCallback<JobListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-258">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-258">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperiment(resourceGroupName: string, workspaceName: string, experimentName: string, callback: ServiceCallback<JobListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.JobListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperimentNext
+  name: listByExperimentNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-259">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-259">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperimentNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-260">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-260">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperimentNext_2
+  name: listByExperimentNext(string, Object, ServiceCallback<JobListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-261">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-261">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperimentNext(nextPageLink: string, options: Object, callback: ServiceCallback<JobListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.JobListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperimentNext_1
+  name: listByExperimentNext(string, ServiceCallback<JobListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-262">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-262">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperimentNext(nextPageLink: string, callback: ServiceCallback<JobListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.JobListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.JobListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperimentNextWithHttpOperationResponse
+  name: listByExperimentNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-263">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-263">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperimentNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-264">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-264">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.JobListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listByExperimentWithHttpOperationResponse
+  name: listByExperimentWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-265">Obtém uma lista de trabalhos de teste especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-265">Gets a list of Jobs within the specified Experiment.</span></span>
+  syntax:
+    content: 'function listByExperimentWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-266">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-266">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-267">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-267">The name of the workspace.</span></span> <span data-ttu-id="778f6-268">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-268">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-269">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-269">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-270">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-270">The name of the experiment.</span></span> <span data-ttu-id="778f6-271">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-271">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-272">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-272">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.JobListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFiles
+  name: listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-273">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-273">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-274">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-274">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-275">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-275">The name of the workspace.</span></span> <span data-ttu-id="778f6-276">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-276">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-277">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-277">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-278">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-278">The name of the experiment.</span></span> <span data-ttu-id="778f6-279">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-279">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-280">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-280">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-281">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-281">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-282">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-282">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-283">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-283">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobsListOutputFilesOptions
+      type:
+      - azure-arm-batchai.JobsListOutputFilesOptions
+      description: >
+        <span data-ttu-id="778f6-284">Parâmetros adicionais para a operação</span><span class="sxs-lookup"><span data-stu-id="778f6-284">Additional parameters for the operation</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFiles_2
+  name: listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, Object, ServiceCallback<FileListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-285">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-285">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, options: Object, callback: ServiceCallback<FileListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: jobsListOutputFilesOptions
+      type:
+      - azure-arm-batchai.JobsListOutputFilesOptions
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.FileListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFiles_1
+  name: listOutputFiles(string, string, string, string, JobsListOutputFilesOptions, ServiceCallback<FileListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-286">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-286">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFiles(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, callback: ServiceCallback<FileListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: jobsListOutputFilesOptions
+      type:
+      - azure-arm-batchai.JobsListOutputFilesOptions
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.FileListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFilesNext
+  name: listOutputFilesNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-287">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-287">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFilesNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-288">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-288">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFilesNext_2
+  name: listOutputFilesNext(string, Object, ServiceCallback<FileListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-289">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-289">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFilesNext(nextPageLink: string, options: Object, callback: ServiceCallback<FileListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.FileListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFilesNext_1
+  name: listOutputFilesNext(string, ServiceCallback<FileListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-290">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-290">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFilesNext(nextPageLink: string, callback: ServiceCallback<FileListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.FileListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.FileListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFilesNextWithHttpOperationResponse
+  name: listOutputFilesNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-291">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-291">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFilesNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-292">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-292">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.FileListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listOutputFilesWithHttpOperationResponse
+  name: listOutputFilesWithHttpOperationResponse(string, string, string, string, JobsListOutputFilesOptions, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-293">Liste todos os diretórios e arquivos dentro do diretório especificado do diretório de saída do trabalho (se for o diretório de saída no contêiner de armazenamento do Azure ou no compartilhamento de arquivos do Azure).</span><span class="sxs-lookup"><span data-stu-id="778f6-293">List all directories and files inside the given directory of the Job's output directory (if the output directory is on Azure File Share or Azure Storage Container).</span></span>
+  syntax:
+    content: 'function listOutputFilesWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, jobsListOutputFilesOptions: JobsListOutputFilesOptions, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-294">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-294">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-295">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-295">The name of the workspace.</span></span> <span data-ttu-id="778f6-296">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-296">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-297">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-297">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-298">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-298">The name of the experiment.</span></span> <span data-ttu-id="778f6-299">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-299">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-300">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-300">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-301">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-301">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-302">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-302">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-303">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-303">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobsListOutputFilesOptions
+      type:
+      - azure-arm-batchai.JobsListOutputFilesOptions
+      description: >
+        <span data-ttu-id="778f6-304">Parâmetros adicionais para a operação</span><span class="sxs-lookup"><span data-stu-id="778f6-304">Additional parameters for the operation</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.FileListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformation
+  name: listRemoteLoginInformation(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-305">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-305">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-306">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-306">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-307">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-307">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-308">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-308">The name of the workspace.</span></span> <span data-ttu-id="778f6-309">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-309">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-310">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-310">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-311">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-311">The name of the experiment.</span></span> <span data-ttu-id="778f6-312">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-312">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-313">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-313">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-314">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-314">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-315">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-315">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-316">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-316">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformation_2
+  name: listRemoteLoginInformation(string, string, string, string, Object, ServiceCallback<RemoteLoginInformationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-317">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-317">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-318">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-318">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.RemoteLoginInformationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformation_1
+  name: listRemoteLoginInformation(string, string, string, string, ServiceCallback<RemoteLoginInformationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-319">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-319">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-320">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-320">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.RemoteLoginInformationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformationNext
+  name: listRemoteLoginInformationNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-321">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-321">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-322">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-322">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformationNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-323">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-323">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformationNext_2
+  name: listRemoteLoginInformationNext(string, Object, ServiceCallback<RemoteLoginInformationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-324">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-324">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-325">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-325">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformationNext(nextPageLink: string, options: Object, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.RemoteLoginInformationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformationNext_1
+  name: listRemoteLoginInformationNext(string, ServiceCallback<RemoteLoginInformationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-326">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-326">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-327">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-327">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformationNext(nextPageLink: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batchai.RemoteLoginInformationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformationNextWithHttpOperationResponse
+  name: listRemoteLoginInformationNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-328">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-328">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-329">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-329">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformationNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-330">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="778f6-330">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.RemoteLoginInformationListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.listRemoteLoginInformationWithHttpOperationResponse
+  name: listRemoteLoginInformationWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-331">Obtém uma lista de existentes no momento, nós que foram usados para a execução do trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-331">Gets a list of currently existing nodes which were used for the Job execution.</span></span> <span data-ttu-id="778f6-332">As informações retornadas contém a ID do nó, sua porta pública de SSH e IP.</span><span class="sxs-lookup"><span data-stu-id="778f6-332">The returned information contains the node ID, its public IP and SSH port.</span></span>
+  syntax:
+    content: 'function listRemoteLoginInformationWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-333">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-333">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-334">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-334">The name of the workspace.</span></span> <span data-ttu-id="778f6-335">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-335">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-336">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-336">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-337">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-337">The name of the experiment.</span></span> <span data-ttu-id="778f6-338">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-338">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-339">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-339">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-340">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-340">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-341">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-341">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-342">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-342">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batchai.RemoteLoginInformationListResult>>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.terminate
+  name: terminate(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-343">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-343">Terminates a job.</span></span>
+  syntax:
+    content: 'function terminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-344">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-344">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-345">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-345">The name of the workspace.</span></span> <span data-ttu-id="778f6-346">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-346">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-347">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-347">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-348">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-348">The name of the experiment.</span></span> <span data-ttu-id="778f6-349">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-349">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-350">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-350">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-351">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-351">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-352">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-352">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-353">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-353">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.terminate_2
+  name: terminate(string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-354">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-354">Terminates a job.</span></span>
+  syntax:
+    content: 'function terminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.terminate_1
+  name: terminate(string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-355">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-355">Terminates a job.</span></span>
+  syntax:
+    content: 'function terminate(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: experimentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-batchai
+- uid: azure-arm-batchai.Jobs.terminateWithHttpOperationResponse
+  name: terminateWithHttpOperationResponse(string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="778f6-356">Encerra um trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-356">Terminates a job.</span></span>
+  syntax:
+    content: 'function terminateWithHttpOperationResponse(resourceGroupName: string, workspaceName: string, experimentName: string, jobName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-357">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="778f6-357">Name of the resource group to which the resource belongs.</span></span>
+    - id: workspaceName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-358">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="778f6-358">The name of the workspace.</span></span> <span data-ttu-id="778f6-359">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-359">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-360">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-360">The name must be from 1 through 64 characters long.</span></span>
+    - id: experimentName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-361">O nome do teste.</span><span class="sxs-lookup"><span data-stu-id="778f6-361">The name of the experiment.</span></span> <span data-ttu-id="778f6-362">Nomes de teste só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-362">Experiment names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-363">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-363">The name must be from 1 through 64 characters long.</span></span>
+    - id: jobName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="778f6-364">O nome do trabalho dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="778f6-364">The name of the job within the specified resource group.</span></span> <span data-ttu-id="778f6-365">Nomes de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="778f6-365">Job names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="778f6-366">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="778f6-366">The name must be from 1 through 64 characters long.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-batchai
+references:
+- uid: azure-arm-batchai.JobCreateParameters
+  name: JobCreateParameters
+  spec.typeScript:
+  - name: JobCreateParameters
+    fullName: JobCreateParameters
+    uid: azure-arm-batchai.JobCreateParameters
+- uid: Promise<azure-arm-batchai.Job>
+  name: Job>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Job
+    fullName: Job
+    uid: azure-arm-batchai.Job
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batchai.Job>
+  name: Job>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Job
+    fullName: Job
+    uid: azure-arm-batchai.Job
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batchai.Job>>
+  name: Job>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Job
+    fullName: Job
+    uid: azure-arm-batchai.Job
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batchai.JobListResult>
+  name: JobListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: JobListResult
+    fullName: JobListResult
+    uid: azure-arm-batchai.JobListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batchai.JobListResult>
+  name: JobListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: JobListResult
+    fullName: JobListResult
+    uid: azure-arm-batchai.JobListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batchai.JobListResult>>
+  name: JobListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: JobListResult
+    fullName: JobListResult
+    uid: azure-arm-batchai.JobListResult
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-arm-batchai.JobsListOutputFilesOptions
+  name: JobsListOutputFilesOptions
+  spec.typeScript:
+  - name: JobsListOutputFilesOptions
+    fullName: JobsListOutputFilesOptions
+    uid: azure-arm-batchai.JobsListOutputFilesOptions
+- uid: Promise<azure-arm-batchai.FileListResult>
+  name: FileListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: FileListResult
+    fullName: FileListResult
+    uid: azure-arm-batchai.FileListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batchai.FileListResult>
+  name: FileListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: FileListResult
+    fullName: FileListResult
+    uid: azure-arm-batchai.FileListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batchai.FileListResult>>
+  name: FileListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: FileListResult
+    fullName: FileListResult
+    uid: azure-arm-batchai.FileListResult
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batchai.RemoteLoginInformationListResult>
+  name: RemoteLoginInformationListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RemoteLoginInformationListResult
+    fullName: RemoteLoginInformationListResult
+    uid: azure-arm-batchai.RemoteLoginInformationListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batchai.RemoteLoginInformationListResult>
+  name: RemoteLoginInformationListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RemoteLoginInformationListResult
+    fullName: RemoteLoginInformationListResult
+    uid: azure-arm-batchai.RemoteLoginInformationListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batchai.RemoteLoginInformationListResult>>
+  name: RemoteLoginInformationListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RemoteLoginInformationListResult
+    fullName: RemoteLoginInformationListResult
+    uid: azure-arm-batchai.RemoteLoginInformationListResult
+  - name: '>>'
+    fullName: '>>'
