@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf7c7f8600a26a8bf475078d60f3bf0c66e38e58
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45905260"
+items:
+- uid: azure-event-hubs.DataTransformer
+  name: DataTransformer
+  fullName: DataTransformer
+  children:
+  - azure-event-hubs.DataTransformer.decode
+  - azure-event-hubs.DataTransformer.encode
+  langs:
+  - typeScript
+  type: interface
+  summary: Descreve as transformações que podem ser executadas para os dados de codificação/decodificação antes enviá-la (ou recebê-lo partir) durante a transmissão.
+  package: azure-event-hubs
+- uid: azure-event-hubs.DataTransformer.decode
+  name: decode
+  fullName: decode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Função} decodificar uma função que usa a propriedade de corpo de uma mensagem AMQP e retorna o corpo da mensagem decodificada. Se ele não é possível decodificar o corpo e em seguida, ele retorna o corpo como-está.'
+  syntax:
+    content: 'decode: (body: any) => any'
+    return:
+      type:
+      - '(body: any) => any'
+  package: azure-event-hubs
+- uid: azure-event-hubs.DataTransformer.encode
+  name: encode
+  fullName: encode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Função} codificar uma função que usa a propriedade do corpo de um objeto EventData e retorna um corpo codificado (alguma forma de tipo AMQP).'
+  syntax:
+    content: 'encode: (body: any) => any'
+    return:
+      type:
+      - '(body: any) => any'
+  package: azure-event-hubs

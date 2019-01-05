@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cfa6c93f47756f2ca02217849d1083336f867f2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52007810"
+items:
+- uid: azure-servicefabric.NodeHealthStateFilter
+  name: NodeHealthStateFilter
+  fullName: NodeHealthStateFilter
+  children:
+  - azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  - azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Define os critérios de correspondência para determinar se um nó deve ser incluído no bloco de integridade do cluster retornado.
+
+    Um filtro pode corresponder a zero, um ou vários nós, dependendo de suas propriedades.
+
+    Pode ser especificado na descrição de consulta de parte do cluster integridade.
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    O filtro para o estado de integridade de nós. Ele permite que a seleção de nós se elas corresponderem os estados de integridade desejadas.
+
+    Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade. Só retornam os nós que correspondem ao filtro. Todos os nós são usados para avaliar o estado de integridade agregado do cluster.
+
+    Se não for especificado, o valor padrão é None, a menos que o nome do nó é especificado. Se o filtro tem valor padrão e o nome do nó é especificado, o nó correspondente será retornado.
+
+    Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+
+    Por exemplo, se o valor fornecido for 6, ele corresponde a nós com o valor de HealthState Okey (2) e Warning (4).
+
+    - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+
+    - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+
+    - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+
+    - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+
+    - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+
+    - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Nome do nó que corresponde ao filtro. O filtro é aplicado somente ao nó especificado, se ele existir.
+
+    Se o nó não existir, nenhum nó é retornado no bloco de integridade de cluster com base nesse filtro.
+
+    Se o nó existe, ele está incluído no bloco de integridade do cluster, se o estado de integridade corresponde a outras propriedades de filtro.
+
+    Se não for especificado, todos os nós que correspondem aos filtros pai (se houver) são levados em consideração e comparados com os outros membros de filtro, como o filtro de estado de integridade.
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
