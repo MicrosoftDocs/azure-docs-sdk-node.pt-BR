@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d40d05884ed7fd066e3ac1c88e2393db5b8dea34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063801"
+items:
+- uid: azure-servicefabric.ApplicationHealthStateFilter
+  name: ApplicationHealthStateFilter
+  fullName: ApplicationHealthStateFilter
+  children:
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  - azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  - azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="f527f-101">Define os critérios de correspondência para determinar se um aplicativo deve ser incluído no bloco de integridade do cluster.</span><span class="sxs-lookup"><span data-stu-id="f527f-101">Defines matching criteria to determine whether a application should be included in the cluster health chunk.</span></span>
+
+    <span data-ttu-id="f527f-102">Um filtro pode corresponder a zero, um ou vários aplicativos, dependendo de suas propriedades.</span><span class="sxs-lookup"><span data-stu-id="f527f-102">One filter can match zero, one or multiple applications, depending on its properties.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationNameFilter
+  name: applicationNameFilter
+  fullName: applicationNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f527f-103">O nome do aplicativo que corresponde ao filtro, como um uri de malha.</span><span class="sxs-lookup"><span data-stu-id="f527f-103">The name of the application that matches the filter, as a fabric uri.</span></span> <span data-ttu-id="f527f-104">O filtro é aplicado apenas para o aplicativo especificado, se ele existir.</span><span class="sxs-lookup"><span data-stu-id="f527f-104">The filter is applied only to the specified application, if it exists.</span></span>
+
+    <span data-ttu-id="f527f-105">Se o aplicativo não existir, nenhum aplicativo é retornado no bloco de integridade de cluster com base nesse filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-105">If the application doesn't exist, no application is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="f527f-106">Se o aplicativo já existir, ele está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-106">If the application exists, it is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="f527f-107">Se não for especificado, todos os aplicativos são comparados com os outros membros de filtro, como o filtro de estado de integridade.</span><span class="sxs-lookup"><span data-stu-id="f527f-107">If not specified, all applications are matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter
+  name: applicationTypeNameFilter
+  fullName: applicationTypeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f527f-108">O nome do tipo de aplicativo que corresponde ao filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-108">The name of the application type that matches the filter.</span></span>
+
+    <span data-ttu-id="f527f-109">Se for especificado, o filtro é aplicado somente aos aplicativos do tipo de aplicativo selecionado, se houver alguma.</span><span class="sxs-lookup"><span data-stu-id="f527f-109">If specified, the filter is applied only to applications of the selected application type, if any exists.</span></span>
+
+    <span data-ttu-id="f527f-110">Se nenhum aplicativo do tipo de aplicativo especificado existir, nenhum aplicativo é retornado no bloco de integridade de cluster com base nesse filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-110">If no applications of the specified application type exists, no application is returned in the cluster health chunk based on this filter.</span></span>
+
+    <span data-ttu-id="f527f-111">Cada aplicativo do tipo de aplicativo especificado está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-111">Each application of the specified application type is included in the cluster health chunk if it respects the other filter properties.</span></span>
+
+    <span data-ttu-id="f527f-112">Se não for especificado, todos os aplicativos são comparados com os outros membros de filtro, como o filtro de estado de integridade.</span><span class="sxs-lookup"><span data-stu-id="f527f-112">If not specified, all applications are matched against the other filter members, like health state filter.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationTypeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters
+  name: deployedApplicationFilters
+  fullName: deployedApplicationFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f527f-113">Define uma lista de filtros que especificam quais aplicativos implantados para ser incluído na integridade do cluster retornado partes como filhos do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f527f-113">Defines a list of filters that specify which deployed applications to be included in the returned cluster health chunk as children of the application.</span></span> <span data-ttu-id="f527f-114">Os aplicativos implantados são retornados apenas se o aplicativo pai corresponde a um filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-114">The deployed applications are returned only if the parent application matches a filter.</span></span>
+
+    <span data-ttu-id="f527f-115">Se a lista estiver vazia, não há aplicativos implantados são retornados.</span><span class="sxs-lookup"><span data-stu-id="f527f-115">If the list is empty, no deployed applications are returned.</span></span> <span data-ttu-id="f527f-116">Todos os aplicativos implantados são usados para avaliar o estado de integridade do agregado do aplicativo pai, independentemente dos filtros de entrada.</span><span class="sxs-lookup"><span data-stu-id="f527f-116">All the deployed applications are used to evaluate the parent application aggregated health state, regardless of the input filters.</span></span>
+
+    <span data-ttu-id="f527f-117">O filtro de aplicativo pode especificar vários filtros de aplicativo implantado.</span><span class="sxs-lookup"><span data-stu-id="f527f-117">The application filter may specify multiple deployed application filters.</span></span>
+
+    <span data-ttu-id="f527f-118">Por exemplo, ele pode especificar um filtro para retornar todos os aplicativos implantados com o estado de integridade erro e outro filtro para incluir sempre um aplicativo implantado em um nó especificado.</span><span class="sxs-lookup"><span data-stu-id="f527f-118">For example, it can specify a filter to return all deployed applications with health state Error and another filter to always include a deployed application on a specified node.</span></span>
+  optional: true
+  syntax:
+    content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="f527f-119">O filtro para o estado de integridade dos aplicativos.</span><span class="sxs-lookup"><span data-stu-id="f527f-119">The filter for the health state of the applications.</span></span> <span data-ttu-id="f527f-120">Ele permite selecionar os aplicativos se elas corresponderem os estados de integridade desejadas.</span><span class="sxs-lookup"><span data-stu-id="f527f-120">It allows selecting applications if they match the desired health states.</span></span>
+
+    <span data-ttu-id="f527f-121">Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade.</span><span class="sxs-lookup"><span data-stu-id="f527f-121">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="f527f-122">São retornados apenas aplicativos que correspondem ao filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-122">Only applications that match the filter are returned.</span></span> <span data-ttu-id="f527f-123">Todos os aplicativos são usados para avaliar o estado de integridade agregado do cluster.</span><span class="sxs-lookup"><span data-stu-id="f527f-123">All applications are used to evaluate the cluster aggregated health state.</span></span>
+
+    <span data-ttu-id="f527f-124">Se não for especificado, o valor padrão é None, a menos que o nome do aplicativo ou o nome do tipo de aplicativo são especificados.</span><span class="sxs-lookup"><span data-stu-id="f527f-124">If not specified, default value is None, unless the application name or the application type name are specified.</span></span> <span data-ttu-id="f527f-125">Se o filtro tem valor padrão e o nome do aplicativo for especificado, o aplicativo correspondente será retornado.</span><span class="sxs-lookup"><span data-stu-id="f527f-125">If the filter has default value and application name is specified, the matching application is returned.</span></span>
+
+    <span data-ttu-id="f527f-126">Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.</span><span class="sxs-lookup"><span data-stu-id="f527f-126">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+
+    <span data-ttu-id="f527f-127">Por exemplo, se o valor fornecido for 6, ela corresponde a aplicativos com o valor de HealthState de Okey (2) e Warning (4).</span><span class="sxs-lookup"><span data-stu-id="f527f-127">For example, if the provided value is 6, it matches applications with HealthState value of OK (2) and Warning (4).</span></span>
+
+    - <span data-ttu-id="f527f-128">Default – valor padrão.</span><span class="sxs-lookup"><span data-stu-id="f527f-128">Default - Default value.</span></span> <span data-ttu-id="f527f-129">Corresponde a qualquer HealthState.</span><span class="sxs-lookup"><span data-stu-id="f527f-129">Matches any HealthState.</span></span> <span data-ttu-id="f527f-130">O valor é zero.</span><span class="sxs-lookup"><span data-stu-id="f527f-130">The value is zero.</span></span>
+
+    - <span data-ttu-id="f527f-131">None - filtro que não corresponde a qualquer valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="f527f-131">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="f527f-132">Usado para não retornar qualquer resultado em um determinado conjunto de estados.</span><span class="sxs-lookup"><span data-stu-id="f527f-132">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="f527f-133">O valor é 1.</span><span class="sxs-lookup"><span data-stu-id="f527f-133">The value is 1.</span></span>
+
+    - <span data-ttu-id="f527f-134">Okey - filtro que corresponde à entrada com o valor de HealthState Okey.</span><span class="sxs-lookup"><span data-stu-id="f527f-134">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="f527f-135">O valor é 2.</span><span class="sxs-lookup"><span data-stu-id="f527f-135">The value is 2.</span></span>
+
+    - <span data-ttu-id="f527f-136">Warning - filtro que corresponde à entrada com HealthState valor Warning.</span><span class="sxs-lookup"><span data-stu-id="f527f-136">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="f527f-137">O valor é 4.</span><span class="sxs-lookup"><span data-stu-id="f527f-137">The value is 4.</span></span>
+
+    - <span data-ttu-id="f527f-138">Error - filtro que corresponde à entrada com o valor de HealthState Error.</span><span class="sxs-lookup"><span data-stu-id="f527f-138">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="f527f-139">O valor é 8.</span><span class="sxs-lookup"><span data-stu-id="f527f-139">The value is 8.</span></span>
+
+    - <span data-ttu-id="f527f-140">All - filtro que corresponde à entrada com qualquer valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="f527f-140">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="f527f-141">O valor é 65535.</span><span class="sxs-lookup"><span data-stu-id="f527f-141">The value is 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthStateFilter.serviceFilters
+  name: serviceFilters
+  fullName: serviceFilters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f527f-142">Define uma lista de filtros que especificam quais serviços a serem incluídos na integridade do cluster retornado partes como filhos do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="f527f-142">Defines a list of filters that specify which services to be included in the returned cluster health chunk as children of the application.</span></span> <span data-ttu-id="f527f-143">Os serviços serão retornados apenas se o aplicativo pai corresponde a um filtro.</span><span class="sxs-lookup"><span data-stu-id="f527f-143">The services are returned only if the parent application matches a filter.</span></span>
+
+    <span data-ttu-id="f527f-144">Se a lista estiver vazia, nenhum serviço será retornado.</span><span class="sxs-lookup"><span data-stu-id="f527f-144">If the list is empty, no services are returned.</span></span> <span data-ttu-id="f527f-145">Todos os serviços são usados para avaliar o estado de integridade do agregado do aplicativo pai, independentemente dos filtros de entrada.</span><span class="sxs-lookup"><span data-stu-id="f527f-145">All the services are used to evaluate the parent application aggregated health state, regardless of the input filters.</span></span>
+
+    <span data-ttu-id="f527f-146">O filtro de aplicativo pode especificar vários filtros de serviço.</span><span class="sxs-lookup"><span data-stu-id="f527f-146">The application filter may specify multiple service filters.</span></span>
+
+    <span data-ttu-id="f527f-147">Por exemplo, ele pode especificar um filtro para retornar todos os serviços com estado de integridade erro e outro filtro para incluir sempre um serviço identificado pelo nome do serviço.</span><span class="sxs-lookup"><span data-stu-id="f527f-147">For example, it can specify a filter to return all services with health state Error and another filter to always include a service identified by its service name.</span></span>
+  optional: true
+  syntax:
+    content: 'serviceFilters?: ServiceHealthStateFilter[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceHealthStateFilter[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedApplicationHealthStateFilter[]
+  name: DeployedApplicationHealthStateFilter[]
+  spec.typeScript:
+  - name: DeployedApplicationHealthStateFilter
+    fullName: DeployedApplicationHealthStateFilter
+    uid: azure-servicefabric.DeployedApplicationHealthStateFilter
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ServiceHealthStateFilter[]
+  name: ServiceHealthStateFilter[]
+  spec.typeScript:
+  - name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    uid: azure-servicefabric.ServiceHealthStateFilter
+  - name: '[]'
+    fullName: '[]'

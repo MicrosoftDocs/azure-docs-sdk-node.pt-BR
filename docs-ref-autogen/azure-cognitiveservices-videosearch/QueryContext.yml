@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8ab1c923fd9ec15723165023a1ba364fe4230edc
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53672150"
+items:
+- uid: azure-cognitiveservices-videosearch.QueryContext
+  name: QueryContext
+  fullName: QueryContext
+  children:
+  - azure-cognitiveservices-videosearch.QueryContext.adultIntent
+  - azure-cognitiveservices-videosearch.QueryContext.alterationOverrideQuery
+  - azure-cognitiveservices-videosearch.QueryContext.alteredQuery
+  - azure-cognitiveservices-videosearch.QueryContext.askUserForLocation
+  - azure-cognitiveservices-videosearch.QueryContext.isTransactional
+  - azure-cognitiveservices-videosearch.QueryContext.originalQuery
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="39cf6-101">Define o contexto de consulta usado pelo Bing para a solicitação.</span><span class="sxs-lookup"><span data-stu-id="39cf6-101">Defines the query context that Bing used for the request.</span></span>
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.adultIntent
+  name: adultIntent
+  fullName: adultIntent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39cf6-102">Um valor booliano que indica se a consulta especificada é direcionada para adultos.</span><span class="sxs-lookup"><span data-stu-id="39cf6-102">A Boolean value that indicates whether the specified query has adult intent.</span></span> <span data-ttu-id="39cf6-103">O valor será true se a consulta tem adultos; Caso contrário, false.</span><span class="sxs-lookup"><span data-stu-id="39cf6-103">The value is true if the query has adult intent; otherwise, false.</span></span>
+  optional: true
+  syntax:
+    content: 'adultIntent?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.alterationOverrideQuery
+  name: alterationOverrideQuery
+  fullName: alterationOverrideQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39cf6-104">A cadeia de caracteres de consulta a ser usada para forçar o Bing a usar a cadeia de caracteres original.</span><span class="sxs-lookup"><span data-stu-id="39cf6-104">The query string to use to force Bing to use the original string.</span></span> <span data-ttu-id="39cf6-105">Por exemplo, se a cadeia de caracteres de consulta é "downwind saling", a cadeia de caracteres de consulta de substituição será "+ saling downwind".</span><span class="sxs-lookup"><span data-stu-id="39cf6-105">For example, if the query string is "saling downwind", the override query string will be "+saling downwind".</span></span> <span data-ttu-id="39cf6-106">Lembre-se de codificar a cadeia de caracteres de consulta que resulta em "% 2Bsaling + downwind".</span><span class="sxs-lookup"><span data-stu-id="39cf6-106">Remember to encode the query string which results in "%2Bsaling+downwind".</span></span> <span data-ttu-id="39cf6-107">Esse campo é incluído somente se a cadeia de caracteres de consulta original contém um erro de ortografia.</span><span class="sxs-lookup"><span data-stu-id="39cf6-107">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alterationOverrideQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.alteredQuery
+  name: alteredQuery
+  fullName: alteredQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39cf6-108">A cadeia de caracteres de consulta usada pelo Bing para executar a consulta.</span><span class="sxs-lookup"><span data-stu-id="39cf6-108">The query string used by Bing to perform the query.</span></span> <span data-ttu-id="39cf6-109">O Bing usa a cadeia de caracteres de consulta alterada se a cadeia de caracteres de consulta original contém erros de ortografia.</span><span class="sxs-lookup"><span data-stu-id="39cf6-109">Bing uses the altered query string if the original query string contained spelling mistakes.</span></span> <span data-ttu-id="39cf6-110">Por exemplo, se a cadeia de caracteres de consulta é "downwind saling", a cadeia de caracteres de consulta alterado será ser "velejando downwind".</span><span class="sxs-lookup"><span data-stu-id="39cf6-110">For example, if the query string is "saling downwind", the altered query string will be "sailing downwind".</span></span> <span data-ttu-id="39cf6-111">Esse campo é incluído somente se a cadeia de caracteres de consulta original contém um erro de ortografia.</span><span class="sxs-lookup"><span data-stu-id="39cf6-111">This field is included only if the original query string contains a spelling mistake.</span></span>
+  optional: true
+  syntax:
+    content: 'alteredQuery?: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.askUserForLocation
+  name: askUserForLocation
+  fullName: askUserForLocation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39cf6-112">Um valor booliano que indica se o Bing exige o local do usuário para fornecer resultados precisos.</span><span class="sxs-lookup"><span data-stu-id="39cf6-112">A Boolean value that indicates whether Bing requires the user's location to provide accurate results.</span></span> <span data-ttu-id="39cf6-113">Se você especificou o local do usuário usando os cabeçalhos de local de pesquisa de X e X-MSEdge-ClientIP, você pode ignorar esse campo.</span><span class="sxs-lookup"><span data-stu-id="39cf6-113">If you specified the user's location by using the X-MSEdge-ClientIP and X-Search-Location headers, you can ignore this field.</span></span> <span data-ttu-id="39cf6-114">Para consultas de reconhecimento de local, como "tempo de hoje" ou "restaurantes próximos" que precisa no local do usuário para fornecer resultados precisos, esse campo é definido como true.</span><span class="sxs-lookup"><span data-stu-id="39cf6-114">For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to true.</span></span> <span data-ttu-id="39cf6-115">Para um local com suporte a consultas que incluem o local (por exemplo, "clima de Seattle"), esse campo é definido como false.</span><span class="sxs-lookup"><span data-stu-id="39cf6-115">For location aware queries that include the location (for example, "Seattle weather"), this field is set to false.</span></span> <span data-ttu-id="39cf6-116">Esse campo também é definido como false para consultas que não estão local sem suporte, como "mais vendidos".</span><span class="sxs-lookup"><span data-stu-id="39cf6-116">This field is also set to false for queries that are not location aware, such as "best sellers".</span></span>
+  optional: true
+  syntax:
+    content: 'askUserForLocation?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.isTransactional
+  name: isTransactional
+  fullName: isTransactional
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'isTransactional?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.QueryContext.originalQuery
+  name: originalQuery
+  fullName: originalQuery
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="39cf6-117">A cadeia de caracteres de consulta especificada na solicitação.</span><span class="sxs-lookup"><span data-stu-id="39cf6-117">The query string as specified in the request.</span></span>
+  syntax:
+    content: 'originalQuery: string'
+    return:
+      type:
+      - string
+  package: azure-cognitiveservices-videosearch
