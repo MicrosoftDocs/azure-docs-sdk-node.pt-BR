@@ -1,0 +1,159 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c8c58966d38ef8c4249331f4e76c45ee36fc9260
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52013730"
+items:
+- uid: azure-servicefabric.ApplicationInfo
+  name: ApplicationInfo
+  fullName: ApplicationInfo
+  children:
+  - azure-servicefabric.ApplicationInfo.applicationDefinitionKind
+  - azure-servicefabric.ApplicationInfo.healthState
+  - azure-servicefabric.ApplicationInfo.id
+  - azure-servicefabric.ApplicationInfo.name
+  - azure-servicefabric.ApplicationInfo.parameters
+  - azure-servicefabric.ApplicationInfo.status
+  - azure-servicefabric.ApplicationInfo.typeName
+  - azure-servicefabric.ApplicationInfo.typeVersion
+  langs:
+  - typeScript
+  type: interface
+  summary: Informações sobre um aplicativo do Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.applicationDefinitionKind
+  name: applicationDefinitionKind
+  fullName: applicationDefinitionKind
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "O mecanismo usado para definir um aplicativo do Service Fabric. Os valores possíveis incluem: 'Inválido', 'ServiceFabricApplicationDescription', 'Compose'"
+  optional: true
+  syntax:
+    content: 'applicationDefinitionKind?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'"
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    A identidade do aplicativo. Isso é uma representação codificada do nome do aplicativo.
+
+    Isso é usado nas APIs REST para identificar o recurso de aplicativo.
+
+    Começando na versão 6.0, nomes hierárquicos são delimitados com o "\~" caracteres. Por exemplo, se o nome do aplicativo é "fabric: / myapp/app1", a identidade do aplicativo será "meuaplicativo~Aplicativo1\~app1" em 6.0 + e "meuaplicativo/Aplicativo1" nas versões anteriores.
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O nome do aplicativo, incluindo o ' fabric:' Esquema de URI.
+  optional: true
+  syntax:
+    content: 'name?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.parameters
+  name: parameters
+  fullName: parameters
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Lista de parâmetros de aplicativo com valores substituídos de seus valores padrão especificados no manifesto do aplicativo.
+  optional: true
+  syntax:
+    content: 'parameters?: ApplicationParameter[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationParameter[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "O status do aplicativo. Os valores possíveis incluem: 'Inválido', 'Pronto', 'Atualizar', 'Criando', 'Excluir', 'Falha'"
+  optional: true
+  syntax:
+    content: 'status?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.typeName
+  name: typeName
+  fullName: typeName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O nome de tipo de aplicativo conforme definido no manifesto do aplicativo.
+  optional: true
+  syntax:
+    content: 'typeName?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationInfo.typeVersion
+  name: typeVersion
+  fullName: typeVersion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: A versão do tipo de aplicativo, conforme definido no manifesto do aplicativo.
+  optional: true
+  syntax:
+    content: 'typeVersion?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationParameter[]
+  name: ApplicationParameter[]
+  spec.typeScript:
+  - name: ApplicationParameter
+    fullName: ApplicationParameter
+    uid: azure-servicefabric.ApplicationParameter
+  - name: '[]'
+    fullName: '[]'
