@@ -4,19 +4,19 @@ description: Referência do SDK de Fala dos Serviços Cognitivos para JavaScript
 author: mahilleb-msft
 ms.author: mahilleb
 manager: wolfma
-ms.date: 09/24/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
-ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
+ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52015520"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185983"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>SDK de Fala dos Serviços Cognitivos para JavaScript
 
@@ -25,45 +25,73 @@ ms.locfileid: "52015520"
 Para simplificar o desenvolvimento de aplicativos habilitados para fala, a Microsoft fornece o SDK de Fala para uso com o [serviço de Fala](https://aka.ms/csspeech).
 O SDK de Fala fornece APIs de Conversão de Fala em Texto e de Tradução de Fala nativas consistentes.
 
-> [!NOTE]
-> O SDK de Fala dos serviços Cognitivos está disponível atualmente apenas para navegadores.
-> Um pacote NPM sairá em breve.
+### <a name="install-the-npm-module"></a>Instalar o módulo npm
 
-### <a name="install-the-speech-sdk"></a>Instalar o SDK de Fala
+Instalar o módulo npm do SDK dos Serviços Cognitivos de Fala
 
-Baixe o SDK de Fala como um [pacote.zip](https://aka.ms/csspeech/jsbrowserpackage) e descompacte-o.
-Isso deve desempacotar vários arquivos, incluindo um arquivo chamado `microsoft.cognitiveservices.speech.sdk.bundle.js`.
-Carregue esse arquivo como um recurso de script em sua página da Web para começar a usar o SDK de Fala:
-
-```html
-<script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+```bash
+npm install microsoft-cognitiveservices-speech-sdk
 ```
 
 ### <a name="example"></a>Exemplo 
 
-Os trechos de código abaixo ilustram como fazer um reconhecimento de fala simples em seu navegador:
+Os trechos de código a seguir mostram como fazer um reconhecimento de fala simples a partir de um arquivo:
 
 ```javascript 
-var SpeechSDK = window.SpeechSDK;
-var speechConfig = SpeechSDK.SpeechConfig.fromSubscription("your-subscription-key", "your-service-region");
-speechConfig.language = "en-US";
-var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+// Pull in the required packages.
+var sdk = require("microsoft-cognitiveservices-speech-sdk");
+var fs = require("fs");
 
+// Replace with your own subscription key, service region (e.g., "westus"), and
+// the name of the file you want to run through the speech recognizer.
+var subscriptionKey = "YourSubscriptionKey";
+var serviceRegion = "YourServiceRegion"; // e.g., "westus"
+var filename = "YourAudioFile.wav"; // 16000 Hz, Mono
+
+// Create the push stream we need for the speech sdk.
+var pushStream = sdk.AudioInputStream.createPushStream();
+
+// Open the file and push it to the push stream.
+fs.createReadStream(filename).on('data', function(arrayBuffer) {
+  pushStream.write(arrayBuffer.buffer);
+}).on('end', function() {
+  pushStream.close();
+});
+
+// We are done with the setup
+console.log("Now recognizing from: " + filename);
+
+// Create the audio-config pointing to our stream and
+// the speech config specifying the language.
+var audioConfig = sdk.AudioConfig.fromStreamInput(pushStream);
+var speechConfig = sdk.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+
+// Setting the recognition language to English.
+speechConfig.speechRecognitionLanguage = "en-US";
+
+// Create the speech recognizer.
+var recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
+
+// Start the recognizer and wait for a result.
 recognizer.recognizeOnceAsync(
   function (result) {
-    alert("Recognition result:" + JSON.stringify(result));
+    console.log(result);
+
     recognizer.close();
+    recognizer = undefined;
   },
   function (err) {
-    alert("An error occurred:" + JSON.stringify(err));
+    console.trace("err - " + err);
+
     recognizer.close();
-  }
-);
+    recognizer = undefined;
+  });
 ``` 
 
-Confira nossos [inícios rápidos com passo a passo](/azure/cognitive-services/speech-service/quickstart-js-browser).
+Confira nossos [inícios rápidos com passo a passo](/azure/cognitive-services/speech-service/quickstart-js-node).
 
 ## <a name="samples"></a>Exemplos
 
-Explorar mais exemplos em nosso [repositório de exemplo do SDK de Fala](https://aka.ms/csspeech/samples).
+* [Guia de início rápido passo a passo para Node.js](/azure/cognitive-services/speech-service/quickstart-js-node).
+* [Guia de início rápido passo a passo para o navegador](/azure/cognitive-services/speech-service/quickstart-js-browser).
+* Mais exemplos podem ser encontrados em nosso [repositório de exemplo do SDK de Fala](https://aka.ms/csspeech/samples).
