@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9a07e66b3cd5d1bf179c351ff56f88d5e1e3f899
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: bf4f6ccee09c746c1de9ff86b91aab3b360fb296
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53689692"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051717"
 items:
 - uid: '@azure/arm-network.ApplicationSecurityGroups'
   name: ApplicationSecurityGroups
@@ -13,6 +13,7 @@ items:
   - '@azure/arm-network.ApplicationSecurityGroups.constructor'
   - '@azure/arm-network.ApplicationSecurityGroups.beginCreateOrUpdate'
   - '@azure/arm-network.ApplicationSecurityGroups.beginDeleteMethod'
+  - '@azure/arm-network.ApplicationSecurityGroups.beginUpdateTags'
   - '@azure/arm-network.ApplicationSecurityGroups.createOrUpdate'
   - '@azure/arm-network.ApplicationSecurityGroups.deleteMethod'
   - '@azure/arm-network.ApplicationSecurityGroups.get'
@@ -30,10 +31,11 @@ items:
   - '@azure/arm-network.ApplicationSecurityGroups.listNext'
   - '@azure/arm-network.ApplicationSecurityGroups.listNext_2'
   - '@azure/arm-network.ApplicationSecurityGroups.listNext_1'
+  - '@azure/arm-network.ApplicationSecurityGroups.updateTags'
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="e11a4-101">Classe que representa um Asgs.</span><span class="sxs-lookup"><span data-stu-id="e11a4-101">Class representing a ApplicationSecurityGroups.</span></span>
+  summary: <span data-ttu-id="d61f8-101">Classe que representa um Asgs.</span><span class="sxs-lookup"><span data-stu-id="d61f8-101">Class representing a ApplicationSecurityGroups.</span></span>
   package: '@azure/arm-network'
 - uid: '@azure/arm-network.ApplicationSecurityGroups.constructor'
   name: ApplicationSecurityGroups(NetworkManagementClientContext)
@@ -41,7 +43,7 @@ items:
   type: constructor
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-102">Crie um Asgs.</span><span class="sxs-lookup"><span data-stu-id="e11a4-102">Create a ApplicationSecurityGroups.</span></span>
+  summary: <span data-ttu-id="d61f8-102">Crie um Asgs.</span><span class="sxs-lookup"><span data-stu-id="d61f8-102">Create a ApplicationSecurityGroups.</span></span>
   syntax:
     content: 'new ApplicationSecurityGroups(client: NetworkManagementClientContext)'
     parameters:
@@ -49,7 +51,7 @@ items:
       type:
       - '@azure/arm-network.NetworkManagementClientContext'
       description: >
-        <span data-ttu-id="e11a4-103">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="e11a4-103">Reference to the service client.</span></span>
+        <span data-ttu-id="d61f8-103">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="d61f8-103">Reference to the service client.</span></span>
   package: '@azure/arm-network'
 - uid: '@azure/arm-network.ApplicationSecurityGroups.beginCreateOrUpdate'
   name: beginCreateOrUpdate(string, string, ApplicationSecurityGroup, msRest.RequestOptionsBase)
@@ -57,22 +59,22 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-104">Cria ou atualiza um grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-104">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="d61f8-104">Cria ou atualiza um grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-104">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function beginCreateOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-105">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-105">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-105">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-105">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-106">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-106">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-106">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-106">The name of the application security group.</span></span>
     - id: parameters
       type:
       - '@azure/arm-network.ApplicationSecurityGroup'
-      description: <span data-ttu-id="e11a4-107">Parâmetros fornecidos para a operação de criação ou atualização ApplicationSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="e11a4-107">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+      description: <span data-ttu-id="d61f8-107">Parâmetros fornecidos para a operação de criação ou atualização ApplicationSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="d61f8-107">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -88,18 +90,49 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-108">Exclui o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="e11a4-108">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="d61f8-108">Exclui o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="d61f8-108">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-109">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-109">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-109">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-109">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-110">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-110">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-110">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-110">The name of the application security group.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ApplicationSecurityGroups.beginUpdateTags'
+  name: beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d61f8-111">Atualiza as marcas de um grupo segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-111">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="d61f8-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-112">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: <span data-ttu-id="d61f8-113">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-113">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: <span data-ttu-id="d61f8-114">Parâmetros fornecidos para atualizar as marcas de grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-114">Parameters supplied to update application security group tags.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -115,22 +148,22 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-111">Cria ou atualiza um grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-111">Creates or updates an application security group.</span></span>
+  summary: <span data-ttu-id="d61f8-115">Cria ou atualiza um grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-115">Creates or updates an application security group.</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, applicationSecurityGroupName: string, parameters: ApplicationSecurityGroup, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-112">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-116">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-116">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-113">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-113">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-117">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-117">The name of the application security group.</span></span>
     - id: parameters
       type:
       - '@azure/arm-network.ApplicationSecurityGroup'
-      description: <span data-ttu-id="e11a4-114">Parâmetros fornecidos para a operação de criação ou atualização ApplicationSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="e11a4-114">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
+      description: <span data-ttu-id="d61f8-118">Parâmetros fornecidos para a operação de criação ou atualização ApplicationSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="d61f8-118">Parameters supplied to the create or update ApplicationSecurityGroup operation.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -146,18 +179,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-115">Exclui o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="e11a4-115">Deletes the specified application security group.</span></span>
+  summary: <span data-ttu-id="d61f8-119">Exclui o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="d61f8-119">Deletes the specified application security group.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, applicationSecurityGroupName: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-116">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-116">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-120">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-120">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-117">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-117">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-121">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-121">The name of the application security group.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -173,18 +206,18 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-118">Obtém informações sobre o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="e11a4-118">Gets information about the specified application security group.</span></span>
+  summary: <span data-ttu-id="d61f8-122">Obtém informações sobre o grupo de segurança do aplicativo especificado.</span><span class="sxs-lookup"><span data-stu-id="d61f8-122">Gets information about the specified application security group.</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, applicationSecurityGroupName: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-119">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-119">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-123">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-123">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-120">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-120">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-124">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-124">The name of the application security group.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -207,20 +240,20 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-121">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-121">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-125">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-125">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-122">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-122">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-126">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-126">The name of the application security group.</span></span>
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="e11a4-123">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e11a4-123">The optional parameters</span></span>
+      description: <span data-ttu-id="d61f8-127">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="d61f8-127">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroup>
       description: >
-        <span data-ttu-id="e11a4-124">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-124">The callback</span></span>
+        <span data-ttu-id="d61f8-128">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-128">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsGetResponse>
@@ -238,16 +271,16 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-125">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-125">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-129">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-129">The name of the resource group.</span></span>
     - id: applicationSecurityGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-126">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="e11a4-126">The name of the application security group.</span></span>
+      description: <span data-ttu-id="d61f8-130">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-130">The name of the application security group.</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroup>
       description: >
-        <span data-ttu-id="e11a4-127">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-127">The callback</span></span>
+        <span data-ttu-id="d61f8-131">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-131">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsGetResponse>
@@ -258,14 +291,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-128">Obtém todos os grupos de segurança de aplicativo em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-128">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="d61f8-132">Obtém todos os grupos de segurança de aplicativo em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-132">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function list(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-129">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-129">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-133">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-133">The name of the resource group.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -288,16 +321,16 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-130">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-130">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-134">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-134">The name of the resource group.</span></span>
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="e11a4-131">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e11a4-131">The optional parameters</span></span>
+      description: <span data-ttu-id="d61f8-135">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="d61f8-135">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-132">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-132">The callback</span></span>
+        <span data-ttu-id="d61f8-136">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-136">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListResponse>
@@ -315,12 +348,12 @@ items:
     - id: resourceGroupName
       type:
       - string
-      description: <span data-ttu-id="e11a4-133">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-133">The name of the resource group.</span></span>
+      description: <span data-ttu-id="d61f8-137">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-137">The name of the resource group.</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-134">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-134">The callback</span></span>
+        <span data-ttu-id="d61f8-138">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-138">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListResponse>
@@ -331,7 +364,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-135">Obtém todos os grupos de segurança de aplicativo em uma assinatura.</span><span class="sxs-lookup"><span data-stu-id="e11a4-135">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="d61f8-139">Obtém todos os grupos de segurança de aplicativo em uma assinatura.</span><span class="sxs-lookup"><span data-stu-id="d61f8-139">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAll(options?: msRest.RequestOptionsBase)'
     parameters:
@@ -357,12 +390,12 @@ items:
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="e11a4-136">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e11a4-136">The optional parameters</span></span>
+      description: <span data-ttu-id="d61f8-140">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="d61f8-140">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-137">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-137">The callback</span></span>
+        <span data-ttu-id="d61f8-141">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-141">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListAllResponse>
@@ -381,7 +414,7 @@ items:
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-138">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-138">The callback</span></span>
+        <span data-ttu-id="d61f8-142">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-142">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListAllResponse>
@@ -392,14 +425,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-139">Obtém todos os grupos de segurança de aplicativo em uma assinatura.</span><span class="sxs-lookup"><span data-stu-id="e11a4-139">Gets all application security groups in a subscription.</span></span>
+  summary: <span data-ttu-id="d61f8-143">Obtém todos os grupos de segurança de aplicativo em uma assinatura.</span><span class="sxs-lookup"><span data-stu-id="d61f8-143">Gets all application security groups in a subscription.</span></span>
   syntax:
     content: 'function listAllNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-140">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-140">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-144">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-144">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -422,16 +455,16 @@ items:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-141">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-141">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-145">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-145">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="e11a4-142">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e11a4-142">The optional parameters</span></span>
+      description: <span data-ttu-id="d61f8-146">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="d61f8-146">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-143">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-143">The callback</span></span>
+        <span data-ttu-id="d61f8-147">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-147">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListAllNextResponse>
@@ -449,12 +482,12 @@ items:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-144">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-144">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-148">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-148">The NextLink from the previous successful call to List operation.</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-145">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-145">The callback</span></span>
+        <span data-ttu-id="d61f8-149">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-149">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListAllNextResponse>
@@ -465,14 +498,14 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="e11a4-146">Obtém todos os grupos de segurança de aplicativo em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e11a4-146">Gets all the application security groups in a resource group.</span></span>
+  summary: <span data-ttu-id="d61f8-150">Obtém todos os grupos de segurança de aplicativo em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-150">Gets all the application security groups in a resource group.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
     parameters:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-147">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-147">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-151">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-151">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -495,16 +528,16 @@ items:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-148">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-148">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-152">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-152">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - RequestOptionsBase
-      description: <span data-ttu-id="e11a4-149">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e11a4-149">The optional parameters</span></span>
+      description: <span data-ttu-id="d61f8-153">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="d61f8-153">The optional parameters</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-150">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-150">The callback</span></span>
+        <span data-ttu-id="d61f8-154">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-154">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListNextResponse>
@@ -522,15 +555,46 @@ items:
     - id: nextPageLink
       type:
       - string
-      description: <span data-ttu-id="e11a4-151">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e11a4-151">The NextLink from the previous successful call to List operation.</span></span>
+      description: <span data-ttu-id="d61f8-155">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="d61f8-155">The NextLink from the previous successful call to List operation.</span></span>
     - id: callback
       type:
       - ServiceCallback<@azure/arm-network.ApplicationSecurityGroupListResult>
       description: >
-        <span data-ttu-id="e11a4-152">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e11a4-152">The callback</span></span>
+        <span data-ttu-id="d61f8-156">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="d61f8-156">The callback</span></span>
     return:
       type:
       - Promise<Models.ApplicationSecurityGroupsListNextResponse>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ApplicationSecurityGroups.updateTags'
+  name: updateTags(string, string, TagsObject, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d61f8-157">Atualiza as marcas de um grupo segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-157">Updates an application security group's tags.</span></span>
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: <span data-ttu-id="d61f8-158">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="d61f8-158">The name of the resource group.</span></span>
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: <span data-ttu-id="d61f8-159">O nome do grupo de segurança de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-159">The name of the application security group.</span></span>
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: <span data-ttu-id="d61f8-160">Parâmetros fornecidos para atualizar as marcas de grupo de segurança do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d61f8-160">Parameters supplied to update application security group tags.</span></span>
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.ApplicationSecurityGroupsUpdateTagsResponse>
   package: '@azure/arm-network'
 references:
 - uid: '@azure/arm-network.NetworkManagementClientContext'
@@ -545,6 +609,12 @@ references:
   - name: ApplicationSecurityGroup
     fullName: ApplicationSecurityGroup
     uid: '@azure/arm-network.ApplicationSecurityGroup'
+- uid: '@azure/arm-network.TagsObject'
+  name: TagsObject
+  spec.typeScript:
+  - name: TagsObject
+    fullName: TagsObject
+    uid: '@azure/arm-network.TagsObject'
 - uid: ServiceCallback<@azure/arm-network.ApplicationSecurityGroup>
   name: ApplicationSecurityGroup>
   spec.typeScript:

@@ -1,31 +1,47 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 957ae383aa8f854cf740e8fcd8cf153fd857c84a
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 11b40ebc7b11b68f743bc3cba2f358d420edf02c
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53687476"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051647"
 items:
 - uid: azure-arm-containerregistry.VirtualNetworkRule
   name: VirtualNetworkRule
   fullName: VirtualNetworkRule
   children:
-  - azure-arm-containerregistry.VirtualNetworkRule.id
+  - azure-arm-containerregistry.VirtualNetworkRule.action
+  - azure-arm-containerregistry.VirtualNetworkRule.virtualNetworkResourceId
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="ce1e1-101">A regra de rede virtual para um registro de contêiner.</span><span class="sxs-lookup"><span data-stu-id="ce1e1-101">The virtual network rule for a container registry.</span></span>
+  summary: <span data-ttu-id="a057e-101">Regra de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="a057e-101">Virtual network rule.</span></span>
   package: azure-arm-containerregistry
-- uid: azure-arm-containerregistry.VirtualNetworkRule.id
-  name: id
-  fullName: id
+- uid: azure-arm-containerregistry.VirtualNetworkRule.action
+  name: action
+  fullName: action
   children: []
   langs:
   - typeScript
   type: property
-  summary: '<span data-ttu-id="ce1e1-102">ID do recurso de uma sub-rede, por exemplo: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.</span><span class="sxs-lookup"><span data-stu-id="ce1e1-102">Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.</span></span>'
+  summary: "<span data-ttu-id=\"a057e-102\">A ação de regra de rede virtual.</span><span class=\"sxs-lookup\"><span data-stu-id=\"a057e-102\">The action of virtual network rule.</span></span> <span data-ttu-id=\"a057e-103\">Os valores possíveis incluem: 'Permitir'</span><span class=\"sxs-lookup\"><span data-stu-id=\"a057e-103\">Possible values include: 'Allow'</span></span>"
+  optional: true
   syntax:
-    content: 'id: string'
+    content: 'action?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-containerregistry
+- uid: azure-arm-containerregistry.VirtualNetworkRule.virtualNetworkResourceId
+  name: virtualNetworkResourceId
+  fullName: virtualNetworkResourceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="a057e-104">ID do recurso de uma sub-rede, por exemplo: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.</span><span class="sxs-lookup"><span data-stu-id="a057e-104">Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.</span></span>'
+  syntax:
+    content: 'virtualNetworkResourceId: string'
     return:
       type:
       - string

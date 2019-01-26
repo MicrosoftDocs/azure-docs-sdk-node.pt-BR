@@ -1,27 +1,55 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8a4bc2ffa87d1fad8fe4c474a1a674e6ff29d270
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 5ba7cec2c5ee5bfbdeba23ae6c4573f2caadc182
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52104536"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55053637"
 items:
 - uid: azure-iot-provisioning-service.EnrollmentGroup
   name: EnrollmentGroup
   fullName: EnrollmentGroup
   children:
+  - azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
   - azure-iot-provisioning-service.EnrollmentGroup.attestation
   - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+  - azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
   - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   - azure-iot-provisioning-service.EnrollmentGroup.etag
   - azure-iot-provisioning-service.EnrollmentGroup.initialTwin
   - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+  - azure-iot-provisioning-service.EnrollmentGroup.iotHubs
   - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+  - azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="76992-101">O objeto de grupo de registro.</span><span class="sxs-lookup"><span data-stu-id="76992-101">The enrollment group object.</span></span>
+  summary: <span data-ttu-id="6aa8f-101">O objeto de grupo de registro.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-101">The enrollment group object.</span></span>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
+  name: allocationPolicy
+  fullName: allocationPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="6aa8f-102">A política de alocação desse grupo de registro.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-102">The allocation policy of this enrollment group.</span></span> <span data-ttu-id="6aa8f-103">Essa política substituirá a política de alocação de nível de locatário.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-103">This policy overrides the tenant-level allocation policy.</span></span>
+
+    - <span data-ttu-id="6aa8f-104">'hashed': Hubs IoT vinculados têm probabilidades iguais de ter dispositivos provisionados a eles.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-104">'hashed': Linked IoT hubs are equally likely to have devices provisioned to them.</span></span>
+
+    - <span data-ttu-id="6aa8f-105">'geoLatency':  Dispositivos são provisionados para um hub IoT com a menor latência para o dispositivo. Se vários hubs IoT vinculados forneceria a mesma menor latência, o serviço de provisionamento reciclará dispositivos entre esses hubs.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-105">'geoLatency':  Devices are provisioned to an IoT hub with the lowest latency to the device.If multiple linked IoT hubs would provide the same lowest latency, the provisioning service hashes devices across those hubs.</span></span>
+
+    - <span data-ttu-id="6aa8f-106">'static': Especificação do hub IoT desejado na lista de registro tem prioridade sobre a política de alocação de nível de serviço.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-106">'static' : Specification of the desired IoT hub in the enrollment list takes priority over the service-level allocation policy.</span></span>
+
+    - <span data-ttu-id="6aa8f-107">'custom': Dispositivos são provisionados para um hub IoT com base em sua própria lógica personalizada.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-107">'custom': Devices are provisioned to an IoT hub based on your own custom logic.</span></span> <span data-ttu-id="6aa8f-108">O serviço de provisionamento passa informações sobre o dispositivo para a lógica e a lógica retorna o hub IoT desejado, tal como a configuração inicial desejada.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-108">The provisioning service passes information about the device to the logic, and the logic returns the desired IoT hub as well as the desired initial configuration.</span></span> <span data-ttu-id="6aa8f-109">É recomendável usar o Azure Functions para hospedar sua lógica.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-109">We recommend using Azure Functions to host your logic.</span></span>
+  optional: true
+  syntax:
+    content: 'allocationPolicy?: AllocationPolicyType'
+    return:
+      type:
+      - azure-iot-provisioning-service.AllocationPolicyType
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
   name: attestation
@@ -31,9 +59,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="76992-102">O mecanismo de segurança associado a este objeto.</span><span class="sxs-lookup"><span data-stu-id="76992-102">The security mechanism associated with this object.</span></span>
+    <span data-ttu-id="6aa8f-110">O mecanismo de segurança associado a este objeto.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-110">The security mechanism associated with this object.</span></span>
 
-    <span data-ttu-id="76992-103">Atualmente, isso deve ser x509.</span><span class="sxs-lookup"><span data-stu-id="76992-103">Currently this MUST be x509.</span></span>
+    <span data-ttu-id="6aa8f-111">Atualmente, isso deve ser x509.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-111">Currently this MUST be x509.</span></span>
   syntax:
     content: 'attestation: AttestationMechanism'
     return:
@@ -47,12 +75,27 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-104">A data e hora em que esse objeto foi criado.</span><span class="sxs-lookup"><span data-stu-id="76992-104">The date and time that this object was created.</span></span>
+  summary: <span data-ttu-id="6aa8f-112">A data e hora em que esse objeto foi criado.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-112">The date and time that this object was created.</span></span>
   syntax:
     content: 'createdDateTimeUtc: string'
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
+  name: customAllocationDefinition
+  fullName: customAllocationDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6aa8f-113">Definição da alocação personalizada.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-113">Custom allocation definition.</span></span>
+  optional: true
+  syntax:
+    content: 'customAllocationDefinition?: CustomAllocationDefinition'
+    return:
+      type:
+      - azure-iot-provisioning-service.CustomAllocationDefinition
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   name: enrollmentGroupId
@@ -62,9 +105,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="76992-105">Um identificador exclusivo para este objeto.</span><span class="sxs-lookup"><span data-stu-id="76992-105">A unique identifier for this object.</span></span>
+    <span data-ttu-id="6aa8f-114">Um identificador exclusivo para este objeto.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-114">A unique identifier for this object.</span></span>
 
-    <span data-ttu-id="76992-106">O valor é todas as letras minúsculas inserido alfanumérico com `-` permitido.</span><span class="sxs-lookup"><span data-stu-id="76992-106">The value is all lowercase alphanumeric with embedded `-` permitted.</span></span>
+    <span data-ttu-id="6aa8f-115">O valor é todas as letras minúsculas inserido alfanumérico com `-` permitido.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-115">The value is all lowercase alphanumeric with embedded `-` permitted.</span></span>
   syntax:
     content: 'enrollmentGroupId: string'
     return:
@@ -78,7 +121,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-107">Um valor opaco adequado para identificar exclusivamente uma geração específica desse objeto para uso durante uma operação CRUD.</span><span class="sxs-lookup"><span data-stu-id="76992-107">An opaque value suitable to uniquely identify a particular generation of this object for use during a CRUD operation.</span></span>
+  summary: <span data-ttu-id="6aa8f-116">Um valor opaco adequado para identificar exclusivamente uma geração específica desse objeto para uso durante uma operação CRUD.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-116">An opaque value suitable to uniquely identify a particular generation of this object for use during a CRUD operation.</span></span>
   syntax:
     content: 'etag: string'
     return:
@@ -92,7 +135,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-108">O documento do gêmeo inicial que será criado para dispositivos após o provisionamento.</span><span class="sxs-lookup"><span data-stu-id="76992-108">The initial twin document that will be created for devices upon their provisioning.</span></span>
+  summary: <span data-ttu-id="6aa8f-117">O documento do gêmeo inicial que será criado para dispositivos após o provisionamento.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-117">The initial twin document that will be created for devices upon their provisioning.</span></span>
   syntax:
     content: 'initialTwin: InitialTwin'
     return:
@@ -106,12 +149,26 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-109">O IoT Hub que será o destino do provisionamento de dispositivos associados a esse objeto.</span><span class="sxs-lookup"><span data-stu-id="76992-109">The IoT Hub that will be the destination of the provisioning for devices associated with this object.</span></span>
+  summary: <span data-ttu-id="6aa8f-118">O IoT Hub que será o destino do provisionamento de dispositivos associados a esse objeto.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-118">The IoT Hub that will be the destination of the provisioning for devices associated with this object.</span></span>
   syntax:
     content: 'iotHubHostName: string'
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubs
+  name: iotHubs
+  fullName: iotHubs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6aa8f-119">A lista de nomes de hubs IoT do dispositivo (s) nesse recurso pode ser alocada para.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-119">The list of names of IoT hubs the device(s) in this resource can be allocated to.</span></span> <span data-ttu-id="6aa8f-120">Ele deve ser um subconjunto da lista de nível de locatário de hubs IoT.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-120">It must be a subset of tenant level list of IoT hubs.</span></span>
+  syntax:
+    content: 'iotHubs: string[]'
+    return:
+      type:
+      - string[]
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   name: lastUpdatedDateTimeUtc
@@ -120,7 +177,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-110">A data e hora em que este objeto foi atualizado pela última vez.</span><span class="sxs-lookup"><span data-stu-id="76992-110">The date and time that this object was last updated.</span></span>  <span data-ttu-id="76992-111">Isso pode incluir uma atualização ou um registro real.</span><span class="sxs-lookup"><span data-stu-id="76992-111">This could include an update or an actual registration.</span></span>
+  summary: <span data-ttu-id="6aa8f-121">A data e hora em que este objeto foi atualizado pela última vez.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-121">The date and time that this object was last updated.</span></span>  <span data-ttu-id="6aa8f-122">Isso pode incluir uma atualização ou um registro real.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-122">This could include an update or an actual registration.</span></span>
   syntax:
     content: 'lastUpdatedDateTimeUtc: string'
     return:
@@ -134,20 +191,47 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="76992-112">Indica se esse objeto pode ser usado como base para o provisionamento de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="76992-112">Indicates whether this object can be used as the basis for a device provisioning.</span></span>
+  summary: <span data-ttu-id="6aa8f-123">Indica se esse objeto pode ser usado como base para o provisionamento de dispositivo.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-123">Indicates whether this object can be used as the basis for a device provisioning.</span></span>
   syntax:
     content: 'provisioningStatus: ProvisioningStatus'
     return:
       type:
       - azure-iot-provisioning-service.ProvisioningStatus
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
+  name: reprovisionPolicy
+  fullName: reprovisionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="6aa8f-124">O comportamento quando um dispositivo for novamente provisionado para um hub IoT.</span><span class="sxs-lookup"><span data-stu-id="6aa8f-124">The behavior when a device is re-provisioned to an IoT hub.</span></span>
+  optional: true
+  syntax:
+    content: 'reprovisionPolicy?: ReprovisionPolicy'
+    return:
+      type:
+      - azure-iot-provisioning-service.ReprovisionPolicy
+  package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  spec.typeScript:
+  - name: AllocationPolicyType
+    fullName: AllocationPolicyType
+    uid: azure-iot-provisioning-service.AllocationPolicyType
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   spec.typeScript:
   - name: AttestationMechanism
     fullName: AttestationMechanism
     uid: azure-iot-provisioning-service.AttestationMechanism
+- uid: azure-iot-provisioning-service.CustomAllocationDefinition
+  name: CustomAllocationDefinition
+  spec.typeScript:
+  - name: CustomAllocationDefinition
+    fullName: CustomAllocationDefinition
+    uid: azure-iot-provisioning-service.CustomAllocationDefinition
 - uid: azure-iot-provisioning-service.InitialTwin
   name: InitialTwin
   spec.typeScript:
@@ -160,3 +244,9 @@ references:
   - name: ProvisioningStatus
     fullName: ProvisioningStatus
     uid: azure-iot-provisioning-service.ProvisioningStatus
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  spec.typeScript:
+  - name: ReprovisionPolicy
+    fullName: ReprovisionPolicy
+    uid: azure-iot-provisioning-service.ReprovisionPolicy

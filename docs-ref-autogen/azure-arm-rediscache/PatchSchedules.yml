@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c8c1e3d64abf9b1e828dbd7f5d3f095492f9dc8
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: fd3cca9de4508d04089359bea8dca386e272a272
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52037221"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55052818"
 items:
 - uid: azure-arm-rediscache.PatchSchedules
   name: PatchSchedules
@@ -22,6 +22,14 @@ items:
   - azure-arm-rediscache.PatchSchedules.get_2
   - azure-arm-rediscache.PatchSchedules.get_1
   - azure-arm-rediscache.PatchSchedules.getWithHttpOperationResponse
+  - azure-arm-rediscache.PatchSchedules.listByRedisResource
+  - azure-arm-rediscache.PatchSchedules.listByRedisResource_2
+  - azure-arm-rediscache.PatchSchedules.listByRedisResource_1
+  - azure-arm-rediscache.PatchSchedules.listByRedisResourceNext
+  - azure-arm-rediscache.PatchSchedules.listByRedisResourceNext_2
+  - azure-arm-rediscache.PatchSchedules.listByRedisResourceNext_1
+  - azure-arm-rediscache.PatchSchedules.listByRedisResourceNextWithHttpOperationResponse
+  - azure-arm-rediscache.PatchSchedules.listByRedisResourceWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -33,7 +41,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-101">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-101">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-101">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-101">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, name: string, scheduleEntries: ScheduleEntry[], options?: Object)'
     parameters:
@@ -41,17 +49,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-102">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-102">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-102">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-103">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-103">The name of the Redis cache.</span></span>
+        <span data-ttu-id="a9222-103">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-103">The name of the Redis cache.</span></span>
     - id: scheduleEntries
       type:
       - azure-arm-rediscache.ScheduleEntry[]
       description: >
-        <span data-ttu-id="5d7dd-104">Lista de agendas de patch para um cache Redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-104">List of patch schedules for a Redis cache.</span></span>
+        <span data-ttu-id="a9222-104">Lista de agendas de patch para um cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-104">List of patch schedules for a Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -67,7 +75,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-105">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-105">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-105">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-105">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, name: string, scheduleEntries: ScheduleEntry[], options: Object, callback: ServiceCallback<RedisPatchSchedule>)'
     parameters:
@@ -101,7 +109,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-106">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-106">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-106">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-106">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function createOrUpdate(resourceGroupName: string, name: string, scheduleEntries: ScheduleEntry[], callback: ServiceCallback<RedisPatchSchedule>)'
     parameters:
@@ -131,7 +139,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-107">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-107">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-107">Criar ou substituir o agendamento de patch para o cache Redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-107">Create or replace the patching schedule for Redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, name: string, scheduleEntries: ScheduleEntry[], options?: Object)'
     parameters:
@@ -139,17 +147,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-108">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-108">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-108">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-109">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-109">The name of the Redis cache.</span></span>
+        <span data-ttu-id="a9222-109">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-109">The name of the Redis cache.</span></span>
     - id: scheduleEntries
       type:
       - azure-arm-rediscache.ScheduleEntry[]
       description: >
-        <span data-ttu-id="5d7dd-110">Lista de agendas de patch para um cache Redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-110">List of patch schedules for a Redis cache.</span></span>
+        <span data-ttu-id="a9222-110">Lista de agendas de patch para um cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-110">List of patch schedules for a Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -165,7 +173,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-111">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-111">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-111">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-111">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -173,12 +181,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-112">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-112">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-112">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-113">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-113">The name of the redis cache.</span></span>
+        <span data-ttu-id="a9222-113">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-113">The name of the redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -194,7 +202,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-114">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-114">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-114">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-114">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -224,7 +232,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-115">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-115">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-115">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-115">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
     parameters:
@@ -250,7 +258,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-116">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-116">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-116">Exclui a agenda de aplicação de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-116">Deletes the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -258,12 +266,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-117">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-117">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-117">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-117">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-118">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-118">The name of the redis cache.</span></span>
+        <span data-ttu-id="a9222-118">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-118">The name of the redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -279,7 +287,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-119">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-119">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-119">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-119">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -287,12 +295,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-120">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-120">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-120">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-120">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-121">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-121">The name of the redis cache.</span></span>
+        <span data-ttu-id="a9222-121">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-121">The name of the redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -308,7 +316,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-122">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-122">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-122">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-122">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<RedisPatchSchedule>)'
     parameters:
@@ -338,7 +346,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-123">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-123">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-123">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-123">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, callback: ServiceCallback<RedisPatchSchedule>)'
     parameters:
@@ -364,7 +372,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="5d7dd-124">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="5d7dd-124">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
+  summary: <span data-ttu-id="a9222-124">Obtém o agendamento de patch de um cache redis (requer o SKU Premium).</span><span class="sxs-lookup"><span data-stu-id="a9222-124">Gets the patching schedule of a redis cache (requires Premium SKU).</span></span>
   syntax:
     content: 'function getWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -372,12 +380,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-125">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-125">The name of the resource group.</span></span>
+        <span data-ttu-id="a9222-125">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-125">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="5d7dd-126">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="5d7dd-126">The name of the redis cache.</span></span>
+        <span data-ttu-id="a9222-126">O nome do cache redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-126">The name of the redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -386,6 +394,216 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-rediscache.RedisPatchSchedule>>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResource
+  name: listByRedisResource(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-127">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-127">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResource(resourceGroupName: string, cacheName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-128">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-128">The name of the resource group.</span></span>
+    - id: cacheName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-129">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-129">The name of the Redis cache.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResource_2
+  name: listByRedisResource(string, string, Object, ServiceCallback<RedisPatchScheduleListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-130">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-130">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResource(resourceGroupName: string, cacheName: string, options: Object, callback: ServiceCallback<RedisPatchScheduleListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: cacheName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.RedisPatchScheduleListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResource_1
+  name: listByRedisResource(string, string, ServiceCallback<RedisPatchScheduleListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-131">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-131">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResource(resourceGroupName: string, cacheName: string, callback: ServiceCallback<RedisPatchScheduleListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: cacheName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.RedisPatchScheduleListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResourceNext
+  name: listByRedisResourceNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-132">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-132">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResourceNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-133">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="a9222-133">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResourceNext_2
+  name: listByRedisResourceNext(string, Object, ServiceCallback<RedisPatchScheduleListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-134">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-134">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResourceNext(nextPageLink: string, options: Object, callback: ServiceCallback<RedisPatchScheduleListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.RedisPatchScheduleListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResourceNext_1
+  name: listByRedisResourceNext(string, ServiceCallback<RedisPatchScheduleListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-135">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-135">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResourceNext(nextPageLink: string, callback: ServiceCallback<RedisPatchScheduleListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.RedisPatchScheduleListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResourceNextWithHttpOperationResponse
+  name: listByRedisResourceNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-136">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-136">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResourceNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-137">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="a9222-137">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-rediscache.RedisPatchScheduleListResult>>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.PatchSchedules.listByRedisResourceWithHttpOperationResponse
+  name: listByRedisResourceWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a9222-138">Obtém todas as agendas de patch no cache redis especificado (há apenas um).</span><span class="sxs-lookup"><span data-stu-id="a9222-138">Gets all patch schedules in the specified redis cache (there is only one).</span></span>
+  syntax:
+    content: 'function listByRedisResourceWithHttpOperationResponse(resourceGroupName: string, cacheName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-139">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a9222-139">The name of the resource group.</span></span>
+    - id: cacheName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="a9222-140">O nome do cache Redis.</span><span class="sxs-lookup"><span data-stu-id="a9222-140">The name of the Redis cache.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-rediscache.RedisPatchScheduleListResult>>
   package: azure-arm-rediscache
 references:
 - uid: azure-arm-rediscache.ScheduleEntry[]
@@ -424,5 +642,35 @@ references:
   - name: RedisPatchSchedule
     fullName: RedisPatchSchedule
     uid: azure-arm-rediscache.RedisPatchSchedule
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-rediscache.RedisPatchScheduleListResult>
+  name: RedisPatchScheduleListResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: RedisPatchScheduleListResult
+    fullName: RedisPatchScheduleListResult
+    uid: azure-arm-rediscache.RedisPatchScheduleListResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-rediscache.RedisPatchScheduleListResult>
+  name: RedisPatchScheduleListResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: RedisPatchScheduleListResult
+    fullName: RedisPatchScheduleListResult
+    uid: azure-arm-rediscache.RedisPatchScheduleListResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-rediscache.RedisPatchScheduleListResult>>
+  name: RedisPatchScheduleListResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: RedisPatchScheduleListResult
+    fullName: RedisPatchScheduleListResult
+    uid: azure-arm-rediscache.RedisPatchScheduleListResult
   - name: '>>'
     fullName: '>>'

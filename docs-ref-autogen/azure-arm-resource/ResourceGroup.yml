@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f56ec3de9c07f2a1766de75a19a6d5c5ec635b41
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: fa4248a9dc43b360c3428c9a4f15beaf632cadaf
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52016160"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047037"
 items:
 - uid: azure-arm-resource.ResourceGroup
   name: ResourceGroup
@@ -16,10 +16,11 @@ items:
   - azure-arm-resource.ResourceGroup.name
   - azure-arm-resource.ResourceGroup.properties
   - azure-arm-resource.ResourceGroup.tags
+  - azure-arm-resource.ResourceGroup.type
   langs:
   - typeScript
   type: interface
-  summary: <span data-ttu-id="8e48b-101">Informações do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-101">Resource group information.</span></span>
+  summary: <span data-ttu-id="0395a-101">Informações do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-101">Resource group information.</span></span>
   extends:
     name: BaseResource
   package: azure-arm-resource
@@ -30,7 +31,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="8e48b-102">A ID do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-102">The ID of the resource group.</span></span>
+  summary: <span data-ttu-id="0395a-102">A ID do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-102">The ID of the resource group.</span></span>
   optional: true
   syntax:
     content: 'id?: string'
@@ -45,7 +46,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="8e48b-103">O local do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-103">The location of the resource group.</span></span> <span data-ttu-id="8e48b-104">Ele não pode ser alterado depois que o grupo de recursos foi criado.</span><span class="sxs-lookup"><span data-stu-id="8e48b-104">It cannot be changed after the resource group has been created.</span></span> <span data-ttu-id="8e48b-105">Ele deve ser um dos locais do Azure com suporte.</span><span class="sxs-lookup"><span data-stu-id="8e48b-105">It must be one of the supported Azure locations.</span></span>
+  summary: <span data-ttu-id="0395a-103">O local do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-103">The location of the resource group.</span></span> <span data-ttu-id="0395a-104">Ele não pode ser alterado depois que o grupo de recursos foi criado.</span><span class="sxs-lookup"><span data-stu-id="0395a-104">It cannot be changed after the resource group has been created.</span></span> <span data-ttu-id="0395a-105">Ele deve ser um dos locais do Azure com suporte.</span><span class="sxs-lookup"><span data-stu-id="0395a-105">It must be one of the supported Azure locations.</span></span>
   syntax:
     content: 'location: string'
     return:
@@ -59,7 +60,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="8e48b-106">A ID do recurso que gerencia esse grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-106">The ID of the resource that manages this resource group.</span></span>
+  summary: <span data-ttu-id="0395a-106">A ID do recurso que gerencia esse grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-106">The ID of the resource that manages this resource group.</span></span>
   optional: true
   syntax:
     content: 'managedBy?: string'
@@ -74,7 +75,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="8e48b-107">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-107">The name of the resource group.</span></span>
+  summary: <span data-ttu-id="0395a-107">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-107">The name of the resource group.</span></span>
   optional: true
   syntax:
     content: 'name?: string'
@@ -104,13 +105,28 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="8e48b-108">As marcas anexadas ao grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="8e48b-108">The tags attached to the resource group.</span></span>
+  summary: <span data-ttu-id="0395a-108">As marcas anexadas ao grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-108">The tags attached to the resource group.</span></span>
   optional: true
   syntax:
     content: 'tags?: [key: string]: string'
     return:
       type:
       - '[key: string]: string'
+  package: azure-arm-resource
+- uid: azure-arm-resource.ResourceGroup.type
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0395a-109">O tipo do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="0395a-109">The type of the resource group.</span></span>
+  optional: true
+  syntax:
+    content: 'type?: string'
+    return:
+      type:
+      - string
   package: azure-arm-resource
 references:
 - uid: azure-arm-resource.ResourceGroupProperties
