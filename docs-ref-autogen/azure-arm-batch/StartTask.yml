@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7274a6ba19eff9196489fcfbd33f8a68ed5572f4
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059367"
+items:
+- uid: azure-arm-batch.StartTask
+  name: StartTask
+  fullName: StartTask
+  children:
+  - azure-arm-batch.StartTask.commandLine
+  - azure-arm-batch.StartTask.containerSettings
+  - azure-arm-batch.StartTask.environmentSettings
+  - azure-arm-batch.StartTask.maxTaskRetryCount
+  - azure-arm-batch.StartTask.resourceFiles
+  - azure-arm-batch.StartTask.userIdentity
+  - azure-arm-batch.StartTask.waitForSuccess
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente. Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux. Necessário se qualquer outra propriedade da startTask é especificada.
+  optional: true
+  syntax:
+    content: 'commandLine?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-arm-batch.TaskContainerSettings
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-arm-batch.EnvironmentSetting[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.maxTaskRetryCount
+  name: maxTaskRetryCount
+  fullName: maxTaskRetryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: O serviço em lotes repetirá uma tarefa se seu código de saída for diferente de zero. Observe que esse valor controla especificamente o número de tentativas. O serviço em lotes tentará a tarefa uma vez e, em seguida, pode tentar novamente até esse limite. Por exemplo, se a contagem máxima de repetição for 3, em lotes tentará a tarefa até 4 vezes (uma tentativa inicial e 3 repetições). Se a contagem máxima de novas tentativas for 0, o serviço de lote não tentará novamente a tarefa. Se o número máximo de contagem de repetição é -1, as tentativas de serviço de lote a tarefa sem limite.
+  optional: true
+  syntax:
+    content: 'maxTaskRetryCount?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-arm-batch.ResourceFile[]
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-arm-batch.UserIdentity
+  package: azure-arm-batch
+- uid: azure-arm-batch.StartTask.waitForSuccess
+  name: waitForSuccess
+  fullName: waitForSuccess
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Se verdadeiro e a tarefa inicial falhar em um nó de computação, o serviço de lote repete a tarefa inicial até a contagem máxima de novas tentativas (maxTaskRetryCount). Se a tarefa tiver ainda não tiver sido concluída com êxito após todas as novas tentativas e, em seguida, as marcas de serviço de lote inutilizável do nó de computação e não será agendem tarefas nele. Essa condição pode ser detectada por meio do estado do nó e o agendamento detalhe do erro. Se for false, o serviço de lote não aguardará a conclusão da tarefa inicial. Nesse caso, outras tarefas de iniciar a execução no nó de computação enquanto a tarefa inicial ainda está em execução; e mesmo se a tarefa inicial falha, novas tarefas continuarão ser agendada no nó. O padrão é false.
+  optional: true
+  syntax:
+    content: 'waitForSuccess?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-arm-batch.TaskContainerSettings
+- uid: azure-arm-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-arm-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-arm-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-arm-batch.UserIdentity

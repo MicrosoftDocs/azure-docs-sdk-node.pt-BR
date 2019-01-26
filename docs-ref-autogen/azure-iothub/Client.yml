@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3f17a6a8af9e46f508d62ffa2f764af53b5043ca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 3fa73e6b39aa13478c9ab2e98f6d062ffddb3ae7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53678990"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057737"
 items:
 - uid: azure-iothub.Client
   name: Client
@@ -44,7 +44,7 @@ items:
       - escute notificações de upload de arquivo dos dispositivos.
     Os usuários devem criar novo <xref:azure-iothub.Client> instâncias chamando um dos métodos de fábrica [fromConnectionString](xref:azure-iothub.Client.fromConnectionString) ou [fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature), para criar um cliente de serviço do IoT Hub.
   extends:
-    name: any
+    name: azure-iothub.Client
   package: azure-iothub
 - uid: azure-iothub.Client.close_1
   name: close()
@@ -91,7 +91,7 @@ items:
       description: Uma cadeia de caracteres de conexão que encapsula as permissões de "conexão de dispositivo" em um hub IoT.
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -114,7 +114,7 @@ items:
       description: Uma assinatura de acesso compartilhado que encapsula as permissões de "conexão de serviço" em um hub IoT.
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -375,6 +375,12 @@ items:
         O SDK vem com diretivas "internas" 2: ExponentialBackoffWithJitter (padrão) e NoRetry (para cancelar qualquer forma de repetição). O usuário também pode passar seu próprio objeto desde que ele implementa 2 métodos:-shouldRetry(err: Erro): boolean: indica uma operação deve ser repetida com base no tipo de erro - nextRetryTimeout (retryCount: número, limitado: booleano): número: retorna o tempo de espera (em milissegundos) antes de tentar novamente com base no número de tentativas (últimos retryCount) e o fato de que o erro é um erro de limitação ou não.
   package: azure-iothub
 references:
+- uid: azure-iothub.Client
+  name: Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client
 - uid: Callback<azure-iothub.Client.ServiceReceiver>
   name: ServiceReceiver>
   spec.typeScript:
@@ -491,18 +497,12 @@ references:
     uid: azure-iothub.ResultWithIncomingMessage
   - name: <MessageEnqueued>>
     fullName: <MessageEnqueued>>
-- uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client.Client.TransportCtor
   name: TransportCtor
   spec.typeScript:
   - name: TransportCtor
     fullName: TransportCtor
-    uid: azure-iothub.Client.TransportCtor
-- uid: azure-iothub.Client
-  name: Client
-  spec.typeScript:
-  - name: Client
-    fullName: Client
-    uid: azure-iothub.Client
+    uid: azure-iothub.Client.Client.TransportCtor
 - uid: azure-iothub.Client.ServiceReceiver
   name: ServiceReceiver
 - uid: azure-iothub.Client.Transport
