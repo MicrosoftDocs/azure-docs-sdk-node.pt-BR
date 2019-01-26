@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 50b9106c48b95d21155c7b4eef8ce30bb31c71e9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054717"
+items:
+- uid: azure-arm-batch.NetworkSecurityGroupRule
+  name: NetworkSecurityGroupRule
+  fullName: NetworkSecurityGroupRule
+  children:
+  - azure-arm-batch.NetworkSecurityGroupRule.access
+  - azure-arm-batch.NetworkSecurityGroupRule.priority
+  - azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.access
+  name: access
+  fullName: access
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Os valores possíveis incluem: 'Allow', 'Deny'"
+  syntax:
+    content: 'access: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.priority
+  name: priority
+  fullName: priority
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    As prioridades dentro de um pool devem ser exclusivas e são avaliadas na ordem de prioridade.
+
+    Quanto menor o número, maior a prioridade. Por exemplo, as regras podem ser especificadas com números de ordem de 150, 250 e 350. A regra com o número da ordem de 150 tem precedência sobre a regra que tem uma ordem de 250. Prioridades permitidas são 150 para 3500. Se quaisquer valores duplicados ou reservadas são fornecidos que a solicitação falha com código de status HTTP 400.
+  syntax:
+    content: 'priority: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+  name: sourceAddressPrefix
+  fullName: sourceAddressPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Os valores válidos são de um único endereço IP (ou seja, 10.10.10.10), a subrede IP (ou seja, 192.168.1.0/24), a marca padrão, ou * (para todos os endereços).  Se qualquer um dos outros valores são fornecidos que a solicitação falha com código de status HTTP 400.
+  syntax:
+    content: 'sourceAddressPrefix: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 98191be8509e0439238244fc391eba49287db6c9
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55047687"
+items:
+- uid: azure-arm-batch.LinuxUserConfiguration
+  name: LinuxUserConfiguration
+  fullName: LinuxUserConfiguration
+  children:
+  - azure-arm-batch.LinuxUserConfiguration.gid
+  - azure-arm-batch.LinuxUserConfiguration.sshPrivateKey
+  - azure-arm-batch.LinuxUserConfiguration.uid
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.LinuxUserConfiguration.gid
+  name: gid
+  fullName: gid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: As propriedades de uid e gid devem ser especificadas juntos ou nenhum. Se não for especificado o subjacente operacional sistema escolhe a gid.
+  optional: true
+  syntax:
+    content: 'gid?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
+- uid: azure-arm-batch.LinuxUserConfiguration.sshPrivateKey
+  name: sshPrivateKey
+  fullName: sshPrivateKey
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: A chave privada não deve ser protegido por senha. A chave privada é usada para configurar automaticamente a autenticação baseada em chave assimétrica para o SSH entre nós em um pool do Linux quando a propriedade do pool enableInterNodeCommunication for verdadeira (ele será ignorado se enableInterNodeCommunication é false). Ele faz isso colocando o par de chaves para o diretório do usuário. SSH. Se não for especificado, sem senha SSH não está configurada entre os nós (sem modificação do diretório do usuário. SSH é feita).
+  optional: true
+  syntax:
+    content: 'sshPrivateKey?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.LinuxUserConfiguration.uid
+  name: uid
+  fullName: uid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: As propriedades de uid e gid devem ser especificadas juntos ou nenhum. Se não for especificado o subjacente operacional sistema escolherá o uid.
+  optional: true
+  syntax:
+    content: 'uid?: number'
+    return:
+      type:
+      - number
+  package: azure-arm-batch
