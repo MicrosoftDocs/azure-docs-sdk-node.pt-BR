@@ -5,22 +5,22 @@ author: rloutlaw
 manager: routlaw
 ms.author: routlaw
 ms.date: 06/17/2017
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 072574c70b658806cd998dc0af8a81be3ea56bb4
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 73f115373c33423b7ad8895e73f5a2170b753f8f
+ms.sourcegitcommit: 8c9462a8538ea3d7d3fbb27454d26755abbad001
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220578"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57327367"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Introdução aos módulos do Azure para Node.js
 
 Este guia demonstra a instalação de módulos Node.js do Azure, a autenticação no Azure com uma entidade de serviço e a execução do código de exemplo que cria recursos na sua assinatura do Azure e se conecta aos serviços de nuvem do Azure.
 
-## <a name="prerequisites"></a>pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/)
 - [Node.js](https://nodejs.org)
