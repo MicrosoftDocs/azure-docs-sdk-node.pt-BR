@@ -1,0 +1,212 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.InboundNatPool
+    name: InboundNatPool
+    fullName: InboundNatPool
+    children:
+      - azure-arm-network.InboundNatPool.backendPort
+      - azure-arm-network.InboundNatPool.enableFloatingIP
+      - azure-arm-network.InboundNatPool.enableTcpReset
+      - azure-arm-network.InboundNatPool.etag
+      - azure-arm-network.InboundNatPool.frontendIPConfiguration
+      - azure-arm-network.InboundNatPool.frontendPortRangeEnd
+      - azure-arm-network.InboundNatPool.frontendPortRangeStart
+      - azure-arm-network.InboundNatPool.id
+      - azure-arm-network.InboundNatPool.idleTimeoutInMinutes
+      - azure-arm-network.InboundNatPool.name
+      - azure-arm-network.InboundNatPool.protocol
+      - azure-arm-network.InboundNatPool.provisioningState
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a3fe1-101">Pool NAT de entrada do balanceador de carga.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-101">Inbound NAT pool of the load balancer.</span></span>
+    extends:
+      name: azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.backendPort
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a3fe1-102">A porta usada para conexões internas no ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-102">The port used for internal connections on the endpoint.</span></span> <span data-ttu-id="a3fe1-103">Os valores aceitáveis estão entre 1 e</span><span class="sxs-lookup"><span data-stu-id="a3fe1-103">Acceptable values are between 1 and</span></span>
+      65535.
+    syntax:
+      content: 'backendPort: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.enableFloatingIP
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-104">Configura o ponto de extremidade de uma máquina virtual para o recurso de IP flutuante necessário para configurar um grupo de disponibilidade do AlwaysOn do SQL.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-104">Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.</span></span> <span data-ttu-id="a3fe1-105">Essa configuração é necessária ao usar grupos de disponibilidade do AlwaysOn do SQL no SQL server.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-105">This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.</span></span> <span data-ttu-id="a3fe1-106">Essa configuração não pode ser alterada depois de criar o ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-106">This setting can't be changed after you create the endpoint.</span></span>
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.enableTcpReset
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a3fe1-107">Receba bidirecional de redefinição de TCP no tempo limite de ociosidade do TCP fluxo ou encerramento da conexão inesperado.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-107">Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.</span></span>
+      <span data-ttu-id="a3fe1-108">Esse elemento é usado somente quando o protocolo é definido como TCP.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-108">This element is only used when the protocol is set to TCP.</span></span>
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-109">Uma somente leitura cadeia de caracteres exclusiva que muda sempre que o recurso for atualizado.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-109">A unique read-only string that changes whenever the resource is updated.</span></span>
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.frontendIPConfiguration
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-110">Uma referência a endereços IP de front-end.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-110">A reference to frontend IP addresses.</span></span>
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.frontendPortRangeEnd
+    name: frontendPortRangeEnd
+    fullName: frontendPortRangeEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-111">O último número da porta no intervalo de portas externas que será usado para fornecer Nat de entrada para NICs associadas a um balanceador de carga.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-111">The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.</span></span> <span data-ttu-id="a3fe1-112">Os valores aceitáveis variam entre 1 e 65535.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-112">Acceptable values range between 1 and 65535.</span></span>
+    syntax:
+      content: 'frontendPortRangeEnd: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.frontendPortRangeStart
+    name: frontendPortRangeStart
+    fullName: frontendPortRangeStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-113">O primeiro número da porta no intervalo de portas externas que será usado para fornecer Nat de entrada para NICs associadas a um balanceador de carga.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-113">The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer.</span></span> <span data-ttu-id="a3fe1-114">Os valores aceitáveis variam entre 1 e 65534.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-114">Acceptable values range between 1 and 65534.</span></span>
+    syntax:
+      content: 'frontendPortRangeStart: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-115">ID do recurso.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-115">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.idleTimeoutInMinutes
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-116">O tempo limite para a conexão de TCP ocioso.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-116">The timeout for the TCP idle connection.</span></span> <span data-ttu-id="a3fe1-117">O valor pode ser definido entre 4 e 30 minutos.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-117">The value can be set between 4 and 30 minutes.</span></span> <span data-ttu-id="a3fe1-118">O valor padrão é 4 minutos.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-118">The default value is 4 minutes.</span></span> <span data-ttu-id="a3fe1-119">Esse elemento é usado somente quando o protocolo é definido como TCP.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-119">This element is only used when the protocol is set to TCP.</span></span>
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a3fe1-120">O nome do recurso que é exclusivo dentro de um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-120">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="a3fe1-121">Esse nome pode ser usado para acessar o recurso.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-121">This name can be used to access the resource.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.protocol
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a3fe1-122">A referência para o protocolo de transporte usado pelo pool NAT de entrada.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-122">The reference to the transport protocol used by the inbound NAT pool.</span></span> <span data-ttu-id="a3fe1-123">Os valores possíveis incluem: ''Udp'', ''Tcp'', ''All''</span><span class="sxs-lookup"><span data-stu-id="a3fe1-123">Possible values include: ''Udp'', ''Tcp'', ''All''</span></span>'
+    syntax:
+      content: 'protocol: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.InboundNatPool.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a3fe1-124">Obtém o estado de provisionamento do recurso PublicIP.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-124">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id="a3fe1-125">Os valores possíveis são: ''Atualizando'', ''Excluir'' e ''Com falha''.</span><span class="sxs-lookup"><span data-stu-id="a3fe1-125">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource
