@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthStateChunk
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - azure-servicefabric.ReplicaHealthStateChunk.healthState
+      - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa a parte do estado de integridade de uma réplica de serviço com estado ou uma instância de serviço sem monitoração de estado.
+      O estado de integridade da réplica contém a ID da réplica e seu estado de integridade agregado.
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma réplica de serviço com estado ou uma instância de serviço sem monitoração de estado. Essa ID é usada em consultas que se aplicam aos serviços com monitoração de estado e sem monitoração de estado. Ele é usado pelo Service Fabric para identificar exclusivamente uma réplica de uma partição de um serviço com estado ou uma instância de uma partição de serviço sem estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida de réplica ou instância. Se uma réplica com monitoração de estado é removida e outra réplica é criada no mesmo nó para a mesma partição, ele obterá um valor diferente para a ID. Se uma instância sem monitoração de estado é failover no mesmo ou em outro nó receberá um valor diferente para a ID.'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk

@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.Int64RangePartitionInformation
+    name: Int64RangePartitionInformation
+    fullName: Int64RangePartitionInformation
+    children:
+      - azure-servicefabric.Int64RangePartitionInformation.highKey
+      - azure-servicefabric.Int64RangePartitionInformation.id
+      - azure-servicefabric.Int64RangePartitionInformation.lowKey
+      - azure-servicefabric.Int64RangePartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve as informações de partição para o intervalo inteiro baseado em esquemas de partição.
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.highKey
+    name: highKey
+    fullName: highKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o valor de chave máximo manipulado por esta partição.
+    optional: true
+    syntax:
+      content: 'highKey?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma ID interna usada pelo Service Fabric para identificar exclusivamente uma partição. Isso é um GUID gerado aleatoriamente quando o serviço foi criado. A ID de partição é exclusiva e não altera o tempo de vida do serviço. Se o mesmo serviço foi excluído e recriado as IDs de suas partições seria diferente.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.lowKey
+    name: lowKey
+    fullName: lowKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o valor de chave mínimo manipulado por esta partição.
+    optional: true
+    syntax:
+      content: 'lowKey?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.Int64RangePartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

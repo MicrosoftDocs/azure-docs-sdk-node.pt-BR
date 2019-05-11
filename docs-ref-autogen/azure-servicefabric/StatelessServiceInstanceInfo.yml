@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo
+    name: StatelessServiceInstanceInfo
+    fullName: StatelessServiceInstanceInfo
+    children:
+      - azure-servicefabric.StatelessServiceInstanceInfo.address
+      - azure-servicefabric.StatelessServiceInstanceInfo.healthState
+      - azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+      - azure-servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds
+      - azure-servicefabric.StatelessServiceInstanceInfo.nodeName
+      - azure-servicefabric.StatelessServiceInstanceInfo.replicaStatus
+      - azure-servicefabric.StatelessServiceInstanceInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa uma instância de serviço sem monitoração de estado. Isso inclui informações sobre a identidade, status, integridade, nome do nó, tempo de atividade e outros detalhes sobre a instância.'
+    extends:
+      name: azure-servicefabric.ReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O endereço a réplica está escutando.
+    optional: true
+    syntax:
+      content: 'address?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma instância de serviço sem estado. InstanceId é usada pelo Service Fabric para identificar exclusivamente uma instância de uma partição de um serviço sem monitoração de estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da instância. Se a instância tiver feito failover no mesmo ou em outro nó, ele receberá um valor diferente para a ID da instância.'
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.lastInBuildDurationInSeconds
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A última na duração de compilação da réplica em segundos.
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de um nó do Service Fabric.
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O status de uma réplica de um serviço. Os valores possíveis incluem: ''Invalid'', ''InBuild'', ''Standby'', ''Ready'', ''Down'', ''Dropped'''
+    optional: true
+    syntax:
+      content: 'replicaStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatelessServiceInstanceInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaInfo
+    name: ReplicaInfo
+    spec.typeScript:
+      - name: ReplicaInfo
+        fullName: ReplicaInfo
+        uid: azure-servicefabric.ReplicaInfo

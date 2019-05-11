@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo
+    name: ApplicationBackupConfigurationInfo
+    fullName: ApplicationBackupConfigurationInfo
+    children:
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.applicationName
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.kind
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.policyName
+      - azure-servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informações de configuração de backup para um aplicativo específico do Service Fabric especificando qual política de backup está sendo aplicada e suspender a descrição, se houver.'
+    extends:
+      name: azure-servicefabric.BackupConfigurationInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome do aplicativo, incluindo o '' fabric:'' ''fabric:''.'
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica o escopo no qual a política de backup é aplicada. Os valores possíveis incluem: ''Invalid'', ''Partition'', ''Service'', ''Application'''
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.policyName
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome da política de backup que é aplicável a este aplicativo do Service Fabric ou serviço ou partição.
+    optional: true
+    syntax:
+      content: 'policyName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descreve os detalhes de suspensão de backup.
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - azure-servicefabric.BackupSuspensionInfo
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.BackupConfigurationInfo
+    name: BackupConfigurationInfo
+    spec.typeScript:
+      - name: BackupConfigurationInfo
+        fullName: BackupConfigurationInfo
+        uid: azure-servicefabric.BackupConfigurationInfo
+  - uid: azure-servicefabric.BackupSuspensionInfo
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: azure-servicefabric.BackupSuspensionInfo

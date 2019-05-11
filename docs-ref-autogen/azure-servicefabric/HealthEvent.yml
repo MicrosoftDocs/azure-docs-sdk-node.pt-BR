@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - azure-servicefabric.HealthEvent.description
+      - azure-servicefabric.HealthEvent.healthState
+      - azure-servicefabric.HealthEvent.isExpired
+      - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+      - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+      - azure-servicefabric.HealthEvent.lastOkTransitionAt
+      - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+      - azure-servicefabric.HealthEvent.property
+      - azure-servicefabric.HealthEvent.removeWhenExpired
+      - azure-servicefabric.HealthEvent.sequenceNumber
+      - azure-servicefabric.HealthEvent.sourceId
+      - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+      - azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa informações de integridade relatadas em uma entidade de integridade, como o cluster, o aplicativo ou o nó, com metadados adicionais adicionados pelo Gerenciador de integridade.'
+    extends:
+      name: azure-servicefabric.HealthInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A descrição de informações de integridade. Ele representa texto livre usado para adicionar informações legíveis humanas sobre o relatório.
+      O tamanho máximo da cadeia de caracteres da descrição é de 4.096 caracteres.
+      Se a cadeia de caracteres fornecida for maior, será truncada automaticamente.
+      Quando truncada, os últimos caracteres da descrição contêm um marcador "[Truncated]", e o tamanho total da cadeia de caracteres é de 4.096 caracteres.
+      A presença do marcador indica aos usuários que o truncamento ocorreu.
+      Observe que, quando truncada, a descrição tem menos de 4.096 caracteres da cadeia de caracteres original.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.isExpired
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Retorna VERDADEIRO se o evento de integridade expirado, caso contrário, false.'
+    optional: true
+    syntax:
+      content: 'isExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Se o estado de integridade atual é 'Error', essa propriedade retorna a hora em que o relatório de integridade foi reportado pela primeira vez com 'Error'. Para relatórios periódicos, vários relatórios com o mesmo estado podem ter sido gerados no entanto, essa propriedade retorna apenas a data e hora no primeiro 'erro' relatório de integridade foi recebido.
+      Se o estado de integridade atual é 'Okey' ou 'Aviso', retorna a data e hora em que o estado de integridade foi por último na 'Error' antes de fazer a transição para um estado diferente.
+
+      Se o estado de integridade nunca foi 'Error', o valor será zero data e hora.
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A data e hora em que o relatório de integridade foi modificado pela última vez pelo repositório de integridade.
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Se o estado de integridade atual é 'Okey', essa propriedade retorna a hora em que o relatório de integridade foi reportado pela primeira vez com 'Okey'.
+      Para relatórios periódicos, vários relatórios com o mesmo estado podem ter sido gerados.
+      Essa propriedade retorna a data e hora em que o primeiro relatório de integridade 'Okey' foi recebido.
+      Se o estado de integridade atual é 'Error' ou 'Aviso', retorna a data e hora em que o estado de integridade foi por último na 'Okey', antes de fazer a transição para um estado diferente.
+
+      Se o estado de integridade nunca foi 'Okey', o valor será zero data e hora.
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Se o estado de integridade atual é 'aviso', essa propriedade retorna a hora em que o relatório de integridade foi reportado pela primeira vez com 'Aviso'. Para relatórios periódicos, vários relatórios com o mesmo estado podem ter sido gerados no entanto, essa propriedade retorna apenas a data e hora em que o primeiro relatório de integridade 'Aviso' foi recebido.
+      Se o estado de integridade atual é 'Okey' ou 'Error', retorna a data e hora em que o estado de integridade foi por último na 'Aviso', antes de fazer a transição para um estado diferente.
+
+      Se o estado de integridade foi nunca 'aviso', o valor será zero data e hora.
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      A propriedade das informações de integridade. Uma entidade pode ter relatórios de integridade para propriedades diferentes.
+      A propriedade é uma cadeia de caracteres e não uma enumeração fixa para permitir ao relator flexibilidade para categorizar a condição de estado que dispara o relatório.
+      Por exemplo, um relator com SourceId "LocalWatchdog" pode monitorar o estado do disco disponível em um nó, para poder relatar a propriedade "AvailableDisk" nesse nó.
+      O mesmo relator pode monitorar a conectividade do nó, para que ele possa relatar a "Conectividade" de uma propriedade no mesmo nó.
+      No repositório de integridade, esses relatórios são tratados como eventos de integridade distintos para o nó especificado.
+      Junto com a SourceId, a propriedade identifica exclusivamente as informações de integridade.
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Valor que indica se o relatório é removido do repositório de integridade quando expirar.
+      Se definido como "true", o relatório é removido do repositório de integridade depois de expirar.
+      Se definido como "false", o relatório é tratado como um erro quando expirado. O valor dessa propriedade é "false" por padrão.
+      Quando os clientes enviam relatórios periodicamente, devem definir RemoveWhenExpired como "false" (padrão).
+      Dessa forma, se o gerador de relatórios tem problemas (por exemplo, deadlock) e não pode relatar, a entidade é avaliada no erro quando o relatório de integridade expira.
+      Isso sinaliza a entidade como em um estado de integridade de Erro.
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número da sequência para este relatório de integridade como uma cadeia de caracteres numérica.
+      O número de sequência de relatório é usado pelo repositório de integridade para detectar relatórios obsoletos.
+      Se não for especificado, um número de sequência será gerado automaticamente pelo cliente de integridade quando um relatório for adicionado.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de origem que identifica o componente do cliente/watchdog/sistema que gerou as informações de integridade.
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A data e hora em que o relatório de integridade foi enviado pela origem.
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      A duração da validade deste relatório de integridade. Este campo usa o formato ISO8601 para especificar a duração.
+      Quando clientes geram relatórios periodicamente, eles devem enviar relatórios com uma frequência maior do que o tempo de vida.
+      Se os clientes gerarem relatórios sobre a transição, poderão definir o tempo de vida como infinito.
+      Quando o tempo de vida expira, o evento de integridade que contém as informações de integridade é removido do repositório de integridade, se RemoveWhenExpired for true, ou recebe uma avaliação de erro, se RemoveWhenExpired for false.
+      Se não for especificado, o tempo de vida terá como padrão o valor infinito.
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthInformation
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: azure-servicefabric.HealthInformation
