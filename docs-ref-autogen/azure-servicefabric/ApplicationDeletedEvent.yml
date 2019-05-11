@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationDeletedEvent
+    name: ApplicationDeletedEvent
+    fullName: ApplicationDeletedEvent
+    children:
+      - azure-servicefabric.ApplicationDeletedEvent.applicationId
+      - azure-servicefabric.ApplicationDeletedEvent.applicationTypeName
+      - azure-servicefabric.ApplicationDeletedEvent.applicationTypeVersion
+      - azure-servicefabric.ApplicationDeletedEvent.category
+      - azure-servicefabric.ApplicationDeletedEvent.eventInstanceId
+      - azure-servicefabric.ApplicationDeletedEvent.hasCorrelatedEvents
+      - azure-servicefabric.ApplicationDeletedEvent.kind
+      - azure-servicefabric.ApplicationDeletedEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: Evento de aplicativo excluído.
+    extends:
+      name: azure-servicefabric.ApplicationEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.applicationId
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A identidade do aplicativo. Isso é uma representação codificada do nome do aplicativo.
+      Isso é usado nas APIs REST para identificar o recurso de aplicativo.
+      Começando na versão 6.0, nomes hierárquicos são delimitados com o "\~" caracteres. Por exemplo, se o nome do aplicativo é "fabric: / myapp/app1", a identidade do aplicativo será "meuaplicativo~Aplicativo1\~app1" em 6.0 + e "meuaplicativo/Aplicativo1" nas versões anteriores.
+    syntax:
+      content: 'applicationId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do tipo de aplicativo.
+    syntax:
+      content: 'applicationTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.applicationTypeVersion
+    name: applicationTypeVersion
+    fullName: applicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Versão do tipo de aplicativo.
+    syntax:
+      content: 'applicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A categoria de evento.
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O identificador para a instância de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra se houver um disponível de eventos relacionados.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationDeletedEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O evento de tempo foi registrado.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ApplicationEvent
+    name: ApplicationEvent
+    spec.typeScript:
+      - name: ApplicationEvent
+        fullName: ApplicationEvent
+        uid: azure-servicefabric.ApplicationEvent

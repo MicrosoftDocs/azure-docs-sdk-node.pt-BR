@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-edgegateway.OrderStatus'
+    name: OrderStatus
+    fullName: OrderStatus
+    children:
+      - '@azure/arm-edgegateway.OrderStatus.comments'
+      - '@azure/arm-edgegateway.OrderStatus.status'
+      - '@azure/arm-edgegateway.OrderStatus.updateDateTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa uma alteração de status único.
+    package: '@azure/arm-edgegateway'
+  - uid: '@azure/arm-edgegateway.OrderStatus.comments'
+    name: comments
+    fullName: comments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Comentários relacionados a essa alteração de status.
+    optional: true
+    syntax:
+      content: 'comments?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-edgegateway'
+  - uid: '@azure/arm-edgegateway.OrderStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status da ordem, de acordo com os tipos de status permitidos. Os valores possíveis incluem: ''Não controlada'', ''AwaitingFulfilment'', ''AwaitingPreparation'', ''AwaitingShipment'', ''Fornecido'', ''Que chegam'', ''Entregue'', ''ReplacementRequested'', ''LostDevice'', ''recusado'', ''ReturnInitiated'', ''AwaitingReturnShipment'', ''Enviado'', '' CollectedAtMicrosoft'''
+    syntax:
+      content: 'status: OrderState'
+      return:
+        type:
+          - '@azure/arm-edgegateway.OrderState'
+    package: '@azure/arm-edgegateway'
+  - uid: '@azure/arm-edgegateway.OrderStatus.updateDateTime'
+    name: updateDateTime
+    fullName: updateDateTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Hora da atualização de status.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'updateDateTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-edgegateway'
+references:
+  - uid: '@azure/arm-edgegateway.OrderState'
+    name: OrderState
+    spec.typeScript:
+      - name: OrderState
+        fullName: OrderState
+        uid: '@azure/arm-edgegateway.OrderState'

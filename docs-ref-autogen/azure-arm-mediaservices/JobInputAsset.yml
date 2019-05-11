@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JobInputAsset
+    name: JobInputAsset
+    fullName: JobInputAsset
+    children:
+      - azure-arm-mediaservices.JobInputAsset.assetName
+      - azure-arm-mediaservices.JobInputAsset.files
+      - azure-arm-mediaservices.JobInputAsset.label
+      - azure-arm-mediaservices.JobInputAsset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa um ativo para entrada em um trabalho.
+    extends:
+      name: azure-arm-mediaservices.JobInputClip
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.assetName
+    name: assetName
+    fullName: assetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome do ativo de entrada.
+    syntax:
+      content: 'assetName: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de arquivos. Necessário para JobInputHttp. Máximo de 4.000 caracteres.
+    optional: true
+    syntax:
+      content: 'files?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um rótulo que é atribuído a um JobInputClip, que é usado para satisfazer uma referência usada na transformação. Por exemplo, uma transformação pode ser criada para pegar um arquivo de imagem com o rótulo ''xyz'' e aplicá-la como uma sobreposição no vídeo de entrada antes de serem codificado. Ao enviar um trabalho, exatamente um o JobInputs deve ser o arquivo de imagem, e ele deve ter o rótulo ''xyz''.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JobInputAsset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.JobInputClip
+    name: JobInputClip
+    spec.typeScript:
+      - name: JobInputClip
+        fullName: JobInputClip
+        uid: azure-arm-mediaservices.JobInputClip

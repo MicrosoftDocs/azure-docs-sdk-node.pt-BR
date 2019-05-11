@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sb.SBQueue
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - azure-arm-sb.SBQueue.accessedAt
+      - azure-arm-sb.SBQueue.autoDeleteOnIdle
+      - azure-arm-sb.SBQueue.countDetails
+      - azure-arm-sb.SBQueue.createdAt
+      - azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+      - azure-arm-sb.SBQueue.defaultMessageTimeToLive
+      - azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+      - azure-arm-sb.SBQueue.enableBatchedOperations
+      - azure-arm-sb.SBQueue.enableExpress
+      - azure-arm-sb.SBQueue.enablePartitioning
+      - azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+      - azure-arm-sb.SBQueue.forwardTo
+      - azure-arm-sb.SBQueue.id
+      - azure-arm-sb.SBQueue.lockDuration
+      - azure-arm-sb.SBQueue.maxDeliveryCount
+      - azure-arm-sb.SBQueue.maxSizeInMegabytes
+      - azure-arm-sb.SBQueue.messageCount
+      - azure-arm-sb.SBQueue.name
+      - azure-arm-sb.SBQueue.requiresDuplicateDetection
+      - azure-arm-sb.SBQueue.requiresSession
+      - azure-arm-sb.SBQueue.sizeInBytes
+      - azure-arm-sb.SBQueue.status
+      - azure-arm-sb.SBQueue.type
+      - azure-arm-sb.SBQueue.updatedAt
+    langs:
+      - typeScript
+    type: interface
+    summary: Descrição da fila de recurso.
+    extends:
+      name: azure-arm-sb.Resource
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.accessedAt
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Última vez que uma mensagem foi enviada, ou a última vez que houve uma solicitação de recebimento para essa fila.'
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.autoDeleteOnIdle
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Intervalo de ociosidade de timeSpan ISO 8061 após o qual a fila é excluída automaticamente. A duração mínima é de 5 minutos.
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.countDetails
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalhes da contagem de mensagem.
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - azure-arm-sb.MessageCountDetails
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.createdAt
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora exata em que a mensagem foi criada.
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.deadLetteringOnMessageExpiration
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um valor que indica se essa fila tem suporte a mensagens mortas quando uma mensagem expirar.
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.defaultMessageTimeToLive
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Padrão ISO 8601 mensagem período de tempo para o valor de vida útil. Esta é a duração após a qual a mensagem expira, começando a partir de quando a mensagem é enviada ao barramento de serviço. Isso é o valor padrão usado quando TimeToLive não está definido em uma mensagem em si.'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.duplicateDetectionHistoryTimeWindow
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Estrutura timeSpan ISO 8601 que define a duração do histórico de detecção de duplicidades. O valor padrão é 10 minutos.
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableBatchedOperations
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valor que indica se as operações em lote do lado do servidor estão habilitadas.
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enableExpress
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um valor que indica se as entidades Express estão habilitadas. Uma fila expressa contém uma mensagem na memória temporariamente antes de gravar no armazenamento persistente.
+    optional: true
+    syntax:
+      content: 'enableExpress?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.enablePartitioning
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um valor que indica se a fila deve ser particionado em vários agentes de mensagens.
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardDeadLetteredMessagesTo
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome da fila/tópico para encaminhar a mensagem de mensagens mortas
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.forwardTo
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome da fila/tópico para encaminhar as mensagens
+    optional: true
+    syntax:
+      content: 'forwardTo?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID de Recurso
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.lockDuration
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Duração da ISO 8601 timespan de um bloqueio de inspeção; ou seja, a quantidade de tempo que a mensagem ficará bloqueada para outros destinatários. O valor máximo para LockDuration é de 5 minutos; o valor padrão é 1 minuto.'
+    optional: true
+    syntax:
+      content: 'lockDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxDeliveryCount
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A contagem máxima de entregas. Uma mensagem é automaticamente morto após esse número de entregas. valor padrão é 10.
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.maxSizeInMegabytes
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O tamanho máximo da fila em megabytes, que é o tamanho da memória alocada para a fila. O padrão é 1024.'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.messageCount
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O número de mensagens na fila.
+    optional: true
+    syntax:
+      content: 'messageCount?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do recurso
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresDuplicateDetection
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um valor que indica se essa fila requer detecção de duplicidades.
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.requiresSession
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um valor que indica se a fila é compatível com o conceito de sessões.
+    optional: true
+    syntax:
+      content: 'requiresSession?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.sizeInBytes
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O tamanho da fila, em bytes.'
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Enumera os valores possíveis para o status de uma entidade de mensagens. Os valores possíveis incluem: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Tipo de recurso
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sb
+  - uid: azure-arm-sb.SBQueue.updatedAt
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora exata em que a mensagem foi atualizada.
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-sb
+references:
+  - uid: azure-arm-sb.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-sb.Resource
+  - uid: azure-arm-sb.MessageCountDetails
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: azure-arm-sb.MessageCountDetails
