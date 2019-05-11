@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo
+    name: StatefulServiceReplicaInfo
+    fullName: StatefulServiceReplicaInfo
+    children:
+      - azure-servicefabric.StatefulServiceReplicaInfo.address
+      - azure-servicefabric.StatefulServiceReplicaInfo.healthState
+      - azure-servicefabric.StatefulServiceReplicaInfo.lastInBuildDurationInSeconds
+      - azure-servicefabric.StatefulServiceReplicaInfo.nodeName
+      - azure-servicefabric.StatefulServiceReplicaInfo.replicaId
+      - azure-servicefabric.StatefulServiceReplicaInfo.replicaRole
+      - azure-servicefabric.StatefulServiceReplicaInfo.replicaStatus
+      - azure-servicefabric.StatefulServiceReplicaInfo.serviceKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa uma réplica de serviço com monitoração de estado. Isso inclui informações sobre a identidade, função, status, integridade, nome do nó, tempo de atividade e outros detalhes sobre a réplica.'
+    extends:
+      name: azure-servicefabric.ReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O endereço a réplica está escutando.
+    optional: true
+    syntax:
+      content: 'address?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.lastInBuildDurationInSeconds
+    name: lastInBuildDurationInSeconds
+    fullName: lastInBuildDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A última na duração de compilação da réplica em segundos.
+    optional: true
+    syntax:
+      content: 'lastInBuildDurationInSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de um nó do Service Fabric.
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma réplica de serviço com estado. ReplicaId é usada pelo Service Fabric para identificar exclusivamente uma réplica de uma partição. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da réplica. Se uma réplica é removida e outra réplica é criada no mesmo nó para a mesma partição, ele receberá um valor diferente para a id. Às vezes, a id de uma instância de serviço sem monitoração de estado também é conhecida como uma id de réplica.'
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.replicaRole
+    name: replicaRole
+    fullName: replicaRole
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A função de uma réplica de um serviço com monitoração de estado. Os valores possíveis incluem: ''Unknown'', ''None'', ''Primary'', ''IdleSecondary'', ''ActiveSecondary'''
+    optional: true
+    syntax:
+      content: 'replicaRole?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O status de uma réplica de um serviço. Os valores possíveis incluem: ''Invalid'', ''InBuild'', ''Standby'', ''Ready'', ''Down'', ''Dropped'''
+    optional: true
+    syntax:
+      content: 'replicaStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaInfo
+    name: ReplicaInfo
+    spec.typeScript:
+      - name: ReplicaInfo
+        fullName: ReplicaInfo
+        uid: azure-servicefabric.ReplicaInfo

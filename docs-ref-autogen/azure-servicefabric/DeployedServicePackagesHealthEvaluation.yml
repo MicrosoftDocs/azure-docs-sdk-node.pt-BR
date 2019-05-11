@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation
+    name: DeployedServicePackagesHealthEvaluation
+    fullName: DeployedServicePackagesHealthEvaluation
+    children:
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+      - azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa a avaliação de integridade para pacotes de serviço implantado, que contém as avaliações de integridade para cada pacote de serviço implantados não íntegros que afetados atual estado de integridade agregado. Pode ser retornado ao avaliar a integridade do aplicativo implantado e o estado de integridade agregada é erro ou aviso.'
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrição da avaliação de integridade, que representa um resumo do processo de avaliação.'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número total de pacotes de serviço implantados do aplicativo implantado no repositório de integridade.
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedServicePackagesHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de avaliações não íntegras que levou ao estado de integridade agregado. Inclui o DeployedServicePackageHealthEvaluation não íntegro que afetados a integridade agregada.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

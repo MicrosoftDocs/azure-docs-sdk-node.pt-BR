@@ -1,0 +1,190 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent
+    name: ApplicationUpgradeRollbackStartedEvent
+    fullName: ApplicationUpgradeRollbackStartedEvent
+    children:
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationId
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationTypeName
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationTypeVersion
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.category
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.currentApplicationTypeVersion
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.eventInstanceId
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.failureReason
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.hasCorrelatedEvents
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.kind
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.overallUpgradeElapsedTimeInMs
+      - azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: Evento iniciado de reversão de atualização do aplicativo.
+    extends:
+      name: azure-servicefabric.ApplicationEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationId
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A identidade do aplicativo. Isso é uma representação codificada do nome do aplicativo.
+      Isso é usado nas APIs REST para identificar o recurso de aplicativo.
+      Começando na versão 6.0, nomes hierárquicos são delimitados com o "\~" caracteres. Por exemplo, se o nome do aplicativo é "fabric: / myapp/app1", a identidade do aplicativo será "meuaplicativo~Aplicativo1\~app1" em 6.0 + e "meuaplicativo/Aplicativo1" nas versões anteriores.
+    syntax:
+      content: 'applicationId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do tipo de aplicativo.
+    syntax:
+      content: 'applicationTypeName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.applicationTypeVersion
+    name: applicationTypeVersion
+    fullName: applicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Versão do tipo de aplicativo de destino.
+    syntax:
+      content: 'applicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A categoria de evento.
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.currentApplicationTypeVersion
+    name: currentApplicationTypeVersion
+    fullName: currentApplicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Versão atual do tipo de aplicativo.
+    syntax:
+      content: 'currentApplicationTypeVersion: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O identificador para a instância de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.failureReason
+    name: failureReason
+    fullName: failureReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descreve o motivo da falha.
+    syntax:
+      content: 'failureReason: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra se houver um disponível de eventos relacionados.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.overallUpgradeElapsedTimeInMs
+    name: overallUpgradeElapsedTimeInMs
+    fullName: overallUpgradeElapsedTimeInMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Em geral, atualize o tempo em milissegundos.'
+    syntax:
+      content: 'overallUpgradeElapsedTimeInMs: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationUpgradeRollbackStartedEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O evento de tempo foi registrado.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ApplicationEvent
+    name: ApplicationEvent
+    spec.typeScript:
+      - name: ApplicationEvent
+        fullName: ApplicationEvent
+        uid: azure-servicefabric.ApplicationEvent
