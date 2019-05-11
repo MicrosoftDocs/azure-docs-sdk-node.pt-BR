@@ -1,0 +1,19 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.FrameworkOptions
+    name: FrameworkOptions
+    fullName: FrameworkOptions
+    children: []
+    langs:
+      - typeScript
+    type: type alias
+    summary: |+
+      Definir ambiente específico do aplicativo/estrutura suporte isAngular - sinalizador para determinar se ele é a estrutura Angular. Usado para transmitir tokens. TODO: detangle essa dependência de núcleo.
+      unprotectedResources - matriz de URIS que são recursos desprotegidos. A MSAL não anexará um token para solicitações de saída que têm esses URI. O padrão é 'null'.
+      protectedResourceMap - isso é o mapeamento de recursos para os escopos usados pela MSAL para anexar automaticamente os tokens de acesso nas chamadas à API da web.
+      Um token de acesso é obtido do recurso. Portanto, você pode mapear um caminho de recurso específico da seguinte maneira: {"https://graph.microsoft.com/v1.0/me", ["Read"]}, ou a URL do aplicativo do recurso como: {"https://graph.microsoft.com/", ["Read", "mail.send"]}.
+      Isso é necessário para chamadas CORS.
+
+    syntax:
+      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+    package: msal

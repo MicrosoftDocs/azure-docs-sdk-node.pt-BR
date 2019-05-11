@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-network.VpnClientParameters'
+    name: VpnClientParameters
+    fullName: VpnClientParameters
+    children:
+      - '@azure/arm-network.VpnClientParameters.authenticationMethod'
+      - '@azure/arm-network.VpnClientParameters.clientRootCertificates'
+      - '@azure/arm-network.VpnClientParameters.processorArchitecture'
+      - '@azure/arm-network.VpnClientParameters.radiusServerAuthCertificate'
+    langs:
+      - typeScript
+    type: interface
+    summary: Parâmetros de cliente VPN para a geração de pacote
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnClientParameters.authenticationMethod'
+    name: authenticationMethod
+    fullName: authenticationMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Método de autenticação de cliente VPN. Os valores possíveis incluem: ''EAPTLS'', ''EAPMSCHAPv2'''
+    optional: true
+    syntax:
+      content: 'authenticationMethod?: AuthenticationMethod'
+      return:
+        type:
+          - '@azure/arm-network.AuthenticationMethod'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnClientParameters.clientRootCertificates'
+    name: clientRootCertificates
+    fullName: clientRootCertificates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Uma lista de dados de certificado público de certificados de raiz de cliente são codificados como cadeias de caracteres de Base 64.
+      O parâmetro opcional para Raio externo com base em autenticação com EAPTLS.
+    optional: true
+    syntax:
+      content: 'clientRootCertificates?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnClientParameters.processorArchitecture'
+    name: processorArchitecture
+    fullName: processorArchitecture
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Arquitetura do processador do cliente VPN. Os valores possíveis são: ''AMD64'' e ''X86''. Os valores possíveis incluem: ''Amd64'', ''X86'''
+    optional: true
+    syntax:
+      content: 'processorArchitecture?: ProcessorArchitecture'
+      return:
+        type:
+          - '@azure/arm-network.ProcessorArchitecture'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VpnClientParameters.radiusServerAuthCertificate'
+    name: radiusServerAuthCertificate
+    fullName: radiusServerAuthCertificate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Os dados do certificado público para o certificado de autenticação de servidor radius como Base 64 de cadeia de caracteres codificada. Necessário somente se a autenticação radius externo foi configurada com autenticação EAPTLS.
+    optional: true
+    syntax:
+      content: 'radiusServerAuthCertificate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+references:
+  - uid: '@azure/arm-network.AuthenticationMethod'
+    name: AuthenticationMethod
+    spec.typeScript:
+      - name: AuthenticationMethod
+        fullName: AuthenticationMethod
+        uid: '@azure/arm-network.AuthenticationMethod'
+  - uid: '@azure/arm-network.ProcessorArchitecture'
+    name: ProcessorArchitecture
+    spec.typeScript:
+      - name: ProcessorArchitecture
+        fullName: ProcessorArchitecture
+        uid: '@azure/arm-network.ProcessorArchitecture'

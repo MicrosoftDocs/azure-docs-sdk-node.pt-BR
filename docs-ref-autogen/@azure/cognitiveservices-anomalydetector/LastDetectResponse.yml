@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse'
+    name: LastDetectResponse
+    fullName: LastDetectResponse
+    children:
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.expectedValue'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isNegativeAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isPositiveAnomaly'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.lowerMargin'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.period'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.suggestedWindow'
+      - '@azure/cognitiveservices-anomalydetector.LastDetectResponse.upperMargin'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa LastDetectResponse.
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.expectedValue'
+    name: expectedValue
+    fullName: expectedValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Valor esperado do ponto mais recente.
+    syntax:
+      content: 'expectedValue: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isAnomaly'
+    name: isAnomaly
+    fullName: isAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status de anomalias do ponto mais recente, true significa que o último ponto é uma anomalia na direção negativa ou direção positiva.'
+    syntax:
+      content: 'isAnomaly: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isNegativeAnomaly'
+    name: isNegativeAnomaly
+    fullName: isNegativeAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Status de anomalias na direção negativa do ponto mais recente. True significa que o último ponto é uma anomalia e seu valor real é menor do que o esperado.
+    syntax:
+      content: 'isNegativeAnomaly: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.isPositiveAnomaly'
+    name: isPositiveAnomaly
+    fullName: isPositiveAnomaly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Status de anomalias na direção positiva do ponto mais recente. True significa que o último ponto é uma anomalia e seu valor real é maior que o esperado.
+    syntax:
+      content: 'isPositiveAnomaly: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.lowerMargin'
+    name: lowerMargin
+    fullName: lowerMargin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Margem inferior do ponto mais recente. LowerMargin é usada para calcular lowerBoundary, que é igual a expectedValue - (100 - marginScale) * lowerMargin.'
+    syntax:
+      content: 'lowerMargin: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.period'
+    name: period
+    fullName: period
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Frequência extraída da série, zero significa que nenhum padrão recorrente foi encontrado.'
+    syntax:
+      content: 'period: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.suggestedWindow'
+    name: suggestedWindow
+    fullName: suggestedWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sugerido pontos de séries de entrada necessários para detectar o ponto mais recente.
+    syntax:
+      content: 'suggestedWindow: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'
+  - uid: '@azure/cognitiveservices-anomalydetector.LastDetectResponse.upperMargin'
+    name: upperMargin
+    fullName: upperMargin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Margem superior do ponto mais recente. UpperMargin é usada para calcular upperBoundary, que é igual a expectedValue + (100 - marginScale) * upperMargin. Se o valor do ponto mais recente estiver entre upperBoundary e lowerBoundary, ele deve ser tratado como valor normal. Ajustando o valor de marginScale, status de anomalias do ponto mais recente pode ser alterado.'
+    syntax:
+      content: 'upperMargin: number'
+      return:
+        type:
+          - number
+    package: '@azure/cognitiveservices-anomalydetector'

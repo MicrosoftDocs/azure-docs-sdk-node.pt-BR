@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.AzureAsyncOperationResult
+    name: AzureAsyncOperationResult
+    fullName: AzureAsyncOperationResult
+    children:
+      - azure-arm-network.AzureAsyncOperationResult.error
+      - azure-arm-network.AzureAsyncOperationResult.status
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      O corpo da resposta contém o status da operação assíncrona especificada, que indica se ele foi concluída com êxito, está em andamento ou falhou. Observe que esse status é distinto do código de status HTTP retornado para a operação obter Status da operação em si. Se a operação assíncrona foi bem-sucedida, o corpo da resposta inclui o código de status HTTP para a solicitação com êxito.
+      Se a operação assíncrona tiver falhado, o corpo da resposta inclui o código de status HTTP para as informações de erro e de solicitação com falha sobre a falha.
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalhes do erro ocorreram durante a operação assíncrona especificada.
+    optional: true
+    syntax:
+      content: 'error?: ErrorModel'
+      return:
+        type:
+          - azure-arm-network.ErrorModel
+    package: azure-arm-network
+  - uid: azure-arm-network.AzureAsyncOperationResult.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status da operação assíncrona do Azure. Os valores possíveis são: ''InProgress'', ''Êxito'' e ''Falha''. Os valores possíveis incluem: ''InProgress'', ''Succeeded'', ''Failed'''
+    optional: true
+    syntax:
+      content: 'status?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.ErrorModel
+    name: ErrorModel
+    spec.typeScript:
+      - name: ErrorModel
+        fullName: ErrorModel
+        uid: azure-arm-network.ErrorModel
