@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.DeviceClientOptions
+    name: DeviceClientOptions
+    fullName: DeviceClientOptions
+    children:
+      - azure-iot-device.DeviceClientOptions.amqp
+      - azure-iot-device.DeviceClientOptions.ca
+      - azure-iot-device.DeviceClientOptions.cert
+      - azure-iot-device.DeviceClientOptions.clientCertEngine
+      - azure-iot-device.DeviceClientOptions.http
+      - azure-iot-device.DeviceClientOptions.key
+      - azure-iot-device.DeviceClientOptions.mqtt
+      - azure-iot-device.DeviceClientOptions.passphrase
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Opções para o objeto de cliente.  Passado para o <xref:Client.setOptions> função.'
+    extends:
+      name: X509
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.amqp
+    name: amqp
+    fullName: amqp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Objeto opcional com opções específicas para o transporte Mqtt
+    optional: true
+    syntax:
+      content: 'amqp?: AmqpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.AmqpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.ca
+    name: ca
+    fullName: ca
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Certificado público no formato PEM de autoridade de certificação que está sendo usada pelo serviço do Hub.  Essa é a autoridade de certificação que o hub está usando para proteger conexões de TLS e o cliente valida a conexão usando este certificado público para validar a identidade do hub.  Se você estiver se conectando a um Hub do IoT do Azure dentro de um data center do Azure, você não precisa defini-lo.  Se você estiver se conectando a algum outro hub (por exemplo, um Hub de borda), você talvez precise definir isso como o certificado de servidor que o hub usa para TLS.'
+    optional: true
+    syntax:
+      content: 'ca?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.cert
+    name: cert
+    fullName: cert
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Certificado X509.
+    optional: true
+    syntax:
+      content: 'cert?: string | string[] | Buffer | Buffer[]'
+      return:
+        type:
+          - 'string | string[] | Buffer | Buffer[]'
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.clientCertEngine
+    name: clientCertEngine
+    fullName: clientCertEngine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome de um motor do OpenSSL que pode fornecer o certificado do cliente.
+    optional: true
+    syntax:
+      content: 'clientCertEngine?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.http
+    name: http
+    fullName: http
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Objeto opcional com opções específicas para o transporte Mqtt
+    optional: true
+    syntax:
+      content: 'http?: HttpTransportOptions'
+      return:
+        type:
+          - azure-iot-device.HttpTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.key
+    name: key
+    fullName: key
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Chave associada com o X509 certificado.
+    optional: true
+    syntax:
+      content: 'key?: string | Buffer'
+      return:
+        type:
+          - string | Buffer
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.mqtt
+    name: mqtt
+    fullName: mqtt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Objeto opcional com opções específicas para o transporte Mqtt
+    optional: true
+    syntax:
+      content: 'mqtt?: MqttTransportOptions'
+      return:
+        type:
+          - azure-iot-device.MqttTransportOptions
+    package: azure-iot-device
+  - uid: azure-iot-device.DeviceClientOptions.passphrase
+    name: passphrase
+    fullName: passphrase
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Senha usada para decodificar a chave associada com o X509 certificado.
+    optional: true
+    syntax:
+      content: 'passphrase?: string'
+      return:
+        type:
+          - string
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.AmqpTransportOptions
+    name: AmqpTransportOptions
+    spec.typeScript:
+      - name: AmqpTransportOptions
+        fullName: AmqpTransportOptions
+        uid: azure-iot-device.AmqpTransportOptions
+  - uid: azure-iot-device.HttpTransportOptions
+    name: HttpTransportOptions
+    spec.typeScript:
+      - name: HttpTransportOptions
+        fullName: HttpTransportOptions
+        uid: azure-iot-device.HttpTransportOptions
+  - uid: azure-iot-device.MqttTransportOptions
+    name: MqttTransportOptions
+    spec.typeScript:
+      - name: MqttTransportOptions
+        fullName: MqttTransportOptions
+        uid: azure-iot-device.MqttTransportOptions

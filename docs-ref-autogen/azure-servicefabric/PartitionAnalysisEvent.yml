@@ -1,0 +1,133 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.PartitionAnalysisEvent
+    name: PartitionAnalysisEvent
+    fullName: PartitionAnalysisEvent
+    children:
+      - azure-servicefabric.PartitionAnalysisEvent.category
+      - azure-servicefabric.PartitionAnalysisEvent.eventInstanceId
+      - azure-servicefabric.PartitionAnalysisEvent.hasCorrelatedEvents
+      - azure-servicefabric.PartitionAnalysisEvent.kind
+      - azure-servicefabric.PartitionAnalysisEvent.metadata
+      - azure-servicefabric.PartitionAnalysisEvent.partitionId
+      - azure-servicefabric.PartitionAnalysisEvent.timeStamp
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa a base para todos os eventos de análise de partição.
+    extends:
+      name: azure-servicefabric.PartitionEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.category
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A categoria de evento.
+    optional: true
+    syntax:
+      content: 'category?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.eventInstanceId
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O identificador para a instância de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.hasCorrelatedEvents
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra se houver um disponível de eventos relacionados.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Metadados sobre um evento de análise.
+    syntax:
+      content: 'metadata: AnalysisEventMetadata'
+      return:
+        type:
+          - azure-servicefabric.AnalysisEventMetadata
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma ID interna usada pelo Service Fabric para identificar exclusivamente uma partição. Isso é um GUID gerado aleatoriamente quando o serviço foi criado. A ID de partição é exclusiva e não altera o tempo de vida do serviço. Se o mesmo serviço foi excluído e recriado as IDs de suas partições seria diferente.
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.PartitionAnalysisEvent.timeStamp
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O evento de tempo foi registrado.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionEvent
+    name: PartitionEvent
+    spec.typeScript:
+      - name: PartitionEvent
+        fullName: PartitionEvent
+        uid: azure-servicefabric.PartitionEvent
+  - uid: azure-servicefabric.AnalysisEventMetadata
+    name: AnalysisEventMetadata
+    spec.typeScript:
+      - name: AnalysisEventMetadata
+        fullName: AnalysisEventMetadata
+        uid: azure-servicefabric.AnalysisEventMetadata

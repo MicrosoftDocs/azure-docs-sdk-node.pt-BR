@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StoppedChaosEvent
+    name: StoppedChaosEvent
+    fullName: StoppedChaosEvent
+    children:
+      - azure-servicefabric.StoppedChaosEvent.kind
+      - azure-servicefabric.StoppedChaosEvent.reason
+      - azure-servicefabric.StoppedChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve um evento de caos que é gerado quando o Chaos é interrompido porque o usuário emitiu uma parada ou o tempo de execução estava ativo.
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descreve o motivo pelo qual o Chaos parou. Chaos pode parar por causa da chamada à API StopChaos ou o timeToRun fornecido em ChaosParameters está acima.
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StoppedChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O carimbo de hora de UTC quando esse evento Chaos foi gerado.
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

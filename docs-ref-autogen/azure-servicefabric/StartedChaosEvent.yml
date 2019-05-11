@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StartedChaosEvent
+    name: StartedChaosEvent
+    fullName: StartedChaosEvent
+    children:
+      - azure-servicefabric.StartedChaosEvent.chaosParameters
+      - azure-servicefabric.StartedChaosEvent.kind
+      - azure-servicefabric.StartedChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve um evento de caos que é gerado quando o Chaos é iniciado.
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StartedChaosEvent.chaosParameters
+    name: chaosParameters
+    fullName: chaosParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define todos os parâmetros para configurar uma execução do Chaos.
+    optional: true
+    syntax:
+      content: 'chaosParameters?: ChaosParameters'
+      return:
+        type:
+          - azure-servicefabric.ChaosParameters
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StartedChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StartedChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O carimbo de hora de UTC quando esse evento Chaos foi gerado.
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent
+  - uid: azure-servicefabric.ChaosParameters
+    name: ChaosParameters
+    spec.typeScript:
+      - name: ChaosParameters
+        fullName: ChaosParameters
+        uid: azure-servicefabric.ChaosParameters

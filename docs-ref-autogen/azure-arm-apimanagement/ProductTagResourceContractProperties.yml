@@ -1,0 +1,149 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties
+    name: ProductTagResourceContractProperties
+    fullName: ProductTagResourceContractProperties
+    children:
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.approvalRequired
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.description
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.id
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.name
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.state
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit
+      - azure-arm-apimanagement.ProductTagResourceContractProperties.terms
+    langs:
+      - typeScript
+    type: interface
+    summary: Perfil de produto.
+    extends:
+      name: azure-arm-apimanagement.ProductEntityBaseParameters
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.approvalRequired
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se a aprovação de assinatura é necessária. Se for false, novas assinaturas serão aprovadas automaticamente permitindo que os desenvolvedores chamem as APIs desse produto imediatamente após a assinatura. Se for true, os administradores devem aprovar manualmente a assinatura que o desenvolvedor possa qualquer uma das APIs do produto. Pode estar presente somente se a propriedade subscriptionRequired está presente e tem um valor de false.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descrição do produto. Pode incluir marcas de formatação HTML.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Identificador do produto na forma de /products/ {productId}'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do produto.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se o produto é publicado ou não. Produtos publicados são detectáveis por usuários do portal do desenvolvedor. Os produtos não publicados são visíveis somente para administradores. Estado padrão do produto é notPublished. Os valores possíveis incluem: ''notPublished'', ''publicado'''
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionRequired
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se uma assinatura de produto é necessária para acessar APIs incluídas neste produto. Se for true, o produto é conhecido como "protegido" e uma chave de assinatura válida é necessária para uma solicitação para uma API incluída no produto seja bem-sucedida. Se for false, o produto é conhecido como "abrir" e solicitações para uma API incluída no produto podem ser feitas sem uma chave de assinatura.
+      Se a propriedade for omitida, ao criar um novo produto, presume-se seu valor como true.
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.subscriptionsLimit
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se o número de assinaturas de um usuário pode ter para este produto ao mesmo tempo. Defina como null ou omita para permissão ilimitada por assinaturas do usuário. Pode estar presente somente se a propriedade subscriptionRequired está presente e tem um valor de false.
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-apimanagement
+  - uid: azure-arm-apimanagement.ProductTagResourceContractProperties.terms
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Termos de uso do produto. Os desenvolvedores que tentarem assinar o produto verão e deverão aceitar esses termos para concluir o processo de assinatura.
+    optional: true
+    syntax:
+      content: 'terms?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-apimanagement
+references:
+  - uid: azure-arm-apimanagement.ProductEntityBaseParameters
+    name: ProductEntityBaseParameters
+    spec.typeScript:
+      - name: ProductEntityBaseParameters
+        fullName: ProductEntityBaseParameters
+        uid: azure-arm-apimanagement.ProductEntityBaseParameters

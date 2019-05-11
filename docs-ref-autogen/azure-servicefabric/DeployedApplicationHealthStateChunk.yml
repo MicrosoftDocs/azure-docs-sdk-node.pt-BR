@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunk
+    name: DeployedApplicationHealthStateChunk
+    fullName: DeployedApplicationHealthStateChunk
+    children:
+      - azure-servicefabric.DeployedApplicationHealthStateChunk.deployedServicePackageHealthStateChunks
+      - azure-servicefabric.DeployedApplicationHealthStateChunk.healthState
+      - azure-servicefabric.DeployedApplicationHealthStateChunk.nodeName
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa a parte do estado de integridade de um aplicativo implantado, que contém o nó onde o aplicativo é implantado, o estado de integridade agregados e quaisquer pacotes de serviço implantados que respeitam os filtros de descrição de consulta do bloco.'
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunk.deployedServicePackageHealthStateChunks
+    name: deployedServicePackageHealthStateChunks
+    fullName: deployedServicePackageHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de serviço implantado pacote integridade estado partes que pertencem ao aplicativo implantado que respeitam os filtros na integridade do cluster dividir a descrição da consulta.
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStateChunks?: DeployedServicePackageHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.DeployedServicePackageHealthStateChunkList
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunk.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome do nó em que o aplicativo é implantado.
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.DeployedServicePackageHealthStateChunkList
+    name: DeployedServicePackageHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedServicePackageHealthStateChunkList
+        fullName: DeployedServicePackageHealthStateChunkList
+        uid: azure-servicefabric.DeployedServicePackageHealthStateChunkList

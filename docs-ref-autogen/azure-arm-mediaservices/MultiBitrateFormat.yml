@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.MultiBitrateFormat
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+      - azure-arm-mediaservices.MultiBitrateFormat.odatatype
+      - azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve as propriedades para a produção de uma coleção de arquivos de múltiplas taxas de bits de GOP alinhado. O comportamento padrão é produzir um arquivo de saída para cada camada de vídeo que é mista de junto com todos os os sons. Os arquivos de saída exatos gerados podem ser controlados especificando a coleção outputFiles.
+    extends:
+      name: azure-arm-mediaservices.Format
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.filenamePattern
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O padrão de nome de arquivo para os arquivos de saída gerada. As macros a seguir têm suporte no nome do arquivo: {Basename} - o nome base do vídeo de entrada {Extension} - a extensão apropriada para esse formato. {Label} - o rótulo atribuído à camada/codec.
+      {Index} - um índice exclusivo para miniaturas. Aplicável somente para as miniaturas. {Taxa de bits} - a taxa de bits de áudio/vídeo. Não aplicável a miniaturas. {Codec} - o tipo do codec de áudio/vídeo. Todas as macros unsubstituted serão recolhidas e removidas do nome do arquivo.
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.MultiBitrateFormat.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de arquivos de saída para produzir.  Cada entrada na lista é um conjunto de rótulos de camada de áudio e vídeo para ser mista de juntos.
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.OutputFile[]'
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Format
+    name: Format
+    spec.typeScript:
+      - name: Format
+        fullName: Format
+        uid: azure-arm-mediaservices.Format
+  - uid: 'azure-arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-arm-mediaservices.OutputFile
+      - name: '[]'
+        fullName: '[]'

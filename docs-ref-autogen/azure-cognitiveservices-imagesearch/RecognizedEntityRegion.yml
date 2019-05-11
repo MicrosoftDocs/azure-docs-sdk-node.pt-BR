@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion
+    name: RecognizedEntityRegion
+    fullName: RecognizedEntityRegion
+    children:
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.id
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.matchingEntities
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.readLink
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.region
+      - azure-cognitiveservices-imagesearch.RecognizedEntityRegion.webSearchUrl
+    langs:
+      - typeScript
+    type: interface
+    summary: Define uma região da imagem em que uma entidade foi encontrada e uma lista de entidades que podem corresponder a ele.
+    extends:
+      name: azure-cognitiveservices-imagesearch.Response
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um identificador de cadeia de caracteres.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.matchingEntities
+    name: matchingEntities
+    fullName: matchingEntities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma lista de entidades que Bing acredita que corresponde a entidade encontrada na região. As entidades estão em ordem decrescente de confiança (consulte o campo matchConfidence de RecognizedEntity).
+    optional: true
+    syntax:
+      content: 'matchingEntities?: RecognizedEntity[]'
+      return:
+        type:
+          - 'azure-cognitiveservices-imagesearch.RecognizedEntity[]'
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.readLink
+    name: readLink
+    fullName: readLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A URL que retorna esse recurso.
+    optional: true
+    syntax:
+      content: 'readLink?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.region
+    name: region
+    fullName: region
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma região da imagem que contém uma entidade. Os valores do retângulo são relativos à largura e à altura da imagem original e estão no intervalo de 0,0 a 1,0. Por exemplo, se a imagem é de 300 x 200 e superior da região, o canto esquerdo é no ponto (10, 20) e a parte inferior, direita canto está no ponto (290, 150) e, em seguida, o retângulo normalizado é: À esquerda = 0.0333333333333333, superior = 0,1, direita = 0.9666666666666667, inferior = 0,75. Para pessoas, a região representa a face da pessoa.'
+    optional: true
+    syntax:
+      content: 'region?: NormalizedRectangle'
+      return:
+        type:
+          - azure-cognitiveservices-imagesearch.NormalizedRectangle
+    package: azure-cognitiveservices-imagesearch
+  - uid: azure-cognitiveservices-imagesearch.RecognizedEntityRegion.webSearchUrl
+    name: webSearchUrl
+    fullName: webSearchUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Resultado da pesquisa a URL para do Bing para este item.
+    optional: true
+    syntax:
+      content: 'webSearchUrl?: string'
+      return:
+        type:
+          - string
+    package: azure-cognitiveservices-imagesearch
+references:
+  - uid: azure-cognitiveservices-imagesearch.Response
+    name: Response
+    spec.typeScript:
+      - name: Response
+        fullName: Response
+        uid: azure-cognitiveservices-imagesearch.Response
+  - uid: 'azure-cognitiveservices-imagesearch.RecognizedEntity[]'
+    name: 'RecognizedEntity[]'
+    spec.typeScript:
+      - name: RecognizedEntity
+        fullName: RecognizedEntity
+        uid: azure-cognitiveservices-imagesearch.RecognizedEntity
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-cognitiveservices-imagesearch.NormalizedRectangle
+    name: NormalizedRectangle
+    spec.typeScript:
+      - name: NormalizedRectangle
+        fullName: NormalizedRectangle
+        uid: azure-cognitiveservices-imagesearch.NormalizedRectangle

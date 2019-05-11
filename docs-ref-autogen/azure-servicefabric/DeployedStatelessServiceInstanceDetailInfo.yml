@@ -1,0 +1,161 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo
+    name: DeployedStatelessServiceInstanceDetailInfo
+    fullName: DeployedStatelessServiceInstanceDetailInfo
+    children:
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informações sobre uma instância sem monitoração de estado em execução em um pacote de códigos. Observe que DeployedServiceReplicaQueryResult conterá dados duplicados, como ServiceKind, ServiceName, PartitionId e InstanceId.'
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica a operação atual de ciclo de vida do Active Directory em uma réplica de serviço com estado ou uma instância de serviço sem monitoração de estado. Os valores possíveis incluem: ''Unknown'', ''None'', ''Open'', ''ChangeRole'', ''Close'', ''Abort'''
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora de início da operação de serviço atual no formato UTC.
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informações sobre uma instância de serviço sem estado implantada em um nó.
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+      return:
+        type:
+          - azure-servicefabric.DeployedStatelessServiceInstanceInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma instância de serviço sem estado. InstanceId é usada pelo Service Fabric para identificar exclusivamente uma instância de uma partição de um serviço sem monitoração de estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da instância. Se a instância tiver feito failover no mesmo ou em outro nó, ele receberá um valor diferente para a ID da instância.'
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma ID interna usada pelo Service Fabric para identificar exclusivamente uma partição. Isso é um GUID gerado aleatoriamente quando o serviço foi criado. A ID de partição é exclusiva e não altera o tempo de vida do serviço. Se o mesmo serviço foi excluído e recriado as IDs de suas partições seria diferente.
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de carga relatada pela réplica.
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - 'azure-servicefabric.LoadMetricReportInfo[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Nome completo hierárquico do serviço no formato URI começando com `fabric:`.'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    name: DeployedServiceReplicaDetailInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaDetailInfo
+        fullName: DeployedServiceReplicaDetailInfo
+        uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+    name: DeployedStatelessServiceInstanceInfo
+    spec.typeScript:
+      - name: DeployedStatelessServiceInstanceInfo
+        fullName: DeployedStatelessServiceInstanceInfo
+        uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  - uid: 'azure-servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: azure-servicefabric.LoadMetricReportInfo
+      - name: '[]'
+        fullName: '[]'

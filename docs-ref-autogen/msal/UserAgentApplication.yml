@@ -1,0 +1,337 @@
+### YamlMime:UniversalReference
+items:
+  - uid: msal.UserAgentApplication
+    name: UserAgentApplication
+    fullName: UserAgentApplication
+    children:
+      - msal.UserAgentApplication.acquireTokenPopup
+      - msal.UserAgentApplication.acquireTokenRedirect
+      - msal.UserAgentApplication.acquireTokenSilent
+      - msal.UserAgentApplication.authority
+      - msal.UserAgentApplication.getAccount
+      - msal.UserAgentApplication.getAllAccounts
+      - msal.UserAgentApplication.getAuthorityInstance
+      - msal.UserAgentApplication.getCurrentConfiguration
+      - msal.UserAgentApplication.getLoginInProgress
+      - msal.UserAgentApplication.getPostLogoutRedirectUri
+      - msal.UserAgentApplication.getRedirectUri
+      - msal.UserAgentApplication.handleRedirectCallback_1
+      - msal.UserAgentApplication.handleRedirectCallback
+      - msal.UserAgentApplication.loginPopup
+      - msal.UserAgentApplication.loginRedirect
+      - msal.UserAgentApplication.logout
+      - msal.UserAgentApplication.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: 'Classe UserAgentApplication: <xref:UserAgentApplication> Objeto de instância que o desenvolvedor pode usar para fazer loginXX funções de acquireTokenXX OR'
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenPopup
+    name: acquireTokenPopup(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Use quando desejar obter um access_token para sua API por meio de abrir uma janela pop-up no navegador do usuário
+    syntax:
+      content: 'function acquireTokenPopup(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenRedirect
+    name: acquireTokenRedirect(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Usado quando você deseja obter um access_token para sua API ao redirecionar o usuário para o ponto de extremidade de autorização.
+    syntax:
+      content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.acquireTokenSilent
+    name: acquireTokenSilent(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Use esta função para obter um token antes de cada chamada à API / retorno MSAL do provedor de recursos de um token em cache quando disponível ou ele envia uma solicitação para o STS para obter um novo token usando um iframe oculto.
+    syntax:
+      content: 'function acquireTokenSilent(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.authority
+    name: authority
+    fullName: authority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Retorna a autoridade, onde autoridade é uma URL que indica o diretório que pode ser usar MSAL para obter tokens
+      - No Azure AD, esse atributo é uma URL que indica o active directory do Azure que usa a MSAL para obter tokens que ele está no formato https://login.microsoftonline.com/&lt; Enter_the_Tenant_Info_Here&gt; se seu aplicativo dá suporte a contas em um diretório organizacional, substitua o valor de "Enter_the_Tenant_Info_Here" com a Id de locatário ou o nome do locatário (por exemplo, contoso.microsoft.com) se seu aplicativo dá suporte a contas em qualquer diretório organizacional, substitua o valor de "Enter_the_Tenant_Info_Here" com organizações se seu aplicativo suporta contas em qualquer diretório organizacional e contas pessoais da Microsoft, substitua "Enter_the_Tenant_Info_ Aqui"valor com comum.
+      Para restringir o suporte para o pessoal da Microsoft contas somente, substitua o valor de "Enter_the_Tenant_Info_Here" com consumidores.
+      - B2C do Azure, ele é do formato https://&lt;instância&gt;/tfp/&lt;locatário&gt;/<policyName>/
+    syntax:
+      content: 'authority: string'
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.getAccount
+    name: getAccount()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Retorna a assinado na conta (recebido de um objeto de conta criado no momento do logon) ou nulo, quando nenhum estado é encontrado'
+    syntax:
+      content: function getAccount()
+      parameters: []
+      return:
+        type:
+          - msal.Account
+    package: msal
+  - uid: msal.UserAgentApplication.getAllAccounts
+    name: getAllAccounts()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Usado para filtrar todos os itens armazenados em cache e retornar uma lista de contas exclusivas com base em homeAccountIdentifier.
+    syntax:
+      content: function getAllAccounts()
+      parameters: []
+      return:
+        type:
+          - Array<msal.Account>
+    package: msal
+  - uid: msal.UserAgentApplication.getAuthorityInstance
+    name: getAuthorityInstance()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retorna a instância de autoridade
+    syntax:
+      content: function getAuthorityInstance()
+      parameters: []
+      return:
+        type:
+          - Authority
+    package: msal
+  - uid: msal.UserAgentApplication.getCurrentConfiguration
+    name: getCurrentConfiguration()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Use para obter atual <xref:Configuration> objeto na MSAL'
+    syntax:
+      content: function getCurrentConfiguration()
+      parameters: []
+      return:
+        type:
+          - msal.Configuration
+    package: msal
+  - uid: msal.UserAgentApplication.getLoginInProgress
+    name: getLoginInProgress()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retornar o sinalizador booliano ao desenvolvedor para ajudar a informar se o logon está em andamento
+    syntax:
+      content: function getLoginInProgress()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: msal
+  - uid: msal.UserAgentApplication.getPostLogoutRedirectUri
+    name: getPostLogoutRedirectUri()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Use para obter o uri de redirecionamento de logoff de postagem configurado na MSAL ou nulo.
+      Avalia postLogoutredirectUri se ele for uma função, caso contrário, simplesmente retorna seu valor.
+    syntax:
+      content: function getPostLogoutRedirectUri()
+      parameters: []
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.getRedirectUri
+    name: getRedirectUri()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Use para obter o uri de redirecionamento configurado no MSAL ou null.
+      Avalia redirectUri se ele for uma função, caso contrário, simplesmente retorna seu valor.
+    syntax:
+      content: function getRedirectUri()
+      parameters: []
+      return:
+        type:
+          - string
+    package: msal
+  - uid: msal.UserAgentApplication.handleRedirectCallback_1
+    name: handleRedirectCallback(authResponseCallback)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Define as funções de retorno de chamada para o fluxo de redirecionamento enviar novamente o objeto de sucesso ou erro.
+    syntax:
+      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
+      parameters:
+        - id: authCallback
+          type:
+            - authResponseCallback
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.handleRedirectCallback
+    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Define as funções de retorno de chamada para o fluxo de redirecionamento enviar novamente o objeto de sucesso ou erro.
+    syntax:
+      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
+      parameters:
+        - id: tokenReceivedCallback
+          type:
+            - tokenReceivedCallback
+          description: ''
+        - id: errorReceivedCallback
+          type:
+            - errorReceivedCallback
+          description: ''
+    package: msal
+  - uid: msal.UserAgentApplication.loginPopup
+    name: loginPopup(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Use ao iniciar o processo de logon por meio de abrir uma janela pop-up no navegador do usuário
+    syntax:
+      content: 'function loginPopup(request?: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<msal.AuthResponse>
+    package: msal
+  - uid: msal.UserAgentApplication.loginRedirect
+    name: loginRedirect(AuthenticationParameters)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Use ao iniciar o processo de logon ao redirecionar o navegador do usuário para o ponto de extremidade de autorização.
+    syntax:
+      content: 'function loginRedirect(request?: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type:
+            - msal.AuthenticationParameters
+          description: ''
+          optional: true
+    package: msal
+  - uid: msal.UserAgentApplication.logout
+    name: logout()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Usado para fazer logoff do usuário atual e redirecionará o usuário para o postLogoutRedirectUri.
+      Padrões de comportamento é redirecionar o usuário para `window.location.href`.
+    syntax:
+      content: function logout()
+      parameters: []
+    package: msal
+  - uid: msal.UserAgentApplication.constructor
+    name: UserAgentApplication(Configuration)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: 'Construtor para o <xref:UserAgentApplication> deve ser capaz de criar uma instância do objeto a <xref:UserAgentApplication> objeto'
+    syntax:
+      content: 'new UserAgentApplication(configuration: Configuration)'
+      parameters:
+        - id: configuration
+          type:
+            - msal.Configuration
+          description: |
+            objeto para a instância de UserAgentApplication MSAL
+    package: msal
+references:
+  - uid: msal.Configuration
+    name: Configuration
+    spec.typeScript:
+      - name: Configuration
+        fullName: Configuration
+        uid: msal.Configuration
+  - uid: msal.AuthenticationParameters
+    name: AuthenticationParameters
+    spec.typeScript:
+      - name: AuthenticationParameters
+        fullName: AuthenticationParameters
+        uid: msal.AuthenticationParameters
+  - uid: Promise<msal.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: msal.AuthResponse
+      - name: '>'
+        fullName: '>'
+  - uid: msal.Account
+    name: Account
+    spec.typeScript:
+      - name: Account
+        fullName: Account
+        uid: msal.Account
+  - uid: Array<msal.Account>
+    name: Account>
+    spec.typeScript:
+      - name: Array<
+        fullName: Array<
+      - name: Account
+        fullName: Account
+        uid: msal.Account
+      - name: '>'
+        fullName: '>'

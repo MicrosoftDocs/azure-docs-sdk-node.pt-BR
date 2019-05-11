@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ApplicationHealthStateChunk
+    name: ApplicationHealthStateChunk
+    fullName: ApplicationHealthStateChunk
+    children:
+      - azure-servicefabric.ApplicationHealthStateChunk.applicationName
+      - azure-servicefabric.ApplicationHealthStateChunk.applicationTypeName
+      - azure-servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks
+      - azure-servicefabric.ApplicationHealthStateChunk.healthState
+      - azure-servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa a parte do estado de integridade de um aplicativo.
+      Parte do estado de integridade do aplicativo contém o nome do aplicativo, seu estado de integridade agregada e quaisquer serviços de filhos e implantado aplicativos que respeitam os filtros na descrição de consulta de bloco de integridade do cluster.
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.applicationName
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome do aplicativo, incluindo o '' fabric:'' ''fabric:''.'
+    optional: true
+    syntax:
+      content: 'applicationName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.applicationTypeName
+    name: applicationTypeName
+    fullName: applicationTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de tipo de aplicativo conforme definido no manifesto do aplicativo.
+    optional: true
+    syntax:
+      content: 'applicationTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.deployedApplicationHealthStateChunks
+    name: deployedApplicationHealthStateChunks
+    fullName: deployedApplicationHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de estado de integridade do aplicativo implantado partes no cluster que respeitam os filtros na descrição de consulta de bloco de integridade de cluster.
+    optional: true
+    syntax:
+      content: 'deployedApplicationHealthStateChunks?: DeployedApplicationHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.DeployedApplicationHealthStateChunkList
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ApplicationHealthStateChunk.serviceHealthStateChunks
+    name: serviceHealthStateChunks
+    fullName: serviceHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de estado de integridade do serviço partes no cluster que respeitam os filtros na descrição de consulta de bloco de integridade de cluster.
+    optional: true
+    syntax:
+      content: 'serviceHealthStateChunks?: ServiceHealthStateChunkList'
+      return:
+        type:
+          - azure-servicefabric.ServiceHealthStateChunkList
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
+  - uid: azure-servicefabric.DeployedApplicationHealthStateChunkList
+    name: DeployedApplicationHealthStateChunkList
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateChunkList
+        fullName: DeployedApplicationHealthStateChunkList
+        uid: azure-servicefabric.DeployedApplicationHealthStateChunkList
+  - uid: azure-servicefabric.ServiceHealthStateChunkList
+    name: ServiceHealthStateChunkList
+    spec.typeScript:
+      - name: ServiceHealthStateChunkList
+        fullName: ServiceHealthStateChunkList
+        uid: azure-servicefabric.ServiceHealthStateChunkList
