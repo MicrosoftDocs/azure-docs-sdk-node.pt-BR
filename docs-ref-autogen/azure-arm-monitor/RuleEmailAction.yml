@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.RuleEmailAction
+    name: RuleEmailAction
+    fullName: RuleEmailAction
+    children:
+      - azure-arm-monitor.RuleEmailAction.customEmails
+      - azure-arm-monitor.RuleEmailAction.odatatype
+      - azure-arm-monitor.RuleEmailAction.sendToServiceOwners
+    langs:
+      - typeScript
+    type: interface
+    summary: Especifica a ação para enviar email quando a condição de regra é avaliada. O discriminador é sempre RuleEmailAction nesse caso.
+    extends:
+      name: azure-arm-monitor.RuleAction
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.customEmails
+    name: customEmails
+    fullName: customEmails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: a lista de endereços de email personalizado do administrador para notificar a ativação do alerta.
+    optional: true
+    syntax:
+      content: 'customEmails?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.RuleEmailAction.sendToServiceOwners
+    name: sendToServiceOwners
+    fullName: sendToServiceOwners
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se os administradores (e os coadministradores de serviço) do serviço devem ser notificados quando o alerta for ativado.
+    optional: true
+    syntax:
+      content: 'sendToServiceOwners?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleAction
+    name: RuleAction
+    spec.typeScript:
+      - name: RuleAction
+        fullName: RuleAction
+        uid: azure-arm-monitor.RuleAction

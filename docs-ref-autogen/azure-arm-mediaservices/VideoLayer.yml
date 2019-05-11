@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoLayer
+    name: VideoLayer
+    fullName: VideoLayer
+    children:
+      - azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+      - azure-arm-mediaservices.VideoLayer.bFrames
+      - azure-arm-mediaservices.VideoLayer.bitrate
+      - azure-arm-mediaservices.VideoLayer.frameRate
+      - azure-arm-mediaservices.VideoLayer.height
+      - azure-arm-mediaservices.VideoLayer.label
+      - azure-arm-mediaservices.VideoLayer.maxBitrate
+      - azure-arm-mediaservices.VideoLayer.odatatype
+      - azure-arm-mediaservices.VideoLayer.slices
+      - azure-arm-mediaservices.VideoLayer.width
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve as configurações a ser usada ao codificar o vídeo de entrada em uma camada de taxa de bits de saída desejada.
+    extends:
+      name: azure-arm-mediaservices.Layer
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.adaptiveBFrame
+    name: adaptiveBFrame
+    fullName: adaptiveBFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se são ou não quadros B adaptáveis a ser usado quando essa camada de codificação. Se não for especificado, o codificador irá ativá-lo sempre que o perfil de vídeo permite que seu uso.'
+    optional: true
+    syntax:
+      content: 'adaptiveBFrame?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bFrames
+    name: bFrames
+    fullName: bFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O número de quadros B a ser usado quando essa camada de codificação.  Se não for especificado, o codificador escolhe um número apropriado com base no perfil de vídeo e do nível.'
+    optional: true
+    syntax:
+      content: 'bFrames?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.bitrate
+    name: bitrate
+    fullName: bitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A taxa de bits média em bits por segundo no qual deseja codificar o vídeo de entrada ao gerar essa camada. Este é um campo obrigatório.
+    syntax:
+      content: 'bitrate: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.frameRate
+    name: frameRate
+    fullName: frameRate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O quadro de taxa (em quadros por segundo) na qual deseja codificar essa camada. O valor pode ser na forma de M/N, em que M e N são números inteiros (por exemplo, 30000/1001) ou na forma de um número (por exemplo, 30 ou 29,97). O codificador impõe restrições em taxas de quadros permitidos com base no perfil e nível. Se não for especificado, o codificador usará a mesma taxa de quadros do vídeo de entrada.'
+    optional: true
+    syntax:
+      content: 'frameRate?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A altura do vídeo de saída para essa camada. O valor pode ser absoluto (em pixels) ou relativo (em porcentagem). Por exemplo, 50% significa que o vídeo de saída tem metade como número de pixels de altura como entrada.'
+    optional: true
+    syntax:
+      content: 'height?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O rótulo de alfanumérico para esta camada, o que pode ser usado em multiplexação de camadas de áudio e vídeo diferente ou em nomeando o arquivo de saída.'
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.maxBitrate
+    name: maxBitrate
+    fullName: maxBitrate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A taxa de bits máxima (em bits por segundo), no qual o buffer VBV deve ser considerado como reabastecimento.
+      Se não for especificado, assume como padrão para o mesmo valor de taxa de bits.
+    optional: true
+    syntax:
+      content: 'maxBitrate?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.slices
+    name: slices
+    fullName: slices
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O número de fatias a ser usado quando essa camada de codificação. Se não for especificado, o padrão é zero, o que significa que o codificador usará uma única fatia para cada quadro.'
+    optional: true
+    syntax:
+      content: 'slices?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoLayer.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A largura do vídeo de saída para essa camada. O valor pode ser absoluto (em pixels) ou relativo (em porcentagem). Por exemplo, 50% significa que o vídeo de saída tem metade como número de pixels na largura como entrada.'
+    optional: true
+    syntax:
+      content: 'width?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Layer
+    name: Layer
+    spec.typeScript:
+      - name: Layer
+        fullName: Layer
+        uid: azure-arm-mediaservices.Layer
