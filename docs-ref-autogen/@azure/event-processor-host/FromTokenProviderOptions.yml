@@ -1,0 +1,205 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions'
+    name: FromTokenProviderOptions
+    fullName: FromTokenProviderOptions
+    children:
+      - '@azure/event-processor-host.FromTokenProviderOptions.consumerGroup'
+      - '@azure/event-processor-host.FromTokenProviderOptions.dataTransformer'
+      - '@azure/event-processor-host.FromTokenProviderOptions.fastScanInterval'
+      - '@azure/event-processor-host.FromTokenProviderOptions.initialOffset'
+      - '@azure/event-processor-host.FromTokenProviderOptions.leaseDuration'
+      - '@azure/event-processor-host.FromTokenProviderOptions.leaseRenewInterval'
+      - '@azure/event-processor-host.FromTokenProviderOptions.onEphError'
+      - '@azure/event-processor-host.FromTokenProviderOptions.slowScanInterval'
+      - '@azure/event-processor-host.FromTokenProviderOptions.startupScanDelay'
+      - '@azure/event-processor-host.FromTokenProviderOptions.storageBlobPrefix'
+      - '@azure/event-processor-host.FromTokenProviderOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="572ab-101">Descreve os parâmetros opcionais que podem ser fornecidos para criar um EventProcessorHost durante a criação do provedor de token fornecido</span><span class="sxs-lookup"><span data-stu-id="572ab-101">Describes the optional parameters that can be provided for creating an EventProcessorHost while creating from the given token provider</span></span>
+    extends:
+      name: ClientOptionsBase
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-102">{string} [consumerGroup] O nome do grupo de consumidores no Hub de eventos.</span><span class="sxs-lookup"><span data-stu-id="572ab-102">{string} [consumerGroup] The name of the consumer group within the Event Hub.</span></span> <span data-ttu-id="572ab-103">Valor padrão: \*\* `"$default"` \*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-103">Default value: **`"$default"`**.</span></span>'
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-104">{DataTransformer} [dataTransformer] O transformador de dados que será usado para codificar e decodificar as mensagens enviadas e recebidas, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="572ab-104">{DataTransformer} [dataTransformer] The data transformer that will be used to encode and decode the sent and received messages respectively.</span></span> <span data-ttu-id="572ab-105">Se não for fornecido, em seguida, usaremos o DefaultDataTransformer.</span><span class="sxs-lookup"><span data-stu-id="572ab-105">If not provided then we will use the DefaultDataTransformer.</span></span> <span data-ttu-id="572ab-106">O transformador padrão deve lidar com a maioria dos casos.</span><span class="sxs-lookup"><span data-stu-id="572ab-106">The default transformer should handle majority of the cases.</span></span> <span data-ttu-id="572ab-107">Essa opção deve ser usado apenas para cenários especializados.</span><span class="sxs-lookup"><span data-stu-id="572ab-107">This option needs to be used only for specialized scenarios.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.fastScanInterval'
+    name: fastScanInterval
+    fullName: fastScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="572ab-108">{number} [fastScanInterval] Há duas vezes do intervalo de possíveis entre as verificações para partições disponíveis, rápidas e lentas.</span><span class="sxs-lookup"><span data-stu-id="572ab-108">{number} [fastScanInterval] There are two possible interval times between scans for available partitions, fast and slow.</span></span> <span data-ttu-id="572ab-109">O intervalo rápido (curto) \*\* `in seconds` \*\* é usada após uma verificação no qual concessão roubo tiver ocorrido, para promover o rebalanceamento mais rápido.</span><span class="sxs-lookup"><span data-stu-id="572ab-109">The fast (short) interval **`in seconds`** is used after a scan in which lease stealing has occurred, to promote quicker rebalancing.</span></span>
+      <span data-ttu-id="572ab-110">Padrão: \*\* `3` segundos\*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-110">Default: **`3` seconds**.</span></span>
+    optional: true
+    syntax:
+      content: 'fastScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.initialOffset'
+    name: initialOffset
+    fullName: initialOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-111">InitialOffset {EventPosition} isso só é usado quando o destinatário está sendo criado pela primeira vez e não há nenhum dado de ponto de verificação no blob.</span><span class="sxs-lookup"><span data-stu-id="572ab-111">{EventPosition} initialOffset This is only used when then receiver is being created for the very first time and there is no checkpoint data in the blob.</span></span> <span data-ttu-id="572ab-112">Para esta opção para ser eficaz Certifique-se de fornecer um novo nome de host que não foi usado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="572ab-112">For this option to be effective please make sure to provide a new hostName that was not used previously.</span></span>'
+    optional: true
+    syntax:
+      content: 'initialOffset?: EventPosition'
+      return:
+        type:
+          - EventPosition
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-113">{number} [leaseDuration] Duração de uma concessão \*\* `in seconds` \*\* antes de expirar, a menos que renovado.</span><span class="sxs-lookup"><span data-stu-id="572ab-113">{number} [leaseDuration] Duration of a lease **`in seconds`** before it expires unless renewed.</span></span> <span data-ttu-id="572ab-114">Padrão: \*\* `30` segundos**, o valor mínimo: \*\* `15` segundos**, o valor máximo: \*\* `60` segundos\*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-114">Default: **`30` seconds**, Min Value: **`15` seconds**, Max value: **`60` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.leaseRenewInterval'
+    name: leaseRenewInterval
+    fullName: leaseRenewInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="572ab-115">{number} [leaseRenewInterval] O intervalo de suspensão \*\* `in seconds` \*\* entre as varreduras.</span><span class="sxs-lookup"><span data-stu-id="572ab-115">{number} [leaseRenewInterval] The sleep interval **`in seconds`** between scans.</span></span>
+      <span data-ttu-id="572ab-116">Padrão: \*\* `10` segundos\*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-116">Default: **`10` seconds**.</span></span>
+
+      <span data-ttu-id="572ab-117">Permite que uma implementação de Gerenciador de concessão especificar a PartitionManager a frequência com que ele deve verificar as concessões e renová-los.</span><span class="sxs-lookup"><span data-stu-id="572ab-117">Allows a lease manager implementation to specify to PartitionManager how often it should scan leases and renew them.</span></span> <span data-ttu-id="572ab-118">Para redistribuir as concessões de forma oportuna depois que um host parar de funcionar, é recomendável um intervalo relativamente curto, como dez segundos.</span><span class="sxs-lookup"><span data-stu-id="572ab-118">In order to redistribute leases in a timely fashion after a host ceases operating, we recommend a relatively short interval, such as ten seconds.</span></span> <span data-ttu-id="572ab-119">Obviamente, ele deve ser menos da metade a duração de concessão, para impedir a expiração acidental.</span><span class="sxs-lookup"><span data-stu-id="572ab-119">Obviously it should be less than half of the lease length, to prevent accidental expiration.</span></span>
+    optional: true
+    syntax:
+      content: 'leaseRenewInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.onEphError'
+    name: onEphError
+    fullName: onEphError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="572ab-120">{OnEphError} [onEphError] Manipulador de erro que pode ser fornecido para receber a notificação para erros gerais.</span><span class="sxs-lookup"><span data-stu-id="572ab-120">{OnEphError} [onEphError] Error handler that can be provided to receive notifcation for general errors.</span></span>
+
+      <span data-ttu-id="572ab-121">Erros que ocorrem durante o processamento de eventos de uma determinada partição do hub de eventos são entregues para o `onError` manipulador fornecido no `start()` método.</span><span class="sxs-lookup"><span data-stu-id="572ab-121">Errors which occur while processing events from a particular EventHub partition are delivered to the `onError` handler provided in the `start()` method.</span></span> <span data-ttu-id="572ab-122">Esse manipulador é chamado em ocasiões quando ocorre um erro ao gerenciar concessões para partições ou partições.</span><span class="sxs-lookup"><span data-stu-id="572ab-122">This handler is called on occasions when an error occurs while managing partitions or leases for the partitions.</span></span>
+    optional: true
+    syntax:
+      content: 'onEphError?: OnEphError'
+      return:
+        type:
+          - '@azure/event-processor-host.OnEphError'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.slowScanInterval'
+    name: slowScanInterval
+    fullName: slowScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-123">{number} [slowScanInterval] O intervalo (longo) lento \*\* `in seconds` \*\* é usada após uma verificação no qual concessão roubo não tivesse ocorrido, para reduzir a verificação desnecessária quando o sistema está em estado estável.</span><span class="sxs-lookup"><span data-stu-id="572ab-123">{number} [slowScanInterval] The slow (long) interval **`in seconds`** is used after a scan in which lease stealing did not occur, to reduce unnecessary scanning when the system is in steady state.</span></span> <span data-ttu-id="572ab-124">Padrão: \*\* `5` segundos\*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-124">Default: **`5` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'slowScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.startupScanDelay'
+    name: startupScanDelay
+    fullName: startupScanDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-125">{number} [startupScanDelay] O tempo de atraso \*\* `in seconds` \*\* entre a primeira verificação de partições disponíveis e o segundo.</span><span class="sxs-lookup"><span data-stu-id="572ab-125">{number} [startupScanDelay] The delay time **`in seconds`** between the first scan for available partitions and the second.</span></span> <span data-ttu-id="572ab-126">Isso faz parte de uma otimização de inicialização que permite que os hosts individuais se tornarão visíveis para outros hosts e, assim, obter uma contagem mais precisa do número de hosts no sistema, antes de tentar estimar quantas partições, eles devem possuir.</span><span class="sxs-lookup"><span data-stu-id="572ab-126">This is part of a startup optimization which allows individual hosts to become visible to other hosts, and thereby get a more accurate count of the number of hosts in the system, before they try to estimate how many partitions they should own.</span></span> <span data-ttu-id="572ab-127">Padrão: \*\* `30` segundos\*\*.</span><span class="sxs-lookup"><span data-stu-id="572ab-127">Default: **`30` seconds**.</span></span>'
+    optional: true
+    syntax:
+      content: 'startupScanDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.storageBlobPrefix'
+    name: storageBlobPrefix
+    fullName: storageBlobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-128">{string} [storageBlobPrefix] Prefixo usado ao nomear blobs no contêiner de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="572ab-128">{string} [storageBlobPrefix] Prefix used when naming blobs within the storage container.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageBlobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="572ab-129">{string} [userAgent] O agente do usuário que deve ser acrescentado ao usuário criado na cadeia de caracteres de agente.</span><span class="sxs-lookup"><span data-stu-id="572ab-129">{string} [userAgent] The user agent that needs to be appended to the built in user agent string.</span></span>'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.OnEphError'
+    name: OnEphError
+    spec.typeScript:
+      - name: OnEphError
+        fullName: OnEphError
+        uid: '@azure/event-processor-host.OnEphError'

@@ -1,0 +1,175 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServiceTypeDescription
+    name: StatefulServiceTypeDescription
+    fullName: StatefulServiceTypeDescription
+    children:
+      - azure-servicefabric.StatefulServiceTypeDescription.extensions
+      - azure-servicefabric.StatefulServiceTypeDescription.hasPersistedState
+      - azure-servicefabric.StatefulServiceTypeDescription.isStateful
+      - azure-servicefabric.StatefulServiceTypeDescription.kind
+      - azure-servicefabric.StatefulServiceTypeDescription.loadMetrics
+      - azure-servicefabric.StatefulServiceTypeDescription.placementConstraints
+      - azure-servicefabric.StatefulServiceTypeDescription.servicePlacementPolicies
+      - azure-servicefabric.StatefulServiceTypeDescription.serviceTypeName
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="957c3-101">Descreve um tipo de serviço com monitoração de estado definido no manifesto do serviço de um tipo de aplicativo provisionado.</span><span class="sxs-lookup"><span data-stu-id="957c3-101">Describes a stateful service type defined in the service manifest of a provisioned application type.</span></span>
+    extends:
+      name: azure-servicefabric.ServiceTypeDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.extensions
+    name: extensions
+    fullName: extensions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-102">Lista de extensões de tipo de serviço.</span><span class="sxs-lookup"><span data-stu-id="957c3-102">List of service type extensions.</span></span>
+    optional: true
+    syntax:
+      content: 'extensions?: ServiceTypeExtensionDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceTypeExtensionDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.hasPersistedState
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="957c3-103">Um sinalizador que indica se este é um serviço persistente que armazena estados no disco local.</span><span class="sxs-lookup"><span data-stu-id="957c3-103">A flag indicating whether this is a persistent service which stores states on the local disk.</span></span>
+      <span data-ttu-id="957c3-104">Se for, em seguida, o valor dessa propriedade é true, se não for falsa.</span><span class="sxs-lookup"><span data-stu-id="957c3-104">If it is then the value of this property is true, if not it is false.</span></span>
+    optional: true
+    syntax:
+      content: 'hasPersistedState?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.isStateful
+    name: isStateful
+    fullName: isStateful
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="957c3-105">Indica se o tipo de serviço é um tipo de serviço com monitoração de estado ou de um tipo de serviço sem monitoração de estado.</span><span class="sxs-lookup"><span data-stu-id="957c3-105">Indicates whether the service type is a stateful service type or a stateless service type.</span></span>
+      <span data-ttu-id="957c3-106">Essa propriedade é true se o tipo de serviço é um tipo de serviço com estado, false caso contrário.</span><span class="sxs-lookup"><span data-stu-id="957c3-106">This property is true if the service type is a stateful service type, false otherwise.</span></span>
+    optional: true
+    syntax:
+      content: 'isStateful?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-107">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="957c3-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.loadMetrics
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-108">As métricas de carga do serviço é fornecida como uma matriz de objetos ServiceLoadMetricDescription.</span><span class="sxs-lookup"><span data-stu-id="957c3-108">The service load metrics is given as an array of ServiceLoadMetricDescription objects.</span></span>
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-109">A restrição de posicionamento a ser usada ao instanciar esse serviço em um cluster do Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="957c3-109">The placement constraint to be used when instantiating this service in a Service Fabric cluster.</span></span>
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-110">Lista de descrições de política de posicionamento do serviço.</span><span class="sxs-lookup"><span data-stu-id="957c3-110">List of service placement policy descriptions.</span></span>
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceTypeDescription.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="957c3-111">Nome do tipo de serviço conforme especificado no manifesto do serviço.</span><span class="sxs-lookup"><span data-stu-id="957c3-111">Name of the service type as specified in the service manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceTypeDescription
+    name: ServiceTypeDescription
+    spec.typeScript:
+      - name: ServiceTypeDescription
+        fullName: ServiceTypeDescription
+        uid: azure-servicefabric.ServiceTypeDescription
+  - uid: 'azure-servicefabric.ServiceTypeExtensionDescription[]'
+    name: 'ServiceTypeExtensionDescription[]'
+    spec.typeScript:
+      - name: ServiceTypeExtensionDescription
+        fullName: ServiceTypeExtensionDescription
+        uid: azure-servicefabric.ServiceTypeExtensionDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'
