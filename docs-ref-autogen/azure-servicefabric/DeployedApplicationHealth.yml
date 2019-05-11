@@ -1,0 +1,165 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedApplicationHealth
+    name: DeployedApplicationHealth
+    fullName: DeployedApplicationHealth
+    children:
+      - azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+      - azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+      - azure-servicefabric.DeployedApplicationHealth.healthEvents
+      - azure-servicefabric.DeployedApplicationHealth.healthStatistics
+      - azure-servicefabric.DeployedApplicationHealth.name
+      - azure-servicefabric.DeployedApplicationHealth.nodeName
+      - azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="05b52-101">Informações sobre a integridade de um aplicativo implantado em um nó do Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="05b52-101">Information about the health of an application deployed on a Service Fabric node.</span></span>
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="05b52-102">O que representa o estado de integridade agregada da entidade computado pelo Gerenciador de integridade de HealthState.</span><span class="sxs-lookup"><span data-stu-id="05b52-102">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="05b52-103">A avaliação de integridade da entidade reflete todos os eventos relatados na entidade e seus filhos (se houver).</span><span class="sxs-lookup"><span data-stu-id="05b52-103">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="05b52-104">A agregação é feita ao aplicar a política de integridade desejadas.</span><span class="sxs-lookup"><span data-stu-id="05b52-104">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="05b52-105">Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'</span><span class="sxs-lookup"><span data-stu-id="05b52-105">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+    name: deployedServicePackageHealthStates
+    fullName: deployedServicePackageHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-106">Implantado estados de integridade do pacote de serviço para o aplicativo atual implantado como encontrado no repositório de integridade.</span><span class="sxs-lookup"><span data-stu-id="05b52-106">Deployed service package health states for the current deployed application as found in the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStates?: DeployedServicePackageHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-107">A lista de eventos de integridade relatados na entidade.</span><span class="sxs-lookup"><span data-stu-id="05b52-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-108">Mostra as estatísticas de integridade para todos os tipos de filhos da entidade consultada.</span><span class="sxs-lookup"><span data-stu-id="05b52-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-109">Nome do aplicativo implantado no nó cujas informações de integridade são descritas por este objeto.</span><span class="sxs-lookup"><span data-stu-id="05b52-109">Name of the application deployed on the node whose health information is described by this object.</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-110">Nome do nó em que esse aplicativo é implantado.</span><span class="sxs-lookup"><span data-stu-id="05b52-110">Name of the node where this application is deployed.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="05b52-111">As avaliações não íntegras que mostram por que o estado de integridade agregada atual foi retornado pelo Gerenciador de integridade.</span><span class="sxs-lookup"><span data-stu-id="05b52-111">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    name: 'DeployedServicePackageHealthState[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthState
+        fullName: DeployedServicePackageHealthState
+        uid: azure-servicefabric.DeployedServicePackageHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

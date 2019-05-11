@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth
+    name: StatefulServiceReplicaHealth
+    fullName: StatefulServiceReplicaHealth
+    children:
+      - azure-servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState
+      - azure-servicefabric.StatefulServiceReplicaHealth.healthEvents
+      - azure-servicefabric.StatefulServiceReplicaHealth.healthStatistics
+      - azure-servicefabric.StatefulServiceReplicaHealth.partitionId
+      - azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+      - azure-servicefabric.StatefulServiceReplicaHealth.serviceKind
+      - azure-servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="2200a-101">Representa a integridade da réplica de serviço com estado.</span><span class="sxs-lookup"><span data-stu-id="2200a-101">Represents the health of the stateful service replica.</span></span>
+      <span data-ttu-id="2200a-102">Contém o estado de integridade da réplica agregado, os eventos de integridade e as avaliações não íntegras.</span><span class="sxs-lookup"><span data-stu-id="2200a-102">Contains the replica aggregated health state, the health events and the unhealthy evaluations.</span></span>
+    extends:
+      name: azure-servicefabric.ReplicaHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="2200a-103">O que representa o estado de integridade agregada da entidade computado pelo Gerenciador de integridade de HealthState.</span><span class="sxs-lookup"><span data-stu-id="2200a-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="2200a-104">A avaliação de integridade da entidade reflete todos os eventos relatados na entidade e seus filhos (se houver).</span><span class="sxs-lookup"><span data-stu-id="2200a-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="2200a-105">A agregação é feita ao aplicar a política de integridade desejadas.</span><span class="sxs-lookup"><span data-stu-id="2200a-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="2200a-106">Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'</span><span class="sxs-lookup"><span data-stu-id="2200a-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2200a-107">A lista de eventos de integridade relatados na entidade.</span><span class="sxs-lookup"><span data-stu-id="2200a-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2200a-108">Mostra as estatísticas de integridade para todos os tipos de filhos da entidade consultada.</span><span class="sxs-lookup"><span data-stu-id="2200a-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2200a-109">ID da partição à qual pertence esta réplica.</span><span class="sxs-lookup"><span data-stu-id="2200a-109">Id of the partition to which this replica belongs.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2200a-110">ID de uma réplica de serviço com estado.</span><span class="sxs-lookup"><span data-stu-id="2200a-110">Id of a stateful service replica.</span></span> <span data-ttu-id="2200a-111">ReplicaId é usada pelo Service Fabric para identificar exclusivamente uma réplica de uma partição.</span><span class="sxs-lookup"><span data-stu-id="2200a-111">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="2200a-112">Ele é exclusivo dentro de uma partição e não altera o tempo de vida da réplica.</span><span class="sxs-lookup"><span data-stu-id="2200a-112">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="2200a-113">Se uma réplica é removida e outra réplica é criada no mesmo nó para a mesma partição, ele receberá um valor diferente para a id. Às vezes, a id de uma instância de serviço sem monitoração de estado também é conhecida como uma id de réplica.</span><span class="sxs-lookup"><span data-stu-id="2200a-113">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2200a-114">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="2200a-114">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceReplicaHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2200a-115">As avaliações não íntegras que mostram por que o estado de integridade agregada atual foi retornado pelo Gerenciador de integridade.</span><span class="sxs-lookup"><span data-stu-id="2200a-115">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ReplicaHealth
+    name: ReplicaHealth
+    spec.typeScript:
+      - name: ReplicaHealth
+        fullName: ReplicaHealth
+        uid: azure-servicefabric.ReplicaHealth
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
