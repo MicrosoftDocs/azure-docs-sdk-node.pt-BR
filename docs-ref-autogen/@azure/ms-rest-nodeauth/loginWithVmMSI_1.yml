@@ -1,0 +1,47 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI_1'
+    name: loginWithVmMSI(MSIVmOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Antes de usar esse método instale a cli az de https://github.com/Azure/azure-cli/releases.
+      Se você tiver uma máquina virtual do Azure provisionada com a cli az e tem o MSI habilitado, você pode, em seguida, usar esse método para obter tokens de autenticação da VM.
+      Para criar uma nova VM, habilitar o MSI, execute este comando: vm az criar -g < nome_do_grupo_de_recursos > - n < vm_name > – assign-identity - imagem < os_image_name > Observação: o comando acima permite que um ponto de extremidade de serviço no host, com uma porta padrão 50342
+
+      Para habilitar a MSI em uma VM já provisionada, execute o seguinte comando: az vm – assign-identity - g < nome_do_grupo_de_recursos > -n < vm_name > – porta < custom_port_number >
+
+      Para saber mais sobre esse comando, execute: az vm – assign-identity - h
+
+      Autentica usando o serviço de identidade em execução em uma máquina virtual do Azure.
+      Esse método faz uma solicitação para o serviço de autenticação hospedado na VM e recebe de volta um token de acesso.
+    syntax:
+      content: 'function loginWithVmMSI(options: MSIVmOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.MSIVmOptions'
+          description: ''
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+    name: MSIVmOptions
+    spec.typeScript:
+      - name: MSIVmOptions
+        fullName: MSIVmOptions
+        uid: '@azure/ms-rest-nodeauth.MSIVmOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
