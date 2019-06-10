@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFileWithAuthResponse'
+    name: withAuthFileWithAuthResponse(LoginWithAuthFileOptions)
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Antes de usar esse método instale a cli az de https://github.com/Azure/azure-cli/releases. Em seguida, execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+      Se você quiser criar sp para um nuvem/ambiente diferente, em seguida, execute:
+      1. lista de nuvem do AZ
+      2. nuvem de AZ definido – n <name of the environment>
+      3. AZ ad sp create-for-rbac - sdk-auth > auth.json / / criar sp com segredo **ou**
+      3. os ad AZ sp create-for-rbac – criar-cert - sdk-auth > auth.json / / criar sp com certificado, se a entidade de serviço já foi criada, em seguida, logon com as informações de entidade de serviço:
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. conta AZ Mostrar - sdk-auth > auth.json autentica usando as informações de entidade de serviço fornecidas no arquivo de autenticação. Esse método será definida a subscriptionId no arquivo de autenticação para o usuário fornecido a variável de ambiente no parâmetro de opções ou o padrão "AZURE_SUBSCRIPTION_ID".
+    syntax:
+      content: 'function withAuthFileWithAuthResponse(options?: LoginWithAuthFileOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+    name: LoginWithAuthFileOptions
+    spec.typeScript:
+      - name: LoginWithAuthFileOptions
+        fullName: LoginWithAuthFileOptions
+        uid: '@azure/ms-rest-nodeauth.LoginWithAuthFileOptions'
+  - uid: Promise<@azure/ms-rest-nodeauth.AuthResponse>
+    name: AuthResponse>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: AuthResponse
+        fullName: AuthResponse
+        uid: '@azure/ms-rest-nodeauth.AuthResponse'
+      - name: '>'
+        fullName: '>'
