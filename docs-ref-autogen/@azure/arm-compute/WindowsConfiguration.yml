@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    fullName: WindowsConfiguration
+    children:
+      - '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+      - '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+      - '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.WindowsConfiguration.timeZone'
+      - '@azure/arm-compute.WindowsConfiguration.winRM'
+    langs:
+      - typeScript
+    type: interface
+    summary: Especifica as configurações de sistema operacional do Windows na máquina virtual.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.additionalUnattendContent'
+    name: additionalUnattendContent
+    fullName: additionalUnattendContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica a base 64 codificados XML formatado informações adicionais que podem ser incluídas no arquivo Unattend. XML, que é usado pela instalação do Windows.'
+    optional: true
+    syntax:
+      content: 'additionalUnattendContent?: AdditionalUnattendContent[]'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalUnattendContent[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.enableAutomaticUpdates'
+    name: enableAutomaticUpdates
+    fullName: enableAutomaticUpdates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se a máquina virtual está habilitada para atualizações automáticas.
+    optional: true
+    syntax:
+      content: 'enableAutomaticUpdates?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se o agente de máquina virtual deve ser provisionado na máquina virtual. <br><br>
+      Quando essa propriedade não for especificada no corpo da solicitação, o comportamento padrão é defini-lo como true.  Isso garantirá que o agente de VM está instalado na VM para que as extensões podem ser adicionadas à VM mais tarde.
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.timeZone'
+    name: timeZone
+    fullName: timeZone
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o fuso horário da máquina virtual. Por exemplo "Hora padrão do Pacífico"
+    optional: true
+    syntax:
+      content: 'timeZone?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.WindowsConfiguration.winRM'
+    name: winRM
+    fullName: winRM
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica os ouvintes de gerenciamento remoto do Windows. Isso permite que o PowerShell remoto do Windows.
+    optional: true
+    syntax:
+      content: 'winRM?: WinRMConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WinRMConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.AdditionalUnattendContent[]'
+    name: 'AdditionalUnattendContent[]'
+    spec.typeScript:
+      - name: AdditionalUnattendContent
+        fullName: AdditionalUnattendContent
+        uid: '@azure/arm-compute.AdditionalUnattendContent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WinRMConfiguration'
+    name: WinRMConfiguration
+    spec.typeScript:
+      - name: WinRMConfiguration
+        fullName: WinRMConfiguration
+        uid: '@azure/arm-compute.WinRMConfiguration'

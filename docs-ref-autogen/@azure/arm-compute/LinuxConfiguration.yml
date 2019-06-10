@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    fullName: LinuxConfiguration
+    children:
+      - '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+      - '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+      - '@azure/arm-compute.LinuxConfiguration.ssh'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Especifica as configurações do sistema operacional Linux na máquina virtual. <br><br>Para obter uma lista de distribuições Linux com suporte, consulte [Linux em distribuições endossadas pelo Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> Para executar as distribuições não endossadas, confira [informações para distribuições não endossadas](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.disablePasswordAuthentication'
+    name: disablePasswordAuthentication
+    fullName: disablePasswordAuthentication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica se a autenticação de senha deve ser desabilitada.
+    optional: true
+    syntax:
+      content: 'disablePasswordAuthentication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.provisionVMAgent'
+    name: provisionVMAgent
+    fullName: provisionVMAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se o agente de máquina virtual deve ser provisionado na máquina virtual. <br><br>
+      Quando essa propriedade não for especificada no corpo da solicitação, o comportamento padrão é defini-lo como true.  Isso garantirá que o agente de VM está instalado na VM para que as extensões podem ser adicionadas à VM mais tarde.
+    optional: true
+    syntax:
+      content: 'provisionVMAgent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.LinuxConfiguration.ssh'
+    name: ssh
+    fullName: ssh
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica a configuração de chave ssh para um sistema operacional Linux.
+    optional: true
+    syntax:
+      content: 'ssh?: SshConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.SshConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.SshConfiguration'
+    name: SshConfiguration
+    spec.typeScript:
+      - name: SshConfiguration
+        fullName: SshConfiguration
+        uid: '@azure/arm-compute.SshConfiguration'
