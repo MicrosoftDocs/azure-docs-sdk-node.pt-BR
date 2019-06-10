@@ -1,0 +1,278 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    fullName: Receiver
+    children:
+      - '@azure/service-bus.Receiver.close'
+      - '@azure/service-bus.Receiver.getMessageIterator'
+      - '@azure/service-bus.Receiver.isClosed'
+      - '@azure/service-bus.Receiver.isReceivingMessages'
+      - '@azure/service-bus.Receiver.receiveDeferredMessage'
+      - '@azure/service-bus.Receiver.receiveDeferredMessages'
+      - '@azure/service-bus.Receiver.receiveMessages'
+      - '@azure/service-bus.Receiver.receiveMode'
+      - '@azure/service-bus.Receiver.registerMessageHandler'
+      - '@azure/service-bus.Receiver.renewMessageLock'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      A classe do receptor pode ser usada para receber mensagens em um lote ou Registrando manipuladores.
+      Use o `createReceiver` função no QueueClient ou SubscriptionClient para instanciar um receptor.
+      A classe do receptor é uma abstração de link receptor AMQP subjacente.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Fecha o link de receptor AMQP subjacente.
+      Depois de fechada, o receptor não pode ser usado para nenhuma outra operação.
+      Use o `createReceiver` função no QueueClient ou SubscriptionClient para instanciar um novo receptor
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Obtém um iterador assíncrono sobre mensagens do receptor.
+      Gera um erro se não houver outra operação de recebimento em andamento no destinatário do mesmo. Se você não tiver certeza se há outra execução da operação de recebimento, verifique o `isReceivingMessages` propriedade no receptor.
+
+      Se o iterador não é capaz de buscar uma nova mensagem em mais de um minuto, `undefined` será retornado.
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Retorna `true` se o receptor for fechado. Isso pode acontecer uma porque o receptor em si foi fechado ou o cliente que o criou foi fechado.
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Indica se o destinatário está recebendo mensagens no momento ou não.
+      Quando isso retorna true, novos `registerMessageHandler()` ou `receiveMessages()` chamadas não podem ser feitas.
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retorna uma promessa que resolve para uma mensagem adiada identificada pelo determinado `sequenceNumber`.
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: O número de sequência da mensagem de que precisa para ser recebida.
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retorna uma promessa que resolve para uma matriz das mensagens adiadas identificado por fornecida `sequenceNumbers`.
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: Uma matriz de números de sequência para as mensagens que precisam para ser recebida.
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Retorna uma promessa que resolve para uma matriz de mensagens com base em determinadas contagem e o tempo limite ao longo de um receptor de AMQP vincular-se de uma fila/assinatura.
+      Gera um erro se não houver outra operação de recebimento em andamento no destinatário do mesmo. Se você não tiver certeza se há outra execução da operação de recebimento, verifique o `isReceivingMessages` propriedade no receptor.
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, idleTimeoutInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: O número máximo de mensagens para receber da fila/assinatura.
+        - id: idleTimeoutInSeconds
+          type:
+            - undefined | number
+          description: |-
+            O máximo tempo de espera em segundos para o qual o receptor deve esperar para receber a primeira mensagem. Se nenhuma mensagem for recebida por esse tempo, promise retornado é resolvido para uma matriz vazia.
+            - **Padrão**: `60` segundos.
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Denota receiveMode desse receptor.
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, MessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Registra manipuladores para lidar com o fluxo de mensagens de entrada em um link de receptor AMQP de uma fila/assinatura.
+      Para interromper o recebimento de mensagens, chame `close()` no receptor.
+      Gera um erro se não houver outra operação de recebimento em andamento no destinatário do mesmo. Se você não tiver certeza se há outra execução da operação de recebimento, verifique o `isReceivingMessages` propriedade no receptor.
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: MessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: Manipulador para processar cada mensagem de entrada.
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: Manipulador para qualquer erro que ocorre ao receber ou processar mensagens.
+        - id: options
+          type:
+            - '@azure/service-bus.MessageHandlerOptions'
+          description: |
+            Opções para controlar se as mensagens devem ser concluídas automaticamente, e/ou tem seus bloqueios automaticamente renovado. Você pode controlar o número máximo de mensagens que devem ser processadas simultaneamente. Você também pode fornecer um tempo limite em segundos para indicar a quantidade de tempo de espera por uma nova mensagem antes de fechar o receptor.
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.renewMessageLock'
+    name: renewMessageLock(string | ServiceBusMessage)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Renova o bloqueio na mensagem para a duração conforme especificado durante a criação da fila/assinatura.
+      - Verifique o `lockedUntilUtc` propriedade na mensagem para a hora quando o bloqueio expira.
+      - Se uma mensagem não for liquidada (usando um `complete()`, `defer()` ou `deadletter()`, antes do bloqueio expirar, os territórios de mensagem novamente na fila/assinatura para a próxima operação de recebimento.
+    syntax:
+      content: 'function renewMessageLock(lockTokenOrMessage: string | ServiceBusMessage)'
+      parameters:
+        - id: lockTokenOrMessage
+          type:
+            - string | @azure/service-bus.ServiceBusMessage
+          description: O `lockToken` propriedade de mensagem ou a mensagem em si.
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    spec.typeScript:
+      - name: MessageHandlerOptions
+        fullName: MessageHandlerOptions
+        uid: '@azure/service-bus.MessageHandlerOptions'
+  - uid: string | @azure/service-bus.ServiceBusMessage
+    name: ServiceBusMessage
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'

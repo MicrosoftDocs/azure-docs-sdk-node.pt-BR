@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.RouteProperties'
+    name: RouteProperties
+    fullName: RouteProperties
+    children:
+      - '@azure/arm-iothub.RouteProperties.condition'
+      - '@azure/arm-iothub.RouteProperties.endpointNames'
+      - '@azure/arm-iothub.RouteProperties.isEnabled'
+      - '@azure/arm-iothub.RouteProperties.name'
+      - '@azure/arm-iothub.RouteProperties.source'
+    langs:
+      - typeScript
+    type: interface
+    summary: As propriedades de uma regra de roteamento que usa o hub IoT para rotear mensagens para pontos de extremidade.
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.condition'
+    name: condition
+    fullName: condition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A condição é avaliada para aplicar a regra de roteamento. Se nenhuma condição for fornecida, ele será avaliado como true por padrão. Para a gramática, consulte: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language'
+    optional: true
+    syntax:
+      content: 'condition?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.endpointNames'
+    name: endpointNames
+    fullName: endpointNames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A lista de pontos de extremidade ao qual as mensagens que atendem à condição são roteadas. Atualmente, apenas um ponto de extremidade é permitido.'
+    syntax:
+      content: 'endpointNames: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.isEnabled'
+    name: isEnabled
+    fullName: isEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Usado para especificar se uma rota está habilitada.
+    syntax:
+      content: 'isEnabled: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome da rota. O nome pode incluir somente caracteres alfanuméricos, pontos, sublinhados, hifens, tem um comprimento máximo de 64 caracteres e deve ser exclusivo.'
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.RouteProperties.source'
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O código-fonte que a regra de roteamento deve ser aplicado, como DeviceMessages. Os valores possíveis incluem: ''Invalid'', ''DeviceMessages'', ''TwinChangeEvents'', ''DeviceLifecycleEvents'', ''DeviceJobLifecycleEvents'''
+    syntax:
+      content: 'source: RoutingSource'
+      return:
+        type:
+          - '@azure/arm-iothub.RoutingSource'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.RoutingSource'
+    name: RoutingSource
+    spec.typeScript:
+      - name: RoutingSource
+        fullName: RoutingSource
+        uid: '@azure/arm-iothub.RoutingSource'
