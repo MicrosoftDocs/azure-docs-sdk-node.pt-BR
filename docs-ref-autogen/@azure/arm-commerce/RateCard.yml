@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-commerce.RateCard'
+    name: RateCard
+    fullName: RateCard
+    children:
+      - '@azure/arm-commerce.RateCard.get'
+      - '@azure/arm-commerce.RateCard.get_2'
+      - '@azure/arm-commerce.RateCard.get_1'
+      - '@azure/arm-commerce.RateCard.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um RateCard.
+    package: '@azure/arm-commerce'
+  - uid: '@azure/arm-commerce.RateCard.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Permite que você para consultar os metadados de recurso/medidor e os preços relacionados usados em uma determinada assinatura por ID da oferta, moeda, localidade e região. Os metadados associados com os medidores de cobrança, incluindo, mas não limitado para nomes de serviço, tipos, recursos, unidades de medida e regiões, estão sujeitas a alterações a qualquer momento e sem aviso prévio. Se você pretende usar esses dados de cobrança de forma automática, use o GUID do medidor de faturamento para identificar exclusivamente cada item faturável. Se o GUID do medidor de faturamento é agendado para alterar devido a um novo modelo de cobrança, você será notificado com antecedência sobre a alteração.'
+    syntax:
+      content: 'function get(filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: filter
+          type:
+            - string
+          description: 'O filtro para aplicar a operação. Ele dá suporte apenas a ''eq'' e ''e'' operadores lógicos neste momento. Todos os 4 parâmetros de consulta ''OfferDurableId'', ''Currency'', ''Local'', ''Region'' deve ser uma parte do $filter.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RateCardGetResponse>
+    package: '@azure/arm-commerce'
+  - uid: '@azure/arm-commerce.RateCard.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<ResourceRateCardInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(filter: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceRateCardInfo>)'
+      parameters:
+        - id: filter
+          type:
+            - string
+          description: 'O filtro para aplicar a operação. Ele dá suporte apenas a ''eq'' e ''e'' operadores lógicos neste momento. Todos os 4 parâmetros de consulta ''OfferDurableId'', ''Currency'', ''Local'', ''Region'' deve ser uma parte do $filter.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-commerce.ResourceRateCardInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.RateCardGetResponse>
+    package: '@azure/arm-commerce'
+  - uid: '@azure/arm-commerce.RateCard.get_1'
+    name: 'get(string, ServiceCallback<ResourceRateCardInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(filter: string, callback: ServiceCallback<ResourceRateCardInfo>)'
+      parameters:
+        - id: filter
+          type:
+            - string
+          description: 'O filtro para aplicar a operação. Ele dá suporte apenas a ''eq'' e ''e'' operadores lógicos neste momento. Todos os 4 parâmetros de consulta ''OfferDurableId'', ''Currency'', ''Local'', ''Region'' deve ser uma parte do $filter.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-commerce.ResourceRateCardInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.RateCardGetResponse>
+    package: '@azure/arm-commerce'
+  - uid: '@azure/arm-commerce.RateCard.constructor'
+    name: RateCard(UsageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um RateCard.
+    syntax:
+      content: 'new RateCard(client: UsageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-commerce.UsageManagementClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-commerce'
+references:
+  - uid: '@azure/arm-commerce.UsageManagementClientContext'
+    name: UsageManagementClientContext
+    spec.typeScript:
+      - name: UsageManagementClientContext
+        fullName: UsageManagementClientContext
+        uid: '@azure/arm-commerce.UsageManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-commerce.ResourceRateCardInfo>
+    name: ResourceRateCardInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceRateCardInfo
+        fullName: ResourceRateCardInfo
+        uid: '@azure/arm-commerce.ResourceRateCardInfo'
+      - name: '>'
+        fullName: '>'

@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.GalleryDataDiskImage'
+    name: GalleryDataDiskImage
+    fullName: GalleryDataDiskImage
+    children:
+      - '@azure/arm-compute.GalleryDataDiskImage.hostCaching'
+      - '@azure/arm-compute.GalleryDataDiskImage.lun'
+      - '@azure/arm-compute.GalleryDataDiskImage.sizeInGB'
+    langs:
+      - typeScript
+    type: interface
+    summary: Esta é a imagem de disco de dados.
+    extends:
+      name: '@azure/arm-compute.GalleryDiskImage'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryDataDiskImage.hostCaching'
+    name: hostCaching
+    fullName: hostCaching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O host de cache do disco. Os valores válidos são ''None'', ''ReadOnly'' e ''ReadWrite''. Os valores possíveis incluem: ''None'', ''ReadOnly'', ''ReadWrite'' **NOTE: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**'
+    optional: true
+    syntax:
+      content: 'hostCaching?: HostCaching'
+      return:
+        type:
+          - '@azure/arm-compute.HostCaching'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryDataDiskImage.lun'
+    name: lun
+    fullName: lun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Essa propriedade especifica o número de unidade lógica do disco de dados. Esse valor é usado para identificar os discos de dados dentro da máquina Virtual e, portanto, deve ser exclusivo para cada disco de dados anexado à máquina Virtual.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'lun?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.GalleryDataDiskImage.sizeInGB'
+    name: sizeInGB
+    fullName: sizeInGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Essa propriedade indica o tamanho do VHD a ser criado.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'sizeInGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.GalleryDiskImage'
+    name: GalleryDiskImage
+    spec.typeScript:
+      - name: GalleryDiskImage
+        fullName: GalleryDiskImage
+        uid: '@azure/arm-compute.GalleryDiskImage'
+  - uid: '@azure/arm-compute.HostCaching'
+    name: HostCaching
+    spec.typeScript:
+      - name: HostCaching
+        fullName: HostCaching
+        uid: '@azure/arm-compute.HostCaching'
