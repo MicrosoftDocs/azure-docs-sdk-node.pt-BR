@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile'
+    name: ContainerServiceNetworkProfile
+    fullName: ContainerServiceNetworkProfile
+    children:
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+      - '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    langs:
+      - typeScript
+    type: interface
+    summary: Perfil de configuração de rede.
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dnsServiceIP'
+    name: dnsServiceIP
+    fullName: dnsServiceIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um endereço IP designado ao serviço DNS de Kubernetes. Ele deve estar dentro do intervalo de endereço do serviço de Kubernetes especificado no serviceCidr. Valor padrão: ''10.0.0.10''.'
+    optional: true
+    syntax:
+      content: 'dnsServiceIP?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.dockerBridgeCidr'
+    name: dockerBridgeCidr
+    fullName: dockerBridgeCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um intervalo IP de notação CIDR atribuído à rede de ponte do Docker. Ele não deve sobrepor quaisquer intervalos de sub-rede IP ou o intervalo de endereços de serviço do Kubernetes. Valor padrão: ''172.17.0.1/16''.'
+    optional: true
+    syntax:
+      content: 'dockerBridgeCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPlugin'
+    name: networkPlugin
+    fullName: networkPlugin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Plug-in rede usado para a criação de rede do Kubernetes. Os valores possíveis incluem: ''azure'', ''kubenet''. Valor padrão: ''kubenet''.'
+    optional: true
+    syntax:
+      content: 'networkPlugin?: NetworkPlugin'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPlugin'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.networkPolicy'
+    name: networkPolicy
+    fullName: networkPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Política de rede usada para a criação de rede do Kubernetes. Os valores possíveis incluem: ''Malhado'', ''azure'''
+    optional: true
+    syntax:
+      content: 'networkPolicy?: NetworkPolicy'
+      return:
+        type:
+          - '@azure/arm-containerservice.NetworkPolicy'
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.podCidr'
+    name: podCidr
+    fullName: podCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um intervalo IP com notação CIDR do qual designar pod IPs quando kubenet for usado. Valor padrão: ''10.244.0.0/16''.'
+    optional: true
+    syntax:
+      content: 'podCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+  - uid: '@azure/arm-containerservice.ContainerServiceNetworkProfile.serviceCidr'
+    name: serviceCidr
+    fullName: serviceCidr
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um intervalo IP com notação CIDR do qual designar serviço cluster IPs. Ele não deve se sobrepor a quaisquer intervalos de IP da sub-rede. Valor padrão: ''10.0.0.0/16''.'
+    optional: true
+    syntax:
+      content: 'serviceCidr?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerservice'
+references:
+  - uid: '@azure/arm-containerservice.NetworkPlugin'
+    name: NetworkPlugin
+    spec.typeScript:
+      - name: NetworkPlugin
+        fullName: NetworkPlugin
+        uid: '@azure/arm-containerservice.NetworkPlugin'
+  - uid: '@azure/arm-containerservice.NetworkPolicy'
+    name: NetworkPolicy
+    spec.typeScript:
+      - name: NetworkPolicy
+        fullName: NetworkPolicy
+        uid: '@azure/arm-containerservice.NetworkPolicy'
