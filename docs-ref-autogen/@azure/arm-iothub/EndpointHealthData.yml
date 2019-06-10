@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-iothub.EndpointHealthData'
+    name: EndpointHealthData
+    fullName: EndpointHealthData
+    children:
+      - '@azure/arm-iothub.EndpointHealthData.endpointId'
+      - '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: Os dados de integridade para um ponto de extremidade
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.endpointId'
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID do ponto de extremidade
+    optional: true
+    syntax:
+      content: 'endpointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-iothub'
+  - uid: '@azure/arm-iothub.EndpointHealthData.healthStatus'
+    name: healthStatus
+    fullName: healthStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Status de integridade têm as seguintes significados. O status "Íntegro" mostra que o ponto de extremidade é aceitar mensagens conforme o esperado. O status ''Íntegro'' mostra que o ponto de extremidade não está aceitando mensagens conforme o esperado e o IoT Hub está tentando novamente para enviar dados para esse ponto de extremidade. O status de um ponto de extremidade não íntegro será ser atualizado para íntegro quando o IoT Hub estabeleceu um estado consistente de integridade. O status de ''Inativo'' mostra que o ponto de extremidade não está aceitando mensagens, depois que o IoT Hub repetida enviando mensagens para o período de retrial. Ver as métricas do IoT Hub para identificar erros e monitorar problemas com pontos de extremidade. O status ''unknown'' mostra que o IoT Hub não estabeleceu uma conexão com o ponto de extremidade. Não há mensagens foram entregues ao ou rejeitadas desse ponto de extremidade. Os valores possíveis incluem: ''unknown'', ''Íntegro'', ''Íntegro'', ''Inativo'''
+    optional: true
+    syntax:
+      content: 'healthStatus?: EndpointHealthStatus'
+      return:
+        type:
+          - '@azure/arm-iothub.EndpointHealthStatus'
+    package: '@azure/arm-iothub'
+references:
+  - uid: '@azure/arm-iothub.EndpointHealthStatus'
+    name: EndpointHealthStatus
+    spec.typeScript:
+      - name: EndpointHealthStatus
+        fullName: EndpointHealthStatus
+        uid: '@azure/arm-iothub.EndpointHealthStatus'

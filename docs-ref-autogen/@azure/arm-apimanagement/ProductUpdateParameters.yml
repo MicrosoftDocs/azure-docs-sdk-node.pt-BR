@@ -1,0 +1,132 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters'
+    name: ProductUpdateParameters
+    fullName: ProductUpdateParameters
+    children:
+      - '@azure/arm-apimanagement.ProductUpdateParameters.approvalRequired'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.description'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.displayName'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.state'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.subscriptionRequired'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.subscriptionsLimit'
+      - '@azure/arm-apimanagement.ProductUpdateParameters.terms'
+    langs:
+      - typeScript
+    type: interface
+    summary: Parâmetros de atualização de produto.
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.approvalRequired'
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se a aprovação de assinatura é necessária. Se for false, novas assinaturas serão aprovadas automaticamente permitindo que os desenvolvedores chamem as APIs desse produto imediatamente após a assinatura. Se for true, os administradores devem aprovar manualmente a assinatura que o desenvolvedor possa qualquer uma das APIs do produto. Pode estar presente somente se a propriedade subscriptionRequired está presente e tem um valor de false.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descrição do produto. Pode incluir marcas de formatação HTML.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do produto.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se o produto é publicado ou não. Produtos publicados são detectáveis por usuários do portal do desenvolvedor. Os produtos não publicados são visíveis somente para administradores. Estado padrão do produto é notPublished. Os valores possíveis incluem: ''notPublished'', ''publicado'''
+    optional: true
+    syntax:
+      content: 'state?: ProductState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ProductState'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.subscriptionRequired'
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se uma assinatura de produto é necessária para acessar APIs incluídas neste produto. Se for true, o produto é conhecido como "protegido" e uma chave de assinatura válida é necessária para uma solicitação para uma API incluída no produto seja bem-sucedida. Se for false, o produto é conhecido como "abrir" e solicitações para uma API incluída no produto podem ser feitas sem uma chave de assinatura.
+      Se a propriedade for omitida, ao criar um novo produto, presume-se seu valor como true.
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.subscriptionsLimit'
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se o número de assinaturas de um usuário pode ter para este produto ao mesmo tempo. Defina como null ou omita para permissão ilimitada por assinaturas do usuário. Pode estar presente somente se a propriedade subscriptionRequired está presente e tem um valor de false.
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductUpdateParameters.terms'
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Termos de uso do produto. Os desenvolvedores que tentarem assinar o produto verão e deverão aceitar esses termos para concluir o processo de assinatura.
+    optional: true
+    syntax:
+      content: 'terms?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.ProductState'
+    name: ProductState
+    spec.typeScript:
+      - name: ProductState
+        fullName: ProductState
+        uid: '@azure/arm-apimanagement.ProductState'

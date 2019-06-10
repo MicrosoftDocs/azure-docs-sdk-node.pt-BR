@@ -45,23 +45,23 @@ items:
           - string
     package: '@azure/cognitiveservices-qnamaker'
   - uid: '@azure/cognitiveservices-qnamaker.QnAMakerClientContext.constructor'
-    name: 'QnAMakerClientContext(string, ServiceClientCredentials, msRest.ServiceClientOptions)'
+    name: 'QnAMakerClientContext(ServiceClientCredentials, string, msRest.ServiceClientOptions)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: Inicializa uma nova instância da classe QnAMakerClientContext.
     syntax:
-      content: 'new QnAMakerClientContext(endpoint: string, credentials: ServiceClientCredentials, options?: msRest.ServiceClientOptions)'
+      content: 'new QnAMakerClientContext(credentials: ServiceClientCredentials, endpoint: string, options?: msRest.ServiceClientOptions)'
       parameters:
-        - id: endpoint
-          type:
-            - string
-          description: 'Suporte para pontos de extremidade de serviços Cognitivos (protocolo e nome de host, por exemplo: https://westus.api.cognitive.microsoft.com).'
         - id: credentials
           type:
             - ServiceClientCredentials
           description: Credenciais de assinatura que identificam exclusivamente a assinatura de cliente.
+        - id: endpoint
+          type:
+            - string
+          description: 'Suporte para pontos de extremidade de serviços Cognitivos (protocolo e nome de host, por exemplo: https://westus.api.cognitive.microsoft.com).'
         - id: options
           type:
             - msRest.ServiceClientOptions
