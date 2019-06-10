@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.ImageOSDisk'
+    name: ImageOSDisk
+    fullName: ImageOSDisk
+    children:
+      - '@azure/arm-compute.ImageOSDisk.blobUri'
+      - '@azure/arm-compute.ImageOSDisk.caching'
+      - '@azure/arm-compute.ImageOSDisk.diskSizeGB'
+      - '@azure/arm-compute.ImageOSDisk.managedDisk'
+      - '@azure/arm-compute.ImageOSDisk.osState'
+      - '@azure/arm-compute.ImageOSDisk.osType'
+      - '@azure/arm-compute.ImageOSDisk.snapshot'
+      - '@azure/arm-compute.ImageOSDisk.storageAccountType'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve um disco do sistema operacional.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.blobUri'
+    name: blobUri
+    fullName: blobUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O disco rígido Virtual.
+    optional: true
+    syntax:
+      content: 'blobUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.caching'
+    name: caching
+    fullName: caching
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica os requisitos de cache. <br><br> Os valores possíveis são: <br><br> **Nenhum** <br><br>
+      **ReadOnly** <br><br> **ReadWrite** <br><br> Padrão: **Nenhum para o armazenamento Standard. Somente leitura para o armazenamento Premium**. Os valores possíveis incluem: 'None', 'ReadOnly', 'ReadWrite'
+    optional: true
+    syntax:
+      content: 'caching?: CachingTypes'
+      return:
+        type:
+          - '@azure/arm-compute.CachingTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o tamanho dos discos de dados vazios em gigabytes. Esse elemento pode ser usado para substituir o nome do disco em uma imagem de máquina virtual. <br><br> Esse valor não pode ser maior que 1023 GB
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.managedDisk'
+    name: managedDisk
+    fullName: managedDisk
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ManagedDisk.
+    optional: true
+    syntax:
+      content: 'managedDisk?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.osState'
+    name: osState
+    fullName: osState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado do sistema operacional. Os valores possíveis incluem: ''Generalizado'', ''especializado'''
+    syntax:
+      content: 'osState: OperatingSystemStateTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemStateTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Essa propriedade permite que você especifique o tipo de sistema operacional que está incluído no disco de se criar uma VM de uma imagem personalizada. <br><br> Os valores possíveis são: <br><br> **Windows** <br><br>
+      **Linux**. Os valores possíveis incluem: 'Windows', 'Linux'
+    syntax:
+      content: 'osType: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.snapshot'
+    name: snapshot
+    fullName: snapshot
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O instantâneo.
+    optional: true
+    syntax:
+      content: 'snapshot?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.ImageOSDisk.storageAccountType'
+    name: storageAccountType
+    fullName: storageAccountType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica o tipo de conta de armazenamento para o disco gerenciado. UltraSSD_LRS não pode ser usado com o disco do sistema operacional. Os valores possíveis incluem: ''Standard_LRS'', ''Premium_LRS'', ''StandardSSD_LRS'', ''UltraSSD_LRS'''
+    optional: true
+    syntax:
+      content: 'storageAccountType?: StorageAccountTypes'
+      return:
+        type:
+          - '@azure/arm-compute.StorageAccountTypes'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.CachingTypes'
+    name: CachingTypes
+    spec.typeScript:
+      - name: CachingTypes
+        fullName: CachingTypes
+        uid: '@azure/arm-compute.CachingTypes'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.OperatingSystemStateTypes'
+    name: OperatingSystemStateTypes
+    spec.typeScript:
+      - name: OperatingSystemStateTypes
+        fullName: OperatingSystemStateTypes
+        uid: '@azure/arm-compute.OperatingSystemStateTypes'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.StorageAccountTypes'
+    name: StorageAccountTypes
+    spec.typeScript:
+      - name: StorageAccountTypes
+        fullName: StorageAccountTypes
+        uid: '@azure/arm-compute.StorageAccountTypes'
