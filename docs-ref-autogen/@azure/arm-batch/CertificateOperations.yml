@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/arm-batch.CertificateOperations.beginCreate'
+      - '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/arm-batch.CertificateOperations.constructor'
+      - '@azure/arm-batch.CertificateOperations.create'
+      - '@azure/arm-batch.CertificateOperations.deleteMethod'
+      - '@azure/arm-batch.CertificateOperations.get'
+      - '@azure/arm-batch.CertificateOperations.get_2'
+      - '@azure/arm-batch.CertificateOperations.get_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+      - '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+      - '@azure/arm-batch.CertificateOperations.update_2'
+      - '@azure/arm-batch.CertificateOperations.update'
+      - '@azure/arm-batch.CertificateOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="03fd9-101">Classe que representa um CertificateOperations.</span><span class="sxs-lookup"><span data-stu-id="03fd9-101">Class representing a CertificateOperations.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginCreate'
+    name: 'beginCreate(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateBeginCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-102">Cria um novo certificado dentro da conta especificada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-102">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateBeginCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-103">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-103">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-104">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-104">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-105">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-105">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-106">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-106">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-107">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-107">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="03fd9-108">Parâmetros adicionais para criação de certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-108">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateBeginCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-109">Exclui o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-109">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-110">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-110">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-111">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-111">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-112">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-112">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-113">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-113">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-114">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-114">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="03fd9-115">Se você tentar excluir um certificado que está sendo usado por um pool ou nó de computação, o status do certificado muda para deleteFailed.</span><span class="sxs-lookup"><span data-stu-id="03fd9-115">If you try to delete a certificate that is being used by a pool or compute node, the status of the certificate changes to deleteFailed.</span></span> <span data-ttu-id="03fd9-116">Se você decidir que deseja continuar usando o certificado, você pode usar essa operação para definir o status do certificado para o Active Directory.</span><span class="sxs-lookup"><span data-stu-id="03fd9-116">If you decide that you want to continue using the certificate, you can use this operation to set the status of the certificate back to active.</span></span> <span data-ttu-id="03fd9-117">Se você pretende excluir o certificado, você não precisará executar essa operação após a exclusão falhou.</span><span class="sxs-lookup"><span data-stu-id="03fd9-117">If you intend to delete the certificate, you do not need to run this operation after the deletion failed.</span></span> <span data-ttu-id="03fd9-118">Certifique-se de que o certificado não está sendo usado por todos os recursos e, em seguida, você pode tentar novamente excluir o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-118">You must make sure that the certificate is not being used by any resources, and then you can try again to delete the certificate.</span></span>'
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-119">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-119">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-120">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-120">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-121">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-121">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-122">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-122">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-123">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-123">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-124">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-124">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-125">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-125">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-126">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-126">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-127">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-127">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-128">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-128">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="03fd9-129">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="03fd9-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-130">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-131">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-131">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-132">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-132">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-133">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-133">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-134">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-134">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-135">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-135">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-136">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-137">Crie um CertificateOperations.</span><span class="sxs-lookup"><span data-stu-id="03fd9-137">Create a CertificateOperations.</span></span>
+    syntax:
+      content: 'new CertificateOperations(client: BatchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batch.BatchManagementClientContext'
+          description: |
+            <span data-ttu-id="03fd9-138">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="03fd9-138">Reference to the service client.</span></span>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.create'
+    name: 'create(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-139">Cria um novo certificado dentro da conta especificada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-139">Creates a new certificate inside the specified account.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateCreateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-140">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-140">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-141">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-141">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-142">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-142">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-143">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-143">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-144">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-144">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="03fd9-145">Parâmetros adicionais para criação de certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-145">Additional parameters for certificate creation.</span></span>
+        - id: options
+          type:
+            - Models.CertificateCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCreateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-146">Exclui o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-146">Deletes the specified certificate.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-147">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-147">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-148">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-148">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-149">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-149">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-150">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-150">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-151">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-151">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-152">Obtém informações sobre o certificado especificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-152">Gets information about the specified certificate.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-153">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-153">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-154">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-154">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-155">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-155">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-156">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-156">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-157">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-157">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, options: RequestOptionsBase, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-158">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-158">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-159">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-159">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-160">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-160">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-161">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-161">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-162">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-162">For example SHA1-a3d1c5.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="03fd9-163">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="03fd9-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-164">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.get_1'
+    name: 'get(string, string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, accountName: string, certificateName: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-165">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-165">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-166">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-166">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-167">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-167">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-168">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-168">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-169">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-169">For example SHA1-a3d1c5.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-170">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-170">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_2'
+    name: 'listByBatchAccount(string, string, CertificateListByBatchAccountOptionalParams, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options: CertificateListByBatchAccountOptionalParams, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-171">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-171">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-172">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-172">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+          description: <span data-ttu-id="03fd9-173">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="03fd9-173">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="03fd9-174">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-174">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount'
+    name: 'listByBatchAccount(string, string, Models.CertificateListByBatchAccountOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-175">Lista todos os certificados na conta especificada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-175">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, options?: Models.CertificateListByBatchAccountOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-176">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-176">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-177">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-177">The name of the Batch account.</span></span>
+        - id: options
+          type:
+            - Models.CertificateListByBatchAccountOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccount_1'
+    name: 'listByBatchAccount(string, string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccount(resourceGroupName: string, accountName: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-178">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-178">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-179">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-179">The name of the Batch account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="03fd9-180">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-180">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext'
+    name: 'listByBatchAccountNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-181">Lista todos os certificados na conta especificada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-181">Lists all of the certificates in the specified account.</span></span>
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-182">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="03fd9-182">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_2'
+    name: 'listByBatchAccountNext(string, RequestOptionsBase, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-183">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="03fd9-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="03fd9-184">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="03fd9-184">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="03fd9-185">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.listByBatchAccountNext_1'
+    name: 'listByBatchAccountNext(string, ServiceCallback<ListCertificatesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByBatchAccountNext(nextPageLink: string, callback: ServiceCallback<ListCertificatesResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-186">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="03fd9-186">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+          description: |
+            <span data-ttu-id="03fd9-187">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-187">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateListByBatchAccountNextResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_2'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, CertificateUpdateOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options: CertificateUpdateOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-188">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-188">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-189">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-189">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-190">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-190">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-191">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-191">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-192">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-192">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="03fd9-193">Entidade de certificado a ser atualizada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-193">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-batch.CertificateUpdateOptionalParams'
+          description: <span data-ttu-id="03fd9-194">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="03fd9-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-195">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, Models.CertificateUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="03fd9-196">Atualiza as propriedades de um certificado existente.</span><span class="sxs-lookup"><span data-stu-id="03fd9-196">Updates the properties of an existing certificate.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, options?: Models.CertificateUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-197">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-197">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-198">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-198">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-199">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-199">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-200">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-200">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-201">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-201">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="03fd9-202">Entidade de certificado a ser atualizada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-202">Certificate entity to update.</span></span>
+        - id: options
+          type:
+            - Models.CertificateUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+  - uid: '@azure/arm-batch.CertificateOperations.update_1'
+    name: 'update(string, string, string, CertificateCreateOrUpdateParameters, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, certificateName: string, parameters: CertificateCreateOrUpdateParameters, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-203">O nome do grupo de recursos que contém a conta do lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-203">The name of the resource group that contains the Batch account.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: <span data-ttu-id="03fd9-204">O nome da conta do Lote.</span><span class="sxs-lookup"><span data-stu-id="03fd9-204">The name of the Batch account.</span></span>
+        - id: certificateName
+          type:
+            - string
+          description: '<span data-ttu-id="03fd9-205">O identificador para o certificado.</span><span class="sxs-lookup"><span data-stu-id="03fd9-205">The identifier for the certificate.</span></span> <span data-ttu-id="03fd9-206">Isso deve ser composto de algoritmo e a impressão digital separado por um traço e deve coincidir com os dados do certificado na solicitação.</span><span class="sxs-lookup"><span data-stu-id="03fd9-206">This must be made up of algorithm and thumbprint separated by a dash, and must match the certificate data in the request.</span></span> <span data-ttu-id="03fd9-207">Por exemplo, a3d1c5 SHA1.</span><span class="sxs-lookup"><span data-stu-id="03fd9-207">For example SHA1-a3d1c5.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+          description: <span data-ttu-id="03fd9-208">Entidade de certificado a ser atualizada.</span><span class="sxs-lookup"><span data-stu-id="03fd9-208">Certificate entity to update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batch.Certificate>
+          description: |
+            <span data-ttu-id="03fd9-209">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="03fd9-209">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.CertificateUpdateResponse>
+    package: '@azure/arm-batch'
+references:
+  - uid: '@azure/arm-batch.BatchManagementClientContext'
+    name: BatchManagementClientContext
+    spec.typeScript:
+      - name: BatchManagementClientContext
+        fullName: BatchManagementClientContext
+        uid: '@azure/arm-batch.BatchManagementClientContext'
+  - uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+    name: CertificateCreateOrUpdateParameters
+    spec.typeScript:
+      - name: CertificateCreateOrUpdateParameters
+        fullName: CertificateCreateOrUpdateParameters
+        uid: '@azure/arm-batch.CertificateCreateOrUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/arm-batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batch.ListCertificatesResult>
+    name: ListCertificatesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListCertificatesResult
+        fullName: ListCertificatesResult
+        uid: '@azure/arm-batch.ListCertificatesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+    name: CertificateListByBatchAccountOptionalParams
+    spec.typeScript:
+      - name: CertificateListByBatchAccountOptionalParams
+        fullName: CertificateListByBatchAccountOptionalParams
+        uid: '@azure/arm-batch.CertificateListByBatchAccountOptionalParams'
+  - uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
+    name: CertificateUpdateOptionalParams
+    spec.typeScript:
+      - name: CertificateUpdateOptionalParams
+        fullName: CertificateUpdateOptionalParams
+        uid: '@azure/arm-batch.CertificateUpdateOptionalParams'
