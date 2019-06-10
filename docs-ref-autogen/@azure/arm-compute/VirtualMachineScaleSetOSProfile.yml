@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile'
+    name: VirtualMachineScaleSetOSProfile
+    fullName: VirtualMachineScaleSetOSProfile
+    children:
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+      - '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve um perfil de SO de conjunto de dimensionamento de máquina virtual.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica a senha da conta de administrador. <br><br> **Tamanho mínimo (Windows):** 8 caracteres <br><br> **Tamanho mínimo (Linux):** 6 caracteres <br><br> **Comprimento máximo (Windows):** 123 caracteres <br><br> **Comprimento máximo (Linux):** 72 caracteres <br><br>
+      **Requisitos de complexidade:** condições de 3 dos 4 abaixo devem ser atendidos <br> Tem caracteres minúsculos <br>Tem caracteres superiores <br> Tem um dígito <br> Tem um caractere especial (correspondência de Regex [\W_]) <br><br> **Não permitido de valores:** "abc@123", "P@$$w0rd", "P@ssw0rd","P@ssword123", "Pa$ $word", "pass@word1", "Senha!", "Password1", "Password22", "iloveyou!" <br><br> Para redefinir a senha, consulte [como redefinir o serviço de área de trabalho remota ou sua senha de logon em uma VM do Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Para redefinir a senha raiz, consulte [gerenciar usuários, SSH e verificar ou reparar discos em VMs do Linux do Azure usando a extensão VMAccess](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica o nome da conta de administrador. <br><br> **Restrição somente Windows:** Não pode terminar com "." <br><br> **Não permitido de valores:** "administrador", "admin", "user", "Usuário1", "teste", "Usuário2", "test1", "usuário3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "convidado", "john", "proprietário", "root", "server", " SQL","suporte","support_388945a0","sys","test2","test3","user4","user5". <br><br> **Tamanho mínimo (Linux):** 1 caractere <br><br> **Comprimento máximo (Linux):** 64 caracteres <br><br> **Comprimento máximo (Windows):** 20 caracteres  <br><br><li> Para acesso à raiz para a VM do Linux, consulte [usando privilégios de raiz em máquinas virtuais Linux no Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      Para obter uma lista de usuários do sistema internos no Linux não deve ser usado neste campo, consulte [selecionando nomes de usuário para Linux no Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.computerNamePrefix'
+    name: computerNamePrefix
+    fullName: computerNamePrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o prefixo do nome do computador para todas as máquinas virtuais no conjunto de dimensionamento. Prefixos de nomes de computador devem ser de 1 a 15 caracteres.
+    optional: true
+    syntax:
+      content: 'computerNamePrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica uma cadeia de caracteres codificado em base 64 de dados personalizados. A cadeia de caracteres codificado em base 64 é decodificada para uma matriz binária que é salvo como um arquivo na máquina Virtual. O comprimento máximo da matriz binária é 65535 bytes. <br><br> Para usar cloud-init para sua VM, confira [usando cloud-init para personalizar uma VM Linux durante a criação](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Especifica as configurações do sistema operacional Linux na máquina virtual. <br><br>Para obter uma lista de distribuições Linux com suporte, consulte [Linux em distribuições endossadas pelo Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> Para executar as distribuições não endossadas, confira [informações para distribuições não endossadas](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica o conjunto de certificados que devem ser instalados nas máquinas virtuais no conjunto de dimensionamento.
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineScaleSetOSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Especifica as configurações de sistema operacional do Windows na máquina virtual.
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
