@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry'
+    name: AccessPolicyEntry
+    fullName: AccessPolicyEntry
+    children:
+      - '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+      - '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+      - '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma identidade que têm acesso ao Cofre de chaves. Todas as identidades da matriz devem usar a mesma ID de locatário como ID do locatário. do Cofre de chaves
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.applicationId'
+    name: applicationId
+    fullName: applicationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID do aplicativo de cliente que está fazendo a solicitação em nome de uma entidade de segurança
+    optional: true
+    syntax:
+      content: 'applicationId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ID de objeto de um usuário, a entidade de serviço ou o grupo de segurança no locatário do Azure Active Directory para o cofre. A ID de objeto deve ser exclusiva para a lista de políticas de acesso.'
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.permissions'
+    name: permissions
+    fullName: permissions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'As permissões a identidade precisa de chaves, segredos e certificados.'
+    syntax:
+      content: 'permissions: Permissions'
+      return:
+        type:
+          - '@azure/arm-keyvault.Permissions'
+    package: '@azure/arm-keyvault'
+  - uid: '@azure/arm-keyvault.AccessPolicyEntry.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A ID do locatário do Active Directory do Azure que deve ser usada para autenticar solicitações para o Cofre de chaves.
+    syntax:
+      content: 'tenantId: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-keyvault'
+references:
+  - uid: '@azure/arm-keyvault.Permissions'
+    name: Permissions
+    spec.typeScript:
+      - name: Permissions
+        fullName: Permissions
+        uid: '@azure/arm-keyvault.Permissions'
