@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-containerregistry.ImportImageParameters'
+    name: ImportImageParameters
+    fullName: ImportImageParameters
+    children:
+      - '@azure/arm-containerregistry.ImportImageParameters.mode'
+      - '@azure/arm-containerregistry.ImportImageParameters.source'
+      - '@azure/arm-containerregistry.ImportImageParameters.targetTags'
+      - '@azure/arm-containerregistry.ImportImageParameters.untaggedTargetRepositories'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa ImportImageParameters.
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ImportImageParameters.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ao forçar, nenhuma marca de destino existente será substituída. Quando NoForce, marcas de destino existentes falhará a operação antes que qualquer cópia é iniciada. Os valores possíveis incluem: ''NoForce'', ''Force''. Valor padrão: ''NoForce''.'
+    optional: true
+    syntax:
+      content: 'mode?: ImportMode'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ImportMode'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ImportImageParameters.source'
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A origem da imagem.
+    syntax:
+      content: 'source: ImportSource'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ImportSource'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ImportImageParameters.targetTags'
+    name: targetTags
+    fullName: targetTags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lista de cadeias de caracteres do repositório de formulário [: marca]. Quando marca é omitida a origem será usado (ou ''latest'' se a marca de origem também for omitida).'
+    optional: true
+    syntax:
+      content: 'targetTags?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ImportImageParameters.untaggedTargetRepositories'
+    name: untaggedTargetRepositories
+    fullName: untaggedTargetRepositories
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de cadeias de caracteres de nomes de repositório para fazer uma cópia somente de manifesto. Nenhuma marca será criada.
+    optional: true
+    syntax:
+      content: 'untaggedTargetRepositories?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-containerregistry'
+references:
+  - uid: '@azure/arm-containerregistry.ImportMode'
+    name: ImportMode
+    spec.typeScript:
+      - name: ImportMode
+        fullName: ImportMode
+        uid: '@azure/arm-containerregistry.ImportMode'
+  - uid: '@azure/arm-containerregistry.ImportSource'
+    name: ImportSource
+    spec.typeScript:
+      - name: ImportSource
+        fullName: ImportSource
+        uid: '@azure/arm-containerregistry.ImportSource'
