@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters'
+    name: SubscriptionCreateParameters
+    fullName: SubscriptionCreateParameters
+    children:
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.allowTracing'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.displayName'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.ownerId'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.primaryKey'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.scope'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.secondaryKey'
+      - '@azure/arm-apimanagement.SubscriptionCreateParameters.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ef3ee-101">Assinatura criar detalhes.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-101">Subscription create details.</span></span>
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.allowTracing'
+    name: allowTracing
+    fullName: allowTracing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ef3ee-102">Determina se o rastreamento pode ser habilitado</span><span class="sxs-lookup"><span data-stu-id="ef3ee-102">Determines whether tracing can be enabled</span></span>
+    optional: true
+    syntax:
+      content: 'allowTracing?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ef3ee-103">Nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-103">Subscription name.</span></span>
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.ownerId'
+    name: ownerId
+    fullName: ownerId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ef3ee-104">Usuário (caminho de id de usuário) para o qual assinatura está sendo criada no formulário /users/ {userId}</span><span class="sxs-lookup"><span data-stu-id="ef3ee-104">User (user id path) for whom subscription is being created in form /users/{userId}</span></span>'
+    optional: true
+    syntax:
+      content: 'ownerId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.primaryKey'
+    name: primaryKey
+    fullName: primaryKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ef3ee-105">Chave de assinatura primária.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-105">Primary subscription key.</span></span> <span data-ttu-id="ef3ee-106">Se não for especificado durante a solicitação de chave será gerada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-106">If not specified during request key will be generated automatically.</span></span>
+    optional: true
+    syntax:
+      content: 'primaryKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.scope'
+    name: scope
+    fullName: scope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ef3ee-107">Escopo como /products/ {productId} ou /apis ou /apis/ {apiId}.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-107">Scope like /products/{productId} or /apis or /apis/{apiId}.</span></span>'
+    syntax:
+      content: 'scope: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.secondaryKey'
+    name: secondaryKey
+    fullName: secondaryKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ef3ee-108">Chave de assinatura secundária.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-108">Secondary subscription key.</span></span> <span data-ttu-id="ef3ee-109">Se não for especificado durante a solicitação de chave será gerada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-109">If not specified during request key will be generated automatically.</span></span>
+    optional: true
+    syntax:
+      content: 'secondaryKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.SubscriptionCreateParameters.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ef3ee-110">Estado inicial de assinatura.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-110">Initial subscription state.</span></span> <span data-ttu-id="ef3ee-111">Se nenhum valor for especificado, a assinatura é criada com o estado Submitted.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-111">If no value is specified, subscription is created with Submitted state.</span></span> <span data-ttu-id="ef3ee-112">Possíveis estados são \* Active Directory – a assinatura está ativa, \* suspenso – a assinatura está bloqueada e o assinante não pode chamar quaisquer APIs do produto, \* enviado – a solicitação de assinatura foi feita pelo desenvolvedor, mas ainda não foi aprovada ou rejeitada, \* rejeitados – a solicitação de assinatura foi negada por um administrador, \* cancelado – a assinatura foi cancelada pelo desenvolvedor ou administrador, \* expirou – a assinatura atingiu sua data de expiração e foi desativada.</span><span class="sxs-lookup"><span data-stu-id="ef3ee-112">Possible states are \* active – the subscription is active, \* suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, \* submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, \* rejected – the subscription request has been denied by an administrator, \* cancelled – the subscription has been cancelled by the developer or administrator, \* expired – the subscription reached its expiration date and was deactivated.</span></span> <span data-ttu-id="ef3ee-113">Os valores possíveis incluem: ''suspenso'', ''active'', ''expirado'', ''enviado'', ''rejeitada'', ''cancelado''</span><span class="sxs-lookup"><span data-stu-id="ef3ee-113">Possible values include: ''suspended'', ''active'', ''expired'', ''submitted'', ''rejected'', ''cancelled''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: SubscriptionState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.SubscriptionState'
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.SubscriptionState'
+    name: SubscriptionState
+    spec.typeScript:
+      - name: SubscriptionState
+        fullName: SubscriptionState
+        uid: '@azure/arm-apimanagement.SubscriptionState'
