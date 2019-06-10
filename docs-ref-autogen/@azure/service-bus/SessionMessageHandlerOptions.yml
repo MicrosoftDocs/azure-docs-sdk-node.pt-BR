@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions'
+    name: SessionMessageHandlerOptions
+    fullName: SessionMessageHandlerOptions
+    children:
+      - '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve as opções passadas para `registerMessageHandler` método ao receber mensagens de uma fila/assinatura que tem sessões habilitadas.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se o `complete()` método na mensagem automaticamente deve ser chamado pelo sdk depois que o usuário forneceu onMessage manipulador foi executado.
+      Chamar `complete()` em uma mensagem remove da fila/assinatura.
+      - **Padrão**: `true`.
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SessionMessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número máximo de chamadas simultâneas que a biblioteca pode fazer no manipulador de mensagens do usuário. Depois que esse limite for atingido, não serão recebidas mais mensagens até que pelo menos uma das chamadas para o manipulador de mensagem do usuário foi concluída.
+      - **Padrão**: `1`.
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
