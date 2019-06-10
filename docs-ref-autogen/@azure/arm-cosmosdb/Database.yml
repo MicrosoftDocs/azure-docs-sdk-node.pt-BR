@@ -1,0 +1,383 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cosmosdb.Database'
+    name: Database
+    fullName: Database
+    children:
+      - '@azure/arm-cosmosdb.Database.constructor'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions_2'
+      - '@azure/arm-cosmosdb.Database.listMetricDefinitions_1'
+      - '@azure/arm-cosmosdb.Database.listMetrics'
+      - '@azure/arm-cosmosdb.Database.listMetrics_2'
+      - '@azure/arm-cosmosdb.Database.listMetrics_1'
+      - '@azure/arm-cosmosdb.Database.listUsages_2'
+      - '@azure/arm-cosmosdb.Database.listUsages'
+      - '@azure/arm-cosmosdb.Database.listUsages_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um banco de dados.
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.constructor'
+    name: Database(CosmosDBManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um banco de dados.
+    syntax:
+      content: 'new Database(client: CosmosDBManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions'
+    name: 'listMetricDefinitions(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera as definições de métrica para o banco de dados especificado.
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions_2'
+    name: 'listMetricDefinitions(string, string, string, RequestOptionsBase, ServiceCallback<MetricDefinitionsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, options: RequestOptionsBase, callback: ServiceCallback<MetricDefinitionsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetricDefinitions_1'
+    name: 'listMetricDefinitions(string, string, string, ServiceCallback<MetricDefinitionsListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetricDefinitions(resourceGroupName: string, accountName: string, databaseRid: string, callback: ServiceCallback<MetricDefinitionsListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricDefinitionsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics'
+    name: 'listMetrics(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera as métricas de determinado pelo filtro fornecido para a conta de banco de dados fornecido e o banco de dados.
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: filter
+          type:
+            - string
+          description: 'Uma expressão de filtro OData que descreve um subconjunto de métrica será retornada. Os parâmetros que podem ser filtrados são name.value (nome da métrica, pode ter um ou de vários nomes), startTime, endTime e timeGrain. O operador com suporte é EQ.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics_2'
+    name: 'listMetrics(string, string, string, string, RequestOptionsBase, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, options: RequestOptionsBase, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: filter
+          type:
+            - string
+          description: 'Uma expressão de filtro OData que descreve um subconjunto de métrica será retornada. Os parâmetros que podem ser filtrados são name.value (nome da métrica, pode ter um ou de vários nomes), startTime, endTime e timeGrain. O operador com suporte é EQ.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listMetrics_1'
+    name: 'listMetrics(string, string, string, string, ServiceCallback<MetricListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: filter
+          type:
+            - string
+          description: 'Uma expressão de filtro OData que descreve um subconjunto de métrica será retornada. Os parâmetros que podem ser filtrados são name.value (nome da métrica, pode ter um ou de vários nomes), startTime, endTime e timeGrain. O operador com suporte é EQ.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListMetricsResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages_2'
+    name: 'listUsages(string, string, string, DatabaseListUsagesOptionalParams, ServiceCallback<UsagesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, options: DatabaseListUsagesOptionalParams, callback: ServiceCallback<UsagesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: options
+          type:
+            - '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages'
+    name: 'listUsages(string, string, string, Models.DatabaseListUsagesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera os usos de (dados mais recentes) para determinado banco de dados.
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, options?: Models.DatabaseListUsagesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: options
+          type:
+            - Models.DatabaseListUsagesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Database.listUsages_1'
+    name: 'listUsages(string, string, string, ServiceCallback<UsagesResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, callback: ServiceCallback<UsagesResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome de um grupo de recursos do Azure.
+        - id: accountName
+          type:
+            - string
+          description: Nome da conta de banco de dados cosmos DB.
+        - id: databaseRid
+          type:
+            - string
+          description: Banco de dados cosmos DB rid.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.DatabaseListUsagesResponse>
+    package: '@azure/arm-cosmosdb'
+references:
+  - uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+    name: CosmosDBManagementClientContext
+    spec.typeScript:
+      - name: CosmosDBManagementClientContext
+        fullName: CosmosDBManagementClientContext
+        uid: '@azure/arm-cosmosdb.CosmosDBManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.MetricDefinitionsListResult>
+    name: MetricDefinitionsListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricDefinitionsListResult
+        fullName: MetricDefinitionsListResult
+        uid: '@azure/arm-cosmosdb.MetricDefinitionsListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.MetricListResult>
+    name: MetricListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: MetricListResult
+        fullName: MetricListResult
+        uid: '@azure/arm-cosmosdb.MetricListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cosmosdb.UsagesResult>
+    name: UsagesResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UsagesResult
+        fullName: UsagesResult
+        uid: '@azure/arm-cosmosdb.UsagesResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'
+    name: DatabaseListUsagesOptionalParams
+    spec.typeScript:
+      - name: DatabaseListUsagesOptionalParams
+        fullName: DatabaseListUsagesOptionalParams
+        uid: '@azure/arm-cosmosdb.DatabaseListUsagesOptionalParams'
