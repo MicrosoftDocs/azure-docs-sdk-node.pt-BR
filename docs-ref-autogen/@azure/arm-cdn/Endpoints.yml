@@ -1,0 +1,1119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoints'
+    name: Endpoints
+    fullName: Endpoints
+    children:
+      - '@azure/arm-cdn.Endpoints.beginCreate'
+      - '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+      - '@azure/arm-cdn.Endpoints.beginLoadContent'
+      - '@azure/arm-cdn.Endpoints.beginPurgeContent'
+      - '@azure/arm-cdn.Endpoints.beginStart'
+      - '@azure/arm-cdn.Endpoints.beginStop'
+      - '@azure/arm-cdn.Endpoints.beginUpdate'
+      - '@azure/arm-cdn.Endpoints.create'
+      - '@azure/arm-cdn.Endpoints.deleteMethod'
+      - '@azure/arm-cdn.Endpoints.constructor'
+      - '@azure/arm-cdn.Endpoints.get'
+      - '@azure/arm-cdn.Endpoints.get_2'
+      - '@azure/arm-cdn.Endpoints.get_1'
+      - '@azure/arm-cdn.Endpoints.listByProfile'
+      - '@azure/arm-cdn.Endpoints.listByProfile_2'
+      - '@azure/arm-cdn.Endpoints.listByProfile_1'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+      - '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+      - '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+      - '@azure/arm-cdn.Endpoints.loadContent'
+      - '@azure/arm-cdn.Endpoints.purgeContent'
+      - '@azure/arm-cdn.Endpoints.start'
+      - '@azure/arm-cdn.Endpoints.stop'
+      - '@azure/arm-cdn.Endpoints.update'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+      - '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um pontos de extremidade.
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginCreate'
+    name: 'beginCreate(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Cria um novo ponto de extremidade CDN com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil.'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: Propriedades do ponto de extremidade
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Exclui um ponto de extremidade CDN existente com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil.'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginLoadContent'
+    name: 'beginLoadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Pré-carrega um conteúdo CDN. Disponível para perfis Verizon.
+    syntax:
+      content: 'function beginLoadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: O caminho para o conteúdo a ser carregado. Caminho deve ser uma URL relativa do arquivo de origem.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginPurgeContent'
+    name: 'beginPurgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove um conteúdo da CDN.
+    syntax:
+      content: 'function beginPurgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: O caminho para o conteúdo a ser limpo. Pode descrever um caminho de arquivo ou um diretório de curinga.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStart'
+    name: 'beginStart(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Inicia um ponto de extremidade CDN existente que está em um estado parado.
+    syntax:
+      content: 'function beginStart(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginStop'
+    name: 'beginStop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Interrompe um ponto de extremidade em execução por CDN existente.
+    syntax:
+      content: 'function beginStop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.beginUpdate'
+    name: 'beginUpdate(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Atualiza um ponto de extremidade CDN existente com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil. Apenas as marcas e cabeçalho de host de origem podem ser atualizado depois de criar um ponto de extremidade. Para atualizar origens, use a operação de atualização de origem. Para atualizar os domínios personalizados, use a operação de atualização de domínio personalizado.'
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: Propriedades do ponto de extremidade de atualização
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.create'
+    name: 'create(string, string, string, Endpoint, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Cria um novo ponto de extremidade CDN com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil.'
+    syntax:
+      content: 'function create(resourceGroupName: string, profileName: string, endpointName: string, endpoint: Endpoint, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: endpoint
+          type:
+            - '@azure/arm-cdn.Endpoint'
+          description: Propriedades do ponto de extremidade
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsCreateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Exclui um ponto de extremidade CDN existente com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil.'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.constructor'
+    name: Endpoints(CdnManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um pontos de extremidade.
+    syntax:
+      content: 'new Endpoints(client: CdnManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-cdn.CdnManagementClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Obtém um ponto de extremidade CDN existente com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil.'
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.get_1'
+    name: 'get(string, string, string, ServiceCallback<Endpoint>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<Endpoint>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.Endpoint>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsGetResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile'
+    name: 'listByProfile(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Lista os existentes de pontos de extremidade CDN.
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_2'
+    name: 'listByProfile(string, string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfile_1'
+    name: 'listByProfile(string, string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfile(resourceGroupName: string, profileName: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext'
+    name: 'listByProfileNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Lista os existentes de pontos de extremidade CDN.
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_2'
+    name: 'listByProfileNext(string, RequestOptionsBase, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listByProfileNext_1'
+    name: 'listByProfileNext(string, ServiceCallback<EndpointListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByProfileNext(nextPageLink: string, callback: ServiceCallback<EndpointListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.EndpointListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListByProfileNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage'
+    name: 'listResourceUsage(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Verifica a cota e o uso de filtros geográficos e domínios personalizados em determinado ponto de extremidade.
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_2'
+    name: 'listResourceUsage(string, string, string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsage_1'
+    name: 'listResourceUsage(string, string, string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsage(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext'
+    name: 'listResourceUsageNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Verifica a cota e o uso de filtros geográficos e domínios personalizados em determinado ponto de extremidade.
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_2'
+    name: 'listResourceUsageNext(string, RequestOptionsBase, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.listResourceUsageNext_1'
+    name: 'listResourceUsageNext(string, ServiceCallback<ResourceUsageListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listResourceUsageNext(nextPageLink: string, callback: ServiceCallback<ResourceUsageListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsListResourceUsageNextResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.loadContent'
+    name: 'loadContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Pré-carrega um conteúdo CDN. Disponível para perfis Verizon.
+    syntax:
+      content: 'function loadContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: O caminho para o conteúdo a ser carregado. Caminho deve ser uma URL relativa do arquivo de origem.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.purgeContent'
+    name: 'purgeContent(string, string, string, string[], msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Remove um conteúdo da CDN.
+    syntax:
+      content: 'function purgeContent(resourceGroupName: string, profileName: string, endpointName: string, contentPaths: string[], options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: contentPaths
+          type:
+            - 'string[]'
+          description: O caminho para o conteúdo a ser limpo. Pode descrever um caminho de arquivo ou um diretório de curinga.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.start'
+    name: 'start(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Inicia um ponto de extremidade CDN existente que está em um estado parado.
+    syntax:
+      content: 'function start(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStartResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.stop'
+    name: 'stop(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Interrompe um ponto de extremidade em execução por CDN existente.
+    syntax:
+      content: 'function stop(resourceGroupName: string, profileName: string, endpointName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsStopResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.update'
+    name: 'update(string, string, string, EndpointUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Atualiza um ponto de extremidade CDN existente com o nome do ponto de extremidade especificado sob a assinatura especificada, o grupo de recursos e o perfil. Apenas as marcas e cabeçalho de host de origem podem ser atualizado depois de criar um ponto de extremidade. Para atualizar origens, use a operação de atualização de origem. Para atualizar os domínios personalizados, use a operação de atualização de domínio personalizado.'
+    syntax:
+      content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, endpointUpdateProperties: EndpointUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: endpointUpdateProperties
+          type:
+            - '@azure/arm-cdn.EndpointUpdateParameters'
+          description: Propriedades do ponto de extremidade de atualização
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsUpdateResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain'
+    name: 'validateCustomDomain(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Valida o mapeamento de domínio personalizado para garantir que ele seja mapeado para o ponto de extremidade CDN correto no DNS.
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: hostName
+          type:
+            - string
+          description: O nome de host do domínio personalizado. Precisa ser um nome de domínio.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_2'
+    name: 'validateCustomDomain(string, string, string, string, RequestOptionsBase, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, options: RequestOptionsBase, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: hostName
+          type:
+            - string
+          description: O nome de host do domínio personalizado. Precisa ser um nome de domínio.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoints.validateCustomDomain_1'
+    name: 'validateCustomDomain(string, string, string, string, ServiceCallback<ValidateCustomDomainOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function validateCustomDomain(resourceGroupName: string, profileName: string, endpointName: string, hostName: string, callback: ServiceCallback<ValidateCustomDomainOutput>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Nome do grupo de recursos na assinatura do Azure.
+        - id: profileName
+          type:
+            - string
+          description: Nome do perfil CDN que é exclusivo dentro do grupo de recursos.
+        - id: endpointName
+          type:
+            - string
+          description: Nome do ponto de extremidade no perfil que é globalmente exclusivo.
+        - id: hostName
+          type:
+            - string
+          description: O nome de host do domínio personalizado. Precisa ser um nome de domínio.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.EndpointsValidateCustomDomainResponse>
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.CdnManagementClientContext'
+    name: CdnManagementClientContext
+    spec.typeScript:
+      - name: CdnManagementClientContext
+        fullName: CdnManagementClientContext
+        uid: '@azure/arm-cdn.CdnManagementClientContext'
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    spec.typeScript:
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+  - uid: '@azure/arm-cdn.EndpointUpdateParameters'
+    name: EndpointUpdateParameters
+    spec.typeScript:
+      - name: EndpointUpdateParameters
+        fullName: EndpointUpdateParameters
+        uid: '@azure/arm-cdn.EndpointUpdateParameters'
+  - uid: ServiceCallback<@azure/arm-cdn.Endpoint>
+    name: Endpoint>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Endpoint
+        fullName: Endpoint
+        uid: '@azure/arm-cdn.Endpoint'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.EndpointListResult>
+    name: EndpointListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: EndpointListResult
+        fullName: EndpointListResult
+        uid: '@azure/arm-cdn.EndpointListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ResourceUsageListResult>
+    name: ResourceUsageListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ResourceUsageListResult
+        fullName: ResourceUsageListResult
+        uid: '@azure/arm-cdn.ResourceUsageListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-cdn.ValidateCustomDomainOutput>
+    name: ValidateCustomDomainOutput>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ValidateCustomDomainOutput
+        fullName: ValidateCustomDomainOutput
+        uid: '@azure/arm-cdn.ValidateCustomDomainOutput'
+      - name: '>'
+        fullName: '>'
