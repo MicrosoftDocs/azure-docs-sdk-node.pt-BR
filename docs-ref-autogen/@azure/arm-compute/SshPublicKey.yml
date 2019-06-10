@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.SshPublicKey'
+    name: SshPublicKey
+    fullName: SshPublicKey
+    children:
+      - '@azure/arm-compute.SshPublicKey.keyData'
+      - '@azure/arm-compute.SshPublicKey.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: Contém informações sobre a chave pública do certificado SSH e o caminho na VM do Linux em que a chave pública é colocada.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.keyData'
+    name: keyData
+    fullName: keyData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'SSH certificado de chave pública usado para autenticar com a VM por meio do ssh. A chave precisa ser pelo menos 2048 bits e no formato ssh-rsa. <br><br> Para a criação de ssh chaves, consulte [chaves de criar SSH no Linux e Mac para VMs Linux no Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).'
+    optional: true
+    syntax:
+      content: 'keyData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.SshPublicKey.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Especifica o caminho completo na VM criada onde ssh chave pública é armazenada. Se o arquivo já existir, a chave especificada é acrescentada ao arquivo. Exemplo: /home/user/.ssh/authorized_keys'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

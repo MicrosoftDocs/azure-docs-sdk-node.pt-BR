@@ -1,0 +1,305 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-hdinsight.Configurations'
+    name: Configurations
+    fullName: Configurations
+    children:
+      - '@azure/arm-hdinsight.Configurations.beginUpdate'
+      - '@azure/arm-hdinsight.Configurations.constructor'
+      - '@azure/arm-hdinsight.Configurations.get'
+      - '@azure/arm-hdinsight.Configurations.get_2'
+      - '@azure/arm-hdinsight.Configurations.get_1'
+      - '@azure/arm-hdinsight.Configurations.list'
+      - '@azure/arm-hdinsight.Configurations.list_2'
+      - '@azure/arm-hdinsight.Configurations.list_1'
+      - '@azure/arm-hdinsight.Configurations.update'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa as configurações de um.
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.beginUpdate'
+    name: 'beginUpdate(string, string, string, [key: string]: string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Define as configurações de HTTP no cluster especificado. Essa API está preterida, use UpdateGatewaySettings no ponto de extremidade do cluster em vez disso.'
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: configurationName
+          type:
+            - string
+          description: O nome da configuração do cluster.
+        - id: parameters
+          type:
+            - '[key: string]: string'
+          description: As configurações de cluster.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.constructor'
+    name: Configurations(HDInsightManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie configurações de um.
+    syntax:
+      content: 'new Configurations(client: HDInsightManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-hdinsight.HDInsightManagementClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: O objeto de configuração para o cluster especificado. Essa API não é recomendado e pode ser removido no futuro. Considere usar as configurações de lista de API em vez disso.
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: configurationName
+          type:
+            - string
+          description: O nome da configuração do cluster.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ConfigurationsGetResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<[key: string]: string>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options: RequestOptionsBase, callback: ServiceCallback<[key: string]: string>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: configurationName
+          type:
+            - string
+          description: O nome da configuração do cluster.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - 'ServiceCallback<[key: string]: string>'
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ConfigurationsGetResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.get_1'
+    name: 'get(string, string, string, ServiceCallback<[key: string]: string>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, callback: ServiceCallback<[key: string]: string>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: configurationName
+          type:
+            - string
+          description: O nome da configuração do cluster.
+        - id: callback
+          type:
+            - 'ServiceCallback<[key: string]: string>'
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ConfigurationsGetResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.list'
+    name: 'list(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtém todas as informações de configuração para um cluster do HDI.
+    syntax:
+      content: 'function list(resourceGroupName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ConfigurationsListResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.list_2'
+    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ClusterConfigurations>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, clusterName: string, options: RequestOptionsBase, callback: ServiceCallback<ClusterConfigurations>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-hdinsight.ClusterConfigurations>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ConfigurationsListResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.list_1'
+    name: 'list(string, string, ServiceCallback<ClusterConfigurations>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, clusterName: string, callback: ServiceCallback<ClusterConfigurations>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-hdinsight.ClusterConfigurations>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ConfigurationsListResponse>
+    package: '@azure/arm-hdinsight'
+  - uid: '@azure/arm-hdinsight.Configurations.update'
+    name: 'update(string, string, string, [key: string]: string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Define as configurações de HTTP no cluster especificado. Essa API está preterida, use UpdateGatewaySettings no ponto de extremidade do cluster em vez disso.'
+    syntax:
+      content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos.
+        - id: clusterName
+          type:
+            - string
+          description: O nome do cluster.
+        - id: configurationName
+          type:
+            - string
+          description: O nome da configuração do cluster.
+        - id: parameters
+          type:
+            - '[key: string]: string'
+          description: As configurações de cluster.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-hdinsight'
+references:
+  - uid: '@azure/arm-hdinsight.HDInsightManagementClientContext'
+    name: HDInsightManagementClientContext
+    spec.typeScript:
+      - name: HDInsightManagementClientContext
+        fullName: HDInsightManagementClientContext
+        uid: '@azure/arm-hdinsight.HDInsightManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-hdinsight.ClusterConfigurations>
+    name: ClusterConfigurations>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ClusterConfigurations
+        fullName: ClusterConfigurations
+        uid: '@azure/arm-hdinsight.ClusterConfigurations'
+      - name: '>'
+        fullName: '>'
