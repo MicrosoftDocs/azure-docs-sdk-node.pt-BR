@@ -1,0 +1,246 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    fullName: QueueClient
+    children:
+      - '@azure/service-bus.QueueClient.close'
+      - '@azure/service-bus.QueueClient.createReceiver'
+      - '@azure/service-bus.QueueClient.createReceiver_1'
+      - '@azure/service-bus.QueueClient.createSender'
+      - '@azure/service-bus.QueueClient.entityPath'
+      - '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+      - '@azure/service-bus.QueueClient.id'
+      - '@azure/service-bus.QueueClient.peek'
+      - '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Descreve o cliente que permite interagir com uma fila do barramento de serviço.
+      Use o `createQueueClient` função no objeto ServiceBusClient para instanciar um QueueClient
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Fecha todos os links do AMQP para remetente/receptores criados por esse cliente.
+      Depois de fechada, nem o QueueClient nem seus remetente/destinatários podem ser usados para nenhuma outra operação.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Cria um receptor para receber mensagens de uma fila que não têm sessões habilitadas.
+      - Gera o erro se um receptor de aberto já existe para este QueueClient.
+      - Lança `InvalidOperationError` se a fila tem sessões habilitadas (nesse caso, use a sobrecarga desse método que usa `sessionOptions` argumento)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            Uma enumeração que indica o modo no qual as mensagens devem ser recebidas. Os valores possíveis são:
+            - `ReceiveMode.peekLock`: Depois que uma mensagem é recebida nesse modo, o destinatário possui um bloqueio na mensagem por um período específico. Se a mensagem não estiver totalmente liquidada, desta vez, ela chega à volta no barramento de serviço a ser obtido, a próxima operação de recebimento.
+            - `ReceiveMode.receiveAndDelete`: As mensagens recebidas neste modo automaticamente removidas do barramento de serviço.
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Cria um receptor para receber mensagens de uma sessão habilitada a fila. Quando nenhum sessionId é fornecida, a sessão aleatória entre as sessões disponíveis é usada.
+      - Gera o erro se um receptor de aberto já existe para determinado sessionId.
+      - Lança `SessionCannotBeLockedError` se a fila não têm sessões habilitadas (nesse caso, não passe a `sessionOptions` argumento) ou se o barramento de serviço não for capaz de obter um bloqueio na sessão (na qual caso tentam novamente após algum tempo)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            Uma enumeração que indica o modo no qual as mensagens devem ser recebidas. Os valores possíveis são:
+            - `ReceiveMode.peekLock`: Depois que uma mensagem é recebida nesse modo, o destinatário possui um bloqueio na mensagem por um período específico. Se a mensagem não estiver totalmente liquidada, desta vez, ela chega à volta no barramento de serviço a ser obtido, a próxima operação de recebimento.
+            - `ReceiveMode.receiveAndDelete`: As mensagens recebidas neste modo automaticamente removidas do barramento de serviço.
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            Opções para fornecer sessionId e a duração de renovação de bloqueio automático para o destinatário de sessão.
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Cria um remetente a ser usado para enviar mensagens, as mensagens sejam enviadas em um momento posterior de agendamento e Cancelando tais mensagens agendadas.
+      - Gera o erro se um remetente abrir já existe para este QueueClient.
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O caminho para a fila do barramento de serviço para o qual esse cliente é criado.
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.getDeadLetterQueuePath'
+    name: getDeadLetterQueuePath(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Retorna o nome de fila de mensagens mortas correspondente para a fila representada pelo nome fornecido.
+      Use isso no `createQueueClient` funcionarão no `ServiceBusClient` instância para receber mensagens de uma fila de mensagens mortas.
+    syntax:
+      content: 'static function getDeadLetterQueuePath(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: |
+            Nome da fila que está sendo buscada nome do cujo correspondente de mensagens mortas
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um identificador exclusivo para este cliente.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Busca o próximo lote de mensagens ativas (incluindo adiada, mas não morto mensagens).
+      - A primeira chamada para `peek()` busca a primeira mensagem ativa. Cada chamada subsequente busca a mensagem subsequente.
+      - Ao contrário de um `received` mensagem, `peeked` mensagem é uma versão somente leitura da mensagem.
+      Ele não pode ser `Completed/Abandoned/Deferred/Deadlettered`. O bloqueio não pode ser renovado.
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.QueueClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Exibe o número desejado de mensagens ativas (incluindo adiada, mas não morto mensagens) do número de sequência especificado.
+      - Ao contrário de um `received` mensagem, `peeked` mensagem é uma versão somente leitura da mensagem.
+      Ele não pode ser `Completed/Abandoned/Deferred/Deadlettered`. O bloqueio não pode ser renovado.
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: O número de sequência a partir do qual ler a mensagem.
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'

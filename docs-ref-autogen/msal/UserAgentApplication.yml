@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: 'Classe UserAgentApplication: <xref:UserAgentApplication> Objeto de instância que o desenvolvedor pode usar para fazer loginXX funções de acquireTokenXX OR'
+    summary: |
+      Classe UserAgentApplication instância do objeto que o desenvolvedor pode usar para fazer loginXX funções de acquireTokenXX OR
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Usado quando você deseja obter um access_token para sua API ao redirecionar o usuário para o ponto de extremidade de autorização.
+    summary: 'Use quando desejar obter um access_token para sua API, redirecionando a janela do navegador do usuário para o ponto de extremidade de autorização.'
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      Retorna a autoridade, onde autoridade é uma URL que indica o diretório que pode ser usar MSAL para obter tokens
-      - No Azure AD, esse atributo é uma URL que indica o active directory do Azure que usa a MSAL para obter tokens que ele está no formato https://login.microsoftonline.com/&lt; Enter_the_Tenant_Info_Here&gt; se seu aplicativo dá suporte a contas em um diretório organizacional, substitua o valor de "Enter_the_Tenant_Info_Here" com a Id de locatário ou o nome do locatário (por exemplo, contoso.microsoft.com) se seu aplicativo dá suporte a contas em qualquer diretório organizacional, substitua o valor de "Enter_the_Tenant_Info_Here" com organizações se seu aplicativo suporta contas em qualquer diretório organizacional e contas pessoais da Microsoft, substitua "Enter_the_Tenant_Info_ Aqui"valor com comum.
-      Para restringir o suporte para o pessoal da Microsoft contas somente, substitua o valor de "Enter_the_Tenant_Info_Here" com consumidores.
-      - B2C do Azure, ele é do formato https://&lt;instância&gt;/tfp/&lt;locatário&gt;/<policyName>/
+    summary: Método para gerenciar a URL de autoridade.
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Retorna a assinado na conta (recebido de um objeto de conta criado no momento do logon) ou nulo, quando nenhum estado é encontrado'
+    summary: 'Retorna a assinado na conta (o objeto de conta é criado no momento do logon bem-sucedido) ou nulo, quando nenhum estado é encontrado'
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Usado para filtrar todos os itens armazenados em cache e retornar uma lista de contas exclusivas com base em homeAccountIdentifier.
+    summary: Use para obter uma lista de contas exclusivas no cache da MSAL com base em homeAccountIdentifier.
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Retorna a instância de autoridade
+    summary: Obter a instância atual de autoridade do objeto de configuração de MSAL
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -198,40 +193,6 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Define as funções de retorno de chamada para o fluxo de redirecionamento enviar novamente o objeto de sucesso ou erro.
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Define as funções de retorno de chamada para o fluxo de redirecionamento enviar novamente o objeto de sucesso ou erro.
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      Usado para fazer logoff do usuário atual e redirecionará o usuário para o postLogoutRedirectUri.
-      Padrões de comportamento é redirecionar o usuário para `window.location.href`.
+      Usar para fazer logoff do usuário atual e redirecionará o usuário para o postLogoutRedirectUri.
+      Comportamento padrão é redirecionar o usuário `window.location.href`.
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: 'Construtor para o <xref:UserAgentApplication> deve ser capaz de criar uma instância do objeto a <xref:UserAgentApplication> objeto'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:
