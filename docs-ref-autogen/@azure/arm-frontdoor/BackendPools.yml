@@ -1,0 +1,461 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-frontdoor.BackendPools'
+    name: BackendPools
+    fullName: BackendPools
+    children:
+      - '@azure/arm-frontdoor.BackendPools.constructor'
+      - '@azure/arm-frontdoor.BackendPools.beginCreateOrUpdate'
+      - '@azure/arm-frontdoor.BackendPools.beginDeleteMethod'
+      - '@azure/arm-frontdoor.BackendPools.createOrUpdate'
+      - '@azure/arm-frontdoor.BackendPools.deleteMethod'
+      - '@azure/arm-frontdoor.BackendPools.get'
+      - '@azure/arm-frontdoor.BackendPools.get_2'
+      - '@azure/arm-frontdoor.BackendPools.get_1'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoor'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoor_2'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoor_1'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext_2'
+      - '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="92c6c-101">Classe que representa um BackendPools.</span><span class="sxs-lookup"><span data-stu-id="92c6c-101">Class representing a BackendPools.</span></span>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.constructor'
+    name: BackendPools(FrontDoorManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-102">Crie um BackendPools.</span><span class="sxs-lookup"><span data-stu-id="92c6c-102">Create a BackendPools.</span></span>
+    syntax:
+      content: 'new BackendPools(client: FrontDoorManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+          description: |
+            <span data-ttu-id="92c6c-103">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="92c6c-103">Reference to the service client.</span></span>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, BackendPool, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-104">Cria um novo Pool de back-end com o nome do Pool especificado dentro da frente especificado.</span><span class="sxs-lookup"><span data-stu-id="92c6c-104">Creates a new Backend Pool with the specified Pool name within the specified Front Door.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, frontDoorName: string, backendPoolName: string, backendPoolParameters: BackendPool, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-105">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-105">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-106">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-106">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-107">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-107">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: backendPoolParameters
+          type:
+            - '@azure/arm-frontdoor.BackendPool'
+          description: <span data-ttu-id="92c6c-108">Propriedades do Pool de back-end necessárias para criar um novo Pool.</span><span class="sxs-lookup"><span data-stu-id="92c6c-108">Backend Pool properties needed to create a new Pool.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-109">Exclui um Pool de back-end existente com os parâmetros especificados.</span><span class="sxs-lookup"><span data-stu-id="92c6c-109">Deletes an existing Backend Pool with the specified parameters.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, frontDoorName: string, backendPoolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-110">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-110">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-111">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-111">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-112">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-112">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, BackendPool, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-113">Cria um novo Pool de back-end com o nome do Pool especificado dentro da frente especificado.</span><span class="sxs-lookup"><span data-stu-id="92c6c-113">Creates a new Backend Pool with the specified Pool name within the specified Front Door.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, frontDoorName: string, backendPoolName: string, backendPoolParameters: BackendPool, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-114">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-114">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-115">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-115">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-116">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-116">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: backendPoolParameters
+          type:
+            - '@azure/arm-frontdoor.BackendPool'
+          description: <span data-ttu-id="92c6c-117">Propriedades do Pool de back-end necessárias para criar um novo Pool.</span><span class="sxs-lookup"><span data-stu-id="92c6c-117">Backend Pool properties needed to create a new Pool.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackendPoolsCreateOrUpdateResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-118">Exclui um Pool de back-end existente com os parâmetros especificados.</span><span class="sxs-lookup"><span data-stu-id="92c6c-118">Deletes an existing Backend Pool with the specified parameters.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, frontDoorName: string, backendPoolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-119">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-119">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-120">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-120">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-121">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-121">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-122">Obtém um Pool de back-end com o nome do Pool especificado dentro da frente especificado.</span><span class="sxs-lookup"><span data-stu-id="92c6c-122">Gets a Backend Pool with the specified Pool name within the specified Front Door.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, backendPoolName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-123">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-123">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-124">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-124">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-125">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-125">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackendPoolsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<BackendPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, backendPoolName: string, options: RequestOptionsBase, callback: ServiceCallback<BackendPool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-126">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-126">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-127">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-127">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-128">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-128">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="92c6c-129">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="92c6c-129">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPool>
+          description: |
+            <span data-ttu-id="92c6c-130">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-130">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.get_1'
+    name: 'get(string, string, string, ServiceCallback<BackendPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, frontDoorName: string, backendPoolName: string, callback: ServiceCallback<BackendPool>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-131">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-131">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-132">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-132">Name of the Front Door which is globally unique.</span></span>'
+        - id: backendPoolName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-133">Nome do Pool de back-end, que é exclusivo dentro da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-133">Name of the Backend Pool which is unique within the Front Door.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPool>
+          description: |
+            <span data-ttu-id="92c6c-134">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-134">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsGetResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoor'
+    name: 'listByFrontDoor(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-135">Lista todos os Pools de back-end dentro de uma porta da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-135">Lists all of the Backend Pools within a Front Door.</span></span>
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-136">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-136">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-137">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-137">Name of the Front Door which is globally unique.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoor_2'
+    name: 'listByFrontDoor(string, string, RequestOptionsBase, ServiceCallback<BackendPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, options: RequestOptionsBase, callback: ServiceCallback<BackendPoolListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-138">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-138">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-139">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-139">Name of the Front Door which is globally unique.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="92c6c-140">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="92c6c-140">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPoolListResult>
+          description: |
+            <span data-ttu-id="92c6c-141">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoor_1'
+    name: 'listByFrontDoor(string, string, ServiceCallback<BackendPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoor(resourceGroupName: string, frontDoorName: string, callback: ServiceCallback<BackendPoolListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-142">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="92c6c-142">Name of the Resource group within the Azure subscription.</span></span>
+        - id: frontDoorName
+          type:
+            - string
+          description: '<span data-ttu-id="92c6c-143">Nome da porta da frente, que é globalmente exclusivo.</span><span class="sxs-lookup"><span data-stu-id="92c6c-143">Name of the Front Door which is globally unique.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPoolListResult>
+          description: |
+            <span data-ttu-id="92c6c-144">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-144">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext'
+    name: 'listByFrontDoorNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="92c6c-145">Lista todos os Pools de back-end dentro de uma porta da frente.</span><span class="sxs-lookup"><span data-stu-id="92c6c-145">Lists all of the Backend Pools within a Front Door.</span></span>
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-146">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="92c6c-146">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext_2'
+    name: 'listByFrontDoorNext(string, RequestOptionsBase, ServiceCallback<BackendPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<BackendPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-147">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="92c6c-147">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="92c6c-148">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="92c6c-148">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPoolListResult>
+          description: |
+            <span data-ttu-id="92c6c-149">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-149">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+  - uid: '@azure/arm-frontdoor.BackendPools.listByFrontDoorNext_1'
+    name: 'listByFrontDoorNext(string, ServiceCallback<BackendPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByFrontDoorNext(nextPageLink: string, callback: ServiceCallback<BackendPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="92c6c-150">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="92c6c-150">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-frontdoor.BackendPoolListResult>
+          description: |
+            <span data-ttu-id="92c6c-151">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="92c6c-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.BackendPoolsListByFrontDoorNextResponse>
+    package: '@azure/arm-frontdoor'
+references:
+  - uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+    name: FrontDoorManagementClientContext
+    spec.typeScript:
+      - name: FrontDoorManagementClientContext
+        fullName: FrontDoorManagementClientContext
+        uid: '@azure/arm-frontdoor.FrontDoorManagementClientContext'
+  - uid: '@azure/arm-frontdoor.BackendPool'
+    name: BackendPool
+    spec.typeScript:
+      - name: BackendPool
+        fullName: BackendPool
+        uid: '@azure/arm-frontdoor.BackendPool'
+  - uid: ServiceCallback<@azure/arm-frontdoor.BackendPool>
+    name: BackendPool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BackendPool
+        fullName: BackendPool
+        uid: '@azure/arm-frontdoor.BackendPool'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-frontdoor.BackendPoolListResult>
+    name: BackendPoolListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: BackendPoolListResult
+        fullName: BackendPoolListResult
+        uid: '@azure/arm-frontdoor.BackendPoolListResult'
+      - name: '>'
+        fullName: '>'
