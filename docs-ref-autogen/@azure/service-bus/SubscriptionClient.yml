@@ -1,0 +1,333 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    fullName: SubscriptionClient
+    children:
+      - '@azure/service-bus.SubscriptionClient.addRule'
+      - '@azure/service-bus.SubscriptionClient.close'
+      - '@azure/service-bus.SubscriptionClient.createReceiver'
+      - '@azure/service-bus.SubscriptionClient.createReceiver_1'
+      - '@azure/service-bus.SubscriptionClient.defaultRuleName'
+      - '@azure/service-bus.SubscriptionClient.entityPath'
+      - '@azure/service-bus.SubscriptionClient.getRules'
+      - '@azure/service-bus.SubscriptionClient.id'
+      - '@azure/service-bus.SubscriptionClient.peek'
+      - '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+      - '@azure/service-bus.SubscriptionClient.removeRule'
+      - '@azure/service-bus.SubscriptionClient.subscriptionName'
+      - '@azure/service-bus.SubscriptionClient.topicName'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Descreve o cliente que permite interagir com uma assinatura do barramento de serviço.
+      Use o `createSubscriptionClient` função no objeto ServiceBusClient para instanciar um SubscriptionClient
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.addRule'
+    name: 'addRule(string, boolean | string | CorrelationFilter, undefined | string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Adiciona uma regra na assinatura, conforme definido pelo nome da regra fornecido, filtro e ação.
+      **Observação**: Remova o filtro verdadeiro padrão da assinatura antes de adicionar uma regra.
+      Caso contrário, a regra adicionada terá nenhum efeito, pois o filtro verdadeiro sempre resultará na assinatura do recebimento de todas as mensagens.
+    syntax:
+      content: 'function addRule(ruleName: string, filter: boolean | string | CorrelationFilter, sqlRuleActionExpression?: undefined | string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: Nome da regra
+        - id: filter
+          type:
+            - boolean | string | @azure/service-bus.CorrelationFilter
+          description: 'Um booliano, expressão SQL ou um filtro de correlação. Para obter a sintaxe de filtro SQL, consulte [sintaxe SQLFilter](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-filter).'
+        - id: sqlRuleActionExpression
+          type:
+            - undefined | string
+          description: |
+            Ação a ser executada se a mensagem satisfaz a expressão de filtragem. Para obter a sintaxe da ação de regra de SQL, consulte [sintaxe SQLRuleAction](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-sql-rule-action).
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Fecha o link AMQP para os receptores criados por esse cliente.
+      Depois de fechada, nem o SubscriptionClient nem seus destinatários podem ser usados para nenhuma outra operação.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver'
+    name: createReceiver(ReceiveMode)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Cria um receptor para receber mensagens de uma assinatura que não têm sessões habilitadas.
+      - Gera o erro se um receptor de aberto já existe para este SubscriptionClient.
+      - Lança `InvalidOperationError` se a assinatura tiver sessões habilitadas (nesse caso, use a sobrecarga desse método que usa `sessionOptions` argumento)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |
+            Uma enumeração que indica o modo no qual as mensagens devem ser recebidas. Os valores possíveis são:
+            - `ReceiveMode.peekLock`: Depois que uma mensagem é recebida nesse modo, o destinatário possui um bloqueio na mensagem por um período específico. Se a mensagem não estiver totalmente liquidada, desta vez, ela chega à volta no barramento de serviço a ser obtido, a próxima operação de recebimento.
+            - `ReceiveMode.receiveAndDelete`: As mensagens recebidas neste modo automaticamente removidas do barramento de serviço.
+      return:
+        type:
+          - '@azure/service-bus.Receiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.createReceiver_1'
+    name: 'createReceiver(ReceiveMode, SessionReceiverOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Cria um receptor para receber mensagens de uma sessão habilitada a assinatura. Quando nenhum sessionId é fornecida, a sessão aleatória entre as sessões disponíveis é usada.
+      - Gera o erro se um receptor de aberto já existe para determinado sessionId.
+      - Lança `SessionCannotBeLockedError` se a assinatura não tem sessões habilitadas (nesse caso, não passe a `sessionOptions` argumento) ou se o barramento de serviço não for capaz de obter um bloqueio na sessão (na qual caso tentam novamente após algum tempo)
+    syntax:
+      content: 'function createReceiver(receiveMode: ReceiveMode, sessionOptions: SessionReceiverOptions)'
+      parameters:
+        - id: receiveMode
+          type:
+            - '@azure/service-bus.ReceiveMode'
+          description: |-
+            Uma enumeração que indica o modo no qual as mensagens devem ser recebidas. Os valores possíveis são:
+            - `ReceiveMode.peekLock`: Depois que uma mensagem é recebida nesse modo, o destinatário possui um bloqueio na mensagem por um período específico. Se a mensagem não estiver totalmente liquidada, desta vez, ela chega à volta no barramento de serviço a ser obtido, a próxima operação de recebimento.
+            - `ReceiveMode.receiveAndDelete`: As mensagens recebidas neste modo automaticamente removidas do barramento de serviço.
+        - id: sessionOptions
+          type:
+            - '@azure/service-bus.SessionReceiverOptions'
+          description: |
+            Opções para fornecer sessionId e a duração de renovação de bloqueio automático para o destinatário de sessão.
+      return:
+        type:
+          - '@azure/service-bus.SessionReceiver'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.defaultRuleName'
+    name: defaultRuleName
+    fullName: defaultRuleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome da regra padrão na assinatura.
+    syntax:
+      content: 'defaultRuleName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O caminho para a assinatura do barramento de serviço para o qual esse cliente é criado.
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.getRules'
+    name: getRules()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtém todas as regras associadas à assinatura
+    syntax:
+      content: function getRules()
+      parameters: []
+      return:
+        type:
+          - 'Promise<@azure/service-bus.RuleDescription[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um identificador exclusivo para este cliente.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peek'
+    name: peek(undefined | number)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Busca o próximo lote de mensagens ativas (incluindo adiada, mas não morto mensagens).
+      - A primeira chamada para `peek()` busca a primeira mensagem ativa. Cada chamada subsequente busca a mensagem subsequente.
+      - Ao contrário de um `received` mensagem, `peeked` mensagem é uma versão somente leitura da mensagem.
+      Ele não pode ser `Completed/Abandoned/Deferred/Deadlettered`. O bloqueio não pode ser renovado.
+    syntax:
+      content: 'function peek(maxMessageCount?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.peekBySequenceNumber'
+    name: 'peekBySequenceNumber(Long, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Exibe o número desejado de mensagens ativas (incluindo adiada, mas não morto mensagens) do número de sequência especificado.
+      - Ao contrário de um `received` mensagem, `peeked` mensagem é uma versão somente leitura da mensagem.
+      Ele não pode ser `Completed/Abandoned/Deferred/Deadlettered`. O bloqueio não pode ser renovado.
+    syntax:
+      content: 'function peekBySequenceNumber(fromSequenceNumber: Long, maxMessageCount?: undefined | number)'
+      parameters:
+        - id: fromSequenceNumber
+          type:
+            - Long
+          description: O número de sequência a partir do qual ler a mensagem.
+        - id: maxMessageCount
+          type:
+            - undefined | number
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.removeRule'
+    name: removeRule(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Remove a regra na assinatura identificada pelo nome da regra fornecido.
+      **Cuidado**: Se todas as regras em uma assinatura são removidas, a assinatura não receberá mais mensagens.
+    syntax:
+      content: 'function removeRule(ruleName: string)'
+      parameters:
+        - id: ruleName
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.subscriptionName'
+    name: subscriptionName
+    fullName: subscriptionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome da assinatura do barramento de serviço para o qual esse cliente é criado.
+    syntax:
+      content: 'subscriptionName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SubscriptionClient.topicName'
+    name: topicName
+    fullName: topicName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome do tópico do barramento de serviço cuja assinatura, esse cliente é criado.'
+    syntax:
+      content: 'topicName: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: boolean | string | @azure/service-bus.CorrelationFilter
+    name: CorrelationFilter
+    spec.typeScript:
+      - name: 'boolean | string | '
+        fullName: 'boolean | string | '
+      - name: CorrelationFilter
+        fullName: CorrelationFilter
+        uid: '@azure/service-bus.CorrelationFilter'
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    spec.typeScript:
+      - name: Receiver
+        fullName: Receiver
+        uid: '@azure/service-bus.Receiver'
+  - uid: '@azure/service-bus.SessionReceiverOptions'
+    name: SessionReceiverOptions
+    spec.typeScript:
+      - name: SessionReceiverOptions
+        fullName: SessionReceiverOptions
+        uid: '@azure/service-bus.SessionReceiverOptions'
+  - uid: '@azure/service-bus.SessionReceiver'
+    name: SessionReceiver
+    spec.typeScript:
+      - name: SessionReceiver
+        fullName: SessionReceiver
+        uid: '@azure/service-bus.SessionReceiver'
+  - uid: 'Promise<@azure/service-bus.RuleDescription[]>'
+    name: 'RuleDescription[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: RuleDescription
+        fullName: RuleDescription
+        uid: '@azure/service-bus.RuleDescription'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: 'Promise<@azure/service-bus.ReceivedMessageInfo[]>'
+    name: 'ReceivedMessageInfo[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+      - name: '[]>'
+        fullName: '[]>'
