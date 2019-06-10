@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VaultCertificate'
+    name: VaultCertificate
+    fullName: VaultCertificate
+    children:
+      - '@azure/arm-compute.VaultCertificate.certificateStore'
+      - '@azure/arm-compute.VaultCertificate.certificateUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Descreve uma referência de certificado único em um cofre de chaves, e onde o certificado deve residir na VM.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateStore'
+    name: certificateStore
+    fullName: certificateStore
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Para VMs do Windows, especifica o repositório de certificados na máquina Virtual à qual o certificado deve ser adicionado. O armazenamento de certificado especificado é implicitamente na conta de LocalMachine. <br><br>Para VMs Linux, o arquivo de certificado é colocado no diretório /var/lib/waagent, com o nome do arquivo &lt;UppercaseThumbprint&gt;. crt X509 para o arquivo de certificado e &lt;UppercaseThumbprint&gt;.prv para chave privada. Ambos os arquivos são. PEM formatada.'
+    optional: true
+    syntax:
+      content: 'certificateStore?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VaultCertificate.certificateUrl'
+    name: certificateUrl
+    fullName: certificateUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Esta é a URL de um certificado que foi carregado no cofre de chaves como um segredo. Para adicionar um segredo ao Key Vault, consulte [adicionar uma chave ou segredo ao Cofre de chaves](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/#add). Nesse caso, o certificado precisa ser é a codificação Base64 de JSON a seguir do objeto que é codificado em UTF-8: <br><br> {<br>  "data":"<Base64-encoded-certificate>",<br>
+      "dataType":"pfx",<br>  "password":"<pfx-file-password>"<br>}
+    optional: true
+    syntax:
+      content: 'certificateUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
