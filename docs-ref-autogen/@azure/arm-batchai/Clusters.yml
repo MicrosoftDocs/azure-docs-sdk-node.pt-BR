@@ -1,0 +1,759 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-batchai.Clusters'
+    name: Clusters
+    fullName: Clusters
+    children:
+      - '@azure/arm-batchai.Clusters.beginCreate'
+      - '@azure/arm-batchai.Clusters.beginDeleteMethod'
+      - '@azure/arm-batchai.Clusters.constructor'
+      - '@azure/arm-batchai.Clusters.create'
+      - '@azure/arm-batchai.Clusters.deleteMethod'
+      - '@azure/arm-batchai.Clusters.get'
+      - '@azure/arm-batchai.Clusters.get_2'
+      - '@azure/arm-batchai.Clusters.get_1'
+      - '@azure/arm-batchai.Clusters.listByWorkspace_2'
+      - '@azure/arm-batchai.Clusters.listByWorkspace'
+      - '@azure/arm-batchai.Clusters.listByWorkspace_1'
+      - '@azure/arm-batchai.Clusters.listByWorkspaceNext'
+      - '@azure/arm-batchai.Clusters.listByWorkspaceNext_2'
+      - '@azure/arm-batchai.Clusters.listByWorkspaceNext_1'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformation'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformation_2'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformation_1'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext_2'
+      - '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext_1'
+      - '@azure/arm-batchai.Clusters.update_2'
+      - '@azure/arm-batchai.Clusters.update'
+      - '@azure/arm-batchai.Clusters.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="9529b-101">Classe que representa um cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-101">Class representing a Clusters.</span></span>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.beginCreate'
+    name: 'beginCreate(string, string, string, ClusterCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-102">Cria um Cluster em determinado espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-102">Creates a Cluster in the given Workspace.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, workspaceName: string, clusterName: string, parameters: ClusterCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-103">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-103">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-104">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-104">The name of the workspace.</span></span> <span data-ttu-id="9529b-105">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-105">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-106">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-106">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-107">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-107">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-108">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-108">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-109">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-109">The name must be from 1 through 64 characters long.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.ClusterCreateParameters'
+          description: <span data-ttu-id="9529b-110">Os parâmetros para fornecer para a criação do Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-110">The parameters to provide for the Cluster creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-111">Exclui um Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-111">Deletes a Cluster.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, workspaceName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-112">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-112">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-113">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-113">The name of the workspace.</span></span> <span data-ttu-id="9529b-114">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-114">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-115">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-115">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-116">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-116">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-117">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-117">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-118">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-118">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.constructor'
+    name: Clusters(BatchAIManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-119">Crie um cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-119">Create a Clusters.</span></span>
+    syntax:
+      content: 'new Clusters(client: BatchAIManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-batchai.BatchAIManagementClientContext'
+          description: |
+            <span data-ttu-id="9529b-120">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="9529b-120">Reference to the service client.</span></span>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.create'
+    name: 'create(string, string, string, ClusterCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-121">Cria um Cluster em determinado espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-121">Creates a Cluster in the given Workspace.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, workspaceName: string, clusterName: string, parameters: ClusterCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-122">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-122">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-123">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-123">The name of the workspace.</span></span> <span data-ttu-id="9529b-124">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-124">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-125">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-125">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-126">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-126">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-127">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-127">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-128">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-128">The name must be from 1 through 64 characters long.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-batchai.ClusterCreateParameters'
+          description: <span data-ttu-id="9529b-129">Os parâmetros para fornecer para a criação do Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-129">The parameters to provide for the Cluster creation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersCreateResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-130">Exclui um Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-130">Deletes a Cluster.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, workspaceName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-131">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-131">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-132">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-132">The name of the workspace.</span></span> <span data-ttu-id="9529b-133">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-133">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-134">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-134">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-135">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-135">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-136">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-136">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-137">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-137">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-138">Obtém informações sobre um Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-138">Gets information about a Cluster.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-139">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-139">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-140">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-140">The name of the workspace.</span></span> <span data-ttu-id="9529b-141">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-141">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-142">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-142">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-143">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-143">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-144">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-144">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-145">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-145">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<Cluster>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, clusterName: string, options: RequestOptionsBase, callback: ServiceCallback<Cluster>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-146">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-146">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-147">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-147">The name of the workspace.</span></span> <span data-ttu-id="9529b-148">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-148">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-149">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-149">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-150">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-150">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-151">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-151">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-152">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-152">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9529b-153">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-153">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Cluster>
+          description: |
+            <span data-ttu-id="9529b-154">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-154">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.get_1'
+    name: 'get(string, string, string, ServiceCallback<Cluster>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, workspaceName: string, clusterName: string, callback: ServiceCallback<Cluster>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-155">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-155">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-156">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-156">The name of the workspace.</span></span> <span data-ttu-id="9529b-157">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-157">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-158">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-158">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-159">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-159">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-160">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-160">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-161">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-161">The name must be from 1 through 64 characters long.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Cluster>
+          description: |
+            <span data-ttu-id="9529b-162">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersGetResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspace_2'
+    name: 'listByWorkspace(string, string, ClustersListByWorkspaceOptionalParams, ServiceCallback<ClusterListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, options: ClustersListByWorkspaceOptionalParams, callback: ServiceCallback<ClusterListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-163">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-163">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-164">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-164">The name of the workspace.</span></span> <span data-ttu-id="9529b-165">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-165">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-166">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-166">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-batchai.ClustersListByWorkspaceOptionalParams'
+          description: <span data-ttu-id="9529b-167">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-167">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.ClusterListResult>
+          description: |
+            <span data-ttu-id="9529b-168">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-168">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspace'
+    name: 'listByWorkspace(string, string, Models.ClustersListByWorkspaceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-169">Obtém informações sobre Clusters associados o determinado espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-169">Gets information about Clusters associated with the given Workspace.</span></span>
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, options?: Models.ClustersListByWorkspaceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-170">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-170">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-171">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-171">The name of the workspace.</span></span> <span data-ttu-id="9529b-172">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-172">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-173">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-173">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - Models.ClustersListByWorkspaceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspace_1'
+    name: 'listByWorkspace(string, string, ServiceCallback<ClusterListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspace(resourceGroupName: string, workspaceName: string, callback: ServiceCallback<ClusterListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-174">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-174">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-175">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-175">The name of the workspace.</span></span> <span data-ttu-id="9529b-176">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-176">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-177">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-177">The name must be from 1 through 64 characters long.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.ClusterListResult>
+          description: |
+            <span data-ttu-id="9529b-178">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspaceNext'
+    name: 'listByWorkspaceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-179">Obtém informações sobre Clusters associados o determinado espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-179">Gets information about Clusters associated with the given Workspace.</span></span>
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-180">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspaceNext_2'
+    name: 'listByWorkspaceNext(string, RequestOptionsBase, ServiceCallback<ClusterListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ClusterListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-181">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-181">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9529b-182">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-182">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.ClusterListResult>
+          description: |
+            <span data-ttu-id="9529b-183">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listByWorkspaceNext_1'
+    name: 'listByWorkspaceNext(string, ServiceCallback<ClusterListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByWorkspaceNext(nextPageLink: string, callback: ServiceCallback<ClusterListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-184">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-184">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.ClusterListResult>
+          description: |
+            <span data-ttu-id="9529b-185">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-185">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListByWorkspaceNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformation'
+    name: 'listRemoteLoginInformation(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="9529b-186">Obtenha o endereço IP, porta de todos os nós de computação no Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-186">Get the IP address, port of all the compute nodes in the Cluster.</span></span>'
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, clusterName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-187">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-187">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-188">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-188">The name of the workspace.</span></span> <span data-ttu-id="9529b-189">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-189">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-190">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-190">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-191">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-191">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-192">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-192">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-193">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-193">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformation_2'
+    name: 'listRemoteLoginInformation(string, string, string, RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, clusterName: string, options: RequestOptionsBase, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-194">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-194">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-195">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-195">The name of the workspace.</span></span> <span data-ttu-id="9529b-196">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-196">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-197">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-197">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-198">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-198">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-199">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-199">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-200">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-200">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9529b-201">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-201">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="9529b-202">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-202">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformation_1'
+    name: 'listRemoteLoginInformation(string, string, string, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformation(resourceGroupName: string, workspaceName: string, clusterName: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-203">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-203">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-204">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-204">The name of the workspace.</span></span> <span data-ttu-id="9529b-205">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-205">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-206">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-206">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-207">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-207">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-208">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-208">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-209">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-209">The name must be from 1 through 64 characters long.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="9529b-210">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-210">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext'
+    name: 'listRemoteLoginInformationNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="9529b-211">Obtenha o endereço IP, porta de todos os nós de computação no Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-211">Get the IP address, port of all the compute nodes in the Cluster.</span></span>'
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-212">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-212">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext_2'
+    name: 'listRemoteLoginInformationNext(string, RequestOptionsBase, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-213">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-213">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9529b-214">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-214">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="9529b-215">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.listRemoteLoginInformationNext_1'
+    name: 'listRemoteLoginInformationNext(string, ServiceCallback<RemoteLoginInformationListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listRemoteLoginInformationNext(nextPageLink: string, callback: ServiceCallback<RemoteLoginInformationListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9529b-216">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="9529b-216">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+          description: |
+            <span data-ttu-id="9529b-217">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersListRemoteLoginInformationNextResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.update_2'
+    name: 'update(string, string, string, ClustersUpdateOptionalParams, ServiceCallback<Cluster>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, workspaceName: string, clusterName: string, options: ClustersUpdateOptionalParams, callback: ServiceCallback<Cluster>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-218">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-218">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-219">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-219">The name of the workspace.</span></span> <span data-ttu-id="9529b-220">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-220">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-221">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-221">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-222">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-222">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-223">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-223">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-224">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-224">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-batchai.ClustersUpdateOptionalParams'
+          description: <span data-ttu-id="9529b-225">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="9529b-225">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Cluster>
+          description: |
+            <span data-ttu-id="9529b-226">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-226">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersUpdateResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.update'
+    name: 'update(string, string, string, Models.ClustersUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9529b-227">Atualiza as propriedades de um Cluster.</span><span class="sxs-lookup"><span data-stu-id="9529b-227">Updates properties of a Cluster.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, workspaceName: string, clusterName: string, options?: Models.ClustersUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-228">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-228">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-229">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-229">The name of the workspace.</span></span> <span data-ttu-id="9529b-230">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-230">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-231">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-231">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-232">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-232">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-233">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-233">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-234">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-234">The name must be from 1 through 64 characters long.</span></span>'
+        - id: options
+          type:
+            - Models.ClustersUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ClustersUpdateResponse>
+    package: '@azure/arm-batchai'
+  - uid: '@azure/arm-batchai.Clusters.update_1'
+    name: 'update(string, string, string, ServiceCallback<Cluster>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, workspaceName: string, clusterName: string, callback: ServiceCallback<Cluster>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="9529b-235">Nome do grupo de recursos ao qual o recurso pertence.</span><span class="sxs-lookup"><span data-stu-id="9529b-235">Name of the resource group to which the resource belongs.</span></span>
+        - id: workspaceName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-236">O nome do espaço de trabalho.</span><span class="sxs-lookup"><span data-stu-id="9529b-236">The name of the workspace.</span></span> <span data-ttu-id="9529b-237">Nomes de espaço de trabalho só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-237">Workspace names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-238">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-238">The name must be from 1 through 64 characters long.</span></span>'
+        - id: clusterName
+          type:
+            - string
+          description: '<span data-ttu-id="9529b-239">O nome do cluster dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="9529b-239">The name of the cluster within the specified resource group.</span></span> <span data-ttu-id="9529b-240">Nomes de cluster só podem conter uma combinação de caracteres alfanuméricos, juntamente com o traço (-) e sublinhado (_).</span><span class="sxs-lookup"><span data-stu-id="9529b-240">Cluster names can only contain a combination of alphanumeric characters along with dash (-) and underscore (_).</span></span> <span data-ttu-id="9529b-241">O nome deve ser de 1 a 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="9529b-241">The name must be from 1 through 64 characters long.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-batchai.Cluster>
+          description: |
+            <span data-ttu-id="9529b-242">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="9529b-242">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ClustersUpdateResponse>
+    package: '@azure/arm-batchai'
+references:
+  - uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+    name: BatchAIManagementClientContext
+    spec.typeScript:
+      - name: BatchAIManagementClientContext
+        fullName: BatchAIManagementClientContext
+        uid: '@azure/arm-batchai.BatchAIManagementClientContext'
+  - uid: '@azure/arm-batchai.ClusterCreateParameters'
+    name: ClusterCreateParameters
+    spec.typeScript:
+      - name: ClusterCreateParameters
+        fullName: ClusterCreateParameters
+        uid: '@azure/arm-batchai.ClusterCreateParameters'
+  - uid: ServiceCallback<@azure/arm-batchai.Cluster>
+    name: Cluster>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Cluster
+        fullName: Cluster
+        uid: '@azure/arm-batchai.Cluster'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-batchai.ClusterListResult>
+    name: ClusterListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ClusterListResult
+        fullName: ClusterListResult
+        uid: '@azure/arm-batchai.ClusterListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batchai.ClustersListByWorkspaceOptionalParams'
+    name: ClustersListByWorkspaceOptionalParams
+    spec.typeScript:
+      - name: ClustersListByWorkspaceOptionalParams
+        fullName: ClustersListByWorkspaceOptionalParams
+        uid: '@azure/arm-batchai.ClustersListByWorkspaceOptionalParams'
+  - uid: ServiceCallback<@azure/arm-batchai.RemoteLoginInformationListResult>
+    name: RemoteLoginInformationListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RemoteLoginInformationListResult
+        fullName: RemoteLoginInformationListResult
+        uid: '@azure/arm-batchai.RemoteLoginInformationListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-batchai.ClustersUpdateOptionalParams'
+    name: ClustersUpdateOptionalParams
+    spec.typeScript:
+      - name: ClustersUpdateOptionalParams
+        fullName: ClustersUpdateOptionalParams
+        uid: '@azure/arm-batchai.ClustersUpdateOptionalParams'
