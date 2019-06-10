@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Descreve o cliente que permite interagir com um tópico do barramento de serviço.
+      Use o `createTopicClient` função no objeto ServiceBusClient para instanciar um TopicClient
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Fecha o link AMQP para o remetente criado por esse cliente.
+      Depois de fechada, nem o TopicClient nem seus remetentes podem ser usados para nenhuma outra operação.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Cria um remetente a ser usado para enviar mensagens, as mensagens sejam enviadas em um momento posterior de agendamento e Cancelando tais mensagens agendadas.
+      - Gera o erro se um remetente abrir já existe para este TopicClient.
+      Se o tópico tem assinaturas de sessão habilitada, as mensagens enviadas sem o `sessionId` propriedade entrará na fila de mensagens mortas de tais assinaturas.
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O caminho para o tópico do barramento de serviço para o qual esse cliente é criado.
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Retorna o nome do tópico mensagens mortas correspondente para os nomes de tópico e assinatura determinados.
+      Usar isso na `createSubscriptionClient` função da `ServiceBusClient` instância para receber mensagens da fila de mensagens mortas para uma determinada assinatura.
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: Nome do tópico nome do cujo correspondente de mensagens mortas está sendo buscada
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            Nome da assinatura está sendo buscada nome do cujo correspondente de mensagens mortas
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Um identificador exclusivo para este cliente.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
