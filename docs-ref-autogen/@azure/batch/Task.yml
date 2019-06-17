@@ -1,0 +1,1005 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Task'
+    name: Task
+    fullName: Task
+    children:
+      - '@azure/batch.Task.add'
+      - '@azure/batch.Task.add_1'
+      - '@azure/batch.Task.add_2'
+      - '@azure/batch.Task.addCollection'
+      - '@azure/batch.Task.addCollection_1'
+      - '@azure/batch.Task.addCollection_2'
+      - '@azure/batch.Task.deleteMethod'
+      - '@azure/batch.Task.deleteMethod_1'
+      - '@azure/batch.Task.deleteMethod_2'
+      - '@azure/batch.Task.get'
+      - '@azure/batch.Task.get_1'
+      - '@azure/batch.Task.get_2'
+      - '@azure/batch.Task.list'
+      - '@azure/batch.Task.list_1'
+      - '@azure/batch.Task.list_2'
+      - '@azure/batch.Task.listNext'
+      - '@azure/batch.Task.listNext_1'
+      - '@azure/batch.Task.listNext_2'
+      - '@azure/batch.Task.listSubtasks'
+      - '@azure/batch.Task.listSubtasks_1'
+      - '@azure/batch.Task.listSubtasks_2'
+      - '@azure/batch.Task.reactivate'
+      - '@azure/batch.Task.reactivate_1'
+      - '@azure/batch.Task.reactivate_2'
+      - '@azure/batch.Task.constructor'
+      - '@azure/batch.Task.terminate'
+      - '@azure/batch.Task.terminate_1'
+      - '@azure/batch.Task.terminate_2'
+      - '@azure/batch.Task.update'
+      - '@azure/batch.Task.update_1'
+      - '@azure/batch.Task.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa uma tarefa.
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add'
+    name: 'add(string, TaskAddParameter, Models.TaskAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: O tempo de vida máximo de uma tarefa de adição até a conclusão é de 180 dias. Se uma tarefa não foi concluída dentro de 180 dias do que está sendo adicionado a que ele será encerrado pelo serviço de lote e à esquerda no estado em que era nesse momento.
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, options?: Models.TaskAddOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a tarefa deve ser adicionado.
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: A tarefa a ser adicionado.
+        - id: options
+          type:
+            - Models.TaskAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add_1'
+    name: 'add(string, TaskAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a tarefa deve ser adicionado.
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: A tarefa a ser adicionado.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.add_2'
+    name: 'add(string, TaskAddParameter, TaskAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(jobId: string, task: TaskAddParameter, options: TaskAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a tarefa deve ser adicionado.
+        - id: task
+          type:
+            - '@azure/batch.TaskAddParameter'
+          description: A tarefa a ser adicionado.
+        - id: options
+          type:
+            - '@azure/batch.TaskAddOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection'
+    name: 'addCollection(string, TaskAddParameter[], Models.TaskAddCollectionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Observe que cada tarefa deve ter uma ID exclusiva. O serviço de lote não pode retornar os resultados para cada tarefa na mesma ordem em que as tarefas foram enviadas na solicitação. Se o servidor expirar ou a conexão for fechada durante a solicitação, a solicitação pode ter sido processada parcialmente ou totalmente, ou não de forma alguma. Nesses casos, o usuário deve emitir novamente a solicitação. Observe que cabe ao usuário para lidar corretamente com falhas ao emitir uma solicitação novamente. Por exemplo, você deve usar as mesmas IDs de tarefa durante uma tentativa de modo que se a operação anterior tiver sido bem-sucedida, a repetição não crie tarefas extras inesperadamente. Se a resposta contém quaisquer tarefas que falha ao adicionar, um cliente pode repetir a solicitação. Em uma nova tentativa, é mais eficiente para reenviar somente as tarefas que falharam para adicionar e omitir as tarefas que foram adicionadas com êxito na primeira tentativa. O tempo de vida máximo de uma tarefa de adição até a conclusão é de 180 dias. Se uma tarefa não foi concluída dentro de 180 dias do que está sendo adicionado a que ele será encerrado pelo serviço de lote e à esquerda no estado em que era nesse momento.'
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], options?: Models.TaskAddCollectionOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a coleção de tarefas deve ser adicionado.
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: 'A coleção de tarefas devem ser adicionadas. A contagem máxima de tarefas é 100. O tamanho serializado total desta coleção deve ser menor que 1MB. Se for maior que 1MB (por exemplo, se cada tarefa tem 100 de arquivos de recursos ou variáveis de ambiente), a solicitação falhará com o código ''RequestBodyTooLarge'' e deve ser repetida novamente com menos tarefas.'
+        - id: options
+          type:
+            - Models.TaskAddCollectionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection_1'
+    name: 'addCollection(string, TaskAddParameter[], ServiceCallback<TaskAddCollectionResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], callback: ServiceCallback<TaskAddCollectionResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a coleção de tarefas deve ser adicionado.
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: 'A coleção de tarefas devem ser adicionadas. A contagem máxima de tarefas é 100. O tamanho serializado total desta coleção deve ser menor que 1MB. Se for maior que 1MB (por exemplo, se cada tarefa tem 100 de arquivos de recursos ou variáveis de ambiente), a solicitação falhará com o código ''RequestBodyTooLarge'' e deve ser repetida novamente com menos tarefas.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskAddCollectionResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.addCollection_2'
+    name: 'addCollection(string, TaskAddParameter[], TaskAddCollectionOptionalParams, ServiceCallback<TaskAddCollectionResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addCollection(jobId: string, value: TaskAddParameter[], options: TaskAddCollectionOptionalParams, callback: ServiceCallback<TaskAddCollectionResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho ao qual a coleção de tarefas deve ser adicionado.
+        - id: value
+          type:
+            - '@azure/batch.TaskAddParameter[]'
+          description: 'A coleção de tarefas devem ser adicionadas. A contagem máxima de tarefas é 100. O tamanho serializado total desta coleção deve ser menor que 1MB. Se for maior que 1MB (por exemplo, se cada tarefa tem 100 de arquivos de recursos ou variáveis de ambiente), a solicitação falhará com o código ''RequestBodyTooLarge'' e deve ser repetida novamente com menos tarefas.'
+        - id: options
+          type:
+            - '@azure/batch.TaskAddCollectionOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.TaskAddCollectionResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskAddCollectionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod'
+    name: 'deleteMethod(string, string, Models.TaskDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Quando uma tarefa é excluída, todos os arquivos em seu diretório no nó de computação em que ele foi executado também são excluídos (independentemente do tempo de retenção). Para tarefas de várias instâncias, a operação de exclusão da tarefa se aplica sincronicamente à tarefa principal; subtarefas e seus arquivos, em seguida, são excluídos assincronamente em segundo plano.'
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, options?: Models.TaskDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho do qual excluir a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para excluir.
+        - id: options
+          type:
+            - Models.TaskDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho do qual excluir a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para excluir.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.deleteMethod_2'
+    name: 'deleteMethod(string, string, TaskDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobId: string, taskId: string, options: TaskDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho do qual excluir a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para excluir.
+        - id: options
+          type:
+            - '@azure/batch.TaskDeleteMethodOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get'
+    name: 'get(string, string, Models.TaskGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Para tarefas de várias instâncias, informações como affinityId, executionInfo e nodeInfo referem-se à tarefa principal. Use as API de subtarefas de lista para recuperar informações sobre subtarefas.'
+    syntax:
+      content: 'function get(jobId: string, taskId: string, options?: Models.TaskGetOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para obter informações sobre.
+        - id: options
+          type:
+            - Models.TaskGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get_1'
+    name: 'get(string, string, ServiceCallback<CloudTask>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, taskId: string, callback: ServiceCallback<CloudTask>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para obter informações sobre.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTask>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.get_2'
+    name: 'get(string, string, TaskGetOptionalParams, ServiceCallback<CloudTask>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobId: string, taskId: string, options: TaskGetOptionalParams, callback: ServiceCallback<CloudTask>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para obter informações sobre.
+        - id: options
+          type:
+            - '@azure/batch.TaskGetOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTask>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list'
+    name: 'list(string, Models.TaskListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Para tarefas de várias instâncias, informações como affinityId, executionInfo e nodeInfo referem-se à tarefa principal. Use as API de subtarefas de lista para recuperar informações sobre subtarefas.'
+    syntax:
+      content: 'function list(jobId: string, options?: Models.TaskListOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: options
+          type:
+            - Models.TaskListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list_1'
+    name: 'list(string, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(jobId: string, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.list_2'
+    name: 'list(string, TaskListOptionalParams, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(jobId: string, options: TaskListOptionalParams, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: options
+          type:
+            - '@azure/batch.TaskListOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext'
+    name: 'listNext(string, Models.TaskListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Para tarefas de várias instâncias, informações como affinityId, executionInfo e nodeInfo referem-se à tarefa principal. Use as API de subtarefas de lista para recuperar informações sobre subtarefas.'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.TaskListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - Models.TaskListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listNext_2'
+    name: 'listNext(string, TaskListNextOptionalParams, ServiceCallback<CloudTaskListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: TaskListNextOptionalParams, callback: ServiceCallback<CloudTaskListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - '@azure/batch.TaskListNextOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks'
+    name: 'listSubtasks(string, string, Models.TaskListSubtasksOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Se a tarefa não é uma tarefa de várias instâncias, em seguida, isso retorna uma coleção vazia.'
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, options?: Models.TaskListSubtasksOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa.
+        - id: options
+          type:
+            - Models.TaskListSubtasksOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks_1'
+    name: 'listSubtasks(string, string, ServiceCallback<CloudTaskListSubtasksResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.listSubtasks_2'
+    name: 'listSubtasks(string, string, TaskListSubtasksOptionalParams, ServiceCallback<CloudTaskListSubtasksResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listSubtasks(jobId: string, taskId: string, options: TaskListSubtasksOptionalParams, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa.
+        - id: options
+          type:
+            - '@azure/batch.TaskListSubtasksOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskListSubtasksResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate'
+    name: 'reactivate(string, string, Models.TaskReactivateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Reativação faz com que uma tarefa elegível para ser repetida novamente até sua contagem máxima de novas tentativas. O estado da tarefa é alterado para ativo. Como a tarefa não está mais no estado concluído, qualquer informação de código ou a falha de saída anterior não está mais disponível após a reativação. Sempre que uma tarefa é reativada, sua contagem de repetição é redefinida como 0. Reativação falhará para tarefas que não foram concluídas ou que anteriormente foi concluída com êxito (com um código de saída 0). Além disso, ele falhará se o trabalho foi concluída (ou está finalizando ou excluindo).'
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, options?: Models.TaskReactivateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para reativar.
+        - id: options
+          type:
+            - Models.TaskReactivateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate_1'
+    name: 'reactivate(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para reativar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.reactivate_2'
+    name: 'reactivate(string, string, TaskReactivateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function reactivate(jobId: string, taskId: string, options: TaskReactivateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para reativar.
+        - id: options
+          type:
+            - '@azure/batch.TaskReactivateOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskReactivateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.constructor'
+    name: Task(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie uma tarefa.
+    syntax:
+      content: 'new Task(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate'
+    name: 'terminate(string, string, Models.TaskTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Quando a tarefa foi encerrada, ele move para o estado concluído. Para tarefas de várias instâncias, a operação de tarefa terminate sincronicamente aplica à tarefa principal; subtarefas, em seguida, são encerradas de forma assíncrona em segundo plano.'
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, options?: Models.TaskTerminateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para encerrar.
+        - id: options
+          type:
+            - Models.TaskTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate_1'
+    name: 'terminate(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para encerrar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.terminate_2'
+    name: 'terminate(string, string, TaskTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobId: string, taskId: string, options: TaskTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para encerrar.
+        - id: options
+          type:
+            - '@azure/batch.TaskTerminateOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update'
+    name: 'update(string, string, Models.TaskUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Atualiza as propriedades da tarefa especificada.
+    syntax:
+      content: 'function update(jobId: string, taskId: string, options?: Models.TaskUpdateOptionalParams)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para atualizar.
+        - id: options
+          type:
+            - Models.TaskUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update_1'
+    name: 'update(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para atualizar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Task.update_2'
+    name: 'update(string, string, TaskUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobId: string, taskId: string, options: TaskUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobId
+          type:
+            - string
+          description: A ID do trabalho que contém a tarefa.
+        - id: taskId
+          type:
+            - string
+          description: A ID da tarefa para atualizar.
+        - id: options
+          type:
+            - '@azure/batch.TaskUpdateOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TaskUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.TaskAddParameter'
+    name: TaskAddParameter
+    spec.typeScript:
+      - name: TaskAddParameter
+        fullName: TaskAddParameter
+        uid: '@azure/batch.TaskAddParameter'
+  - uid: '@azure/batch.TaskAddOptionalParams'
+    name: TaskAddOptionalParams
+    spec.typeScript:
+      - name: TaskAddOptionalParams
+        fullName: TaskAddOptionalParams
+        uid: '@azure/batch.TaskAddOptionalParams'
+  - uid: '@azure/batch.TaskAddParameter[]'
+    name: 'TaskAddParameter[]'
+    spec.typeScript:
+      - name: TaskAddParameter
+        fullName: TaskAddParameter
+        uid: '@azure/batch.TaskAddParameter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: ServiceCallback<@azure/batch.TaskAddCollectionResult>
+    name: TaskAddCollectionResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: TaskAddCollectionResult
+        fullName: TaskAddCollectionResult
+        uid: '@azure/batch.TaskAddCollectionResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskAddCollectionOptionalParams'
+    name: TaskAddCollectionOptionalParams
+    spec.typeScript:
+      - name: TaskAddCollectionOptionalParams
+        fullName: TaskAddCollectionOptionalParams
+        uid: '@azure/batch.TaskAddCollectionOptionalParams'
+  - uid: '@azure/batch.TaskDeleteMethodOptionalParams'
+    name: TaskDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: TaskDeleteMethodOptionalParams
+        fullName: TaskDeleteMethodOptionalParams
+        uid: '@azure/batch.TaskDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTask>
+    name: CloudTask>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTask
+        fullName: CloudTask
+        uid: '@azure/batch.CloudTask'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskGetOptionalParams'
+    name: TaskGetOptionalParams
+    spec.typeScript:
+      - name: TaskGetOptionalParams
+        fullName: TaskGetOptionalParams
+        uid: '@azure/batch.TaskGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTaskListResult>
+    name: CloudTaskListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTaskListResult
+        fullName: CloudTaskListResult
+        uid: '@azure/batch.CloudTaskListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskListOptionalParams'
+    name: TaskListOptionalParams
+    spec.typeScript:
+      - name: TaskListOptionalParams
+        fullName: TaskListOptionalParams
+        uid: '@azure/batch.TaskListOptionalParams'
+  - uid: '@azure/batch.TaskListNextOptionalParams'
+    name: TaskListNextOptionalParams
+    spec.typeScript:
+      - name: TaskListNextOptionalParams
+        fullName: TaskListNextOptionalParams
+        uid: '@azure/batch.TaskListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudTaskListSubtasksResult>
+    name: CloudTaskListSubtasksResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudTaskListSubtasksResult
+        fullName: CloudTaskListSubtasksResult
+        uid: '@azure/batch.CloudTaskListSubtasksResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.TaskListSubtasksOptionalParams'
+    name: TaskListSubtasksOptionalParams
+    spec.typeScript:
+      - name: TaskListSubtasksOptionalParams
+        fullName: TaskListSubtasksOptionalParams
+        uid: '@azure/batch.TaskListSubtasksOptionalParams'
+  - uid: '@azure/batch.TaskReactivateOptionalParams'
+    name: TaskReactivateOptionalParams
+    spec.typeScript:
+      - name: TaskReactivateOptionalParams
+        fullName: TaskReactivateOptionalParams
+        uid: '@azure/batch.TaskReactivateOptionalParams'
+  - uid: '@azure/batch.TaskTerminateOptionalParams'
+    name: TaskTerminateOptionalParams
+    spec.typeScript:
+      - name: TaskTerminateOptionalParams
+        fullName: TaskTerminateOptionalParams
+        uid: '@azure/batch.TaskTerminateOptionalParams'
+  - uid: '@azure/batch.TaskUpdateOptionalParams'
+    name: TaskUpdateOptionalParams
+    spec.typeScript:
+      - name: TaskUpdateOptionalParams
+        fullName: TaskUpdateOptionalParams
+        uid: '@azure/batch.TaskUpdateOptionalParams'

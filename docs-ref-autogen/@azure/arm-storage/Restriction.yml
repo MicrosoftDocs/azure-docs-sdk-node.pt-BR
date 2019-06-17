@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: A restrição por causa de qual SKU não pode ser usado.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O motivo para a restrição. A partir de agora, isso pode ser "QuotaId" ou "NotAvailableForSubscription". Id de cota é definida quando o SKU tem requiredQuotas parâmetro conforme a assinatura não pertence a essa cota. "NotAvailableForSubscription" está relacionado à capacidade no controlador de domínio. Os valores possíveis incluem: ''QuotaId'', ''NotAvailableForSubscription'''
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O tipo de restrições. A partir de agora, somente o valor possível para isso é local.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O valor de restrições. Se o tipo de restrição é definido como local. Isso seria diferentes locais em que a SKU é restrita.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'

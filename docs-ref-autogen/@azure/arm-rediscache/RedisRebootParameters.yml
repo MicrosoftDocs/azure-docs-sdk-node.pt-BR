@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-rediscache.RedisRebootParameters'
+    name: RedisRebootParameters
+    fullName: RedisRebootParameters
+    children:
+      - '@azure/arm-rediscache.RedisRebootParameters.rebootType'
+      - '@azure/arm-rediscache.RedisRebootParameters.shardId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Especifica qual nó (s) a reinicialização de Redis.
+    package: '@azure/arm-rediscache'
+  - uid: '@azure/arm-rediscache.RedisRebootParameters.rebootType'
+    name: rebootType
+    fullName: rebootType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quais nós Redis a reinicialização. Dependendo desse valor é possível perda de dados. Os valores possíveis incluem: ''PrimaryNode'', ''SecondaryNode'', ''AllNodes'''
+    syntax:
+      content: 'rebootType: RebootType'
+      return:
+        type:
+          - '@azure/arm-rediscache.RebootType'
+    package: '@azure/arm-rediscache'
+  - uid: '@azure/arm-rediscache.RedisRebootParameters.shardId'
+    name: shardId
+    fullName: shardId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se o clustering estiver habilitado, a ID do fragmento a ser reinicializado.'
+    optional: true
+    syntax:
+      content: 'shardId?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-rediscache'
+references:
+  - uid: '@azure/arm-rediscache.RebootType'
+    name: RebootType
+    spec.typeScript:
+      - name: RebootType
+        fullName: RebootType
+        uid: '@azure/arm-rediscache.RebootType'

@@ -13,6 +13,7 @@ items:
       - '@azure/arm-network.ApplicationGatewayProbe.name'
       - '@azure/arm-network.ApplicationGatewayProbe.path'
       - '@azure/arm-network.ApplicationGatewayProbe.pickHostNameFromBackendHttpSettings'
+      - '@azure/arm-network.ApplicationGatewayProbe.port'
       - '@azure/arm-network.ApplicationGatewayProbe.protocol'
       - '@azure/arm-network.ApplicationGatewayProbe.provisioningState'
       - '@azure/arm-network.ApplicationGatewayProbe.timeout'
@@ -139,7 +140,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: 'Caminho relativo da investigação. Caminho válido começa com ''/''. Investigação é enviada para <Protocol>://<host>:<port><path>'
+    summary: 'Caminho relativo da investigação. Caminho válido começa com ''/''. Investigação é enviada para <Protocol>://<host>:<port><path>.'
     optional: true
     syntax:
       content: 'path?: undefined | string'
@@ -161,6 +162,21 @@ items:
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ApplicationGatewayProbe.port'
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Porta personalizada que será usada para os servidores de back-end de investigação. O valor válido varia de 1 a 65535. Caso não foi definida, a porta de http configurações serão usadas. Essa propriedade só é válida para Standard_v2 e WAF_v2.'
+    optional: true
+    syntax:
+      content: 'port?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ApplicationGatewayProbe.protocol'
     name: protocol
