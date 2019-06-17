@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.JobOutputAsset'
+    name: JobOutputAsset
+    fullName: JobOutputAsset
+    children:
+      - '@azure/arm-mediaservices.JobOutputAsset.assetName'
+      - '@azure/arm-mediaservices.JobOutputAsset.error'
+      - '@azure/arm-mediaservices.JobOutputAsset.label'
+      - '@azure/arm-mediaservices.JobOutputAsset.odatatype'
+      - '@azure/arm-mediaservices.JobOutputAsset.progress'
+      - '@azure/arm-mediaservices.JobOutputAsset.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa um ativo usado como um JobOutput.
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.assetName'
+    name: assetName
+    fullName: assetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome da saída do ativo.
+    syntax:
+      content: 'assetName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se o JobOutput estiver no estado de erro, ele contém os detalhes do erro.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'error?: JobError'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobError'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um rótulo que é atribuído a um JobOutput para ajudar a identificá-lo exclusivamente. Isso é útil quando a ação de transformação tem mais de um TransformOutput, no qual o trabalho tiver mais de um JobOutput. Nesses casos, quando você envia o trabalho, você irá adicionar dois ou mais JobOutputs, na mesma ordem como TransformOutputs na transformação. Posteriormente, quando você recupera o trabalho, por meio de eventos ou em uma solicitação GET, você pode usar o rótulo para identificar facilmente o JobOutput. Se um rótulo não for fornecido, um valor padrão de ''{presetName} _ {outputIndex}'' será usado, onde o nome de predefinição é o nome da predefinição do TransformOutput correspondente e o índice de saída é o índice relativo deste JobOutput dentro do trabalho. Observe que esse índice é o mesmo que o índice relativo do TransformOutput correspondente dentro de sua transformação.'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.JobOutputAsset"'
+      return:
+        type:
+          - '"#Microsoft.Media.JobOutputAsset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.progress'
+    name: progress
+    fullName: progress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se o JobOutput está em um estado de processamento, ele contém a porcentagem de conclusão do trabalho. O valor é uma estimativa e não se destina a ser usado para prever os tempos de conclusão do trabalho. Para determinar se o JobOutput for concluída, use a propriedade de estado.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'progress?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descreve o estado do JobOutput. Os valores possíveis incluem: ''Canceled'', ''Canceling'', ''Error'', ''Finished'', ''Processing'', ''Queued'', ''Scheduled'' **NOTE: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**'
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobState'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.JobError'
+    name: JobError
+    spec.typeScript:
+      - name: JobError
+        fullName: JobError
+        uid: '@azure/arm-mediaservices.JobError'
+  - uid: '@azure/arm-mediaservices.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/arm-mediaservices.JobState'
