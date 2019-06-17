@@ -1,0 +1,428 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-servicebus.SBQueue'
+    name: SBQueue
+    fullName: SBQueue
+    children:
+      - '@azure/arm-servicebus.SBQueue.accessedAt'
+      - '@azure/arm-servicebus.SBQueue.autoDeleteOnIdle'
+      - '@azure/arm-servicebus.SBQueue.countDetails'
+      - '@azure/arm-servicebus.SBQueue.createdAt'
+      - '@azure/arm-servicebus.SBQueue.deadLetteringOnMessageExpiration'
+      - '@azure/arm-servicebus.SBQueue.defaultMessageTimeToLive'
+      - '@azure/arm-servicebus.SBQueue.duplicateDetectionHistoryTimeWindow'
+      - '@azure/arm-servicebus.SBQueue.enableBatchedOperations'
+      - '@azure/arm-servicebus.SBQueue.enableExpress'
+      - '@azure/arm-servicebus.SBQueue.enablePartitioning'
+      - '@azure/arm-servicebus.SBQueue.forwardDeadLetteredMessagesTo'
+      - '@azure/arm-servicebus.SBQueue.forwardTo'
+      - '@azure/arm-servicebus.SBQueue.id'
+      - '@azure/arm-servicebus.SBQueue.lockDuration'
+      - '@azure/arm-servicebus.SBQueue.maxDeliveryCount'
+      - '@azure/arm-servicebus.SBQueue.maxSizeInMegabytes'
+      - '@azure/arm-servicebus.SBQueue.messageCount'
+      - '@azure/arm-servicebus.SBQueue.name'
+      - '@azure/arm-servicebus.SBQueue.requiresDuplicateDetection'
+      - '@azure/arm-servicebus.SBQueue.requiresSession'
+      - '@azure/arm-servicebus.SBQueue.sizeInBytes'
+      - '@azure/arm-servicebus.SBQueue.status'
+      - '@azure/arm-servicebus.SBQueue.type'
+      - '@azure/arm-servicebus.SBQueue.updatedAt'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="75a4b-101">Descrição da fila de recurso.</span><span class="sxs-lookup"><span data-stu-id="75a4b-101">Description of queue Resource.</span></span>
+    extends:
+      name: '@azure/arm-servicebus.Resource'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.accessedAt'
+    name: accessedAt
+    fullName: accessedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-102">Última vez que uma mensagem foi enviada, ou a última vez que houve uma solicitação de recebimento para essa fila.</span><span class="sxs-lookup"><span data-stu-id="75a4b-102">Last time a message was sent, or the last time there was a receive request to this queue.</span></span>
+      <span data-ttu-id="75a4b-103">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'accessedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.autoDeleteOnIdle'
+    name: autoDeleteOnIdle
+    fullName: autoDeleteOnIdle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-104">Intervalo de ociosidade de timeSpan ISO 8061 após o qual a fila é excluída automaticamente.</span><span class="sxs-lookup"><span data-stu-id="75a4b-104">ISO 8061 timeSpan idle interval after which the queue is automatically deleted.</span></span> <span data-ttu-id="75a4b-105">A duração mínima é de 5 minutos.</span><span class="sxs-lookup"><span data-stu-id="75a4b-105">The minimum duration is 5 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'autoDeleteOnIdle?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.countDetails'
+    name: countDetails
+    fullName: countDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-106">Detalhes da contagem de mensagem.</span><span class="sxs-lookup"><span data-stu-id="75a4b-106">Message Count Details.</span></span>
+      <span data-ttu-id="75a4b-107">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'countDetails?: MessageCountDetails'
+      return:
+        type:
+          - '@azure/arm-servicebus.MessageCountDetails'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.createdAt'
+    name: createdAt
+    fullName: createdAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-108">A hora exata em que a mensagem foi criada.</span><span class="sxs-lookup"><span data-stu-id="75a4b-108">The exact time the message was created.</span></span>
+      <span data-ttu-id="75a4b-109">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'createdAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.deadLetteringOnMessageExpiration'
+    name: deadLetteringOnMessageExpiration
+    fullName: deadLetteringOnMessageExpiration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-110">Um valor que indica se essa fila tem suporte a mensagens mortas quando uma mensagem expirar.</span><span class="sxs-lookup"><span data-stu-id="75a4b-110">A value that indicates whether this queue has dead letter support when a message expires.</span></span>
+    optional: true
+    syntax:
+      content: 'deadLetteringOnMessageExpiration?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.defaultMessageTimeToLive'
+    name: defaultMessageTimeToLive
+    fullName: defaultMessageTimeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-111">Padrão ISO 8601 mensagem período de tempo para o valor de vida útil.</span><span class="sxs-lookup"><span data-stu-id="75a4b-111">ISO 8601 default message timespan to live value.</span></span> <span data-ttu-id="75a4b-112">Esta é a duração após a qual a mensagem expira, começando a partir de quando a mensagem é enviada ao barramento de serviço.</span><span class="sxs-lookup"><span data-stu-id="75a4b-112">This is the duration after which the message expires, starting from when the message is sent to Service Bus.</span></span> <span data-ttu-id="75a4b-113">Isso é o valor padrão usado quando TimeToLive não está definido em uma mensagem em si.</span><span class="sxs-lookup"><span data-stu-id="75a4b-113">This is the default value used when TimeToLive is not set on a message itself.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultMessageTimeToLive?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.duplicateDetectionHistoryTimeWindow'
+    name: duplicateDetectionHistoryTimeWindow
+    fullName: duplicateDetectionHistoryTimeWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-114">Estrutura timeSpan ISO 8601 que define a duração do histórico de detecção de duplicidades.</span><span class="sxs-lookup"><span data-stu-id="75a4b-114">ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.</span></span> <span data-ttu-id="75a4b-115">O valor padrão é 10 minutos.</span><span class="sxs-lookup"><span data-stu-id="75a4b-115">The default value is 10 minutes.</span></span>
+    optional: true
+    syntax:
+      content: 'duplicateDetectionHistoryTimeWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enableBatchedOperations'
+    name: enableBatchedOperations
+    fullName: enableBatchedOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-116">Valor que indica se as operações em lote do lado do servidor estão habilitadas.</span><span class="sxs-lookup"><span data-stu-id="75a4b-116">Value that indicates whether server-side batched operations are enabled.</span></span>
+    optional: true
+    syntax:
+      content: 'enableBatchedOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enableExpress'
+    name: enableExpress
+    fullName: enableExpress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-117">Um valor que indica se as entidades Express estão habilitadas.</span><span class="sxs-lookup"><span data-stu-id="75a4b-117">A value that indicates whether Express Entities are enabled.</span></span> <span data-ttu-id="75a4b-118">Uma fila expressa contém uma mensagem na memória temporariamente antes de gravar no armazenamento persistente.</span><span class="sxs-lookup"><span data-stu-id="75a4b-118">An express queue holds a message in memory temporarily before writing it to persistent storage.</span></span>
+    optional: true
+    syntax:
+      content: 'enableExpress?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.enablePartitioning'
+    name: enablePartitioning
+    fullName: enablePartitioning
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-119">Um valor que indica se a fila deve ser particionado em vários agentes de mensagens.</span><span class="sxs-lookup"><span data-stu-id="75a4b-119">A value that indicates whether the queue is to be partitioned across multiple message brokers.</span></span>
+    optional: true
+    syntax:
+      content: 'enablePartitioning?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.forwardDeadLetteredMessagesTo'
+    name: forwardDeadLetteredMessagesTo
+    fullName: forwardDeadLetteredMessagesTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-120">Nome da fila/tópico para encaminhar a mensagem de mensagens mortas</span><span class="sxs-lookup"><span data-stu-id="75a4b-120">Queue/Topic name to forward the Dead Letter message</span></span>
+    optional: true
+    syntax:
+      content: 'forwardDeadLetteredMessagesTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.forwardTo'
+    name: forwardTo
+    fullName: forwardTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-121">Nome da fila/tópico para encaminhar as mensagens</span><span class="sxs-lookup"><span data-stu-id="75a4b-121">Queue/Topic name to forward the messages</span></span>
+    optional: true
+    syntax:
+      content: 'forwardTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-122">Id do recurso **Observação: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-122">Resource Id **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.lockDuration'
+    name: lockDuration
+    fullName: lockDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-123">Duração da ISO 8601 timespan de um bloqueio de inspeção; ou seja, a quantidade de tempo que a mensagem ficará bloqueada para outros destinatários.</span><span class="sxs-lookup"><span data-stu-id="75a4b-123">ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers.</span></span> <span data-ttu-id="75a4b-124">O valor máximo para LockDuration é de 5 minutos; o valor padrão é 1 minuto.</span><span class="sxs-lookup"><span data-stu-id="75a4b-124">The maximum value for LockDuration is 5 minutes; the default value is 1 minute.</span></span>'
+    optional: true
+    syntax:
+      content: 'lockDuration?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.maxDeliveryCount'
+    name: maxDeliveryCount
+    fullName: maxDeliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-125">A contagem máxima de entregas.</span><span class="sxs-lookup"><span data-stu-id="75a4b-125">The maximum delivery count.</span></span> <span data-ttu-id="75a4b-126">Uma mensagem é automaticamente morto após esse número de entregas.</span><span class="sxs-lookup"><span data-stu-id="75a4b-126">A message is automatically deadlettered after this number of deliveries.</span></span> <span data-ttu-id="75a4b-127">valor padrão é 10.</span><span class="sxs-lookup"><span data-stu-id="75a4b-127">default value is 10.</span></span>
+    optional: true
+    syntax:
+      content: 'maxDeliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.maxSizeInMegabytes'
+    name: maxSizeInMegabytes
+    fullName: maxSizeInMegabytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-128">O tamanho máximo da fila em megabytes, que é o tamanho da memória alocada para a fila.</span><span class="sxs-lookup"><span data-stu-id="75a4b-128">The maximum size of the queue in megabytes, which is the size of memory allocated for the queue.</span></span> <span data-ttu-id="75a4b-129">O padrão é 1024.</span><span class="sxs-lookup"><span data-stu-id="75a4b-129">Default is 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxSizeInMegabytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.messageCount'
+    name: messageCount
+    fullName: messageCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-130">O número de mensagens na fila.</span><span class="sxs-lookup"><span data-stu-id="75a4b-130">The number of messages in the queue.</span></span>
+      <span data-ttu-id="75a4b-131">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-131">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'messageCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-132">Nome do recurso **Observação: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-132">Resource name **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.requiresDuplicateDetection'
+    name: requiresDuplicateDetection
+    fullName: requiresDuplicateDetection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-133">Um valor que indica se essa fila requer detecção de duplicidades.</span><span class="sxs-lookup"><span data-stu-id="75a4b-133">A value indicating if this queue requires duplicate detection.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresDuplicateDetection?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.requiresSession'
+    name: requiresSession
+    fullName: requiresSession
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="75a4b-134">Um valor que indica se a fila é compatível com o conceito de sessões.</span><span class="sxs-lookup"><span data-stu-id="75a4b-134">A value that indicates whether the queue supports the concept of sessions.</span></span>
+    optional: true
+    syntax:
+      content: 'requiresSession?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.sizeInBytes'
+    name: sizeInBytes
+    fullName: sizeInBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-135">O tamanho da fila, em bytes.</span><span class="sxs-lookup"><span data-stu-id="75a4b-135">The size of the queue, in bytes.</span></span>
+      <span data-ttu-id="75a4b-136">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-136">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'sizeInBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-137">Enumera os valores possíveis para o status de uma entidade de mensagens.</span><span class="sxs-lookup"><span data-stu-id="75a4b-137">Enumerates the possible values for the status of a messaging entity.</span></span> <span data-ttu-id="75a4b-138">Os valores possíveis incluem: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="75a4b-138">Possible values include: ''Active'', ''Disabled'', ''Restoring'', ''SendDisabled'', ''ReceiveDisabled'', ''Creating'', ''Deleting'', ''Renaming'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: EntityStatus'
+      return:
+        type:
+          - '@azure/arm-servicebus.EntityStatus'
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="75a4b-139">Tipo de recurso **Observação: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-139">Resource type **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.SBQueue.updatedAt'
+    name: updatedAt
+    fullName: updatedAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="75a4b-140">A hora exata em que a mensagem foi atualizada.</span><span class="sxs-lookup"><span data-stu-id="75a4b-140">The exact time the message was updated.</span></span>
+      <span data-ttu-id="75a4b-141">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="75a4b-141">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'updatedAt?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-servicebus'
+references:
+  - uid: '@azure/arm-servicebus.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-servicebus.Resource'
+  - uid: '@azure/arm-servicebus.MessageCountDetails'
+    name: MessageCountDetails
+    spec.typeScript:
+      - name: MessageCountDetails
+        fullName: MessageCountDetails
+        uid: '@azure/arm-servicebus.MessageCountDetails'
+  - uid: '@azure/arm-servicebus.EntityStatus'
+    name: EntityStatus
+    spec.typeScript:
+      - name: EntityStatus
+        fullName: EntityStatus
+        uid: '@azure/arm-servicebus.EntityStatus'
