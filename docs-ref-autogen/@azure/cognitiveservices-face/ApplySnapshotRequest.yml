@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest'
+    name: ApplySnapshotRequest
+    fullName: ApplySnapshotRequest
+    children:
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="025fa-101">Solicitação de corpo para a aplicação de operação de instantâneo.</span><span class="sxs-lookup"><span data-stu-id="025fa-101">Request body for applying snapshot operation.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="025fa-102">Modo de aplicação do instantâneo.</span><span class="sxs-lookup"><span data-stu-id="025fa-102">Snapshot applying mode.</span></span> <span data-ttu-id="025fa-103">CreateNew atualmente só tem suporte, o que significa que a operação de aplicação falhará se a assinatura de destino já contém um objeto do mesmo tipo e usando a mesma ID de objeto.</span><span class="sxs-lookup"><span data-stu-id="025fa-103">Currently only CreateNew is supported, which means the apply operation will fail if target subscription already contains an object of same type and using the same objectId.</span></span> <span data-ttu-id="025fa-104">Os usuários podem especificar "objectId" no corpo da solicitação para evitar tais conflitos.</span><span class="sxs-lookup"><span data-stu-id="025fa-104">Users can specify the "objectId" in request body to avoid such conflicts.</span></span> <span data-ttu-id="025fa-105">Os valores possíveis incluem: ''CreateNew''.</span><span class="sxs-lookup"><span data-stu-id="025fa-105">Possible values include: ''CreateNew''.</span></span> <span data-ttu-id="025fa-106">Valor padrão: ''CreateNew''.</span><span class="sxs-lookup"><span data-stu-id="025fa-106">Default value: ''CreateNew''.</span></span>'
+    optional: true
+    syntax:
+      content: 'mode?: SnapshotApplyMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.SnapshotApplyMode'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="025fa-107">Id de objeto de destino a ser criado a partir do instantâneo especificado pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="025fa-107">User specified target object id to be created from the snapshot.</span></span>
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
+    name: SnapshotApplyMode
+    spec.typeScript:
+      - name: SnapshotApplyMode
+        fullName: SnapshotApplyMode
+        uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
