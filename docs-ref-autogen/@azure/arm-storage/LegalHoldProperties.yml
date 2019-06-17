@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.LegalHoldProperties'
+    name: LegalHoldProperties
+    fullName: LegalHoldProperties
+    children:
+      - '@azure/arm-storage.LegalHoldProperties.hasLegalHold'
+      - '@azure/arm-storage.LegalHoldProperties.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: A propriedade LegalHold de um contêiner de blob.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LegalHoldProperties.hasLegalHold'
+    name: hasLegalHold
+    fullName: hasLegalHold
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A propriedade pública de hasLegalHold é definida como true pela política SRP, se houver pelo menos uma marca existente.
+      A propriedade pública de hasLegalHold é definida como false pela política SRP, se todos os existentes legal mantenha as marcas são limpos. Pode haver até 1000 de contêineres de blob com hasLegalHold = true para uma determinada conta.
+      **OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**
+    optional: true
+    syntax:
+      content: 'hasLegalHold?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.LegalHoldProperties.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de marcas LegalHold de um contêiner de blob.
+    optional: true
+    syntax:
+      content: 'tags?: TagProperty[]'
+      return:
+        type:
+          - '@azure/arm-storage.TagProperty[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.TagProperty[]'
+    name: 'TagProperty[]'
+    spec.typeScript:
+      - name: TagProperty
+        fullName: TagProperty
+        uid: '@azure/arm-storage.TagProperty'
+      - name: '[]'
+        fullName: '[]'

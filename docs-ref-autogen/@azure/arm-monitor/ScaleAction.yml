@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ScaleAction'
+    name: ScaleAction
+    fullName: ScaleAction
+    children:
+      - '@azure/arm-monitor.ScaleAction.cooldown'
+      - '@azure/arm-monitor.ScaleAction.direction'
+      - '@azure/arm-monitor.ScaleAction.type'
+      - '@azure/arm-monitor.ScaleAction.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: Os parâmetros para a ação de escala.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.cooldown'
+    name: cooldown
+    fullName: cooldown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: a quantidade de tempo de espera desde a última ação de dimensionamento antes que essa ação ocorra. Ele deve estar entre 1 semana e 1 minuto no formato ISO 8601.
+    syntax:
+      content: 'cooldown: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.direction'
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'a direção da escala. Se a ação de dimensionamento aumenta ou diminui o número de instâncias. Os valores possíveis incluem: ''None'', ''Increase'', ''Decrease'''
+    syntax:
+      content: 'direction: ScaleDirection'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleDirection'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'o tipo de ação que deve ocorrer quando a regra de dimensionamento for acionado. Os valores possíveis incluem: ''ChangeCount'', ''PercentChangeCount'', ''ExactCount'''
+    syntax:
+      content: 'type: ScaleType'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'o número de instâncias que estão envolvidos na ação de escala. Este valor deve ser 1 ou maior. O valor padrão é 1. Valor padrão: ''1''.'
+    optional: true
+    syntax:
+      content: 'value?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleDirection'
+    name: ScaleDirection
+    spec.typeScript:
+      - name: ScaleDirection
+        fullName: ScaleDirection
+        uid: '@azure/arm-monitor.ScaleDirection'
+  - uid: '@azure/arm-monitor.ScaleType'
+    name: ScaleType
+    spec.typeScript:
+      - name: ScaleType
+        fullName: ScaleType
+        uid: '@azure/arm-monitor.ScaleType'
