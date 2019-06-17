@@ -1,0 +1,216 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    fullName: StorageAccountUpdateParameters
+    children:
+      - '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.identity'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.kind'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.networkRuleSet'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.sku'
+      - '@azure/arm-storage.StorageAccountUpdateParameters.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: Os parâmetros que podem ser fornecidos ao atualizar as propriedades da conta de armazenamento.
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.accessTier'
+    name: accessTier
+    fullName: accessTier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Necessário para contas de armazenamento em que tipo = BlobStorage. A camada de acesso usada para cobrança.
+      Os valores possíveis incluem: 'Hot', 'Cool'
+    optional: true
+    syntax:
+      content: 'accessTier?: AccessTier'
+      return:
+        type:
+          - '@azure/arm-storage.AccessTier'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.customDomain'
+    name: customDomain
+    fullName: customDomain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Atribuída à conta de armazenamento pelo usuário de domínio personalizado. Nome é a origem CNAME. Apenas um domínio personalizado é suportado por conta de armazenamento no momento. Para limpar o domínio personalizado existente, use uma cadeia de caracteres vazia para a propriedade de nome de domínio personalizado.'
+    optional: true
+    syntax:
+      content: 'customDomain?: CustomDomain'
+      return:
+        type:
+          - '@azure/arm-storage.CustomDomain'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableAzureFilesAadIntegration'
+    name: enableAzureFilesAadIntegration
+    fullName: enableAzureFilesAadIntegration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Permite a integração de AAD de arquivos do Azure para o SMB se define como true.
+    optional: true
+    syntax:
+      content: 'enableAzureFilesAadIntegration?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.enableHttpsTrafficOnly'
+    name: enableHttpsTrafficOnly
+    fullName: enableHttpsTrafficOnly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Permite que o tráfego https somente para o serviço de armazenamento se define como true.
+    optional: true
+    syntax:
+      content: 'enableHttpsTrafficOnly?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.encryption'
+    name: encryption
+    fullName: encryption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Fornece as configurações de criptografia na conta. A configuração padrão é não criptografada.
+    optional: true
+    syntax:
+      content: 'encryption?: Encryption'
+      return:
+        type:
+          - '@azure/arm-storage.Encryption'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.identity'
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A identidade do recurso.
+    optional: true
+    syntax:
+      content: 'identity?: Identity'
+      return:
+        type:
+          - '@azure/arm-storage.Identity'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Opcional. Indica o tipo de conta de armazenamento. Atualmente, apenas StorageV2 valor suportado pelo servidor. Os valores possíveis incluem: ''Storage'', ''StorageV2'', ''BlobStorage'', ''FileStorage'', ''BlockBlobStorage'''
+    optional: true
+    syntax:
+      content: 'kind?: Kind'
+      return:
+        type:
+          - '@azure/arm-storage.Kind'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.networkRuleSet'
+    name: networkRuleSet
+    fullName: networkRuleSet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Conjunto de regras de rede
+    optional: true
+    syntax:
+      content: 'networkRuleSet?: NetworkRuleSet'
+      return:
+        type:
+          - '@azure/arm-storage.NetworkRuleSet'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Obtém ou define o nome da SKU. Observe que o nome da SKU não pode ser atualizado para Standard_ZRS, Premium_LRS ou Premium_ZRS nem contas desses nomes de SKU podem ser atualizadas para qualquer outro valor.'
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-storage.Sku'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obtém ou define uma lista de pares chave / valor que descrevem o recurso. Essas marcas podem ser usadas para exibir e agrupar esse recurso (entre grupos de recursos). Um máximo de 15 marcas pode ser fornecido para um recurso. Cada marca deve ter uma chave não maior em tamanho de 128 caracteres e um valor não maior em tamanho de 256 caracteres.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.AccessTier'
+    name: AccessTier
+    spec.typeScript:
+      - name: AccessTier
+        fullName: AccessTier
+        uid: '@azure/arm-storage.AccessTier'
+  - uid: '@azure/arm-storage.CustomDomain'
+    name: CustomDomain
+    spec.typeScript:
+      - name: CustomDomain
+        fullName: CustomDomain
+        uid: '@azure/arm-storage.CustomDomain'
+  - uid: '@azure/arm-storage.Encryption'
+    name: Encryption
+    spec.typeScript:
+      - name: Encryption
+        fullName: Encryption
+        uid: '@azure/arm-storage.Encryption'
+  - uid: '@azure/arm-storage.Identity'
+    name: Identity
+    spec.typeScript:
+      - name: Identity
+        fullName: Identity
+        uid: '@azure/arm-storage.Identity'
+  - uid: '@azure/arm-storage.Kind'
+    name: Kind
+    spec.typeScript:
+      - name: Kind
+        fullName: Kind
+        uid: '@azure/arm-storage.Kind'
+  - uid: '@azure/arm-storage.NetworkRuleSet'
+    name: NetworkRuleSet
+    spec.typeScript:
+      - name: NetworkRuleSet
+        fullName: NetworkRuleSet
+        uid: '@azure/arm-storage.NetworkRuleSet'
+  - uid: '@azure/arm-storage.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-storage.Sku'
