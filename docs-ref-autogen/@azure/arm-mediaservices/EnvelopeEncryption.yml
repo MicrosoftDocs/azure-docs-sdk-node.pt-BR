@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.EnvelopeEncryption'
+    name: EnvelopeEncryption
+    fullName: EnvelopeEncryption
+    children:
+      - '@azure/arm-mediaservices.EnvelopeEncryption.clearTracks'
+      - '@azure/arm-mediaservices.EnvelopeEncryption.contentKeys'
+      - '@azure/arm-mediaservices.EnvelopeEncryption.customKeyAcquisitionUrlTemplate'
+      - '@azure/arm-mediaservices.EnvelopeEncryption.enabledProtocols'
+    langs:
+      - typeScript
+    type: interface
+    summary: Classe de esquema de criptografia EnvelopeEncryption
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.EnvelopeEncryption.clearTracks'
+    name: clearTracks
+    fullName: clearTracks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Que representa as faixas não deve ser criptografada
+    optional: true
+    syntax:
+      content: 'clearTracks?: TrackSelection[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.TrackSelection[]'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.EnvelopeEncryption.contentKeys'
+    name: contentKeys
+    fullName: contentKeys
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Que representa a chave de conteúdo padrão para cada esquema de criptografia e chaves de conteúdo separadas para faixas específicas
+    optional: true
+    syntax:
+      content: 'contentKeys?: StreamingPolicyContentKeys'
+      return:
+        type:
+          - '@azure/arm-mediaservices.StreamingPolicyContentKeys'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.EnvelopeEncryption.customKeyAcquisitionUrlTemplate'
+    name: customKeyAcquisitionUrlTemplate
+    fullName: customKeyAcquisitionUrlTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Modelo para a URL do serviço personalizado, entrega de chaves para os jogadores do usuário final.  Não é necessário ao usar os serviços de mídia do Azure para emitir chaves.  O modelo dá suporte a tokens substituíveis que o serviço será atualizado em tempo de execução com o valor específico para a solicitação.  Os valores do token com suporte no momento são {AlternativeMediaId}, que é substituído com o valor de StreamingLocatorId.AlternativeMediaId e {ContentKeyId}, que é substituído pelo valor do identificador da chave que está sendo solicitado.'
+    optional: true
+    syntax:
+      content: 'customKeyAcquisitionUrlTemplate?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.EnvelopeEncryption.enabledProtocols'
+    name: enabledProtocols
+    fullName: enabledProtocols
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Que representa os protocolos com suporte
+    optional: true
+    syntax:
+      content: 'enabledProtocols?: EnabledProtocols'
+      return:
+        type:
+          - '@azure/arm-mediaservices.EnabledProtocols'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.TrackSelection[]'
+    name: 'TrackSelection[]'
+    spec.typeScript:
+      - name: TrackSelection
+        fullName: TrackSelection
+        uid: '@azure/arm-mediaservices.TrackSelection'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-mediaservices.StreamingPolicyContentKeys'
+    name: StreamingPolicyContentKeys
+    spec.typeScript:
+      - name: StreamingPolicyContentKeys
+        fullName: StreamingPolicyContentKeys
+        uid: '@azure/arm-mediaservices.StreamingPolicyContentKeys'
+  - uid: '@azure/arm-mediaservices.EnabledProtocols'
+    name: EnabledProtocols
+    spec.typeScript:
+      - name: EnabledProtocols
+        fullName: EnabledProtocols
+        uid: '@azure/arm-mediaservices.EnabledProtocols'
