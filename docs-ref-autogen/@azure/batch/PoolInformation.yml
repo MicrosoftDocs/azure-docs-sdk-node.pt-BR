@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - '@azure/batch.PoolInformation.autoPoolSpecification'
+      - '@azure/batch.PoolInformation.poolId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa PoolInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.autoPoolSpecification'
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Características de um temporário 'pool automático'. O serviço de lote criará esse pool automático quando o trabalho é enviado. Se a criação do pool automático falhar, o serviço de lote move o trabalho para um estado concluído e o erro de criação de pool é definido na propriedade de erro agendamento do trabalho.
+      O serviço de lote gerencia a vida útil (tanto criação e, a menos que keepAlive for especificado, exclusão) do pool automático. As ações do usuário que afetam o tempo de vida do pool automático, enquanto o trabalho está ativo resultará em um comportamento inesperado. Você deve especificar a ID do pool ou a especificação de pool automático, mas não ambos.
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - '@azure/batch.AutoPoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ID de um pool existente. Todas as tarefas do trabalho serão executado no pool especificado. Você deve garantir que o pool referenciado por essa propriedade existe. Se o pool não existir no momento em que o serviço de lote tenta agendar um trabalho, não há tarefas para o trabalho serão executado até que você crie um pool com essa id. Observe que o serviço de lote não rejeita a solicitação de trabalho; Não, ele simplesmente executará tarefas até que o pool existe. Você deve especificar a ID do pool ou a especificação de pool automático, mas não ambos.'
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: '@azure/batch.AutoPoolSpecification'

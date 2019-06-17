@@ -1,0 +1,441 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems'
+    name: ProtectedItems
+    fullName: ProtectedItems
+    children:
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_2'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_1'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod_2'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod_1'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.get'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.get_2'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.get_1'
+      - '@azure/arm-recoveryservicesbackup.ProtectedItems.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um ProtectedItems.
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, string, ProtectedItemResource, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Permite o backup de um item ou para modificar as informações de política de backup de um item já foi feito backup. Esta é uma operação assíncrona. Para saber o status da operação, chame a API de GetItemOperationResult.'
+    syntax:
+      content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado com o item de backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item de backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item de backup.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+          description: recurso itens submetido a backup
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProtectedItemsCreateOrUpdateResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, string, string, ProtectedItemResource, RequestOptionsBase, ServiceCallback<ProtectedItemResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, options: RequestOptionsBase, callback: ServiceCallback<ProtectedItemResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado com o item de backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item de backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item de backup.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+          description: recurso itens submetido a backup
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.ProtectedItemResource>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ProtectedItemsCreateOrUpdateResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, string, string, ProtectedItemResource, ServiceCallback<ProtectedItemResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, parameters: ProtectedItemResource, callback: ServiceCallback<ProtectedItemResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado com o item de backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item de backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item de backup.
+        - id: parameters
+          type:
+            - '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+          description: recurso itens submetido a backup
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.ProtectedItemResource>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ProtectedItemsCreateOrUpdateResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Usado para desabilitar o backup de um item dentro de um contêiner. Esta é uma operação assíncrona. Para saber o status da solicitação, chame a API de GetItemOperationResult.'
+    syntax:
+      content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Itens submetidos a backup a ser excluído.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Itens submetidos a backup a ser excluído.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Itens submetidos a backup a ser excluído.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.get'
+    name: 'get(string, string, string, string, string, Models.ProtectedItemsGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Fornece os detalhes do item submetido a backup. Esta é uma operação assíncrona. Para saber o status da operação, chame a API de GetItemOperationResult.'
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options?: Models.ProtectedItemsGetOptionalParams)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item cujos detalhes estão a ser obtido o backup.
+        - id: options
+          type:
+            - Models.ProtectedItemsGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ProtectedItemsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.get_2'
+    name: 'get(string, string, string, string, string, ProtectedItemsGetOptionalParams, ServiceCallback<ProtectedItemResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, options: ProtectedItemsGetOptionalParams, callback: ServiceCallback<ProtectedItemResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item cujos detalhes estão a ser obtido o backup.
+        - id: options
+          type:
+            - '@azure/arm-recoveryservicesbackup.ProtectedItemsGetOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.ProtectedItemResource>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ProtectedItemsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<ProtectedItemResource>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, callback: ServiceCallback<ProtectedItemResource>)'
+      parameters:
+        - id: vaultName
+          type:
+            - string
+          description: O nome do cofre dos serviços de recuperação.
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos em que o Cofre de serviços de recuperação está presente.
+        - id: fabricName
+          type:
+            - string
+          description: Nome de malha associado ao item submetido a backup.
+        - id: containerName
+          type:
+            - string
+          description: Nome do contêiner associado ao item submetido a backup.
+        - id: protectedItemName
+          type:
+            - string
+          description: Nome do item cujos detalhes estão a ser obtido o backup.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-recoveryservicesbackup.ProtectedItemResource>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ProtectedItemsGetResponse>
+    package: '@azure/arm-recoveryservicesbackup'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItems.constructor'
+    name: ProtectedItems(RecoveryServicesBackupClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um ProtectedItems.
+    syntax:
+      content: 'new ProtectedItems(client: RecoveryServicesBackupClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-recoveryservicesbackup'
+references:
+  - uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+    name: RecoveryServicesBackupClientContext
+    spec.typeScript:
+      - name: RecoveryServicesBackupClientContext
+        fullName: RecoveryServicesBackupClientContext
+        uid: '@azure/arm-recoveryservicesbackup.RecoveryServicesBackupClientContext'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+    name: ProtectedItemResource
+    spec.typeScript:
+      - name: ProtectedItemResource
+        fullName: ProtectedItemResource
+        uid: '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+  - uid: ServiceCallback<@azure/arm-recoveryservicesbackup.ProtectedItemResource>
+    name: ProtectedItemResource>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ProtectedItemResource
+        fullName: ProtectedItemResource
+        uid: '@azure/arm-recoveryservicesbackup.ProtectedItemResource'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-recoveryservicesbackup.ProtectedItemsGetOptionalParams'
+    name: ProtectedItemsGetOptionalParams
+    spec.typeScript:
+      - name: ProtectedItemsGetOptionalParams
+        fullName: ProtectedItemsGetOptionalParams
+        uid: '@azure/arm-recoveryservicesbackup.ProtectedItemsGetOptionalParams'
