@@ -10,13 +10,13 @@ items:
       - '@azure/arm-network.NetworkInterface.etag'
       - '@azure/arm-network.NetworkInterface.hostedWorkloads'
       - '@azure/arm-network.NetworkInterface.id'
-      - '@azure/arm-network.NetworkInterface.interfaceEndpoint'
       - '@azure/arm-network.NetworkInterface.ipConfigurations'
       - '@azure/arm-network.NetworkInterface.location'
       - '@azure/arm-network.NetworkInterface.macAddress'
       - '@azure/arm-network.NetworkInterface.name'
       - '@azure/arm-network.NetworkInterface.networkSecurityGroup'
       - '@azure/arm-network.NetworkInterface.primary'
+      - '@azure/arm-network.NetworkInterface.privateEndpoint'
       - '@azure/arm-network.NetworkInterface.provisioningState'
       - '@azure/arm-network.NetworkInterface.resourceGuid'
       - '@azure/arm-network.NetworkInterface.tags'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="1bc72-101">Uma interface de rede em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="1bc72-101">A network interface in a resource group.</span></span>
+    summary: <span data-ttu-id="e6879-101">Uma interface de rede em um grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="e6879-101">A network interface in a resource group.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -37,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-102">As configurações de DNS no adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-102">The DNS settings in network interface.</span></span>
+    summary: <span data-ttu-id="e6879-102">As configurações de DNS no adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-102">The DNS settings in network interface.</span></span>
     optional: true
     syntax:
       content: 'dnsSettings?: NetworkInterfaceDnsSettings'
@@ -52,7 +52,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-103">Se o adaptador de rede é a rede acelerado habilitada.</span><span class="sxs-lookup"><span data-stu-id="1bc72-103">If the network interface is accelerated networking enabled.</span></span>
+    summary: <span data-ttu-id="e6879-103">Se o adaptador de rede é a rede acelerado habilitada.</span><span class="sxs-lookup"><span data-stu-id="e6879-103">If the network interface is accelerated networking enabled.</span></span>
     optional: true
     syntax:
       content: 'enableAcceleratedNetworking?: undefined | false | true'
@@ -67,7 +67,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-104">Indica se o encaminhamento de IP está habilitado nesta interface de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
+    summary: <span data-ttu-id="e6879-104">Indica se o encaminhamento de IP está habilitado nesta interface de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>
     optional: true
     syntax:
       content: 'enableIPForwarding?: undefined | false | true'
@@ -82,7 +82,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-105">Uma somente leitura cadeia de caracteres exclusiva que muda sempre que o recurso for atualizado.</span><span class="sxs-lookup"><span data-stu-id="1bc72-105">A unique read-only string that changes whenever the resource is updated.</span></span>
+    summary: <span data-ttu-id="e6879-105">Uma somente leitura cadeia de caracteres exclusiva que muda sempre que o recurso for atualizado.</span><span class="sxs-lookup"><span data-stu-id="e6879-105">A unique read-only string that changes whenever the resource is updated.</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -97,7 +97,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="1bc72-106">Uma lista de referências para recursos vinculados do bare-metal **Observação: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="1bc72-106">A list of references to linked BareMetal resources **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: |-
+      <span data-ttu-id="e6879-106">Uma lista de referências para recursos vinculados do bare-metal.</span><span class="sxs-lookup"><span data-stu-id="e6879-106">A list of references to linked BareMetal resources.</span></span>
+      <span data-ttu-id="e6879-107">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="e6879-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'hostedWorkloads?: string[]'
@@ -112,30 +114,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-107">ID do recurso.</span><span class="sxs-lookup"><span data-stu-id="1bc72-107">Resource ID.</span></span>
+    summary: <span data-ttu-id="e6879-108">ID do recurso.</span><span class="sxs-lookup"><span data-stu-id="e6879-108">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterface.interfaceEndpoint'
-    name: interfaceEndpoint
-    fullName: interfaceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      <span data-ttu-id="1bc72-108">Uma referência para o ponto de extremidade da interface à qual o adaptador de rede está vinculado.</span><span class="sxs-lookup"><span data-stu-id="1bc72-108">A reference to the interface endpoint to which the network interface is linked.</span></span>
-      <span data-ttu-id="1bc72-109">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="1bc72-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
-    optional: true
-    syntax:
-      content: 'interfaceEndpoint?: InterfaceEndpoint'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -144,7 +129,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-110">Uma lista das IPConfigurations da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-110">A list of IPConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="e6879-109">Uma lista das IPConfigurations da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-109">A list of IPConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'ipConfigurations?: NetworkInterfaceIPConfiguration[]'
@@ -159,7 +144,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-111">Local do recurso.</span><span class="sxs-lookup"><span data-stu-id="1bc72-111">Resource location.</span></span>
+    summary: <span data-ttu-id="e6879-110">Local do recurso.</span><span class="sxs-lookup"><span data-stu-id="e6879-110">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -174,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-112">O endereço MAC do adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-112">The MAC address of the network interface.</span></span>
+    summary: <span data-ttu-id="e6879-111">O endereço MAC do adaptador de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-111">The MAC address of the network interface.</span></span>
     optional: true
     syntax:
       content: 'macAddress?: undefined | string'
@@ -190,8 +175,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="1bc72-113">Nome do recurso.</span><span class="sxs-lookup"><span data-stu-id="1bc72-113">Resource name.</span></span>
-      <span data-ttu-id="1bc72-114">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="1bc72-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e6879-112">Nome do recurso.</span><span class="sxs-lookup"><span data-stu-id="e6879-112">Resource name.</span></span>
+      <span data-ttu-id="e6879-113">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="e6879-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-115">A referência do recurso NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="1bc72-115">The reference of the NetworkSecurityGroup resource.</span></span>
+    summary: <span data-ttu-id="e6879-114">A referência do recurso NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="e6879-114">The reference of the NetworkSecurityGroup resource.</span></span>
     optional: true
     syntax:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
@@ -221,13 +206,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-116">Obtém se esta é uma interface de rede principal em uma máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="1bc72-116">Gets whether this is a primary network interface on a virtual machine.</span></span>
+    summary: <span data-ttu-id="e6879-115">Obtém se esta é uma interface de rede principal em uma máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="e6879-115">Gets whether this is a primary network interface on a virtual machine.</span></span>
     optional: true
     syntax:
       content: 'primary?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
+    name: privateEndpoint
+    fullName: privateEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e6879-116">Uma referência para o ponto de extremidade privado para o qual o adaptador de rede está vinculado.</span><span class="sxs-lookup"><span data-stu-id="e6879-116">A reference to the private endpoint to which the network interface is linked.</span></span>
+      <span data-ttu-id="e6879-117">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="e6879-117">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'privateEndpoint?: PrivateEndpoint'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
@@ -236,7 +238,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="1bc72-117">O estado de provisionamento do recurso IP público.</span><span class="sxs-lookup"><span data-stu-id="1bc72-117">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="1bc72-118">Os valores possíveis são: ''Atualizando'', ''Excluir'' e ''Com falha''.</span><span class="sxs-lookup"><span data-stu-id="1bc72-118">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="e6879-118">O estado de provisionamento do recurso IP público.</span><span class="sxs-lookup"><span data-stu-id="e6879-118">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="e6879-119">Os valores possíveis são: ''Atualizando'', ''Excluir'' e ''Com falha''.</span><span class="sxs-lookup"><span data-stu-id="e6879-119">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -251,7 +253,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-119">O recurso de propriedade do GUID do recurso da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-119">The resource GUID property of the network interface resource.</span></span>
+    summary: <span data-ttu-id="e6879-120">O recurso de propriedade do GUID do recurso da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-120">The resource GUID property of the network interface resource.</span></span>
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
@@ -266,7 +268,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-120">Marcas de recurso.</span><span class="sxs-lookup"><span data-stu-id="1bc72-120">Resource tags.</span></span>
+    summary: <span data-ttu-id="e6879-121">Marcas de recurso.</span><span class="sxs-lookup"><span data-stu-id="e6879-121">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -281,7 +283,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="1bc72-121">Uma lista de TapConfigurations da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="1bc72-121">A list of TapConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="e6879-122">Uma lista de TapConfigurations da interface de rede.</span><span class="sxs-lookup"><span data-stu-id="e6879-122">A list of TapConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'tapConfigurations?: NetworkInterfaceTapConfiguration[]'
@@ -297,8 +299,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="1bc72-122">Tipo de recurso.</span><span class="sxs-lookup"><span data-stu-id="1bc72-122">Resource type.</span></span>
-      <span data-ttu-id="1bc72-123">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="1bc72-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e6879-123">Tipo de recurso.</span><span class="sxs-lookup"><span data-stu-id="e6879-123">Resource type.</span></span>
+      <span data-ttu-id="e6879-124">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="e6879-124">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -314,8 +316,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="1bc72-124">A referência de uma máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="1bc72-124">The reference of a virtual machine.</span></span>
-      <span data-ttu-id="1bc72-125">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="1bc72-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="e6879-125">A referência de uma máquina virtual.</span><span class="sxs-lookup"><span data-stu-id="e6879-125">The reference of a virtual machine.</span></span>
+      <span data-ttu-id="e6879-126">**OBSERVAÇÃO: Essa propriedade não será serializada. Ele só poderá ser preenchido pelo servidor.**</span><span class="sxs-lookup"><span data-stu-id="e6879-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'virtualMachine?: SubResource'
@@ -336,12 +338,6 @@ references:
       - name: NetworkInterfaceDnsSettings
         fullName: NetworkInterfaceDnsSettings
         uid: '@azure/arm-network.NetworkInterfaceDnsSettings'
-  - uid: '@azure/arm-network.InterfaceEndpoint'
-    name: InterfaceEndpoint
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
     name: 'NetworkInterfaceIPConfiguration[]'
     spec.typeScript:
@@ -356,6 +352,12 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint'
+    name: PrivateEndpoint
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:

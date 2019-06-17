@@ -9,6 +9,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.beginGetAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.beginGetVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.beginReset'
@@ -29,6 +30,7 @@ items:
       - '@azure/arm-network.VirtualNetworkGateways.getAdvertisedRoutes'
       - '@azure/arm-network.VirtualNetworkGateways.getBgpPeerStatus'
       - '@azure/arm-network.VirtualNetworkGateways.getLearnedRoutes'
+      - '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
       - '@azure/arm-network.VirtualNetworkGateways.getVpnProfilePackageUrl'
       - '@azure/arm-network.VirtualNetworkGateways.list'
@@ -57,7 +59,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="7d808-101">Classe que representa um VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="7d808-101">Class representing a VirtualNetworkGateways.</span></span>
+    summary: <span data-ttu-id="aae9c-101">Classe que representa um VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="aae9c-101">Class representing a VirtualNetworkGateways.</span></span>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.beginCreateOrUpdate'
     name: 'beginCreateOrUpdate(string, string, VirtualNetworkGateway, msRest.RequestOptionsBase)'
@@ -65,22 +67,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-102">Cria ou atualiza um gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-102">Creates or updates a virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-102">Cria ou atualiza um gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-102">Creates or updates a virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginCreateOrUpdate(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VirtualNetworkGateway, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-103">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-103">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-103">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-103">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-104">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-104">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-104">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-104">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VirtualNetworkGateway'
-          description: <span data-ttu-id="7d808-105">Parâmetros fornecidos para criar ou atualizar operação de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-105">Parameters supplied to create or update virtual network gateway operation.</span></span>
+          description: <span data-ttu-id="aae9c-105">Parâmetros fornecidos para criar ou atualizar operação de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-105">Parameters supplied to create or update virtual network gateway operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -96,18 +98,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-106">Exclui o gateway de rede virtual especificada.</span><span class="sxs-lookup"><span data-stu-id="7d808-106">Deletes the specified virtual network gateway.</span></span>
+    summary: <span data-ttu-id="aae9c-106">Exclui o gateway de rede virtual especificada.</span><span class="sxs-lookup"><span data-stu-id="aae9c-106">Deletes the specified virtual network gateway.</span></span>
     syntax:
       content: 'function beginDeleteMethod(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-107">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-107">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-107">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-107">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-108">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-108">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-108">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-108">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -123,22 +125,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-109">Esta operação recupera uma lista de rotas que anuncia o gateway de rede virtual para o par especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-109">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
+    summary: <span data-ttu-id="aae9c-109">Esta operação recupera uma lista de rotas que anuncia o gateway de rede virtual para o par especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-109">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
     syntax:
       content: 'function beginGetAdvertisedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, peer: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-110">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-110">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-110">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-110">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-111">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-111">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-111">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-111">The name of the virtual network gateway.</span></span>
         - id: peer
           type:
             - string
-          description: <span data-ttu-id="7d808-112">O endereço IP do par</span><span class="sxs-lookup"><span data-stu-id="7d808-112">The IP address of the peer</span></span>
+          description: <span data-ttu-id="aae9c-112">O endereço IP do par.</span><span class="sxs-lookup"><span data-stu-id="aae9c-112">The IP address of the peer.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -154,18 +156,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-113">A operação GetBgpPeerStatus recupera o status de todos os pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="7d808-113">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
+    summary: <span data-ttu-id="aae9c-113">A operação GetBgpPeerStatus recupera o status de todos os pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="aae9c-113">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
     syntax:
       content: 'function beginGetBgpPeerStatus(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysBeginGetBgpPeerStatusOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-114">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-114">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-114">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-114">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-115">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-115">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-115">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-115">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysBeginGetBgpPeerStatusOptionalParams
@@ -181,18 +183,45 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="7d808-116">Esta operação recupera uma lista de rotas que aprendeu o gateway de rede virtual, incluindo as rotas aprendidas com pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="7d808-116">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
+    summary: '<span data-ttu-id="aae9c-116">Esta operação recupera uma lista de rotas que aprendeu o gateway de rede virtual, incluindo as rotas aprendidas com pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="aae9c-116">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
     syntax:
       content: 'function beginGetLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-117">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-117">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-117">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-117">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-118">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-118">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-118">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-118">The name of the virtual network gateway.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.beginGetVpnclientConnectionHealth'
+    name: 'beginGetVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="aae9c-119">Get detalhes de integridade da conexão de VPN cliente por conexão de cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-119">Get VPN client connection health detail per P2S client connection of the virtual network gateway in the specified resource group.</span></span>
+    syntax:
+      content: 'function beginGetVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="aae9c-120">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-120">The name of the resource group.</span></span>
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: <span data-ttu-id="aae9c-121">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-121">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -208,18 +237,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-119">A operação obter VpnclientIpsecParameters recupera informações sobre a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-119">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="aae9c-122">A operação obter VpnclientIpsecParameters recupera informações sobre a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-122">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function beginGetVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-120">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-120">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-123">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-123">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-121">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-121">The virtual network gateway name.</span></span>
+          description: <span data-ttu-id="aae9c-124">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-124">The virtual network gateway name.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -235,18 +264,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-122">Obtém pré-gerado perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-122">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="7d808-123">O perfil precisa ser gerado pela primeira vez usando generateVpnProfile.</span><span class="sxs-lookup"><span data-stu-id="7d808-123">The profile needs to be generated first using generateVpnProfile.</span></span>
+    summary: <span data-ttu-id="aae9c-125">Obtém pré-gerado perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-125">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="aae9c-126">O perfil precisa ser gerado pela primeira vez usando generateVpnProfile.</span><span class="sxs-lookup"><span data-stu-id="aae9c-126">The profile needs to be generated first using generateVpnProfile.</span></span>
     syntax:
       content: 'function beginGetVpnProfilePackageUrl(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-124">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-124">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-127">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-127">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-125">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-125">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-128">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-128">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -262,18 +291,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-126">Redefine o primário do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-126">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-129">Redefine o primário do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-129">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginReset(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysBeginResetOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-127">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-127">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-130">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-130">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-128">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-128">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-131">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-131">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysBeginResetOptionalParams
@@ -289,18 +318,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-129">Redefine a chave compartilhada do cliente VPN do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-129">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-132">Redefine a chave compartilhada do cliente VPN do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-132">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function beginResetVpnClientSharedKey(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-130">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-130">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-133">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-133">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-131">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-131">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-134">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-134">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -316,22 +345,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-132">A operação de definir VpnclientIpsecParameters define a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-132">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="aae9c-135">A operação de definir VpnclientIpsecParameters define a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-135">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function beginSetVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, vpnclientIpsecParams: VpnClientIPsecParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-133">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-133">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-136">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-136">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-134">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-134">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-137">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-137">The name of the virtual network gateway.</span></span>
         - id: vpnclientIpsecParams
           type:
             - '@azure/arm-network.VpnClientIPsecParameters'
-          description: <span data-ttu-id="7d808-135">Parâmetros fornecidos a começar a definir vpnclient ipsec parâmetros da operação de cliente de P2S de Gateway de rede Virtual por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-135">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
+          description: <span data-ttu-id="aae9c-138">Parâmetros fornecidos a começar a definir vpnclient ipsec parâmetros da operação de cliente de P2S de Gateway de rede Virtual por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-138">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -347,22 +376,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-136">Atualizações de que marcas de um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-136">Updates a virtual network gateway tags.</span></span>
+    summary: <span data-ttu-id="aae9c-139">Atualizações de que marcas de um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-139">Updates a virtual network gateway tags.</span></span>
     syntax:
       content: 'function beginUpdateTags(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-137">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-137">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-140">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-140">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-138">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-138">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-141">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-141">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.TagsObject'
-          description: <span data-ttu-id="7d808-139">Parâmetros fornecidos para atualizar os rótulos de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-139">Parameters supplied to update virtual network gateway tags.</span></span>
+          description: <span data-ttu-id="aae9c-142">Parâmetros fornecidos para atualizar os rótulos de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-142">Parameters supplied to update virtual network gateway tags.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -378,22 +407,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-140">Cria ou atualiza um gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-140">Creates or updates a virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-143">Cria ou atualiza um gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-143">Creates or updates a virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function createOrUpdate(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VirtualNetworkGateway, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-141">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-141">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-144">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-144">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-142">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-142">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-145">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-145">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VirtualNetworkGateway'
-          description: <span data-ttu-id="7d808-143">Parâmetros fornecidos para criar ou atualizar operação de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-143">Parameters supplied to create or update virtual network gateway operation.</span></span>
+          description: <span data-ttu-id="aae9c-146">Parâmetros fornecidos para criar ou atualizar operação de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-146">Parameters supplied to create or update virtual network gateway operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -409,18 +438,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-144">Exclui o gateway de rede virtual especificada.</span><span class="sxs-lookup"><span data-stu-id="7d808-144">Deletes the specified virtual network gateway.</span></span>
+    summary: <span data-ttu-id="aae9c-147">Exclui o gateway de rede virtual especificada.</span><span class="sxs-lookup"><span data-stu-id="aae9c-147">Deletes the specified virtual network gateway.</span></span>
     syntax:
       content: 'function deleteMethod(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-145">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-145">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-148">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-148">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-146">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-146">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-149">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-149">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -436,22 +465,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-147">Gera o pacote de cliente VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-147">Generates VPN client package for P2S client of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-150">Gera o pacote de cliente VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-150">Generates VPN client package for P2S client of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function generatevpnclientpackage(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VpnClientParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-148">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-148">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-151">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-151">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-149">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-149">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-152">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-152">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-150">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-150">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-153">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-153">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -474,24 +503,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-151">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-151">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-154">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-154">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-152">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-152">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-155">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-155">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-153">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-153">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-156">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-156">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-154">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-154">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-157">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-157">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-155">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-155">The callback</span></span>
+            <span data-ttu-id="aae9c-158">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-158">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
@@ -509,20 +538,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-156">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-156">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-159">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-159">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-157">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-157">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-160">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-160">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-158">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-158">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-161">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-161">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-159">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-159">The callback</span></span>
+            <span data-ttu-id="aae9c-162">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-162">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGeneratevpnclientpackageResponse>
@@ -533,22 +562,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-160">Gera o perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-160">Generates VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="7d808-161">Usado para autenticação baseada em IKEV2 e radius.</span><span class="sxs-lookup"><span data-stu-id="7d808-161">Used for IKEV2 and radius based authentication.</span></span>
+    summary: <span data-ttu-id="aae9c-163">Gera o perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-163">Generates VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="aae9c-164">Usado para autenticação baseada em IKEV2 e radius.</span><span class="sxs-lookup"><span data-stu-id="aae9c-164">Used for IKEV2 and radius based authentication.</span></span>
     syntax:
       content: 'function generateVpnProfile(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: VpnClientParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-162">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-162">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-165">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-165">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-163">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-163">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-166">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-166">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-164">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-164">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-167">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-167">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -571,24 +600,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-165">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-165">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-168">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-168">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-166">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-166">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-169">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-169">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-167">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-167">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-170">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-170">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-168">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-168">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-171">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-171">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-169">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-169">The callback</span></span>
+            <span data-ttu-id="aae9c-172">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-172">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
@@ -606,20 +635,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-170">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-170">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-173">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-173">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-171">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-171">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-174">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-174">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnClientParameters'
-          description: <span data-ttu-id="7d808-172">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="7d808-172">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
+          description: <span data-ttu-id="aae9c-175">Parâmetros fornecidos para o gateway de rede virtual de gerar operação do pacote de cliente VPN.</span><span class="sxs-lookup"><span data-stu-id="aae9c-175">Parameters supplied to the generate virtual network gateway VPN client package operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-173">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-173">The callback</span></span>
+            <span data-ttu-id="aae9c-176">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-176">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGenerateVpnProfileResponse>
@@ -630,18 +659,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-174">Obtém o gateway de rede virtual especificada pelo grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-174">Gets the specified virtual network gateway by resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-177">Obtém o gateway de rede virtual especificada pelo grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-177">Gets the specified virtual network gateway by resource group.</span></span>
     syntax:
       content: 'function get(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-175">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-175">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-178">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-178">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-176">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-176">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-179">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-179">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -664,20 +693,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-177">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-177">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-180">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-180">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-178">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-178">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-181">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-181">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-179">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-179">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-182">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-182">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
-            <span data-ttu-id="7d808-180">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-180">The callback</span></span>
+            <span data-ttu-id="aae9c-183">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-183">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetResponse>
@@ -695,16 +724,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-181">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-181">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-184">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-184">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-182">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-182">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-185">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-185">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGateway>
           description: |
-            <span data-ttu-id="7d808-183">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-183">The callback</span></span>
+            <span data-ttu-id="aae9c-186">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-186">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetResponse>
@@ -715,22 +744,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-184">Esta operação recupera uma lista de rotas que anuncia o gateway de rede virtual para o par especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-184">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
+    summary: <span data-ttu-id="aae9c-187">Esta operação recupera uma lista de rotas que anuncia o gateway de rede virtual para o par especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-187">This operation retrieves a list of routes the virtual network gateway is advertising to the specified peer.</span></span>
     syntax:
       content: 'function getAdvertisedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, peer: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-185">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-185">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-188">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-188">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-186">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-186">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-189">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-189">The name of the virtual network gateway.</span></span>
         - id: peer
           type:
             - string
-          description: <span data-ttu-id="7d808-187">O endereço IP do par</span><span class="sxs-lookup"><span data-stu-id="7d808-187">The IP address of the peer</span></span>
+          description: <span data-ttu-id="aae9c-190">O endereço IP do par.</span><span class="sxs-lookup"><span data-stu-id="aae9c-190">The IP address of the peer.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -746,18 +775,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-188">A operação GetBgpPeerStatus recupera o status de todos os pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="7d808-188">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
+    summary: <span data-ttu-id="aae9c-191">A operação GetBgpPeerStatus recupera o status de todos os pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="aae9c-191">The GetBgpPeerStatus operation retrieves the status of all BGP peers.</span></span>
     syntax:
       content: 'function getBgpPeerStatus(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysGetBgpPeerStatusOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-189">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-189">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-192">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-192">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-190">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-190">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-193">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-193">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysGetBgpPeerStatusOptionalParams
@@ -773,18 +802,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="7d808-191">Esta operação recupera uma lista de rotas que aprendeu o gateway de rede virtual, incluindo as rotas aprendidas com pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="7d808-191">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
+    summary: '<span data-ttu-id="aae9c-194">Esta operação recupera uma lista de rotas que aprendeu o gateway de rede virtual, incluindo as rotas aprendidas com pares de BGP.</span><span class="sxs-lookup"><span data-stu-id="aae9c-194">This operation retrieves a list of routes the virtual network gateway has learned, including routes learned from BGP peers.</span></span>'
     syntax:
       content: 'function getLearnedRoutes(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-192">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-192">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-195">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-195">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-193">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-193">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-196">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-196">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -794,24 +823,51 @@ items:
         type:
           - Promise<Models.VirtualNetworkGatewaysGetLearnedRoutesResponse>
     package: '@azure/arm-network'
+  - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientConnectionHealth'
+    name: 'getVpnclientConnectionHealth(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="aae9c-197">Get detalhes de integridade da conexão de VPN cliente por conexão de cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-197">Get VPN client connection health detail per P2S client connection of the virtual network gateway in the specified resource group.</span></span>
+    syntax:
+      content: 'function getVpnclientConnectionHealth(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="aae9c-198">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-198">The name of the resource group.</span></span>
+        - id: virtualNetworkGatewayName
+          type:
+            - string
+          description: <span data-ttu-id="aae9c-199">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-199">The name of the virtual network gateway.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkGatewaysGetVpnclientConnectionHealthResponse>
+    package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.getVpnclientIpsecParameters'
     name: 'getVpnclientIpsecParameters(string, string, msRest.RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-194">A operação obter VpnclientIpsecParameters recupera informações sobre a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-194">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="aae9c-200">A operação obter VpnclientIpsecParameters recupera informações sobre a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-200">The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function getVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-195">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-195">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-201">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-201">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-196">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-196">The virtual network gateway name.</span></span>
+          description: <span data-ttu-id="aae9c-202">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-202">The virtual network gateway name.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -827,18 +883,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-197">Obtém pré-gerado perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-197">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="7d808-198">O perfil precisa ser gerado pela primeira vez usando generateVpnProfile.</span><span class="sxs-lookup"><span data-stu-id="7d808-198">The profile needs to be generated first using generateVpnProfile.</span></span>
+    summary: <span data-ttu-id="aae9c-203">Obtém pré-gerado perfil de VPN para cliente P2S do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-203">Gets pre-generated VPN profile for P2S client of the virtual network gateway in the specified resource group.</span></span> <span data-ttu-id="aae9c-204">O perfil precisa ser gerado pela primeira vez usando generateVpnProfile.</span><span class="sxs-lookup"><span data-stu-id="aae9c-204">The profile needs to be generated first using generateVpnProfile.</span></span>
     syntax:
       content: 'function getVpnProfilePackageUrl(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-199">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-199">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-205">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-205">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-200">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-200">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-206">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-206">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -854,14 +910,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-201">Obtém todos os gateways de rede virtual por grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-201">Gets all virtual network gateways by resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-207">Obtém todos os gateways de rede virtual por grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-207">Gets all virtual network gateways by resource group.</span></span>
     syntax:
       content: 'function list(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-202">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-202">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-208">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-208">The name of the resource group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -884,16 +940,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-203">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-203">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-209">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-209">The name of the resource group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-204">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-204">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-210">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-210">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="7d808-205">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-205">The callback</span></span>
+            <span data-ttu-id="aae9c-211">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-211">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListResponse>
@@ -911,12 +967,12 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-206">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-206">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-212">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-212">The name of the resource group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="7d808-207">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-207">The callback</span></span>
+            <span data-ttu-id="aae9c-213">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-213">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListResponse>
@@ -927,18 +983,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-208">Obtém todas as conexões em um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-208">Gets all the connections in a virtual network gateway.</span></span>
+    summary: <span data-ttu-id="aae9c-214">Obtém todas as conexões em um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-214">Gets all the connections in a virtual network gateway.</span></span>
     syntax:
       content: 'function listConnections(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-209">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-209">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-215">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-215">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-210">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-210">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-216">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-216">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -961,20 +1017,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-211">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-211">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-217">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-217">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-212">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-212">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-218">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-218">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-213">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-213">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-219">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-219">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="7d808-214">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-214">The callback</span></span>
+            <span data-ttu-id="aae9c-220">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-220">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
@@ -992,16 +1048,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-215">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-215">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-221">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-221">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-216">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-216">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-222">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-222">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="7d808-217">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-217">The callback</span></span>
+            <span data-ttu-id="aae9c-223">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-223">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsResponse>
@@ -1012,14 +1068,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-218">Obtém todas as conexões em um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-218">Gets all the connections in a virtual network gateway.</span></span>
+    summary: <span data-ttu-id="aae9c-224">Obtém todas as conexões em um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-224">Gets all the connections in a virtual network gateway.</span></span>
     syntax:
       content: 'function listConnectionsNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-219">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-219">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-225">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-225">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1042,16 +1098,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-220">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-220">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-226">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-226">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-221">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-221">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-227">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-227">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="7d808-222">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-222">The callback</span></span>
+            <span data-ttu-id="aae9c-228">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-228">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
@@ -1069,12 +1125,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-223">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-223">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-229">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-229">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListConnectionsResult>
           description: |
-            <span data-ttu-id="7d808-224">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-224">The callback</span></span>
+            <span data-ttu-id="aae9c-230">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-230">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListConnectionsNextResponse>
@@ -1085,14 +1141,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-225">Obtém todos os gateways de rede virtual por grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-225">Gets all virtual network gateways by resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-231">Obtém todos os gateways de rede virtual por grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-231">Gets all virtual network gateways by resource group.</span></span>
     syntax:
       content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-226">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-226">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-232">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-232">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1115,16 +1171,16 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-227">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-227">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-233">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-233">The NextLink from the previous successful call to List operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-228">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-228">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-234">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="7d808-229">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-229">The callback</span></span>
+            <span data-ttu-id="aae9c-235">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-235">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListNextResponse>
@@ -1142,12 +1198,12 @@ items:
         - id: nextPageLink
           type:
             - string
-          description: <span data-ttu-id="7d808-230">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="7d808-230">The NextLink from the previous successful call to List operation.</span></span>
+          description: <span data-ttu-id="aae9c-236">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="aae9c-236">The NextLink from the previous successful call to List operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/arm-network.VirtualNetworkGatewayListResult>
           description: |
-            <span data-ttu-id="7d808-231">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-231">The callback</span></span>
+            <span data-ttu-id="aae9c-237">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-237">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysListNextResponse>
@@ -1158,18 +1214,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-232">Redefine o primário do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-232">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-238">Redefine o primário do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-238">Resets the primary of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function reset(resourceGroupName: string, virtualNetworkGatewayName: string, options?: Models.VirtualNetworkGatewaysResetOptionalParams)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-233">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-233">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-239">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-239">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-234">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-234">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-240">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-240">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - Models.VirtualNetworkGatewaysResetOptionalParams
@@ -1185,18 +1241,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-235">Redefine a chave compartilhada do cliente VPN do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="7d808-235">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
+    summary: <span data-ttu-id="aae9c-241">Redefine a chave compartilhada do cliente VPN do gateway de rede virtual no grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-241">Resets the VPN client shared key of the virtual network gateway in the specified resource group.</span></span>
     syntax:
       content: 'function resetVpnClientSharedKey(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-236">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-236">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-242">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-242">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-237">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-237">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-243">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-243">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1212,22 +1268,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-238">A operação de definir VpnclientIpsecParameters define a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-238">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
+    summary: <span data-ttu-id="aae9c-244">A operação de definir VpnclientIpsecParameters define a política de ipsec do vpnclient para cliente P2S do gateway de rede virtual no grupo de recursos especificado por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-244">The Set VpnclientIpsecParameters operation sets the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.</span></span>
     syntax:
       content: 'function setVpnclientIpsecParameters(resourceGroupName: string, virtualNetworkGatewayName: string, vpnclientIpsecParams: VpnClientIPsecParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-239">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-239">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-245">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-245">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-240">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-240">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-246">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-246">The name of the virtual network gateway.</span></span>
         - id: vpnclientIpsecParams
           type:
             - '@azure/arm-network.VpnClientIPsecParameters'
-          description: <span data-ttu-id="7d808-241">Parâmetros fornecidos a começar a definir vpnclient ipsec parâmetros da operação de cliente de P2S de Gateway de rede Virtual por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="7d808-241">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
+          description: <span data-ttu-id="aae9c-247">Parâmetros fornecidos a começar a definir vpnclient ipsec parâmetros da operação de cliente de P2S de Gateway de rede Virtual por meio do provedor de recursos de rede.</span><span class="sxs-lookup"><span data-stu-id="aae9c-247">Parameters supplied to the Begin Set vpnclient ipsec parameters of Virtual Network Gateway P2S client operation through Network resource provider.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1243,18 +1299,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-242">Obtém uma representação de formato xml para os dispositivos vpn com suporte.</span><span class="sxs-lookup"><span data-stu-id="7d808-242">Gets a xml format representation for supported vpn devices.</span></span>
+    summary: <span data-ttu-id="aae9c-248">Obtém uma representação de formato xml para os dispositivos vpn com suporte.</span><span class="sxs-lookup"><span data-stu-id="aae9c-248">Gets a xml format representation for supported vpn devices.</span></span>
     syntax:
       content: 'function supportedVpnDevices(resourceGroupName: string, virtualNetworkGatewayName: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-243">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-243">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-249">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-249">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-244">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-244">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-250">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-250">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1277,20 +1333,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-245">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-245">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-251">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-251">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-246">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-246">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-252">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-252">The name of the virtual network gateway.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-247">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-247">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-253">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-253">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-248">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-248">The callback</span></span>
+            <span data-ttu-id="aae9c-254">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-254">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
@@ -1308,16 +1364,16 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-249">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-249">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-255">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-255">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-250">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-250">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-256">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-256">The name of the virtual network gateway.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-251">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-251">The callback</span></span>
+            <span data-ttu-id="aae9c-257">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-257">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysSupportedVpnDevicesResponse>
@@ -1328,22 +1384,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-252">Atualizações de que marcas de um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-252">Updates a virtual network gateway tags.</span></span>
+    summary: <span data-ttu-id="aae9c-258">Atualizações de que marcas de um gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-258">Updates a virtual network gateway tags.</span></span>
     syntax:
       content: 'function updateTags(resourceGroupName: string, virtualNetworkGatewayName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-253">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-253">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-259">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-259">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayName
           type:
             - string
-          description: <span data-ttu-id="7d808-254">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-254">The name of the virtual network gateway.</span></span>
+          description: <span data-ttu-id="aae9c-260">O nome do gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-260">The name of the virtual network gateway.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.TagsObject'
-          description: <span data-ttu-id="7d808-255">Parâmetros fornecidos para atualizar os rótulos de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="7d808-255">Parameters supplied to update virtual network gateway tags.</span></span>
+          description: <span data-ttu-id="aae9c-261">Parâmetros fornecidos para atualizar os rótulos de gateway de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="aae9c-261">Parameters supplied to update virtual network gateway tags.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1359,7 +1415,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-256">Crie um VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="7d808-256">Create a VirtualNetworkGateways.</span></span>
+    summary: <span data-ttu-id="aae9c-262">Crie um VirtualNetworkGateways.</span><span class="sxs-lookup"><span data-stu-id="aae9c-262">Create a VirtualNetworkGateways.</span></span>
     syntax:
       content: 'new VirtualNetworkGateways(client: NetworkManagementClientContext)'
       parameters:
@@ -1367,7 +1423,7 @@ items:
           type:
             - '@azure/arm-network.NetworkManagementClientContext'
           description: |
-            <span data-ttu-id="7d808-257">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="7d808-257">Reference to the service client.</span></span>
+            <span data-ttu-id="aae9c-263">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="aae9c-263">Reference to the service client.</span></span>
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.VirtualNetworkGateways.vpnDeviceConfigurationScript'
     name: 'vpnDeviceConfigurationScript(string, string, VpnDeviceScriptParameters, msRest.RequestOptionsBase)'
@@ -1375,22 +1431,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7d808-258">Obtém uma representação de formato xml para o script de configuração do dispositivo vpn.</span><span class="sxs-lookup"><span data-stu-id="7d808-258">Gets a xml format representation for vpn device configuration script.</span></span>
+    summary: <span data-ttu-id="aae9c-264">Obtém uma representação de formato xml para o script de configuração do dispositivo vpn.</span><span class="sxs-lookup"><span data-stu-id="aae9c-264">Gets a xml format representation for vpn device configuration script.</span></span>
     syntax:
       content: 'function vpnDeviceConfigurationScript(resourceGroupName: string, virtualNetworkGatewayConnectionName: string, parameters: VpnDeviceScriptParameters, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-259">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-259">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-265">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-265">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="7d808-260">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="7d808-260">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="aae9c-266">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-266">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="7d808-261">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="7d808-261">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="aae9c-267">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="aae9c-267">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -1413,24 +1469,24 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-262">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-262">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-268">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-268">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="7d808-263">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="7d808-263">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="aae9c-269">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-269">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="7d808-264">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="7d808-264">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="aae9c-270">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="aae9c-270">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7d808-265">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7d808-265">The optional parameters</span></span>
+          description: <span data-ttu-id="aae9c-271">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="aae9c-271">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-266">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-266">The callback</span></span>
+            <span data-ttu-id="aae9c-272">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-272">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
@@ -1448,20 +1504,20 @@ items:
         - id: resourceGroupName
           type:
             - string
-          description: <span data-ttu-id="7d808-267">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="7d808-267">The name of the resource group.</span></span>
+          description: <span data-ttu-id="aae9c-273">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="aae9c-273">The name of the resource group.</span></span>
         - id: virtualNetworkGatewayConnectionName
           type:
             - string
-          description: <span data-ttu-id="7d808-268">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="7d808-268">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
+          description: <span data-ttu-id="aae9c-274">O nome da conexão de gateway de rede virtual para o qual o script de configuração é gerado.</span><span class="sxs-lookup"><span data-stu-id="aae9c-274">The name of the virtual network gateway connection for which the configuration script is generated.</span></span>
         - id: parameters
           type:
             - '@azure/arm-network.VpnDeviceScriptParameters'
-          description: <span data-ttu-id="7d808-269">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="7d808-269">Parameters supplied to the generate vpn device script operation.</span></span>
+          description: <span data-ttu-id="aae9c-275">Parâmetros fornecidos para a operação de script de dispositivo de vpn de gerar.</span><span class="sxs-lookup"><span data-stu-id="aae9c-275">Parameters supplied to the generate vpn device script operation.</span></span>
         - id: callback
           type:
             - ServiceCallback<string>
           description: |
-            <span data-ttu-id="7d808-270">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7d808-270">The callback</span></span>
+            <span data-ttu-id="aae9c-276">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="aae9c-276">The callback</span></span>
       return:
         type:
           - Promise<Models.VirtualNetworkGatewaysVpnDeviceConfigurationScriptResponse>
