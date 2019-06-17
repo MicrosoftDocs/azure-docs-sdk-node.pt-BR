@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedInstanceTdeCertificates'
+    name: ManagedInstanceTdeCertificates
+    fullName: ManagedInstanceTdeCertificates
+    children:
+      - '@azure/arm-sql.ManagedInstanceTdeCertificates.beginCreate'
+      - '@azure/arm-sql.ManagedInstanceTdeCertificates.create'
+      - '@azure/arm-sql.ManagedInstanceTdeCertificates.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um ManagedInstanceTdeCertificates.
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceTdeCertificates.beginCreate'
+    name: 'beginCreate(string, string, TdeCertificate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Cria um certificado TDE para um determinado servidor.
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, managedInstanceName: string, parameters: TdeCertificate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém o recurso. Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.
+        - id: managedInstanceName
+          type:
+            - string
+          description: O nome da instância gerenciada.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.TdeCertificate'
+          description: O certificado TDE solicitado a ser criado ou atualizado.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceTdeCertificates.create'
+    name: 'create(string, string, TdeCertificate, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Cria um certificado TDE para um determinado servidor.
+    syntax:
+      content: 'function create(resourceGroupName: string, managedInstanceName: string, parameters: TdeCertificate, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém o recurso. Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.
+        - id: managedInstanceName
+          type:
+            - string
+          description: O nome da instância gerenciada.
+        - id: parameters
+          type:
+            - '@azure/arm-sql.TdeCertificate'
+          description: O certificado TDE solicitado a ser criado ou atualizado.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedInstanceTdeCertificates.constructor'
+    name: ManagedInstanceTdeCertificates(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um ManagedInstanceTdeCertificates.
+    syntax:
+      content: 'new ManagedInstanceTdeCertificates(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.TdeCertificate'
+    name: TdeCertificate
+    spec.typeScript:
+      - name: TdeCertificate
+        fullName: TdeCertificate
+        uid: '@azure/arm-sql.TdeCertificate'
