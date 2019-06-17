@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition'
+    name: ManagementEventRuleCondition
+    fullName: ManagementEventRuleCondition
+    children:
+      - '@azure/arm-monitor.ManagementEventRuleCondition.aggregation'
+      - '@azure/arm-monitor.ManagementEventRuleCondition.dataSource'
+      - '@azure/arm-monitor.ManagementEventRuleCondition.odatatype'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="64311-101">Uma condição de regra de evento de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="64311-101">A management event rule condition.</span></span>
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.aggregation'
+    name: aggregation
+    fullName: aggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="64311-102">Como os dados coletados devem ser combinados ao longo do tempo e quando o alerta for ativado.</span><span class="sxs-lookup"><span data-stu-id="64311-102">How the data that is collected should be combined over time and when the alert is activated.</span></span>
+      <span data-ttu-id="64311-103">Observe que, para agregação de alertas de eventos de gerenciamento, é opcional – se não for fornecido, então qualquer evento fará com que o alerta seja ativado.</span><span class="sxs-lookup"><span data-stu-id="64311-103">Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.</span></span>
+    optional: true
+    syntax:
+      content: 'aggregation?: ManagementEventAggregationCondition'
+      return:
+        type:
+          - '@azure/arm-monitor.ManagementEventAggregationCondition'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.dataSource'
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="64311-104">o recurso do qual a regra coleta seus dados.</span><span class="sxs-lookup"><span data-stu-id="64311-104">the resource from which the rule collects its data.</span></span> <span data-ttu-id="64311-105">Para este tipo de fonte de dados sempre será do tipo RuleMetricDataSource.</span><span class="sxs-lookup"><span data-stu-id="64311-105">For this type dataSource will always be of type RuleMetricDataSource.</span></span>
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSourceUnion'
+      return:
+        type:
+          - '@azure/arm-monitor.RuleDataSourceUnion'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ManagementEventRuleCondition.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="64311-106">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="64311-106">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"'
+      return:
+        type:
+          - '"Microsoft.Azure.Management.Insights.Models.ManagementEventRuleCondition"'
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ManagementEventAggregationCondition'
+    name: ManagementEventAggregationCondition
+    spec.typeScript:
+      - name: ManagementEventAggregationCondition
+        fullName: ManagementEventAggregationCondition
+        uid: '@azure/arm-monitor.ManagementEventAggregationCondition'
+  - uid: '@azure/arm-monitor.RuleDataSourceUnion'
+    name: RuleDataSourceUnion
+    spec.typeScript:
+      - name: RuleDataSourceUnion
+        fullName: RuleDataSourceUnion
+        uid: '@azure/arm-monitor.RuleDataSourceUnion'

@@ -1,0 +1,1213 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.StorageAccounts'
+    name: StorageAccounts
+    fullName: StorageAccounts
+    children:
+      - '@azure/arm-storage.StorageAccounts.beginCreate'
+      - '@azure/arm-storage.StorageAccounts.beginFailover'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+      - '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+      - '@azure/arm-storage.StorageAccounts.create'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+      - '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+      - '@azure/arm-storage.StorageAccounts.failover'
+      - '@azure/arm-storage.StorageAccounts.getProperties'
+      - '@azure/arm-storage.StorageAccounts.getProperties_1'
+      - '@azure/arm-storage.StorageAccounts.getProperties_2'
+      - '@azure/arm-storage.StorageAccounts.list'
+      - '@azure/arm-storage.StorageAccounts.list_2'
+      - '@azure/arm-storage.StorageAccounts.list_1'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+      - '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+      - '@azure/arm-storage.StorageAccounts.listKeys'
+      - '@azure/arm-storage.StorageAccounts.listKeys_2'
+      - '@azure/arm-storage.StorageAccounts.listKeys_1'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+      - '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+      - '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+      - '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+      - '@azure/arm-storage.StorageAccounts.constructor'
+      - '@azure/arm-storage.StorageAccounts.update'
+      - '@azure/arm-storage.StorageAccounts.update_2'
+      - '@azure/arm-storage.StorageAccounts.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="1492b-101">Classe que representa um StorageAccounts.</span><span class="sxs-lookup"><span data-stu-id="1492b-101">Class representing a StorageAccounts.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginCreate'
+    name: 'beginCreate(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1492b-102">Cria uma nova conta de armazenamento de maneira assíncrona com os parâmetros especificados.</span><span class="sxs-lookup"><span data-stu-id="1492b-102">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="1492b-103">Se uma conta já foi criada e uma solicitação de criação subsequente é emitida com propriedades diferentes, as propriedades da conta serão atualizadas.</span><span class="sxs-lookup"><span data-stu-id="1492b-103">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="1492b-104">Se uma conta já foi criada e uma solicitação de criação ou atualização subsequente é emitida com exatamente o mesmo conjunto de propriedades, a solicitação será bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="1492b-104">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-105">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-105">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-106">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-106">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-107">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-107">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-108">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-108">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="1492b-109">Os parâmetros para fornecer para a conta criada.</span><span class="sxs-lookup"><span data-stu-id="1492b-109">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.beginFailover'
+    name: 'beginFailover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-110">Solicitação de failover pode ser disparada para uma conta de armazenamento em caso de problemas de disponibilidade.</span><span class="sxs-lookup"><span data-stu-id="1492b-110">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="1492b-111">Ocorre o failover de cluster de primário da conta de armazenamento para um cluster secundário para contas RA-GRS.</span><span class="sxs-lookup"><span data-stu-id="1492b-111">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="1492b-112">O cluster secundário se tornará primário após o failover.</span><span class="sxs-lookup"><span data-stu-id="1492b-112">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-113">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-113">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-114">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-114">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-115">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-115">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-116">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-116">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability'
+    name: 'checkNameAvailability(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-117">Verifica se o nome da conta de armazenamento é válido e se não ainda estiver em uso.</span><span class="sxs-lookup"><span data-stu-id="1492b-117">Checks that the storage account name is valid and is not already in use.</span></span>
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="1492b-118">O nome da conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-118">The storage account name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, RequestOptionsBase, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: RequestOptionsBase, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="1492b-119">O nome da conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-119">The storage account name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-120">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="1492b-121">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: <span data-ttu-id="1492b-122">O nome da conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-122">The storage account name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+          description: |
+            <span data-ttu-id="1492b-123">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsCheckNameAvailabilityResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.create'
+    name: 'create(string, string, StorageAccountCreateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1492b-124">Cria uma nova conta de armazenamento de maneira assíncrona com os parâmetros especificados.</span><span class="sxs-lookup"><span data-stu-id="1492b-124">Asynchronously creates a new storage account with the specified parameters.</span></span> <span data-ttu-id="1492b-125">Se uma conta já foi criada e uma solicitação de criação subsequente é emitida com propriedades diferentes, as propriedades da conta serão atualizadas.</span><span class="sxs-lookup"><span data-stu-id="1492b-125">If an account is already created and a subsequent create request is issued with different properties, the account properties will be updated.</span></span> <span data-ttu-id="1492b-126">Se uma conta já foi criada e uma solicitação de criação ou atualização subsequente é emitida com exatamente o mesmo conjunto de propriedades, a solicitação será bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="1492b-126">If an account is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.</span></span>'
+    syntax:
+      content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-127">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-127">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-128">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-128">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-129">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-129">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-130">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-130">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountCreateParameters'
+          description: <span data-ttu-id="1492b-131">Os parâmetros para fornecer para a conta criada.</span><span class="sxs-lookup"><span data-stu-id="1492b-131">The parameters to provide for the created account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsCreateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-132">Exclui uma conta de armazenamento no Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="1492b-132">Deletes a storage account in Microsoft Azure.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-133">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-133">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-134">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-134">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-135">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-135">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-136">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-136">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-137">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-137">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-138">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-138">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-139">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-139">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-140">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-140">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-141">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-141">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1492b-142">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-143">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-143">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-144">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-144">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-145">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-145">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-146">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-146">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1492b-147">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-147">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.failover'
+    name: 'failover(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-148">Solicitação de failover pode ser disparada para uma conta de armazenamento em caso de problemas de disponibilidade.</span><span class="sxs-lookup"><span data-stu-id="1492b-148">Failover request can be triggered for a storage account in case of availability issues.</span></span> <span data-ttu-id="1492b-149">Ocorre o failover de cluster de primário da conta de armazenamento para um cluster secundário para contas RA-GRS.</span><span class="sxs-lookup"><span data-stu-id="1492b-149">The failover occurs from the storage account's primary cluster to secondary cluster for RA-GRS accounts.</span></span> <span data-ttu-id="1492b-150">O cluster secundário se tornará primário após o failover.</span><span class="sxs-lookup"><span data-stu-id="1492b-150">The secondary cluster will become primary after failover.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-151">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-151">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-152">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-152">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-153">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-153">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-154">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-154">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties'
+    name: 'getProperties(string, string, Models.StorageAccountsGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1492b-155">Retorna as propriedades para a conta de armazenamento especificado incluindo, mas não limitado a nome, nome do SKU, local e o status da conta.</span><span class="sxs-lookup"><span data-stu-id="1492b-155">Returns the properties for the specified storage account including but not limited to name, SKU name, location, and account status.</span></span> <span data-ttu-id="1492b-156">A operação ListKeys deve ser usada para recuperar as chaves de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-156">The ListKeys operation should be used to retrieve storage keys.</span></span>'
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options?: Models.StorageAccountsGetPropertiesOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-157">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-157">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-158">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-158">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-159">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-159">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-160">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-160">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - Models.StorageAccountsGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-161">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-161">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-162">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-162">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-163">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-163">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-164">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-164">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="1492b-165">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-165">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.getProperties_2'
+    name: 'getProperties(string, string, StorageAccountsGetPropertiesOptionalParams, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(resourceGroupName: string, accountName: string, options: StorageAccountsGetPropertiesOptionalParams, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-166">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-166">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-167">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-167">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-168">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-168">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-169">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-169">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+          description: <span data-ttu-id="1492b-170">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-170">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="1492b-171">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsGetPropertiesResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list'
+    name: list(msRest.RequestOptionsBase)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-172">Lista todas as contas de armazenamento disponíveis na assinatura.</span><span class="sxs-lookup"><span data-stu-id="1492b-172">Lists all the storage accounts available under the subscription.</span></span> <span data-ttu-id="1492b-173">Observe que as chaves de armazenamento não são retornadas; Use a operação ListKeys para isso.</span><span class="sxs-lookup"><span data-stu-id="1492b-173">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function list(options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_2'
+    name: 'list(RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-174">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-174">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="1492b-175">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-175">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.list_1'
+    name: list(ServiceCallback<StorageAccountListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="1492b-176">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS'
+    name: 'listAccountSAS(string, string, AccountSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-177">Listar credenciais SAS de uma conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-177">List SAS credentials of a storage account.</span></span>
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-178">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-178">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-179">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-179">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-180">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-180">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-181">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-181">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="1492b-182">Os parâmetros para fornecer credenciais SAS de lista para a conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-182">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_2'
+    name: 'listAccountSAS(string, string, AccountSasParameters, RequestOptionsBase, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-183">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-183">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-184">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-184">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-185">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-185">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-186">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-186">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="1492b-187">Os parâmetros para fornecer credenciais SAS de lista para a conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-187">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-188">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-188">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="1492b-189">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listAccountSAS_1'
+    name: 'listAccountSAS(string, string, AccountSasParameters, ServiceCallback<ListAccountSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, callback: ServiceCallback<ListAccountSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-190">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-190">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-191">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-191">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-192">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-192">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-193">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-193">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.AccountSasParameters'
+          description: <span data-ttu-id="1492b-194">Os parâmetros para fornecer credenciais SAS de lista para a conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-194">The parameters to provide to list SAS credentials for the storage account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+          description: |
+            <span data-ttu-id="1492b-195">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListAccountSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup'
+    name: 'listByResourceGroup(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-196">Lista todas as contas de armazenamento disponíveis no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="1492b-196">Lists all the storage accounts available under the given resource group.</span></span> <span data-ttu-id="1492b-197">Observe que as chaves de armazenamento não são retornadas; Use a operação ListKeys para isso.</span><span class="sxs-lookup"><span data-stu-id="1492b-197">Note that storage keys are not returned; use the ListKeys operation for this.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-198">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-198">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-199">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-199">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, RequestOptionsBase, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-200">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-200">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-201">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-201">The name is case insensitive.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-202">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="1492b-203">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<StorageAccountListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<StorageAccountListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-204">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-204">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-205">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-205">The name is case insensitive.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+          description: |
+            <span data-ttu-id="1492b-206">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-206">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListByResourceGroupResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys'
+    name: 'listKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-207">Lista as chaves de acesso da conta de armazenamento especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-207">Lists the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-208">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-208">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-209">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-209">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-210">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-210">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-211">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-211">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_2'
+    name: 'listKeys(string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-212">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-212">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-213">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-213">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-214">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-214">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-215">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-215">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-216">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-216">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="1492b-217">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-217">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listKeys_1'
+    name: 'listKeys(string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-218">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-218">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-219">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-219">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-220">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-220">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-221">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-221">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="1492b-222">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListKeysResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-223">Credenciais SAS de serviço de lista de um recurso específico.</span><span class="sxs-lookup"><span data-stu-id="1492b-223">List service SAS credentials of a specific resource.</span></span>
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-224">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-224">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-225">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-225">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-226">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-226">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-227">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-227">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="1492b-228">Os parâmetros para fornecer às credenciais SAS do serviço de lista.</span><span class="sxs-lookup"><span data-stu-id="1492b-228">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_2'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, RequestOptionsBase, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: RequestOptionsBase, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-229">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-229">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-230">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-230">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-231">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-231">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-232">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-232">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="1492b-233">Os parâmetros para fornecer às credenciais SAS do serviço de lista.</span><span class="sxs-lookup"><span data-stu-id="1492b-233">The parameters to provide to list service SAS credentials.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-234">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-234">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="1492b-235">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-235">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.listServiceSAS_1'
+    name: 'listServiceSAS(string, string, ServiceSasParameters, ServiceCallback<ListServiceSasResponse>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, callback: ServiceCallback<ListServiceSasResponse>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-236">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-236">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-237">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-237">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-238">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-238">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-239">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-239">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.ServiceSasParameters'
+          description: <span data-ttu-id="1492b-240">Os parâmetros para fornecer às credenciais SAS do serviço de lista.</span><span class="sxs-lookup"><span data-stu-id="1492b-240">The parameters to provide to list service SAS credentials.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+          description: |
+            <span data-ttu-id="1492b-241">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-241">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsListServiceSASResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey'
+    name: 'regenerateKey(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-242">Regenerar uma das chaves de acesso da conta de armazenamento especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-242">Regenerates one of the access keys for the specified storage account.</span></span>
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-243">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-243">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-244">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-244">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-245">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-245">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-246">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-246">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-247">O nome das chaves de armazenamento que deseja ser regenerados; possíveis valores são key1, key2.</span><span class="sxs-lookup"><span data-stu-id="1492b-247">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_2'
+    name: 'regenerateKey(string, string, string, RequestOptionsBase, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: RequestOptionsBase, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-248">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-248">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-249">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-249">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-250">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-250">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-251">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-251">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-252">O nome das chaves de armazenamento que deseja ser regenerados; possíveis valores são key1, key2.</span><span class="sxs-lookup"><span data-stu-id="1492b-252">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-253">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-253">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="1492b-254">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-254">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.regenerateKey_1'
+    name: 'regenerateKey(string, string, string, ServiceCallback<StorageAccountListKeysResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, callback: ServiceCallback<StorageAccountListKeysResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-255">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-255">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-256">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-256">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-257">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-257">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-258">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-258">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: keyName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-259">O nome das chaves de armazenamento que deseja ser regenerados; possíveis valores são key1, key2.</span><span class="sxs-lookup"><span data-stu-id="1492b-259">The name of storage keys that want to be regenerated, possible values are key1, key2.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+          description: |
+            <span data-ttu-id="1492b-260">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-260">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsRegenerateKeyResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys'
+    name: 'revokeUserDelegationKeys(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-261">Revogar chaves de delegação do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-261">Revoke user delegation keys.</span></span>
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-262">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-262">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-263">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-263">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-264">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-264">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-265">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-265">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_2'
+    name: 'revokeUserDelegationKeys(string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-266">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-266">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-267">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-267">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-268">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-268">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-269">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-269">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-270">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-270">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1492b-271">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-271">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.revokeUserDelegationKeys_1'
+    name: 'revokeUserDelegationKeys(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function revokeUserDelegationKeys(resourceGroupName: string, accountName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-272">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-272">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-273">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-273">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-274">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-274">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-275">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-275">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1492b-276">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-276">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.constructor'
+    name: StorageAccounts(StorageManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1492b-277">Crie um StorageAccounts.</span><span class="sxs-lookup"><span data-stu-id="1492b-277">Create a StorageAccounts.</span></span>
+    syntax:
+      content: 'new StorageAccounts(client: StorageManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-storage.StorageManagementClientContext'
+          description: |
+            <span data-ttu-id="1492b-278">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="1492b-278">Reference to the service client.</span></span>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update'
+    name: 'update(string, string, StorageAccountUpdateParameters, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="1492b-279">A operação de atualização pode ser usada para atualizar o SKU, criptografia, camada de acesso ou marcas para uma conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-279">The update operation can be used to update the SKU, encryption, access tier, or tags for a storage account.</span></span> <span data-ttu-id="1492b-280">Ele também pode ser usado para mapear a conta para um domínio personalizado.</span><span class="sxs-lookup"><span data-stu-id="1492b-280">It can also be used to map the account to a custom domain.</span></span> <span data-ttu-id="1492b-281">Apenas um domínio personalizado é suportado por conta de armazenamento. Não há suporte para a substituição/alteração de domínio personalizado.</span><span class="sxs-lookup"><span data-stu-id="1492b-281">Only one custom domain is supported per storage account; the replacement/change of custom domain is not supported.</span></span> <span data-ttu-id="1492b-282">Para substituir um antigo domínio personalizado, o valor antigo deve ser desmarcada/desregistrado antes de um novo valor pode ser definido.</span><span class="sxs-lookup"><span data-stu-id="1492b-282">In order to replace an old custom domain, the old value must be cleared/unregistered before a new value can be set.</span></span> <span data-ttu-id="1492b-283">Há suporte para a atualização das várias propriedades.</span><span class="sxs-lookup"><span data-stu-id="1492b-283">The update of multiple properties is supported.</span></span> <span data-ttu-id="1492b-284">Essa chamada não altera as chaves de conta de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="1492b-284">This call does not change the storage keys for the account.</span></span> <span data-ttu-id="1492b-285">Se você quiser alterar as chaves da conta de armazenamento, use a operação de regeneração de chaves.</span><span class="sxs-lookup"><span data-stu-id="1492b-285">If you want to change the storage account keys, use the regenerate keys operation.</span></span> <span data-ttu-id="1492b-286">O local e o nome da conta de armazenamento não podem ser alterados após a criação.</span><span class="sxs-lookup"><span data-stu-id="1492b-286">The location and name of the storage account cannot be changed after creation.</span></span>'
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-287">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-287">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-288">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-288">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-289">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-289">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-290">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-290">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="1492b-291">Os parâmetros para fornecer para a conta atualizada.</span><span class="sxs-lookup"><span data-stu-id="1492b-291">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_2'
+    name: 'update(string, string, StorageAccountUpdateParameters, RequestOptionsBase, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: RequestOptionsBase, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-292">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-292">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-293">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-293">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-294">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-294">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-295">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-295">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="1492b-296">Os parâmetros para fornecer para a conta atualizada.</span><span class="sxs-lookup"><span data-stu-id="1492b-296">The parameters to provide for the updated account.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1492b-297">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1492b-297">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="1492b-298">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-298">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.StorageAccounts.update_1'
+    name: 'update(string, string, StorageAccountUpdateParameters, ServiceCallback<StorageAccount>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, callback: ServiceCallback<StorageAccount>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1492b-299">O nome do grupo de recursos na assinatura do usuário.</span><span class="sxs-lookup"><span data-stu-id="1492b-299">The name of the resource group within the user's subscription.</span></span> <span data-ttu-id="1492b-300">O nome é diferencia maiusculas de minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-300">The name is case insensitive.</span></span>
+        - id: accountName
+          type:
+            - string
+          description: '<span data-ttu-id="1492b-301">O nome da conta de armazenamento dentro do grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="1492b-301">The name of the storage account within the specified resource group.</span></span> <span data-ttu-id="1492b-302">Os nomes da conta de armazenamento devem ter entre 3 e 24 caracteres, usar números e apenas letras minúsculas.</span><span class="sxs-lookup"><span data-stu-id="1492b-302">Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.</span></span>'
+        - id: parameters
+          type:
+            - '@azure/arm-storage.StorageAccountUpdateParameters'
+          description: <span data-ttu-id="1492b-303">Os parâmetros para fornecer para a conta atualizada.</span><span class="sxs-lookup"><span data-stu-id="1492b-303">The parameters to provide for the updated account.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.StorageAccount>
+          description: |
+            <span data-ttu-id="1492b-304">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1492b-304">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.StorageAccountsUpdateResponse>
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.StorageManagementClientContext'
+    name: StorageManagementClientContext
+    spec.typeScript:
+      - name: StorageManagementClientContext
+        fullName: StorageManagementClientContext
+        uid: '@azure/arm-storage.StorageManagementClientContext'
+  - uid: '@azure/arm-storage.StorageAccountCreateParameters'
+    name: StorageAccountCreateParameters
+    spec.typeScript:
+      - name: StorageAccountCreateParameters
+        fullName: StorageAccountCreateParameters
+        uid: '@azure/arm-storage.StorageAccountCreateParameters'
+  - uid: ServiceCallback<@azure/arm-storage.CheckNameAvailabilityResult>
+    name: CheckNameAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityResult
+        fullName: CheckNameAvailabilityResult
+        uid: '@azure/arm-storage.CheckNameAvailabilityResult'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccount>
+    name: StorageAccount>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccount
+        fullName: StorageAccount
+        uid: '@azure/arm-storage.StorageAccount'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+    name: StorageAccountsGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: StorageAccountsGetPropertiesOptionalParams
+        fullName: StorageAccountsGetPropertiesOptionalParams
+        uid: '@azure/arm-storage.StorageAccountsGetPropertiesOptionalParams'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListResult>
+    name: StorageAccountListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListResult
+        fullName: StorageAccountListResult
+        uid: '@azure/arm-storage.StorageAccountListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.AccountSasParameters'
+    name: AccountSasParameters
+    spec.typeScript:
+      - name: AccountSasParameters
+        fullName: AccountSasParameters
+        uid: '@azure/arm-storage.AccountSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListAccountSasResponse>
+    name: ListAccountSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListAccountSasResponse
+        fullName: ListAccountSasResponse
+        uid: '@azure/arm-storage.ListAccountSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-storage.StorageAccountListKeysResult>
+    name: StorageAccountListKeysResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: StorageAccountListKeysResult
+        fullName: StorageAccountListKeysResult
+        uid: '@azure/arm-storage.StorageAccountListKeysResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.ServiceSasParameters'
+    name: ServiceSasParameters
+    spec.typeScript:
+      - name: ServiceSasParameters
+        fullName: ServiceSasParameters
+        uid: '@azure/arm-storage.ServiceSasParameters'
+  - uid: ServiceCallback<@azure/arm-storage.ListServiceSasResponse>
+    name: ListServiceSasResponse>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ListServiceSasResponse
+        fullName: ListServiceSasResponse
+        uid: '@azure/arm-storage.ListServiceSasResponse'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-storage.StorageAccountUpdateParameters'
+    name: StorageAccountUpdateParameters
+    spec.typeScript:
+      - name: StorageAccountUpdateParameters
+        fullName: StorageAccountUpdateParameters
+        uid: '@azure/arm-storage.StorageAccountUpdateParameters'
