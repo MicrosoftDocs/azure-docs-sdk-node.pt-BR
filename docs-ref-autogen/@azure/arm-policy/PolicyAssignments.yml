@@ -1,0 +1,1095 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-policy.PolicyAssignments'
+    name: PolicyAssignments
+    fullName: PolicyAssignments
+    children:
+      - '@azure/arm-policy.PolicyAssignments.create'
+      - '@azure/arm-policy.PolicyAssignments.create_2'
+      - '@azure/arm-policy.PolicyAssignments.create_1'
+      - '@azure/arm-policy.PolicyAssignments.createById'
+      - '@azure/arm-policy.PolicyAssignments.createById_2'
+      - '@azure/arm-policy.PolicyAssignments.createById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteById'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteById_1'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+      - '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+      - '@azure/arm-policy.PolicyAssignments.get'
+      - '@azure/arm-policy.PolicyAssignments.get_2'
+      - '@azure/arm-policy.PolicyAssignments.get_1'
+      - '@azure/arm-policy.PolicyAssignments.getById'
+      - '@azure/arm-policy.PolicyAssignments.getById_2'
+      - '@azure/arm-policy.PolicyAssignments.getById_1'
+      - '@azure/arm-policy.PolicyAssignments.list'
+      - '@azure/arm-policy.PolicyAssignments.list_2'
+      - '@azure/arm-policy.PolicyAssignments.list_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResource'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResource_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+      - '@azure/arm-policy.PolicyAssignments.listNext'
+      - '@azure/arm-policy.PolicyAssignments.listNext_2'
+      - '@azure/arm-policy.PolicyAssignments.listNext_1'
+      - '@azure/arm-policy.PolicyAssignments.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um PolicyAssignments.
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create'
+    name: 'create(string, string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação cria ou atualiza uma atribuição de política com o nome e o escopo fornecido. Atribuições de política se aplicam a todos os recursos contidos no seu escopo. Por exemplo, quando você atribuir uma política no escopo do grupo de recursos, essa política se aplica a todos os recursos no grupo.'
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política.
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para a atribuição de política.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_2'
+    name: 'create(string, string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política.
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para a atribuição de política.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.create_1'
+    name: 'create(string, string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(scope: string, policyAssignmentName: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política.
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para a atribuição de política.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById'
+    name: 'createById(string, PolicyAssignment, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação cria ou atualiza a atribuição de política com a ID especificada. Atribuições de política feitas em um escopo se aplicam a todos os recursos contidos nesse escopo. Por exemplo, quando você atribuir uma política para um grupo de recursos dessa política se aplica a todos os recursos no grupo. IDs de atribuição de política têm este formato: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}''.'
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para criar. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para atribuição de política.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_2'
+    name: 'createById(string, PolicyAssignment, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para criar. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para atribuição de política.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.createById_1'
+    name: 'createById(string, PolicyAssignment, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createById(policyAssignmentId: string, parameters: PolicyAssignment, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para criar. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: parameters
+          type:
+            - '@azure/arm-policy.PolicyAssignment'
+          description: Parâmetros para atribuição de política.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsCreateByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById'
+    name: 'deleteById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação exclui a política com a ID especificada. IDs de atribuição de política têm este formato: ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''. Os formatos válidos para {scope} são: '' / providers/Microsoft.Management/managementGroups/{managementGroup}'' (grupo de gerenciamento), ''/ assinaturas / {subscriptionId}'' (assinatura), '' / assinaturas / {subscriptionId} ResourceGroups { resourceGroupName}'' (grupo de recursos), ou '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'' (recurso).'
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política a ser excluído. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_2'
+    name: 'deleteById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política a ser excluído. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteById_1'
+    name: 'deleteById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política a ser excluído. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod'
+    name: 'deleteMethod(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação exclui uma atribuição de política, dada seu nome e o escopo em que ele foi criado. O escopo de uma atribuição de política é a parte de sua ID anterior '' / providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para excluir.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_2'
+    name: 'deleteMethod(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para excluir.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para excluir.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsDeleteMethodResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get'
+    name: 'get(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação recupera uma atribuição de política única, dada seu nome e o escopo em que ele foi criado em.'
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para obter.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_2'
+    name: 'get(string, string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para obter.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.get_1'
+    name: 'get(string, string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(scope: string, policyAssignmentName: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo da atribuição de política. Os escopos válidos são: grupo de gerenciamento (formato: '' / providers/Microsoft.Management/managementGroups/{managementGroup}''), assinatura (formato: ''/ assinaturas / {subscriptionId}''), grupo de recursos (formato: '' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}'', ou recurso (formato: '' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'''
+        - id: policyAssignmentName
+          type:
+            - string
+          description: O nome da atribuição de política para obter.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById'
+    name: 'getById(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação recupera a atribuição de política com a ID especificada. IDs de atribuição de política têm este formato: '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'.
+      Os escopos válidos são: grupo de gerenciamento (formato: ' / providers/Microsoft.Management/managementGroups/{managementGroup}'), assinatura (formato: '/ assinaturas / {subscriptionId}'), grupo de recursos (formato: ' / assinaturas / {subscriptionId} / resourceGroups / {resourceGroupName}', ou recurso (formato: ' / assinaturas / {subscriptionId} ResourceGroups {resourceGroupName} /providers/ {resourceProviderNamespace} / [{parentResourcePath} /] {resourceType} / {resourceName}'.
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para obter. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_2'
+    name: 'getById(string, RequestOptionsBase, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para obter. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.getById_1'
+    name: 'getById(string, ServiceCallback<PolicyAssignment>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getById(policyAssignmentId: string, callback: ServiceCallback<PolicyAssignment>)'
+      parameters:
+        - id: policyAssignmentId
+          type:
+            - string
+          description: 'A ID da atribuição de política para obter. Use o formato ''{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}''.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignment>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsGetByIdResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list'
+    name: list(Models.PolicyAssignmentsListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação recupera a lista de todas as atribuições de política associadas à assinatura fornecida que correspondem a dada $filter opcional. Valores válidos para $filter são: ''atscope ()'' ou '' policyDefinitionId eq '' {value} ''. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associadas à assinatura, incluindo aqueles que se aplicam diretamente ou de grupos de gerenciamento que contém a assinatura determinada, bem como quaisquer aplicado a objetos contidos no a assinatura. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam à assinatura, que é tudo na lista não filtrada, exceto aquelas aplicadas aos objetos contidos na assinatura. Se $filter = policyDefinitionId eq ''{value}'' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam à assinatura e atribua a definição de política cuja id é {value}.'
+    syntax:
+      content: 'function list(options?: Models.PolicyAssignmentsListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_2'
+    name: 'list(PolicyAssignmentsListOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PolicyAssignmentsListOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.list_1'
+    name: list(ServiceCallback<PolicyAssignmentListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource'
+    name: 'listForResource(string, string, string, string, string, Models.PolicyAssignmentsListForResourceOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Esta operação recupera a lista de todas as atribuições de política associados ao recurso especificado em determinado grupo de recursos e assinatura que correspondem a dada $filter opcional.
+      Valores válidos para $filter são: 'atscope ()' ou ' policyDefinitionId eq ' {value} '. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associado ao recurso, incluindo aquelas que se aplicam diretamente ou de todos os escopos de recipientes, como bem como quaisquer aplicada aos recursos dentro do recurso. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam ao recurso, que é tudo na lista não filtrada, exceto aquelas aplicadas aos recursos dentro do recurso. Se $filter = policyDefinitionId eq '{value}' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam ao recurso e atribuir a definição de política cuja id é {value}.
+      O nome do recurso além de três parâmetros é usado para identificar um recurso específico. Se o recurso não é parte de um recurso pai (o caso mais comum), o caminho do recurso pai não deve ser fornecido (ou fornecido como '). Por exemplo, um aplicativo web pode ser especificado como ({resourceProviderNamespace} = = 'Web', {parentResourcePath} = = ', {resourceType} = = 'sites', {resourceName} = = 'MyWebApp'). Se o recurso faz parte de um recurso pai, em seguida, todos os parâmetros devem ser fornecidos. Por exemplo, um nome DNS da máquina virtual pode ser especificado como ({resourceProviderNamespace} = = 'Microsoft. Compute', {parentResourcePath} = = ' virtualMachines/MyVirtualMachine', {resourceType} = = 'domainNames,' {resourceName} = = 'MyComputerName'). Uma alternativa conveniente para fornecer o nome do namespace e tipo separadamente é fornecer os dois no parâmetro {resourceType}, formatar: ({resourceProviderNamespace} = = ', {parentResourcePath} = = ', {resourceType} = = 'Microsoft', { resourceName} = = 'MyWebApp').
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options?: Models.PolicyAssignmentsListForResourceOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém o recurso.
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 'O namespace do provedor de recursos. Por exemplo, o namespace de uma máquina virtual é Microsoft. Compute (de Compute/virtualmachines)'
+        - id: parentResourcePath
+          type:
+            - string
+          description: O caminho do recurso pai. Use a cadeia de caracteres vazia se não existir nenhuma.
+        - id: resourceType
+          type:
+            - string
+          description: 'O nome do tipo de recurso. Por exemplo, o nome do tipo de um aplicativo web é ''sites'' (da Microsoft).'
+        - id: resourceName
+          type:
+            - string
+          description: O nome do recurso.
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_2'
+    name: 'listForResource(string, string, string, string, string, PolicyAssignmentsListForResourceOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, options: PolicyAssignmentsListForResourceOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém o recurso.
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 'O namespace do provedor de recursos. Por exemplo, o namespace de uma máquina virtual é Microsoft. Compute (de Compute/virtualmachines)'
+        - id: parentResourcePath
+          type:
+            - string
+          description: O caminho do recurso pai. Use a cadeia de caracteres vazia se não existir nenhuma.
+        - id: resourceType
+          type:
+            - string
+          description: 'O nome do tipo de recurso. Por exemplo, o nome do tipo de um aplicativo web é ''sites'' (da Microsoft).'
+        - id: resourceName
+          type:
+            - string
+          description: O nome do recurso.
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResource_1'
+    name: 'listForResource(string, string, string, string, string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResource(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém o recurso.
+        - id: resourceProviderNamespace
+          type:
+            - string
+          description: 'O namespace do provedor de recursos. Por exemplo, o namespace de uma máquina virtual é Microsoft. Compute (de Compute/virtualmachines)'
+        - id: parentResourcePath
+          type:
+            - string
+          description: O caminho do recurso pai. Use a cadeia de caracteres vazia se não existir nenhuma.
+        - id: resourceType
+          type:
+            - string
+          description: 'O nome do tipo de recurso. Por exemplo, o nome do tipo de um aplicativo web é ''sites'' (da Microsoft).'
+        - id: resourceName
+          type:
+            - string
+          description: O nome do recurso.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup'
+    name: 'listForResourceGroup(string, Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação recupera a lista de todas as atribuições de política associados o determinado grupo de recursos em determinada assinatura que correspondem a dada $filter opcional. Valores válidos para $filter são: ''atscope ()'' ou '' policyDefinitionId eq '' {value} ''. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associadas com o grupo de recursos, incluindo aqueles que se aplicam diretamente ou aplicar a partir de escopos, como bem como quaisquer aplicada a recursos contidos no grupo de recursos de conteúdo. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam ao grupo de recursos, que é tudo na lista não filtrada, exceto aquelas aplicadas aos recursos contidos no grupo de recursos. Se $filter = policyDefinitionId eq ''{value}'' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam ao grupo de recursos e atribuir a definição de política cuja id é {value}.'
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options?: Models.PolicyAssignmentsListForResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém as atribuições de política.
+        - id: options
+          type:
+            - Models.PolicyAssignmentsListForResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_2'
+    name: 'listForResourceGroup(string, PolicyAssignmentsListForResourceGroupOptionalParams, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, options: PolicyAssignmentsListForResourceGroupOptionalParams, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém as atribuições de política.
+        - id: options
+          type:
+            - '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroup_1'
+    name: 'listForResourceGroup(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroup(resourceGroupName: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: O nome do grupo de recursos que contém as atribuições de política.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext'
+    name: 'listForResourceGroupNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação recupera a lista de todas as atribuições de política associados o determinado grupo de recursos em determinada assinatura que correspondem a dada $filter opcional. Valores válidos para $filter são: ''atscope ()'' ou '' policyDefinitionId eq '' {value} ''. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associadas com o grupo de recursos, incluindo aqueles que se aplicam diretamente ou aplicar a partir de escopos, como bem como quaisquer aplicada a recursos contidos no grupo de recursos de conteúdo. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam ao grupo de recursos, que é tudo na lista não filtrada, exceto aquelas aplicadas aos recursos contidos no grupo de recursos. Se $filter = policyDefinitionId eq ''{value}'' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam ao grupo de recursos e atribuir a definição de política cuja id é {value}.'
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_2'
+    name: 'listForResourceGroupNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceGroupNext_1'
+    name: 'listForResourceGroupNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceGroupNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceGroupNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext'
+    name: 'listForResourceNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Esta operação recupera a lista de todas as atribuições de política associados ao recurso especificado em determinado grupo de recursos e assinatura que correspondem a dada $filter opcional.
+      Valores válidos para $filter são: 'atscope ()' ou ' policyDefinitionId eq ' {value} '. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associado ao recurso, incluindo aquelas que se aplicam diretamente ou de todos os escopos de recipientes, como bem como quaisquer aplicada aos recursos dentro do recurso. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam ao recurso, que é tudo na lista não filtrada, exceto aquelas aplicadas aos recursos dentro do recurso. Se $filter = policyDefinitionId eq '{value}' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam ao recurso e atribuir a definição de política cuja id é {value}.
+      O nome do recurso além de três parâmetros é usado para identificar um recurso específico. Se o recurso não é parte de um recurso pai (o caso mais comum), o caminho do recurso pai não deve ser fornecido (ou fornecido como '). Por exemplo, um aplicativo web pode ser especificado como ({resourceProviderNamespace} = = 'Web', {parentResourcePath} = = ', {resourceType} = = 'sites', {resourceName} = = 'MyWebApp'). Se o recurso faz parte de um recurso pai, em seguida, todos os parâmetros devem ser fornecidos. Por exemplo, um nome DNS da máquina virtual pode ser especificado como ({resourceProviderNamespace} = = 'Microsoft. Compute', {parentResourcePath} = = ' virtualMachines/MyVirtualMachine', {resourceType} = = 'domainNames,' {resourceName} = = 'MyComputerName'). Uma alternativa conveniente para fornecer o nome do namespace e tipo separadamente é fornecer os dois no parâmetro {resourceType}, formatar: ({resourceProviderNamespace} = = ', {parentResourcePath} = = ', {resourceType} = = 'Microsoft', { resourceName} = = 'MyWebApp').
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_2'
+    name: 'listForResourceNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listForResourceNext_1'
+    name: 'listForResourceNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listForResourceNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListForResourceNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Esta operação recupera a lista de todas as atribuições de política associadas à assinatura fornecida que correspondem a dada $filter opcional. Valores válidos para $filter são: ''atscope ()'' ou '' policyDefinitionId eq '' {value} ''. Se $filter não for fornecido, a lista não filtrada inclui todas as atribuições de política associadas à assinatura, incluindo aqueles que se aplicam diretamente ou de grupos de gerenciamento que contém a assinatura determinada, bem como quaisquer aplicado a objetos contidos no a assinatura. Se $filter=atScope() for fornecido, a lista retornada inclui todas as atribuições de política que se aplicam à assinatura, que é tudo na lista não filtrada, exceto aquelas aplicadas aos objetos contidos na assinatura. Se $filter = policyDefinitionId eq ''{value}'' for fornecido, a lista retornada inclui apenas as atribuições de política que se aplicam à assinatura e atribua a definição de política cuja id é {value}.'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.listNext_1'
+    name: 'listNext(string, ServiceCallback<PolicyAssignmentListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<PolicyAssignmentListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.PolicyAssignmentsListNextResponse>
+    package: '@azure/arm-policy'
+  - uid: '@azure/arm-policy.PolicyAssignments.constructor'
+    name: PolicyAssignments(PolicyClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um PolicyAssignments.
+    syntax:
+      content: 'new PolicyAssignments(client: PolicyClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-policy.PolicyClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/arm-policy'
+references:
+  - uid: '@azure/arm-policy.PolicyClientContext'
+    name: PolicyClientContext
+    spec.typeScript:
+      - name: PolicyClientContext
+        fullName: PolicyClientContext
+        uid: '@azure/arm-policy.PolicyClientContext'
+  - uid: '@azure/arm-policy.PolicyAssignment'
+    name: PolicyAssignment
+    spec.typeScript:
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignment>
+    name: PolicyAssignment>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignment
+        fullName: PolicyAssignment
+        uid: '@azure/arm-policy.PolicyAssignment'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-policy.PolicyAssignmentListResult>
+    name: PolicyAssignmentListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PolicyAssignmentListResult
+        fullName: PolicyAssignmentListResult
+        uid: '@azure/arm-policy.PolicyAssignmentListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+    name: PolicyAssignmentsListOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListOptionalParams
+        fullName: PolicyAssignmentsListOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+    name: PolicyAssignmentsListForResourceOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceOptionalParams
+        fullName: PolicyAssignmentsListForResourceOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceOptionalParams'
+  - uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
+    name: PolicyAssignmentsListForResourceGroupOptionalParams
+    spec.typeScript:
+      - name: PolicyAssignmentsListForResourceGroupOptionalParams
+        fullName: PolicyAssignmentsListForResourceGroupOptionalParams
+        uid: '@azure/arm-policy.PolicyAssignmentsListForResourceGroupOptionalParams'
