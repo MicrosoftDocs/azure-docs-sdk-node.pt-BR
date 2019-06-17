@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.AutoscaleProfile'
+    name: AutoscaleProfile
+    fullName: AutoscaleProfile
+    children:
+      - '@azure/arm-monitor.AutoscaleProfile.capacity'
+      - '@azure/arm-monitor.AutoscaleProfile.fixedDate'
+      - '@azure/arm-monitor.AutoscaleProfile.name'
+      - '@azure/arm-monitor.AutoscaleProfile.recurrence'
+      - '@azure/arm-monitor.AutoscaleProfile.rules'
+    langs:
+      - typeScript
+    type: interface
+    summary: Perfil de dimensionamento automático.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.AutoscaleProfile.capacity'
+    name: capacity
+    fullName: capacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: o número de instâncias que podem ser usadas durante esse perfil.
+    syntax:
+      content: 'capacity: ScaleCapacity'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleCapacity'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.AutoscaleProfile.fixedDate'
+    name: fixedDate
+    fullName: fixedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: a data e o hora específico para o perfil. Esse elemento não será usado se o elemento Recurrence for usado.
+    optional: true
+    syntax:
+      content: 'fixedDate?: TimeWindow'
+      return:
+        type:
+          - '@azure/arm-monitor.TimeWindow'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.AutoscaleProfile.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome do perfil.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.AutoscaleProfile.recurrence'
+    name: recurrence
+    fullName: recurrence
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: os tempos de repetição no qual esse perfil começa. Esse elemento não será usado se o elemento FixedDate for usado.
+    optional: true
+    syntax:
+      content: 'recurrence?: Recurrence'
+      return:
+        type:
+          - '@azure/arm-monitor.Recurrence'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.AutoscaleProfile.rules'
+    name: rules
+    fullName: rules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: a coleção de regras que fornecem os gatilhos e os parâmetros da ação de escala. Um máximo de 10 regras pode ser especificado.
+    syntax:
+      content: 'rules: ScaleRule[]'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleRule[]'
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleCapacity'
+    name: ScaleCapacity
+    spec.typeScript:
+      - name: ScaleCapacity
+        fullName: ScaleCapacity
+        uid: '@azure/arm-monitor.ScaleCapacity'
+  - uid: '@azure/arm-monitor.TimeWindow'
+    name: TimeWindow
+    spec.typeScript:
+      - name: TimeWindow
+        fullName: TimeWindow
+        uid: '@azure/arm-monitor.TimeWindow'
+  - uid: '@azure/arm-monitor.Recurrence'
+    name: Recurrence
+    spec.typeScript:
+      - name: Recurrence
+        fullName: Recurrence
+        uid: '@azure/arm-monitor.Recurrence'
+  - uid: '@azure/arm-monitor.ScaleRule[]'
+    name: 'ScaleRule[]'
+    spec.typeScript:
+      - name: ScaleRule
+        fullName: ScaleRule
+        uid: '@azure/arm-monitor.ScaleRule'
+      - name: '[]'
+        fullName: '[]'

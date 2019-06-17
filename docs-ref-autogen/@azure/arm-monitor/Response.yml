@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.Response'
+    name: Response
+    fullName: Response
+    children:
+      - '@azure/arm-monitor.Response.cost'
+      - '@azure/arm-monitor.Response.interval'
+      - '@azure/arm-monitor.Response.namespace'
+      - '@azure/arm-monitor.Response.resourceregion'
+      - '@azure/arm-monitor.Response.timespan'
+      - '@azure/arm-monitor.Response.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: A resposta para uma consulta de métricas.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.cost'
+    name: cost
+    fullName: cost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O valor inteiro que representa o custo da consulta, para o caso de dados.'
+    optional: true
+    syntax:
+      content: 'cost?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.interval'
+    name: interval
+    fullName: interval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O intervalo (tamanho da janela) para o qual os dados da métrica foi retornados no.  Isso pode ser ajustado no futuro e retornado pelo que foi originalmente solicitado.  Isso não estará presente se foi feita uma solicitação de metadados.
+    optional: true
+    syntax:
+      content: 'interval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.namespace'
+    name: namespace
+    fullName: namespace
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O namespace das métricas foram consultados
+    optional: true
+    syntax:
+      content: 'namespace?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.resourceregion'
+    name: resourceregion
+    fullName: resourceregion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A região do recurso foi consultado para métricas.
+    optional: true
+    syntax:
+      content: 'resourceregion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.timespan'
+    name: timespan
+    fullName: timespan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O período de tempo para o qual os dados foram recuperados. Seu valor consiste em dois datetimes concatenados, separados por ''/''.  Isso pode ser ajustado no futuro e retornado pelo que foi originalmente solicitado.'
+    syntax:
+      content: 'timespan: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.Response.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: o valor da coleção.
+    syntax:
+      content: 'value: Metric[]'
+      return:
+        type:
+          - '@azure/arm-monitor.Metric[]'
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.Metric[]'
+    name: 'Metric[]'
+    spec.typeScript:
+      - name: Metric
+        fullName: Metric
+        uid: '@azure/arm-monitor.Metric'
+      - name: '[]'
+        fullName: '[]'
