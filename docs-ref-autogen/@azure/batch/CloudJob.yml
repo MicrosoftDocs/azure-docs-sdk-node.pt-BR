@@ -1,0 +1,482 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudJob'
+    name: CloudJob
+    fullName: CloudJob
+    children:
+      - '@azure/batch.CloudJob.commonEnvironmentSettings'
+      - '@azure/batch.CloudJob.constraints'
+      - '@azure/batch.CloudJob.creationTime'
+      - '@azure/batch.CloudJob.displayName'
+      - '@azure/batch.CloudJob.eTag'
+      - '@azure/batch.CloudJob.executionInfo'
+      - '@azure/batch.CloudJob.id'
+      - '@azure/batch.CloudJob.jobManagerTask'
+      - '@azure/batch.CloudJob.jobPreparationTask'
+      - '@azure/batch.CloudJob.jobReleaseTask'
+      - '@azure/batch.CloudJob.lastModified'
+      - '@azure/batch.CloudJob.metadata'
+      - '@azure/batch.CloudJob.networkConfiguration'
+      - '@azure/batch.CloudJob.onAllTasksComplete'
+      - '@azure/batch.CloudJob.onTaskFailure'
+      - '@azure/batch.CloudJob.poolInfo'
+      - '@azure/batch.CloudJob.previousState'
+      - '@azure/batch.CloudJob.previousStateTransitionTime'
+      - '@azure/batch.CloudJob.priority'
+      - '@azure/batch.CloudJob.state'
+      - '@azure/batch.CloudJob.stateTransitionTime'
+      - '@azure/batch.CloudJob.stats'
+      - '@azure/batch.CloudJob.url'
+      - '@azure/batch.CloudJob.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa CloudJob.
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A lista de configurações comuns de variável de ambiente. Essas variáveis de ambiente são definidas para todas as tarefas no trabalho (incluindo as tarefas do Gerenciador de trabalhos, preparação e liberação de trabalho).
+      Tarefas individuais podem substituir uma configuração de ambiente especificada aqui, especificando o mesmo nome de configuração com um valor diferente.
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As restrições de execução para o trabalho.
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora de criação do trabalho.
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de exibição para o trabalho.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ETag do trabalho. Isso é uma cadeia de caracteres opaca. Você pode usá-lo para detectar se o trabalho foi alterado entre as solicitações. Em particular, você pode ser passar o ETag ao atualizar um trabalho para especificar que as alterações entrarão em vigor somente se ninguém tiver modificado o trabalho nesse meio tempo.'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As informações de execução para o trabalho.
+    optional: true
+    syntax:
+      content: 'executionInfo?: JobExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.JobExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma cadeia de caracteres que identifica exclusivamente o trabalho dentro da conta. A ID é diferencia maiusculas de minúsculas e preserva (ou seja, você poderá não ter duas IDs de dentro de uma conta que diferem somente maiusculas).'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalhes de uma tarefa do Gerenciador de trabalho a ser iniciado quando o trabalho é iniciado.
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A tarefa de preparação de trabalho. A tarefa de preparação de trabalho é uma tarefa especial executada em cada nó antes de qualquer outra tarefa do trabalho.
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A tarefa de liberação de trabalho. A tarefa de liberação de trabalho é uma tarefa especial executará no final do trabalho em cada nó que foi executado de qualquer outra tarefa do trabalho.
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A hora última modificação do trabalho. Isso é a última vez em que os dados de nível de trabalho, como a prioridade, ou o estado do trabalho é alterado. Ele não considere as alterações de nível de tarefa como a adição de novas tarefas ou alterando o estado de tarefas.'
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma lista de pares nome-valor associados ao trabalho como metadados. O serviço de lote não atribui nenhum significado aos metadados; ele é exclusivamente para o uso do código do usuário.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A configuração de rede para o trabalho.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A ação que o serviço de lote deve executar quando todas as tarefas no trabalho estão no estado concluído.
+      O padrão é noaction. Os valores possíveis incluem: 'noAction', 'terminateJob'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ação de serviço de lote deve levar quando qualquer tarefa no trabalho falhar. Uma tarefa é considerada como tendo if com falha tem um failureInfo. Um failureInfo será definido se a tarefa for concluída com um código de saída diferente de zero após esgotar sua contagem de repetição, ou se houver um erro ao iniciar a tarefa, por exemplo devido a um arquivo de recurso erro de download. O padrão é noaction. Os valores possíveis incluem: ''noAction'', ''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As configurações do pool associadas ao trabalho.
+    optional: true
+    syntax:
+      content: 'poolInfo?: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado anterior do trabalho. Essa propriedade não será definida se o trabalho estiver no estado ativo inicial. Os valores possíveis incluem: ''active'', ''Desabilitar'', ''desabilitado'', ''Habilitar'', ''finalizando'', ''Concluir'', ''Excluir'''
+    optional: true
+    syntax:
+      content: 'previousState?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora em que o trabalho entrou no estado anterior. Essa propriedade não será definida se o trabalho estiver no estado ativo inicial.
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'a prioridade do trabalho. Os valores de prioridade podem variar de -1000 a 1000, sendo-1000 a prioridade mais baixa e 1000 a prioridade mais alta. O valor padrão é 0.'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Estado atual do trabalho. Os valores possíveis incluem: ''active'', ''Desabilitar'', ''desabilitado'', ''Habilitar'', ''finalizando'', ''Concluir'', ''Excluir'''
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/batch.JobState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora em que o trabalho entrou no estado atual.
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Estatísticas de uso de recursos para o tempo de vida inteiro do trabalho. Essa propriedade é preenchida somente se o CloudJob foi recuperada com uma cláusula de expansão, incluindo o atributo ''stats''; Caso contrário, ele será nulo. As estatísticas podem não estar disponíveis imediatamente. O serviço de lote executa acumulação periódica das estatísticas. O atraso típico é de cerca de 30 minutos.'
+    optional: true
+    syntax:
+      content: 'stats?: JobStatistics'
+      return:
+        type:
+          - '@azure/batch.JobStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A URL do trabalho.
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudJob.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se as tarefas no trabalho podem definir dependências entre si. O padrão é false.
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    spec.typeScript:
+      - name: JobExecutionInformation
+        fullName: JobExecutionInformation
+        uid: '@azure/batch.JobExecutionInformation'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
+  - uid: '@azure/batch.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/batch.JobState'
+  - uid: '@azure/batch.JobStatistics'
+    name: JobStatistics
+    spec.typeScript:
+      - name: JobStatistics
+        fullName: JobStatistics
+        uid: '@azure/batch.JobStatistics'
