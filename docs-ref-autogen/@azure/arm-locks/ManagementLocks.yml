@@ -58,6 +58,12 @@ items:
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_2'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_1'
+      - '@azure/arm-locks.ManagementLocks.listByScope_2'
+      - '@azure/arm-locks.ManagementLocks.listByScope'
+      - '@azure/arm-locks.ManagementLocks.listByScope_1'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
       - '@azure/arm-locks.ManagementLocks.constructor'
     langs:
       - typeScript
@@ -1714,6 +1720,152 @@ items:
         type:
           - Promise<Models.ManagementLocksListAtSubscriptionLevelNextResponse>
     package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_2'
+    name: 'listByScope(string, ManagementLocksListByScopeOptionalParams, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, options: ManagementLocksListByScopeOptionalParams, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo do bloqueio. Ao fornecer um escopo da atribuição, use ''/ assinaturas / {subscriptionId}'' para assinaturas, ''/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}'' para grupos de recursos, e '' / assinaturas / {subscriptionId} / resourcegroups / /providers/ {resourceGroupName} {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName}'' para os recursos.'
+        - id: options
+          type:
+            - '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope'
+    name: 'listByScope(string, Models.ManagementLocksListByScopeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtém todos os bloqueios de gerenciamento para um escopo.
+    syntax:
+      content: 'function listByScope(scope: string, options?: Models.ManagementLocksListByScopeOptionalParams)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo do bloqueio. Ao fornecer um escopo da atribuição, use ''/ assinaturas / {subscriptionId}'' para assinaturas, ''/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}'' para grupos de recursos, e '' / assinaturas / {subscriptionId} / resourcegroups / /providers/ {resourceGroupName} {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName}'' para os recursos.'
+        - id: options
+          type:
+            - Models.ManagementLocksListByScopeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_1'
+    name: 'listByScope(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'O escopo do bloqueio. Ao fornecer um escopo da atribuição, use ''/ assinaturas / {subscriptionId}'' para assinaturas, ''/ assinaturas / {subscriptionId} ResourceGroups {resourceGroupName}'' para grupos de recursos, e '' / assinaturas / {subscriptionId} / resourcegroups / /providers/ {resourceGroupName} {resourceProviderNamespace} / {parentResourcePathIfPresent} / {resourceType} / {resourceName}'' para os recursos.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext'
+    name: 'listByScopeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtém todos os bloqueios de gerenciamento para um escopo.
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+    name: 'listByScopeNext(string, RequestOptionsBase, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
+    name: 'listByScopeNext(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
   - uid: '@azure/arm-locks.ManagementLocks.constructor'
     name: ManagementLocks(ManagementLockClientContext)
     children: []
@@ -1781,3 +1933,9 @@ references:
       - name: ManagementLocksListAtSubscriptionLevelOptionalParams
         fullName: ManagementLocksListAtSubscriptionLevelOptionalParams
         uid: '@azure/arm-locks.ManagementLocksListAtSubscriptionLevelOptionalParams'
+  - uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+    name: ManagementLocksListByScopeOptionalParams
+    spec.typeScript:
+      - name: ManagementLocksListByScopeOptionalParams
+        fullName: ManagementLocksListByScopeOptionalParams
+        uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
