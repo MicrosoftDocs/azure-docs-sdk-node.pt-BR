@@ -1,0 +1,737 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/storage-datalake.PathOperations'
+    name: PathOperations
+    fullName: PathOperations
+    children:
+      - '@azure/storage-datalake.PathOperations.create'
+      - '@azure/storage-datalake.PathOperations.create_2'
+      - '@azure/storage-datalake.PathOperations.create_1'
+      - '@azure/storage-datalake.PathOperations.deleteMethod'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_2'
+      - '@azure/storage-datalake.PathOperations.deleteMethod_1'
+      - '@azure/storage-datalake.PathOperations.getProperties'
+      - '@azure/storage-datalake.PathOperations.getProperties_2'
+      - '@azure/storage-datalake.PathOperations.getProperties_1'
+      - '@azure/storage-datalake.PathOperations.lease'
+      - '@azure/storage-datalake.PathOperations.lease_2'
+      - '@azure/storage-datalake.PathOperations.lease_1'
+      - '@azure/storage-datalake.PathOperations.list'
+      - '@azure/storage-datalake.PathOperations.list_2'
+      - '@azure/storage-datalake.PathOperations.list_1'
+      - '@azure/storage-datalake.PathOperations.constructor'
+      - '@azure/storage-datalake.PathOperations.read'
+      - '@azure/storage-datalake.PathOperations.read_2'
+      - '@azure/storage-datalake.PathOperations.read_1'
+      - '@azure/storage-datalake.PathOperations.update'
+      - '@azure/storage-datalake.PathOperations.update_2'
+      - '@azure/storage-datalake.PathOperations.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="5edfb-101">Classe que representa um PathOperations.</span><span class="sxs-lookup"><span data-stu-id="5edfb-101">Class representing a PathOperations.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create'
+    name: 'create(string, string, Models.PathCreateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="5edfb-102">Criar ou renomear um arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-102">Create or rename a file or directory.</span></span>    <span data-ttu-id="5edfb-103">Por padrão, o destino é substituído e se o destino já existe e tem uma concessão da concessão é interrompido.</span><span class="sxs-lookup"><span data-stu-id="5edfb-103">By default, the destination is overwritten and if the destination already exists and has a lease the lease is broken.</span></span>  <span data-ttu-id="5edfb-104">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-104">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="5edfb-105">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-105">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+      <span data-ttu-id="5edfb-106">Para falhar se o destino já existir, use uma solicitação condicional com If-None-Match: "\*".</span><span class="sxs-lookup"><span data-stu-id="5edfb-106">To fail if the destination already exists, use a conditional request with If-None-Match: "\*".</span></span>
+    syntax:
+      content: 'function create(filesystem: string, path: string, options?: Models.PathCreateOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-107">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-107">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-108">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-108">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathCreateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_2'
+    name: 'create(string, string, PathCreateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, options: PathCreateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-109">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-109">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-110">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-110">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathCreateOptionalParams'
+          description: <span data-ttu-id="5edfb-111">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-111">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-112">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-112">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.create_1'
+    name: 'create(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function create(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-113">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-113">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-114">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-114">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-115">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-115">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathCreateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.PathDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="5edfb-116">Exclua o arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-116">Delete the file or directory.</span></span> <span data-ttu-id="5edfb-117">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-117">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="5edfb-118">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-118">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options?: Models.PathDeleteMethodOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-119">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-119">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-120">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-120">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, PathDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, options: PathDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-121">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-121">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-122">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-122">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+          description: <span data-ttu-id="5edfb-123">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-123">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-124">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-124">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-125">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-125">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-126">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-126">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-127">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-127">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathDeleteResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties'
+    name: 'getProperties(string, string, Models.PathGetPropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="5edfb-128">Obter as propriedades para um arquivo ou diretório e, opcionalmente, incluir a lista de controle de acesso.</span><span class="sxs-lookup"><span data-stu-id="5edfb-128">Get the properties for a file or directory, and optionally include the access control list.</span></span>
+      <span data-ttu-id="5edfb-129">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-129">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="5edfb-130">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-130">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options?: Models.PathGetPropertiesOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-131">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-131">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-132">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-132">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathGetPropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_2'
+    name: 'getProperties(string, string, PathGetPropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, options: PathGetPropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-133">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-133">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-134">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-134">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+          description: <span data-ttu-id="5edfb-135">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-136">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-136">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.getProperties_1'
+    name: 'getProperties(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getProperties(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-137">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-137">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-138">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-138">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-139">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-139">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathGetPropertiesResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease'
+    name: 'lease(Models.PathLeaseAction, string, string, Models.PathLeaseOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="5edfb-140">Criar e gerenciar uma concessão para restringir a gravação e acesso ao caminho de exclusão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-140">Create and manage a lease to restrict write and delete access to the path.</span></span> <span data-ttu-id="5edfb-141">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-141">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="5edfb-142">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-142">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options?: Models.PathLeaseOptionalParams)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="5edfb-143">Há cinco ações da concessão: "adquirir", "break", "alterar", "renovar" e "release".</span><span class="sxs-lookup"><span data-stu-id="5edfb-143">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="5edfb-144">Use "adquirir" e especifique o "x-ms-proposta-lease-id" e "x-ms--duração da concessão" para obter uma nova concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-144">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="5edfb-145">Use "break" para interromper uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-145">Use "break" to break an existing lease.</span></span> <span data-ttu-id="5edfb-146">Quando uma concessão é interrompida, o período de concessão é permitido para decorrer, durante esse período nenhuma operação de concessão, exceto quebra e versão pode ser executada no arquivo.</span><span class="sxs-lookup"><span data-stu-id="5edfb-146">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="5edfb-147">Quando uma concessão é interrompida com êxito, a resposta indica o intervalo em segundos até que uma nova concessão pode ser adquirida.</span><span class="sxs-lookup"><span data-stu-id="5edfb-147">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="5edfb-148">Use "alterar" e especifique a ID de concessão atual no "x-ms-lease-id" e a nova ID de concessão no "x-ms-proposta-lease-id" para alterar a ID de concessão de uma concessão ativa.</span><span class="sxs-lookup"><span data-stu-id="5edfb-148">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="5edfb-149">Use a "renovar" e especifique o "x-ms-lease-id" para renovar uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-149">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="5edfb-150">Use "versão" e especifique o "x-ms-lease-id" para liberar uma concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-150">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="5edfb-151">Os valores possíveis incluem: 'adquirir', 'break', 'Alterar', 'renovar', 'versão'</span><span class="sxs-lookup"><span data-stu-id="5edfb-151">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-152">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-152">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-153">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-153">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathLeaseOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_2'
+    name: 'lease(Models.PathLeaseAction, string, string, PathLeaseOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, options: PathLeaseOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="5edfb-154">Há cinco ações da concessão: "adquirir", "break", "alterar", "renovar" e "release".</span><span class="sxs-lookup"><span data-stu-id="5edfb-154">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="5edfb-155">Use "adquirir" e especifique o "x-ms-proposta-lease-id" e "x-ms--duração da concessão" para obter uma nova concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-155">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="5edfb-156">Use "break" para interromper uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-156">Use "break" to break an existing lease.</span></span> <span data-ttu-id="5edfb-157">Quando uma concessão é interrompida, o período de concessão é permitido para decorrer, durante esse período nenhuma operação de concessão, exceto quebra e versão pode ser executada no arquivo.</span><span class="sxs-lookup"><span data-stu-id="5edfb-157">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="5edfb-158">Quando uma concessão é interrompida com êxito, a resposta indica o intervalo em segundos até que uma nova concessão pode ser adquirida.</span><span class="sxs-lookup"><span data-stu-id="5edfb-158">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="5edfb-159">Use "alterar" e especifique a ID de concessão atual no "x-ms-lease-id" e a nova ID de concessão no "x-ms-proposta-lease-id" para alterar a ID de concessão de uma concessão ativa.</span><span class="sxs-lookup"><span data-stu-id="5edfb-159">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="5edfb-160">Use a "renovar" e especifique o "x-ms-lease-id" para renovar uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-160">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="5edfb-161">Use "versão" e especifique o "x-ms-lease-id" para liberar uma concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-161">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="5edfb-162">Os valores possíveis incluem: 'adquirir', 'break', 'Alterar', 'renovar', 'versão'</span><span class="sxs-lookup"><span data-stu-id="5edfb-162">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-163">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-163">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-164">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-164">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathLeaseOptionalParams'
+          description: <span data-ttu-id="5edfb-165">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-166">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.lease_1'
+    name: 'lease(Models.PathLeaseAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function lease(xMsLeaseAction: Models.PathLeaseAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: xMsLeaseAction
+          type:
+            - Models.PathLeaseAction
+          description: |-
+            <span data-ttu-id="5edfb-167">Há cinco ações da concessão: "adquirir", "break", "alterar", "renovar" e "release".</span><span class="sxs-lookup"><span data-stu-id="5edfb-167">There are five lease actions: "acquire", "break", "change", "renew", and "release".</span></span> <span data-ttu-id="5edfb-168">Use "adquirir" e especifique o "x-ms-proposta-lease-id" e "x-ms--duração da concessão" para obter uma nova concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-168">Use "acquire" and specify the "x-ms-proposed-lease-id" and "x-ms-lease-duration" to acquire a new lease.</span></span> <span data-ttu-id="5edfb-169">Use "break" para interromper uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-169">Use "break" to break an existing lease.</span></span> <span data-ttu-id="5edfb-170">Quando uma concessão é interrompida, o período de concessão é permitido para decorrer, durante esse período nenhuma operação de concessão, exceto quebra e versão pode ser executada no arquivo.</span><span class="sxs-lookup"><span data-stu-id="5edfb-170">When a lease is broken, the lease break period is allowed to elapse, during which time no lease operation except break and release can be performed on the file.</span></span> <span data-ttu-id="5edfb-171">Quando uma concessão é interrompida com êxito, a resposta indica o intervalo em segundos até que uma nova concessão pode ser adquirida.</span><span class="sxs-lookup"><span data-stu-id="5edfb-171">When a lease is successfully broken, the response indicates the interval in seconds until a new lease can be acquired.</span></span> <span data-ttu-id="5edfb-172">Use "alterar" e especifique a ID de concessão atual no "x-ms-lease-id" e a nova ID de concessão no "x-ms-proposta-lease-id" para alterar a ID de concessão de uma concessão ativa.</span><span class="sxs-lookup"><span data-stu-id="5edfb-172">Use "change" and specify the current lease ID in "x-ms-lease-id" and the new lease ID in "x-ms-proposed-lease-id" to change the lease ID of an active lease.</span></span> <span data-ttu-id="5edfb-173">Use a "renovar" e especifique o "x-ms-lease-id" para renovar uma concessão existente.</span><span class="sxs-lookup"><span data-stu-id="5edfb-173">Use "renew" and specify the "x-ms-lease-id" to renew an existing lease.</span></span>
+            <span data-ttu-id="5edfb-174">Use "versão" e especifique o "x-ms-lease-id" para liberar uma concessão.</span><span class="sxs-lookup"><span data-stu-id="5edfb-174">Use "release" and specify the "x-ms-lease-id" to release a lease.</span></span> <span data-ttu-id="5edfb-175">Os valores possíveis incluem: 'adquirir', 'break', 'Alterar', 'renovar', 'versão'</span><span class="sxs-lookup"><span data-stu-id="5edfb-175">Possible values include: 'acquire', 'break', 'change', 'renew', 'release'</span></span>
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-176">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-176">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-177">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-177">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-178">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathLeaseResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list'
+    name: 'list(boolean, string, Models.PathListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="5edfb-179">Listar os caminhos de sistema de arquivos e suas propriedades.</span><span class="sxs-lookup"><span data-stu-id="5edfb-179">List filesystem paths and their properties.</span></span>
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options?: Models.PathListOptionalParams)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="5edfb-180">Se "true", todos os caminhos são listados; Caso contrário, somente os caminhos na raiz do sistema de arquivos são listados.</span><span class="sxs-lookup"><span data-stu-id="5edfb-180">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="5edfb-181">Se "directory" for especificado, a lista incluirá apenas os caminhos que compartilham a mesma raiz.</span><span class="sxs-lookup"><span data-stu-id="5edfb-181">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="5edfb-182">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-182">The filesystem identifier.</span></span>  <span data-ttu-id="5edfb-183">O valor deve começar e terminar com uma letra ou número e deve conter apenas letras, números e o caractere traço (-).</span><span class="sxs-lookup"><span data-stu-id="5edfb-183">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="5edfb-184">Traços consecutivos não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-184">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="5edfb-185">Todas as letras devem estar em minúsculas.</span><span class="sxs-lookup"><span data-stu-id="5edfb-185">All letters must be lowercase.</span></span>  <span data-ttu-id="5edfb-186">O valor deve ter entre 3 e 63 caracteres.</span><span class="sxs-lookup"><span data-stu-id="5edfb-186">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - Models.PathListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_2'
+    name: 'list(boolean, string, PathListOptionalParams, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, options: PathListOptionalParams, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="5edfb-187">Se "true", todos os caminhos são listados; Caso contrário, somente os caminhos na raiz do sistema de arquivos são listados.</span><span class="sxs-lookup"><span data-stu-id="5edfb-187">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="5edfb-188">Se "directory" for especificado, a lista incluirá apenas os caminhos que compartilham a mesma raiz.</span><span class="sxs-lookup"><span data-stu-id="5edfb-188">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="5edfb-189">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-189">The filesystem identifier.</span></span>  <span data-ttu-id="5edfb-190">O valor deve começar e terminar com uma letra ou número e deve conter apenas letras, números e o caractere traço (-).</span><span class="sxs-lookup"><span data-stu-id="5edfb-190">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="5edfb-191">Traços consecutivos não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-191">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="5edfb-192">Todas as letras devem estar em minúsculas.</span><span class="sxs-lookup"><span data-stu-id="5edfb-192">All letters must be lowercase.</span></span>  <span data-ttu-id="5edfb-193">O valor deve ter entre 3 e 63 caracteres.</span><span class="sxs-lookup"><span data-stu-id="5edfb-193">The value must have between 3 and 63 characters.</span></span>'
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathListOptionalParams'
+          description: <span data-ttu-id="5edfb-194">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-194">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="5edfb-195">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-195">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.list_1'
+    name: 'list(boolean, string, ServiceCallback<PathList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(recursive: boolean, filesystem: string, callback: ServiceCallback<PathList>)'
+      parameters:
+        - id: recursive
+          type:
+            - boolean
+          description: '<span data-ttu-id="5edfb-196">Se "true", todos os caminhos são listados; Caso contrário, somente os caminhos na raiz do sistema de arquivos são listados.</span><span class="sxs-lookup"><span data-stu-id="5edfb-196">If "true", all paths are listed; otherwise, only paths at the root of the filesystem are listed.</span></span>  <span data-ttu-id="5edfb-197">Se "directory" for especificado, a lista incluirá apenas os caminhos que compartilham a mesma raiz.</span><span class="sxs-lookup"><span data-stu-id="5edfb-197">If "directory" is specified, the list will only include paths that share the same root.</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: '<span data-ttu-id="5edfb-198">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-198">The filesystem identifier.</span></span>  <span data-ttu-id="5edfb-199">O valor deve começar e terminar com uma letra ou número e deve conter apenas letras, números e o caractere traço (-).</span><span class="sxs-lookup"><span data-stu-id="5edfb-199">The value must start and end with a letter or number and must contain only letters, numbers, and the dash (-) character.</span></span>  <span data-ttu-id="5edfb-200">Traços consecutivos não são permitidos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-200">Consecutive dashes are not permitted.</span></span>  <span data-ttu-id="5edfb-201">Todas as letras devem estar em minúsculas.</span><span class="sxs-lookup"><span data-stu-id="5edfb-201">All letters must be lowercase.</span></span>  <span data-ttu-id="5edfb-202">O valor deve ter entre 3 e 63 caracteres.</span><span class="sxs-lookup"><span data-stu-id="5edfb-202">The value must have between 3 and 63 characters.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/storage-datalake.PathList>
+          description: |
+            <span data-ttu-id="5edfb-203">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathListResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.constructor'
+    name: PathOperations(DataLakeStorageClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="5edfb-204">Crie um PathOperations.</span><span class="sxs-lookup"><span data-stu-id="5edfb-204">Create a PathOperations.</span></span>
+    syntax:
+      content: 'new PathOperations(client: DataLakeStorageClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/storage-datalake.DataLakeStorageClientContext'
+          description: |
+            <span data-ttu-id="5edfb-205">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="5edfb-205">Reference to the service client.</span></span>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read'
+    name: 'read(string, string, Models.PathReadOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="5edfb-206">Ler o conteúdo de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="5edfb-206">Read the contents of a file.</span></span>  <span data-ttu-id="5edfb-207">Para operações de leitura, solicitações de intervalo têm suporte.</span><span class="sxs-lookup"><span data-stu-id="5edfb-207">For read operations, range requests are supported.</span></span> <span data-ttu-id="5edfb-208">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-208">This operation supports conditional HTTP requests.</span></span>  <span data-ttu-id="5edfb-209">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-209">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function read(filesystem: string, path: string, options?: Models.PathReadOptionalParams)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-210">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-210">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-211">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-211">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathReadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_2'
+    name: 'read(string, string, PathReadOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, options: PathReadOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-212">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-212">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-213">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-213">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathReadOptionalParams'
+          description: <span data-ttu-id="5edfb-214">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-214">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-215">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.read_1'
+    name: 'read(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function read(filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-216">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-216">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-217">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-217">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-218">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-218">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathReadResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update'
+    name: 'update(Models.PathUpdateAction, string, string, Models.PathUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="5edfb-219">Carrega os dados a ser anexado a um arquivo, libera (gravações) de dados previamente carregados para um arquivo, define as propriedades de um arquivo ou diretório ou define o controle de acesso para um arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-219">Uploads data to be appended to a file, flushes (writes) previously uploaded data to a file, sets properties for a file or directory, or sets access control for a file or directory.</span></span> <span data-ttu-id="5edfb-220">Dados só podem ser anexados a um arquivo.</span><span class="sxs-lookup"><span data-stu-id="5edfb-220">Data can only be appended to a file.</span></span> <span data-ttu-id="5edfb-221">Essa operação dá suporte a solicitações de HTTP condicionais.</span><span class="sxs-lookup"><span data-stu-id="5edfb-221">This operation supports conditional HTTP requests.</span></span> <span data-ttu-id="5edfb-222">Para obter mais informações, consulte [especificando cabeçalhos condicionais para operações do serviço Blob](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span><span class="sxs-lookup"><span data-stu-id="5edfb-222">For more information, see [Specifying Conditional Headers for Blob Service Operations](https://docs.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations).</span></span>'
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options?: Models.PathUpdateOptionalParams)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="5edfb-223">A ação deve ser "anexo" para carregar os dados a ser anexado a um arquivo, "liberação" para liberar os dados carregados anteriormente em um arquivo, "setProperties" para definir as propriedades de um arquivo ou diretório, ou "setAccessControl" para definir o proprietário, grupo, permissões, ou lista de controle de acesso um arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-223">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="5edfb-224">Observe que o Namespace hierárquico deve ser habilitada para a conta para usar o controle de acesso.</span><span class="sxs-lookup"><span data-stu-id="5edfb-224">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="5edfb-225">Observe também que a lista de controle de acesso (ACL) inclui as permissões para o proprietário, o grupo proprietário e outros, para que o x-ms-permissões e x-ms-acl cabeçalhos de solicitação são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-225">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="5edfb-226">Os valores possíveis incluem: ''Anexar'', ''Liberar'', ''setProperties'', ''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="5edfb-226">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-227">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-227">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-228">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-228">The file or directory path.</span></span>
+        - id: options
+          type:
+            - Models.PathUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_2'
+    name: 'update(Models.PathUpdateAction, string, string, PathUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, options: PathUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="5edfb-229">A ação deve ser "anexo" para carregar os dados a ser anexado a um arquivo, "liberação" para liberar os dados carregados anteriormente em um arquivo, "setProperties" para definir as propriedades de um arquivo ou diretório, ou "setAccessControl" para definir o proprietário, grupo, permissões, ou lista de controle de acesso um arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-229">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="5edfb-230">Observe que o Namespace hierárquico deve ser habilitada para a conta para usar o controle de acesso.</span><span class="sxs-lookup"><span data-stu-id="5edfb-230">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="5edfb-231">Observe também que a lista de controle de acesso (ACL) inclui as permissões para o proprietário, o grupo proprietário e outros, para que o x-ms-permissões e x-ms-acl cabeçalhos de solicitação são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-231">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="5edfb-232">Os valores possíveis incluem: ''Anexar'', ''Liberar'', ''setProperties'', ''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="5edfb-232">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-233">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-233">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-234">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-234">The file or directory path.</span></span>
+        - id: options
+          type:
+            - '@azure/storage-datalake.PathUpdateOptionalParams'
+          description: <span data-ttu-id="5edfb-235">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="5edfb-235">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-236">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-236">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+  - uid: '@azure/storage-datalake.PathOperations.update_1'
+    name: 'update(Models.PathUpdateAction, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(action: Models.PathUpdateAction, filesystem: string, path: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: action
+          type:
+            - Models.PathUpdateAction
+          description: '<span data-ttu-id="5edfb-237">A ação deve ser "anexo" para carregar os dados a ser anexado a um arquivo, "liberação" para liberar os dados carregados anteriormente em um arquivo, "setProperties" para definir as propriedades de um arquivo ou diretório, ou "setAccessControl" para definir o proprietário, grupo, permissões, ou lista de controle de acesso um arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-237">The action must be "append" to upload data to be appended to a file, "flush" to flush previously uploaded data to a file, "setProperties" to set the properties of a file or directory, or "setAccessControl" to set the owner, group, permissions, or access control list for a file or directory.</span></span>  <span data-ttu-id="5edfb-238">Observe que o Namespace hierárquico deve ser habilitada para a conta para usar o controle de acesso.</span><span class="sxs-lookup"><span data-stu-id="5edfb-238">Note that Hierarchical Namespace must be enabled for the account in order to use access control.</span></span>  <span data-ttu-id="5edfb-239">Observe também que a lista de controle de acesso (ACL) inclui as permissões para o proprietário, o grupo proprietário e outros, para que o x-ms-permissões e x-ms-acl cabeçalhos de solicitação são mutuamente exclusivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-239">Also note that the Access Control List (ACL) includes permissions for the owner, owning group, and others, so the x-ms-permissions and x-ms-acl request headers are mutually exclusive.</span></span> <span data-ttu-id="5edfb-240">Os valores possíveis incluem: ''Anexar'', ''Liberar'', ''setProperties'', ''setAccessControl''</span><span class="sxs-lookup"><span data-stu-id="5edfb-240">Possible values include: ''append'', ''flush'', ''setProperties'', ''setAccessControl''</span></span>'
+        - id: filesystem
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-241">O identificador do sistema de arquivos.</span><span class="sxs-lookup"><span data-stu-id="5edfb-241">The filesystem identifier.</span></span>
+        - id: path
+          type:
+            - string
+          description: <span data-ttu-id="5edfb-242">O caminho de arquivo ou diretório.</span><span class="sxs-lookup"><span data-stu-id="5edfb-242">The file or directory path.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="5edfb-243">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="5edfb-243">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.PathUpdateResponse>
+    package: '@azure/storage-datalake'
+references:
+  - uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+    name: DataLakeStorageClientContext
+    spec.typeScript:
+      - name: DataLakeStorageClientContext
+        fullName: DataLakeStorageClientContext
+        uid: '@azure/storage-datalake.DataLakeStorageClientContext'
+  - uid: '@azure/storage-datalake.PathCreateOptionalParams'
+    name: PathCreateOptionalParams
+    spec.typeScript:
+      - name: PathCreateOptionalParams
+        fullName: PathCreateOptionalParams
+        uid: '@azure/storage-datalake.PathCreateOptionalParams'
+  - uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+    name: PathDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PathDeleteMethodOptionalParams
+        fullName: PathDeleteMethodOptionalParams
+        uid: '@azure/storage-datalake.PathDeleteMethodOptionalParams'
+  - uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+    name: PathGetPropertiesOptionalParams
+    spec.typeScript:
+      - name: PathGetPropertiesOptionalParams
+        fullName: PathGetPropertiesOptionalParams
+        uid: '@azure/storage-datalake.PathGetPropertiesOptionalParams'
+  - uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+    name: PathLeaseOptionalParams
+    spec.typeScript:
+      - name: PathLeaseOptionalParams
+        fullName: PathLeaseOptionalParams
+        uid: '@azure/storage-datalake.PathLeaseOptionalParams'
+  - uid: ServiceCallback<@azure/storage-datalake.PathList>
+    name: PathList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PathList
+        fullName: PathList
+        uid: '@azure/storage-datalake.PathList'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/storage-datalake.PathListOptionalParams'
+    name: PathListOptionalParams
+    spec.typeScript:
+      - name: PathListOptionalParams
+        fullName: PathListOptionalParams
+        uid: '@azure/storage-datalake.PathListOptionalParams'
+  - uid: '@azure/storage-datalake.PathReadOptionalParams'
+    name: PathReadOptionalParams
+    spec.typeScript:
+      - name: PathReadOptionalParams
+        fullName: PathReadOptionalParams
+        uid: '@azure/storage-datalake.PathReadOptionalParams'
+  - uid: '@azure/storage-datalake.PathUpdateOptionalParams'
+    name: PathUpdateOptionalParams
+    spec.typeScript:
+      - name: PathUpdateOptionalParams
+        fullName: PathUpdateOptionalParams
+        uid: '@azure/storage-datalake.PathUpdateOptionalParams'
