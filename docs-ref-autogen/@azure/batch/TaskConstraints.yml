@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa TaskConstraints.
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O número máximo de vezes que a tarefa pode ser repetida. O serviço em lotes repetirá uma tarefa se seu código de saída for diferente de zero. Observe que esse valor controla especificamente o número de repetições para a tarefa executável devido a um código de saída diferente de zero. O serviço em lotes tentará a tarefa uma vez e, em seguida, pode tentar novamente até esse limite. Por exemplo, se a contagem máxima de repetição for 3, em lotes tentará a tarefa até 4 vezes (uma tentativa inicial e 3 repetições). Se a contagem máxima de novas tentativas for 0, o serviço de lote não repita a tarefa após a primeira tentativa. Se o número máximo de contagem de repetição é -1, as tentativas de serviço de lote a tarefa sem limite.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O tempo decorrido máximo que a tarefa pode ser executado, medido desde a hora em que a tarefa for iniciada. Se a tarefa não for concluída dentro do tempo limite, o serviço de lote será encerrado. Não se não for especificado, há nenhum limite de tempo em quanto tempo a execução da tarefa.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O tempo mínimo para manter o diretório de tarefa no nó de computação em que ele foi executado, do tempo de que execução é concluída. Após esse período, o serviço de lote pode excluir o diretório de tarefa e todo seu conteúdo. O padrão é 7 dias, ou seja, o diretório de tarefa será mantido por 7 dias, a menos que o nó de computação seja removido ou o trabalho é excluído.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
