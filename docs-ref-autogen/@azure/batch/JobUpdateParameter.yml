@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobUpdateParameter'
+    name: JobUpdateParameter
+    fullName: JobUpdateParameter
+    children:
+      - '@azure/batch.JobUpdateParameter.constraints'
+      - '@azure/batch.JobUpdateParameter.metadata'
+      - '@azure/batch.JobUpdateParameter.onAllTasksComplete'
+      - '@azure/batch.JobUpdateParameter.poolInfo'
+      - '@azure/batch.JobUpdateParameter.priority'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="72f7c-101">Uma interface que representa JobUpdateParameter.</span><span class="sxs-lookup"><span data-stu-id="72f7c-101">An interface representing JobUpdateParameter.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobUpdateParameter.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="72f7c-102">As restrições de execução para o trabalho.</span><span class="sxs-lookup"><span data-stu-id="72f7c-102">The execution constraints for the job.</span></span> <span data-ttu-id="72f7c-103">Se omitido, as restrições serão limpas.</span><span class="sxs-lookup"><span data-stu-id="72f7c-103">If omitted, the constraints are cleared.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobUpdateParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="72f7c-104">Uma lista de pares nome-valor associados ao trabalho como metadados.</span><span class="sxs-lookup"><span data-stu-id="72f7c-104">A list of name-value pairs associated with the job as metadata.</span></span> <span data-ttu-id="72f7c-105">Se omitido, ele usa o valor padrão de uma lista vazia; Na verdade, os metadados existentes é excluído.</span><span class="sxs-lookup"><span data-stu-id="72f7c-105">If omitted, it takes the default value of an empty list; in effect, any existing metadata is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobUpdateParameter.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="72f7c-106">A ação que o serviço de lote deve executar quando todas as tarefas no trabalho estão no estado concluído.</span><span class="sxs-lookup"><span data-stu-id="72f7c-106">The action the Batch service should take when all tasks in the job are in the completed state.</span></span>
+      <span data-ttu-id="72f7c-107">Se omitido, o comportamento de preenchimento é definido como noaction.</span><span class="sxs-lookup"><span data-stu-id="72f7c-107">If omitted, the completion behavior is set to noaction.</span></span> <span data-ttu-id="72f7c-108">Se o valor atual é terminatejob, isso é um erro porque o comportamento de conclusão do trabalho não pode ser alterado de terminatejob para noaction.</span><span class="sxs-lookup"><span data-stu-id="72f7c-108">If the current value is terminatejob, this is an error because a job's completion behavior may not be changed from terminatejob to noaction.</span></span> <span data-ttu-id="72f7c-109">Você não pode alterar o valor de terminatejob para noaction - ou seja, depois que tiver consultado encerramento automático de trabalho, você não pode desativá-lo novamente.</span><span class="sxs-lookup"><span data-stu-id="72f7c-109">You may not change the value from terminatejob to noaction - that is, once you have engaged automatic job termination, you cannot turn it off again.</span></span> <span data-ttu-id="72f7c-110">Se você tentar fazer isso, a solicitação falhará e o status de retorna lote código 400 (solicitação incorreta) e uma resposta de erro 'valor de propriedade inválido'.</span><span class="sxs-lookup"><span data-stu-id="72f7c-110">If you try to do this, the request fails and Batch returns status code 400 (Bad Request) and an 'invalid property value' error response.</span></span> <span data-ttu-id="72f7c-111">Se você não especificar esse elemento em uma solicitação PUT, equivale a passar noaction.</span><span class="sxs-lookup"><span data-stu-id="72f7c-111">If you do not specify this element in a PUT request, it is equivalent to passing noaction.</span></span> <span data-ttu-id="72f7c-112">Esse é um erro se o valor atual é terminatejob.</span><span class="sxs-lookup"><span data-stu-id="72f7c-112">This is an error if the current value is terminatejob.</span></span> <span data-ttu-id="72f7c-113">Os valores possíveis incluem: 'noAction', 'terminateJob'</span><span class="sxs-lookup"><span data-stu-id="72f7c-113">Possible values include: 'noAction', 'terminateJob'</span></span>
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobUpdateParameter.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="72f7c-114">O pool no qual o serviço de lote executa as tarefas do trabalho.</span><span class="sxs-lookup"><span data-stu-id="72f7c-114">The pool on which the Batch service runs the job''s tasks.</span></span> <span data-ttu-id="72f7c-115">Você pode alterar o pool para um trabalho somente quando o trabalho está desabilitado.</span><span class="sxs-lookup"><span data-stu-id="72f7c-115">You may change the pool for a job only when the job is disabled.</span></span> <span data-ttu-id="72f7c-116">A chamada de trabalho de atualização falhará se você incluir o elemento poolInfo e o trabalho não está desabilitado.</span><span class="sxs-lookup"><span data-stu-id="72f7c-116">The Update Job call will fail if you include the poolInfo element and the job is not disabled.</span></span> <span data-ttu-id="72f7c-117">Se você especificar uma especificação de autoPoolSpecification no poolInfo, apenas a propriedade keepAlive pode ser atualizada e, em seguida, somente se o pool automático tem um poolLifetimeOption do trabalho.</span><span class="sxs-lookup"><span data-stu-id="72f7c-117">If you specify an autoPoolSpecification specification in the poolInfo, only the keepAlive property can be updated, and then only if the auto pool has a poolLifetimeOption of job.</span></span>'
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobUpdateParameter.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="72f7c-118">a prioridade do trabalho.</span><span class="sxs-lookup"><span data-stu-id="72f7c-118">The priority of the job.</span></span> <span data-ttu-id="72f7c-119">Os valores de prioridade podem variar de -1000 a 1000, sendo-1000 a prioridade mais baixa e 1000 a prioridade mais alta.</span><span class="sxs-lookup"><span data-stu-id="72f7c-119">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="72f7c-120">Se omitido, ele é definido como o valor padrão 0.</span><span class="sxs-lookup"><span data-stu-id="72f7c-120">If omitted, it is set to the default value 0.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
