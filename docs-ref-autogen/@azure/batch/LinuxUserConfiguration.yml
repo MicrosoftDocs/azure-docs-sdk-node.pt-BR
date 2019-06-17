@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="6586d-101">Uma interface que representa LinuxUserConfiguration.</span><span class="sxs-lookup"><span data-stu-id="6586d-101">An interface representing LinuxUserConfiguration.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6586d-102">A ID do grupo da conta de usuário.</span><span class="sxs-lookup"><span data-stu-id="6586d-102">The group ID for the user account.</span></span> <span data-ttu-id="6586d-103">As propriedades de uid e gid devem ser especificadas juntos ou nenhum.</span><span class="sxs-lookup"><span data-stu-id="6586d-103">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="6586d-104">Se não for especificado o subjacente operacional sistema escolhe a gid.</span><span class="sxs-lookup"><span data-stu-id="6586d-104">If not specified the underlying operating system picks the gid.</span></span>
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6586d-105">A chave privada SSH da conta de usuário.</span><span class="sxs-lookup"><span data-stu-id="6586d-105">The SSH private key for the user account.</span></span> <span data-ttu-id="6586d-106">A chave privada não deve ser protegido por senha.</span><span class="sxs-lookup"><span data-stu-id="6586d-106">The private key must not be password protected.</span></span> <span data-ttu-id="6586d-107">A chave privada é usada para configurar automaticamente a autenticação baseada em chave assimétrica para o SSH entre nós em um pool do Linux quando a propriedade do pool enableInterNodeCommunication for verdadeira (ele será ignorado se enableInterNodeCommunication é false).</span><span class="sxs-lookup"><span data-stu-id="6586d-107">The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool''s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false).</span></span> <span data-ttu-id="6586d-108">Ele faz isso colocando o par de chaves para o diretório do usuário. SSH.</span><span class="sxs-lookup"><span data-stu-id="6586d-108">It does this by placing the key pair into the user''s .ssh directory.</span></span> <span data-ttu-id="6586d-109">Se não for especificado, sem senha SSH não está configurada entre os nós (sem modificação do diretório do usuário. SSH é feita).</span><span class="sxs-lookup"><span data-stu-id="6586d-109">If not specified, password-less SSH is not configured between nodes (no modification of the user''s .ssh directory is done).</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6586d-110">A ID de usuário da conta de usuário.</span><span class="sxs-lookup"><span data-stu-id="6586d-110">The user ID of the user account.</span></span> <span data-ttu-id="6586d-111">As propriedades de uid e gid devem ser especificadas juntos ou nenhum.</span><span class="sxs-lookup"><span data-stu-id="6586d-111">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="6586d-112">Se não for especificado o subjacente operacional sistema escolherá o uid.</span><span class="sxs-lookup"><span data-stu-id="6586d-112">If not specified the underlying operating system picks the uid.</span></span>
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'

@@ -1,0 +1,593 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-search.Services'
+    name: Services
+    fullName: Services
+    children:
+      - '@azure/arm-search.Services.beginCreateOrUpdate'
+      - '@azure/arm-search.Services.checkNameAvailability'
+      - '@azure/arm-search.Services.checkNameAvailability_1'
+      - '@azure/arm-search.Services.checkNameAvailability_2'
+      - '@azure/arm-search.Services.createOrUpdate'
+      - '@azure/arm-search.Services.deleteMethod'
+      - '@azure/arm-search.Services.deleteMethod_1'
+      - '@azure/arm-search.Services.deleteMethod_2'
+      - '@azure/arm-search.Services.get'
+      - '@azure/arm-search.Services.get_1'
+      - '@azure/arm-search.Services.get_2'
+      - '@azure/arm-search.Services.listByResourceGroup'
+      - '@azure/arm-search.Services.listByResourceGroup_1'
+      - '@azure/arm-search.Services.listByResourceGroup_2'
+      - '@azure/arm-search.Services.constructor'
+      - '@azure/arm-search.Services.update'
+      - '@azure/arm-search.Services.update_1'
+      - '@azure/arm-search.Services.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="abaa1-101">Classe que representa dos serviços.</span><span class="sxs-lookup"><span data-stu-id="abaa1-101">Class representing a Services.</span></span>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, SearchService, Models.ServicesBeginCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="abaa1-102">Cria ou atualiza um serviço de pesquisa no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-102">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="abaa1-103">Se o serviço de pesquisa já existir, todas as propriedades serão atualizadas com os valores fornecidos.</span><span class="sxs-lookup"><span data-stu-id="abaa1-103">If the Search service already exists, all properties will be updated with the given values.</span></span>'
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesBeginCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-104">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-104">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-105">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-105">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: '<span data-ttu-id="abaa1-106">O nome do serviço Azure Search para criar ou atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-106">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="abaa1-107">Nomes de serviço de pesquisa devem conter apenas letras, dígitos ou traços, não é possível usar o traço como os dois primeiros ou últimos caracteres, não podem conter traços consecutivos e devem estar entre 2 e 60 caracteres de comprimento.</span><span class="sxs-lookup"><span data-stu-id="abaa1-107">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="abaa1-108">Nomes de serviço de pesquisa devem ser globalmente exclusivos, pois eles fazem parte do URI de serviço (https://<name>. search.windows.net).</span><span class="sxs-lookup"><span data-stu-id="abaa1-108">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="abaa1-109">Depois que o serviço é criado, você não pode alterar o nome do serviço.</span><span class="sxs-lookup"><span data-stu-id="abaa1-109">You cannot change the service name after the service is created.</span></span>'
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: <span data-ttu-id="abaa1-110">A definição do serviço de pesquisa para criar ou atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-110">The definition of the Search service to create or update.</span></span>
+        - id: options
+          type:
+            - Models.ServicesBeginCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability'
+    name: 'checkNameAvailability(string, Models.ServicesCheckNameAvailabilityOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="abaa1-111">Verifica se o nome do serviço de pesquisa fornecido está disponível para uso.</span><span class="sxs-lookup"><span data-stu-id="abaa1-111">Checks whether or not the given Search service name is available for use.</span></span> <span data-ttu-id="abaa1-112">Nomes de serviço de pesquisa devem ser globalmente exclusivos, pois eles fazem parte do URI de serviço (https://<name>. search.windows.net).</span><span class="sxs-lookup"><span data-stu-id="abaa1-112">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span>'
+    syntax:
+      content: 'function checkNameAvailability(name: string, options?: Models.ServicesCheckNameAvailabilityOptionalParams)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: '<span data-ttu-id="abaa1-113">O nome do serviço de pesquisa para validar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-113">The Search service name to validate.</span></span> <span data-ttu-id="abaa1-114">Nomes de serviço de pesquisa devem conter apenas letras, dígitos ou traços, não é possível usar o traço como os dois primeiros ou últimos caracteres, não podem conter traços consecutivos e devem estar entre 2 e 60 caracteres de comprimento.</span><span class="sxs-lookup"><span data-stu-id="abaa1-114">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span>'
+        - id: options
+          type:
+            - Models.ServicesCheckNameAvailabilityOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability_1'
+    name: 'checkNameAvailability(string, ServiceCallback<CheckNameAvailabilityOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: '<span data-ttu-id="abaa1-115">O nome do serviço de pesquisa para validar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-115">The Search service name to validate.</span></span> <span data-ttu-id="abaa1-116">Nomes de serviço de pesquisa devem conter apenas letras, dígitos ou traços, não é possível usar o traço como os dois primeiros ou últimos caracteres, não podem conter traços consecutivos e devem estar entre 2 e 60 caracteres de comprimento.</span><span class="sxs-lookup"><span data-stu-id="abaa1-116">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span>'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+          description: |
+            <span data-ttu-id="abaa1-117">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-117">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.checkNameAvailability_2'
+    name: 'checkNameAvailability(string, ServicesCheckNameAvailabilityOptionalParams, ServiceCallback<CheckNameAvailabilityOutput>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkNameAvailability(name: string, options: ServicesCheckNameAvailabilityOptionalParams, callback: ServiceCallback<CheckNameAvailabilityOutput>)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: '<span data-ttu-id="abaa1-118">O nome do serviço de pesquisa para validar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-118">The Search service name to validate.</span></span> <span data-ttu-id="abaa1-119">Nomes de serviço de pesquisa devem conter apenas letras, dígitos ou traços, não é possível usar o traço como os dois primeiros ou últimos caracteres, não podem conter traços consecutivos e devem estar entre 2 e 60 caracteres de comprimento.</span><span class="sxs-lookup"><span data-stu-id="abaa1-119">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span>'
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+          description: <span data-ttu-id="abaa1-120">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="abaa1-120">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+          description: |
+            <span data-ttu-id="abaa1-121">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-121">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesCheckNameAvailabilityResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.createOrUpdate'
+    name: 'createOrUpdate(string, string, SearchService, Models.ServicesCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="abaa1-122">Cria ou atualiza um serviço de pesquisa no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-122">Creates or updates a Search service in the given resource group.</span></span> <span data-ttu-id="abaa1-123">Se o serviço de pesquisa já existir, todas as propriedades serão atualizadas com os valores fornecidos.</span><span class="sxs-lookup"><span data-stu-id="abaa1-123">If the Search service already exists, all properties will be updated with the given values.</span></span>'
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-124">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-124">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-125">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-125">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: '<span data-ttu-id="abaa1-126">O nome do serviço Azure Search para criar ou atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-126">The name of the Azure Search service to create or update.</span></span> <span data-ttu-id="abaa1-127">Nomes de serviço de pesquisa devem conter apenas letras, dígitos ou traços, não é possível usar o traço como os dois primeiros ou últimos caracteres, não podem conter traços consecutivos e devem estar entre 2 e 60 caracteres de comprimento.</span><span class="sxs-lookup"><span data-stu-id="abaa1-127">Search service names must only contain lowercase letters, digits or dashes, cannot use dash as the first two or last one characters, cannot contain consecutive dashes, and must be between 2 and 60 characters in length.</span></span> <span data-ttu-id="abaa1-128">Nomes de serviço de pesquisa devem ser globalmente exclusivos, pois eles fazem parte do URI de serviço (https://<name>. search.windows.net).</span><span class="sxs-lookup"><span data-stu-id="abaa1-128">Search service names must be globally unique since they are part of the service URI (https://<name>.search.windows.net).</span></span> <span data-ttu-id="abaa1-129">Depois que o serviço é criado, você não pode alterar o nome do serviço.</span><span class="sxs-lookup"><span data-stu-id="abaa1-129">You cannot change the service name after the service is created.</span></span>'
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: <span data-ttu-id="abaa1-130">A definição do serviço de pesquisa para criar ou atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-130">The definition of the Search service to create or update.</span></span>
+        - id: options
+          type:
+            - Models.ServicesCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesCreateOrUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod'
+    name: 'deleteMethod(string, string, Models.ServicesDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="abaa1-131">Exclui um serviço de pesquisa no grupo de recursos fornecido, juntamente com seus recursos associados.</span><span class="sxs-lookup"><span data-stu-id="abaa1-131">Deletes a Search service in the given resource group, along with its associated resources.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options?: Models.ServicesDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-132">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-132">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-133">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-133">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-134">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-134">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: options
+          type:
+            - Models.ServicesDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-135">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-135">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-136">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-136">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-137">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-137">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="abaa1-138">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-138">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.deleteMethod_2'
+    name: 'deleteMethod(string, string, ServicesDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, options: ServicesDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-139">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-139">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-140">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-140">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-141">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-141">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+          description: <span data-ttu-id="abaa1-142">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="abaa1-142">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="abaa1-143">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-143">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get'
+    name: 'get(string, string, Models.ServicesGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="abaa1-144">Obtém o serviço de pesquisa com o nome fornecido no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-144">Gets the Search service with the given name in the given resource group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options?: Models.ServicesGetOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-145">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-145">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-146">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-146">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-147">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-147">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: options
+          type:
+            - Models.ServicesGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get_1'
+    name: 'get(string, string, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-148">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-148">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-149">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-149">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-150">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-150">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            <span data-ttu-id="abaa1-151">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.get_2'
+    name: 'get(string, string, ServicesGetOptionalParams, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, searchServiceName: string, options: ServicesGetOptionalParams, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-152">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-152">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-153">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-153">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-154">O nome do serviço Azure Search associado ao grupo de recursos especificado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-154">The name of the Azure Search service associated with the specified resource group.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesGetOptionalParams'
+          description: <span data-ttu-id="abaa1-155">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="abaa1-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            <span data-ttu-id="abaa1-156">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesGetResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup'
+    name: 'listByResourceGroup(string, Models.ServicesListByResourceGroupOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="abaa1-157">Obtém uma lista de todos os serviços de pesquisa no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-157">Gets a list of all Search services in the given resource group.</span></span>
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options?: Models.ServicesListByResourceGroupOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-158">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-158">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-159">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-159">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: options
+          type:
+            - Models.ServicesListByResourceGroupOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup_1'
+    name: 'listByResourceGroup(string, ServiceCallback<SearchServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<SearchServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-160">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-160">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-161">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-161">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchServiceListResult>
+          description: |
+            <span data-ttu-id="abaa1-162">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-162">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.listByResourceGroup_2'
+    name: 'listByResourceGroup(string, ServicesListByResourceGroupOptionalParams, ServiceCallback<SearchServiceListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByResourceGroup(resourceGroupName: string, options: ServicesListByResourceGroupOptionalParams, callback: ServiceCallback<SearchServiceListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-163">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-163">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-164">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-164">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+          description: <span data-ttu-id="abaa1-165">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="abaa1-165">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchServiceListResult>
+          description: |
+            <span data-ttu-id="abaa1-166">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-166">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesListByResourceGroupResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.constructor'
+    name: Services(SearchManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="abaa1-167">Crie um serviço.</span><span class="sxs-lookup"><span data-stu-id="abaa1-167">Create a Services.</span></span>
+    syntax:
+      content: 'new Services(client: SearchManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-search.SearchManagementClientContext'
+          description: |
+            <span data-ttu-id="abaa1-168">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="abaa1-168">Reference to the service client.</span></span>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update'
+    name: 'update(string, string, SearchService, Models.ServicesUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="abaa1-169">Atualiza um serviço de pesquisa existente no grupo de recursos determinado.</span><span class="sxs-lookup"><span data-stu-id="abaa1-169">Updates an existing Search service in the given resource group.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options?: Models.ServicesUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-170">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-170">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-171">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-171">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-172">O nome do serviço Azure Search para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-172">The name of the Azure Search service to update.</span></span>
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: <span data-ttu-id="abaa1-173">A definição do serviço de pesquisa para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-173">The definition of the Search service to update.</span></span>
+        - id: options
+          type:
+            - Models.ServicesUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update_1'
+    name: 'update(string, string, SearchService, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-174">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-174">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-175">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-175">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-176">O nome do serviço Azure Search para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-176">The name of the Azure Search service to update.</span></span>
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: <span data-ttu-id="abaa1-177">A definição do serviço de pesquisa para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-177">The definition of the Search service to update.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            <span data-ttu-id="abaa1-178">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-178">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+  - uid: '@azure/arm-search.Services.update_2'
+    name: 'update(string, string, SearchService, ServicesUpdateOptionalParams, ServiceCallback<SearchService>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(resourceGroupName: string, searchServiceName: string, service: SearchService, options: ServicesUpdateOptionalParams, callback: ServiceCallback<SearchService>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-179">O nome do grupo de recursos na assinatura atual.</span><span class="sxs-lookup"><span data-stu-id="abaa1-179">The name of the resource group within the current subscription.</span></span> <span data-ttu-id="abaa1-180">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="abaa1-180">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: searchServiceName
+          type:
+            - string
+          description: <span data-ttu-id="abaa1-181">O nome do serviço Azure Search para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-181">The name of the Azure Search service to update.</span></span>
+        - id: service
+          type:
+            - '@azure/arm-search.SearchService'
+          description: <span data-ttu-id="abaa1-182">A definição do serviço de pesquisa para atualizar.</span><span class="sxs-lookup"><span data-stu-id="abaa1-182">The definition of the Search service to update.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-search.ServicesUpdateOptionalParams'
+          description: <span data-ttu-id="abaa1-183">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="abaa1-183">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-search.SearchService>
+          description: |
+            <span data-ttu-id="abaa1-184">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="abaa1-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.ServicesUpdateResponse>
+    package: '@azure/arm-search'
+references:
+  - uid: '@azure/arm-search.SearchManagementClientContext'
+    name: SearchManagementClientContext
+    spec.typeScript:
+      - name: SearchManagementClientContext
+        fullName: SearchManagementClientContext
+        uid: '@azure/arm-search.SearchManagementClientContext'
+  - uid: '@azure/arm-search.SearchService'
+    name: SearchService
+    spec.typeScript:
+      - name: SearchService
+        fullName: SearchService
+        uid: '@azure/arm-search.SearchService'
+  - uid: ServiceCallback<@azure/arm-search.CheckNameAvailabilityOutput>
+    name: CheckNameAvailabilityOutput>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckNameAvailabilityOutput
+        fullName: CheckNameAvailabilityOutput
+        uid: '@azure/arm-search.CheckNameAvailabilityOutput'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+    name: ServicesCheckNameAvailabilityOptionalParams
+    spec.typeScript:
+      - name: ServicesCheckNameAvailabilityOptionalParams
+        fullName: ServicesCheckNameAvailabilityOptionalParams
+        uid: '@azure/arm-search.ServicesCheckNameAvailabilityOptionalParams'
+  - uid: '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+    name: ServicesDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: ServicesDeleteMethodOptionalParams
+        fullName: ServicesDeleteMethodOptionalParams
+        uid: '@azure/arm-search.ServicesDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/arm-search.SearchService>
+    name: SearchService>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchService
+        fullName: SearchService
+        uid: '@azure/arm-search.SearchService'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesGetOptionalParams'
+    name: ServicesGetOptionalParams
+    spec.typeScript:
+      - name: ServicesGetOptionalParams
+        fullName: ServicesGetOptionalParams
+        uid: '@azure/arm-search.ServicesGetOptionalParams'
+  - uid: ServiceCallback<@azure/arm-search.SearchServiceListResult>
+    name: SearchServiceListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SearchServiceListResult
+        fullName: SearchServiceListResult
+        uid: '@azure/arm-search.SearchServiceListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+    name: ServicesListByResourceGroupOptionalParams
+    spec.typeScript:
+      - name: ServicesListByResourceGroupOptionalParams
+        fullName: ServicesListByResourceGroupOptionalParams
+        uid: '@azure/arm-search.ServicesListByResourceGroupOptionalParams'
+  - uid: '@azure/arm-search.ServicesUpdateOptionalParams'
+    name: ServicesUpdateOptionalParams
+    spec.typeScript:
+      - name: ServicesUpdateOptionalParams
+        fullName: ServicesUpdateOptionalParams
+        uid: '@azure/arm-search.ServicesUpdateOptionalParams'
