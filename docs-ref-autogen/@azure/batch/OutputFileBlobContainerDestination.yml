@@ -1,0 +1,42 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.OutputFileBlobContainerDestination'
+    name: OutputFileBlobContainerDestination
+    fullName: OutputFileBlobContainerDestination
+    children:
+      - '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+      - '@azure/batch.OutputFileBlobContainerDestination.path'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa OutputFileBlobContainerDestination.
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A URL do contêiner no armazenamento de BLOBs do Azure para o qual carregar o arquivo (s). A URL deve incluir uma SAS Shared Access Signature () concedendo permissões de gravação ao contêiner.
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.OutputFileBlobContainerDestination.path'
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O blob de destino ou diretório virtual dentro do contêiner de armazenamento do Azure. Se filePattern refere-se a um arquivo específico (ou seja, contém sem curingas), em seguida, o caminho é o nome do blob para o qual carregar esse arquivo. Se filePattern contém um ou mais caracteres de curinga (e, portanto, pode corresponder a vários arquivos), o caminho é o nome do diretório virtual de blob (que é anexado a cada nome de blob) para o qual carregar o arquivo (s). Se omitido, arquivo (s) é carregados para a raiz do contêiner com um nome de blob correspondente de seu nome de arquivo.'
+    optional: true
+    syntax:
+      content: 'path?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

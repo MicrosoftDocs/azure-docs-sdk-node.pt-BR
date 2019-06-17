@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest'
+    name: ApplySnapshotRequest
+    fullName: ApplySnapshotRequest
+    children:
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+      - '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Solicitação de corpo para a aplicação de operação de instantâneo.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Modo de aplicação do instantâneo. CreateNew atualmente só tem suporte, o que significa que a operação de aplicação falhará se a assinatura de destino já contém um objeto do mesmo tipo e usando a mesma ID de objeto. Os usuários podem especificar "objectId" no corpo da solicitação para evitar tais conflitos. Os valores possíveis incluem: ''CreateNew''. Valor padrão: ''CreateNew''.'
+    optional: true
+    syntax:
+      content: 'mode?: SnapshotApplyMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.SnapshotApplyMode'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.ApplySnapshotRequest.objectId'
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id de objeto de destino a ser criado a partir do instantâneo especificado pelo usuário.
+    syntax:
+      content: 'objectId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
+    name: SnapshotApplyMode
+    spec.typeScript:
+      - name: SnapshotApplyMode
+        fullName: SnapshotApplyMode
+        uid: '@azure/cognitiveservices-face.SnapshotApplyMode'
