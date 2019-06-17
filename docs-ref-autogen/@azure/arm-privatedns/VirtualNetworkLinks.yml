@@ -1,0 +1,539 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks'
+    name: VirtualNetworkLinks
+    fullName: VirtualNetworkLinks
+    children:
+      - '@azure/arm-privatedns.VirtualNetworkLinks.beginCreateOrUpdate'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.beginDeleteMethod'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.beginUpdate'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.createOrUpdate'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.deleteMethod'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.get'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.get_2'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.get_1'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.list'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.list_1'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.list_2'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.listNext'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.listNext_2'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.listNext_1'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.update'
+      - '@azure/arm-privatedns.VirtualNetworkLinks.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="32b54-101">Classe que representa um VirtualNetworkLinks.</span><span class="sxs-lookup"><span data-stu-id="32b54-101">Class representing a VirtualNetworkLinks.</span></span>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, VirtualNetworkLink, Models.VirtualNetworkLinksBeginCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-102">Cria ou atualiza um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-102">Creates or updates a virtual network link to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, parameters: VirtualNetworkLink, options?: Models.VirtualNetworkLinksBeginCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-103">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-103">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-104">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-104">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-105">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-105">The name of the virtual network link.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.VirtualNetworkLink'
+          description: <span data-ttu-id="32b54-106">Parâmetros fornecidos para a operação de CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="32b54-106">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksBeginCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, Models.VirtualNetworkLinksBeginDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="32b54-107">Exclui um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-107">Deletes a virtual network link to the specified Private DNS zone.</span></span> <span data-ttu-id="32b54-108">AVISO: No caso de uma rede virtual de registro, todos os registros DNS registrado automaticamente na zona para a rede virtual também serão excluídos.</span><span class="sxs-lookup"><span data-stu-id="32b54-108">WARNING: In case of a registration virtual network, all auto-registered DNS records in the zone for the virtual network will also be deleted.</span></span> <span data-ttu-id="32b54-109">Essa operação não pode ser desfeita.</span><span class="sxs-lookup"><span data-stu-id="32b54-109">This operation cannot be undone.</span></span>'
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, options?: Models.VirtualNetworkLinksBeginDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-110">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-110">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-111">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-111">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-112">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-112">The name of the virtual network link.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksBeginDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.beginUpdate'
+    name: 'beginUpdate(string, string, string, VirtualNetworkLink, Models.VirtualNetworkLinksBeginUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-113">Atualiza um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-113">Updates a virtual network link to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function beginUpdate(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, parameters: VirtualNetworkLink, options?: Models.VirtualNetworkLinksBeginUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-114">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-114">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-115">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-115">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-116">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-116">The name of the virtual network link.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.VirtualNetworkLink'
+          description: <span data-ttu-id="32b54-117">Parâmetros fornecidos para a operação de atualização.</span><span class="sxs-lookup"><span data-stu-id="32b54-117">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksBeginUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, VirtualNetworkLink, Models.VirtualNetworkLinksCreateOrUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-118">Cria ou atualiza um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-118">Creates or updates a virtual network link to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, parameters: VirtualNetworkLink, options?: Models.VirtualNetworkLinksCreateOrUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-119">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-119">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-120">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-120">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-121">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-121">The name of the virtual network link.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.VirtualNetworkLink'
+          description: <span data-ttu-id="32b54-122">Parâmetros fornecidos para a operação de CreateOrUpdate.</span><span class="sxs-lookup"><span data-stu-id="32b54-122">Parameters supplied to the CreateOrUpdate operation.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksCreateOrUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksCreateOrUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.deleteMethod'
+    name: 'deleteMethod(string, string, string, Models.VirtualNetworkLinksDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="32b54-123">Exclui um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-123">Deletes a virtual network link to the specified Private DNS zone.</span></span> <span data-ttu-id="32b54-124">AVISO: No caso de uma rede virtual de registro, todos os registros DNS registrado automaticamente na zona para a rede virtual também serão excluídos.</span><span class="sxs-lookup"><span data-stu-id="32b54-124">WARNING: In case of a registration virtual network, all auto-registered DNS records in the zone for the virtual network will also be deleted.</span></span> <span data-ttu-id="32b54-125">Essa operação não pode ser desfeita.</span><span class="sxs-lookup"><span data-stu-id="32b54-125">This operation cannot be undone.</span></span>'
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, options?: Models.VirtualNetworkLinksDeleteMethodOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-126">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-126">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-127">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-127">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-128">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-128">The name of the virtual network link.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-129">Obtém um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-129">Gets a virtual network link to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-130">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-130">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-131">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-131">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-132">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-132">The name of the virtual network link.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<VirtualNetworkLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-133">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-133">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-134">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-134">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-135">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-135">The name of the virtual network link.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="32b54-136">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="32b54-136">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLink>
+          description: |
+            <span data-ttu-id="32b54-137">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-137">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.get_1'
+    name: 'get(string, string, string, ServiceCallback<VirtualNetworkLink>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, callback: ServiceCallback<VirtualNetworkLink>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-138">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-138">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-139">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-139">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-140">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-140">The name of the virtual network link.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLink>
+          description: |
+            <span data-ttu-id="32b54-141">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-141">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksGetResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.list'
+    name: 'list(string, string, Models.VirtualNetworkLinksListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-142">Lista os links de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-142">Lists the virtual network links to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options?: Models.VirtualNetworkLinksListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-143">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-143">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-144">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-144">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.list_1'
+    name: 'list(string, string, ServiceCallback<VirtualNetworkLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, callback: ServiceCallback<VirtualNetworkLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-145">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-145">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-146">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-146">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLinkListResult>
+          description: |
+            <span data-ttu-id="32b54-147">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-147">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.list_2'
+    name: 'list(string, string, VirtualNetworkLinksListOptionalParams, ServiceCallback<VirtualNetworkLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(resourceGroupName: string, privateZoneName: string, options: VirtualNetworkLinksListOptionalParams, callback: ServiceCallback<VirtualNetworkLinkListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-148">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-148">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-149">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-149">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: options
+          type:
+            - '@azure/arm-privatedns.VirtualNetworkLinksListOptionalParams'
+          description: <span data-ttu-id="32b54-150">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="32b54-150">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLinkListResult>
+          description: |
+            <span data-ttu-id="32b54-151">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-151">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-152">Lista os links de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-152">Lists the virtual network links to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="32b54-153">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="32b54-153">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<VirtualNetworkLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<VirtualNetworkLinkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="32b54-154">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="32b54-154">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="32b54-155">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="32b54-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLinkListResult>
+          description: |
+            <span data-ttu-id="32b54-156">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.listNext_1'
+    name: 'listNext(string, ServiceCallback<VirtualNetworkLinkListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<VirtualNetworkLinkListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="32b54-157">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="32b54-157">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-privatedns.VirtualNetworkLinkListResult>
+          description: |
+            <span data-ttu-id="32b54-158">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="32b54-158">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksListNextResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.update'
+    name: 'update(string, string, string, VirtualNetworkLink, Models.VirtualNetworkLinksUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-159">Atualiza um link de rede virtual para a zona DNS privada especificada.</span><span class="sxs-lookup"><span data-stu-id="32b54-159">Updates a virtual network link to the specified Private DNS zone.</span></span>
+    syntax:
+      content: 'function update(resourceGroupName: string, privateZoneName: string, virtualNetworkLinkName: string, parameters: VirtualNetworkLink, options?: Models.VirtualNetworkLinksUpdateOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-160">O nome do grupo de recursos.</span><span class="sxs-lookup"><span data-stu-id="32b54-160">The name of the resource group.</span></span>
+        - id: privateZoneName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-161">O nome da zona DNS privado (sem um ponto de terminação).</span><span class="sxs-lookup"><span data-stu-id="32b54-161">The name of the Private DNS zone (without a terminating dot).</span></span>
+        - id: virtualNetworkLinkName
+          type:
+            - string
+          description: <span data-ttu-id="32b54-162">O nome do link de rede virtual.</span><span class="sxs-lookup"><span data-stu-id="32b54-162">The name of the virtual network link.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-privatedns.VirtualNetworkLink'
+          description: <span data-ttu-id="32b54-163">Parâmetros fornecidos para a operação de atualização.</span><span class="sxs-lookup"><span data-stu-id="32b54-163">Parameters supplied to the Update operation.</span></span>
+        - id: options
+          type:
+            - Models.VirtualNetworkLinksUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.VirtualNetworkLinksUpdateResponse>
+    package: '@azure/arm-privatedns'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinks.constructor'
+    name: VirtualNetworkLinks(PrivateDnsManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="32b54-164">Crie um VirtualNetworkLinks.</span><span class="sxs-lookup"><span data-stu-id="32b54-164">Create a VirtualNetworkLinks.</span></span>
+    syntax:
+      content: 'new VirtualNetworkLinks(client: PrivateDnsManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+          description: |
+            <span data-ttu-id="32b54-165">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="32b54-165">Reference to the service client.</span></span>
+    package: '@azure/arm-privatedns'
+references:
+  - uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+    name: PrivateDnsManagementClientContext
+    spec.typeScript:
+      - name: PrivateDnsManagementClientContext
+        fullName: PrivateDnsManagementClientContext
+        uid: '@azure/arm-privatedns.PrivateDnsManagementClientContext'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLink'
+    name: VirtualNetworkLink
+    spec.typeScript:
+      - name: VirtualNetworkLink
+        fullName: VirtualNetworkLink
+        uid: '@azure/arm-privatedns.VirtualNetworkLink'
+  - uid: ServiceCallback<@azure/arm-privatedns.VirtualNetworkLink>
+    name: VirtualNetworkLink>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualNetworkLink
+        fullName: VirtualNetworkLink
+        uid: '@azure/arm-privatedns.VirtualNetworkLink'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-privatedns.VirtualNetworkLinkListResult>
+    name: VirtualNetworkLinkListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: VirtualNetworkLinkListResult
+        fullName: VirtualNetworkLinkListResult
+        uid: '@azure/arm-privatedns.VirtualNetworkLinkListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-privatedns.VirtualNetworkLinksListOptionalParams'
+    name: VirtualNetworkLinksListOptionalParams
+    spec.typeScript:
+      - name: VirtualNetworkLinksListOptionalParams
+        fullName: VirtualNetworkLinksListOptionalParams
+        uid: '@azure/arm-privatedns.VirtualNetworkLinksListOptionalParams'
