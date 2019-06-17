@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat'
+    name: MultiBitrateFormat
+    fullName: MultiBitrateFormat
+    children:
+      - '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+      - '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="eb44b-101">Descreve as propriedades para a produção de uma coleção de arquivos de múltiplas taxas de bits de GOP alinhado.</span><span class="sxs-lookup"><span data-stu-id="eb44b-101">Describes the properties for producing a collection of GOP aligned multi-bitrate files.</span></span> <span data-ttu-id="eb44b-102">O comportamento padrão é produzir um arquivo de saída para cada camada de vídeo que é mista de junto com todos os os sons.</span><span class="sxs-lookup"><span data-stu-id="eb44b-102">The default behavior is to produce one output file for each video layer which is muxed together with all the audios.</span></span> <span data-ttu-id="eb44b-103">Os arquivos de saída exatos gerados podem ser controlados especificando a coleção outputFiles.</span><span class="sxs-lookup"><span data-stu-id="eb44b-103">The exact output files produced can be controlled by specifying the outputFiles collection.</span></span>
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.filenamePattern'
+    name: filenamePattern
+    fullName: filenamePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb44b-104">O padrão de nome de arquivo para os arquivos de saída gerada.</span><span class="sxs-lookup"><span data-stu-id="eb44b-104">The pattern of the file names for the generated output files.</span></span> <span data-ttu-id="eb44b-105">As macros a seguir têm suporte no nome do arquivo: {Basename} - o nome base do vídeo de entrada {Extension} - a extensão apropriada para esse formato.</span><span class="sxs-lookup"><span data-stu-id="eb44b-105">The following macros are supported in the file name: {Basename} - The base name of the input video {Extension} - The appropriate extension for this format.</span></span> <span data-ttu-id="eb44b-106">{Label} - o rótulo atribuído à camada/codec.</span><span class="sxs-lookup"><span data-stu-id="eb44b-106">{Label} - The label assigned to the codec/layer.</span></span>
+      <span data-ttu-id="eb44b-107">{Index} - um índice exclusivo para miniaturas.</span><span class="sxs-lookup"><span data-stu-id="eb44b-107">{Index} - A unique index for thumbnails.</span></span> <span data-ttu-id="eb44b-108">Aplicável somente para as miniaturas.</span><span class="sxs-lookup"><span data-stu-id="eb44b-108">Only applicable to thumbnails.</span></span> <span data-ttu-id="eb44b-109">{Taxa de bits} - a taxa de bits de áudio/vídeo.</span><span class="sxs-lookup"><span data-stu-id="eb44b-109">{Bitrate} - The audio/video bitrate.</span></span> <span data-ttu-id="eb44b-110">Não aplicável a miniaturas.</span><span class="sxs-lookup"><span data-stu-id="eb44b-110">Not applicable to thumbnails.</span></span> <span data-ttu-id="eb44b-111">{Codec} - o tipo do codec de áudio/vídeo.</span><span class="sxs-lookup"><span data-stu-id="eb44b-111">{Codec} - The type of the audio/video codec.</span></span> <span data-ttu-id="eb44b-112">Todas as macros unsubstituted serão recolhidas e removidas do nome do arquivo.</span><span class="sxs-lookup"><span data-stu-id="eb44b-112">Any unsubstituted macros will be collapsed and removed from the filename.</span></span>
+    syntax:
+      content: 'filenamePattern: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eb44b-113">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="eb44b-113">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.MultiBitrateFormat"'
+      return:
+        type:
+          - '"#Microsoft.Media.MultiBitrateFormat"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.MultiBitrateFormat.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="eb44b-114">A lista de arquivos de saída para produzir.</span><span class="sxs-lookup"><span data-stu-id="eb44b-114">The list of output files to produce.</span></span>  <span data-ttu-id="eb44b-115">Cada entrada na lista é um conjunto de rótulos de camada de áudio e vídeo para ser mista de juntos.</span><span class="sxs-lookup"><span data-stu-id="eb44b-115">Each entry in the list is a set of audio and video layer labels to be muxed together .</span></span>
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OutputFile[]'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/arm-mediaservices.OutputFile'
+      - name: '[]'
+        fullName: '[]'
