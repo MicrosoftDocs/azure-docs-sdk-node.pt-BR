@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobScheduleExecutionInformation'
+    name: JobScheduleExecutionInformation
+    fullName: JobScheduleExecutionInformation
+    children:
+      - '@azure/batch.JobScheduleExecutionInformation.endTime'
+      - '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+      - '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa JobScheduleExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora em que a agenda terminou. Essa propriedade é definida somente se a agenda de trabalho estiver no estado concluído.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.nextRunTime'
+    name: nextRunTime
+    fullName: nextRunTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Na próxima vez em que um trabalho será criado sob esta agenda. Esta propriedade é significativa somente se a agenda está no estado ativo quando chegar a hora. Por exemplo, se a agenda estiver desabilitada, nenhum trabalho será criado no cumprimento do nextRunTime, a menos que o trabalho está habilitado antes disso.'
+    optional: true
+    syntax:
+      content: 'nextRunTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobScheduleExecutionInformation.recentJob'
+    name: recentJob
+    fullName: recentJob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informações sobre o trabalho mais recente em que a agenda de trabalho. Essa propriedade está presente apenas se pelo menos um trabalho foi executada sob a agenda.
+    optional: true
+    syntax:
+      content: 'recentJob?: RecentJob'
+      return:
+        type:
+          - '@azure/batch.RecentJob'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.RecentJob'
+    name: RecentJob
+    spec.typeScript:
+      - name: RecentJob
+        fullName: RecentJob
+        uid: '@azure/batch.RecentJob'
