@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    fullName: Schedule
+    children:
+      - '@azure/batch.Schedule.doNotRunAfter'
+      - '@azure/batch.Schedule.doNotRunUntil'
+      - '@azure/batch.Schedule.recurrenceInterval'
+      - '@azure/batch.Schedule.startWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa a agenda.
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunAfter'
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma hora após o qual nenhum trabalho será criado sob essa agenda de trabalho. A agenda será movido para o estado concluído assim que esse prazo passar e não há nenhum trabalho ativo sob essa agenda de trabalho. Se você não especificar um tempo de doNotRunAfter e estiver criando uma agenda recorrente de trabalho, a agenda de trabalho permanecerá ativa até que seja explicitamente interrompido.'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunUntil'
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A primeira hora em que qualquer trabalho pode ser criado sob essa agenda de trabalho. Se você não especificar um tempo de doNotRunUntil, o agendamento se torna pronto para criar trabalhos imediatamente.'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.recurrenceInterval'
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O intervalo de tempo entre os horários de início dos dois trabalhos sucessivos sob a agenda de trabalho. Uma agenda de trabalho pode ter no máximo um trabalho ativo abaixo dele em um determinado momento. Como uma agenda de trabalho pode ter no máximo um trabalho ativo abaixo dele em um determinado momento, se é hora de criar um novo trabalho em uma agenda de trabalho, mas o trabalho anterior ainda está em execução, o serviço de lote não criará o novo trabalho até que o trabalho anterior seja concluído. Se o trabalho anterior não finalizar dentro do período startWindow de recurrenceInterval o novo, nenhum novo trabalho será agendado para esse intervalo. Para trabalhos recorrentes, normalmente você deve especificar um jobManagerTask no jobSpecification. Se você não usar jobManagerTask, será necessário um processo externo para monitorar quando os trabalhos são criados, adicionar tarefas para os trabalhos e encerre os trabalhos prontos para a próxima recorrência. O padrão é que a agenda não aconteça novamente: um trabalho é criado dentro do startWindow após o tempo de doNotRunUntil, e o agendamento for concluído, assim que o trabalho for concluído. O valor mínimo é 1 minuto. Se você especificar um valor mais baixo, o serviço de lote rejeita o cronograma com um erro; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta).'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.startWindow'
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O intervalo de tempo desde o momento em que o agendamento indica um trabalho deve ser criado, no qual um trabalho deve ser criado. Se um trabalho não é criado dentro do intervalo de startWindow, em seguida, a oportunidade será perdida; Nenhum trabalho será criado até a próxima recorrência da agenda. Se a agenda for recorrente, e o startWindow for maior do que o intervalo de recorrência, em seguida, isso é equivalente a um startWindow infinito, porque o trabalho que deverá ser concluído em um recurrenceInterval não é levado adiante com o próximo intervalo de recorrência. O padrão é infinito. O valor mínimo é 1 minuto. Se você especificar um valor mais baixo, o serviço de lote rejeita o cronograma com um erro; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta).'
+    optional: true
+    syntax:
+      content: 'startWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
