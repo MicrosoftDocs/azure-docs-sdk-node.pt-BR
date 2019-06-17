@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskAddResult'
+    name: TaskAddResult
+    fullName: TaskAddResult
+    children:
+      - '@azure/batch.TaskAddResult.error'
+      - '@azure/batch.TaskAddResult.eTag'
+      - '@azure/batch.TaskAddResult.lastModified'
+      - '@azure/batch.TaskAddResult.location'
+      - '@azure/batch.TaskAddResult.status'
+      - '@azure/batch.TaskAddResult.taskId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="be5dd-101">Uma interface que representa TaskAddResult.</span><span class="sxs-lookup"><span data-stu-id="be5dd-101">An interface representing TaskAddResult.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be5dd-102">O erro encontrado ao tentar adicionar a tarefa.</span><span class="sxs-lookup"><span data-stu-id="be5dd-102">The error encountered while attempting to add the task.</span></span>
+    optional: true
+    syntax:
+      content: 'error?: BatchError'
+      return:
+        type:
+          - '@azure/batch.BatchError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be5dd-103">A ETag da tarefa, se a tarefa foi adicionada com êxito.</span><span class="sxs-lookup"><span data-stu-id="be5dd-103">The ETag of the task, if the task was successfully added.</span></span> <span data-ttu-id="be5dd-104">Você pode usar isso para detectar se a tarefa foi alterado entre as solicitações.</span><span class="sxs-lookup"><span data-stu-id="be5dd-104">You can use this to detect whether the task has changed between requests.</span></span> <span data-ttu-id="be5dd-105">Em particular, você pode passar o ETag com uma solicitação de tarefa de atualização para especificar que as alterações entrarão em vigor somente se ninguém tiver modificado o trabalho nesse meio tempo.</span><span class="sxs-lookup"><span data-stu-id="be5dd-105">In particular, you can be pass the ETag with an Update Task request to specify that your changes should take effect only if nobody else has modified the job in the meantime.</span></span>'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be5dd-106">A hora última modificação da tarefa.</span><span class="sxs-lookup"><span data-stu-id="be5dd-106">The last modified time of the task.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be5dd-107">A URL da tarefa, se a tarefa foi adicionada com êxito.</span><span class="sxs-lookup"><span data-stu-id="be5dd-107">The URL of the task, if the task was successfully added.</span></span>'
+    optional: true
+    syntax:
+      content: 'location?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="be5dd-108">O status da solicitação para adicionar tarefas.</span><span class="sxs-lookup"><span data-stu-id="be5dd-108">The status of the add task request.</span></span> <span data-ttu-id="be5dd-109">Os valores possíveis incluem: ''êxito'', ''clientError'', ''serverError''</span><span class="sxs-lookup"><span data-stu-id="be5dd-109">Possible values include: ''success'', ''clientError'', ''serverError''</span></span>'
+    syntax:
+      content: 'status: TaskAddStatus'
+      return:
+        type:
+          - '@azure/batch.TaskAddStatus'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskAddResult.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="be5dd-110">A ID da tarefa para o qual é o resultado.</span><span class="sxs-lookup"><span data-stu-id="be5dd-110">The ID of the task for which this is the result.</span></span>
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchError'
+    name: BatchError
+    spec.typeScript:
+      - name: BatchError
+        fullName: BatchError
+        uid: '@azure/batch.BatchError'
+  - uid: '@azure/batch.TaskAddStatus'
+    name: TaskAddStatus
+    spec.typeScript:
+      - name: TaskAddStatus
+        fullName: TaskAddStatus
+        uid: '@azure/batch.TaskAddStatus'

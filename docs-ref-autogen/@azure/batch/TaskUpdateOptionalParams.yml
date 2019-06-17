@@ -1,0 +1,140 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskUpdateOptionalParams'
+    name: TaskUpdateOptionalParams
+    fullName: TaskUpdateOptionalParams
+    children:
+      - '@azure/batch.TaskUpdateOptionalParams.abortSignal'
+      - '@azure/batch.TaskUpdateOptionalParams.constraints'
+      - '@azure/batch.TaskUpdateOptionalParams.customHeaders'
+      - '@azure/batch.TaskUpdateOptionalParams.onDownloadProgress'
+      - '@azure/batch.TaskUpdateOptionalParams.onUploadProgress'
+      - '@azure/batch.TaskUpdateOptionalParams.taskUpdateOptions'
+      - '@azure/batch.TaskUpdateOptionalParams.timeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="a6dd7-101">Parâmetros opcionais.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-101">Optional Parameters.</span></span>
+    extends:
+      name: RequestOptionsBase
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a6dd7-102">O sinal que pode ser usado para anular as solicitações.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-102">The signal which can be used to abort requests.</span></span>
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - AbortSignalLike
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a6dd7-103">Restrições que se aplicam a essa tarefa.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-103">Constraints that apply to this task.</span></span> <span data-ttu-id="a6dd7-104">Se omitido, a tarefa recebe as restrições padrão.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-104">If omitted, the task is given the default constraints.</span></span>
+      <span data-ttu-id="a6dd7-105">Para tarefas de várias instâncias, atualizar o tempo de retenção se aplica somente à tarefa principal e não as subtarefas.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-105">For multi-instance tasks, updating the retention time applies only to the primary task and not subtasks.</span></span>
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.customHeaders'
+    name: customHeaders
+    fullName: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a6dd7-106">{object} [customHeaders] Cabeçalhos de solicitação personalizado que serão aplicados antes que a solicitação é enviada definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-106">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    optional: true
+    syntax:
+      content: 'customHeaders?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a6dd7-107">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-107">Callback which fires upon download progress.</span></span>
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a6dd7-108">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-108">Callback which fires upon upload progress.</span></span>
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - 'undefined | (progress: TransferProgressEvent) => void'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.taskUpdateOptions'
+    name: taskUpdateOptions
+    fullName: taskUpdateOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a6dd7-109">Parâmetros adicionais para a operação</span><span class="sxs-lookup"><span data-stu-id="a6dd7-109">Additional parameters for the operation</span></span>
+    optional: true
+    syntax:
+      content: 'taskUpdateOptions?: TaskUpdateOptions'
+      return:
+        type:
+          - '@azure/batch.TaskUpdateOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskUpdateOptionalParams.timeout'
+    name: timeout
+    fullName: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="a6dd7-110">O número de milissegundos que uma solicitação pode levar antes encerrado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="a6dd7-110">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    optional: true
+    syntax:
+      content: 'timeout?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskUpdateOptions'
+    name: TaskUpdateOptions
+    spec.typeScript:
+      - name: TaskUpdateOptions
+        fullName: TaskUpdateOptions
+        uid: '@azure/batch.TaskUpdateOptions'
