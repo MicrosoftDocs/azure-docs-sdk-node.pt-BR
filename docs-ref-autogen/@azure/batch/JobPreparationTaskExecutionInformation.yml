@@ -1,0 +1,209 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation'
+    name: JobPreparationTaskExecutionInformation
+    fullName: JobPreparationTaskExecutionInformation
+    children:
+      - '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.result'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.state'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+      - '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: Uma interface que representa JobPreparationTaskExecutionInformation.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.containerInfo'
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Informações sobre o contêiner no qual a tarefa está em execução. Essa propriedade é definida somente se a tarefa é executada em um contexto de contêiner.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskContainerExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hora em que a tarefa de preparação de trabalho foi concluída. Essa propriedade é definida somente se a tarefa estiver no estado concluído.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.exitCode'
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O código de saída do programa especificado na linha de comando de tarefa. Esse parâmetro é retornado somente se a tarefa estiver no estado concluído. O código de saída para um processo reflete a convenção específica implementada pelo desenvolvedor do aplicativo para que o processo. Se você usar o valor do código de saída para tomar decisões em seu código, certifique-se de que você sabe que a convenção de código de saída usada pelo processo de aplicativo. Observe que o código de saída também pode ser gerado pelo sistema de operacional de nó de computação, como quando um processo de finalização forçada.'
+    optional: true
+    syntax:
+      content: 'exitCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.failureInfo'
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informações que descrevem a falha da tarefa, se houver. Essa propriedade é definida somente se a tarefa estiver no estado concluído e encontrou uma falha.'
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - '@azure/batch.TaskFailureInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.lastRetryTime'
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A hora mais recente em que uma nova tentativa da tarefa de preparação de trabalho foi iniciado em execução. Essa propriedade é definida somente se a tarefa foi repetida (ou seja, retryCount é diferente de zero). Se estiver presente, isso normalmente é o mesmo que startTime, mas pode ser diferente se a tarefa tiver sido reiniciada por razões diferentes de repetição; Por exemplo, se o nó de computação foi reinicializado durante uma nova tentativa, startTime é atualizado, mas o lastRetryTime não é.'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.result'
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O resultado da execução da tarefa. Se o valor for ''failed'', os detalhes da falha podem ser encontrados na propriedade failureInfo. Os valores possíveis incluem: ''êxito'', ''Falha'''
+    optional: true
+    syntax:
+      content: 'result?: TaskExecutionResult'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionResult'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O número de vezes que a tarefa foi repetida pelo serviço em lotes. Falhas de aplicativo de tarefas (código de saída diferente de zero) são repetidas, (a tarefa não pôde ser executada) de erros de processamento e erros de upload de arquivo não serão repetidos. O serviço em lotes tentará a tarefa até o limite especificado pelas restrições. Falhas de aplicativo de tarefas (código de saída diferente de zero) são repetidas, (a tarefa não pôde ser executada) de erros de processamento e erros de upload de arquivo não serão repetidos. O serviço em lotes tentará a tarefa até o limite especificado pelas restrições.'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A hora em que a tarefa começou a ser executada. Se a tarefa foi reiniciada ou repetida, esta é a última vez em que a tarefa começou a ser executada.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado atual da tarefa de preparação de trabalho no nó de computação. Os valores possíveis incluem: ''running'', ''concluído'''
+    syntax:
+      content: 'state: JobPreparationTaskState'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectory'
+    name: taskRootDirectory
+    fullName: taskRootDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O diretório raiz da tarefa de preparação de trabalho no nó de computação. Você pode usar esse caminho para recuperar os arquivos criados pela tarefa, como arquivos de log.'
+    optional: true
+    syntax:
+      content: 'taskRootDirectory?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl'
+    name: taskRootDirectoryUrl
+    fullName: taskRootDirectoryUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A URL para o diretório raiz da tarefa de preparação de trabalho no nó de computação.
+    optional: true
+    syntax:
+      content: 'taskRootDirectoryUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.TaskContainerExecutionInformation'
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: '@azure/batch.TaskContainerExecutionInformation'
+  - uid: '@azure/batch.TaskFailureInformation'
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: '@azure/batch.TaskFailureInformation'
+  - uid: '@azure/batch.TaskExecutionResult'
+    name: TaskExecutionResult
+    spec.typeScript:
+      - name: TaskExecutionResult
+        fullName: TaskExecutionResult
+        uid: '@azure/batch.TaskExecutionResult'
+  - uid: '@azure/batch.JobPreparationTaskState'
+    name: JobPreparationTaskState
+    spec.typeScript:
+      - name: JobPreparationTaskState
+        fullName: JobPreparationTaskState
+        uid: '@azure/batch.JobPreparationTaskState'

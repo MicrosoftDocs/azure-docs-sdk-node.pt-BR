@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - '@azure/batch.JobManagerTask.allowLowPriorityNode'
+      - '@azure/batch.JobManagerTask.applicationPackageReferences'
+      - '@azure/batch.JobManagerTask.authenticationTokenSettings'
+      - '@azure/batch.JobManagerTask.commandLine'
+      - '@azure/batch.JobManagerTask.constraints'
+      - '@azure/batch.JobManagerTask.containerSettings'
+      - '@azure/batch.JobManagerTask.displayName'
+      - '@azure/batch.JobManagerTask.environmentSettings'
+      - '@azure/batch.JobManagerTask.id'
+      - '@azure/batch.JobManagerTask.killJobOnCompletion'
+      - '@azure/batch.JobManagerTask.outputFiles'
+      - '@azure/batch.JobManagerTask.resourceFiles'
+      - '@azure/batch.JobManagerTask.runExclusive'
+      - '@azure/batch.JobManagerTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'A tarefa do Gerenciador de trabalho seja iniciada automaticamente quando o trabalho é criado. O serviço de lote tenta agendar a tarefa do Gerenciador de trabalho antes de quaisquer outras tarefas no trabalho. Ao reduzir um pool, o serviço de lote tenta preservar nós de computação onde as tarefas do Gerenciador de trabalhos estão em execução por mais tempo possível (ou seja, nós tarefas em execução ''normais'' sejam removidas antes de nós que executam tarefas do Gerenciador de trabalho). Quando uma tarefa do Gerenciador de trabalho falha e precisa ser reiniciado, o sistema tenta agendá-la com a prioridade mais alta. Se não houver nenhum nó ocioso disponível, o sistema pode encerrar uma das tarefas em execução no pool e retorná-lo para a fila para liberar espaço para a tarefa do Gerenciador de trabalho reiniciar. Observe que uma tarefa do Gerenciador de trabalho em um trabalho não tem prioridade sobre tarefas em outros trabalhos. Em trabalhos, somente as nível prioridades de trabalho são observadas. Por exemplo, se um Gerenciador de trabalho em um trabalho de prioridade 0 precisa ser reiniciado, ele não substitui as tarefas de um trabalho de prioridade 1. Em lotes repetirá as tarefas quando uma operação de recuperação é disparada em um nó de computação. Exemplos de operações de recuperação incluem (mas não estão limitados a) quando um nó de computação não íntegro é reinicializado ou um nó de computação desapareceu devido à falha do host. Repete devido à recuperação de operações são independentes e não são contadas em relação a maxTaskRetryCount. Mesmo se a maxTaskRetryCount é 0, uma repetição interna devido a uma operação de recuperação pode ocorrer. Por isso, todas as tarefas devem ser idempotentes. Isso significa que as tarefas precisam tolerar que está sendo interrompida e reiniciada sem causar nenhum dano ou dados duplicados. A melhor prática para tarefas de longa execução é usar alguma forma de ponto de verificação.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.allowLowPriorityNode'
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Se a tarefa do Gerenciador de trabalho pode executar em um nó de computação de baixa prioridade. O valor padrão é true.
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma lista de pacotes de aplicativos que o serviço de lote implantará o nó de computação antes de executar a linha de comando. Pacotes de aplicativos são baixados e implantados em um diretório compartilhado, não o diretório de trabalho de tarefa. Portanto, se um pacote referenciado já está no nó de computação e é atualizado, em seguida, ele não é novamente baixado; a cópia existente no nó de computação é usada. Se um pacote de aplicativo referenciado não pode ser instalado, por exemplo porque o pacote foi excluído ou porque a falha no download, a tarefa falhará.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'As configurações para um token de autenticação que a tarefa pode usar para executar operações de serviço de lote. Se essa propriedade for definida, o serviço de lote fornece a tarefa com um token de autenticação que pode ser usado para autenticar operações de serviço de lote sem a necessidade de uma chave de acesso da conta. O token é fornecido por meio da variável de ambiente AZ_BATCH_AUTHENTICATION_TOKEN. As operações que pode ser executadas usando o token a tarefa dependem das configurações. Por exemplo, uma tarefa pode solicitar permissões de trabalho para adicionar outras tarefas ao trabalho ou verificar o status do trabalho ou de outras tarefas no trabalho.'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A linha de comando da tarefa do Gerenciador de trabalhos. A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente. Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux. Se a linha de comando se refere aos caminhos de arquivos, ele deve usar um caminho relativo (relativo ao diretório de trabalho de tarefa) ou usar a variável de ambiente fornecido em lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Restrições que se aplicam a tarefa do Gerenciador de trabalho.
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'As configurações para o contêiner na qual a tarefa do Gerenciador de trabalho é executado. Se o pool que executará essa tarefa tiver containerConfiguration definido, isso deve ser definido também. Se o pool que executará essa tarefa não tiver containerConfiguration definido, isso não deve ser definido. Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de exibição da tarefa do Gerenciador de trabalhos. Ele não precisa ser exclusivo e pode conter quaisquer caracteres Unicode até um comprimento máximo de 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma lista de configurações de variável de ambiente para a tarefa do Gerenciador de trabalho.
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma cadeia de caracteres que identifica exclusivamente a tarefa do Gerenciador de trabalho dentro do trabalho. A ID pode conter qualquer combinação de caracteres alfanuméricos, incluindo hifens e sublinhados e não pode conter mais de 64 caracteres.'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.killJobOnCompletion'
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se a conclusão da tarefa do Gerenciador de trabalho significa conclusão de todo o trabalho. Se for true, quando a tarefa do Gerenciador de trabalho for concluído, as marcas de serviço de lote o trabalho como concluído. Se as tarefas ainda estão em execução no momento (exceto a liberação de trabalho), essas tarefas são encerradas. Se for false, a conclusão da tarefa do Gerenciador de trabalho não afeta o status do trabalho. Nesse caso, você deve usar o atributo onAllTasksComplete para encerrar o trabalho ou tiver um cliente ou usuário finalizar o trabalho explicitamente. Um exemplo disso é se o Gerenciador de trabalho cria um conjunto de tarefas, mas, em seguida, não usa nenhuma função ainda mais em sua execução. O valor padrão é true. Se você estiver usando os atributos onAllTasksComplete e onTaskFailure a tempo de vida de trabalho de controle e usando a tarefa do Gerenciador de trabalho apenas para criar as tarefas para o trabalho (não para monitorar o progresso), é importante definir killJobOnCompletion como false.'
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma lista de arquivos que o serviço de lote carregará a partir do nó de computação depois de executar a linha de comando. Para tarefas de várias instâncias, os arquivos só serão carregados a partir do nó de computação no qual a principal tarefa é executada.'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Uma lista de arquivos que o serviço de lote baixará para o nó de computação antes de executar a linha de comando. Os arquivos listados nesse elemento estão localizados no diretório de trabalho da tarefa.
+      Há um tamanho máximo para a lista de arquivos de recurso.  Quando o tamanho máximo for excedido, a solicitação falhará e o código de erro da resposta será RequestEntityTooLarge. Se isso ocorrer, a coleção de ResourceFiles deve ser reduzida em tamanho. Isso pode ser obtido usando arquivos. zip, pacotes de aplicativos ou contêineres do Docker.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.runExclusive'
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se a tarefa do Gerenciador de trabalho requer o uso exclusivo do nó de computação onde ele é executado. Se for true, nenhuma outra tarefa será executado no mesmo nó de computação para desde que o Gerenciador de trabalho está em execução. Se for falso, outras tarefas podem executar simultaneamente com o Gerenciador de trabalho em um nó de computação.
+      A tarefa do Gerenciador de trabalho normalmente conta em relação ao limite de tarefas simultâneas do nó, portanto, isso só será relevante se o nó permite que várias tarefas simultâneas. O valor padrão é true.
+    optional: true
+    syntax:
+      content: 'runExclusive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobManagerTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A identidade do usuário na qual a tarefa do Gerenciador de trabalho é executado. Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'

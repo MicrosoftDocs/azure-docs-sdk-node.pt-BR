@@ -1,0 +1,239 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration'
+    name: TextModeration
+    fullName: TextModeration
+    children:
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage_2'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage_1'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.screenText'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.screenText_1'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.screenText_2'
+      - '@azure/cognitiveservices-contentmoderator.TextModeration.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa um TextModeration.
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage'
+    name: 'detectLanguage(Models.TextContentType1, msRest.HttpRequestBody, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Esta operação irá detectar o idioma do recebe o conteúdo de entrada. Retorna o <a
+      href="http://www-01.sil.org/iso639-3/codes.asp">código ISO 639 3</a> para o idioma predominante que compõem o texto enviado. Mais de 110 idiomas com suporte.
+    syntax:
+      content: 'function detectLanguage(textContentType: Models.TextContentType1, textContent: msRest.HttpRequestBody, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType1
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TextModerationDetectLanguageResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage_2'
+    name: 'detectLanguage(Models.TextContentType1, msRest.HttpRequestBody, RequestOptionsBase, ServiceCallback<DetectedLanguage>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectLanguage(textContentType: Models.TextContentType1, textContent: msRest.HttpRequestBody, options: RequestOptionsBase, callback: ServiceCallback<DetectedLanguage>)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType1
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.DetectedLanguage>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TextModerationDetectLanguageResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.detectLanguage_1'
+    name: 'detectLanguage(Models.TextContentType1, msRest.HttpRequestBody, ServiceCallback<DetectedLanguage>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detectLanguage(textContentType: Models.TextContentType1, textContent: msRest.HttpRequestBody, callback: ServiceCallback<DetectedLanguage>)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType1
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.DetectedLanguage>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TextModerationDetectLanguageResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.screenText'
+    name: 'screenText(Models.TextContentType, msRest.HttpRequestBody, Models.TextModerationScreenTextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Detecta profanidade em mais de 100 idiomas e correspondência em relação a blacklists personalizadas e compartilhadas.
+    syntax:
+      content: 'function screenText(textContentType: Models.TextContentType, textContent: msRest.HttpRequestBody, options?: Models.TextModerationScreenTextOptionalParams)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: options
+          type:
+            - Models.TextModerationScreenTextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.TextModerationScreenTextResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.screenText_1'
+    name: 'screenText(Models.TextContentType, msRest.HttpRequestBody, ServiceCallback<Screen>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function screenText(textContentType: Models.TextContentType, textContent: msRest.HttpRequestBody, callback: ServiceCallback<Screen>)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Screen>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TextModerationScreenTextResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.screenText_2'
+    name: 'screenText(Models.TextContentType, msRest.HttpRequestBody, TextModerationScreenTextOptionalParams, ServiceCallback<Screen>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function screenText(textContentType: Models.TextContentType, textContent: msRest.HttpRequestBody, options: TextModerationScreenTextOptionalParams, callback: ServiceCallback<Screen>)'
+      parameters:
+        - id: textContentType
+          type:
+            - Models.TextContentType
+          description: 'O tipo de conteúdo. Os valores possíveis incluem: '' texto/simples'', '' text/html'', '' texto/xml'', '' texto/markdown'''
+        - id: textContent
+          type:
+            - msRest.HttpRequestBody
+          description: A tela de conteúdo.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-contentmoderator.TextModerationScreenTextOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-contentmoderator.Screen>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.TextModerationScreenTextResponse>
+    package: '@azure/cognitiveservices-contentmoderator'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModeration.constructor'
+    name: TextModeration(ContentModeratorClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie um TextModeration.
+    syntax:
+      content: 'new TextModeration(client: ContentModeratorClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/cognitiveservices-contentmoderator'
+references:
+  - uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+    name: ContentModeratorClientContext
+    spec.typeScript:
+      - name: ContentModeratorClientContext
+        fullName: ContentModeratorClientContext
+        uid: '@azure/cognitiveservices-contentmoderator.ContentModeratorClientContext'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.DetectedLanguage>
+    name: DetectedLanguage>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: DetectedLanguage
+        fullName: DetectedLanguage
+        uid: '@azure/cognitiveservices-contentmoderator.DetectedLanguage'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-contentmoderator.Screen>
+    name: Screen>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Screen
+        fullName: Screen
+        uid: '@azure/cognitiveservices-contentmoderator.Screen'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-contentmoderator.TextModerationScreenTextOptionalParams'
+    name: TextModerationScreenTextOptionalParams
+    spec.typeScript:
+      - name: TextModerationScreenTextOptionalParams
+        fullName: TextModerationScreenTextOptionalParams
+        uid: '@azure/cognitiveservices-contentmoderator.TextModerationScreenTextOptionalParams'

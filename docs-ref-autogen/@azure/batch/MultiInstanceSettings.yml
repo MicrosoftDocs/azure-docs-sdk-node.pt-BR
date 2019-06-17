@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Tarefas de várias instâncias são usadas para dar suporte a tarefas MPI. No caso de MPI, se qualquer uma das subtarefas falhar (por exemplo, devido a sair com um código de saída diferente de zero) a tarefa de várias instâncias inteira falhará. A tarefa de várias instâncias é encerrada e repetida até o limite de repetição.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma lista de arquivos que o serviço de lote baixará antes de executar a linha de comando de coordenação. A diferença entre arquivos de recurso comuns e arquivos de recurso de tarefa é que arquivos de recurso comum são baixados para todas as subtarefas, inclusive a primária, enquanto os arquivos de recurso de tarefa são baixados somente para o primário. Observe também que esses arquivos de recurso não são baixados para o diretório de trabalho da tarefa, mas em vez disso, são baixados para o diretório raiz de tarefa (um diretório acima no diretório de trabalho).  Há um tamanho máximo para a lista de arquivos de recurso.  Quando o tamanho máximo for excedido, a solicitação falhará e o código de erro da resposta será RequestEntityTooLarge. Se isso ocorrer, a coleção de ResourceFiles deve ser reduzida em tamanho. Isso pode ser obtido usando arquivos. zip, pacotes de aplicativos ou contêineres do Docker.'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A linha de comando para ser executado em todos os nós de computação para habilitá-los coordenar quando o primário executa o comando da tarefa principal. Uma linha de comando de coordenação típica inicia um serviço em segundo plano e verifica se o serviço está pronto para processar mensagens entre nós.
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O número de nós de computação que a tarefa precisa. Se omitido, o padrão é 1.'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'

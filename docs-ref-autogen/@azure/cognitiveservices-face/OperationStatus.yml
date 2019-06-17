@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: Objeto de status da operação. Operação se refere à tarefa assíncrona de back-end incluindo tirar um instantâneo e aplicar um instantâneo.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um combinado de UTC Data e hora da cadeia de caracteres que descreve o tempo quando a operação (levar ou aplicar um instantâneo) é solicitado. Por exemplo 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Um combinado de data UTC e a cadeia de caracteres de hora que descreve a última hora em que a operação (levar ou aplicar um instantâneo) está migrando dados ativamente. O lastActionTime será manter aumentando até que a operação for concluída. Por exemplo 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostrar mensagem de falha quando ocorre falha na operação (omitido quando a operação for bem-sucedida).
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando a operação for bem-sucedida com êxito, para fazer a operação de instantâneo a id de instantâneo será incluída neste campo, e para aplicar a operação de instantâneo, o caminho para obter o objeto de destino será retornado nesse campo.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Status da operação: notstarted, em execução, com êxito, falha. Se for solicitada e esperando para executar, o status é notstarted. Se a operação está em andamento no back-end, o status está em execução. Status de êxito significa que a operação for concluída com êxito, especificamente para a operação de tirar instantâneo, ele ilustra o instantâneo é bem feito e pronto para aplicar e para aplicar a operação de instantâneo, ele apresenta o destino objeto terminou de criar por o instantâneo e pronto para ser usado. Falha no status geralmente é causado ao editar o objeto de origem ao mesmo tempo, o instantâneo ou editar o objeto de destino ao aplicar o instantâneo antes da conclusão, consulte a campo "mensagem" para verificar o motivo da falha.
+      Os valores possíveis incluem: 'notstarted', 'running', 'bem-sucedido', 'Falha'
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

@@ -1,0 +1,987 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSchedule'
+    name: JobSchedule
+    fullName: JobSchedule
+    children:
+      - '@azure/batch.JobSchedule.add_2'
+      - '@azure/batch.JobSchedule.add'
+      - '@azure/batch.JobSchedule.add_1'
+      - '@azure/batch.JobSchedule.deleteMethod_2'
+      - '@azure/batch.JobSchedule.deleteMethod'
+      - '@azure/batch.JobSchedule.deleteMethod_1'
+      - '@azure/batch.JobSchedule.disable_2'
+      - '@azure/batch.JobSchedule.disable'
+      - '@azure/batch.JobSchedule.disable_1'
+      - '@azure/batch.JobSchedule.enable_2'
+      - '@azure/batch.JobSchedule.enable'
+      - '@azure/batch.JobSchedule.enable_1'
+      - '@azure/batch.JobSchedule.exists_2'
+      - '@azure/batch.JobSchedule.exists'
+      - '@azure/batch.JobSchedule.exists_1'
+      - '@azure/batch.JobSchedule.get_2'
+      - '@azure/batch.JobSchedule.get'
+      - '@azure/batch.JobSchedule.get_1'
+      - '@azure/batch.JobSchedule.constructor'
+      - '@azure/batch.JobSchedule.list_2'
+      - '@azure/batch.JobSchedule.list'
+      - '@azure/batch.JobSchedule.list_1'
+      - '@azure/batch.JobSchedule.listNext_2'
+      - '@azure/batch.JobSchedule.listNext'
+      - '@azure/batch.JobSchedule.listNext_1'
+      - '@azure/batch.JobSchedule.patch_2'
+      - '@azure/batch.JobSchedule.patch'
+      - '@azure/batch.JobSchedule.patch_1'
+      - '@azure/batch.JobSchedule.terminate_2'
+      - '@azure/batch.JobSchedule.terminate'
+      - '@azure/batch.JobSchedule.terminate_1'
+      - '@azure/batch.JobSchedule.update_2'
+      - '@azure/batch.JobSchedule.update'
+      - '@azure/batch.JobSchedule.update_1'
+    langs:
+      - typeScript
+    type: class
+    summary: Classe que representa uma JobSchedule.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.add_2'
+    name: 'add(JobScheduleAddParameter, JobScheduleAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(cloudJobSchedule: JobScheduleAddParameter, options: JobScheduleAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: cloudJobSchedule
+          type:
+            - '@azure/batch.JobScheduleAddParameter'
+          description: A agenda de trabalho a ser adicionado.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleAddOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.add'
+    name: 'add(JobScheduleAddParameter, Models.JobScheduleAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(cloudJobSchedule: JobScheduleAddParameter, options?: Models.JobScheduleAddOptionalParams)'
+      parameters:
+        - id: cloudJobSchedule
+          type:
+            - '@azure/batch.JobScheduleAddParameter'
+          description: A agenda de trabalho a ser adicionado.
+        - id: options
+          type:
+            - Models.JobScheduleAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.add_1'
+    name: 'add(JobScheduleAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(cloudJobSchedule: JobScheduleAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: cloudJobSchedule
+          type:
+            - '@azure/batch.JobScheduleAddParameter'
+          description: A agenda de trabalho a ser adicionado.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.deleteMethod_2'
+    name: 'deleteMethod(string, JobScheduleDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobScheduleId: string, options: JobScheduleDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para excluir.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleDeleteMethodOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.deleteMethod'
+    name: 'deleteMethod(string, Models.JobScheduleDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Quando você exclui uma agenda de trabalho, isso também exclui todos os trabalhos e tarefas sob essa agenda. Quando as tarefas são excluídas, todos os arquivos em seus diretórios de trabalho em nós de computação também são excluídos (o período de retenção é ignorado). As estatísticas de agendamento de trabalho não são acessíveis depois que a agenda de trabalho é excluída, embora elas ainda são contadas para estatísticas de tempo de vida de conta.'
+    syntax:
+      content: 'function deleteMethod(jobScheduleId: string, options?: Models.JobScheduleDeleteMethodOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para excluir.
+        - id: options
+          type:
+            - Models.JobScheduleDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(jobScheduleId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para excluir.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.disable_2'
+    name: 'disable(string, JobScheduleDisableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobScheduleId: string, options: JobScheduleDisableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para desabilitar.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleDisableOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.disable'
+    name: 'disable(string, Models.JobScheduleDisableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Nenhum trabalho novo será criado até que a agenda de trabalho seja habilitada novamente.
+    syntax:
+      content: 'function disable(jobScheduleId: string, options?: Models.JobScheduleDisableOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para desabilitar.
+        - id: options
+          type:
+            - Models.JobScheduleDisableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.disable_1'
+    name: 'disable(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disable(jobScheduleId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para desabilitar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleDisableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.enable_2'
+    name: 'enable(string, JobScheduleEnableOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobScheduleId: string, options: JobScheduleEnableOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para habilitar.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleEnableOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.enable'
+    name: 'enable(string, Models.JobScheduleEnableOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobScheduleId: string, options?: Models.JobScheduleEnableOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para habilitar.
+        - id: options
+          type:
+            - Models.JobScheduleEnableOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.enable_1'
+    name: 'enable(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enable(jobScheduleId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para habilitar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleEnableResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.exists_2'
+    name: 'exists(string, JobScheduleExistsOptionalParams, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(jobScheduleId: string, options: JobScheduleExistsOptionalParams, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho que você deseja verificar.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleExistsOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.exists'
+    name: 'exists(string, Models.JobScheduleExistsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(jobScheduleId: string, options?: Models.JobScheduleExistsOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho que você deseja verificar.
+        - id: options
+          type:
+            - Models.JobScheduleExistsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.exists_1'
+    name: 'exists(string, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(jobScheduleId: string, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho que você deseja verificar.
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.get_2'
+    name: 'get(string, JobScheduleGetOptionalParams, ServiceCallback<CloudJobSchedule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobScheduleId: string, options: JobScheduleGetOptionalParams, callback: ServiceCallback<CloudJobSchedule>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para obter.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleGetOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobSchedule>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.get'
+    name: 'get(string, Models.JobScheduleGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Obtém informações sobre a agenda de trabalho especificado.
+    syntax:
+      content: 'function get(jobScheduleId: string, options?: Models.JobScheduleGetOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para obter.
+        - id: options
+          type:
+            - Models.JobScheduleGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.get_1'
+    name: 'get(string, ServiceCallback<CloudJobSchedule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(jobScheduleId: string, callback: ServiceCallback<CloudJobSchedule>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para obter.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobSchedule>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.constructor'
+    name: JobSchedule(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Crie uma JobSchedule.
+    syntax:
+      content: 'new JobSchedule(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            Referência para o cliente do serviço.
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.list_2'
+    name: 'list(JobScheduleListOptionalParams, ServiceCallback<CloudJobScheduleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: JobScheduleListOptionalParams, callback: ServiceCallback<CloudJobScheduleListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleListOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobScheduleListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.list'
+    name: list(Models.JobScheduleListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.JobScheduleListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.JobScheduleListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.list_1'
+    name: list(ServiceCallback<CloudJobScheduleListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudJobScheduleListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobScheduleListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.listNext_2'
+    name: 'listNext(string, JobScheduleListNextOptionalParams, ServiceCallback<CloudJobScheduleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: JobScheduleListNextOptionalParams, callback: ServiceCallback<CloudJobScheduleListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleListNextOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobScheduleListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.listNext'
+    name: 'listNext(string, Models.JobScheduleListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.JobScheduleListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: options
+          type:
+            - Models.JobScheduleListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudJobScheduleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudJobScheduleListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink da chamada bem-sucedida anterior à operação de lista.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudJobScheduleListResult>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.patch_2'
+    name: 'patch(string, JobSchedulePatchParameter, JobSchedulePatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobScheduleId: string, jobSchedulePatchParameter: JobSchedulePatchParameter, options: JobSchedulePatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobSchedulePatchParameter
+          type:
+            - '@azure/batch.JobSchedulePatchParameter'
+          description: Os parâmetros para a solicitação.
+        - id: options
+          type:
+            - '@azure/batch.JobSchedulePatchOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobSchedulePatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.patch'
+    name: 'patch(string, JobSchedulePatchParameter, Models.JobSchedulePatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Isso substitui apenas as propriedades de agendamento do trabalho especificadas na solicitação. Por exemplo, se a propriedade de agendamento não é especificada com esta solicitação, o serviço em lotes manterá a agenda existente. As alterações a um trabalho agendar apenas os trabalhos de impacto criados pelo agendamento depois que a atualização tiver sido feita; trabalhos em execução no momento não são afetados.'
+    syntax:
+      content: 'function patch(jobScheduleId: string, jobSchedulePatchParameter: JobSchedulePatchParameter, options?: Models.JobSchedulePatchOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobSchedulePatchParameter
+          type:
+            - '@azure/batch.JobSchedulePatchParameter'
+          description: Os parâmetros para a solicitação.
+        - id: options
+          type:
+            - Models.JobSchedulePatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobSchedulePatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.patch_1'
+    name: 'patch(string, JobSchedulePatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(jobScheduleId: string, jobSchedulePatchParameter: JobSchedulePatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobSchedulePatchParameter
+          type:
+            - '@azure/batch.JobSchedulePatchParameter'
+          description: Os parâmetros para a solicitação.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobSchedulePatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.terminate_2'
+    name: 'terminate(string, JobScheduleTerminateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobScheduleId: string, options: JobScheduleTerminateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para encerrar.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleTerminateOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.terminate'
+    name: 'terminate(string, Models.JobScheduleTerminateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobScheduleId: string, options?: Models.JobScheduleTerminateOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para encerrar.
+        - id: options
+          type:
+            - Models.JobScheduleTerminateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.terminate_1'
+    name: 'terminate(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function terminate(jobScheduleId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para encerrar.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleTerminateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.update_2'
+    name: 'update(string, JobScheduleUpdateParameter, JobScheduleUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobScheduleId: string, jobScheduleUpdateParameter: JobScheduleUpdateParameter, options: JobScheduleUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobScheduleUpdateParameter
+          type:
+            - '@azure/batch.JobScheduleUpdateParameter'
+          description: Os parâmetros para a solicitação.
+        - id: options
+          type:
+            - '@azure/batch.JobScheduleUpdateOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.update'
+    name: 'update(string, JobScheduleUpdateParameter, Models.JobScheduleUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Isso substitui totalmente todas as propriedades atualizáveis da agenda de trabalho. Por exemplo, se a propriedade de agendamento não é especificada com esta solicitação, o serviço de lote removerá a agenda existente. As alterações a um trabalho agendar apenas os trabalhos de impacto criados pelo agendamento depois que a atualização tiver sido feita; trabalhos em execução no momento não são afetados.'
+    syntax:
+      content: 'function update(jobScheduleId: string, jobScheduleUpdateParameter: JobScheduleUpdateParameter, options?: Models.JobScheduleUpdateOptionalParams)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobScheduleUpdateParameter
+          type:
+            - '@azure/batch.JobScheduleUpdateParameter'
+          description: Os parâmetros para a solicitação.
+        - id: options
+          type:
+            - Models.JobScheduleUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobScheduleUpdateResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSchedule.update_1'
+    name: 'update(string, JobScheduleUpdateParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(jobScheduleId: string, jobScheduleUpdateParameter: JobScheduleUpdateParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: jobScheduleId
+          type:
+            - string
+          description: A ID da agenda de trabalho para atualizar.
+        - id: jobScheduleUpdateParameter
+          type:
+            - '@azure/batch.JobScheduleUpdateParameter'
+          description: Os parâmetros para a solicitação.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.JobScheduleUpdateResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.JobScheduleAddParameter'
+    name: JobScheduleAddParameter
+    spec.typeScript:
+      - name: JobScheduleAddParameter
+        fullName: JobScheduleAddParameter
+        uid: '@azure/batch.JobScheduleAddParameter'
+  - uid: '@azure/batch.JobScheduleAddOptionalParams'
+    name: JobScheduleAddOptionalParams
+    spec.typeScript:
+      - name: JobScheduleAddOptionalParams
+        fullName: JobScheduleAddOptionalParams
+        uid: '@azure/batch.JobScheduleAddOptionalParams'
+  - uid: '@azure/batch.JobScheduleDeleteMethodOptionalParams'
+    name: JobScheduleDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: JobScheduleDeleteMethodOptionalParams
+        fullName: JobScheduleDeleteMethodOptionalParams
+        uid: '@azure/batch.JobScheduleDeleteMethodOptionalParams'
+  - uid: '@azure/batch.JobScheduleDisableOptionalParams'
+    name: JobScheduleDisableOptionalParams
+    spec.typeScript:
+      - name: JobScheduleDisableOptionalParams
+        fullName: JobScheduleDisableOptionalParams
+        uid: '@azure/batch.JobScheduleDisableOptionalParams'
+  - uid: '@azure/batch.JobScheduleEnableOptionalParams'
+    name: JobScheduleEnableOptionalParams
+    spec.typeScript:
+      - name: JobScheduleEnableOptionalParams
+        fullName: JobScheduleEnableOptionalParams
+        uid: '@azure/batch.JobScheduleEnableOptionalParams'
+  - uid: '@azure/batch.JobScheduleExistsOptionalParams'
+    name: JobScheduleExistsOptionalParams
+    spec.typeScript:
+      - name: JobScheduleExistsOptionalParams
+        fullName: JobScheduleExistsOptionalParams
+        uid: '@azure/batch.JobScheduleExistsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobSchedule>
+    name: CloudJobSchedule>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobSchedule
+        fullName: CloudJobSchedule
+        uid: '@azure/batch.CloudJobSchedule'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobScheduleGetOptionalParams'
+    name: JobScheduleGetOptionalParams
+    spec.typeScript:
+      - name: JobScheduleGetOptionalParams
+        fullName: JobScheduleGetOptionalParams
+        uid: '@azure/batch.JobScheduleGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudJobScheduleListResult>
+    name: CloudJobScheduleListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudJobScheduleListResult
+        fullName: CloudJobScheduleListResult
+        uid: '@azure/batch.CloudJobScheduleListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.JobScheduleListOptionalParams'
+    name: JobScheduleListOptionalParams
+    spec.typeScript:
+      - name: JobScheduleListOptionalParams
+        fullName: JobScheduleListOptionalParams
+        uid: '@azure/batch.JobScheduleListOptionalParams'
+  - uid: '@azure/batch.JobScheduleListNextOptionalParams'
+    name: JobScheduleListNextOptionalParams
+    spec.typeScript:
+      - name: JobScheduleListNextOptionalParams
+        fullName: JobScheduleListNextOptionalParams
+        uid: '@azure/batch.JobScheduleListNextOptionalParams'
+  - uid: '@azure/batch.JobSchedulePatchParameter'
+    name: JobSchedulePatchParameter
+    spec.typeScript:
+      - name: JobSchedulePatchParameter
+        fullName: JobSchedulePatchParameter
+        uid: '@azure/batch.JobSchedulePatchParameter'
+  - uid: '@azure/batch.JobSchedulePatchOptionalParams'
+    name: JobSchedulePatchOptionalParams
+    spec.typeScript:
+      - name: JobSchedulePatchOptionalParams
+        fullName: JobSchedulePatchOptionalParams
+        uid: '@azure/batch.JobSchedulePatchOptionalParams'
+  - uid: '@azure/batch.JobScheduleTerminateOptionalParams'
+    name: JobScheduleTerminateOptionalParams
+    spec.typeScript:
+      - name: JobScheduleTerminateOptionalParams
+        fullName: JobScheduleTerminateOptionalParams
+        uid: '@azure/batch.JobScheduleTerminateOptionalParams'
+  - uid: '@azure/batch.JobScheduleUpdateParameter'
+    name: JobScheduleUpdateParameter
+    spec.typeScript:
+      - name: JobScheduleUpdateParameter
+        fullName: JobScheduleUpdateParameter
+        uid: '@azure/batch.JobScheduleUpdateParameter'
+  - uid: '@azure/batch.JobScheduleUpdateOptionalParams'
+    name: JobScheduleUpdateOptionalParams
+    spec.typeScript:
+      - name: JobScheduleUpdateOptionalParams
+        fullName: JobScheduleUpdateOptionalParams
+        uid: '@azure/batch.JobScheduleUpdateOptionalParams'
