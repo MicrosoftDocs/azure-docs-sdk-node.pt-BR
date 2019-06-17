@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.TransformOutput'
+    name: TransformOutput
+    fullName: TransformOutput
+    children:
+      - '@azure/arm-mediaservices.TransformOutput.onError'
+      - '@azure/arm-mediaservices.TransformOutput.preset'
+      - '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a0d28-101">Descreve as propriedades de um TransformOutput, quais são as regras a serem aplicadas ao gerar a saída desejada.</span><span class="sxs-lookup"><span data-stu-id="a0d28-101">Describes the properties of a TransformOutput, which are the rules to be applied while generating the desired output.</span></span>'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.onError'
+    name: onError
+    fullName: onError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a0d28-102">Uma transformação pode definir mais de um saídas.</span><span class="sxs-lookup"><span data-stu-id="a0d28-102">A Transform can define more than one outputs.</span></span> <span data-ttu-id="a0d28-103">Esta propriedade define o que o serviço deve fazer quando não é uma saída - continuar a produzir outras saídas, ou interromper as outras saídas.</span><span class="sxs-lookup"><span data-stu-id="a0d28-103">This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs.</span></span>
+      <span data-ttu-id="a0d28-104">O estado geral do trabalho não refletirá as falhas de saídas que são especificadas com 'ContinueJob'.</span><span class="sxs-lookup"><span data-stu-id="a0d28-104">The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'.</span></span> <span data-ttu-id="a0d28-105">O padrão é 'StopProcessingJob'.</span><span class="sxs-lookup"><span data-stu-id="a0d28-105">The default is 'StopProcessingJob'.</span></span> <span data-ttu-id="a0d28-106">Os valores possíveis incluem: 'StopProcessingJob', 'ContinueJob'</span><span class="sxs-lookup"><span data-stu-id="a0d28-106">Possible values include: 'StopProcessingJob', 'ContinueJob'</span></span>
+    optional: true
+    syntax:
+      content: 'onError?: OnErrorType'
+      return:
+        type:
+          - '@azure/arm-mediaservices.OnErrorType'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.preset'
+    name: preset
+    fullName: preset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a0d28-107">Predefinição que descreve as operações que serão usadas para modificar, transcodificar, ou extrair informações do arquivo de origem para gerar a saída.</span><span class="sxs-lookup"><span data-stu-id="a0d28-107">Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.</span></span>'
+    syntax:
+      content: 'preset: PresetUnion'
+      return:
+        type:
+          - '@azure/arm-mediaservices.PresetUnion'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.TransformOutput.relativePriority'
+    name: relativePriority
+    fullName: relativePriority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="a0d28-108">Define a prioridade relativa a TransformOutputs dentro de uma transformação.</span><span class="sxs-lookup"><span data-stu-id="a0d28-108">Sets the relative priority of the TransformOutputs within a Transform.</span></span> <span data-ttu-id="a0d28-109">Isso define a prioridade que o serviço usa para processar TransformOutputs.</span><span class="sxs-lookup"><span data-stu-id="a0d28-109">This sets the priority that the service uses for processing TransformOutputs.</span></span> <span data-ttu-id="a0d28-110">A prioridade padrão é Normal.</span><span class="sxs-lookup"><span data-stu-id="a0d28-110">The default priority is Normal.</span></span>
+      <span data-ttu-id="a0d28-111">Os valores possíveis incluem: 'Low', 'Normal', 'High'</span><span class="sxs-lookup"><span data-stu-id="a0d28-111">Possible values include: 'Low', 'Normal', 'High'</span></span>
+    optional: true
+    syntax:
+      content: 'relativePriority?: Priority'
+      return:
+        type:
+          - '@azure/arm-mediaservices.Priority'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.OnErrorType'
+    name: OnErrorType
+    spec.typeScript:
+      - name: OnErrorType
+        fullName: OnErrorType
+        uid: '@azure/arm-mediaservices.OnErrorType'
+  - uid: '@azure/arm-mediaservices.PresetUnion'
+    name: PresetUnion
+    spec.typeScript:
+      - name: PresetUnion
+        fullName: PresetUnion
+        uid: '@azure/arm-mediaservices.PresetUnion'
+  - uid: '@azure/arm-mediaservices.Priority'
+    name: Priority
+    spec.typeScript:
+      - name: Priority
+        fullName: Priority
+        uid: '@azure/arm-mediaservices.Priority'
