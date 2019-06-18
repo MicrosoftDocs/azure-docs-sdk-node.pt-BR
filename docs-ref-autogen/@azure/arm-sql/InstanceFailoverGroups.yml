@@ -1,0 +1,589 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.InstanceFailoverGroups'
+    name: InstanceFailoverGroups
+    fullName: InstanceFailoverGroups
+    children:
+      - '@azure/arm-sql.InstanceFailoverGroups.beginCreateOrUpdate'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginDeleteMethod'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginFailover'
+      - '@azure/arm-sql.InstanceFailoverGroups.beginForceFailoverAllowDataLoss'
+      - '@azure/arm-sql.InstanceFailoverGroups.createOrUpdate'
+      - '@azure/arm-sql.InstanceFailoverGroups.deleteMethod'
+      - '@azure/arm-sql.InstanceFailoverGroups.failover'
+      - '@azure/arm-sql.InstanceFailoverGroups.forceFailoverAllowDataLoss'
+      - '@azure/arm-sql.InstanceFailoverGroups.get'
+      - '@azure/arm-sql.InstanceFailoverGroups.get_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.get_1'
+      - '@azure/arm-sql.InstanceFailoverGroups.constructor'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocation_1'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_2'
+      - '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="e1168-101">Classe que representa um InstanceFailoverGroups.</span><span class="sxs-lookup"><span data-stu-id="e1168-101">Class representing a InstanceFailoverGroups.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, InstanceFailoverGroup, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-102">Cria ou atualiza um grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-102">Creates or updates a failover group.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, locationName: string, failoverGroupName: string, parameters: InstanceFailoverGroup, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-103">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-104">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-105">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-105">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-106">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-106">The name of the failover group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.InstanceFailoverGroup'
+          description: <span data-ttu-id="e1168-107">Os parâmetros do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-107">The failover group parameters.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginDeleteMethod'
+    name: 'beginDeleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-108">Exclui um grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-108">Deletes a failover group.</span></span>
+    syntax:
+      content: 'function beginDeleteMethod(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-109">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-110">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-111">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-111">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-112">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-112">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginFailover'
+    name: 'beginFailover(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-113">Failover da instância gerenciada primária atual para esta instância gerenciada.</span><span class="sxs-lookup"><span data-stu-id="e1168-113">Fails over from the current primary managed instance to this managed instance.</span></span>
+    syntax:
+      content: 'function beginFailover(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-114">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-114">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-115">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-115">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-116">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-116">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-117">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-117">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.beginForceFailoverAllowDataLoss'
+    name: 'beginForceFailoverAllowDataLoss(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-118">Failover da instância gerenciada primária atual para esta instância gerenciada.</span><span class="sxs-lookup"><span data-stu-id="e1168-118">Fails over from the current primary managed instance to this managed instance.</span></span> <span data-ttu-id="e1168-119">Esta operação pode resultar em perda de dados.</span><span class="sxs-lookup"><span data-stu-id="e1168-119">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function beginForceFailoverAllowDataLoss(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-120">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-120">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-121">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-121">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-122">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-122">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-123">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-123">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, InstanceFailoverGroup, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-124">Cria ou atualiza um grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-124">Creates or updates a failover group.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, locationName: string, failoverGroupName: string, parameters: InstanceFailoverGroup, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-125">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-125">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-126">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-126">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-127">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-127">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-128">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-128">The name of the failover group.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-sql.InstanceFailoverGroup'
+          description: <span data-ttu-id="e1168-129">Os parâmetros do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-129">The failover group parameters.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.deleteMethod'
+    name: 'deleteMethod(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-130">Exclui um grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-130">Deletes a failover group.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-131">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-131">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-132">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-132">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-133">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-133">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-134">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-134">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.failover'
+    name: 'failover(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-135">Failover da instância gerenciada primária atual para esta instância gerenciada.</span><span class="sxs-lookup"><span data-stu-id="e1168-135">Fails over from the current primary managed instance to this managed instance.</span></span>
+    syntax:
+      content: 'function failover(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-136">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-136">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-137">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-137">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-138">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-138">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-139">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-139">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsFailoverResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.forceFailoverAllowDataLoss'
+    name: 'forceFailoverAllowDataLoss(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-140">Failover da instância gerenciada primária atual para esta instância gerenciada.</span><span class="sxs-lookup"><span data-stu-id="e1168-140">Fails over from the current primary managed instance to this managed instance.</span></span> <span data-ttu-id="e1168-141">Esta operação pode resultar em perda de dados.</span><span class="sxs-lookup"><span data-stu-id="e1168-141">This operation might result in data loss.</span></span>
+    syntax:
+      content: 'function forceFailoverAllowDataLoss(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-142">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-142">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-143">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-143">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-144">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-144">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-145">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-145">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsForceFailoverAllowDataLossResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get'
+    name: 'get(string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-146">Obtém um grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-146">Gets a failover group.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-147">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-147">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-148">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-148">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-149">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-149">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-150">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-150">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get_2'
+    name: 'get(string, string, string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroup>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-151">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-152">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-153">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-153">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-154">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-154">The name of the failover group.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e1168-155">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e1168-155">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+          description: |
+            <span data-ttu-id="e1168-156">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-156">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.get_1'
+    name: 'get(string, string, string, ServiceCallback<InstanceFailoverGroup>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, locationName: string, failoverGroupName: string, callback: ServiceCallback<InstanceFailoverGroup>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-157">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-157">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-158">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-158">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-159">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-159">The name of the region where the resource is located.</span></span>
+        - id: failoverGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-160">O nome do grupo de failover.</span><span class="sxs-lookup"><span data-stu-id="e1168-160">The name of the failover group.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+          description: |
+            <span data-ttu-id="e1168-161">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.constructor'
+    name: InstanceFailoverGroups(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-162">Crie um InstanceFailoverGroups.</span><span class="sxs-lookup"><span data-stu-id="e1168-162">Create a InstanceFailoverGroups.</span></span>
+    syntax:
+      content: 'new InstanceFailoverGroups(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="e1168-163">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="e1168-163">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation'
+    name: 'listByLocation(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-164">Lista os grupos de failover em uma localização.</span><span class="sxs-lookup"><span data-stu-id="e1168-164">Lists the failover groups in a location.</span></span>
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-165">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-165">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-166">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-166">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-167">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-167">The name of the region where the resource is located.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation_2'
+    name: 'listByLocation(string, string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-168">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-168">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-169">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-169">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-170">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-170">The name of the region where the resource is located.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e1168-171">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e1168-171">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="e1168-172">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocation_1'
+    name: 'listByLocation(string, string, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocation(resourceGroupName: string, locationName: string, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-173">O nome do grupo de recursos que contém o recurso.</span><span class="sxs-lookup"><span data-stu-id="e1168-173">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="e1168-174">Você pode obter esse valor por meio da API do Gerenciador de Recursos do Azure ou por meio do portal.</span><span class="sxs-lookup"><span data-stu-id="e1168-174">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>
+        - id: locationName
+          type:
+            - string
+          description: <span data-ttu-id="e1168-175">O nome da região em que o recurso está localizado.</span><span class="sxs-lookup"><span data-stu-id="e1168-175">The name of the region where the resource is located.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="e1168-176">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-176">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext'
+    name: 'listByLocationNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="e1168-177">Lista os grupos de failover em uma localização.</span><span class="sxs-lookup"><span data-stu-id="e1168-177">Lists the failover groups in a location.</span></span>
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e1168-178">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e1168-178">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_2'
+    name: 'listByLocationNext(string, RequestOptionsBase, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e1168-179">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e1168-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="e1168-180">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="e1168-180">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="e1168-181">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-181">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.InstanceFailoverGroups.listByLocationNext_1'
+    name: 'listByLocationNext(string, ServiceCallback<InstanceFailoverGroupListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByLocationNext(nextPageLink: string, callback: ServiceCallback<InstanceFailoverGroupListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="e1168-182">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="e1168-182">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+          description: |
+            <span data-ttu-id="e1168-183">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="e1168-183">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.InstanceFailoverGroupsListByLocationNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: '@azure/arm-sql.InstanceFailoverGroup'
+    name: InstanceFailoverGroup
+    spec.typeScript:
+      - name: InstanceFailoverGroup
+        fullName: InstanceFailoverGroup
+        uid: '@azure/arm-sql.InstanceFailoverGroup'
+  - uid: ServiceCallback<@azure/arm-sql.InstanceFailoverGroup>
+    name: InstanceFailoverGroup>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: InstanceFailoverGroup
+        fullName: InstanceFailoverGroup
+        uid: '@azure/arm-sql.InstanceFailoverGroup'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.InstanceFailoverGroupListResult>
+    name: InstanceFailoverGroupListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: InstanceFailoverGroupListResult
+        fullName: InstanceFailoverGroupListResult
+        uid: '@azure/arm-sql.InstanceFailoverGroupListResult'
+      - name: '>'
+        fullName: '>'
