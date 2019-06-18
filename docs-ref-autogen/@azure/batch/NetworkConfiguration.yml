@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+      - '@azure/batch.NetworkConfiguration.endpointConfiguration'
+      - '@azure/batch.NetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: A configuração de rede para um pool.
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O escopo da atribuição de rede virtual dinâmico. Os valores possíveis incluem: ''none'', ''do trabalho'''
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: DynamicVNetAssignmentScope'
+      return:
+        type:
+          - '@azure/batch.DynamicVNetAssignmentScope'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A configuração de pontos de extremidade em nós de computação no pool do lote. Somente há suporte para a configuração de ponto de extremidade do pool em pools com a propriedade virtualMachineConfiguration.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.PoolEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O identificador de recurso do ARM da sub-rede da rede virtual que unirão os nós de computação do pool. Isso é o formato /subscriptions/ {subscription} ResourceGroups {grupo} /providers/ {provider} /virtualNetworks/ {network} / Subnets / {sub-rede}.
+      A rede virtual deve estar na mesma região e assinatura como a conta do lote do Azure.
+      A sub-rede especificada deve ter endereços IP suficientes livres para acomodar o número de nós no pool. Se a sub-rede não tiver endereços IP livres suficiente, o pool alocará parcialmente nós de computação e ocorrerá um erro de redimensionamento. Para pools criados com virtualMachineConfiguration somente ARM as redes virtuais (' Network/virtualnetworks') têm suporte, mas para pools criados com cloudServiceConfiguration ARM e redes virtuais clássicas têm suporte. Para obter mais detalhes, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DynamicVNetAssignmentScope'
+    name: DynamicVNetAssignmentScope
+    spec.typeScript:
+      - name: DynamicVNetAssignmentScope
+        fullName: DynamicVNetAssignmentScope
+        uid: '@azure/batch.DynamicVNetAssignmentScope'
+  - uid: '@azure/batch.PoolEndpointConfiguration'
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: '@azure/batch.PoolEndpointConfiguration'
