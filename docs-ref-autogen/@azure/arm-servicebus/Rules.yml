@@ -1,0 +1,639 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-servicebus.Rules'
+    name: Rules
+    fullName: Rules
+    children:
+      - '@azure/arm-servicebus.Rules.createOrUpdate'
+      - '@azure/arm-servicebus.Rules.createOrUpdate_2'
+      - '@azure/arm-servicebus.Rules.createOrUpdate_1'
+      - '@azure/arm-servicebus.Rules.deleteMethod'
+      - '@azure/arm-servicebus.Rules.deleteMethod_2'
+      - '@azure/arm-servicebus.Rules.deleteMethod_1'
+      - '@azure/arm-servicebus.Rules.get'
+      - '@azure/arm-servicebus.Rules.get_2'
+      - '@azure/arm-servicebus.Rules.get_1'
+      - '@azure/arm-servicebus.Rules.listBySubscriptions'
+      - '@azure/arm-servicebus.Rules.listBySubscriptions_2'
+      - '@azure/arm-servicebus.Rules.listBySubscriptions_1'
+      - '@azure/arm-servicebus.Rules.listBySubscriptionsNext'
+      - '@azure/arm-servicebus.Rules.listBySubscriptionsNext_2'
+      - '@azure/arm-servicebus.Rules.listBySubscriptionsNext_1'
+      - '@azure/arm-servicebus.Rules.constructor'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="1bd78-101">Classe que representa uma regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-101">Class representing a Rules.</span></span>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, string, Rule, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-102">Cria uma nova regra e atualiza uma regra existente</span><span class="sxs-lookup"><span data-stu-id="1bd78-102">Creates a new rule and updates an existing rule</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, parameters: Rule, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-103">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-103">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-104">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-104">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-105">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-105">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-106">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-106">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-107">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-107">The rule name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-servicebus.Rule'
+          description: <span data-ttu-id="1bd78-108">Parâmetros fornecidos para criar uma regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-108">Parameters supplied to create a rule.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RulesCreateOrUpdateResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.createOrUpdate_2'
+    name: 'createOrUpdate(string, string, string, string, string, Rule, RequestOptionsBase, ServiceCallback<Rule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, parameters: Rule, options: RequestOptionsBase, callback: ServiceCallback<Rule>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-109">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-109">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-110">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-110">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-111">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-111">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-112">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-112">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-113">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-113">The rule name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-servicebus.Rule'
+          description: <span data-ttu-id="1bd78-114">Parâmetros fornecidos para criar uma regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-114">Parameters supplied to create a rule.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1bd78-115">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1bd78-115">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.Rule>
+          description: |
+            <span data-ttu-id="1bd78-116">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-116">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesCreateOrUpdateResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.createOrUpdate_1'
+    name: 'createOrUpdate(string, string, string, string, string, Rule, ServiceCallback<Rule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, parameters: Rule, callback: ServiceCallback<Rule>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-117">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-117">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-118">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-118">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-119">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-119">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-120">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-120">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-121">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-121">The rule name.</span></span>
+        - id: parameters
+          type:
+            - '@azure/arm-servicebus.Rule'
+          description: <span data-ttu-id="1bd78-122">Parâmetros fornecidos para criar uma regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-122">Parameters supplied to create a rule.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.Rule>
+          description: |
+            <span data-ttu-id="1bd78-123">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-123">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesCreateOrUpdateResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.deleteMethod'
+    name: 'deleteMethod(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-124">Exclui uma regra existente.</span><span class="sxs-lookup"><span data-stu-id="1bd78-124">Deletes an existing rule.</span></span>
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-125">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-125">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-126">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-126">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-127">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-127">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-128">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-128">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-129">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-129">The rule name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.deleteMethod_2'
+    name: 'deleteMethod(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-130">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-130">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-131">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-131">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-132">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-132">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-133">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-133">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-134">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-134">The rule name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1bd78-135">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1bd78-135">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1bd78-136">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.deleteMethod_1'
+    name: 'deleteMethod(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-137">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-137">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-138">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-138">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-139">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-139">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-140">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-140">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-141">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-141">The rule name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="1bd78-142">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-142">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-143">Recupera a descrição para a regra especificada.</span><span class="sxs-lookup"><span data-stu-id="1bd78-143">Retrieves the description for the specified rule.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-144">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-144">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-145">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-145">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-146">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-146">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-147">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-147">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-148">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-148">The rule name.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RulesGetResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<Rule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, options: RequestOptionsBase, callback: ServiceCallback<Rule>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-149">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-149">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-150">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-150">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-151">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-151">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-152">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-152">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-153">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-153">The rule name.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1bd78-154">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1bd78-154">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.Rule>
+          description: |
+            <span data-ttu-id="1bd78-155">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-155">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesGetResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<Rule>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, ruleName: string, callback: ServiceCallback<Rule>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-156">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-156">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-157">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-157">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-158">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-158">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-159">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-159">The subscription name.</span></span>
+        - id: ruleName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-160">O nome da regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-160">The rule name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.Rule>
+          description: |
+            <span data-ttu-id="1bd78-161">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-161">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesGetResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptions'
+    name: 'listBySubscriptions(string, string, string, string, Models.RulesListBySubscriptionsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-162">Listar todas as regras dentro de uma determinada assinatura de tópico</span><span class="sxs-lookup"><span data-stu-id="1bd78-162">List all the rules within given topic-subscription</span></span>
+    syntax:
+      content: 'function listBySubscriptions(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, options?: Models.RulesListBySubscriptionsOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-163">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-163">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-164">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-164">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-165">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-165">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-166">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-166">The subscription name.</span></span>
+        - id: options
+          type:
+            - Models.RulesListBySubscriptionsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptions_2'
+    name: 'listBySubscriptions(string, string, string, string, RulesListBySubscriptionsOptionalParams, ServiceCallback<RuleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptions(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, options: RulesListBySubscriptionsOptionalParams, callback: ServiceCallback<RuleListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-167">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-167">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-168">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-168">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-169">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-169">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-170">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-170">The subscription name.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-servicebus.RulesListBySubscriptionsOptionalParams'
+          description: <span data-ttu-id="1bd78-171">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1bd78-171">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.RuleListResult>
+          description: |
+            <span data-ttu-id="1bd78-172">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-172">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptions_1'
+    name: 'listBySubscriptions(string, string, string, string, ServiceCallback<RuleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptions(resourceGroupName: string, namespaceName: string, topicName: string, subscriptionName: string, callback: ServiceCallback<RuleListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-173">Nome do grupo de recursos na assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="1bd78-173">Name of the Resource group within the Azure subscription.</span></span>
+        - id: namespaceName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-174">O nome do namespace</span><span class="sxs-lookup"><span data-stu-id="1bd78-174">The namespace name</span></span>
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-175">O nome do tópico.</span><span class="sxs-lookup"><span data-stu-id="1bd78-175">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-176">O nome da assinatura.</span><span class="sxs-lookup"><span data-stu-id="1bd78-176">The subscription name.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.RuleListResult>
+          description: |
+            <span data-ttu-id="1bd78-177">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-177">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptionsNext'
+    name: 'listBySubscriptionsNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-178">Listar todas as regras dentro de uma determinada assinatura de tópico</span><span class="sxs-lookup"><span data-stu-id="1bd78-178">List all the rules within given topic-subscription</span></span>
+    syntax:
+      content: 'function listBySubscriptionsNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-179">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="1bd78-179">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsNextResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptionsNext_2'
+    name: 'listBySubscriptionsNext(string, RequestOptionsBase, ServiceCallback<RuleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionsNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<RuleListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-180">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="1bd78-180">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="1bd78-181">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="1bd78-181">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.RuleListResult>
+          description: |
+            <span data-ttu-id="1bd78-182">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-182">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsNextResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.listBySubscriptionsNext_1'
+    name: 'listBySubscriptionsNext(string, ServiceCallback<RuleListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listBySubscriptionsNext(nextPageLink: string, callback: ServiceCallback<RuleListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="1bd78-183">NextLink da chamada bem-sucedida anterior à operação de lista.</span><span class="sxs-lookup"><span data-stu-id="1bd78-183">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-servicebus.RuleListResult>
+          description: |
+            <span data-ttu-id="1bd78-184">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="1bd78-184">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.RulesListBySubscriptionsNextResponse>
+    package: '@azure/arm-servicebus'
+  - uid: '@azure/arm-servicebus.Rules.constructor'
+    name: Rules(ServiceBusManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="1bd78-185">Crie uma regra.</span><span class="sxs-lookup"><span data-stu-id="1bd78-185">Create a Rules.</span></span>
+    syntax:
+      content: 'new Rules(client: ServiceBusManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-servicebus.ServiceBusManagementClientContext'
+          description: |
+            <span data-ttu-id="1bd78-186">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="1bd78-186">Reference to the service client.</span></span>
+    package: '@azure/arm-servicebus'
+references:
+  - uid: '@azure/arm-servicebus.ServiceBusManagementClientContext'
+    name: ServiceBusManagementClientContext
+    spec.typeScript:
+      - name: ServiceBusManagementClientContext
+        fullName: ServiceBusManagementClientContext
+        uid: '@azure/arm-servicebus.ServiceBusManagementClientContext'
+  - uid: '@azure/arm-servicebus.Rule'
+    name: Rule
+    spec.typeScript:
+      - name: Rule
+        fullName: Rule
+        uid: '@azure/arm-servicebus.Rule'
+  - uid: ServiceCallback<@azure/arm-servicebus.Rule>
+    name: Rule>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Rule
+        fullName: Rule
+        uid: '@azure/arm-servicebus.Rule'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-servicebus.RuleListResult>
+    name: RuleListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: RuleListResult
+        fullName: RuleListResult
+        uid: '@azure/arm-servicebus.RuleListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-servicebus.RulesListBySubscriptionsOptionalParams'
+    name: RulesListBySubscriptionsOptionalParams
+    spec.typeScript:
+      - name: RulesListBySubscriptionsOptionalParams
+        fullName: RulesListBySubscriptionsOptionalParams
+        uid: '@azure/arm-servicebus.RulesListBySubscriptionsOptionalParams'
