@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolEnableAutoScaleParameter
+    name: PoolEnableAutoScaleParameter
+    fullName: PoolEnableAutoScaleParameter
+    children:
+      - azure-batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval
+      - azure-batch.PoolEnableAutoScaleParameter.autoScaleFormula
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O valor padrão é 15 minutos. O valor mínimo e máximo são 5 minutos e 168 horas, respectivamente. Se você especificar um valor menor que 5 minutos ou maior que 168 horas, o serviço de lote rejeita a solicitação com um erro de valor de propriedade inválido; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta). Se você especificar um novo intervalo, em seguida, o agendamento de avaliação de AutoEscala existente será interrompido e uma nova agenda de avaliação do dimensionamento automático será iniciada com seu tempo inicial que está sendo a hora quando essa solicitação foi emitida.'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolEnableAutoScaleParameter.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A fórmula é verificada quanto à validade antes que ela é aplicada ao Pool. Se a fórmula não for válida, o serviço de lote rejeita a solicitação com informações detalhadas do erro.
+      Para obter mais informações sobre como especificar essa fórmula, consulte automaticamente nós de computação em um Pool do lote do Azure de escala (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

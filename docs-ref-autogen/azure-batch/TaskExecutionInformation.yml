@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskExecutionInformation
+    name: TaskExecutionInformation
+    fullName: TaskExecutionInformation
+    children:
+      - azure-batch.TaskExecutionInformation.containerInfo
+      - azure-batch.TaskExecutionInformation.endTime
+      - azure-batch.TaskExecutionInformation.exitCode
+      - azure-batch.TaskExecutionInformation.failureInfo
+      - azure-batch.TaskExecutionInformation.lastRequeueTime
+      - azure-batch.TaskExecutionInformation.lastRetryTime
+      - azure-batch.TaskExecutionInformation.requeueCount
+      - azure-batch.TaskExecutionInformation.result
+      - azure-batch.TaskExecutionInformation.retryCount
+      - azure-batch.TaskExecutionInformation.startTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.containerInfo
+    name: containerInfo
+    fullName: containerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Essa propriedade é definida somente se a tarefa é executada em um contexto de contêiner.
+    optional: true
+    syntax:
+      content: 'containerInfo?: TaskContainerExecutionInformation'
+      return:
+        type:
+          - azure-batch.TaskContainerExecutionInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Essa propriedade é definida somente se a tarefa estiver no estado concluído.
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.exitCode
+    name: exitCode
+    fullName: exitCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Essa propriedade é definida somente se a tarefa estiver no estado concluído. Em geral, o código de saída para um processo reflete a convenção específica implementada pelo desenvolvedor do aplicativo para que o processo. Se você usar o valor do código de saída para tomar decisões em seu código, certifique-se de que você sabe que a convenção de código de saída usada pelo processo de aplicativo. No entanto, se o serviço de lote encerra a tarefa (devido ao tempo limite, ou encerramento do usuário por meio da API), você poderá ver um código de saída definida pelo sistema operacional.'
+    optional: true
+    syntax:
+      content: 'exitCode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.failureInfo
+    name: failureInfo
+    fullName: failureInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Essa propriedade é definida somente se a tarefa estiver no estado concluído e encontrou uma falha.
+    optional: true
+    syntax:
+      content: 'failureInfo?: TaskFailureInformation'
+      return:
+        type:
+          - azure-batch.TaskFailureInformation
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRequeueTime
+    name: lastRequeueTime
+    fullName: lastRequeueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Essa propriedade é definida somente se o requeueCount é diferente de zero.
+    optional: true
+    syntax:
+      content: 'lastRequeueTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.lastRetryTime
+    name: lastRetryTime
+    fullName: lastRetryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Esse elemento está presente apenas se a tarefa foi repetida (ou seja, retryCount é diferente de zero). Se estiver presente, isso normalmente é o mesmo que startTime, mas pode ser diferente se a tarefa tiver sido reiniciada por razões diferentes de repetição; Por exemplo, se o nó de computação foi reinicializado durante uma nova tentativa, startTime é atualizado, mas o lastRetryTime não é.'
+    optional: true
+    syntax:
+      content: 'lastRetryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.requeueCount
+    name: requeueCount
+    fullName: requeueCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando o usuário remove nós de computação de um Pool (ao redimensionar/encolher o pool) ou quando o trabalho está sendo desativado, o usuário pode especificar que a execução ser retirada da fila para execução de tarefas em nós de computação. Essa contagem controla quantas vezes a tarefa foi enfileirado outra vez por esses motivos.'
+    syntax:
+      content: 'requeueCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.result
+    name: result
+    fullName: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se o valor for ''failed'', os detalhes da falha podem ser encontrados na propriedade failureInfo. Os valores possíveis incluem: ''êxito'', ''Falha'''
+    optional: true
+    syntax:
+      content: 'result?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.retryCount
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Falhas de aplicativo de tarefas (código de saída diferente de zero) são repetidas, (a tarefa não pôde ser executada) de erros de processamento e erros de upload de arquivo não serão repetidos. O serviço em lotes tentará a tarefa até o limite especificado pelas restrições.'
+    syntax:
+      content: 'retryCount: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskExecutionInformation.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Corresponde ao estado de execução, portanto, se a tarefa especificar arquivos de recursos ou pacotes, em seguida, a hora de início reflete a hora em que a tarefa começou a baixar ou implantar esses ''Em execução''. Se a tarefa foi reiniciada ou repetida, esta é a hora mais recente em que a tarefa começou a ser executado. Essa propriedade está presente apenas para as tarefas que estão no estado em execução ou concluído.'
+    optional: true
+    syntax:
+      content: 'startTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerExecutionInformation
+    name: TaskContainerExecutionInformation
+    spec.typeScript:
+      - name: TaskContainerExecutionInformation
+        fullName: TaskContainerExecutionInformation
+        uid: azure-batch.TaskContainerExecutionInformation
+  - uid: azure-batch.TaskFailureInformation
+    name: TaskFailureInformation
+    spec.typeScript:
+      - name: TaskFailureInformation
+        fullName: TaskFailureInformation
+        uid: azure-batch.TaskFailureInformation

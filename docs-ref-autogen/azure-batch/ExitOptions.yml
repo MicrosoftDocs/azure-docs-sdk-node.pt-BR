@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ExitOptions
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - azure-batch.ExitOptions.dependencyAction
+      - azure-batch.ExitOptions.jobAction
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.dependencyAction
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O padrão é ''satisfazer'' para o código de saída 0 e ''block'' para todas as outras condições de saída. Se a propriedade de usesTaskDependencies do trabalho é definida como false, em seguida, especificando a propriedade dependencyAction retornará um erro e a solicitação de tarefa de adicionar falhará com um erro de valor de propriedade inválido; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta). Os valores possíveis incluem: ''satisfazer'', ''Bloquear'''
+    optional: true
+    syntax:
+      content: 'dependencyAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.jobAction
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O padrão é nenhum para o código de saída 0 e encerrar para todas as outras condições de saída.
+      Se a propriedade de onTaskFailed do trabalho é noaction, em seguida, especificar essa propriedade retornará um erro e a solicitação de tarefa de adicionar falhará com um erro de valor de propriedade inválido; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta). Os valores possíveis incluem: 'none', 'disable', 'terminate'
+    optional: true
+    syntax:
+      content: 'jobAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

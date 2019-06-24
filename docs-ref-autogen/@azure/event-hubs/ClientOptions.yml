@@ -7,6 +7,8 @@ items:
       - '@azure/event-hubs.ClientOptions.dataTransformer'
       - '@azure/event-hubs.ClientOptions.tokenProvider'
       - '@azure/event-hubs.ClientOptions.userAgent'
+      - '@azure/event-hubs.ClientOptions.webSocket'
+      - '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
     langs:
       - typeScript
     type: interface
@@ -56,10 +58,45 @@ items:
     summary: '{string} [userAgent] O agente do usuário que deve ser acrescentado ao usuário criado na cadeia de caracteres de agente.'
     optional: true
     syntax:
-      content: 'userAgent?: string'
+      content: 'userAgent?: undefined | string'
       return:
         type:
-          - string
+          - undefined | string
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocket'
+    name: webSocket
+    fullName: webSocket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O construtor de WebSocket usado para criar uma conexão AMQP sobre um WebSocket.
+      Essa opção deve ser fornecida na cenários abaixo
+      - A porta TCP 5671, que é o que é usado pela conexão AMQP para Hubs de eventos está bloqueada no seu ambiente.
+      - Seu aplicativo precisa ser executado em um servidor proxy
+      - Seu aplicativo precisa ser executado no navegador e você quiser fornecer sua própria escolha da implementação do Websocket em vez do WebSocket internos no navegador.
+    optional: true
+    syntax:
+      content: 'webSocket?: WebSocketImpl'
+      return:
+        type:
+          - WebSocketImpl
+    package: '@azure/event-hubs'
+  - uid: '@azure/event-hubs.ClientOptions.webSocketConstructorOptions'
+    name: webSocketConstructorOptions
+    fullName: webSocketConstructorOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{webSocketConstructorOptions} - as opções a serem passados para o construtor do WebSocket'
+    optional: true
+    syntax:
+      content: 'webSocketConstructorOptions?: any'
+      return:
+        type:
+          - any
     package: '@azure/event-hubs'
 references:
   - uid: '@azure/event-hubs.ClientOptionsBase'

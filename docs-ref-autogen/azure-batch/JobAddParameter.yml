@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobAddParameter
+    name: JobAddParameter
+    fullName: JobAddParameter
+    children:
+      - azure-batch.JobAddParameter.commonEnvironmentSettings
+      - azure-batch.JobAddParameter.constraints
+      - azure-batch.JobAddParameter.displayName
+      - azure-batch.JobAddParameter.id
+      - azure-batch.JobAddParameter.jobManagerTask
+      - azure-batch.JobAddParameter.jobPreparationTask
+      - azure-batch.JobAddParameter.jobReleaseTask
+      - azure-batch.JobAddParameter.metadata
+      - azure-batch.JobAddParameter.networkConfiguration
+      - azure-batch.JobAddParameter.onAllTasksComplete
+      - azure-batch.JobAddParameter.onTaskFailure
+      - azure-batch.JobAddParameter.poolInfo
+      - azure-batch.JobAddParameter.priority
+      - azure-batch.JobAddParameter.usesTaskDependencies
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.commonEnvironmentSettings
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Tarefas individuais podem substituir uma configuração de ambiente especificada aqui, especificando o mesmo nome de configuração com um valor diferente.'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As restrições de execução para o trabalho.
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de exibição não precisa ser exclusivo e pode conter quaisquer caracteres Unicode até um comprimento máximo de 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ID pode conter qualquer combinação de caracteres alfanuméricos, incluindo hifens e sublinhados e não pode conter mais de 64 caracteres. A ID é diferencia maiusculas de minúsculas e preserva (ou seja, você poderá não ter duas IDs de dentro de uma conta que diferem somente maiusculas).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.jobManagerTask
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Se o trabalho não especificar uma tarefa do Gerenciador de trabalho, o usuário deve adicionar explicitamente tarefas ao trabalho. Se o trabalho especificar uma tarefa do Gerenciador de trabalho, o serviço de lote cria a tarefa do Gerenciador de trabalho quando o trabalho é criado e tentará agendar a tarefa do Gerenciador de trabalho antes de agendar outras tarefas no trabalho. Finalidade típica do Gerenciador de trabalho da tarefa é controlar e/ou monitorar a execução do trabalho, por exemplo, decidir quais tarefas adicionais para ser executado, determinando quando o trabalho for concluído, etc. (No entanto, uma tarefa do Gerenciador de trabalho não está restrita a essas atividades
+      - é uma tarefa totalmente desenvolvida no sistema e executar quaisquer ações que são necessárias para o trabalho.) Por exemplo, uma tarefa do Gerenciador de trabalhos pode baixar um arquivo especificado como um parâmetro, analisar o conteúdo desse arquivo e enviar tarefas adicionais com base no conteúdo.
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - azure-batch.JobManagerTask
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.jobPreparationTask
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se um trabalho tiver uma tarefa de preparação de trabalho, o serviço em lotes executará a tarefa de preparação de trabalho em um nó antes de iniciar as tarefas do trabalho nesse nó de computação.'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - azure-batch.JobPreparationTask
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.jobReleaseTask
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma tarefa de liberação de trabalho não pode ser especificada sem também especificar uma tarefa de preparação de trabalho para o trabalho. O serviço de lote executa a tarefa de liberação de trabalho em nós que executaram a tarefa de preparação de trabalho. É a principal finalidade da tarefa de liberação de trabalho desfazer as alterações feitas pela tarefa de preparação de trabalho de nós de computação. Atividades de exemplo incluem a exclusão de arquivos locais ou desligar os serviços que foram iniciados como parte da preparação de trabalho.
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - azure-batch.JobReleaseTask
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O serviço de lote não atribui nenhum significado aos metadados; ele é exclusivamente para o uso do código do usuário.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - azure-batch.JobNetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Observe que se um trabalho não contém tarefas, em seguida, todas as tarefas são consideradas completas.
+      Essa opção, portanto, é mais comumente usada com uma tarefa do Gerenciador de trabalho; Se você quiser usar o encerramento automático de trabalho sem um Gerenciador de trabalho, você deve inicialmente definidas onAllTasksComplete como noaction e atualizar as propriedades do trabalho para definir onAllTasksComplete como terminatejob depois que você tiver terminado de adicionar tarefas. O padrão é noaction. Os valores possíveis incluem: 'noAction', 'terminateJob'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.onTaskFailure
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Uma tarefa é considerada como tendo if com falha tem um failureInfo. Um failureInfo será definido se a tarefa for concluída com um código de saída diferente de zero após esgotar sua contagem de repetição, ou se houver um erro ao iniciar a tarefa, por exemplo devido a um arquivo de recurso erro de download. O padrão é noaction. Os valores possíveis incluem: ''noAction'', ''performExitOptionsJobAction'''
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Os valores de prioridade podem variar de -1000 a 1000, sendo-1000 a prioridade mais baixa e 1000 a prioridade mais alta. O valor padrão é 0.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobAddParameter.usesTaskDependencies
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: azure-batch.JobManagerTask
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: azure-batch.JobManagerTask
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: azure-batch.JobPreparationTask
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: azure-batch.JobReleaseTask
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: azure-batch.JobNetworkConfiguration
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

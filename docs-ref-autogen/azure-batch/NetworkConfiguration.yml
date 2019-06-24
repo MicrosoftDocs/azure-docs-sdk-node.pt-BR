@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: A configuração de rede para um Pool.
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Os valores possíveis incluem: ''none'', ''do trabalho'''
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Somente há suporte para configuração de ponto de extremidade do pool em Pools com a propriedade virtualMachineConfiguration.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A rede virtual deve estar na mesma região e assinatura como a conta do lote do Azure. A sub-rede especificada deve ter endereços IP suficientes livres para acomodar o número de nós de computação no Pool. Se a sub-rede não tiver endereços IP suficientes livres, o Pool alocará parcialmente nós e ocorrerá um erro de redimensionamento. A entidade de serviço "MicrosoftAzureBatch" deve ter o ''clássico colaborador da máquina Virtual'' função de controle de acesso baseado em função (RBAC) para a rede virtual especificada. A sub-rede especificada deve permitir a comunicação do serviço de lote do Azure para ser capaz de agendar tarefas em nós. Isso pode ser verificado, verificando se a VNet especificada tiver qualquer grupos de segurança de rede (NSG) associado. Se a comunicação com os nós na sub-rede especificada for negada por um NSG, o serviço de lote definirá o estado de nós de computação para inutilizável. Para Pools criados com virtualMachineConfiguration somente ARM as redes virtuais ('' Network/virtualnetworks'') têm suporte, mas para Pools criados com cloudServiceConfiguration ARM e redes virtuais clássicas têm suporte. Se a VNet especificada tiver grupos de segurança de rede (NSG) associados, algumas portas reservadas do sistema devem ser habilitadas para comunicação de entrada. Para Pools criados com uma configuração de máquina virtual, habilite as portas 29876 e 29877, bem como porta 22 para Linux e a porta 3389 para Windows. Para Pools criados com uma configuração de serviço de nuvem, habilite as portas 10100, 20100 e 30100. Também habilite conexões de saída para o armazenamento do Azure na porta 443. Para obter mais detalhes, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

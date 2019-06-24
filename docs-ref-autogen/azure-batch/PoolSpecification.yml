@@ -1,0 +1,393 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolSpecification
+    name: PoolSpecification
+    fullName: PoolSpecification
+    children:
+      - azure-batch.PoolSpecification.applicationLicenses
+      - azure-batch.PoolSpecification.applicationPackageReferences
+      - azure-batch.PoolSpecification.autoScaleEvaluationInterval
+      - azure-batch.PoolSpecification.autoScaleFormula
+      - azure-batch.PoolSpecification.certificateReferences
+      - azure-batch.PoolSpecification.cloudServiceConfiguration
+      - azure-batch.PoolSpecification.displayName
+      - azure-batch.PoolSpecification.enableAutoScale
+      - azure-batch.PoolSpecification.enableInterNodeCommunication
+      - azure-batch.PoolSpecification.maxTasksPerNode
+      - azure-batch.PoolSpecification.metadata
+      - azure-batch.PoolSpecification.networkConfiguration
+      - azure-batch.PoolSpecification.resizeTimeout
+      - azure-batch.PoolSpecification.startTask
+      - azure-batch.PoolSpecification.targetDedicatedNodes
+      - azure-batch.PoolSpecification.targetLowPriorityNodes
+      - azure-batch.PoolSpecification.taskSchedulingPolicy
+      - azure-batch.PoolSpecification.userAccounts
+      - azure-batch.PoolSpecification.virtualMachineConfiguration
+      - azure-batch.PoolSpecification.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A lista de licenças de aplicativo deve ser um subconjunto das licenças de aplicativo de serviço de lote disponíveis. Se uma licença é solicitada que não é suportado, haverá falha na criação do Pool. Permitido licenças disponíveis no Pool são ''maya'', ''vray'', ''3dsmax'', ''arnold''. Aplica uma cobrança adicional para cada licença de aplicativo adicionada ao Pool.'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Alterações em referências de pacote afetam todos os novos nós unindo o Pool, mas não afetam os nós de computação que já estão no Pool até que eles são reinicializados ou imagem refeitos. Há um máximo de 10 referências de pacote em cada Pool específico.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O valor padrão é 15 minutos. O valor mínimo e máximo são 5 minutos e 168 horas, respectivamente. Se você especificar um valor menor que 5 minutos ou maior que 168 horas, o serviço de lote rejeita a solicitação com um erro de valor de propriedade inválido; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta).'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Essa propriedade não deve ser especificado se enableAutoScale for definido como false. É necessário se enableAutoScale for definido como true. A fórmula é verificada quanto à validade antes do Pool é criado. Se a fórmula não for válida, o serviço de lote rejeita a solicitação com informações detalhadas do erro.'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Para nós do Windows, o serviço de lote instala os certificados para o repositório de certificados especificado e o local. Para nós de computação do Linux, os certificados são armazenados em um diretório dentro da tarefa trabalhando directory e uma variável de ambiente que az_batch_certificates_dir é fornecido para a tarefa de consulta para esse local. Para certificados com visibilidade de ''remoteUser'', um diretório de ''certificados'' é criado no diretório base do usuário (por exemplo, /home/ {nome de usuário} / certificados) e certificados são colocados no diretório.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.cloudServiceConfiguration
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Esta propriedade deve ser especificado se o Pool precisará ser criada com VMs de PaaS do Azure. Essa propriedade e virtualMachineConfiguration são mutuamente exclusivos e uma das propriedades deve ser especificada. Se nenhum for especificado, em seguida, o serviço de lote retornará um erro; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta). Essa propriedade não pode ser especificado se a conta do lote foi criada com sua propriedade poolAllocationMode definida como "UserSubscription".'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - azure-batch.CloudServiceConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de exibição não precisa ser exclusivo e pode conter quaisquer caracteres Unicode até um comprimento máximo de 1024.
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableAutoScale
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se for false, pelo menos um dos targetDedicateNodes e targetLowPriorityNodes deve ser especificado. Se true, o elemento autoScaleFormula será necessário. O Pool redimensiona automaticamente acordo com a fórmula. O valor padrão é falso.'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.enableInterNodeCommunication
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Habilitar a comunicação entre nós limita o tamanho máximo do Pool devido a restrições de implantação em nós de computação do Pool. Isso pode resultar no Pool não atinja seu tamanho desejado. O valor padrão é falso.
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O valor padrão é 1. O valor máximo é o menor de 4 vezes o número de núcleos do vmSize do Pool ou 256.
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O serviço de lote não atribui nenhum significado aos metadados; ele é exclusivamente para o uso do código do usuário.
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-batch.NetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.resizeTimeout
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Esse tempo limite se aplica somente ao dimensionamento manual; ele não tem nenhum efeito quando enableAutoScale for definido como true. O valor padrão é 15 minutos. O valor mínimo é 5 minutos. Se você especificar um valor menor que 5 minutos, o serviço de lote rejeita a solicitação com um erro; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetDedicatedNodes
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Essa propriedade não deve ser especificado se enableAutoScale for definido como true. Se enableAutoScale for definido como false, você deve definir targetDedicatedNodes, targetLowPriorityNodes ou ambos.'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.targetLowPriorityNodes
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Essa propriedade não deve ser especificado se enableAutoScale for definido como true. Se enableAutoScale for definido como false, você deve definir targetDedicatedNodes, targetLowPriorityNodes ou ambos.'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se não for especificado, o padrão é distribuído.'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-batch.TaskSchedulingPolicy
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-batch.UserAccount[]'
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.virtualMachineConfiguration
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Esta propriedade deve ser especificado se o Pool precisará ser criada com VMs de IaaS do Azure. Essa propriedade e os pools cloudServiceConfiguration são mutuamente exclusivos e uma das propriedades deve ser especificada. Se nenhum for especificado, em seguida, o serviço de lote retornará um erro; Se você estiver chamando a API REST diretamente, o código de status HTTP é 400 (solicitação incorreta).'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - azure-batch.VirtualMachineConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolSpecification.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Para obter informações sobre os tamanhos disponíveis de máquinas virtuais em Pools, consulte escolher um tamanho de VM para nós de computação em um Pool do lote do Azure (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.CloudServiceConfiguration
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: azure-batch.CloudServiceConfiguration
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-batch.NetworkConfiguration
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-batch.TaskSchedulingPolicy
+  - uid: 'azure-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: azure-batch.VirtualMachineConfiguration

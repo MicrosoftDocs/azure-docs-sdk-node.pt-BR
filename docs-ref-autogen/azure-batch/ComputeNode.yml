@@ -1,0 +1,398 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ComputeNode
+    name: ComputeNode
+    fullName: ComputeNode
+    children:
+      - azure-batch.ComputeNode.affinityId
+      - azure-batch.ComputeNode.allocationTime
+      - azure-batch.ComputeNode.certificateReferences
+      - azure-batch.ComputeNode.endpointConfiguration
+      - azure-batch.ComputeNode.errors
+      - azure-batch.ComputeNode.id
+      - azure-batch.ComputeNode.ipAddress
+      - azure-batch.ComputeNode.isDedicated
+      - azure-batch.ComputeNode.lastBootTime
+      - azure-batch.ComputeNode.nodeAgentInfo
+      - azure-batch.ComputeNode.recentTasks
+      - azure-batch.ComputeNode.runningTasksCount
+      - azure-batch.ComputeNode.schedulingState
+      - azure-batch.ComputeNode.startTask
+      - azure-batch.ComputeNode.startTaskInfo
+      - azure-batch.ComputeNode.state
+      - azure-batch.ComputeNode.stateTransitionTime
+      - azure-batch.ComputeNode.totalTasksRun
+      - azure-batch.ComputeNode.totalTasksSucceeded
+      - azure-batch.ComputeNode.url
+      - azure-batch.ComputeNode.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.affinityId
+    name: affinityId
+    fullName: affinityId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Observe que isso é apenas uma afinidade flexível. Se o nó de computação de destino está ocupado ou indisponível no momento em que a tarefa está agendada, em seguida, a tarefa será agendada em outro lugar.'
+    optional: true
+    syntax:
+      content: 'affinityId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.allocationTime
+    name: allocationTime
+    fullName: allocationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Isso é a hora quando o nó de computação foi inicialmente alocado e não é alterado depois de definido. Ele não é atualizado quando o nó de computação é o serviço reparado ou preempção.
+    optional: true
+    syntax:
+      content: 'allocationTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Para nós do Windows, o serviço de lote instala os certificados para o repositório de certificados especificado e o local. Para nós de computação do Linux, os certificados são armazenados em um diretório dentro da tarefa trabalhando directory e uma variável de ambiente que az_batch_certificates_dir é fornecido para a tarefa de consulta para esse local. Para certificados com visibilidade de ''remoteUser'', um diretório de ''certificados'' é criado no diretório base do usuário (por exemplo, /home/ {nome de usuário} / certificados) e certificados são colocados no diretório.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: ComputeNodeEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.ComputeNodeEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.errors
+    name: errors
+    fullName: errors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'errors?: ComputeNodeError[]'
+      return:
+        type:
+          - 'azure-batch.ComputeNodeError[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Todos os nós de computação que é adicionado a um Pool é atribuído a uma ID exclusiva. Sempre que um nó de computação é removido de um Pool, todos os seus arquivos locais serão excluídos e a ID seja recuperada e pode ser reutilizada para novos nós de computação.'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.ipAddress
+    name: ipAddress
+    fullName: ipAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Todos os nós de computação que é adicionado a um Pool é atribuído um endereço IP exclusivo.
+      Sempre que um nó de computação é removido de um Pool, todos os seus arquivos locais serão excluídos e o endereço IP seja recuperado e pode ser reutilizado para novos nós de computação.
+    optional: true
+    syntax:
+      content: 'ipAddress?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.isDedicated
+    name: isDedicated
+    fullName: isDedicated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'isDedicated?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.lastBootTime
+    name: lastBootTime
+    fullName: lastBootTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Essa propriedade não pode estar presente se o estado do nó de computação é inutilizável.
+    optional: true
+    syntax:
+      content: 'lastBootTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.nodeAgentInfo
+    name: nodeAgentInfo
+    fullName: nodeAgentInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'nodeAgentInfo?: NodeAgentInformation'
+      return:
+        type:
+          - azure-batch.NodeAgentInformation
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.recentTasks
+    name: recentTasks
+    fullName: recentTasks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Essa propriedade está presente apenas se pelo menos uma tarefa foi executada neste nó de computação, pois ele foi atribuído ao Pool.'
+    optional: true
+    syntax:
+      content: 'recentTasks?: TaskInformation[]'
+      return:
+        type:
+          - 'azure-batch.TaskInformation[]'
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.runningTasksCount
+    name: runningTasksCount
+    fullName: runningTasksCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'runningTasksCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.schedulingState
+    name: schedulingState
+    fullName: schedulingState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Os valores possíveis incluem: ''enabled'', ''desabilitado'''
+    optional: true
+    syntax:
+      content: 'schedulingState?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.startTaskInfo
+    name: startTaskInfo
+    fullName: startTaskInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'startTaskInfo?: StartTaskInformation'
+      return:
+        type:
+          - azure-batch.StartTaskInformation
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nó de computação de baixa prioridade foi substituído. Tarefas que estavam em execução no nó de computação quando ele foi tentada anteriormente serão reagendadas quando outro nó de computação ficar disponível. Os valores possíveis incluem: ''ociosa'', ''Reinicializar'', ''Refazer a imagem'', ''running'', ''inutilizável'', ''criando'', '' Iniciar'', ''waitingForStartTask'', ''startTaskFailed'', ''unknown'', ''leavingPool'', ''offline'', ''preempção'''
+    optional: true
+    syntax:
+      content: 'state?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.stateTransitionTime
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.totalTasksRun
+    name: totalTasksRun
+    fullName: totalTasksRun
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalTasksRun?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.totalTasksSucceeded
+    name: totalTasksSucceeded
+    fullName: totalTasksSucceeded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'totalTasksSucceeded?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNode.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Para obter informações sobre os tamanhos disponíveis de máquinas virtuais em Pools, consulte escolher um tamanho de VM para nós de computação em um Pool do lote do Azure (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes).'
+    optional: true
+    syntax:
+      content: 'vmSize?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ComputeNodeEndpointConfiguration
+    name: ComputeNodeEndpointConfiguration
+    spec.typeScript:
+      - name: ComputeNodeEndpointConfiguration
+        fullName: ComputeNodeEndpointConfiguration
+        uid: azure-batch.ComputeNodeEndpointConfiguration
+  - uid: 'azure-batch.ComputeNodeError[]'
+    name: 'ComputeNodeError[]'
+    spec.typeScript:
+      - name: ComputeNodeError
+        fullName: ComputeNodeError
+        uid: azure-batch.ComputeNodeError
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NodeAgentInformation
+    name: NodeAgentInformation
+    spec.typeScript:
+      - name: NodeAgentInformation
+        fullName: NodeAgentInformation
+        uid: azure-batch.NodeAgentInformation
+  - uid: 'azure-batch.TaskInformation[]'
+    name: 'TaskInformation[]'
+    spec.typeScript:
+      - name: TaskInformation
+        fullName: TaskInformation
+        uid: azure-batch.TaskInformation
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.StartTaskInformation
+    name: StartTaskInformation
+    spec.typeScript:
+      - name: StartTaskInformation
+        fullName: StartTaskInformation
+        uid: azure-batch.StartTaskInformation

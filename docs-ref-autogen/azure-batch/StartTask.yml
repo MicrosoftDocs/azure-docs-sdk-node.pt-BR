@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Em lotes repetirá as tarefas quando uma operação de recuperação é disparada em um nó. Exemplos de operações de recuperação incluem (mas não estão limitados a) quando um nó não íntegro é reinicializado ou um nó de computação desapareceu devido à falha do host. Repete devido à recuperação de operações são independentes e não são contadas em relação a maxTaskRetryCount. Mesmo se a maxTaskRetryCount é 0, uma repetição interna devido a uma operação de recuperação pode ocorrer. Por isso, todas as tarefas devem ser idempotentes. Isso significa que as tarefas precisam tolerar que está sendo interrompida e reiniciada sem causar nenhum dano ou dados duplicados. A melhor prática para tarefas de longa execução é usar alguma forma de ponto de verificação. Em alguns casos o início tarefa pode ser executada novamente, mesmo que o nó de computação não foi reinicializado. Especial cuidado para evitar iniciar tarefas que criam breakaway processam ou instalar/iniciar serviços desde o início do diretório de trabalho de tarefa, pois isso bloqueará o lote seja capaz de executar novamente o tarefa de início.'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente. Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux. Se a linha de comando se refere aos caminhos de arquivos, ele deve usar um caminho relativo (relativo ao diretório de trabalho de tarefa) ou usar a variável de ambiente fornecido em lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner. Arquivos gerados no contêiner fora AZ_BATCH_NODE_ROOT_DIR podem não ser refletidos no disco de host, o que significa que as APIs de arquivo de lote não poderá acessar esses arquivos.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O serviço de lote repete uma tarefa se seu código de saída é diferente de zero. Observe que esse valor controla especificamente o número de tentativas. O serviço em lotes tentará a tarefa uma vez e, em seguida, pode ser executado novamente até esse limite. Por exemplo, se a contagem máxima de repetição for 3, o lote tentará a tarefa até 4 vezes (uma tentativa inicial e 3 repetições). Se a contagem máxima de novas tentativas for 0, o serviço de lote não tentará novamente a tarefa. Se a contagem máxima de novas tentativas for -1, o serviço em lotes tentará a tarefa novamente sem limite.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Os arquivos listados nesse elemento estão localizados no diretório de trabalho da tarefa.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se true e o início tarefa falhar em um nó, o serviço de lote repete a tarefa inicial até sua contagem máxima de novas tentativas (maxTaskRetryCount). Se a tarefa tem ainda não tiver sido concluída com êxito depois de todas as novas tentativas, em seguida, as marcas de serviço de lote o nó inutilizável e não agende tarefas a ela. Essa condição pode ser detectada por meio dos detalhes de informações de estado e de falha de nó de computação. Se for false, o serviço de lote não aguardará o conclusão da tarefa de início. Nesse caso, outras tarefas de iniciar a execução no nó de computação durante o início de que tarefa ainda está em execução; e mesmo se a iniciar a tarefa falhar, novas tarefas continuará a ser agendada no nó de computação. O padrão é false.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

@@ -86,7 +86,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adicione uma face a uma lista de face grandes. A face de entrada é especificada como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicional e persistedFaceId não expiram.
+    summary: |-
+      Adicione uma face a uma lista de face grande especificado, até 1.000.000 faces.
+      <br /> Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicionada. Nenhuma imagem será armazenada. Somente o recurso de face extraído será armazenado no servidor até que [LargeFaceList Face - exclua](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) ou [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) é chamado.
+      <br /> Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualidade de imagem de face superior significa maior precisão do reconhecimento. Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.
+      * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
+      * "targetFace" retângulo deve conter uma face. Zero ou várias faces serão considerados um erro. Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.
+      * Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.
+      * Adição/exclusão de faces de/para uma lista de face mesmo são processadas sequencialmente face diferente para/de listas e estão em paralelo.
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [LargeFaceList – adicionar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. | Cota:
+      * Cota de assinatura de camada gratuita: 1.000 faces por lista de face grandes.
+      * Cota de assinatura de camada S0: 1.000.000 faces por lista de face grandes.
     syntax:
       content: 'function addFaceFromStream(largeFaceListId: string, image: msRest.HttpRequestBody, options?: Models.LargeFaceListAddFaceFromStreamOptionalParams)'
       parameters:
@@ -171,7 +188,24 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adicione uma face a uma lista de face grandes. A face de entrada é especificada como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicional e persistedFaceId não expiram.
+    summary: |-
+      Adicione uma face a uma lista de face grande especificado, até 1.000.000 faces.
+      <br /> Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicionada. Nenhuma imagem será armazenada. Somente o recurso de face extraído será armazenado no servidor até que [LargeFaceList Face - exclua](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4) ou [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) é chamado.
+      <br /> Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualidade de imagem de face superior significa maior precisão do reconhecimento. Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.
+      * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
+      * "targetFace" retângulo deve conter uma face. Zero ou várias faces serão considerados um erro. Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.
+      * Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.
+      * Adição/exclusão de faces de/para uma lista de face mesmo são processadas sequencialmente face diferente para/de listas e estão em paralelo.
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [LargeFaceList – adicionar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. | Cota:
+      * Cota de assinatura de camada gratuita: 1.000 faces por lista de face grandes.
+      * Cota de assinatura de camada S0: 1.000.000 faces por lista de face grandes.
     syntax:
       content: 'function addFaceFromUrl(largeFaceListId: string, url: string, options?: Models.LargeFaceListAddFaceFromUrlOptionalParams)'
       parameters:
@@ -255,14 +289,15 @@ items:
     summary: |-
       Crie uma lista de face grande vazia com largeFaceListId especificado pelo usuário, nome, um userData opcional e recognitionModel.
       <br /> Lista de face grande é uma lista de faces, 1.000.000 até faces e usado pelo [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
-      <br /> Após a criação, o usuário deve usar [LargeFaceList Face – adicione](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) para importar as faces e [LargeFaceList – Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) para torná-lo pronto para o [Face - FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Faces são armazenadas no servidor até que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) é chamado.
+      <br /> Após a criação, o usuário deve usar [LargeFaceList Face – adicione](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3) para importar as faces e [LargeFaceList – Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1) para torná-lo pronto para o [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Nenhuma imagem será armazenada. Somente os recursos de face extraídos são armazenados no servidor até que [LargeFaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd) é chamado.
       <br /> Localizar que semelhante é usado para o cenário gosta de encontrar celebridade semelhante faces, face semelhante, filtragem, ou como uma luz de maneira enfrentam identificação. Mas se o uso real é identificar a pessoa, use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
       [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) e [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br />
+      <br/>'recognitionModel' deve ser especificado a ser associado a essa lista de face grandes. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Novas faces que são adicionados a uma lista existente de face grande usará o modelo de reconhecimento que já está associada com a coleção. Recursos de detecção facial existentes em uma lista de face grandes não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.
+      * 'recognition_01': O modelo de reconhecimento de padrão para [LargeFaceList – criar](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc). Todas as essas listas grandes face criadas antes de março de 2019 estão unidas com esse modelo de reconhecimento.
+      * 'recognition_02': Modelo de reconhecimento lançado em março de 2019. 'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.
+      Cota de lista de face grande:
       * Cota de assinatura de camada gratuita: listas de face grande 64.
       * Cota de assinatura de camada S0: listas de face grande 1.000.000.
-      <br />
-      'recognitionModel' deve ser especificado a ser associado a essa lista de face grandes. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Novas faces que são adicionados a uma lista existente de face grande usará o modelo de reconhecimento que já está associada com a coleção. Recursos de detecção facial existentes em uma lista de face grandes não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.
     syntax:
       content: 'function create(largeFaceListId: string, options?: Models.LargeFaceListCreateOptionalParams)'
       parameters:
@@ -308,7 +343,9 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Exclua uma face existente de uma lista de face grandes (fornecida por um persistedFaceId e um largeFaceListId). Imagem persistida relacionada à face também será excluída.
+    summary: |-
+      Exclua uma face de uma lista de face grande persistedFaceId e largeFaceListId especificado.
+      <br /> Adição/exclusão de faces de/para uma lista grande face mesmo são processados em sequência e de/para diferente face grande listas são em paralelo.
     syntax:
       content: 'function deleteFace(largeFaceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -393,7 +430,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Exclua uma lista existente de face grandes de acordo com a faceListId. Persistentes face imagens na lista de face grandes também serão excluídas.
+    summary: Exclua uma lista de face grande especificado.
     syntax:
       content: 'function deleteMethod(largeFaceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:

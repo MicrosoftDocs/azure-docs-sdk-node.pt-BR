@@ -64,7 +64,28 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Detecte rostos humanos em locais de face uma imagem e retorna e, opcionalmente com faceIds, pontos de referência e atributos.'
+    summary: |-
+      Detecte rostos humanos em uma imagem, retângulos de face de retorno e, opcionalmente, com faceIds, pontos de referência e atributos.<br />
+      * Nenhuma imagem será armazenada. Somente o recurso de face extraídos será armazenado no servidor. O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face
+      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
+      Os recursos de detecção facial armazenado irá expirar e ser excluídos 24 horas após a chamada original da detecção.
+      * Parâmetros opcionais incluem faceId, pontos de referência e atributos. Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído. Os resultados retornados de um atributo específico pode não ser altamente precisos.
+      * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
+      * Até 100 faces podem ser retornados para uma imagem. Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.
+      * Para obter melhores resultados ao consultar [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face
+      - Localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' é true), use faces que estão: frontal, claro e com um tamanho mínimo de 200 x 200 pixels (100 pixels, entre os olhos).
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [Face-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. |
+      * Valores diferentes de 'recognitionModel' são fornecidos. Se as operações de acompanhamento como verificar, identificar, localizar Similar são necessários, especifique o modelo de reconhecimento com o parâmetro 'recognitionModel'. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Depois que o especificado, o faceIds detectado será associado com o modelo de reconhecimento especificado. Mais detalhes, consulte [como especificar um modelo de reconhecimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | O modelo de reconhecimento de padrão para [Face-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Todos esses faceIds criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento. | | 'recognition_02': | Modelo de reconhecimento lançado em março de 2019. 'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'. |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
@@ -139,16 +160,26 @@ items:
       - typeScript
     summary: |-
       Detecte rostos humanos em uma imagem, retângulos de face de retorno e, opcionalmente, com faceIds, pontos de referência e atributos.<br />
-      * Parâmetros opcionais, incluindo faceId, pontos de referência e atributos. Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído.
-      * O recurso de face extraído, em vez da imagem real, será armazenado no servidor. O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face
-      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237). Ela expirará 24 horas após a chamada de detecção.
-      * Qualidade de imagem de face superior significa melhor detecção e a precisão do reconhecimento. Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.
+      * Nenhuma imagem será armazenada. Somente o recurso de face extraídos será armazenado no servidor. O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face
+      - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).
+      Os recursos de detecção facial armazenado irá expirar e ser excluídos 24 horas após a chamada original da detecção.
+      * Parâmetros opcionais incluem faceId, pontos de referência e atributos. Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído. Os resultados retornados de um atributo específico pode não ser altamente precisos.
       * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
-      * Faces são detectáveis quando seu tamanho é de 36 x 36 para 4096x4096 pixels. Se precisa detectar faces muito pequenas, mas não criptografados, tente ampliar a imagem de entrada.
-      * Até 64 faces podem ser retornados para uma imagem. Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.
-      * Detector facial prefira as faces frontais e quase frontais. Há casos em que faces podem não ser detectados, por exemplo, excepcionalmente grandes ângulos de face (head) ou que está sendo obstruídos ou orientação de imagem incorreto.
-      * Atributos (idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído) pode não ser perfeitamente precisos. Valor de densidade do HeadPose é um campo reservado e sempre retornará 0.
+      * Até 100 faces podem ser retornados para uma imagem. Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.
+      * Para obter melhores resultados ao consultar [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face
+      - Localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' é true), use faces que estão: frontal, claro e com um tamanho mínimo de 200 x 200 pixels (100 pixels, entre os olhos).
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [Face-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. |
       * Valores diferentes de 'recognitionModel' são fornecidos. Se as operações de acompanhamento como verificar, identificar, localizar Similar são necessários, especifique o modelo de reconhecimento com o parâmetro 'recognitionModel'. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Depois que o especificado, o faceIds detectado será associado com o modelo de reconhecimento especificado. Mais detalhes, consulte [como especificar um modelo de reconhecimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'recognition_01': | O modelo de reconhecimento de padrão para [Face-
+      Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236). Todos esses faceIds criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento. | | 'recognition_02': | Modelo de reconhecimento lançado em março de 2019. 'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'. |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:

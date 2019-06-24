@@ -81,7 +81,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adicione uma face representativa para uma pessoa para identificação. A face de entrada é especificada como uma imagem com um retângulo targetFace.
+    summary: |-
+      Adicione uma face de uma pessoa em um grupo grande de pessoa para identificação de face ou verificação. Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicionada. Nenhuma imagem será armazenada. Somente o recurso de face extraído será armazenado no servidor até que [LargePersonGroup PersonFace – exclua](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup pessoa - excluir](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) ou [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)é chamado.
+      <br /> Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualidade de imagem de face superior significa maior precisão do reconhecimento. Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.
+      * Cada entrada de pessoa pode conter até 248 faces.
+      * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
+      * "targetFace" retângulo deve conter uma face. Zero ou várias faces serão considerados um erro. Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.
+      * Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.
+      * Adição/exclusão de faces de/para uma pessoa mesma será processado sequencialmente. Adição/exclusão de faces de/para diferentes pessoas são processados em paralelo.
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [LargePersonGroup pessoa - adicionar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. |
     syntax:
       content: 'function addFaceFromStream(largePersonGroupId: string, personId: string, image: msRest.HttpRequestBody, options?: Models.LargePersonGroupPersonAddFaceFromStreamOptionalParams)'
       parameters:
@@ -178,7 +193,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Adicione uma face representativa para uma pessoa para identificação. A face de entrada é especificada como uma imagem com um retângulo targetFace.
+    summary: |-
+      Adicione uma face de uma pessoa em um grupo grande de pessoa para identificação de face ou verificação. Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace. Ele retorna um persistedFaceId que representa a face adicionada. Nenhuma imagem será armazenada. Somente o recurso de face extraído será armazenado no servidor até que [LargePersonGroup PersonFace – exclua](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3), [LargePersonGroup pessoa - excluir](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) ou [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)é chamado.
+      <br /> Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+      * Qualidade de imagem de face superior significa maior precisão do reconhecimento. Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.
+      * Cada entrada de pessoa pode conter até 248 faces.
+      * Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP. O tamanho do arquivo de imagem permitida é de 1KB a 6MB.
+      * "targetFace" retângulo deve conter uma face. Zero ou várias faces serão considerados um erro. Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.
+      * Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.
+      * Adição/exclusão de faces de/para uma pessoa mesma será processado sequencialmente. Adição/exclusão de faces de/para diferentes pessoas são processados em paralelo.
+      * O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.
+      Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.
+      * Valores de diferentes 'detectionModel' podem ser fornecidos. Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)
+      | Modelo | Uso recomendado-case(s) |
+      | ---------- | -------- |
+      | 'detection_01': | O modelo de detecção padrão para [LargePersonGroup pessoa - adicionar
+      Face](/docs/services/563879b61984550e40cbbe8d/operations/599adf2a3a7b9412a4d53f42). É recomendável para detecção de face frontal quase. Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas. | | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces. |
     syntax:
       content: 'function addFaceFromUrl(largePersonGroupId: string, personId: string, url: string, options?: Models.LargePersonGroupPersonAddFaceFromUrlOptionalParams)'
       parameters:
@@ -313,7 +343,10 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Exclua uma face de uma pessoa. Recurso relativo para a face persistente também será excluído.
+    summary: |-
+      Exclua uma face de uma pessoa em um grupo grande de pessoa persistedFaceId, personId e largePersonGroupId especificado.
+      <br /> Adição/exclusão de faces de/para uma pessoa mesma será processado sequencialmente.
+      Adição/exclusão de faces de/para diferentes pessoas são processados em paralelo.
     syntax:
       content: 'function deleteFace(largePersonGroupId: string, personId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -410,7 +443,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Exclua uma pessoa existente de um grupo grande de pessoa. Todos os armazenados dados person e recursos de detecção facial na entrada de pessoa serão excluídos.
+    summary: 'Exclua uma pessoa existente de um grupo grande de pessoa. O persistedFaceId, userData, recurso de detecção facial e de nome de pessoa na entrada de pessoa serão todos excluído.'
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:
@@ -495,7 +528,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Recupere informações de uma pessoa, incluindo dados do usuário, nome e registrados faces persistentes.'
+    summary: Recupere o faceIds persistente que representa o recurso de face da pessoa registrada e userData e nome de uma pessoa.
     syntax:
       content: 'function get(largePersonGroupId: string, personId: string, options?: msRest.RequestOptionsBase)'
       parameters:

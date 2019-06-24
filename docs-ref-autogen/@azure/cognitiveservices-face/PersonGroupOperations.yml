@@ -39,16 +39,16 @@ items:
       - typeScript
     summary: |-
       Crie um novo grupo de pessoas com personGroupId especificado, o nome, dados do usuário fornecido pelo usuário e recognitionModel.
-      <br /> Um grupo de pessoas é o contêiner dos dados carregados de pessoa, incluindo imagens de face e recursos de reconhecimento de face.
+      <br /> Um grupo de pessoas é o contêiner dos dados carregados de pessoa, incluindo recursos de reconhecimento de face.
       <br /> Após a criação, use [PersonGroup pessoa - criar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523c) para adicionar pessoas no grupo e, em seguida, chame [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) para preparar para esse grupo [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).
-      <br /> Face da pessoa, a imagem e userData serão armazenados no servidor até [PersonGroup pessoa
-      - DELETE](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f3039523d) ou [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) é chamado.
-      <br />
+      <br /> Nenhuma imagem será armazenada. Somente a pessoa extraídos do recursos de detecção facial e userData será armazenado no servidor até que [PersonGroup pessoa - exclua](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d) ou [PersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245) é chamado.
+      <br/>'recognitionModel' deve ser especificado para associar a esse grupo de pessoas. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Novas faces que são adicionados a um grupo existente de pessoa usará o modelo de reconhecimento que já está associada com a coleção. Recursos de detecção facial existentes em um grupo de pessoas não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.
+      * 'recognition_01': O modelo de reconhecimento de padrão para [PersonGroup - criar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244). Esses grupos de pessoas criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento.
+      * 'recognition_02': Modelo de reconhecimento lançado em março de 2019. 'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.
+      Cota do grupo de pessoa:
       * Cota de assinatura de camada gratuita: 1.000 grupos de pessoas. Cada uma contém até 1.000 pessoas.
       * Cota de assinatura de camada S0: grupos de pessoas 1.000.000. Cada um contém as pessoas de até 10.000.
       * para tratar o problema de identificação de face de maior escala, considere o uso de [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).
-      <br />
-      'recognitionModel' deve ser especificado para associar a esse grupo de pessoas. O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro. Novas faces que são adicionados a um grupo existente de pessoa usará o modelo de reconhecimento que já está associada com a coleção. Recursos de detecção facial existentes em um grupo de pessoas não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.
     syntax:
       content: 'function create(personGroupId: string, options?: Models.PersonGroupCreateOptionalParams)'
       parameters:

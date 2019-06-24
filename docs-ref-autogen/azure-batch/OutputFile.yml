@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.OutputFile
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - azure-batch.OutputFile.destination
+      - azure-batch.OutputFile.filePattern
+      - azure-batch.OutputFile.uploadOptions
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.OutputFile.destination
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - azure-batch.OutputFileDestination
+    package: azure-batch
+  - uid: azure-batch.OutputFile.filePattern
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Há suporte para caminhos relativos e absolutos. Caminhos relativos são relativos ao diretório de trabalho de tarefa. Os caracteres curinga a seguir têm suporte: * corresponde a 0 ou mais caracteres (para o padrão de exemplo abc * corresponderia a abc ou abcdef), * * corresponde a qualquer diretório?
+      corresponde a qualquer caractere único, [abc] corresponde um caractere entre os colchetes e [a-c] corresponde um caractere no intervalo. Colchetes podem incluir uma negação para corresponder a qualquer caractere não especificado (por exemplo [! abc] corresponde a qualquer caractere, mas a, b ou c). Se um nome de arquivo começa com "." é ignorado por padrão, mas pode ser correspondido especificando explicitamente (por exemplo *não corresponderão. gif. a.gif, mas.*. GIF será). Um exemplo simples: **\*. txt corresponde a qualquer arquivo que não é iniciada no '.' e termina com. txt no diretório de trabalho de tarefa ou qualquer subdiretório. Se o nome do arquivo contém um caractere curinga podem ter escape usando colchetes (por exemplo, abc [*] corresponderia a um arquivo chamado abc *). Observe que ambos \ e / são tratados como separadores de diretório no Windows, mas apenas / está no Linux. Variáveis de ambiente (% % de variação no Windows) ou $var no Linux são expandidas antes do padrão que está sendo aplicado.
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.OutputFile.uploadOptions
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - azure-batch.OutputFileUploadOptions
+    package: azure-batch
+references:
+  - uid: azure-batch.OutputFileDestination
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: azure-batch.OutputFileDestination
+  - uid: azure-batch.OutputFileUploadOptions
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: azure-batch.OutputFileUploadOptions

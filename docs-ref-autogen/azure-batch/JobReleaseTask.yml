@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobReleaseTask
+    name: JobReleaseTask
+    fullName: JobReleaseTask
+    children:
+      - azure-batch.JobReleaseTask.commandLine
+      - azure-batch.JobReleaseTask.containerSettings
+      - azure-batch.JobReleaseTask.environmentSettings
+      - azure-batch.JobReleaseTask.id
+      - azure-batch.JobReleaseTask.maxWallClockTime
+      - azure-batch.JobReleaseTask.resourceFiles
+      - azure-batch.JobReleaseTask.retentionTime
+      - azure-batch.JobReleaseTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      A tarefa de liberação de trabalho é executado quando termina o trabalho, devido a um dos seguintes: O usuário chama a API de trabalho encerrado ou a API de trabalho Excluir enquanto o trabalho ainda estiver ativo, restrição de tempo de relógio de parede máximo do trabalho for atingida, o trabalho ainda estiver ativo, ou tarefa do Gerenciador de trabalho do trabalho concluído e o trabalho é configurado para encerrar quando gerencia o trabalho ER é concluída.
+      A tarefa de liberação de trabalho é executado em cada nó de onde executaram tarefas do trabalho e a tarefa de preparação de trabalho foi executado e concluído. Se você recriar a imagem de um nó depois que ela foi executada a tarefa de preparação de trabalho e o trabalho terminar sem nenhuma tarefa adicional do trabalho em execução nesse nó (e, portanto, a tarefa de preparação de trabalho não executar novamente), em seguida, a tarefa de liberação de trabalho não é executado no nó de computação.
+      Se um nó é reinicializado, enquanto a tarefa de liberação de trabalho ainda está em execução, a tarefa de liberação do trabalho será executado novamente quando o nó de computação é iniciado. O trabalho não está marcado como concluído até que todas as tarefas de liberação de trabalho sejam concluídas. A tarefa de liberação de trabalho é executado em segundo plano. Ela não ocupa um slot de agendamento; ou seja, ele não contribuem para o limite de maxTasksPerNode especificado no Pool.
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente. Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux. Se a linha de comando se refere aos caminhos de arquivos, ele deve usar um caminho relativo (relativo ao diretório de trabalho de tarefa) ou usar a variável de ambiente fornecido em lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner. Arquivos gerados no contêiner fora AZ_BATCH_NODE_ROOT_DIR podem não ser refletidos no disco de host, o que significa que as APIs de arquivo de lote não poderá acessar esses arquivos.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A ID pode conter qualquer combinação de caracteres alfanuméricos, incluindo hifens e sublinhados e não pode conter mais de 64 caracteres. Se você não especificar essa propriedade, o serviço de lote atribui um valor padrão de ''jobrelease''. Nenhuma outra tarefa no trabalho pode ter a mesma ID que a tarefa de liberação de trabalho. Se você tentar enviar uma tarefa com a mesma id, o serviço de lote rejeita a solicitação com o código de erro TaskIdSameAsJobReleaseTask; Se você estiver chamando a API REST diretamente, o código de status HTTP é 409 (conflito).'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Os arquivos listados nesse elemento estão localizados no diretório de trabalho da tarefa.
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O padrão é 7 dias, ou seja, o diretório de tarefa será mantido por 7 dias, a menos que o nó de computação seja removido ou o trabalho é excluído.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.JobReleaseTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

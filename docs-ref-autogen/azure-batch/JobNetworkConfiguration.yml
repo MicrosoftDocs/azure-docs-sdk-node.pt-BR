@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A rede virtual deve estar na mesma região e assinatura como a conta do lote do Azure. A sub-rede especificada deve ter endereços IP suficientes livres para acomodar o número de nós de computação que executará tarefas do trabalho. Isso pode ser até o número de nós de computação no Pool. A entidade de serviço "MicrosoftAzureBatch" deve ter o 'clássico colaborador da máquina Virtual' função de controle de acesso baseado em função (RBAC) para a rede virtual especificada para que o serviço de lote do Azure pode agendar tarefas em nós. Isso pode ser verificado, verificando se a VNet especificada tiver qualquer grupos de segurança de rede (NSG) associado. Se a comunicação com os nós na sub-rede especificada for negada por um NSG, o serviço de lote definirá o estado de nós de computação para inutilizável. Isso é o formato /subscriptions/ {subscription} ResourceGroups {grupo} /providers/ {provider} /virtualNetworks/ {network} / Subnets / {sub-rede}.
+      Se a rede virtual especificada tiver qualquer grupos de segurança de rede (NSG) associado, algumas portas reservadas do sistema devem ser habilitadas para comunicação de entrada do serviço de lote do Azure. Para Pools criados com uma configuração de máquina Virtual, habilite as portas 29876 e 29877, bem como porta 22 para Linux e a porta 3389 para Windows. A porta 443 também deve estar aberta para conexões de saída para comunicações no armazenamento do Azure. Para obter mais detalhes, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
