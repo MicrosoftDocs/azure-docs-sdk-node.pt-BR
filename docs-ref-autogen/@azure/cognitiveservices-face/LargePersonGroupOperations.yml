@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="560f7-101">Classe que representa um LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="560f7-101">Class representing a LargePersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="cd07c-101">Classe que representa um LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="cd07c-101">Class representing a LargePersonGroupOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.create_2'
     name: 'create(string, LargePersonGroupCreateOptionalParams, ServiceCallback<void>)'
@@ -44,16 +44,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-102">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-102">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-102">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-102">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupCreateOptionalParams'
-          description: <span data-ttu-id="560f7-103">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-103">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-103">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-103">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-104">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-104">The callback</span></span>
+            <span data-ttu-id="cd07c-104">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-104">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -64,24 +64,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: |-
-      <span data-ttu-id="560f7-105">Crie um novo grupo de pessoa grandes com largePersonGroupId especificado pelo usuário, nome, um userData opcional e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="560f7-105">Create a new large person group with user-specified largePersonGroupId, name, an optional userData and recognitionModel.</span></span>
-      <br /> <span data-ttu-id="560f7-106">Um grupo de pessoas grandes é o contêiner dos dados carregados de pessoa, incluindo imagens de face e recurso de reconhecimento de face e até as 1.000.000 pessoas.</span><span class="sxs-lookup"><span data-stu-id="560f7-106">A large person group is the container of the uploaded person data, including face images and face recognition feature, and up to 1,000,000 people.</span></span>
-      <br /> <span data-ttu-id="560f7-107">Após a criação, use [LargePersonGroup pessoa - crie](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) adicionar pessoa no grupo e chame [LargePersonGroup – Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) para se preparar para esse grupo [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class="sxs-lookup"><span data-stu-id="560f7-107">After creation, use [LargePersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) to add person into the group, and call [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
-      <br /> <span data-ttu-id="560f7-108">A face da pessoa, a imagem e userData serão armazenados no servidor até que [LargePersonGroup pessoa - exclua](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) ou [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) é chamado.</span><span class="sxs-lookup"><span data-stu-id="560f7-108">The person face, image, and userData will be stored on server until [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>
-      <br />
-      * <span data-ttu-id="560f7-109">Cota de assinatura de camada gratuita: 1.000 grupos de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-109">Free-tier subscription quota: 1,000 large person groups.</span></span>
-      * <span data-ttu-id="560f7-110">Cota de assinatura de camada S0: grupos de pessoas de grandes 1.000.000.</span><span class="sxs-lookup"><span data-stu-id="560f7-110">S0-tier subscription quota: 1,000,000 large person groups.</span></span>
-      <br />
-      <span data-ttu-id="560f7-111">'recognitionModel' deve ser especificado para associar a esse grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="560f7-111">'recognitionModel' should be specified to associate with this large person group.</span></span> <span data-ttu-id="560f7-112">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="560f7-112">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="560f7-113">Novas faces que são adicionados a um grupo existente de pessoa grande usará o modelo de reconhecimento que já está associada com a coleção.</span><span class="sxs-lookup"><span data-stu-id="560f7-113">New faces that are added to an existing large person group will use the recognition model that's already associated with the collection.</span></span>
-      <span data-ttu-id="560f7-114">Recursos de detecção facial existentes em um grupo grande de pessoa não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="560f7-114">Existing face features in a large person group can't be updated to features extracted by another version of recognition model.</span></span>
+    summary: "<span data-ttu-id=\"cd07c-105\">Crie um novo grupo de pessoa grandes com largePersonGroupId especificado pelo usuário, nome, um userData opcional e recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-105\">Create a new large person group with user-specified largePersonGroupId, name, an optional userData and recognitionModel.</span></span>\n<br /> <span data-ttu-id=\"cd07c-106\">Um grupo de pessoas grandes é o contêiner dos dados carregados de pessoa, incluindo o recurso de reconhecimento de face e até as 1.000.000 pessoas.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-106\">A large person group is the container of the uploaded person data, including face recognition feature, and up to 1,000,000 people.</span></span>\n<br /> <span data-ttu-id=\"cd07c-107\">Após a criação, use [LargePersonGroup pessoa - crie](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) adicionar pessoa no grupo e chame [LargePersonGroup – Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) para se preparar para esse grupo [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-107\">After creation, use [LargePersonGroup Person - Create](/docs/services/563879b61984550e40cbbe8d/operations/599adcba3a7b9412a4d53f40) to add person into the group, and call [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4) to get this group ready for [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"cd07c-108\">Nenhuma imagem será armazenada.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-108\">No image will be stored.</span></span> <span data-ttu-id=\"cd07c-109\">Somente a pessoa extraídos do recursos de detecção facial e userData será armazenado no servidor até que [LargePersonGroup pessoa - exclua](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) ou [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) é chamado.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-109\">Only the person's extracted face features and userData will be stored on server until [LargePersonGroup Person - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2) or [LargePersonGroup - Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f) is called.</span></span>\n<br/><span data-ttu-id=\"cd07c-110\">'recognitionModel' deve ser especificado para associar a esse grupo grande de pessoa.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-110\">'recognitionModel' should be specified to associate with this large person group.</span></span> <span data-ttu-id=\"cd07c-111\">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-111\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"cd07c-112\">Novas faces que são adicionados a um grupo existente de pessoa grande usará o modelo de reconhecimento que já está associada com a coleção.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-112\">New faces that are added to an existing large person group will use the recognition model that's already associated with the collection.</span></span>\n<span data-ttu-id=\"cd07c-113\">Recursos de detecção facial existentes em um grupo grande de pessoa não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-113\">Existing face features in a large person group can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"cd07c-114\">'recognition_01': O modelo de reconhecimento de padrão para [LargePersonGroup – criar](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-114\">'recognition_01': The default recognition model for [LargePersonGroup - Create](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d).</span></span> <span data-ttu-id=\"cd07c-115\">Todos esses grupos de pessoa grande criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-115\">All those large person groups created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"cd07c-116\">'recognition_02': Modelo de reconhecimento lançado em março de 2019.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-116\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"cd07c-117\">'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-117\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>\n<span data-ttu-id=\"cd07c-118\">Cota do grupo grande de pessoa:</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-118\">Large person group quota:</span></span>\n* <span data-ttu-id=\"cd07c-119\">Cota de assinatura de camada gratuita: 1.000 grupos de pessoas grandes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-119\">Free-tier subscription quota: 1,000 large person groups.</span></span>\n* <span data-ttu-id=\"cd07c-120\">Cota de assinatura de camada S0: grupos de pessoas de grandes 1.000.000.</span><span class=\"sxs-lookup\"><span data-stu-id=\"cd07c-120\">S0-tier subscription quota: 1,000,000 large person groups.</span></span>"
     syntax:
       content: 'function create(largePersonGroupId: string, options?: Models.LargePersonGroupCreateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-115">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-115">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-121">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-121">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupCreateOptionalParams
@@ -104,12 +94,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-116">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-116">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-122">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-122">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-117">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-117">The callback</span></span>
+            <span data-ttu-id="cd07c-123">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-123">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -120,14 +110,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="560f7-118">Exclua um grupo grande de pessoa existente.</span><span class="sxs-lookup"><span data-stu-id="560f7-118">Delete an existing large person group.</span></span> <span data-ttu-id="560f7-119">Persistentes face recursos de todas as pessoas no grupo de pessoa grandes também serão excluídos.</span><span class="sxs-lookup"><span data-stu-id="560f7-119">Persisted face features of all people in the large person group will also be deleted.</span></span>
+    summary: <span data-ttu-id="cd07c-124">Exclua um grupo grande de pessoa existente.</span><span class="sxs-lookup"><span data-stu-id="cd07c-124">Delete an existing large person group.</span></span> <span data-ttu-id="cd07c-125">Persistentes face recursos de todas as pessoas no grupo de pessoa grandes também serão excluídos.</span><span class="sxs-lookup"><span data-stu-id="cd07c-125">Persisted face features of all people in the large person group will also be deleted.</span></span>
     syntax:
       content: 'function deleteMethod(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-120">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-120">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-126">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-126">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -150,16 +140,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-121">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-121">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-127">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-127">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="560f7-122">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-122">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-128">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-128">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-123">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-123">The callback</span></span>
+            <span data-ttu-id="cd07c-129">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-129">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -177,12 +167,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-124">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-124">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-130">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-130">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-125">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-125">The callback</span></span>
+            <span data-ttu-id="cd07c-131">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-131">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -200,16 +190,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-126">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-126">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-132">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-132">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupGetOptionalParams'
-          description: <span data-ttu-id="560f7-127">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-127">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-133">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-133">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
           description: |
-            <span data-ttu-id="560f7-128">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-128">The callback</span></span>
+            <span data-ttu-id="cd07c-134">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-134">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetResponse>
@@ -220,14 +210,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="560f7-129">Recupere as informações de um grupo grande de pessoa, incluindo seu nome, userData e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="560f7-129">Retrieve the information of a large person group, including its name, userData and recognitionModel.</span></span> <span data-ttu-id="560f7-130">Essa API retorna pessoa grande somente informações de grupo, use [LargePersonGroup pessoa - listar](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) em vez disso, para recuperar informações de pessoa sob o grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-130">This API returns large person group information only, use [LargePersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) instead to retrieve person information under the large person group.</span></span>'
+    summary: '<span data-ttu-id="cd07c-135">Recupere as informações de um grupo grande de pessoa, incluindo seu nome, userData e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="cd07c-135">Retrieve the information of a large person group, including its name, userData and recognitionModel.</span></span> <span data-ttu-id="cd07c-136">Essa API retorna pessoa grande somente informações de grupo, use [LargePersonGroup pessoa - listar](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) em vez disso, para recuperar informações de pessoa sob o grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-136">This API returns large person group information only, use [LargePersonGroup Person - List](/docs/services/563879b61984550e40cbbe8d/operations/599adda06ac60f11b48b5aa1) instead to retrieve person information under the large person group.</span></span>'
     syntax:
       content: 'function get(largePersonGroupId: string, options?: Models.LargePersonGroupGetOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-131">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-131">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-137">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-137">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupGetOptionalParams
@@ -250,12 +240,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-132">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-132">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-138">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-138">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup>
           description: |
-            <span data-ttu-id="560f7-133">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-133">The callback</span></span>
+            <span data-ttu-id="cd07c-139">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-139">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetResponse>
@@ -266,14 +256,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="560f7-134">Recupere o status de treinamento de um grupo grande de pessoa (em andamento ou concluído).</span><span class="sxs-lookup"><span data-stu-id="560f7-134">Retrieve the training status of a large person group (completed or ongoing).</span></span>
+    summary: <span data-ttu-id="cd07c-140">Recupere o status de treinamento de um grupo grande de pessoa (em andamento ou concluído).</span><span class="sxs-lookup"><span data-stu-id="cd07c-140">Retrieve the training status of a large person group (completed or ongoing).</span></span>
     syntax:
       content: 'function getTrainingStatus(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-135">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-135">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-141">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-141">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -296,16 +286,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-136">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-136">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-142">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-142">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="560f7-137">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-137">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-143">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-143">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="560f7-138">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-138">The callback</span></span>
+            <span data-ttu-id="cd07c-144">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-144">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
@@ -323,12 +313,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-139">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-139">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-145">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-145">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.TrainingStatus>
           description: |
-            <span data-ttu-id="560f7-140">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-140">The callback</span></span>
+            <span data-ttu-id="cd07c-146">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-146">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupGetTrainingStatusResponse>
@@ -339,7 +329,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="560f7-141">Crie um LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="560f7-141">Create a LargePersonGroupOperations.</span></span>
+    summary: <span data-ttu-id="cd07c-147">Crie um LargePersonGroupOperations.</span><span class="sxs-lookup"><span data-stu-id="cd07c-147">Create a LargePersonGroupOperations.</span></span>
     syntax:
       content: 'new LargePersonGroupOperations(client: FaceClientContext)'
       parameters:
@@ -347,7 +337,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="560f7-142">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="560f7-142">Reference to the service client.</span></span>
+            <span data-ttu-id="cd07c-148">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="cd07c-148">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupOperations.list_2'
     name: 'list(LargePersonGroupListOptionalParams, ServiceCallback<LargePersonGroup[]>)'
@@ -362,12 +352,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupListOptionalParams'
-          description: <span data-ttu-id="560f7-143">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-143">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-149">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-149">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
           description: |
-            <span data-ttu-id="560f7-144">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-144">The callback</span></span>
+            <span data-ttu-id="cd07c-150">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-150">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupListResponse>
@@ -379,15 +369,15 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="560f7-145">Liste dos todos os grandes pessoa grupos existentes largePersonGroupId, nome, userData e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="560f7-145">List all existing large person groups’ largePersonGroupId, name, userData and recognitionModel.</span></span><br />
-      * <span data-ttu-id="560f7-146">Grupos de pessoas grandes são armazenados em ordem alfabética de largePersonGroupId.</span><span class="sxs-lookup"><span data-stu-id="560f7-146">Large person groups are stored in alphabetical order of largePersonGroupId.</span></span>
-      * <span data-ttu-id="560f7-147">parâmetro "start" (cadeia de caracteres, opcional) é um valor de largePersonGroupId fornecido pelo usuário que retornou entradas tem ids maiores por comparação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="560f7-147">"start" parameter (string, optional) is a user-provided largePersonGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="560f7-148">"start" definido como vazios para indicar o retorno do primeiro item.</span><span class="sxs-lookup"><span data-stu-id="560f7-148">"start" set to empty to indicate return from the first item.</span></span>
-      * <span data-ttu-id="560f7-149">parâmetro "top" (int, opcional) Especifica o número de entradas a serem retornadas.</span><span class="sxs-lookup"><span data-stu-id="560f7-149">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="560f7-150">Um máximo de 1.000 entradas pode ser retornado em uma chamada.</span><span class="sxs-lookup"><span data-stu-id="560f7-150">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="560f7-151">Para buscar mais, você pode especificar "start" com a Id a última entrada retornado da chamada atual.</span><span class="sxs-lookup"><span data-stu-id="560f7-151">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
+      <span data-ttu-id="cd07c-151">Liste dos todos os grandes pessoa grupos existentes largePersonGroupId, nome, userData e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="cd07c-151">List all existing large person groups’ largePersonGroupId, name, userData and recognitionModel.</span></span><br />
+      * <span data-ttu-id="cd07c-152">Grupos de pessoas grandes são armazenados em ordem alfabética de largePersonGroupId.</span><span class="sxs-lookup"><span data-stu-id="cd07c-152">Large person groups are stored in alphabetical order of largePersonGroupId.</span></span>
+      * <span data-ttu-id="cd07c-153">parâmetro "start" (cadeia de caracteres, opcional) é um valor de largePersonGroupId fornecido pelo usuário que retornou entradas tem ids maiores por comparação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="cd07c-153">"start" parameter (string, optional) is a user-provided largePersonGroupId value that returned entries have larger ids by string comparison.</span></span> <span data-ttu-id="cd07c-154">"start" definido como vazios para indicar o retorno do primeiro item.</span><span class="sxs-lookup"><span data-stu-id="cd07c-154">"start" set to empty to indicate return from the first item.</span></span>
+      * <span data-ttu-id="cd07c-155">parâmetro "top" (int, opcional) Especifica o número de entradas a serem retornadas.</span><span class="sxs-lookup"><span data-stu-id="cd07c-155">"top" parameter (int, optional) specifies the number of entries to return.</span></span> <span data-ttu-id="cd07c-156">Um máximo de 1.000 entradas pode ser retornado em uma chamada.</span><span class="sxs-lookup"><span data-stu-id="cd07c-156">A maximal of 1000 entries can be returned in one call.</span></span> <span data-ttu-id="cd07c-157">Para buscar mais, você pode especificar "start" com a Id a última entrada retornado da chamada atual.</span><span class="sxs-lookup"><span data-stu-id="cd07c-157">To fetch more, you can specify "start" with the last returned entry’s Id of the current call.</span></span>
       <br />
-      <span data-ttu-id="560f7-152">Por exemplo, total de 5 grupos de pessoas grandes: "group1",..., "grupo5".</span><span class="sxs-lookup"><span data-stu-id="560f7-152">For example, total 5 large person groups: "group1", ..., "group5".</span></span>
-      <br /> <span data-ttu-id="560f7-153">"iniciar o & início = =" retornará todos os grupos de 5.</span><span class="sxs-lookup"><span data-stu-id="560f7-153">"start=&top=" will return all 5 groups.</span></span>
-      <br /> <span data-ttu-id="560f7-154">"iniciar o & início = = 2" retornará "group1", "group2".</span><span class="sxs-lookup"><span data-stu-id="560f7-154">"start=&top=2" will return "group1", "group2".</span></span>
-      <br /> <span data-ttu-id="560f7-155">"Iniciar = grupo2 & superior = 3" retornará "grupo3", "group4", "grupo5".</span><span class="sxs-lookup"><span data-stu-id="560f7-155">"start=group2&top=3" will return "group3", "group4", "group5".</span></span>
+      <span data-ttu-id="cd07c-158">Por exemplo, total de 5 grupos de pessoas grandes: "group1",..., "grupo5".</span><span class="sxs-lookup"><span data-stu-id="cd07c-158">For example, total 5 large person groups: "group1", ..., "group5".</span></span>
+      <br /> <span data-ttu-id="cd07c-159">"iniciar o & início = =" retornará todos os grupos de 5.</span><span class="sxs-lookup"><span data-stu-id="cd07c-159">"start=&top=" will return all 5 groups.</span></span>
+      <br /> <span data-ttu-id="cd07c-160">"iniciar o & início = = 2" retornará "group1", "group2".</span><span class="sxs-lookup"><span data-stu-id="cd07c-160">"start=&top=2" will return "group1", "group2".</span></span>
+      <br /> <span data-ttu-id="cd07c-161">"Iniciar = grupo2 & superior = 3" retornará "grupo3", "group4", "grupo5".</span><span class="sxs-lookup"><span data-stu-id="cd07c-161">"start=group2&top=3" will return "group3", "group4", "group5".</span></span>
     syntax:
       content: 'function list(options?: Models.LargePersonGroupListOptionalParams)'
       parameters:
@@ -414,7 +404,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.LargePersonGroup[]>'
           description: |
-            <span data-ttu-id="560f7-156">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-156">The callback</span></span>
+            <span data-ttu-id="cd07c-162">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-162">The callback</span></span>
       return:
         type:
           - Promise<Models.LargePersonGroupListResponse>
@@ -425,14 +415,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="560f7-157">Enfileirar uma tarefa de treinamento de grupo grande de pessoa, a tarefa de treinamento não pode ser iniciada imediatamente.</span><span class="sxs-lookup"><span data-stu-id="560f7-157">Queue a large person group training task, the training task may not be started immediately.</span></span>'
+    summary: '<span data-ttu-id="cd07c-163">Enfileirar uma tarefa de treinamento de grupo grande de pessoa, a tarefa de treinamento não pode ser iniciada imediatamente.</span><span class="sxs-lookup"><span data-stu-id="cd07c-163">Queue a large person group training task, the training task may not be started immediately.</span></span>'
     syntax:
       content: 'function train(largePersonGroupId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-158">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-158">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-164">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-164">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -455,16 +445,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-159">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-159">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-165">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-165">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="560f7-160">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-160">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-166">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-166">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-161">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-161">The callback</span></span>
+            <span data-ttu-id="cd07c-167">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-167">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -482,12 +472,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-162">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-162">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-168">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-168">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-163">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-163">The callback</span></span>
+            <span data-ttu-id="cd07c-169">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-169">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -505,16 +495,16 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-164">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-164">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-170">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-170">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.LargePersonGroupUpdateOptionalParams'
-          description: <span data-ttu-id="560f7-165">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="560f7-165">The optional parameters</span></span>
+          description: <span data-ttu-id="cd07c-171">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cd07c-171">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-166">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-166">The callback</span></span>
+            <span data-ttu-id="cd07c-172">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-172">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -525,14 +515,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="560f7-167">Atualize o nome de exibição do grupo de pessoa grandes existente e userData.</span><span class="sxs-lookup"><span data-stu-id="560f7-167">Update an existing large person group's display name and userData.</span></span> <span data-ttu-id="560f7-168">As propriedades que não aparece no corpo da solicitação não serão atualizadas.</span><span class="sxs-lookup"><span data-stu-id="560f7-168">The properties which does not appear in request body will not be updated.</span></span>
+    summary: <span data-ttu-id="cd07c-173">Atualize o nome de exibição do grupo de pessoa grandes existente e userData.</span><span class="sxs-lookup"><span data-stu-id="cd07c-173">Update an existing large person group's display name and userData.</span></span> <span data-ttu-id="cd07c-174">As propriedades que não aparece no corpo da solicitação não serão atualizadas.</span><span class="sxs-lookup"><span data-stu-id="cd07c-174">The properties which does not appear in request body will not be updated.</span></span>
     syntax:
       content: 'function update(largePersonGroupId: string, options?: Models.LargePersonGroupUpdateOptionalParams)'
       parameters:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-169">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-169">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-175">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-175">Id referencing a particular large person group.</span></span>
         - id: options
           type:
             - Models.LargePersonGroupUpdateOptionalParams
@@ -555,12 +545,12 @@ items:
         - id: largePersonGroupId
           type:
             - string
-          description: <span data-ttu-id="560f7-170">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="560f7-170">Id referencing a particular large person group.</span></span>
+          description: <span data-ttu-id="cd07c-176">ID fazendo referência ao grupo de uma determinada pessoa grandes.</span><span class="sxs-lookup"><span data-stu-id="cd07c-176">Id referencing a particular large person group.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="560f7-171">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="560f7-171">The callback</span></span>
+            <span data-ttu-id="cd07c-177">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cd07c-177">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

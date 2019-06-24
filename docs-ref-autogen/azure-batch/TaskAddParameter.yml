@@ -1,0 +1,330 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskAddParameter
+    name: TaskAddParameter
+    fullName: TaskAddParameter
+    children:
+      - azure-batch.TaskAddParameter.affinityInfo
+      - azure-batch.TaskAddParameter.applicationPackageReferences
+      - azure-batch.TaskAddParameter.authenticationTokenSettings
+      - azure-batch.TaskAddParameter.commandLine
+      - azure-batch.TaskAddParameter.constraints
+      - azure-batch.TaskAddParameter.containerSettings
+      - azure-batch.TaskAddParameter.dependsOn
+      - azure-batch.TaskAddParameter.displayName
+      - azure-batch.TaskAddParameter.environmentSettings
+      - azure-batch.TaskAddParameter.exitConditions
+      - azure-batch.TaskAddParameter.id
+      - azure-batch.TaskAddParameter.multiInstanceSettings
+      - azure-batch.TaskAddParameter.outputFiles
+      - azure-batch.TaskAddParameter.resourceFiles
+      - azure-batch.TaskAddParameter.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="e7b0f-101">Em lotes repetirá as tarefas quando uma operação de recuperação é disparada em um nó.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-101">Batch will retry Tasks when a recovery operation is triggered on a Node.</span></span> <span data-ttu-id="e7b0f-102">Exemplos de operações de recuperação incluem (mas não estão limitados a) quando um nó não íntegro é reinicializado ou um nó de computação desapareceu devido à falha do host.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-102">Examples of recovery operations include (but are not limited to) when an unhealthy Node is rebooted or a Compute Node disappeared due to host failure.</span></span> <span data-ttu-id="e7b0f-103">Repete devido à recuperação de operações são independentes e não são contadas em relação a maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="e7b0f-104">Mesmo se a maxTaskRetryCount é 0, uma repetição interna devido a uma operação de recuperação pode ocorrer.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="e7b0f-105">Por isso, todas as tarefas devem ser idempotentes.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-105">Because of this, all Tasks should be idempotent.</span></span> <span data-ttu-id="e7b0f-106">Isso significa que as tarefas precisam tolerar que está sendo interrompida e reiniciada sem causar nenhum dano ou dados duplicados.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-106">This means Tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="e7b0f-107">A melhor prática para tarefas de longa execução é usar alguma forma de ponto de verificação.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-107">The best practice for long running Tasks is to use some form of checkpointing.</span></span>'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.affinityInfo
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - azure-batch.AffinityInformation
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-108">Pacotes de aplicativos são baixados e implantados em um diretório compartilhado, não o diretório de trabalho de tarefa.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-108">Application packages are downloaded and deployed to a shared directory, not the Task working directory.</span></span> <span data-ttu-id="e7b0f-109">Portanto, se um pacote referenciado já está no nó e é atualizado, em seguida, ele não é novamente baixado; a cópia existente no nó de computação é usada.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-109">Therefore, if a referenced package is already on the Node, and is up to date, then it is not re-downloaded; the existing copy on the Compute Node is used.</span></span> <span data-ttu-id="e7b0f-110">Se um pacote referenciado não pode ser instalado, por exemplo porque o pacote foi excluído ou porque a falha no download, a tarefa falhará.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-110">If a referenced Package cannot be installed, for example because the package has been deleted or because download failed, the Task fails.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.authenticationTokenSettings
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-111">Se essa propriedade for definida, o serviço de lote fornece a tarefa com um token de autenticação que pode ser usado para autenticar operações de serviço de lote sem a necessidade de uma chave de acesso da conta.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-111">If this property is set, the Batch service provides the Task with an authentication token which can be used to authenticate Batch service operations without requiring an Account access key.</span></span> <span data-ttu-id="e7b0f-112">O token é fornecido por meio da variável de ambiente AZ_BATCH_AUTHENTICATION_TOKEN.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-112">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="e7b0f-113">As operações que pode ser executadas usando o token a tarefa dependem das configurações.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-113">The operations that the Task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="e7b0f-114">Por exemplo, uma tarefa pode solicitar permissões de trabalho para adicionar outras tarefas ao trabalho ou verificar o status do trabalho ou de outras tarefas no trabalho.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-114">For example, a Task can request Job permissions in order to add other Tasks to the Job, or check the status of the Job or of other Tasks under the Job.</span></span>'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - azure-batch.AuthenticationTokenSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-115">Para tarefas de várias instâncias, a linha de comando é executada como a principal tarefa que, depois que a tarefa principal e todas as subtarefas concluírem a execução da linha de comando de coordenação.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-115">For multi-instance Tasks, the command line is executed as the primary Task, after the primary Task and all subtasks have finished executing the coordination command line.</span></span> <span data-ttu-id="e7b0f-116">A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-116">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="e7b0f-117">Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-117">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="e7b0f-118">Se a linha de comando se refere aos caminhos de arquivos, ele deve usar um caminho relativo (relativo ao diretório de trabalho de tarefa) ou usar a variável de ambiente fornecido em lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="e7b0f-118">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-119">Se você não especificar restrições, a maxTaskRetryCount é a maxTaskRetryCount especificada para o trabalho, o maxWallClockTime é infinita e o retentionTime é de 7 dias.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-119">If you do not specify constraints, the maxTaskRetryCount is the maxTaskRetryCount specified for the Job, the maxWallClockTime is infinite, and the retentionTime is 7 days.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-120">Se o Pool que executará essa tarefa tiver containerConfiguration definido, isso deve ser definido também.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-120">If the Pool that will run this Task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="e7b0f-121">Se o Pool que executará essa tarefa não tiver containerConfiguration definido, isso não deve ser definido.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-121">If the Pool that will run this Task doesn''t have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="e7b0f-122">Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-122">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="e7b0f-123">Arquivos gerados no contêiner fora AZ_BATCH_NODE_ROOT_DIR podem não ser refletidos no disco de host, o que significa que as APIs de arquivo de lote não poderá acessar esses arquivos.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-123">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.dependsOn
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-124">Esta tarefa não será agendada até que todas as tarefas que depende de tem concluído com êxito.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-124">This Task will not be scheduled until all Tasks that it depends on have completed successfully.</span></span> <span data-ttu-id="e7b0f-125">Se qualquer uma dessas tarefas falham e esgotar seus contagens de repetição, essa tarefa nunca será agendada.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-125">If any of those Tasks fail and exhaust their retry counts, this Task will never be scheduled.</span></span> <span data-ttu-id="e7b0f-126">Se o trabalho não tiver usesTaskDependencies definida como true e esse elemento estiver presente, a solicitação falhará com o código de erro TaskDependenciesNotSpecifiedOnJob.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-126">If the Job does not have usesTaskDependencies set to true, and this element is present, the request fails with error code TaskDependenciesNotSpecifiedOnJob.</span></span>'
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - azure-batch.TaskDependencies
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e7b0f-127">O nome de exibição não precisa ser exclusivo e pode conter quaisquer caracteres Unicode até um comprimento máximo de 1024.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-127">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.exitConditions
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e7b0f-128">Como o serviço de lote deve responder quando a tarefa é concluída.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-128">How the Batch service should respond when the Task completes.</span></span>
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - azure-batch.ExitConditions
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-129">A ID pode conter qualquer combinação de caracteres alfanuméricos, incluindo hifens e sublinhados e não pode conter mais de 64 caracteres.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-129">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span> <span data-ttu-id="e7b0f-130">A ID é diferencia maiusculas de minúsculas e preserva (ou seja, você poderá não ter duas IDs de dentro de um trabalho que diferem somente maiusculas).</span><span class="sxs-lookup"><span data-stu-id="e7b0f-130">The ID is case-preserving and case-insensitive (that is, you may not have two IDs within a Job that differ only by case).</span></span>'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.multiInstanceSettings
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - azure-batch.MultiInstanceSettings
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-131">Para tarefas de várias instâncias, os arquivos só serão carregados a partir do nó de computação no qual a principal tarefa é executada.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-131">For multi-instance Tasks, the files will only be uploaded from the Compute Node on which the primary Task is executed.</span></span>'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-batch.OutputFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-132">Para tarefas de várias instâncias, os arquivos de recursos só serão baixados para o nó de computação no qual a principal tarefa é executada.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-132">For multi-instance Tasks, the resource files will only be downloaded to the Compute Node on which the primary Task is executed.</span></span> <span data-ttu-id="e7b0f-133">Há um tamanho máximo para a lista de arquivos de recurso.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-133">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="e7b0f-134">Quando o tamanho máximo for excedido, a solicitação falhará e o código de erro da resposta será RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-134">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="e7b0f-135">Se isso ocorrer, a coleção de ResourceFiles deve ser reduzida em tamanho.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-135">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="e7b0f-136">Isso pode ser obtido usando arquivos. zip, pacotes de aplicativos ou contêineres do Docker.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-136">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.TaskAddParameter.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e7b0f-137">Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.</span><span class="sxs-lookup"><span data-stu-id="e7b0f-137">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: azure-batch.AffinityInformation
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: azure-batch.AffinityInformation
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.AuthenticationTokenSettings
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: azure-batch.AuthenticationTokenSettings
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: azure-batch.TaskDependencies
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: azure-batch.TaskDependencies
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ExitConditions
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: azure-batch.ExitConditions
+  - uid: azure-batch.MultiInstanceSettings
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: azure-batch.MultiInstanceSettings
+  - uid: 'azure-batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-batch.OutputFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

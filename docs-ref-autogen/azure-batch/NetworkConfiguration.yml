@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="d3826-101">A configuração de rede para um Pool.</span><span class="sxs-lookup"><span data-stu-id="d3826-101">The network configuration for a Pool.</span></span>
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d3826-102">Os valores possíveis incluem: ''none'', ''do trabalho''</span><span class="sxs-lookup"><span data-stu-id="d3826-102">Possible values include: ''none'', ''job''</span></span>'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="d3826-103">Somente há suporte para configuração de ponto de extremidade do pool em Pools com a propriedade virtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="d3826-103">Pool endpoint configuration is only supported on Pools with the virtualMachineConfiguration property.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d3826-104">A rede virtual deve estar na mesma região e assinatura como a conta do lote do Azure.</span><span class="sxs-lookup"><span data-stu-id="d3826-104">The virtual network must be in the same region and subscription as the Azure Batch Account.</span></span> <span data-ttu-id="d3826-105">A sub-rede especificada deve ter endereços IP suficientes livres para acomodar o número de nós de computação no Pool.</span><span class="sxs-lookup"><span data-stu-id="d3826-105">The specified subnet should have enough free IP addresses to accommodate the number of Compute Nodes in the Pool.</span></span> <span data-ttu-id="d3826-106">Se a sub-rede não tiver endereços IP suficientes livres, o Pool alocará parcialmente nós e ocorrerá um erro de redimensionamento.</span><span class="sxs-lookup"><span data-stu-id="d3826-106">If the subnet doesn''t have enough free IP addresses, the Pool will partially allocate Nodes, and a resize error will occur.</span></span> <span data-ttu-id="d3826-107">A entidade de serviço "MicrosoftAzureBatch" deve ter o ''clássico colaborador da máquina Virtual'' função de controle de acesso baseado em função (RBAC) para a rede virtual especificada.</span><span class="sxs-lookup"><span data-stu-id="d3826-107">The ''MicrosoftAzureBatch'' service principal must have the ''Classic Virtual Machine Contributor'' Role-Based Access Control (RBAC) role for the specified VNet.</span></span> <span data-ttu-id="d3826-108">A sub-rede especificada deve permitir a comunicação do serviço de lote do Azure para ser capaz de agendar tarefas em nós.</span><span class="sxs-lookup"><span data-stu-id="d3826-108">The specified subnet must allow communication from the Azure Batch service to be able to schedule Tasks on the Nodes.</span></span> <span data-ttu-id="d3826-109">Isso pode ser verificado, verificando se a VNet especificada tiver qualquer grupos de segurança de rede (NSG) associado.</span><span class="sxs-lookup"><span data-stu-id="d3826-109">This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG).</span></span> <span data-ttu-id="d3826-110">Se a comunicação com os nós na sub-rede especificada for negada por um NSG, o serviço de lote definirá o estado de nós de computação para inutilizável.</span><span class="sxs-lookup"><span data-stu-id="d3826-110">If communication to the Nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the Compute Nodes to unusable.</span></span> <span data-ttu-id="d3826-111">Para Pools criados com virtualMachineConfiguration somente ARM as redes virtuais ('' Network/virtualnetworks'') têm suporte, mas para Pools criados com cloudServiceConfiguration ARM e redes virtuais clássicas têm suporte.</span><span class="sxs-lookup"><span data-stu-id="d3826-111">For Pools created with virtualMachineConfiguration only ARM virtual networks (''Microsoft.Network/virtualNetworks'') are supported, but for Pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="d3826-112">Se a VNet especificada tiver grupos de segurança de rede (NSG) associados, algumas portas reservadas do sistema devem ser habilitadas para comunicação de entrada.</span><span class="sxs-lookup"><span data-stu-id="d3826-112">If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication.</span></span> <span data-ttu-id="d3826-113">Para Pools criados com uma configuração de máquina virtual, habilite as portas 29876 e 29877, bem como porta 22 para Linux e a porta 3389 para Windows.</span><span class="sxs-lookup"><span data-stu-id="d3826-113">For Pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows.</span></span> <span data-ttu-id="d3826-114">Para Pools criados com uma configuração de serviço de nuvem, habilite as portas 10100, 20100 e 30100.</span><span class="sxs-lookup"><span data-stu-id="d3826-114">For Pools created with a cloud service configuration, enable ports 10100, 20100, and 30100.</span></span> <span data-ttu-id="d3826-115">Também habilite conexões de saída para o armazenamento do Azure na porta 443.</span><span class="sxs-lookup"><span data-stu-id="d3826-115">Also enable outbound connections to Azure Storage on port 443.</span></span> <span data-ttu-id="d3826-116">Para obter mais detalhes, consulte: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="d3826-116">For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

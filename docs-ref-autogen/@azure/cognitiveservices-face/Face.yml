@@ -29,7 +29,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="73d0d-101">Classe que representa uma Face.</span><span class="sxs-lookup"><span data-stu-id="73d0d-101">Class representing a Face.</span></span>
+    summary: <span data-ttu-id="7fa16-101">Classe que representa uma Face.</span><span class="sxs-lookup"><span data-stu-id="7fa16-101">Class representing a Face.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.Face.detectWithStream_2'
     name: 'detectWithStream(msRest.HttpRequestBody, FaceDetectWithStreamOptionalParams, ServiceCallback<DetectedFace[]>)'
@@ -44,16 +44,16 @@ items:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="73d0d-102">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="73d0d-102">An image stream.</span></span>
+          description: <span data-ttu-id="7fa16-102">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="7fa16-102">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams'
-          description: <span data-ttu-id="73d0d-103">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-103">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-103">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-103">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="73d0d-104">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-104">The callback</span></span>
+            <span data-ttu-id="7fa16-104">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-104">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithStreamResponse>
@@ -64,14 +64,35 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="73d0d-105">Detecte rostos humanos em locais de face uma imagem e retorna e, opcionalmente com faceIds, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-105">Detect human faces in an image and returns face locations, and optionally with faceIds, landmarks, and attributes.</span></span>'
+    summary: |-
+      <span data-ttu-id="7fa16-105">Detecte rostos humanos em uma imagem, retângulos de face de retorno e, opcionalmente, com faceIds, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-105">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
+      * <span data-ttu-id="7fa16-106">Nenhuma imagem será armazenada.</span><span class="sxs-lookup"><span data-stu-id="7fa16-106">No image will be stored.</span></span> <span data-ttu-id="7fa16-107">Somente o recurso de face extraídos será armazenado no servidor.</span><span class="sxs-lookup"><span data-stu-id="7fa16-107">Only the extracted face feature will be stored on server.</span></span> <span data-ttu-id="7fa16-108">O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face</span><span class="sxs-lookup"><span data-stu-id="7fa16-108">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="7fa16-109">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class="sxs-lookup"><span data-stu-id="7fa16-109">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
+      <span data-ttu-id="7fa16-110">Os recursos de detecção facial armazenado irá expirar e ser excluídos 24 horas após a chamada original da detecção.</span><span class="sxs-lookup"><span data-stu-id="7fa16-110">The stored face feature(s) will expire and be deleted 24 hours after the original detection call.</span></span>
+      * <span data-ttu-id="7fa16-111">Parâmetros opcionais incluem faceId, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-111">Optional parameters include faceId, landmarks, and attributes.</span></span> <span data-ttu-id="7fa16-112">Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído.</span><span class="sxs-lookup"><span data-stu-id="7fa16-112">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span> <span data-ttu-id="7fa16-113">Os resultados retornados de um atributo específico pode não ser altamente precisos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-113">Some of the results returned for specific attributes may not be highly accurate.</span></span>
+      * <span data-ttu-id="7fa16-114">Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP.</span><span class="sxs-lookup"><span data-stu-id="7fa16-114">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="7fa16-115">O tamanho do arquivo de imagem permitida é de 1KB a 6MB.</span><span class="sxs-lookup"><span data-stu-id="7fa16-115">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="7fa16-116">Até 100 faces podem ser retornados para uma imagem.</span><span class="sxs-lookup"><span data-stu-id="7fa16-116">Up to 100 faces can be returned for an image.</span></span> <span data-ttu-id="7fa16-117">Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.</span><span class="sxs-lookup"><span data-stu-id="7fa16-117">Faces are ranked by face rectangle size from large to small.</span></span>
+      * <span data-ttu-id="7fa16-118">Para obter melhores resultados ao consultar [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face</span><span class="sxs-lookup"><span data-stu-id="7fa16-118">For optimal results when querying [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="7fa16-119">Localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' é true), use faces que estão: frontal, claro e com um tamanho mínimo de 200 x 200 pixels (100 pixels, entre os olhos).</span><span class="sxs-lookup"><span data-stu-id="7fa16-119">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' is true), please use faces that are: frontal, clear, and with a minimum size of 200x200 pixels (100 pixels between eyes).</span></span>
+      * <span data-ttu-id="7fa16-120">O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.</span><span class="sxs-lookup"><span data-stu-id="7fa16-120">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="7fa16-121">Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.</span><span class="sxs-lookup"><span data-stu-id="7fa16-121">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="7fa16-122">Valores de diferentes 'detectionModel' podem ser fornecidos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-122">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="7fa16-123">Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="7fa16-123">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="7fa16-124">Modelo</span><span class="sxs-lookup"><span data-stu-id="7fa16-124">Model</span></span> | <span data-ttu-id="7fa16-125">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="7fa16-125">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="7fa16-126">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="7fa16-126">'detection_01':</span></span> | <span data-ttu-id="7fa16-127">O modelo de detecção padrão para [Face-</span><span class="sxs-lookup"><span data-stu-id="7fa16-127">The default detection model for [Face -</span></span>
+      <span data-ttu-id="7fa16-128">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="7fa16-128">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="7fa16-129">É recomendável para detecção de face frontal quase.</span><span class="sxs-lookup"><span data-stu-id="7fa16-129">Recommend for near frontal face detection.</span></span> <span data-ttu-id="7fa16-130">Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas.</span><span class="sxs-lookup"><span data-stu-id="7fa16-130">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="7fa16-131">| | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces.</span><span class="sxs-lookup"><span data-stu-id="7fa16-131">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
+      * <span data-ttu-id="7fa16-132">Valores diferentes de 'recognitionModel' são fornecidos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-132">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="7fa16-133">Se as operações de acompanhamento como verificar, identificar, localizar Similar são necessários, especifique o modelo de reconhecimento com o parâmetro 'recognitionModel'.</span><span class="sxs-lookup"><span data-stu-id="7fa16-133">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="7fa16-134">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7fa16-134">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="7fa16-135">Depois que o especificado, o faceIds detectado será associado com o modelo de reconhecimento especificado.</span><span class="sxs-lookup"><span data-stu-id="7fa16-135">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="7fa16-136">Mais detalhes, consulte [como especificar um modelo de reconhecimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="7fa16-136">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      | <span data-ttu-id="7fa16-137">Modelo</span><span class="sxs-lookup"><span data-stu-id="7fa16-137">Model</span></span> | <span data-ttu-id="7fa16-138">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="7fa16-138">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="7fa16-139">'recognition_01':</span><span class="sxs-lookup"><span data-stu-id="7fa16-139">'recognition_01':</span></span> | <span data-ttu-id="7fa16-140">O modelo de reconhecimento de padrão para [Face-</span><span class="sxs-lookup"><span data-stu-id="7fa16-140">The default recognition model for [Face -</span></span>
+      <span data-ttu-id="7fa16-141">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="7fa16-141">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="7fa16-142">Todos esses faceIds criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="7fa16-142">All those faceIds created before 2019 March are bonded with this recognition model.</span></span> <span data-ttu-id="7fa16-143">| | 'recognition_02': | Modelo de reconhecimento lançado em março de 2019.</span><span class="sxs-lookup"><span data-stu-id="7fa16-143">| | 'recognition_02': | Recognition model released in 2019 March.</span></span> <span data-ttu-id="7fa16-144">'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.</span><span class="sxs-lookup"><span data-stu-id="7fa16-144">'recognition_02' is recommended since its overall accuracy is improved compared with 'recognition_01'.</span></span> |
     syntax:
       content: 'function detectWithStream(image: msRest.HttpRequestBody, options?: Models.FaceDetectWithStreamOptionalParams)'
       parameters:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="73d0d-106">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="73d0d-106">An image stream.</span></span>
+          description: <span data-ttu-id="7fa16-145">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="7fa16-145">An image stream.</span></span>
         - id: options
           type:
             - Models.FaceDetectWithStreamOptionalParams
@@ -94,12 +115,12 @@ items:
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="73d0d-107">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="73d0d-107">An image stream.</span></span>
+          description: <span data-ttu-id="7fa16-146">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="7fa16-146">An image stream.</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="73d0d-108">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-108">The callback</span></span>
+            <span data-ttu-id="7fa16-147">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-147">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithStreamResponse>
@@ -117,16 +138,16 @@ items:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="73d0d-109">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="73d0d-109">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="7fa16-148">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="7fa16-148">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceDetectWithUrlOptionalParams'
-          description: <span data-ttu-id="73d0d-110">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-110">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-149">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-149">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="73d0d-111">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-111">The callback</span></span>
+            <span data-ttu-id="7fa16-150">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-150">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithUrlResponse>
@@ -138,24 +159,34 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="73d0d-112">Detecte rostos humanos em uma imagem, retângulos de face de retorno e, opcionalmente, com faceIds, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-112">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
-      * <span data-ttu-id="73d0d-113">Parâmetros opcionais, incluindo faceId, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-113">Optional parameters including faceId, landmarks, and attributes.</span></span> <span data-ttu-id="73d0d-114">Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído.</span><span class="sxs-lookup"><span data-stu-id="73d0d-114">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span>
-      * <span data-ttu-id="73d0d-115">O recurso de face extraído, em vez da imagem real, será armazenado no servidor.</span><span class="sxs-lookup"><span data-stu-id="73d0d-115">The extracted face feature, instead of the actual image, will be stored on server.</span></span> <span data-ttu-id="73d0d-116">O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face</span><span class="sxs-lookup"><span data-stu-id="73d0d-116">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
-      - <span data-ttu-id="73d0d-117">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class="sxs-lookup"><span data-stu-id="73d0d-117">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span> <span data-ttu-id="73d0d-118">Ela expirará 24 horas após a chamada de detecção.</span><span class="sxs-lookup"><span data-stu-id="73d0d-118">It will expire 24 hours after the detection call.</span></span>
-      * <span data-ttu-id="73d0d-119">Qualidade de imagem de face superior significa melhor detecção e a precisão do reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="73d0d-119">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="73d0d-120">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="73d0d-120">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="73d0d-121">Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP.</span><span class="sxs-lookup"><span data-stu-id="73d0d-121">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="73d0d-122">O tamanho do arquivo de imagem permitida é de 1KB a 6MB.</span><span class="sxs-lookup"><span data-stu-id="73d0d-122">The allowed image file size is from 1KB to 6MB.</span></span>
-      * <span data-ttu-id="73d0d-123">Faces são detectáveis quando seu tamanho é de 36 x 36 para 4096x4096 pixels.</span><span class="sxs-lookup"><span data-stu-id="73d0d-123">Faces are detectable when its size is 36x36 to 4096x4096 pixels.</span></span> <span data-ttu-id="73d0d-124">Se precisa detectar faces muito pequenas, mas não criptografados, tente ampliar a imagem de entrada.</span><span class="sxs-lookup"><span data-stu-id="73d0d-124">If need to detect very small but clear faces, please try to enlarge the input image.</span></span>
-      * <span data-ttu-id="73d0d-125">Até 64 faces podem ser retornados para uma imagem.</span><span class="sxs-lookup"><span data-stu-id="73d0d-125">Up to 64 faces can be returned for an image.</span></span> <span data-ttu-id="73d0d-126">Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.</span><span class="sxs-lookup"><span data-stu-id="73d0d-126">Faces are ranked by face rectangle size from large to small.</span></span>
-      * <span data-ttu-id="73d0d-127">Detector facial prefira as faces frontais e quase frontais.</span><span class="sxs-lookup"><span data-stu-id="73d0d-127">Face detector prefer frontal and near-frontal faces.</span></span> <span data-ttu-id="73d0d-128">Há casos em que faces podem não ser detectados, por exemplo, excepcionalmente grandes ângulos de face (head) ou que está sendo obstruídos ou orientação de imagem incorreto.</span><span class="sxs-lookup"><span data-stu-id="73d0d-128">There are cases that faces may not be detected, e.g. exceptionally large face angles (head-pose) or being occluded, or wrong image orientation.</span></span>
-      * <span data-ttu-id="73d0d-129">Atributos (idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído) pode não ser perfeitamente precisos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-129">Attributes (age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise) may not be perfectly accurate.</span></span> <span data-ttu-id="73d0d-130">Valor de densidade do HeadPose é um campo reservado e sempre retornará 0.</span><span class="sxs-lookup"><span data-stu-id="73d0d-130">HeadPose's pitch value is a reserved field and will always return 0.</span></span>
-      * <span data-ttu-id="73d0d-131">Valores diferentes de 'recognitionModel' são fornecidos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-131">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="73d0d-132">Se as operações de acompanhamento como verificar, identificar, localizar Similar são necessários, especifique o modelo de reconhecimento com o parâmetro 'recognitionModel'.</span><span class="sxs-lookup"><span data-stu-id="73d0d-132">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="73d0d-133">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="73d0d-133">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="73d0d-134">Depois que o especificado, o faceIds detectado será associado com o modelo de reconhecimento especificado.</span><span class="sxs-lookup"><span data-stu-id="73d0d-134">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="73d0d-135">Mais detalhes, consulte [como especificar um modelo de reconhecimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="73d0d-135">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      <span data-ttu-id="7fa16-151">Detecte rostos humanos em uma imagem, retângulos de face de retorno e, opcionalmente, com faceIds, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-151">Detect human faces in an image, return face rectangles, and optionally with faceIds, landmarks, and attributes.</span></span><br />
+      * <span data-ttu-id="7fa16-152">Nenhuma imagem será armazenada.</span><span class="sxs-lookup"><span data-stu-id="7fa16-152">No image will be stored.</span></span> <span data-ttu-id="7fa16-153">Somente o recurso de face extraídos será armazenado no servidor.</span><span class="sxs-lookup"><span data-stu-id="7fa16-153">Only the extracted face feature will be stored on server.</span></span> <span data-ttu-id="7fa16-154">O faceId é um identificador do recurso de detecção facial e será usado na [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face</span><span class="sxs-lookup"><span data-stu-id="7fa16-154">The faceId is an identifier of the face feature and will be used in [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="7fa16-155">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class="sxs-lookup"><span data-stu-id="7fa16-155">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
+      <span data-ttu-id="7fa16-156">Os recursos de detecção facial armazenado irá expirar e ser excluídos 24 horas após a chamada original da detecção.</span><span class="sxs-lookup"><span data-stu-id="7fa16-156">The stored face feature(s) will expire and be deleted 24 hours after the original detection call.</span></span>
+      * <span data-ttu-id="7fa16-157">Parâmetros opcionais incluem faceId, pontos de referência e atributos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-157">Optional parameters include faceId, landmarks, and attributes.</span></span> <span data-ttu-id="7fa16-158">Atributos incluem idade, sexo, headPose, Smiley, facialHair, óculos, emoções, cabelos, composição, oclusão, Acessórios, Desfoque, exposição e ruído.</span><span class="sxs-lookup"><span data-stu-id="7fa16-158">Attributes include age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure and noise.</span></span> <span data-ttu-id="7fa16-159">Os resultados retornados de um atributo específico pode não ser altamente precisos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-159">Some of the results returned for specific attributes may not be highly accurate.</span></span>
+      * <span data-ttu-id="7fa16-160">Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP.</span><span class="sxs-lookup"><span data-stu-id="7fa16-160">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="7fa16-161">O tamanho do arquivo de imagem permitida é de 1KB a 6MB.</span><span class="sxs-lookup"><span data-stu-id="7fa16-161">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="7fa16-162">Até 100 faces podem ser retornados para uma imagem.</span><span class="sxs-lookup"><span data-stu-id="7fa16-162">Up to 100 faces can be returned for an image.</span></span> <span data-ttu-id="7fa16-163">Faces são classificadas pelo tamanho do retângulo de face de uma grande para o menor.</span><span class="sxs-lookup"><span data-stu-id="7fa16-163">Faces are ranked by face rectangle size from large to small.</span></span>
+      * <span data-ttu-id="7fa16-164">Para obter melhores resultados ao consultar [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a)e [Face</span><span class="sxs-lookup"><span data-stu-id="7fa16-164">For optimal results when querying [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239), [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a), and [Face</span></span>
+      - <span data-ttu-id="7fa16-165">Localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' é true), use faces que estão: frontal, claro e com um tamanho mínimo de 200 x 200 pixels (100 pixels, entre os olhos).</span><span class="sxs-lookup"><span data-stu-id="7fa16-165">Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) ('returnFaceId' is true), please use faces that are: frontal, clear, and with a minimum size of 200x200 pixels (100 pixels between eyes).</span></span>
+      * <span data-ttu-id="7fa16-166">O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.</span><span class="sxs-lookup"><span data-stu-id="7fa16-166">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="7fa16-167">Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.</span><span class="sxs-lookup"><span data-stu-id="7fa16-167">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="7fa16-168">Valores de diferentes 'detectionModel' podem ser fornecidos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-168">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="7fa16-169">Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="7fa16-169">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="7fa16-170">Modelo</span><span class="sxs-lookup"><span data-stu-id="7fa16-170">Model</span></span> | <span data-ttu-id="7fa16-171">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="7fa16-171">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="7fa16-172">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="7fa16-172">'detection_01':</span></span> | <span data-ttu-id="7fa16-173">O modelo de detecção padrão para [Face-</span><span class="sxs-lookup"><span data-stu-id="7fa16-173">The default detection model for [Face -</span></span>
+      <span data-ttu-id="7fa16-174">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="7fa16-174">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="7fa16-175">É recomendável para detecção de face frontal quase.</span><span class="sxs-lookup"><span data-stu-id="7fa16-175">Recommend for near frontal face detection.</span></span> <span data-ttu-id="7fa16-176">Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas.</span><span class="sxs-lookup"><span data-stu-id="7fa16-176">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="7fa16-177">| | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces.</span><span class="sxs-lookup"><span data-stu-id="7fa16-177">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
+      * <span data-ttu-id="7fa16-178">Valores diferentes de 'recognitionModel' são fornecidos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-178">Different 'recognitionModel' values are provided.</span></span> <span data-ttu-id="7fa16-179">Se as operações de acompanhamento como verificar, identificar, localizar Similar são necessários, especifique o modelo de reconhecimento com o parâmetro 'recognitionModel'.</span><span class="sxs-lookup"><span data-stu-id="7fa16-179">If follow-up operations like Verify, Identify, Find Similar are needed, please specify the recognition model with 'recognitionModel' parameter.</span></span> <span data-ttu-id="7fa16-180">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="7fa16-180">The default value for 'recognitionModel' is 'recognition_01', if latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="7fa16-181">Depois que o especificado, o faceIds detectado será associado com o modelo de reconhecimento especificado.</span><span class="sxs-lookup"><span data-stu-id="7fa16-181">Once specified, the detected faceIds will be associated with the specified recognition model.</span></span> <span data-ttu-id="7fa16-182">Mais detalhes, consulte [como especificar um modelo de reconhecimento](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span><span class="sxs-lookup"><span data-stu-id="7fa16-182">More details, please refer to [How to specify a recognition model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span></span>
+      | <span data-ttu-id="7fa16-183">Modelo</span><span class="sxs-lookup"><span data-stu-id="7fa16-183">Model</span></span> | <span data-ttu-id="7fa16-184">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="7fa16-184">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="7fa16-185">'recognition_01':</span><span class="sxs-lookup"><span data-stu-id="7fa16-185">'recognition_01':</span></span> | <span data-ttu-id="7fa16-186">O modelo de reconhecimento de padrão para [Face-</span><span class="sxs-lookup"><span data-stu-id="7fa16-186">The default recognition model for [Face -</span></span>
+      <span data-ttu-id="7fa16-187">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="7fa16-187">Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span> <span data-ttu-id="7fa16-188">Todos esses faceIds criados antes de março de 2019 estão Unidos com esse modelo de reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="7fa16-188">All those faceIds created before 2019 March are bonded with this recognition model.</span></span> <span data-ttu-id="7fa16-189">| | 'recognition_02': | Modelo de reconhecimento lançado em março de 2019.</span><span class="sxs-lookup"><span data-stu-id="7fa16-189">| | 'recognition_02': | Recognition model released in 2019 March.</span></span> <span data-ttu-id="7fa16-190">'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.</span><span class="sxs-lookup"><span data-stu-id="7fa16-190">'recognition_02' is recommended since its overall accuracy is improved compared with 'recognition_01'.</span></span> |
     syntax:
       content: 'function detectWithUrl(url: string, options?: Models.FaceDetectWithUrlOptionalParams)'
       parameters:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="73d0d-136">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="73d0d-136">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="7fa16-191">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="7fa16-191">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.FaceDetectWithUrlOptionalParams
@@ -178,12 +209,12 @@ items:
         - id: url
           type:
             - string
-          description: <span data-ttu-id="73d0d-137">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="73d0d-137">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="7fa16-192">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="7fa16-192">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.DetectedFace[]>'
           description: |
-            <span data-ttu-id="73d0d-138">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-138">The callback</span></span>
+            <span data-ttu-id="7fa16-193">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-193">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceDetectWithUrlResponse>
@@ -194,7 +225,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="73d0d-139">Crie uma Face.</span><span class="sxs-lookup"><span data-stu-id="73d0d-139">Create a Face.</span></span>
+    summary: <span data-ttu-id="7fa16-194">Crie uma Face.</span><span class="sxs-lookup"><span data-stu-id="7fa16-194">Create a Face.</span></span>
     syntax:
       content: 'new Face(client: FaceClientContext)'
       parameters:
@@ -202,7 +233,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="73d0d-140">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="73d0d-140">Reference to the service client.</span></span>
+            <span data-ttu-id="7fa16-195">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="7fa16-195">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.Face.findSimilar_2'
     name: 'findSimilar(string, FaceFindSimilarOptionalParams, ServiceCallback<SimilarFace[]>)'
@@ -217,16 +248,16 @@ items:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="73d0d-141">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="73d0d-141">FaceId of the query face.</span></span> <span data-ttu-id="73d0d-142">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="73d0d-142">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="73d0d-143">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="73d0d-143">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="7fa16-196">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="7fa16-196">FaceId of the query face.</span></span> <span data-ttu-id="7fa16-197">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="7fa16-197">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="7fa16-198">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="7fa16-198">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceFindSimilarOptionalParams'
-          description: <span data-ttu-id="73d0d-144">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-144">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-199">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-199">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
           description: |
-            <span data-ttu-id="73d0d-145">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-145">The callback</span></span>
+            <span data-ttu-id="7fa16-200">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-200">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceFindSimilarResponse>
@@ -238,16 +269,16 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="73d0d-146">Considerando faceId da superfície de consulta, para pesquisar os rostos semelhantes de uma matriz de faceId, uma lista de face ou uma lista de face grandes.</span><span class="sxs-lookup"><span data-stu-id="73d0d-146">Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list.</span></span> <span data-ttu-id="73d0d-147">faceId matriz contém as faces criadas pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), que vai expirar 24 horas após a criação.</span><span class="sxs-lookup"><span data-stu-id="73d0d-147">faceId array contains the faces created by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), which will expire 24 hours after creation.</span></span> <span data-ttu-id="73d0d-148">"faceListId" é criado pelo [FaceList - criar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) contendo persistedFaceIds não expiram.</span><span class="sxs-lookup"><span data-stu-id="73d0d-148">A "faceListId" is created by [FaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) containing persistedFaceIds that will not expire.</span></span> <span data-ttu-id="73d0d-149">E "largeFaceListId" é criado pelo [LargeFaceList – criar](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) contendo persistedFaceIds também não expiram.</span><span class="sxs-lookup"><span data-stu-id="73d0d-149">And a "largeFaceListId" is created by [LargeFaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) containing persistedFaceIds that will also not expire.</span></span> <span data-ttu-id="73d0d-150">Dependendo da entrada a lista retornada de rostos semelhantes contém faceIds ou persistedFaceIds classificados por similaridade.</span><span class="sxs-lookup"><span data-stu-id="73d0d-150">Depending on the input the returned similar faces list contains faceIds or persistedFaceIds ranked by similarity.</span></span>
-      <br/><span data-ttu-id="73d0d-151">Localizar similar tem dois modos de trabalho, "matchPerson" e "matchFace".</span><span class="sxs-lookup"><span data-stu-id="73d0d-151">Find similar has two working modes, "matchPerson" and "matchFace".</span></span> <span data-ttu-id="73d0d-152">"matchPerson" é o modo padrão que ele tenta encontrar rostos da mesma pessoa possível usando limites internos da mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-152">"matchPerson" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds.</span></span> <span data-ttu-id="73d0d-153">É útil localizar um conhecido outras fotos da pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-153">It is useful to find a known person's other photos.</span></span> <span data-ttu-id="73d0d-154">Observe que uma lista vazia será retornada se nenhuma face passar os limites internos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-154">Note that an empty list will be returned if no faces pass the internal thresholds.</span></span> <span data-ttu-id="73d0d-155">modo de "matchFace" ignora os limites da mesma pessoa e retorna uma classificação de qualquer forma rostos parecidos, até mesmo a similaridade é baixa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-155">"matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low.</span></span> <span data-ttu-id="73d0d-156">Ele pode ser usado nos casos como pesquisar celebridade rostos.</span><span class="sxs-lookup"><span data-stu-id="73d0d-156">It can be used in the cases like searching celebrity-looking faces.</span></span>
-      <br/><span data-ttu-id="73d0d-157">O 'recognitionModel' associado faceId da superfície de consulta deve ser igual a 'recognitionModel' usada pela matriz faceId de destino, lista de face ou lista de face grandes.</span><span class="sxs-lookup"><span data-stu-id="73d0d-157">The 'recognitionModel' associated with the query face's faceId should be the same as the 'recognitionModel' used by the target faceId array, face list or large face list.</span></span>
+      <span data-ttu-id="7fa16-201">Considerando faceId da superfície de consulta, para pesquisar os rostos semelhantes de uma matriz de faceId, uma lista de face ou uma lista de face grandes.</span><span class="sxs-lookup"><span data-stu-id="7fa16-201">Given query face's faceId, to search the similar-looking faces from a faceId array, a face list or a large face list.</span></span> <span data-ttu-id="7fa16-202">faceId matriz contém as faces criadas pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), que vai expirar 24 horas após a criação.</span><span class="sxs-lookup"><span data-stu-id="7fa16-202">faceId array contains the faces created by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), which will expire 24 hours after creation.</span></span> <span data-ttu-id="7fa16-203">"faceListId" é criado pelo [FaceList - criar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) contendo persistedFaceIds não expiram.</span><span class="sxs-lookup"><span data-stu-id="7fa16-203">A "faceListId" is created by [FaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b) containing persistedFaceIds that will not expire.</span></span> <span data-ttu-id="7fa16-204">E "largeFaceListId" é criado pelo [LargeFaceList – criar](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) contendo persistedFaceIds também não expiram.</span><span class="sxs-lookup"><span data-stu-id="7fa16-204">And a "largeFaceListId" is created by [LargeFaceList - Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) containing persistedFaceIds that will also not expire.</span></span> <span data-ttu-id="7fa16-205">Dependendo da entrada a lista retornada de rostos semelhantes contém faceIds ou persistedFaceIds classificados por similaridade.</span><span class="sxs-lookup"><span data-stu-id="7fa16-205">Depending on the input the returned similar faces list contains faceIds or persistedFaceIds ranked by similarity.</span></span>
+      <br/><span data-ttu-id="7fa16-206">Localizar similar tem dois modos de trabalho, "matchPerson" e "matchFace".</span><span class="sxs-lookup"><span data-stu-id="7fa16-206">Find similar has two working modes, "matchPerson" and "matchFace".</span></span> <span data-ttu-id="7fa16-207">"matchPerson" é o modo padrão que ele tenta encontrar rostos da mesma pessoa possível usando limites internos da mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-207">"matchPerson" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds.</span></span> <span data-ttu-id="7fa16-208">É útil localizar um conhecido outras fotos da pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-208">It is useful to find a known person's other photos.</span></span> <span data-ttu-id="7fa16-209">Observe que uma lista vazia será retornada se nenhuma face passar os limites internos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-209">Note that an empty list will be returned if no faces pass the internal thresholds.</span></span> <span data-ttu-id="7fa16-210">modo de "matchFace" ignora os limites da mesma pessoa e retorna uma classificação de qualquer forma rostos parecidos, até mesmo a similaridade é baixa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-210">"matchFace" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low.</span></span> <span data-ttu-id="7fa16-211">Ele pode ser usado nos casos como pesquisar celebridade rostos.</span><span class="sxs-lookup"><span data-stu-id="7fa16-211">It can be used in the cases like searching celebrity-looking faces.</span></span>
+      <br/><span data-ttu-id="7fa16-212">O 'recognitionModel' associado faceId da superfície de consulta deve ser igual a 'recognitionModel' usada pela matriz faceId de destino, lista de face ou lista de face grandes.</span><span class="sxs-lookup"><span data-stu-id="7fa16-212">The 'recognitionModel' associated with the query face's faceId should be the same as the 'recognitionModel' used by the target faceId array, face list or large face list.</span></span>
     syntax:
       content: 'function findSimilar(faceId: string, options?: Models.FaceFindSimilarOptionalParams)'
       parameters:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="73d0d-158">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="73d0d-158">FaceId of the query face.</span></span> <span data-ttu-id="73d0d-159">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="73d0d-159">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="73d0d-160">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="73d0d-160">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="7fa16-213">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="7fa16-213">FaceId of the query face.</span></span> <span data-ttu-id="7fa16-214">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="7fa16-214">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="7fa16-215">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="7fa16-215">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: options
           type:
             - Models.FaceFindSimilarOptionalParams
@@ -270,12 +301,12 @@ items:
         - id: faceId
           type:
             - string
-          description: <span data-ttu-id="73d0d-161">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="73d0d-161">FaceId of the query face.</span></span> <span data-ttu-id="73d0d-162">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="73d0d-162">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="73d0d-163">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="73d0d-163">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
+          description: <span data-ttu-id="7fa16-216">FaceId do mostrador da consulta.</span><span class="sxs-lookup"><span data-stu-id="7fa16-216">FaceId of the query face.</span></span> <span data-ttu-id="7fa16-217">Usuário precisa chamar Face - detectar primeiro para obter um faceId válido.</span><span class="sxs-lookup"><span data-stu-id="7fa16-217">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="7fa16-218">Observe que essa faceId não é persistente e expirarão após 24 horas após a chamada de detecção</span><span class="sxs-lookup"><span data-stu-id="7fa16-218">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.SimilarFace[]>'
           description: |
-            <span data-ttu-id="73d0d-164">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-164">The callback</span></span>
+            <span data-ttu-id="7fa16-219">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-219">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceFindSimilarResponse>
@@ -287,18 +318,18 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="73d0d-165">Divida candidato rostos em grupos com base na semelhança de face.</span><span class="sxs-lookup"><span data-stu-id="73d0d-165">Divide candidate faces into groups based on face similarity.</span></span><br />
-      * <span data-ttu-id="73d0d-166">A saída é um ou mais grupos de face não contíguo e um messyGroup.</span><span class="sxs-lookup"><span data-stu-id="73d0d-166">The output is one or more disjointed face groups and a messyGroup.</span></span> <span data-ttu-id="73d0d-167">Um grupo de face contém as faces que possuem semelhante procurando, muitas vezes da mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-167">A face group contains faces that have similar looking, often of the same person.</span></span> <span data-ttu-id="73d0d-168">Grupos de rostos são classificados por tamanho de grupo, ou seja, o número de faces.</span><span class="sxs-lookup"><span data-stu-id="73d0d-168">Face groups are ranked by group size, i.e. number of faces.</span></span> <span data-ttu-id="73d0d-169">Observe que as faces que pertencem a uma mesma pessoa podem ser divididos em vários grupos de resultados.</span><span class="sxs-lookup"><span data-stu-id="73d0d-169">Notice that faces belonging to a same person might be split into several groups in the result.</span></span>
-      * <span data-ttu-id="73d0d-170">MessyGroup é um grupo de face especial que contém os rostos que não é possível localizar qualquer face equivalente semelhante de faces originais.</span><span class="sxs-lookup"><span data-stu-id="73d0d-170">MessyGroup is a special face group containing faces that cannot find any similar counterpart face from original faces.</span></span> <span data-ttu-id="73d0d-171">O messyGroup não aparecerão no resultado se todas as faces encontrado suas contrapartes.</span><span class="sxs-lookup"><span data-stu-id="73d0d-171">The messyGroup will not appear in the result if all faces found their counterparts.</span></span>
-      * <span data-ttu-id="73d0d-172">API de grupo precisa faces de pelo menos 2 release candidate e 1000, no máximo.</span><span class="sxs-lookup"><span data-stu-id="73d0d-172">Group API needs at least 2 candidate faces and 1000 at most.</span></span> <span data-ttu-id="73d0d-173">Sugerimos para tentar [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) quando você tem apenas 2 faces de candidato.</span><span class="sxs-lookup"><span data-stu-id="73d0d-173">We suggest to try [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) when you only have 2 candidate faces.</span></span>
-      * <span data-ttu-id="73d0d-174">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo.</span><span class="sxs-lookup"><span data-stu-id="73d0d-174">The 'recognitionModel' associated with the query faces' faceIds should be the same.</span></span>
+      <span data-ttu-id="7fa16-220">Divida candidato rostos em grupos com base na semelhança de face.</span><span class="sxs-lookup"><span data-stu-id="7fa16-220">Divide candidate faces into groups based on face similarity.</span></span><br />
+      * <span data-ttu-id="7fa16-221">A saída é um ou mais grupos de face não contíguo e um messyGroup.</span><span class="sxs-lookup"><span data-stu-id="7fa16-221">The output is one or more disjointed face groups and a messyGroup.</span></span> <span data-ttu-id="7fa16-222">Um grupo de face contém as faces que possuem semelhante procurando, muitas vezes da mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-222">A face group contains faces that have similar looking, often of the same person.</span></span> <span data-ttu-id="7fa16-223">Grupos de rostos são classificados por tamanho de grupo, ou seja, o número de faces.</span><span class="sxs-lookup"><span data-stu-id="7fa16-223">Face groups are ranked by group size, i.e. number of faces.</span></span> <span data-ttu-id="7fa16-224">Observe que as faces que pertencem a uma mesma pessoa podem ser divididos em vários grupos de resultados.</span><span class="sxs-lookup"><span data-stu-id="7fa16-224">Notice that faces belonging to a same person might be split into several groups in the result.</span></span>
+      * <span data-ttu-id="7fa16-225">MessyGroup é um grupo de face especial que contém os rostos que não é possível localizar qualquer face equivalente semelhante de faces originais.</span><span class="sxs-lookup"><span data-stu-id="7fa16-225">MessyGroup is a special face group containing faces that cannot find any similar counterpart face from original faces.</span></span> <span data-ttu-id="7fa16-226">O messyGroup não aparecerão no resultado se todas as faces encontrado suas contrapartes.</span><span class="sxs-lookup"><span data-stu-id="7fa16-226">The messyGroup will not appear in the result if all faces found their counterparts.</span></span>
+      * <span data-ttu-id="7fa16-227">API de grupo precisa faces de pelo menos 2 release candidate e 1000, no máximo.</span><span class="sxs-lookup"><span data-stu-id="7fa16-227">Group API needs at least 2 candidate faces and 1000 at most.</span></span> <span data-ttu-id="7fa16-228">Sugerimos para tentar [enfrentam - verificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) quando você tem apenas 2 faces de candidato.</span><span class="sxs-lookup"><span data-stu-id="7fa16-228">We suggest to try [Face - Verify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523a) when you only have 2 candidate faces.</span></span>
+      * <span data-ttu-id="7fa16-229">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo.</span><span class="sxs-lookup"><span data-stu-id="7fa16-229">The 'recognitionModel' associated with the query faces' faceIds should be the same.</span></span>
     syntax:
       content: 'function group(faceIds: string[], options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="73d0d-175">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-175">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="73d0d-176">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="73d0d-176">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="7fa16-230">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-230">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="7fa16-231">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="7fa16-231">The maximum is 1000 faces</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -321,16 +352,16 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="73d0d-177">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-177">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="73d0d-178">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="73d0d-178">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="7fa16-232">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-232">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="7fa16-233">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="7fa16-233">The maximum is 1000 faces</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="73d0d-179">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-179">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-234">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-234">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
           description: |
-            <span data-ttu-id="73d0d-180">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-180">The callback</span></span>
+            <span data-ttu-id="7fa16-235">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-235">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceGroupResponse>
@@ -348,12 +379,12 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: <span data-ttu-id="73d0d-181">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-181">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="73d0d-182">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="73d0d-182">The maximum is 1000 faces</span></span>
+          description: <span data-ttu-id="7fa16-236">Matriz de candidato faceId criada por meio de detecção facial - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-236">Array of candidate faceId created by Face - Detect.</span></span> <span data-ttu-id="7fa16-237">O máximo é 1.000 faces</span><span class="sxs-lookup"><span data-stu-id="7fa16-237">The maximum is 1000 faces</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.GroupResult>
           description: |
-            <span data-ttu-id="73d0d-183">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-183">The callback</span></span>
+            <span data-ttu-id="7fa16-238">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-238">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceGroupResponse>
@@ -371,16 +402,16 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="73d0d-184">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-184">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="73d0d-185">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="73d0d-185">Each of the faces are identified independently.</span></span> <span data-ttu-id="73d0d-186">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="73d0d-186">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="7fa16-239">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-239">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="7fa16-240">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="7fa16-240">Each of the faces are identified independently.</span></span> <span data-ttu-id="7fa16-241">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="7fa16-241">The valid number of faceIds is between [1, 10].</span></span>'
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceIdentifyOptionalParams'
-          description: <span data-ttu-id="73d0d-187">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-187">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-242">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-242">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
           description: |
-            <span data-ttu-id="73d0d-188">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-188">The callback</span></span>
+            <span data-ttu-id="7fa16-243">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-243">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceIdentifyResponse>
@@ -392,23 +423,23 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="73d0d-189">1-para-muitos identificação para encontrar as correspondências mais próximas da face pessoa consulta específica de um grupo de pessoas ou grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="73d0d-189">1-to-many identification to find the closest matches of the specific query person face from a person group or large person group.</span></span>
-      <br/> <span data-ttu-id="73d0d-190">Para cada face na matriz faceIds, identificar Face irá calcular as semelhanças entre o mostrador da consulta e todas as faces no grupo de pessoa (fornecido pelo personGroupId) ou pessoa grande agrupar (determinada pelo largePersonGroupId) e retornar o candidato pessoa (s) para que enfrentam uma classificação por confiança de similaridade.</span><span class="sxs-lookup"><span data-stu-id="73d0d-190">For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId) or large person group (given by largePersonGroupId), and return candidate person(s) for that face ranked by similarity confidence.</span></span> <span data-ttu-id="73d0d-191">O grupo de pessoa grupo/grande de pessoa deve ser treinado para torná-lo pronto para identificação.</span><span class="sxs-lookup"><span data-stu-id="73d0d-191">The person group/large person group should be trained to make it ready for identification.</span></span> <span data-ttu-id="73d0d-192">Veja mais na [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) e [LargePersonGroup – Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span><span class="sxs-lookup"><span data-stu-id="73d0d-192">See more in [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) and [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span></span>
+      <span data-ttu-id="7fa16-244">1-para-muitos identificação para encontrar as correspondências mais próximas da face pessoa consulta específica de um grupo de pessoas ou grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="7fa16-244">1-to-many identification to find the closest matches of the specific query person face from a person group or large person group.</span></span>
+      <br/> <span data-ttu-id="7fa16-245">Para cada face na matriz faceIds, identificar Face irá calcular as semelhanças entre o mostrador da consulta e todas as faces no grupo de pessoa (fornecido pelo personGroupId) ou pessoa grande agrupar (determinada pelo largePersonGroupId) e retornar o candidato pessoa (s) para que enfrentam uma classificação por confiança de similaridade.</span><span class="sxs-lookup"><span data-stu-id="7fa16-245">For each face in the faceIds array, Face Identify will compute similarities between the query face and all the faces in the person group (given by personGroupId) or large person group (given by largePersonGroupId), and return candidate person(s) for that face ranked by similarity confidence.</span></span> <span data-ttu-id="7fa16-246">O grupo de pessoa grupo/grande de pessoa deve ser treinado para torná-lo pronto para identificação.</span><span class="sxs-lookup"><span data-stu-id="7fa16-246">The person group/large person group should be trained to make it ready for identification.</span></span> <span data-ttu-id="7fa16-247">Veja mais na [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) e [LargePersonGroup – Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span><span class="sxs-lookup"><span data-stu-id="7fa16-247">See more in [PersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395249) and [LargePersonGroup - Train](/docs/services/563879b61984550e40cbbe8d/operations/599ae2d16ac60f11b48b5aa4).</span></span>
       <br/>
-      <span data-ttu-id="73d0d-193">Comentários:</span><span class="sxs-lookup"><span data-stu-id="73d0d-193">Remarks:</span></span><br />
-      * <span data-ttu-id="73d0d-194">O algoritmo permite mais de uma face seja identificada de forma independente na mesma solicitação, mas não mais de 10 faces.</span><span class="sxs-lookup"><span data-stu-id="73d0d-194">The algorithm allows more than one face to be identified independently at the same request, but no more than 10 faces.</span></span>
-      * <span data-ttu-id="73d0d-195">Cada pessoa no grupo de grupo/grande pessoa pessoa poderia ter mais de um rosto, mas não mais do que 248 faces.</span><span class="sxs-lookup"><span data-stu-id="73d0d-195">Each person in the person group/large person group could have more than one face, but no more than 248 faces.</span></span>
-      * <span data-ttu-id="73d0d-196">Qualidade de imagem de face superior significa maior precisão de identificação.</span><span class="sxs-lookup"><span data-stu-id="73d0d-196">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="73d0d-197">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="73d0d-197">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="73d0d-198">Número de candidatos retornado é restrito por maxNumOfCandidatesReturned e confidenceThreshold.</span><span class="sxs-lookup"><span data-stu-id="73d0d-198">Number of candidates returned is restricted by maxNumOfCandidatesReturned and confidenceThreshold.</span></span> <span data-ttu-id="73d0d-199">Se nenhuma pessoa for identificada, os candidatos retornados será uma matriz vazia.</span><span class="sxs-lookup"><span data-stu-id="73d0d-199">If no person is identified, the returned candidates will be an empty array.</span></span>
-      * <span data-ttu-id="73d0d-200">Tente [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) quando você precisa encontrar rostos semelhantes em uma lista de face lista/grande face em vez de um grupo de pessoa/grande de grupo da pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-200">Try [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) when you need to find similar faces from a face list/large face list instead of a person group/large person group.</span></span>
-      * <span data-ttu-id="73d0d-201">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo que o usado pelo grupo-alvo pessoa ou grupo de pessoas grande 'recognitionModel'.</span><span class="sxs-lookup"><span data-stu-id="73d0d-201">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target person group or large person group.</span></span>
+      <span data-ttu-id="7fa16-248">Comentários:</span><span class="sxs-lookup"><span data-stu-id="7fa16-248">Remarks:</span></span><br />
+      * <span data-ttu-id="7fa16-249">O algoritmo permite mais de uma face seja identificada de forma independente na mesma solicitação, mas não mais de 10 faces.</span><span class="sxs-lookup"><span data-stu-id="7fa16-249">The algorithm allows more than one face to be identified independently at the same request, but no more than 10 faces.</span></span>
+      * <span data-ttu-id="7fa16-250">Cada pessoa no grupo de grupo/grande pessoa pessoa poderia ter mais de um rosto, mas não mais do que 248 faces.</span><span class="sxs-lookup"><span data-stu-id="7fa16-250">Each person in the person group/large person group could have more than one face, but no more than 248 faces.</span></span>
+      * <span data-ttu-id="7fa16-251">Qualidade de imagem de face superior significa maior precisão de identificação.</span><span class="sxs-lookup"><span data-stu-id="7fa16-251">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="7fa16-252">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="7fa16-252">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="7fa16-253">Número de candidatos retornado é restrito por maxNumOfCandidatesReturned e confidenceThreshold.</span><span class="sxs-lookup"><span data-stu-id="7fa16-253">Number of candidates returned is restricted by maxNumOfCandidatesReturned and confidenceThreshold.</span></span> <span data-ttu-id="7fa16-254">Se nenhuma pessoa for identificada, os candidatos retornados será uma matriz vazia.</span><span class="sxs-lookup"><span data-stu-id="7fa16-254">If no person is identified, the returned candidates will be an empty array.</span></span>
+      * <span data-ttu-id="7fa16-255">Tente [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) quando você precisa encontrar rostos semelhantes em uma lista de face lista/grande face em vez de um grupo de pessoa/grande de grupo da pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-255">Try [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237) when you need to find similar faces from a face list/large face list instead of a person group/large person group.</span></span>
+      * <span data-ttu-id="7fa16-256">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo que o usado pelo grupo-alvo pessoa ou grupo de pessoas grande 'recognitionModel'.</span><span class="sxs-lookup"><span data-stu-id="7fa16-256">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target person group or large person group.</span></span>
     syntax:
       content: 'function identify(faceIds: string[], options?: Models.FaceIdentifyOptionalParams)'
       parameters:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="73d0d-202">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-202">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="73d0d-203">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="73d0d-203">Each of the faces are identified independently.</span></span> <span data-ttu-id="73d0d-204">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="73d0d-204">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="7fa16-257">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-257">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="7fa16-258">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="7fa16-258">Each of the faces are identified independently.</span></span> <span data-ttu-id="7fa16-259">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="7fa16-259">The valid number of faceIds is between [1, 10].</span></span>'
         - id: options
           type:
             - Models.FaceIdentifyOptionalParams
@@ -431,12 +462,12 @@ items:
         - id: faceIds
           type:
             - 'string[]'
-          description: '<span data-ttu-id="73d0d-205">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-205">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="73d0d-206">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="73d0d-206">Each of the faces are identified independently.</span></span> <span data-ttu-id="73d0d-207">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="73d0d-207">The valid number of faceIds is between [1, 10].</span></span>'
+          description: '<span data-ttu-id="7fa16-260">Matriz de consulta faces faceIds, criado por Face - detectar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-260">Array of query faces faceIds, created by the Face - Detect.</span></span> <span data-ttu-id="7fa16-261">Cada uma as faces são identificadas de maneira independente.</span><span class="sxs-lookup"><span data-stu-id="7fa16-261">Each of the faces are identified independently.</span></span> <span data-ttu-id="7fa16-262">O número de faceIds válido é entre [1, 10].</span><span class="sxs-lookup"><span data-stu-id="7fa16-262">The valid number of faceIds is between [1, 10].</span></span>'
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.IdentifyResult[]>'
           description: |
-            <span data-ttu-id="73d0d-208">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-208">The callback</span></span>
+            <span data-ttu-id="7fa16-263">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-263">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceIdentifyResponse>
@@ -448,23 +479,23 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="73d0d-209">Verifique se os dois rostos pertencem a uma mesma pessoa ou se uma face pertence a uma pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-209">Verify whether two faces belong to a same person or whether one face belongs to a person.</span></span>
+      <span data-ttu-id="7fa16-264">Verifique se os dois rostos pertencem a uma mesma pessoa ou se uma face pertence a uma pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-264">Verify whether two faces belong to a same person or whether one face belongs to a person.</span></span>
       <br/>
-      <span data-ttu-id="73d0d-210">Comentários:</span><span class="sxs-lookup"><span data-stu-id="73d0d-210">Remarks:</span></span><br />
-      * <span data-ttu-id="73d0d-211">Qualidade de imagem de face superior significa maior precisão de identificação.</span><span class="sxs-lookup"><span data-stu-id="73d0d-211">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="73d0d-212">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="73d0d-212">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
-      * <span data-ttu-id="73d0d-213">Para os cenários que são sensíveis a precisão, verifique o bom senso.</span><span class="sxs-lookup"><span data-stu-id="73d0d-213">For the scenarios that are sensitive to accuracy please make your own judgment.</span></span>
-      * <span data-ttu-id="73d0d-214">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo que 'recognitionModel' usada pela face de destino, grupo de pessoas ou grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="73d0d-214">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target face, person group or large person group.</span></span>
+      <span data-ttu-id="7fa16-265">Comentários:</span><span class="sxs-lookup"><span data-stu-id="7fa16-265">Remarks:</span></span><br />
+      * <span data-ttu-id="7fa16-266">Qualidade de imagem de face superior significa maior precisão de identificação.</span><span class="sxs-lookup"><span data-stu-id="7fa16-266">Higher face image quality means better identification precision.</span></span> <span data-ttu-id="7fa16-267">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="7fa16-267">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="7fa16-268">Para os cenários que são sensíveis a precisão, verifique o bom senso.</span><span class="sxs-lookup"><span data-stu-id="7fa16-268">For the scenarios that are sensitive to accuracy please make your own judgment.</span></span>
+      * <span data-ttu-id="7fa16-269">O 'recognitionModel' associado faceIds dos rostos de consulta deve ser o mesmo que 'recognitionModel' usada pela face de destino, grupo de pessoas ou grupo de pessoas grandes.</span><span class="sxs-lookup"><span data-stu-id="7fa16-269">The 'recognitionModel' associated with the query faces' faceIds should be the same as the 'recognitionModel' used by the target face, person group or large person group.</span></span>
     syntax:
       content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="73d0d-215">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-215">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-270">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-270">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="73d0d-216">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-216">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-271">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-271">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -487,20 +518,20 @@ items:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="73d0d-217">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-217">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-272">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-272">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="73d0d-218">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-218">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-273">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-273">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="73d0d-219">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-219">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-274">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-274">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="73d0d-220">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-220">The callback</span></span>
+            <span data-ttu-id="7fa16-275">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-275">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToFaceResponse>
@@ -518,16 +549,16 @@ items:
         - id: faceId1
           type:
             - string
-          description: '<span data-ttu-id="73d0d-221">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-221">FaceId of the first face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-276">faceId da face primeiro, é proveniente de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-276">FaceId of the first face, comes from Face - Detect</span></span>'
         - id: faceId2
           type:
             - string
-          description: '<span data-ttu-id="73d0d-222">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-222">FaceId of the second face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-277">faceId da face segundo, provenientes de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-277">FaceId of the second face, comes from Face - Detect</span></span>'
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="73d0d-223">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-223">The callback</span></span>
+            <span data-ttu-id="7fa16-278">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-278">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToFaceResponse>
@@ -545,20 +576,20 @@ items:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="73d0d-224">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-224">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-279">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-279">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="73d0d-225">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-225">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="73d0d-226">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-226">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="7fa16-280">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-280">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="7fa16-281">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-281">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceVerifyFaceToPersonOptionalParams'
-          description: <span data-ttu-id="73d0d-227">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="73d0d-227">The optional parameters</span></span>
+          description: <span data-ttu-id="7fa16-282">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="7fa16-282">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="73d0d-228">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-228">The callback</span></span>
+            <span data-ttu-id="7fa16-283">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-283">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToPersonResponse>
@@ -569,18 +600,18 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="73d0d-229">Verifique se os dois rostos pertencem a uma mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-229">Verify whether two faces belong to a same person.</span></span> <span data-ttu-id="73d0d-230">Compara uma face Id com a Id de uma pessoa</span><span class="sxs-lookup"><span data-stu-id="73d0d-230">Compares a face Id with a Person Id</span></span>
+    summary: <span data-ttu-id="7fa16-284">Verifique se os dois rostos pertencem a uma mesma pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-284">Verify whether two faces belong to a same person.</span></span> <span data-ttu-id="7fa16-285">Compara uma face Id com a Id de uma pessoa</span><span class="sxs-lookup"><span data-stu-id="7fa16-285">Compares a face Id with a Person Id</span></span>
     syntax:
       content: 'function verifyFaceToPerson(faceId: string, personId: string, options?: Models.FaceVerifyFaceToPersonOptionalParams)'
       parameters:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="73d0d-231">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-231">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-286">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-286">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="73d0d-232">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-232">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="73d0d-233">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-233">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="7fa16-287">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-287">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="7fa16-288">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-288">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: options
           type:
             - Models.FaceVerifyFaceToPersonOptionalParams
@@ -603,16 +634,16 @@ items:
         - id: faceId
           type:
             - string
-          description: '<span data-ttu-id="73d0d-234">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="73d0d-234">FaceId of the face, comes from Face - Detect</span></span>'
+          description: '<span data-ttu-id="7fa16-289">FaceId da face, vem de detecção facial - detectar</span><span class="sxs-lookup"><span data-stu-id="7fa16-289">FaceId of the face, comes from Face - Detect</span></span>'
         - id: personId
           type:
             - string
-          description: <span data-ttu-id="73d0d-235">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="73d0d-235">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="73d0d-236">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="73d0d-236">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
+          description: <span data-ttu-id="7fa16-290">Especifica uma determinada pessoa em um grupo de pessoa ou um grupo grande de pessoa.</span><span class="sxs-lookup"><span data-stu-id="7fa16-290">Specify a certain person in a person group or a large person group.</span></span> <span data-ttu-id="7fa16-291">personId é criado no PersonGroup pessoa - crie ou pessoa LargePersonGroup – criar.</span><span class="sxs-lookup"><span data-stu-id="7fa16-291">personId is created in PersonGroup Person - Create or LargePersonGroup Person - Create.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.VerifyResult>
           description: |
-            <span data-ttu-id="73d0d-237">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="73d0d-237">The callback</span></span>
+            <span data-ttu-id="7fa16-292">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="7fa16-292">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceVerifyFaceToPersonResponse>

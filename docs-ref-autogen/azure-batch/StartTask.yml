@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="5b43c-101">Em lotes repetirá as tarefas quando uma operação de recuperação é disparada em um nó.</span><span class="sxs-lookup"><span data-stu-id="5b43c-101">Batch will retry Tasks when a recovery operation is triggered on a Node.</span></span> <span data-ttu-id="5b43c-102">Exemplos de operações de recuperação incluem (mas não estão limitados a) quando um nó não íntegro é reinicializado ou um nó de computação desapareceu devido à falha do host.</span><span class="sxs-lookup"><span data-stu-id="5b43c-102">Examples of recovery operations include (but are not limited to) when an unhealthy Node is rebooted or a Compute Node disappeared due to host failure.</span></span> <span data-ttu-id="5b43c-103">Repete devido à recuperação de operações são independentes e não são contadas em relação a maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="5b43c-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="5b43c-104">Mesmo se a maxTaskRetryCount é 0, uma repetição interna devido a uma operação de recuperação pode ocorrer.</span><span class="sxs-lookup"><span data-stu-id="5b43c-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="5b43c-105">Por isso, todas as tarefas devem ser idempotentes.</span><span class="sxs-lookup"><span data-stu-id="5b43c-105">Because of this, all Tasks should be idempotent.</span></span> <span data-ttu-id="5b43c-106">Isso significa que as tarefas precisam tolerar que está sendo interrompida e reiniciada sem causar nenhum dano ou dados duplicados.</span><span class="sxs-lookup"><span data-stu-id="5b43c-106">This means Tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="5b43c-107">A melhor prática para tarefas de longa execução é usar alguma forma de ponto de verificação.</span><span class="sxs-lookup"><span data-stu-id="5b43c-107">The best practice for long running Tasks is to use some form of checkpointing.</span></span> <span data-ttu-id="5b43c-108">Em alguns casos o início tarefa pode ser executada novamente, mesmo que o nó de computação não foi reinicializado.</span><span class="sxs-lookup"><span data-stu-id="5b43c-108">In some cases the start Task may be re-run even though the Compute Node was not rebooted.</span></span> <span data-ttu-id="5b43c-109">Especial cuidado para evitar iniciar tarefas que criam breakaway processam ou instalar/iniciar serviços desde o início do diretório de trabalho de tarefa, pois isso bloqueará o lote seja capaz de executar novamente o tarefa de início.</span><span class="sxs-lookup"><span data-stu-id="5b43c-109">Special care should be taken to avoid start Tasks which create breakaway process or install/launch services from the start Task working directory, as this will block Batch from being able to re-run the start Task.</span></span>'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5b43c-110">A linha de comando não é executado em um shell e, portanto, não pode tirar proveito dos recursos do shell, como expansão de variáveis de ambiente.</span><span class="sxs-lookup"><span data-stu-id="5b43c-110">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="5b43c-111">Se você quiser tirar proveito desses recursos, você deve invocar o shell de linha de comando, por exemplo, usando "cmd /c MyCommand" no Windows ou "/ bin/sh - c MyCommand" no Linux.</span><span class="sxs-lookup"><span data-stu-id="5b43c-111">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="5b43c-112">Se a linha de comando se refere aos caminhos de arquivos, ele deve usar um caminho relativo (relativo ao diretório de trabalho de tarefa) ou usar a variável de ambiente fornecido em lotes (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="5b43c-112">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5b43c-113">Quando isso for especificado, todos os diretórios recursivamente abaixo de AZ_BATCH_NODE_ROOT_DIR (a raiz dos diretórios do lote do Azure no nó) são mapeadas para o contêiner, todas as variáveis de ambiente da tarefa são mapeadas para o contêiner e é a linha de comando da tarefa executado no contêiner.</span><span class="sxs-lookup"><span data-stu-id="5b43c-113">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="5b43c-114">Arquivos gerados no contêiner fora AZ_BATCH_NODE_ROOT_DIR podem não ser refletidos no disco de host, o que significa que as APIs de arquivo de lote não poderá acessar esses arquivos.</span><span class="sxs-lookup"><span data-stu-id="5b43c-114">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5b43c-115">O serviço de lote repete uma tarefa se seu código de saída é diferente de zero.</span><span class="sxs-lookup"><span data-stu-id="5b43c-115">The Batch service retries a Task if its exit code is nonzero.</span></span> <span data-ttu-id="5b43c-116">Observe que esse valor controla especificamente o número de tentativas.</span><span class="sxs-lookup"><span data-stu-id="5b43c-116">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="5b43c-117">O serviço em lotes tentará a tarefa uma vez e, em seguida, pode ser executado novamente até esse limite.</span><span class="sxs-lookup"><span data-stu-id="5b43c-117">The Batch service will try the Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="5b43c-118">Por exemplo, se a contagem máxima de repetição for 3, o lote tentará a tarefa até 4 vezes (uma tentativa inicial e 3 repetições).</span><span class="sxs-lookup"><span data-stu-id="5b43c-118">For example, if the maximum retry count is 3, Batch tries the Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="5b43c-119">Se a contagem máxima de novas tentativas for 0, o serviço de lote não tentará novamente a tarefa.</span><span class="sxs-lookup"><span data-stu-id="5b43c-119">If the maximum retry count is 0, the Batch service does not retry the Task.</span></span> <span data-ttu-id="5b43c-120">Se a contagem máxima de novas tentativas for -1, o serviço em lotes tentará a tarefa novamente sem limite.</span><span class="sxs-lookup"><span data-stu-id="5b43c-120">If the maximum retry count is -1, the Batch service retries the Task without limit.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5b43c-121">Os arquivos listados nesse elemento estão localizados no diretório de trabalho da tarefa.</span><span class="sxs-lookup"><span data-stu-id="5b43c-121">Files listed under this element are located in the Task's working directory.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5b43c-122">Se omitido, a tarefa é executada como um usuário não administrativo exclusivo para a tarefa.</span><span class="sxs-lookup"><span data-stu-id="5b43c-122">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5b43c-123">Se true e o início tarefa falhar em um nó, o serviço de lote repete a tarefa inicial até sua contagem máxima de novas tentativas (maxTaskRetryCount).</span><span class="sxs-lookup"><span data-stu-id="5b43c-123">If true and the start Task fails on a Node, the Batch service retries the start Task up to its maximum retry count (maxTaskRetryCount).</span></span> <span data-ttu-id="5b43c-124">Se a tarefa tem ainda não tiver sido concluída com êxito depois de todas as novas tentativas, em seguida, as marcas de serviço de lote o nó inutilizável e não agende tarefas a ela.</span><span class="sxs-lookup"><span data-stu-id="5b43c-124">If the Task has still not completed successfully after all retries, then the Batch service marks the Node unusable, and will not schedule Tasks to it.</span></span> <span data-ttu-id="5b43c-125">Essa condição pode ser detectada por meio dos detalhes de informações de estado e de falha de nó de computação.</span><span class="sxs-lookup"><span data-stu-id="5b43c-125">This condition can be detected via the Compute Node state and failure info details.</span></span> <span data-ttu-id="5b43c-126">Se for false, o serviço de lote não aguardará o conclusão da tarefa de início.</span><span class="sxs-lookup"><span data-stu-id="5b43c-126">If false, the Batch service will not wait for the start Task to complete.</span></span> <span data-ttu-id="5b43c-127">Nesse caso, outras tarefas de iniciar a execução no nó de computação durante o início de que tarefa ainda está em execução; e mesmo se a iniciar a tarefa falhar, novas tarefas continuará a ser agendada no nó de computação.</span><span class="sxs-lookup"><span data-stu-id="5b43c-127">In this case, other Tasks can start executing on the Compute Node while the start Task is still running; and even if the start Task fails, new Tasks will continue to be scheduled on the Compute Node.</span></span> <span data-ttu-id="5b43c-128">O padrão é false.</span><span class="sxs-lookup"><span data-stu-id="5b43c-128">The default is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

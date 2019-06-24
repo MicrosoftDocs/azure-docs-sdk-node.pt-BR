@@ -1,0 +1,136 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    fullName: VirtualMachineConfiguration
+    children:
+      - azure-batch.VirtualMachineConfiguration.containerConfiguration
+      - azure-batch.VirtualMachineConfiguration.dataDisks
+      - azure-batch.VirtualMachineConfiguration.imageReference
+      - azure-batch.VirtualMachineConfiguration.licenseType
+      - azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+      - azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.containerConfiguration
+    name: containerConfiguration
+    fullName: containerConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8c060-101">Se for especificado, a instalação é executada em cada nó de computação no Pool para permitir que as tarefas sejam executadas em contêineres.</span><span class="sxs-lookup"><span data-stu-id="8c060-101">If specified, setup is performed on each Compute Node in the Pool to allow Tasks to run in containers.</span></span> <span data-ttu-id="8c060-102">Regulares todas as tarefas e tarefas do Gerenciador de trabalho executadas neste pool devem especificar a propriedade containerSettings e todas as outras tarefas podem especificá-lo.</span><span class="sxs-lookup"><span data-stu-id="8c060-102">All regular Tasks and Job manager Tasks run on this Pool must specify the containerSettings property, and all other Tasks may specify it.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerConfiguration?: ContainerConfiguration'
+      return:
+        type:
+          - azure-batch.ContainerConfiguration
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.dataDisks
+    name: dataDisks
+    fullName: dataDisks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8c060-103">Esta propriedade deve ser especificado se a nós de computação no Pool precisa ter discos de dados vazios anexados a eles.</span><span class="sxs-lookup"><span data-stu-id="8c060-103">This property must be specified if the Compute Nodes in the Pool need to have empty data disks attached to them.</span></span> <span data-ttu-id="8c060-104">Isso não pode ser atualizado.</span><span class="sxs-lookup"><span data-stu-id="8c060-104">This cannot be updated.</span></span> <span data-ttu-id="8c060-105">Cada nó de computação obtém seu próprio disco (o disco não é um compartilhamento de arquivos).</span><span class="sxs-lookup"><span data-stu-id="8c060-105">Each Compute Node gets its own disk (the disk is not a file share).</span></span> <span data-ttu-id="8c060-106">Não não possível anexar discos existentes, cada disco anexado está vazio.</span><span class="sxs-lookup"><span data-stu-id="8c060-106">Existing disks cannot be attached, each attached disk is empty.</span></span> <span data-ttu-id="8c060-107">Quando o nó de computação é removido do Pool, o disco e todos os dados associados a ele também é excluído.</span><span class="sxs-lookup"><span data-stu-id="8c060-107">When the Compute Node is removed from the Pool, the disk and all data associated with it is also deleted.</span></span> <span data-ttu-id="8c060-108">O disco não está formatado depois de ser anexado, ele deve ser formatado antes do uso – para obter mais informações, consulte https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux e https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.</span><span class="sxs-lookup"><span data-stu-id="8c060-108">The disk is not formatted after being attached, it must be formatted before use - for more information see https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux and https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataDisks?: DataDisk[]'
+      return:
+        type:
+          - 'azure-batch.DataDisk[]'
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.imageReference
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'imageReference: ImageReference'
+      return:
+        type:
+          - azure-batch.ImageReference
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="8c060-109">Isso só se aplica a imagens que contêm o sistema operacional Windows e só devem ser usadas quando você mantém válido licenças locais para os nós de computação que serão implantados.</span><span class="sxs-lookup"><span data-stu-id="8c060-109">This only applies to Images that contain the Windows operating system, and should only be used when you hold valid on-premises licenses for the Compute Nodes which will be deployed.</span></span> <span data-ttu-id="8c060-110">Não se omitido, nenhum local licenciamento desconto é aplicado.</span><span class="sxs-lookup"><span data-stu-id="8c060-110">If omitted, no on-premises licensing discount is applied.</span></span> <span data-ttu-id="8c060-111">Os valores são:</span><span class="sxs-lookup"><span data-stu-id="8c060-111">Values are:</span></span>
+
+      <span data-ttu-id="8c060-112">Windows_Server - a licença do local é para o Windows Server.</span><span class="sxs-lookup"><span data-stu-id="8c060-112">Windows_Server - The on-premises license is for Windows Server.</span></span>
+      <span data-ttu-id="8c060-113">Windows_Client - a licença do local é para o cliente do Windows.</span><span class="sxs-lookup"><span data-stu-id="8c060-113">Windows_Client - The on-premises license is for Windows Client.</span></span>
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+    name: nodeAgentSKUId
+    fullName: nodeAgentSKUId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8c060-114">O agente do nó de computação do lote é um programa que é executado em cada nó de computação no Pool e fornece a interface de comando e controle entre o nó de computação e o serviço de lote.</span><span class="sxs-lookup"><span data-stu-id="8c060-114">The Batch Compute Node agent is a program that runs on each Compute Node in the Pool, and provides the command-and-control interface between the Compute Node and the Batch service.</span></span> <span data-ttu-id="8c060-115">Há diferentes implementações do agente de nó de computação, conhecidas como SKUs, para diferentes sistemas operacionais.</span><span class="sxs-lookup"><span data-stu-id="8c060-115">There are different implementations of the Compute Node agent, known as SKUs, for different operating systems.</span></span> <span data-ttu-id="8c060-116">Você deve especificar um SKU que corresponde à referência de imagem selecionada do agente do nó de computação.</span><span class="sxs-lookup"><span data-stu-id="8c060-116">You must specify a Compute Node agent SKU which matches the selected Image reference.</span></span> <span data-ttu-id="8c060-117">Para obter a lista de agentes com suporte de nó de computação SKUs junto com sua lista de referências de imagem verificadas, consulte a operação ''SKU do agente do nó de computação com suporte lista''.</span><span class="sxs-lookup"><span data-stu-id="8c060-117">To get the list of supported Compute Node agent SKUs along with their list of verified Image references, see the ''List supported Compute Node agent SKUs'' operation.</span></span>'
+    syntax:
+      content: 'nodeAgentSKUId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8c060-118">Essa propriedade não deve ser especificado se a propriedade imageReference Especifica uma imagem do sistema operacional Linux.</span><span class="sxs-lookup"><span data-stu-id="8c060-118">This property must not be specified if the imageReference property specifies a Linux OS Image.</span></span>
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - azure-batch.WindowsConfiguration
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerConfiguration
+    name: ContainerConfiguration
+    spec.typeScript:
+      - name: ContainerConfiguration
+        fullName: ContainerConfiguration
+        uid: azure-batch.ContainerConfiguration
+  - uid: 'azure-batch.DataDisk[]'
+    name: 'DataDisk[]'
+    spec.typeScript:
+      - name: DataDisk
+        fullName: DataDisk
+        uid: azure-batch.DataDisk
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ImageReference
+    name: ImageReference
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: azure-batch.ImageReference
+  - uid: azure-batch.WindowsConfiguration
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: azure-batch.WindowsConfiguration

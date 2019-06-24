@@ -32,7 +32,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: <span data-ttu-id="cb057-101">Classe que representa um FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="cb057-101">Class representing a FaceListOperations.</span></span>
+    summary: <span data-ttu-id="c3e81-101">Classe que representa um FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="c3e81-101">Class representing a FaceListOperations.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceListOperations.addFaceFromStream_2'
     name: 'addFaceFromStream(string, msRest.HttpRequestBody, FaceListAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -47,20 +47,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-102">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-102">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-102">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-102">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="cb057-103">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="cb057-103">An image stream.</span></span>
+          description: <span data-ttu-id="c3e81-103">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="c3e81-103">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="cb057-104">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-104">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-104">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-104">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="cb057-105">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-105">The callback</span></span>
+            <span data-ttu-id="c3e81-105">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-105">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromStreamResponse>
@@ -72,19 +72,32 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="cb057-106">Adicione uma face a uma lista de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-106">Add a face to a face list.</span></span> <span data-ttu-id="cb057-107">A face de entrada é especificada como uma imagem com um retângulo targetFace.</span><span class="sxs-lookup"><span data-stu-id="cb057-107">The input face is specified as an image with a targetFace rectangle.</span></span>
-      <span data-ttu-id="cb057-108">Ele retorna um persistedFaceId que representa a face adicional e persistedFaceId não expiram.</span><span class="sxs-lookup"><span data-stu-id="cb057-108">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+      <span data-ttu-id="c3e81-106">Adicione uma face para obter uma lista especificada de face, até 1.000 faces.</span><span class="sxs-lookup"><span data-stu-id="c3e81-106">Add a face to a specified face list, up to 1,000 faces.</span></span>
+      <br /> <span data-ttu-id="c3e81-107">Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace.</span><span class="sxs-lookup"><span data-stu-id="c3e81-107">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="c3e81-108">Ele retorna um persistedFaceId que representa a face adicionada.</span><span class="sxs-lookup"><span data-stu-id="c3e81-108">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="c3e81-109">Nenhuma imagem será armazenada.</span><span class="sxs-lookup"><span data-stu-id="c3e81-109">No image will be stored.</span></span> <span data-ttu-id="c3e81-110">Somente o recurso de face extraído será armazenado no servidor até que [FaceList - excluir Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) ou [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) é chamado.</span><span class="sxs-lookup"><span data-stu-id="c3e81-110">Only the extracted face feature will be stored on server until [FaceList - Delete Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) or [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
+      <br /> <span data-ttu-id="c3e81-111">Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="c3e81-111">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="c3e81-112">Qualidade de imagem de face superior significa melhor detecção e a precisão do reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="c3e81-112">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="c3e81-113">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="c3e81-113">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="c3e81-114">Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP.</span><span class="sxs-lookup"><span data-stu-id="c3e81-114">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="c3e81-115">O tamanho do arquivo de imagem permitida é de 1KB a 6MB.</span><span class="sxs-lookup"><span data-stu-id="c3e81-115">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="c3e81-116">"targetFace" retângulo deve conter uma face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-116">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="c3e81-117">Zero ou várias faces serão considerados um erro.</span><span class="sxs-lookup"><span data-stu-id="c3e81-117">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="c3e81-118">Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.</span><span class="sxs-lookup"><span data-stu-id="c3e81-118">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="c3e81-119">Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.</span><span class="sxs-lookup"><span data-stu-id="c3e81-119">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="c3e81-120">Adição/exclusão de faces de/para uma lista de face mesmo são processadas sequencialmente face diferente para/de listas e estão em paralelo.</span><span class="sxs-lookup"><span data-stu-id="c3e81-120">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="c3e81-121">O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.</span><span class="sxs-lookup"><span data-stu-id="c3e81-121">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="c3e81-122">Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.</span><span class="sxs-lookup"><span data-stu-id="c3e81-122">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="c3e81-123">Valores de diferentes 'detectionModel' podem ser fornecidos.</span><span class="sxs-lookup"><span data-stu-id="c3e81-123">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="c3e81-124">Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="c3e81-124">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="c3e81-125">Modelo</span><span class="sxs-lookup"><span data-stu-id="c3e81-125">Model</span></span> | <span data-ttu-id="c3e81-126">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="c3e81-126">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="c3e81-127">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="c3e81-127">'detection_01':</span></span> | <span data-ttu-id="c3e81-128">O modelo de detecção padrão para [FaceList - adicionar</span><span class="sxs-lookup"><span data-stu-id="c3e81-128">The default detection model for [FaceList - Add</span></span>
+      <span data-ttu-id="c3e81-129">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span><span class="sxs-lookup"><span data-stu-id="c3e81-129">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span></span> <span data-ttu-id="c3e81-130">É recomendável para detecção de face frontal quase.</span><span class="sxs-lookup"><span data-stu-id="c3e81-130">Recommend for near frontal face detection.</span></span> <span data-ttu-id="c3e81-131">Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas.</span><span class="sxs-lookup"><span data-stu-id="c3e81-131">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="c3e81-132">| | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces.</span><span class="sxs-lookup"><span data-stu-id="c3e81-132">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-109">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-109">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-133">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-133">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="cb057-110">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="cb057-110">An image stream.</span></span>
+          description: <span data-ttu-id="c3e81-134">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="c3e81-134">An image stream.</span></span>
         - id: options
           type:
             - Models.FaceListAddFaceFromStreamOptionalParams
@@ -107,16 +120,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-111">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-111">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-135">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-135">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="cb057-112">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="cb057-112">An image stream.</span></span>
+          description: <span data-ttu-id="c3e81-136">Um fluxo de imagem.</span><span class="sxs-lookup"><span data-stu-id="c3e81-136">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="cb057-113">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-113">The callback</span></span>
+            <span data-ttu-id="c3e81-137">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-137">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromStreamResponse>
@@ -134,20 +147,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-114">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-114">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-138">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-138">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="cb057-115">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="cb057-115">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c3e81-139">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="c3e81-139">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="cb057-116">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-116">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-140">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-140">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="cb057-117">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-117">The callback</span></span>
+            <span data-ttu-id="c3e81-141">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-141">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromUrlResponse>
@@ -159,19 +172,32 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="cb057-118">Adicione uma face a uma lista de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-118">Add a face to a face list.</span></span> <span data-ttu-id="cb057-119">A face de entrada é especificada como uma imagem com um retângulo targetFace.</span><span class="sxs-lookup"><span data-stu-id="cb057-119">The input face is specified as an image with a targetFace rectangle.</span></span>
-      <span data-ttu-id="cb057-120">Ele retorna um persistedFaceId que representa a face adicional e persistedFaceId não expiram.</span><span class="sxs-lookup"><span data-stu-id="cb057-120">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+      <span data-ttu-id="c3e81-142">Adicione uma face para obter uma lista especificada de face, até 1.000 faces.</span><span class="sxs-lookup"><span data-stu-id="c3e81-142">Add a face to a specified face list, up to 1,000 faces.</span></span>
+      <br /> <span data-ttu-id="c3e81-143">Para lidar com uma imagem contém várias faces, face de entrada pode ser especificado como uma imagem com um retângulo targetFace.</span><span class="sxs-lookup"><span data-stu-id="c3e81-143">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="c3e81-144">Ele retorna um persistedFaceId que representa a face adicionada.</span><span class="sxs-lookup"><span data-stu-id="c3e81-144">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="c3e81-145">Nenhuma imagem será armazenada.</span><span class="sxs-lookup"><span data-stu-id="c3e81-145">No image will be stored.</span></span> <span data-ttu-id="c3e81-146">Somente o recurso de face extraído será armazenado no servidor até que [FaceList - excluir Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) ou [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) é chamado.</span><span class="sxs-lookup"><span data-stu-id="c3e81-146">Only the extracted face feature will be stored on server until [FaceList - Delete Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) or [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
+      <br /> <span data-ttu-id="c3e81-147">Observação persistedFaceId é diferente do faceId gerado pelo [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="c3e81-147">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="c3e81-148">Qualidade de imagem de face superior significa melhor detecção e a precisão do reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="c3e81-148">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="c3e81-149">Considere as faces de alta qualidade: frontais, clear e face tamanho é de 200 x 200 pixels (100 pixels, entre os olhos) ou maior.</span><span class="sxs-lookup"><span data-stu-id="c3e81-149">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="c3e81-150">Há suporte para JPEG, PNG, GIF (o primeiro quadro) e formato BMP.</span><span class="sxs-lookup"><span data-stu-id="c3e81-150">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="c3e81-151">O tamanho do arquivo de imagem permitida é de 1KB a 6MB.</span><span class="sxs-lookup"><span data-stu-id="c3e81-151">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="c3e81-152">"targetFace" retângulo deve conter uma face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-152">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="c3e81-153">Zero ou várias faces serão considerados um erro.</span><span class="sxs-lookup"><span data-stu-id="c3e81-153">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="c3e81-154">Se o retângulo "targetFace" fornecido não for retornado por [enfrentam - detectar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), não há nenhuma garantia para detectar e adicionar a face com êxito.</span><span class="sxs-lookup"><span data-stu-id="c3e81-154">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="c3e81-155">Fora do tamanho de face detectável (36 x pixels de 4096 x 36 4096), grandes occlusions pose head ou grandes causará falhas.</span><span class="sxs-lookup"><span data-stu-id="c3e81-155">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="c3e81-156">Adição/exclusão de faces de/para uma lista de face mesmo são processadas sequencialmente face diferente para/de listas e estão em paralelo.</span><span class="sxs-lookup"><span data-stu-id="c3e81-156">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="c3e81-157">O tamanho mínimo de face detectável é de 36 x 36 pixels em uma imagem não maior que 1920 x 1080 pixels.</span><span class="sxs-lookup"><span data-stu-id="c3e81-157">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="c3e81-158">Imagens com dimensões mais que 1920 x 1080 pixels precisará de um tamanho de face mínimos proporcionalmente maior.</span><span class="sxs-lookup"><span data-stu-id="c3e81-158">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="c3e81-159">Valores de diferentes 'detectionModel' podem ser fornecidos.</span><span class="sxs-lookup"><span data-stu-id="c3e81-159">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="c3e81-160">Para usar e comparar os modelos diferentes de detecção, consulte [como especificar um modelo de detecção](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="c3e81-160">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="c3e81-161">Modelo</span><span class="sxs-lookup"><span data-stu-id="c3e81-161">Model</span></span> | <span data-ttu-id="c3e81-162">Uso recomendado-case(s)</span><span class="sxs-lookup"><span data-stu-id="c3e81-162">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="c3e81-163">'detection_01':</span><span class="sxs-lookup"><span data-stu-id="c3e81-163">'detection_01':</span></span> | <span data-ttu-id="c3e81-164">O modelo de detecção padrão para [FaceList - adicionar</span><span class="sxs-lookup"><span data-stu-id="c3e81-164">The default detection model for [FaceList - Add</span></span>
+      <span data-ttu-id="c3e81-165">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span><span class="sxs-lookup"><span data-stu-id="c3e81-165">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span></span> <span data-ttu-id="c3e81-166">É recomendável para detecção de face frontal quase.</span><span class="sxs-lookup"><span data-stu-id="c3e81-166">Recommend for near frontal face detection.</span></span> <span data-ttu-id="c3e81-167">Para cenários com faces do ângulo excepcionalmente grande (head-pose), faces obstruídos ou orientação de imagem incorreto, as faces nesses casos, podem não ser detectadas.</span><span class="sxs-lookup"><span data-stu-id="c3e81-167">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="c3e81-168">| | 'detection_02': | Modelo de detecção, lançado em 2019 talvez com precisão aprimorada, especialmente em pequenas, lado e desfocadas faces.</span><span class="sxs-lookup"><span data-stu-id="c3e81-168">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-121">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-121">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-169">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-169">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="cb057-122">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="cb057-122">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c3e81-170">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="c3e81-170">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.FaceListAddFaceFromUrlOptionalParams
@@ -194,16 +220,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-123">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-123">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-171">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-171">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="cb057-124">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="cb057-124">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="c3e81-172">URL publicamente acessível de uma imagem</span><span class="sxs-lookup"><span data-stu-id="c3e81-172">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="cb057-125">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-125">The callback</span></span>
+            <span data-ttu-id="c3e81-173">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-173">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromUrlResponse>
@@ -221,16 +247,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-126">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-126">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-174">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-174">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListCreateOptionalParams'
-          description: <span data-ttu-id="cb057-127">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-127">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-175">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-175">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-128">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-128">The callback</span></span>
+            <span data-ttu-id="c3e81-176">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-176">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -241,21 +267,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: |-
-      <span data-ttu-id="cb057-129">Crie uma lista de face vazio com faceListId especificado pelo usuário, nome, um userData opcional e recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="cb057-129">Create an empty face list with user-specified faceListId, name, an optional userData and recognitionModel.</span></span> <span data-ttu-id="cb057-130">Até 64 face listas são permitidas em uma assinatura.</span><span class="sxs-lookup"><span data-stu-id="cb057-130">Up to 64 face lists are allowed in one subscription.</span></span>
-      <br /> <span data-ttu-id="cb057-131">Lista de detecção facial é uma lista de faces, até 1.000 faces e usado por [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class="sxs-lookup"><span data-stu-id="cb057-131">Face list is a list of faces, up to 1,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
-      <br /> <span data-ttu-id="cb057-132">Após a criação, o usuário deve usar [FaceList - adicionar Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) para importar as faces.</span><span class="sxs-lookup"><span data-stu-id="cb057-132">After creation, user should use [FaceList - Add Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) to import the faces.</span></span> <span data-ttu-id="cb057-133">Faces são armazenadas no servidor até que [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) é chamado.</span><span class="sxs-lookup"><span data-stu-id="cb057-133">Faces are stored on server until [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
-      <br /> <span data-ttu-id="cb057-134">Localizar que semelhante é usado para o cenário gosta de encontrar celebridade semelhante faces, face semelhante, filtragem, ou como uma luz de maneira enfrentam identificação.</span><span class="sxs-lookup"><span data-stu-id="cb057-134">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id="cb057-135">Mas se o uso real é identificar a pessoa, use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) e [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class="sxs-lookup"><span data-stu-id="cb057-135">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
-      <br /> <span data-ttu-id="cb057-136">Considere [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) quando o número de detecção facial é grande.</span><span class="sxs-lookup"><span data-stu-id="cb057-136">Please consider [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) when the face number is large.</span></span> <span data-ttu-id="cb057-137">Ele pode dar suporte a até 1.000.000 faces.</span><span class="sxs-lookup"><span data-stu-id="cb057-137">It can support up to 1,000,000 faces.</span></span> <span data-ttu-id="cb057-138">'recognitionModel' deve ser especificado a ser associado a essa lista de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-138">'recognitionModel' should be specified to associate with this face list.</span></span> <span data-ttu-id="cb057-139">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="cb057-139">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="cb057-140">Novas faces que são adicionados a uma lista existente de face usará o modelo de reconhecimento que já está associada com a coleção.</span><span class="sxs-lookup"><span data-stu-id="cb057-140">New faces that are added to an existing face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id="cb057-141">Recursos de detecção facial existentes em uma lista de face não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.</span><span class="sxs-lookup"><span data-stu-id="cb057-141">Existing face features in a face list can't be updated to features extracted by another version of recognition model.</span></span>
+    summary: "<span data-ttu-id=\"c3e81-177\">Crie uma lista de face vazio com faceListId especificado pelo usuário, nome, um userData opcional e recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-177\">Create an empty face list with user-specified faceListId, name, an optional userData and recognitionModel.</span></span> <span data-ttu-id=\"c3e81-178\">Até 64 face listas são permitidas em uma assinatura.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-178\">Up to 64 face lists are allowed in one subscription.</span></span>\n<br /> <span data-ttu-id=\"c3e81-179\">Lista de detecção facial é uma lista de faces, até 1.000 faces e usado por [Face - localizar Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-179\">Face list is a list of faces, up to 1,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>\n<br /> <span data-ttu-id=\"c3e81-180\">Após a criação, o usuário deve usar [FaceList - adicionar Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) para importar as faces.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-180\">After creation, user should use [FaceList - Add Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) to import the faces.</span></span> <span data-ttu-id=\"c3e81-181\">Nenhuma imagem será armazenada.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-181\">No image will be stored.</span></span> <span data-ttu-id=\"c3e81-182\">Somente os recursos de face extraídos são armazenados no servidor até que [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) é chamado.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-182\">Only the extracted face features are stored on server until [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>\n<br /> <span data-ttu-id=\"c3e81-183\">Localizar que semelhante é usado para o cenário gosta de encontrar celebridade semelhante faces, face semelhante, filtragem, ou como uma luz de maneira enfrentam identificação.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-183\">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id=\"c3e81-184\">Mas se o uso real é identificar a pessoa, use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) e [enfrentam – identificar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-184\">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"c3e81-185\">Considere [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) quando o número de detecção facial é grande.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-185\">Please consider [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) when the face number is large.</span></span> <span data-ttu-id=\"c3e81-186\">Ele pode dar suporte a até 1.000.000 faces.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-186\">It can support up to 1,000,000 faces.</span></span>\n<br /><span data-ttu-id=\"c3e81-187\">'recognitionModel' deve ser especificado a ser associado a essa lista de face.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-187\">'recognitionModel' should be specified to associate with this face list.</span></span> <span data-ttu-id=\"c3e81-188\">O valor padrão para 'recognitionModel' é 'recognition_01', se o modelo mais recente necessário, especifique explicitamente o modelo que você precisa nesse parâmetro.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-188\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"c3e81-189\">Novas faces que são adicionados a uma lista existente de face usará o modelo de reconhecimento que já está associada com a coleção.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-189\">New faces that are added to an existing face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"c3e81-190\">Recursos de detecção facial existentes em uma lista de face não podem ser atualizados para recursos extraídos por outra versão do modelo de reconhecimento.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-190\">Existing face features in a face list can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"c3e81-191\">'recognition_01': O modelo de reconhecimento de padrão para [FaceList - criar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b).</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-191\">'recognition_01': The default recognition model for [FaceList- Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b).</span></span> <span data-ttu-id=\"c3e81-192\">Essas listas de face criadas antes de março de 2019 estão unidas com esse modelo de reconhecimento.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-192\">All those face lists created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"c3e81-193\">'recognition_02': Modelo de reconhecimento lançado em março de 2019.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-193\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"c3e81-194\">'recognition_02' é recomendável, pois sua precisão geral é aprimorada em comparação com 'recognition_01'.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3e81-194\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>"
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-142">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-142">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-195">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-195">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListCreateOptionalParams
@@ -278,12 +297,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-143">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-143">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-196">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-196">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-144">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-144">The callback</span></span>
+            <span data-ttu-id="c3e81-197">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-197">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -295,19 +314,19 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="cb057-145">Exclua uma face existente de uma lista de face (fornecida por um persistedFaceId e um faceListId).</span><span class="sxs-lookup"><span data-stu-id="cb057-145">Delete an existing face from a face list (given by a persistedFaceId and a faceListId).</span></span>
-      <span data-ttu-id="cb057-146">Imagem persistida relacionada à face também será excluída.</span><span class="sxs-lookup"><span data-stu-id="cb057-146">Persisted image related to the face will also be deleted.</span></span>
+      <span data-ttu-id="c3e81-198">Exclua uma face de uma lista de face persistedFaceId e faceListId especificado.</span><span class="sxs-lookup"><span data-stu-id="c3e81-198">Delete a face from a face list by specified faceListId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="c3e81-199">Adição/exclusão de faces de/para uma lista de face mesmo são processadas sequencialmente face diferente para/de listas e estão em paralelo.</span><span class="sxs-lookup"><span data-stu-id="c3e81-199">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-147">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-147">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-200">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-200">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="cb057-148">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="cb057-148">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c3e81-201">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="c3e81-201">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -330,20 +349,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-149">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-149">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-202">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-202">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="cb057-150">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="cb057-150">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c3e81-203">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="c3e81-203">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="cb057-151">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-151">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-204">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-204">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-152">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-152">The callback</span></span>
+            <span data-ttu-id="c3e81-205">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-205">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -361,16 +380,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-153">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-153">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-206">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-206">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="cb057-154">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="cb057-154">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="c3e81-207">ID referenciando um persistedFaceId específico de uma face existente.</span><span class="sxs-lookup"><span data-stu-id="c3e81-207">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-155">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-155">The callback</span></span>
+            <span data-ttu-id="c3e81-208">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-208">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -381,14 +400,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="cb057-156">Exclua uma lista existente de face de acordo com a faceListId.</span><span class="sxs-lookup"><span data-stu-id="cb057-156">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="cb057-157">Persistentes face imagens na lista de face também serão excluídas.</span><span class="sxs-lookup"><span data-stu-id="cb057-157">Persisted face images in the face list will also be deleted.</span></span>
+    summary: <span data-ttu-id="c3e81-209">Exclua uma lista de face especificado.</span><span class="sxs-lookup"><span data-stu-id="c3e81-209">Delete a specified face list.</span></span>
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-158">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-158">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-210">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-210">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -411,16 +430,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-159">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-159">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-211">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-211">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="cb057-160">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-160">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-212">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-212">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-161">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-161">The callback</span></span>
+            <span data-ttu-id="c3e81-213">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-213">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -438,12 +457,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-162">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-162">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-214">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-214">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-163">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-163">The callback</span></span>
+            <span data-ttu-id="c3e81-215">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-215">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -454,7 +473,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="cb057-164">Crie um FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="cb057-164">Create a FaceListOperations.</span></span>
+    summary: <span data-ttu-id="c3e81-216">Crie um FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="c3e81-216">Create a FaceListOperations.</span></span>
     syntax:
       content: 'new FaceListOperations(client: FaceClientContext)'
       parameters:
@@ -462,7 +481,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="cb057-165">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="cb057-165">Reference to the service client.</span></span>
+            <span data-ttu-id="c3e81-217">Referência para o cliente do serviço.</span><span class="sxs-lookup"><span data-stu-id="c3e81-217">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceListOperations.get_2'
     name: 'get(string, FaceListGetOptionalParams, ServiceCallback<FaceList>)'
@@ -477,16 +496,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-166">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-166">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-218">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-218">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListGetOptionalParams'
-          description: <span data-ttu-id="cb057-167">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-167">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-219">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-219">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.FaceList>
           description: |
-            <span data-ttu-id="cb057-168">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-168">The callback</span></span>
+            <span data-ttu-id="c3e81-220">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-220">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListGetResponse>
@@ -497,14 +516,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="cb057-169">Recupere uma lista de face faceListId, nome, userData, recognitionModel e faces na lista de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-169">Retrieve a face list’s faceListId, name, userData, recognitionModel and faces in the face list.</span></span>'
+    summary: '<span data-ttu-id="c3e81-221">Recupere uma lista de face faceListId, nome, userData, recognitionModel e faces na lista de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-221">Retrieve a face list’s faceListId, name, userData, recognitionModel and faces in the face list.</span></span>'
     syntax:
       content: 'function get(faceListId: string, options?: Models.FaceListGetOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-170">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-170">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-222">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-222">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListGetOptionalParams
@@ -527,12 +546,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-171">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-171">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-223">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-223">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.FaceList>
           description: |
-            <span data-ttu-id="cb057-172">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-172">The callback</span></span>
+            <span data-ttu-id="c3e81-224">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-224">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListGetResponse>
@@ -550,12 +569,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListListOptionalParams'
-          description: <span data-ttu-id="cb057-173">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-173">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-225">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-225">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.FaceList[]>'
           description: |
-            <span data-ttu-id="cb057-174">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-174">The callback</span></span>
+            <span data-ttu-id="c3e81-226">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-226">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListListResponse>
@@ -567,8 +586,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="cb057-175">Listar faceListId, nome, userData e recognitionModel listas de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-175">List face lists’ faceListId, name, userData and recognitionModel.</span></span> <br />
-      <span data-ttu-id="cb057-176">Para obter informações de face dentro do uso de faceList [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span><span class="sxs-lookup"><span data-stu-id="cb057-176">To get face information inside faceList use [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span></span>
+      <span data-ttu-id="c3e81-227">Listar faceListId, nome, userData e recognitionModel listas de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-227">List face lists’ faceListId, name, userData and recognitionModel.</span></span> <br />
+      <span data-ttu-id="c3e81-228">Para obter informações de face dentro do uso de faceList [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span><span class="sxs-lookup"><span data-stu-id="c3e81-228">To get face information inside faceList use [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span></span>
     syntax:
       content: 'function list(options?: Models.FaceListListOptionalParams)'
       parameters:
@@ -595,7 +614,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.FaceList[]>'
           description: |
-            <span data-ttu-id="cb057-177">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-177">The callback</span></span>
+            <span data-ttu-id="c3e81-229">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-229">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListListResponse>
@@ -613,16 +632,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-178">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-178">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-230">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-230">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListUpdateOptionalParams'
-          description: <span data-ttu-id="cb057-179">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="cb057-179">The optional parameters</span></span>
+          description: <span data-ttu-id="c3e81-231">Os parâmetros opcionais</span><span class="sxs-lookup"><span data-stu-id="c3e81-231">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-180">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-180">The callback</span></span>
+            <span data-ttu-id="c3e81-232">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-232">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -633,14 +652,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="cb057-181">Atualize as informações de uma lista de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-181">Update information of a face list.</span></span>
+    summary: <span data-ttu-id="c3e81-233">Atualize as informações de uma lista de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-233">Update information of a face list.</span></span>
     syntax:
       content: 'function update(faceListId: string, options?: Models.FaceListUpdateOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-182">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-182">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-234">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-234">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListUpdateOptionalParams
@@ -663,12 +682,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="cb057-183">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="cb057-183">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="c3e81-235">ID fazendo referência a uma lista específica de face.</span><span class="sxs-lookup"><span data-stu-id="c3e81-235">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="cb057-184">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="cb057-184">The callback</span></span>
+            <span data-ttu-id="c3e81-236">O retorno de chamada</span><span class="sxs-lookup"><span data-stu-id="c3e81-236">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
