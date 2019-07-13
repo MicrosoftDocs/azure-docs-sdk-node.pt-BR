@@ -15,7 +15,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parâmetros opcionais.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -56,7 +56,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: O nome do executor de reparos cujas tarefas declaradas devem ser incluídas na lista.
     optional: true
     syntax:
       content: 'executorFilter?: undefined | string'
@@ -101,7 +101,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Um bitwise OR dos valores a seguir, especificando qual estado de tarefa deve ser incluído na lista de resultados.
+      - 1 - criada
+      - 2 - declarado
+      - 4 - preparação
+      - 8 - aprovado
+      - 16 - executando
+      - 32 - restaurando
+      - 64 - concluída
     optional: true
     syntax:
       content: 'stateFilter?: undefined | number'
@@ -116,7 +124,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: O prefixo de ID da tarefa de reparo a ser correspondido.
     optional: true
     syntax:
       content: 'taskIdFilter?: undefined | string'

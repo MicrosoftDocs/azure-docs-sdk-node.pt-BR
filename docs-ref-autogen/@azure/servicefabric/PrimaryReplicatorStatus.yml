@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PrimaryReplicatorStatus'
+    name: PrimaryReplicatorStatus
+    fullName: PrimaryReplicatorStatus
+    children:
+      - '@azure/servicefabric.PrimaryReplicatorStatus.kind'
+      - '@azure/servicefabric.PrimaryReplicatorStatus.remoteReplicators'
+      - '@azure/servicefabric.PrimaryReplicatorStatus.replicationQueueStatus'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Fornece estatísticas sobre o replicador do Service Fabric, quando ele está funcionando em uma função primária.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PrimaryReplicatorStatus.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "Primary"'
+      return:
+        type:
+          - '"Primary"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PrimaryReplicatorStatus.remoteReplicators'
+    name: remoteReplicators
+    fullName: remoteReplicators
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O status de todos os ativos e ociosos replicadores secundários que o primário esteja ciente.
+    optional: true
+    syntax:
+      content: 'remoteReplicators?: RemoteReplicatorStatus[]'
+      return:
+        type:
+          - '@azure/servicefabric.RemoteReplicatorStatus[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PrimaryReplicatorStatus.replicationQueueStatus'
+    name: replicationQueueStatus
+    fullName: replicationQueueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Detalhes sobre a fila de replicação no replicador primário.
+    optional: true
+    syntax:
+      content: 'replicationQueueStatus?: ReplicatorQueueStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicatorQueueStatus'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RemoteReplicatorStatus[]'
+    name: 'RemoteReplicatorStatus[]'
+    spec.typeScript:
+      - name: RemoteReplicatorStatus
+        fullName: RemoteReplicatorStatus
+        uid: '@azure/servicefabric.RemoteReplicatorStatus'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ReplicatorQueueStatus'
+    name: ReplicatorQueueStatus
+    spec.typeScript:
+      - name: ReplicatorQueueStatus
+        fullName: ReplicatorQueueStatus
+        uid: '@azure/servicefabric.ReplicatorQueueStatus'

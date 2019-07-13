@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceEvent'
+    name: ServiceEvent
+    fullName: ServiceEvent
+    children:
+      - '@azure/servicefabric.ServiceEvent.category'
+      - '@azure/servicefabric.ServiceEvent.eventInstanceId'
+      - '@azure/servicefabric.ServiceEvent.hasCorrelatedEvents'
+      - '@azure/servicefabric.ServiceEvent.kind'
+      - '@azure/servicefabric.ServiceEvent.serviceId'
+      - '@azure/servicefabric.ServiceEvent.timeStamp'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa a base para todos os eventos de serviço.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A categoria de evento.
+    optional: true
+    syntax:
+      content: 'category?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.eventInstanceId'
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O identificador para a instância de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.hasCorrelatedEvents'
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra se houver um disponível de eventos relacionados.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "ServiceEvent"'
+      return:
+        type:
+          - '"ServiceEvent"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.serviceId'
+    name: serviceId
+    fullName: serviceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A identidade do serviço. Essa ID é uma representação codificada do nome do serviço. Isso é usado nas APIs REST para identificar o recurso de serviço.
+      Começando na versão 6.0, nomes hierárquicos são delimitados com o "\~" caracteres. Por exemplo, se o nome do serviço for "fabric: / myapp meuaplicativo/Aplicativo1/svc1", a identidade do serviço será "myapp ~ app1\~svc1" em 6.0 + e "myapp meuaplicativo/Aplicativo1/svc1" em versões anteriores.
+    syntax:
+      content: 'serviceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceEvent.timeStamp'
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O evento de tempo foi registrado.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

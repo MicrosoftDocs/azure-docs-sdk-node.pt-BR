@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription'
+    name: ProvisionApplicationTypeDescription
+    fullName: ProvisionApplicationTypeDescription
+    children:
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+      - '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve a operação para registrar ou provisionar um tipo de aplicativo usando um pacote de aplicativo carregado para o repositório de imagens do Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationPackageCleanupPolicy'
+    name: applicationPackageCleanupPolicy
+    fullName: applicationPackageCleanupPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O tipo de ação que precisa ser tomadas para limpar o pacote de aplicativo depois de provisionar com êxito. Os valores possíveis incluem: ''Invalid'', ''Default'', ''Automatic'', ''Manual'''
+    optional: true
+    syntax:
+      content: 'applicationPackageCleanupPolicy?: ApplicationPackageCleanupPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.applicationTypeBuildPath'
+    name: applicationTypeBuildPath
+    fullName: applicationTypeBuildPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O caminho relativo para o pacote de aplicativo no repositório de imagem especificado durante a operação de carregamento anteriores.
+    syntax:
+      content: 'applicationTypeBuildPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.async'
+    name: async
+    fullName: async
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Indica se o provisionamento deve ocorrer assincronamente. Quando definido como true, a operação de provisionamento retorna quando a solicitação é aceita pelo sistema e a operação de provisionamento continua sem nenhum tempo limite. O valor padrão é falso. Para pacotes de aplicativos grandes, é recomendável definir o valor como true.'
+    syntax:
+      content: 'async: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ProvisionApplicationTypeDescription.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "ImageStorePath"'
+      return:
+        type:
+          - '"ImageStorePath"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'
+    name: ApplicationPackageCleanupPolicy
+    spec.typeScript:
+      - name: ApplicationPackageCleanupPolicy
+        fullName: ApplicationPackageCleanupPolicy
+        uid: '@azure/servicefabric.ApplicationPackageCleanupPolicy'

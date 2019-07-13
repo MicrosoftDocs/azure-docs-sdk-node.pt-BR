@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateChunk'
+    name: ServiceHealthStateChunk
+    fullName: ServiceHealthStateChunk
+    children:
+      - '@azure/servicefabric.ServiceHealthStateChunk.healthState'
+      - '@azure/servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks'
+      - '@azure/servicefabric.ServiceHealthStateChunk.serviceName'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa a parte do estado de integridade de um serviço, que contém o nome do serviço, seu estado de integridade agregada e todas as partições que respeitam os filtros na descrição de consulta de bloco de integridade de cluster.'
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateChunk.partitionHealthStateChunks'
+    name: partitionHealthStateChunks
+    fullName: partitionHealthStateChunks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de partição integridade estado partes que pertencem ao serviço que respeitam os filtros na integridade do cluster dividir a descrição da consulta.
+    optional: true
+    syntax:
+      content: 'partitionHealthStateChunks?: PartitionHealthStateChunkList'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateChunkList'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateChunk.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome do serviço cuja parte do estado de integridade é fornecido neste objeto.
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionHealthStateChunkList'
+    name: PartitionHealthStateChunkList
+    spec.typeScript:
+      - name: PartitionHealthStateChunkList
+        fullName: PartitionHealthStateChunkList
+        uid: '@azure/servicefabric.PartitionHealthStateChunkList'

@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EntityHealth'
+    name: EntityHealth
+    fullName: EntityHealth
+    children:
+      - '@azure/servicefabric.EntityHealth.aggregatedHealthState'
+      - '@azure/servicefabric.EntityHealth.healthEvents'
+      - '@azure/servicefabric.EntityHealth.healthStatistics'
+      - '@azure/servicefabric.EntityHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Informações de integridade comuns a todas as entidades no cluster. Ele contém o estado de integridade agregada, eventos de integridade e avaliação não íntegra.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O que representa o estado de integridade agregada da entidade computado pelo Gerenciador de integridade de HealthState.
+      A avaliação de integridade da entidade reflete todos os eventos relatados na entidade e seus filhos (se houver).
+      A agregação é feita ao aplicar a política de integridade desejadas. Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de eventos de integridade relatados na entidade.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra as estatísticas de integridade para todos os tipos de filhos da entidade consultada.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As avaliações não íntegras que mostram por que o estado de integridade agregada atual foi retornado pelo Gerenciador de integridade.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

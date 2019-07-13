@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parâmetros opcionais.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -44,7 +44,14 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Usado para filtrar ApplicationDefinitionKind, que é o mecanismo usado para definir um aplicativo do Service Fabric.
+      - Default – valor padrão, que executa a mesma função que selecionar "All". O valor é
+      0.
+      - All - filtro que corresponde à entrada com qualquer valor ApplicationDefinitionKind. O valor é
+      65535.
+      - ServiceFabricApplicationDescription – filtro que corresponde à entrada com o valor ApplicationDefinitionKind de ServiceFabricApplicationDescription. O valor é 1.
+      - Compose – filtro que corresponde à entrada com o valor ApplicationDefinitionKind de Compose. O valor é 2. Valor padrão: 0.
     optional: true
     syntax:
       content: 'applicationDefinitionKindFilter?: undefined | number'
@@ -59,7 +66,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: O nome do tipo de aplicativo usado para filtrar os aplicativos para consulta. Esse valor não deve conter a versão do tipo de aplicativo.
     optional: true
     syntax:
       content: 'applicationTypeName?: undefined | string'
@@ -74,7 +81,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados. Um token de continuação com um valor não vazio será incluso na resposta da API quando os resultados do sistema não couberem em uma única resposta. Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados. Se não houver mais resultados, o token de continuação não conterá um valor. O valor desse parâmetro não deve ser codificado em URL.'
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -104,7 +111,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      O sinalizador que especifica se os parâmetros do aplicativo serão excluídos do resultado.
+      Valor padrão: false.
     optional: true
     syntax:
       content: 'excludeApplicationParameters?: undefined | false | true'
@@ -119,7 +128,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'O número máximo de resultados a serem retornados como parte das consultas paginadas. Esse parâmetro define o limite superior no número de resultados retornados. Os resultados retornados podem ser inferiores aos resultados máximos especificados se não couberem na mensagem, de acordo com as restrições de tamanho máximo de mensagem definidas na configuração. Se esse parâmetro for zero, ou não for especificado, a consulta paginada incluirá o máximo de resultados possível na mensagem de retorno. Valor padrão: 0.'
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -179,7 +188,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'O tempo limite do servidor para executar a operação em segundos. Esse tempo limite Especifica a duração de tempo que o cliente está disposto a esperar a conclusão da operação solicitada. O valor padrão para esse parâmetro é 60 segundos. Valor padrão: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

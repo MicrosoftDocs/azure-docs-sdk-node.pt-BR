@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation'
+    name: SystemApplicationHealthEvaluation
+    fullName: SystemApplicationHealthEvaluation
+    children:
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Representa a avaliação de integridade para a malha: / aplicativo de sistema, que contém informações sobre os dados e o algoritmo usado pelo repositório de integridade para avaliar a integridade. A avaliação é retornada somente quando o estado de integridade agregada do cluster é erro ou aviso.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrição da avaliação de integridade, que representa um resumo do processo de avaliação.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "SystemApplication"'
+      return:
+        type:
+          - '"SystemApplication"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Lista de avaliações não íntegras que levou para o estado atual de integridade agregado do aplicativo do sistema. Os tipos das avaliações não íntegras podem ser DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation ou EventHealthEvaluation.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

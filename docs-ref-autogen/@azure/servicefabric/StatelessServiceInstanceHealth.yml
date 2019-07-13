@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth'
+    name: StatelessServiceInstanceHealth
+    fullName: StatelessServiceInstanceHealth
+    children:
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.healthEvents'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.healthStatistics'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.instanceId'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.partitionId'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.serviceKind'
+      - '@azure/servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa a integridade da instância do serviço sem monitoração de estado.
+      Contém o estado de integridade da instância agregada, os eventos de integridade e as avaliações não íntegras.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O que representa o estado de integridade agregada da entidade computado pelo Gerenciador de integridade de HealthState.
+      A avaliação de integridade da entidade reflete todos os eventos relatados na entidade e seus filhos (se houver).
+      A agregação é feita ao aplicar a política de integridade desejadas. Os valores possíveis incluem: 'Inválido', 'Okey', 'Warning', 'Error', 'Unknown'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A lista de eventos de integridade relatados na entidade.
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra as estatísticas de integridade para todos os tipos de filhos da entidade consultada.
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.instanceId'
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma instância de serviço sem estado. InstanceId é usada pelo Service Fabric para identificar exclusivamente uma instância de uma partição de um serviço sem monitoração de estado. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da instância. Se a instância tiver feito failover no mesmo ou em outro nó, ele receberá um valor diferente para a ID da instância.'
+    optional: true
+    syntax:
+      content: 'instanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ID da partição à qual pertence esta réplica.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceInstanceHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As avaliações não íntegras que mostram por que o estado de integridade agregada atual foi retornado pelo Gerenciador de integridade.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

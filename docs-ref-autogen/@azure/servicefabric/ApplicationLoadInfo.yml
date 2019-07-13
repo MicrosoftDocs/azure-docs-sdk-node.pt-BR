@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationLoadInfo'
+    name: ApplicationLoadInfo
+    fullName: ApplicationLoadInfo
+    children:
+      - '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+      - '@azure/servicefabric.ApplicationLoadInfo.id'
+      - '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+      - '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    langs:
+      - typeScript
+    type: interface
+    summary: Carregar as informações sobre um aplicativo do Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.applicationLoadMetricInformation'
+    name: applicationLoadMetricInformation
+    fullName: applicationLoadMetricInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de descrição de métrica de capacidade do aplicativo.
+    optional: true
+    syntax:
+      content: 'applicationLoadMetricInformation?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A identidade do aplicativo. Isso é uma representação codificada do nome do aplicativo.
+      Isso é usado nas APIs REST para identificar o recurso de aplicativo.
+      Começando na versão 6.0, nomes hierárquicos são delimitados com o "\~" caracteres. Por exemplo, se o nome do aplicativo é "fabric: / myapp/app1", a identidade do aplicativo será "meuaplicativo~Aplicativo1\~app1" em 6.0 + e "meuaplicativo/Aplicativo1" nas versões anteriores.
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número máximo de nós em que esse aplicativo pode ser instanciado.
+      É o número de nós que este aplicativo tem permissão para abranger.
+      Para aplicativos que não têm a capacidade do aplicativo definida esse valor será zero.
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número mínimo de nós para este aplicativo.
+      É o número de nós em que o Service Fabric reservará capacidade no cluster que é igual a ReservedLoad * MinimumNodes para essa instância do aplicativo.
+      Para aplicativos que não têm a capacidade do aplicativo definida esse valor será zero.
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationLoadInfo.nodeCount'
+    name: nodeCount
+    fullName: nodeCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número de nós no qual este aplicativo é instanciado.
+      Para aplicativos que não têm a capacidade do aplicativo definida esse valor será zero.
+    optional: true
+    syntax:
+      content: 'nodeCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

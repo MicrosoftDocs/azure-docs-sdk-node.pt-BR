@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList'
+    name: PagedApplicationTypeInfoList
+    fullName: PagedApplicationTypeInfoList
+    children:
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+      - '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: Tipos de lista de aplicativos que são provisionados ou que está sendo provisionado no cluster. A lista é paginada quando todos os resultados não couberem em uma única mensagem. O próximo conjunto de resultados pode ser obtido executando a mesma consulta com o token de continuação fornecido nessa lista.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados. O token de continuação é incluído na resposta da API quando os resultados do sistema não couberem em uma única resposta. Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados.
+      Se não houver nenhum mais resultados, o token de continuação não está incluído na resposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedApplicationTypeInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de informações de tipo de aplicativo.
+    optional: true
+    syntax:
+      content: 'items?: ApplicationTypeInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeInfo[]'
+    name: 'ApplicationTypeInfo[]'
+    spec.typeScript:
+      - name: ApplicationTypeInfo
+        fullName: ApplicationTypeInfo
+        uid: '@azure/servicefabric.ApplicationTypeInfo'
+      - name: '[]'
+        fullName: '[]'

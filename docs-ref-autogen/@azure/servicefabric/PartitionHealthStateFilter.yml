@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter'
+    name: PartitionHealthStateFilter
+    fullName: PartitionHealthStateFilter
+    children:
+      - '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+      - '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Define os critérios de correspondência para determinar se uma partição deve ser incluída como um filho de um serviço no bloco de integridade do cluster.
+      As partições são retornadas somente se correspondem a um filtro especificado na descrição de consulta de parte do cluster integridade entidades pai. O serviço pai e o aplicativo devem ser incluídos no bloco de integridade do cluster.
+      Um filtro pode corresponder a zero, uma ou várias partições, dependendo de suas propriedades.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      O filtro para o estado de integridade das partições. Ele permite selecionar as partições se elas corresponderem os estados de integridade desejadas.
+      Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade. Somente as partições que correspondem ao filtro são retornadas. Todas as partições são usadas para avaliar o estado de integridade agregado do cluster.
+      Se não for especificado, o valor padrão é None, a menos que a ID de partição é especificada. Se o filtro tem valor padrão e a ID de partição for especificada, a partição correspondente será retornada.
+      Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+      Por exemplo, se o valor fornecido for 6, ela corresponde a partições com o valor de HealthState Okey (2) e Warning (4).
+      - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+      - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+      - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+      - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+      - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+      - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535. Valor padrão: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.partitionIdFilter'
+    name: partitionIdFilter
+    fullName: partitionIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      ID da partição que corresponde ao filtro. O filtro é aplicado somente a partição especificada, se ele existir.
+      Se a partição não existir, nenhuma partição é retornada no bloco de integridade de cluster com base nesse filtro.
+      Se a partição existir, ele está incluído no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.
+      Se não for especificado, todas as partições que correspondem aos filtros pai (se houver) são levadas em consideração e comparadas com os outros membros de filtro, como o filtro de estado de integridade.
+    optional: true
+    syntax:
+      content: 'partitionIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter.replicaFilters'
+    name: replicaFilters
+    fullName: replicaFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define uma lista de filtros que especificam quais réplicas a serem incluídos na integridade do cluster retornado partes como filhos da partição pai. As réplicas são retornadas apenas se a partição pai corresponde a um filtro.
+      Se a lista estiver vazia, nenhuma réplica é retornada. Todas as réplicas são usadas para avaliar o estado de integridade do agregado de partição pai, independentemente dos filtros de entrada.
+      O filtro de partição pode especificar vários filtros de réplica.
+      Por exemplo, ele pode especificar um filtro para retornar todas as réplicas com estado de integridade erro e outro filtro para incluir sempre uma réplica identificada por sua id de réplica.
+    optional: true
+    syntax:
+      content: 'replicaFilters?: ReplicaHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ReplicaHealthStateFilter[]'
+    name: 'ReplicaHealthStateFilter[]'
+    spec.typeScript:
+      - name: ReplicaHealthStateFilter
+        fullName: ReplicaHealthStateFilter
+        uid: '@azure/servicefabric.ReplicaHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
