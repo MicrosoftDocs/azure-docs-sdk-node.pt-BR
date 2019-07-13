@@ -7,10 +7,12 @@ items:
       - '@azure/arm-containerregistry.BaseImageTrigger.baseImageTriggerType'
       - '@azure/arm-containerregistry.BaseImageTrigger.name'
       - '@azure/arm-containerregistry.BaseImageTrigger.status'
+      - '@azure/arm-containerregistry.BaseImageTrigger.updateTriggerEndpoint'
+      - '@azure/arm-containerregistry.BaseImageTrigger.updateTriggerPayloadType'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="62f16-101">O gatilho com base na dependência de imagem base.</span><span class="sxs-lookup"><span data-stu-id="62f16-101">The trigger based on base image dependency.</span></span>
+    summary: <span data-ttu-id="5fdfb-101">O gatilho com base na dependência de imagem base.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-101">The trigger based on base image dependency.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.BaseImageTrigger.baseImageTriggerType'
     name: baseImageTriggerType
@@ -19,7 +21,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="62f16-102">O tipo do gatilho automática para atualizações de dependência de imagem base.</span><span class="sxs-lookup"><span data-stu-id="62f16-102">The type of the auto trigger for base image dependency updates.</span></span> <span data-ttu-id="62f16-103">Os valores possíveis incluem: ''All'', ''Runtime''</span><span class="sxs-lookup"><span data-stu-id="62f16-103">Possible values include: ''All'', ''Runtime''</span></span>'
+    summary: '<span data-ttu-id="5fdfb-102">O tipo do gatilho automática para atualizações de dependência de imagem base.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-102">The type of the auto trigger for base image dependency updates.</span></span> <span data-ttu-id="5fdfb-103">Os valores possíveis incluem: ''All'', ''Runtime''</span><span class="sxs-lookup"><span data-stu-id="5fdfb-103">Possible values include: ''All'', ''Runtime''</span></span>'
     syntax:
       content: 'baseImageTriggerType: BaseImageTriggerType'
       return:
@@ -33,7 +35,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="62f16-104">O nome do gatilho.</span><span class="sxs-lookup"><span data-stu-id="62f16-104">The name of the trigger.</span></span>
+    summary: <span data-ttu-id="5fdfb-104">O nome do gatilho.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-104">The name of the trigger.</span></span>
     syntax:
       content: 'name: string'
       return:
@@ -47,13 +49,43 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="62f16-105">O status atual do gatilho.</span><span class="sxs-lookup"><span data-stu-id="62f16-105">The current status of trigger.</span></span> <span data-ttu-id="62f16-106">Os valores possíveis incluem: ''Desabilitado'', ''Enabled''.</span><span class="sxs-lookup"><span data-stu-id="62f16-106">Possible values include: ''Disabled'', ''Enabled''.</span></span> <span data-ttu-id="62f16-107">Valor padrão: ''Enabled''.</span><span class="sxs-lookup"><span data-stu-id="62f16-107">Default value: ''Enabled''.</span></span>'
+    summary: '<span data-ttu-id="5fdfb-105">O status atual do gatilho.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-105">The current status of trigger.</span></span> <span data-ttu-id="5fdfb-106">Os valores possíveis incluem: ''Desabilitado'', ''Enabled''.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-106">Possible values include: ''Disabled'', ''Enabled''.</span></span> <span data-ttu-id="5fdfb-107">Valor padrão: ''Enabled''.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-107">Default value: ''Enabled''.</span></span>'
     optional: true
     syntax:
       content: 'status?: TriggerStatus'
       return:
         type:
           - '@azure/arm-containerregistry.TriggerStatus'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTrigger.updateTriggerEndpoint'
+    name: updateTriggerEndpoint
+    fullName: updateTriggerEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5fdfb-108">O ponto de extremidade de URL para receber a atualização dispara.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-108">The endpoint URL for receiving update triggers.</span></span>
+    optional: true
+    syntax:
+      content: 'updateTriggerEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTrigger.updateTriggerPayloadType'
+    name: updateTriggerPayloadType
+    fullName: updateTriggerPayloadType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="5fdfb-109">Tipo de corpo de conteúdo para os gatilhos de atualização da imagem Base.</span><span class="sxs-lookup"><span data-stu-id="5fdfb-109">Type of Payload body for Base image update triggers.</span></span> <span data-ttu-id="5fdfb-110">Os valores possíveis incluem: ''Default'', ''Token''</span><span class="sxs-lookup"><span data-stu-id="5fdfb-110">Possible values include: ''Default'', ''Token''</span></span>'
+    optional: true
+    syntax:
+      content: 'updateTriggerPayloadType?: UpdateTriggerPayloadType'
+      return:
+        type:
+          - '@azure/arm-containerregistry.UpdateTriggerPayloadType'
     package: '@azure/arm-containerregistry'
 references:
   - uid: '@azure/arm-containerregistry.BaseImageTriggerType'
@@ -68,3 +100,9 @@ references:
       - name: TriggerStatus
         fullName: TriggerStatus
         uid: '@azure/arm-containerregistry.TriggerStatus'
+  - uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'
+    name: UpdateTriggerPayloadType
+    spec.typeScript:
+      - name: UpdateTriggerPayloadType
+        fullName: UpdateTriggerPayloadType
+        uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'

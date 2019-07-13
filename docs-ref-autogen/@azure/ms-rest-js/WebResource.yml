@@ -9,6 +9,7 @@ items:
       - '@azure/ms-rest-js.WebResource.clone'
       - '@azure/ms-rest-js.WebResource.formData'
       - '@azure/ms-rest-js.WebResource.headers'
+      - '@azure/ms-rest-js.WebResource.keepAlive'
       - '@azure/ms-rest-js.WebResource.method'
       - '@azure/ms-rest-js.WebResource.onDownloadProgress'
       - '@azure/ms-rest-js.WebResource.onUploadProgress'
@@ -28,8 +29,8 @@ items:
       - typeScript
     type: class
     summary: |
-      <span data-ttu-id="f1f88-101">Cria um novo objeto WebResource.</span><span class="sxs-lookup"><span data-stu-id="f1f88-101">Creates a new WebResource object.</span></span>
-      <span data-ttu-id="f1f88-102">Essa classe fornece uma abstração sobre uma chamada REST, sendo biblioteca / independente de implementação e encapsular as propriedades necessárias para iniciar uma solicitação.</span><span class="sxs-lookup"><span data-stu-id="f1f88-102">This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary properties to initiate a request.</span></span>
+      <span data-ttu-id="edeec-101">Cria um novo objeto WebResource.</span><span class="sxs-lookup"><span data-stu-id="edeec-101">Creates a new WebResource object.</span></span>
+      <span data-ttu-id="edeec-102">Essa classe fornece uma abstração sobre uma chamada REST, sendo biblioteca / independente de implementação e encapsular as propriedades necessárias para iniciar uma solicitação.</span><span class="sxs-lookup"><span data-stu-id="edeec-102">This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary properties to initiate a request.</span></span>
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.abortSignal'
     name: abortSignal
@@ -67,7 +68,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f1f88-103">Clone este objeto de solicitação HTTP WebResource.</span><span class="sxs-lookup"><span data-stu-id="f1f88-103">Clone this WebResource HTTP request object.</span></span>
+    summary: <span data-ttu-id="edeec-103">Clone este objeto de solicitação HTTP WebResource.</span><span class="sxs-lookup"><span data-stu-id="edeec-103">Clone this WebResource HTTP request object.</span></span>
     syntax:
       content: function clone()
       parameters: []
@@ -104,6 +105,21 @@ items:
         type:
           - '@azure/ms-rest-js.HttpHeaders'
     package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.WebResource.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.method'
     name: method
     fullName: method
@@ -125,7 +141,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="f1f88-104">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="f1f88-104">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="edeec-104">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="edeec-104">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -140,7 +156,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="f1f88-105">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="f1f88-105">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="edeec-105">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="edeec-105">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -155,7 +171,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="f1f88-106">Uma função que retorna o OperationResponse adequado para a combinação de OperationSpec e HttpOperationResponse determinada.</span><span class="sxs-lookup"><span data-stu-id="f1f88-106">A function that returns the proper OperationResponse for the given OperationSpec and HttpOperationResponse combination.</span></span> <span data-ttu-id="f1f88-107">Se isso for indefinido, uma pesquisa de código de status simples será usada.</span><span class="sxs-lookup"><span data-stu-id="f1f88-107">If this is undefined, then a simple status code lookup will be used.</span></span>'
+    summary: '<span data-ttu-id="edeec-106">Uma função que retorna o OperationResponse adequado para a combinação de OperationSpec e HttpOperationResponse determinada.</span><span class="sxs-lookup"><span data-stu-id="edeec-106">A function that returns the proper OperationResponse for the given OperationSpec and HttpOperationResponse combination.</span></span> <span data-ttu-id="edeec-107">Se isso for indefinido, uma pesquisa de código de status simples será usada.</span><span class="sxs-lookup"><span data-stu-id="edeec-107">If this is undefined, then a simple status code lookup will be used.</span></span>'
     optional: true
     syntax:
       content: 'operationResponseGetter?: (operationSpec: OperationSpec, response: HttpOperationResponse) => OperationResponse'
@@ -184,14 +200,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="f1f88-108">Prepara a solicitação.</span><span class="sxs-lookup"><span data-stu-id="f1f88-108">Prepares the request.</span></span>
+    summary: <span data-ttu-id="edeec-108">Prepara a solicitação.</span><span class="sxs-lookup"><span data-stu-id="edeec-108">Prepares the request.</span></span>
     syntax:
       content: 'function prepare(options: RequestPrepareOptions)'
       parameters:
         - id: options
           type:
             - '@azure/ms-rest-js.RequestPrepareOptions'
-          description: <span data-ttu-id="f1f88-109">Opções para fornecer para preparar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="f1f88-109">Options to provide for preparing the request.</span></span>
+          description: <span data-ttu-id="edeec-109">Opções para fornecer para preparar a solicitação.</span><span class="sxs-lookup"><span data-stu-id="edeec-109">Options to provide for preparing the request.</span></span>
       return:
         type:
           - '@azure/ms-rest-js.WebResource'
@@ -233,7 +249,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="f1f88-110">Ou não o HttpOperationResponse deve ser desserializado.</span><span class="sxs-lookup"><span data-stu-id="f1f88-110">Whether or not the HttpOperationResponse should be deserialized.</span></span> <span data-ttu-id="f1f88-111">Se isso for indefinido, o HttpOperationResponse deve ser desserializado.</span><span class="sxs-lookup"><span data-stu-id="f1f88-111">If this is undefined, then the HttpOperationResponse should be deserialized.</span></span>'
+    summary: '<span data-ttu-id="edeec-110">Ou não o HttpOperationResponse deve ser desserializado.</span><span class="sxs-lookup"><span data-stu-id="edeec-110">Whether or not the HttpOperationResponse should be deserialized.</span></span> <span data-ttu-id="edeec-111">Se isso for indefinido, o HttpOperationResponse deve ser desserializado.</span><span class="sxs-lookup"><span data-stu-id="edeec-111">If this is undefined, then the HttpOperationResponse should be deserialized.</span></span>'
     optional: true
     syntax:
       content: 'shouldDeserialize?: boolean | (response: HttpOperationResponse) => boolean'
@@ -248,7 +264,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="f1f88-112">Se o corpo do HttpOperationResponse deve ser tratado como um fluxo.</span><span class="sxs-lookup"><span data-stu-id="f1f88-112">Whether or not the body of the HttpOperationResponse should be treated as a stream.</span></span>
+    summary: <span data-ttu-id="edeec-112">Se o corpo do HttpOperationResponse deve ser tratado como um fluxo.</span><span class="sxs-lookup"><span data-stu-id="edeec-112">Whether or not the body of the HttpOperationResponse should be treated as a stream.</span></span>
     optional: true
     syntax:
       content: 'streamResponseBody?: boolean'
@@ -290,20 +306,20 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="f1f88-113">Valida que as propriedades necessárias, como cabeçalhos de método, url, ["Content-Type"], ["aceitar-language"] de cabeçalhos são definidas.</span><span class="sxs-lookup"><span data-stu-id="f1f88-113">Validates that the required properties such as method, url, headers["Content-Type"], headers["accept-language"] are defined.</span></span> <span data-ttu-id="f1f88-114">Ele gerará um erro se uma das propriedades mencionadas acima não forem definida.</span><span class="sxs-lookup"><span data-stu-id="f1f88-114">It will throw an error if one of the above mentioned properties are not defined.</span></span>'
+    summary: '<span data-ttu-id="edeec-113">Valida que as propriedades necessárias, como cabeçalhos de método, url, ["Content-Type"], ["aceitar-language"] de cabeçalhos são definidas.</span><span class="sxs-lookup"><span data-stu-id="edeec-113">Validates that the required properties such as method, url, headers["Content-Type"], headers["accept-language"] are defined.</span></span> <span data-ttu-id="edeec-114">Ele gerará um erro se uma das propriedades mencionadas acima não forem definida.</span><span class="sxs-lookup"><span data-stu-id="edeec-114">It will throw an error if one of the above mentioned properties are not defined.</span></span>'
     syntax:
       content: function validateRequestProperties()
       parameters: []
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.constructor'
-    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings)'
+    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings, boolean)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings)'
+      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings, keepAlive?: boolean)'
       parameters:
         - id: url
           type:
@@ -363,6 +379,11 @@ items:
         - id: proxySettings
           type:
             - '@azure/ms-rest-js.ProxySettings'
+          description: ''
+          optional: true
+        - id: keepAlive
+          type:
+            - boolean
           description: ''
           optional: true
     package: '@azure/ms-rest-js'

@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation'
+    name: ApplicationsHealthEvaluation
+    fullName: ApplicationsHealthEvaluation
+    children:
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.description'
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.kind'
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.maxPercentUnhealthyApplications'
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.totalCount'
+      - '@azure/servicefabric.ApplicationsHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="b57af-101">Representa a avaliação de integridade para aplicativos, que contém as avaliações de integridade para cada aplicativo não íntegro que afetados atual estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="b57af-101">Represents health evaluation for applications, containing health evaluations for each unhealthy application that impacted current aggregated health state.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b57af-102">O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="b57af-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="b57af-103">Descrição da avaliação de integridade, que representa um resumo do processo de avaliação.</span><span class="sxs-lookup"><span data-stu-id="b57af-103">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b57af-104">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="b57af-104">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Applications"'
+      return:
+        type:
+          - '"Applications"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.maxPercentUnhealthyApplications'
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b57af-105">Porcentagem máxima permitida de aplicativos problemáticos o ClusterHealthPolicy.</span><span class="sxs-lookup"><span data-stu-id="b57af-105">Maximum allowed percentage of unhealthy applications from the ClusterHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b57af-106">Número total de aplicativos do repositório de integridade.</span><span class="sxs-lookup"><span data-stu-id="b57af-106">Total number of applications from the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationsHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="b57af-107">Lista de avaliações não íntegras que levou ao estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="b57af-107">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="b57af-108">Inclui o ApplicationHealthEvaluation não íntegro que afetados a integridade agregada.</span><span class="sxs-lookup"><span data-stu-id="b57af-108">Includes all the unhealthy ApplicationHealthEvaluation that impacted the aggregated health.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

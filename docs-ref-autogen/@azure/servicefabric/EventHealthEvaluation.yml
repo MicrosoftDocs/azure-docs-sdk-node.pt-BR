@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EventHealthEvaluation'
+    name: EventHealthEvaluation
+    fullName: EventHealthEvaluation
+    children:
+      - '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+      - '@azure/servicefabric.EventHealthEvaluation.description'
+      - '@azure/servicefabric.EventHealthEvaluation.kind'
+      - '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="8efcc-101">Representa a avaliação de integridade de um HealthEvent que foi relatado na entidade.</span><span class="sxs-lookup"><span data-stu-id="8efcc-101">Represents health evaluation of a HealthEvent that was reported on the entity.</span></span>
+      <span data-ttu-id="8efcc-102">A avaliação de integridade é retornada quando avaliar a integridade de uma entidade resulta em erro ou aviso.</span><span class="sxs-lookup"><span data-stu-id="8efcc-102">The health evaluation is returned when evaluating health of an entity results in Error or Warning.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8efcc-103">O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="8efcc-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8efcc-104">Indica se os avisos são ou não tratados com a mesma severidade que os erros.</span><span class="sxs-lookup"><span data-stu-id="8efcc-104">Indicates whether warnings are treated with the same severity as errors.</span></span> <span data-ttu-id="8efcc-105">O campo é especificado na política de integridade usada para avaliar a entidade.</span><span class="sxs-lookup"><span data-stu-id="8efcc-105">The field is specified in the health policy used to evaluate the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8efcc-106">Descrição da avaliação de integridade, que representa um resumo do processo de avaliação.</span><span class="sxs-lookup"><span data-stu-id="8efcc-106">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8efcc-107">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="8efcc-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Event"'
+      return:
+        type:
+          - '"Event"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EventHealthEvaluation.unhealthyEvent'
+    name: unhealthyEvent
+    fullName: unhealthyEvent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8efcc-108">Representa informações de integridade relatadas em uma entidade de integridade, como o cluster, o aplicativo ou o nó, com metadados adicionais adicionados pelo Gerenciador de integridade.</span><span class="sxs-lookup"><span data-stu-id="8efcc-108">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvent?: HealthEvent'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent'
+    name: HealthEvent
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'

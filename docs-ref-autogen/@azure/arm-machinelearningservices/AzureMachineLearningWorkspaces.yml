@@ -18,6 +18,8 @@ items:
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.sendOperationRequest'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.sendRequest'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.subscriptionId'
+      - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.usages'
+      - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.virtualMachineSizes'
       - '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.workspaces'
     langs:
       - typeScript
@@ -61,18 +63,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-101">Inicializa uma nova instância da classe AzureMachineLearningWorkspaces.</span><span class="sxs-lookup"><span data-stu-id="a8949-101">Initializes a new instance of the AzureMachineLearningWorkspaces class.</span></span>
+    summary: <span data-ttu-id="23283-101">Inicializa uma nova instância da classe AzureMachineLearningWorkspaces.</span><span class="sxs-lookup"><span data-stu-id="23283-101">Initializes a new instance of the AzureMachineLearningWorkspaces class.</span></span>
     syntax:
       content: 'new AzureMachineLearningWorkspaces(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.AzureMachineLearningWorkspacesOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: <span data-ttu-id="a8949-102">Credenciais necessárias para o cliente se conectar ao Azure.</span><span class="sxs-lookup"><span data-stu-id="a8949-102">Credentials needed for the client to connect to Azure.</span></span>
+          description: <span data-ttu-id="23283-102">Credenciais necessárias para o cliente se conectar ao Azure.</span><span class="sxs-lookup"><span data-stu-id="23283-102">Credentials needed for the client to connect to Azure.</span></span>
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="a8949-103">Identificador de assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="a8949-103">Azure subscription identifier.</span></span>
+          description: <span data-ttu-id="23283-103">Identificador de assinatura do Azure.</span><span class="sxs-lookup"><span data-stu-id="23283-103">Azure subscription identifier.</span></span>
         - id: options
           type:
             - Models.AzureMachineLearningWorkspacesOptions
@@ -85,14 +87,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-104">Enviar a solicitação inicial de um LRO (operação de longa duração) e obter de volta um HttpLongRunningOperationResponse que fornece métodos para sondar o LRO e verificando se o LRO for concluída.</span><span class="sxs-lookup"><span data-stu-id="a8949-104">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="23283-104">Enviar a solicitação inicial de um LRO (operação de longa duração) e obter de volta um HttpLongRunningOperationResponse que fornece métodos para sondar o LRO e verificando se o LRO for concluída.</span><span class="sxs-lookup"><span data-stu-id="23283-104">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="a8949-105">O objeto de solicitação</span><span class="sxs-lookup"><span data-stu-id="a8949-105">The request object</span></span>
+          description: <span data-ttu-id="23283-105">O objeto de solicitação</span><span class="sxs-lookup"><span data-stu-id="23283-105">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -123,7 +125,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="a8949-106">O tempo limite de repetição em segundos para operações de execução longa.</span><span class="sxs-lookup"><span data-stu-id="a8949-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="a8949-107">O valor padrão é 30.</span><span class="sxs-lookup"><span data-stu-id="a8949-107">Default value is 30.</span></span>
+    summary: <span data-ttu-id="23283-106">O tempo limite de repetição em segundos para operações de execução longa.</span><span class="sxs-lookup"><span data-stu-id="23283-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="23283-107">O valor padrão é 30.</span><span class="sxs-lookup"><span data-stu-id="23283-107">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -165,7 +167,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-108">Restaure um LROPoller do LROPollState fornecido.</span><span class="sxs-lookup"><span data-stu-id="a8949-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="a8949-109">Esse método pode ser usado para recriar um LROPoller em um computador ou processo diferente.</span><span class="sxs-lookup"><span data-stu-id="a8949-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="23283-108">Restaure um LROPoller do LROPollState fornecido.</span><span class="sxs-lookup"><span data-stu-id="23283-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="23283-109">Esse método pode ser usado para recriar um LROPoller em um computador ou processo diferente.</span><span class="sxs-lookup"><span data-stu-id="23283-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -183,14 +185,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-110">Fornece um mecanismo para fazer uma solicitação que sondar e fornecerá o resultado final.</span><span class="sxs-lookup"><span data-stu-id="a8949-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
+    summary: <span data-ttu-id="23283-110">Fornece um mecanismo para fazer uma solicitação que sondar e fornecerá o resultado final.</span><span class="sxs-lookup"><span data-stu-id="23283-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="a8949-111">O objeto de solicitação</span><span class="sxs-lookup"><span data-stu-id="a8949-111">The request object</span></span>
+          description: <span data-ttu-id="23283-111">O objeto de solicitação</span><span class="sxs-lookup"><span data-stu-id="23283-111">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -206,22 +208,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-112">Enviar a solicitação inicial de um LRO (operação de longa duração) e obter de volta um LROPoller que fornece métodos para sondar o LRO e verificando se o LRO for concluída.</span><span class="sxs-lookup"><span data-stu-id="a8949-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
+    summary: <span data-ttu-id="23283-112">Enviar a solicitação inicial de um LRO (operação de longa duração) e obter de volta um LROPoller que fornece métodos para sondar o LRO e verificando se o LRO for concluída.</span><span class="sxs-lookup"><span data-stu-id="23283-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="a8949-113">Os argumentos para a operação.</span><span class="sxs-lookup"><span data-stu-id="a8949-113">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="23283-113">Os argumentos para a operação.</span><span class="sxs-lookup"><span data-stu-id="23283-113">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="a8949-114">A especificação para a operação.</span><span class="sxs-lookup"><span data-stu-id="a8949-114">The specification for the operation.</span></span>
+          description: <span data-ttu-id="23283-114">A especificação para a operação.</span><span class="sxs-lookup"><span data-stu-id="23283-114">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="a8949-115">Opções adicionais a serem enviados ao fazer a solicitação.</span><span class="sxs-lookup"><span data-stu-id="a8949-115">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="23283-115">Opções adicionais a serem enviados ao fazer a solicitação.</span><span class="sxs-lookup"><span data-stu-id="23283-115">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -233,23 +235,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-116">Envie uma solicitação HTTP que é populada usando o OperationSpec fornecido.</span><span class="sxs-lookup"><span data-stu-id="a8949-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
+    summary: <span data-ttu-id="23283-116">Envie uma solicitação HTTP que é populada usando o OperationSpec fornecido.</span><span class="sxs-lookup"><span data-stu-id="23283-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="a8949-117">Os argumentos que serão preenchidos de valores de modelo da solicitação HTTP.</span><span class="sxs-lookup"><span data-stu-id="a8949-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
+          description: <span data-ttu-id="23283-117">Os argumentos que serão preenchidos de valores de modelo da solicitação HTTP.</span><span class="sxs-lookup"><span data-stu-id="23283-117">The arguments that the HTTP request's templated values will be populated from.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="a8949-118">OperationSpec serem usados para popular o httpRequest.</span><span class="sxs-lookup"><span data-stu-id="a8949-118">The OperationSpec to use to populate the httpRequest.</span></span>
+          description: <span data-ttu-id="23283-118">OperationSpec serem usados para popular o httpRequest.</span><span class="sxs-lookup"><span data-stu-id="23283-118">The OperationSpec to use to populate the httpRequest.</span></span>
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="a8949-119">O retorno de chamada a ser chamada quando a resposta é recebida.</span><span class="sxs-lookup"><span data-stu-id="a8949-119">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="23283-119">O retorno de chamada a ser chamada quando a resposta é recebida.</span><span class="sxs-lookup"><span data-stu-id="23283-119">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -261,7 +263,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="a8949-120">Envie httpRequest fornecido.</span><span class="sxs-lookup"><span data-stu-id="a8949-120">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="23283-120">Envie httpRequest fornecido.</span><span class="sxs-lookup"><span data-stu-id="23283-120">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -286,6 +288,34 @@ items:
       return:
         type:
           - string
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.usages'
+    name: usages
+    fullName: usages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'usages: Usages'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.Usages'
+    package: '@azure/arm-machinelearningservices'
+  - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.virtualMachineSizes'
+    name: virtualMachineSizes
+    fullName: virtualMachineSizes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'virtualMachineSizes: VirtualMachineSizes'
+      return:
+        type:
+          - '@azure/arm-machinelearningservices.VirtualMachineSizes'
     package: '@azure/arm-machinelearningservices'
   - uid: '@azure/arm-machinelearningservices.AzureMachineLearningWorkspaces.workspaces'
     name: workspaces
@@ -320,6 +350,18 @@ references:
       - name: Operations
         fullName: Operations
         uid: '@azure/arm-machinelearningservices.Operations'
+  - uid: '@azure/arm-machinelearningservices.Usages'
+    name: Usages
+    spec.typeScript:
+      - name: Usages
+        fullName: Usages
+        uid: '@azure/arm-machinelearningservices.Usages'
+  - uid: '@azure/arm-machinelearningservices.VirtualMachineSizes'
+    name: VirtualMachineSizes
+    spec.typeScript:
+      - name: VirtualMachineSizes
+        fullName: VirtualMachineSizes
+        uid: '@azure/arm-machinelearningservices.VirtualMachineSizes'
   - uid: '@azure/arm-machinelearningservices.Workspaces'
     name: Workspaces
     spec.typeScript:

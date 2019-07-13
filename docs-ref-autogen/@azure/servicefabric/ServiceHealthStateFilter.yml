@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="40ae0-101">Define os critérios de correspondência para determinar se um serviço deve ser incluído como um filho de um aplicativo no bloco de integridade do cluster.</span><span class="sxs-lookup"><span data-stu-id="40ae0-101">Defines matching criteria to determine whether a service should be included as a child of an application in the cluster health chunk.</span></span>
+      <span data-ttu-id="40ae0-102">Os serviços são retornados apenas se o aplicativo pai corresponde a um filtro especificado na descrição de consulta de parte do cluster integridade.</span><span class="sxs-lookup"><span data-stu-id="40ae0-102">The services are only returned if the parent application matches a filter specified in the cluster health chunk query description.</span></span>
+      <span data-ttu-id="40ae0-103">Um filtro pode corresponder a zero, um ou vários serviços, dependendo de suas propriedades.</span><span class="sxs-lookup"><span data-stu-id="40ae0-103">One filter can match zero, one or multiple services, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="40ae0-104">O filtro para o estado de integridade dos serviços.</span><span class="sxs-lookup"><span data-stu-id="40ae0-104">The filter for the health state of the services.</span></span> <span data-ttu-id="40ae0-105">Ele permite selecionando os serviços se eles corresponderem os estados de integridade desejadas.</span><span class="sxs-lookup"><span data-stu-id="40ae0-105">It allows selecting services if they match the desired health states.</span></span>
+      <span data-ttu-id="40ae0-106">Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade.</span><span class="sxs-lookup"><span data-stu-id="40ae0-106">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id="40ae0-107">Serão retornados somente os serviços que corresponderem ao filtro.</span><span class="sxs-lookup"><span data-stu-id="40ae0-107">Only services that match the filter are returned.</span></span> <span data-ttu-id="40ae0-108">Todos os serviços são usados para avaliar o estado de integridade agregado do cluster.</span><span class="sxs-lookup"><span data-stu-id="40ae0-108">All services are used to evaluate the cluster aggregated health state.</span></span>
+      <span data-ttu-id="40ae0-109">Se não for especificado, o valor padrão é None, a menos que o nome do serviço é especificado.</span><span class="sxs-lookup"><span data-stu-id="40ae0-109">If not specified, default value is None, unless the service name is specified.</span></span> <span data-ttu-id="40ae0-110">Se o filtro tem valor padrão e o nome do serviço for especificado, o serviço correspondente será retornado.</span><span class="sxs-lookup"><span data-stu-id="40ae0-110">If the filter has default value and service name is specified, the matching service is returned.</span></span>
+      <span data-ttu-id="40ae0-111">Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.</span><span class="sxs-lookup"><span data-stu-id="40ae0-111">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="40ae0-112">Por exemplo, se o valor fornecido for 6, ela corresponde a serviços com valor de HealthState Okey (2) e Warning (4).</span><span class="sxs-lookup"><span data-stu-id="40ae0-112">For example, if the provided value is 6, it matches services with HealthState value of OK (2) and Warning (4).</span></span>
+      - <span data-ttu-id="40ae0-113">Default – valor padrão.</span><span class="sxs-lookup"><span data-stu-id="40ae0-113">Default - Default value.</span></span> <span data-ttu-id="40ae0-114">Corresponde a qualquer HealthState.</span><span class="sxs-lookup"><span data-stu-id="40ae0-114">Matches any HealthState.</span></span> <span data-ttu-id="40ae0-115">O valor é zero.</span><span class="sxs-lookup"><span data-stu-id="40ae0-115">The value is zero.</span></span>
+      - <span data-ttu-id="40ae0-116">None - filtro que não corresponde a qualquer valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="40ae0-116">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id="40ae0-117">Usado para não retornar qualquer resultado em um determinado conjunto de estados.</span><span class="sxs-lookup"><span data-stu-id="40ae0-117">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id="40ae0-118">O valor é 1.</span><span class="sxs-lookup"><span data-stu-id="40ae0-118">The value is 1.</span></span>
+      - <span data-ttu-id="40ae0-119">Okey - filtro que corresponde à entrada com o valor de HealthState Okey.</span><span class="sxs-lookup"><span data-stu-id="40ae0-119">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id="40ae0-120">O valor é 2.</span><span class="sxs-lookup"><span data-stu-id="40ae0-120">The value is 2.</span></span>
+      - <span data-ttu-id="40ae0-121">Warning - filtro que corresponde à entrada com HealthState valor Warning.</span><span class="sxs-lookup"><span data-stu-id="40ae0-121">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id="40ae0-122">O valor é 4.</span><span class="sxs-lookup"><span data-stu-id="40ae0-122">The value is 4.</span></span>
+      - <span data-ttu-id="40ae0-123">Error - filtro que corresponde à entrada com o valor de HealthState Error.</span><span class="sxs-lookup"><span data-stu-id="40ae0-123">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id="40ae0-124">O valor é 8.</span><span class="sxs-lookup"><span data-stu-id="40ae0-124">The value is 8.</span></span>
+      - <span data-ttu-id="40ae0-125">All - filtro que corresponde à entrada com qualquer valor de HealthState.</span><span class="sxs-lookup"><span data-stu-id="40ae0-125">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id="40ae0-126">O valor é 65535.</span><span class="sxs-lookup"><span data-stu-id="40ae0-126">The value is 65535.</span></span> <span data-ttu-id="40ae0-127">Valor padrão: 0.</span><span class="sxs-lookup"><span data-stu-id="40ae0-127">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40ae0-128">Define uma lista de filtros que especificam quais partições a serem incluídos na integridade do cluster retornado partes como filhos do serviço.</span><span class="sxs-lookup"><span data-stu-id="40ae0-128">Defines a list of filters that specify which partitions to be included in the returned cluster health chunk as children of the service.</span></span> <span data-ttu-id="40ae0-129">As partições serão retornadas apenas se o serviço pai corresponde a um filtro.</span><span class="sxs-lookup"><span data-stu-id="40ae0-129">The partitions are returned only if the parent service matches a filter.</span></span>
+      <span data-ttu-id="40ae0-130">Se a lista estiver vazia, nenhuma partição serão retornadas.</span><span class="sxs-lookup"><span data-stu-id="40ae0-130">If the list is empty, no partitions are returned.</span></span> <span data-ttu-id="40ae0-131">Todas as partições são usadas para avaliar o estado de integridade do serviço agregado do pai, independentemente dos filtros de entrada.</span><span class="sxs-lookup"><span data-stu-id="40ae0-131">All the partitions are used to evaluate the parent service aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="40ae0-132">O filtro de serviço pode especificar vários filtros de partição.</span><span class="sxs-lookup"><span data-stu-id="40ae0-132">The service filter may specify multiple partition filters.</span></span>
+      <span data-ttu-id="40ae0-133">Por exemplo, pode especificar um filtro para retornar todas as partições com o estado de integridade erro e outro filtro para incluir sempre uma partição identificada por sua ID de partição.</span><span class="sxs-lookup"><span data-stu-id="40ae0-133">For example, it can specify a filter to return all partitions with health state Error and another filter to always include a partition identified by its partition ID.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="40ae0-134">O nome do serviço que corresponde ao filtro.</span><span class="sxs-lookup"><span data-stu-id="40ae0-134">The name of the service that matches the filter.</span></span> <span data-ttu-id="40ae0-135">O filtro é aplicado apenas ao serviço especificado, se ele existir.</span><span class="sxs-lookup"><span data-stu-id="40ae0-135">The filter is applied only to the specified service, if it exists.</span></span>
+      <span data-ttu-id="40ae0-136">Se o serviço não existir, nenhum serviço será retornado no bloco de integridade de cluster com base nesse filtro.</span><span class="sxs-lookup"><span data-stu-id="40ae0-136">If the service doesn't exist, no service is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="40ae0-137">Se o serviço existir, ela está incluída como filho do aplicativo se o estado de integridade corresponde a outras propriedades de filtro.</span><span class="sxs-lookup"><span data-stu-id="40ae0-137">If the service exists, it is included as the application's child if the health state matches the other filter properties.</span></span>
+      <span data-ttu-id="40ae0-138">Se não for especificado, todos os serviços que correspondem aos filtros pai (se houver) são levados em consideração e comparados com os outros membros de filtro, como o filtro de estado de integridade.</span><span class="sxs-lookup"><span data-stu-id="40ae0-138">If not specified, all services that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

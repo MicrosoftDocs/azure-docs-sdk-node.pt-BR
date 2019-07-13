@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo'
+    name: ApplicationBackupConfigurationInfo
+    fullName: ApplicationBackupConfigurationInfo
+    children:
+      - '@azure/servicefabric.ApplicationBackupConfigurationInfo.applicationName'
+      - '@azure/servicefabric.ApplicationBackupConfigurationInfo.kind'
+      - '@azure/servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom'
+      - '@azure/servicefabric.ApplicationBackupConfigurationInfo.policyName'
+      - '@azure/servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="8a784-101">Informações de configuração de backup para um aplicativo específico do Service Fabric especificando qual política de backup está sendo aplicada e suspender a descrição, se houver.</span><span class="sxs-lookup"><span data-stu-id="8a784-101">Backup configuration information for a specific Service Fabric application specifying what backup policy is being applied and suspend description, if any.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8a784-102">O nome do aplicativo, incluindo o '' fabric:'' ''fabric:''.</span><span class="sxs-lookup"><span data-stu-id="8a784-102">The name of the application, including the ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8a784-103">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="8a784-103">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Application"'
+      return:
+        type:
+          - '"Application"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo.policyInheritedFrom'
+    name: policyInheritedFrom
+    fullName: policyInheritedFrom
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="8a784-104">Especifica o escopo no qual a política de backup é aplicada.</span><span class="sxs-lookup"><span data-stu-id="8a784-104">Specifies the scope at which the backup policy is applied.</span></span> <span data-ttu-id="8a784-105">Os valores possíveis incluem: ''Invalid'', ''Partition'', ''Service'', ''Application''</span><span class="sxs-lookup"><span data-stu-id="8a784-105">Possible values include: ''Invalid'', ''Partition'', ''Service'', ''Application''</span></span>'
+    optional: true
+    syntax:
+      content: 'policyInheritedFrom?: BackupPolicyScope'
+      return:
+        type:
+          - '@azure/servicefabric.BackupPolicyScope'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo.policyName'
+    name: policyName
+    fullName: policyName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8a784-106">O nome da política de backup que é aplicável a este aplicativo do Service Fabric ou serviço ou partição.</span><span class="sxs-lookup"><span data-stu-id="8a784-106">The name of the backup policy which is applicable to this Service Fabric application or service or partition.</span></span>
+    optional: true
+    syntax:
+      content: 'policyName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationBackupConfigurationInfo.suspensionInfo'
+    name: suspensionInfo
+    fullName: suspensionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="8a784-107">Descreve os detalhes de suspensão de backup.</span><span class="sxs-lookup"><span data-stu-id="8a784-107">Describes the backup suspension details.</span></span>
+    optional: true
+    syntax:
+      content: 'suspensionInfo?: BackupSuspensionInfo'
+      return:
+        type:
+          - '@azure/servicefabric.BackupSuspensionInfo'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupPolicyScope'
+    name: BackupPolicyScope
+    spec.typeScript:
+      - name: BackupPolicyScope
+        fullName: BackupPolicyScope
+        uid: '@azure/servicefabric.BackupPolicyScope'
+  - uid: '@azure/servicefabric.BackupSuspensionInfo'
+    name: BackupSuspensionInfo
+    spec.typeScript:
+      - name: BackupSuspensionInfo
+        fullName: BackupSuspensionInfo
+        uid: '@azure/servicefabric.BackupSuspensionInfo'
