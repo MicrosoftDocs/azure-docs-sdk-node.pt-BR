@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation'
+    name: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    fullName: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    children:
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineErrorCount'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineTotalCount'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.description'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.kind'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.totalCount'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.unhealthyEvaluations'
+      - '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.upgradeDomainName'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Representa a avaliação de integridade de delta não íntegros para nós de cluster em um domínio de atualização, que contém as avaliações de integridade para cada nó não íntegro que afetados atual estado de integridade agregado.
+      Pode ser retornado durante a atualização de cluster quando agregado do cluster o estado de integridade é de aviso ou erro.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineErrorCount'
+    name: baselineErrorCount
+    fullName: baselineErrorCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número de nós de domínio de atualização com o estado de integridade agregada erro no repositório de integridade no início da atualização do cluster.
+    optional: true
+    syntax:
+      content: 'baselineErrorCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineTotalCount'
+    name: baselineTotalCount
+    fullName: baselineTotalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número total de nós de domínio de atualização no repositório de integridade no início da atualização do cluster.
+    optional: true
+    syntax:
+      content: 'baselineTotalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descrição da avaliação de integridade, que representa um resumo do processo de avaliação.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "UpgradeDomainDeltaNodesCheck"'
+      return:
+        type:
+          - '"UpgradeDomainDeltaNodesCheck"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes'
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Porcentagem máxima permitida de delta do domínio de atualização de nós não íntegros do ClusterUpgradeHealthPolicy.
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número total de nós de domínio de atualização no repositório de integridade.
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de avaliações não íntegras que levou ao estado de integridade agregado. Inclui o NodeHealthEvaluation não íntegro que afetados a integridade agregada.
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.upgradeDomainName'
+    name: upgradeDomainName
+    fullName: upgradeDomainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do domínio de atualização em que a integridade de nós é avaliada no momento.
+    optional: true
+    syntax:
+      content: 'upgradeDomainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

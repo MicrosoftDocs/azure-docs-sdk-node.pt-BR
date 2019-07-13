@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription'
+    name: ServicePlacementPreferPrimaryDomainPolicyDescription
+    fullName: ServicePlacementPreferPrimaryDomainPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Descreve a política a ser usado para o posicionamento de um serviço do Service Fabric onde réplicas primárias do serviço devem ser colocadas em um domínio específico.
+      Essa política de posicionamento é geralmente usada com domínios de falha em cenários onde o cluster do Service Fabric é distribuído geograficamente para indicar que a réplica primária de um serviço deve estar localizada em um domínio de falha específico, que, em distribuído geograficamente cenários geralmente se alinha com os limites regionais ou datacenter. Observe que, como essa é uma otimização, é possível que a réplica primária pode não acabar localizados nesse domínio devido a falhas, limites de capacidade ou outras restrições.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome do domínio que deve usado para posicionamento, de acordo com essa política.'
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementPreferPrimaryDomainPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'type: "PreferPrimaryDomain"'
+      return:
+        type:
+          - '"PreferPrimaryDomain"'
+    package: '@azure/servicefabric'

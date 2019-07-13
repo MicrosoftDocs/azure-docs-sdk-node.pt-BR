@@ -181,6 +181,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy'
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy_1'
       - '@azure/servicefabric.ServiceFabricClient.getClusterHealthUsingPolicy_2'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad_1'
+      - '@azure/servicefabric.ServiceFabricClient.getClusterLoad_2'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest_1'
       - '@azure/servicefabric.ServiceFabricClient.getClusterManifest_2'
@@ -259,9 +262,15 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreContent_2'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_1'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_2'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent_2'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_1'
+      - '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_2'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById_1'
       - '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById_2'
@@ -409,6 +418,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList'
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList_1'
       - '@azure/servicefabric.ServiceFabricClient.getSubNameInfoList_2'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_1'
+      - '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_2'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState_1'
       - '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState_2'
@@ -430,6 +442,12 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.meshService'
       - '@azure/servicefabric.ServiceFabricClient.meshServiceReplica'
       - '@azure/servicefabric.ServiceFabricClient.meshVolume'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_1'
+      - '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_2'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_1'
+      - '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_2'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule_1'
       - '@azure/servicefabric.ServiceFabricClient.postChaosSchedule_2'
@@ -577,6 +595,9 @@ items:
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup'
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup_1'
       - '@azure/servicefabric.ServiceFabricClient.suspendServiceBackup_2'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_1'
+      - '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_2'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType_1'
       - '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType_2'
@@ -2104,7 +2125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Um serviço deve ser criado antes que possa ser excluído. Por padrão, o Service Fabric irá fechar réplicas do serviço normalmente e, depois, excluir o serviço. No entanto, se o serviço está tendo problemas para fechar a réplica normalmente, a operação de exclusão pode levar muito tempo ou preso. Use o sinalizador opcional ForceRemove para ignorar a sequência de fechamento normal e forçar a exclusão do serviço.'
+    summary: 'Um serviço deve ser criado antes que possa ser excluído. Por padrão, do Service Fabric tentará fechar réplicas do serviço de maneira normal e, em seguida, excluir o serviço. No entanto, se o serviço está tendo problemas para fechar a réplica normalmente, a operação de exclusão pode levar muito tempo ou preso. Use o sinalizador opcional ForceRemove para ignorar a sequência de fechamento normal e forçar a exclusão do serviço.'
     syntax:
       content: 'function deleteService(serviceId: string, options?: Models.ServiceFabricClientDeleteServiceOptionalParams)'
       parameters:
@@ -5152,6 +5173,67 @@ items:
         type:
           - Promise<Models.GetClusterHealthUsingPolicyResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad'
+    name: getClusterLoad(Models.ServiceFabricClientGetClusterLoadOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Recupera as informações de carregamento de um cluster do Service Fabric para todas as métricas que têm carga ou capacidade definida.
+    syntax:
+      content: 'function getClusterLoad(options?: Models.ServiceFabricClientGetClusterLoadOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetClusterLoadOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad_1'
+    name: getClusterLoad(ServiceCallback<ClusterLoadInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getClusterLoad(callback: ServiceCallback<ClusterLoadInfo>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getClusterLoad_2'
+    name: 'getClusterLoad(ServiceFabricClientGetClusterLoadOptionalParams, ServiceCallback<ClusterLoadInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getClusterLoad(options: ServiceFabricClientGetClusterLoadOptionalParams, callback: ServiceCallback<ClusterLoadInfo>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetClusterLoadResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getClusterManifest'
     name: getClusterManifest(Models.ServiceFabricClientGetClusterManifestOptionalParams)
     children: []
@@ -7470,6 +7552,79 @@ items:
         type:
           - Promise<Models.GetImageStoreContentResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize'
+    name: 'getImageStoreFolderSize(string, Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Obtém o tamanho total do arquivo em uma pasta de repositório de imagem, especificado pelo contentPath. O contentPath é relativo à raiz do repositório de imagem.'
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, options?: Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: Caminho relativo para o arquivo ou pasta no repositório de imagens de sua raiz.
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_1'
+    name: 'getImageStoreFolderSize(string, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: Caminho relativo para o arquivo ou pasta no repositório de imagens de sua raiz.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreFolderSize_2'
+    name: 'getImageStoreFolderSize(string, ServiceFabricClientGetImageStoreFolderSizeOptionalParams, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreFolderSize(contentPath: string, options: ServiceFabricClientGetImageStoreFolderSizeOptionalParams, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: contentPath
+          type:
+            - string
+          description: Caminho relativo para o arquivo ou pasta no repositório de imagens de sua raiz.
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetImageStoreFolderSizeResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootContent'
     name: getImageStoreRootContent(Models.ServiceFabricClientGetImageStoreRootContentOptionalParams)
     children: []
@@ -7530,6 +7685,67 @@ items:
       return:
         type:
           - Promise<Models.GetImageStoreRootContentResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize'
+    name: getImageStoreRootFolderSize(Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Retorna o tamanho total dos arquivos na raiz e filhos pastas no repositório de imagens.
+    syntax:
+      content: 'function getImageStoreRootFolderSize(options?: Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_1'
+    name: getImageStoreRootFolderSize(ServiceCallback<FolderSizeInfo>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreRootFolderSize(callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreRootFolderSize_2'
+    name: 'getImageStoreRootFolderSize(ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams, ServiceCallback<FolderSizeInfo>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getImageStoreRootFolderSize(options: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams, callback: ServiceCallback<FolderSizeInfo>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetImageStoreRootFolderSizeResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getImageStoreUploadSessionById'
     name: 'getImageStoreUploadSessionById(string, Models.ServiceFabricClientGetImageStoreUploadSessionByIdOptionalParams)'
@@ -11549,6 +11765,92 @@ items:
         type:
           - Promise<Models.GetSubNameInfoListResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation'
+    name: 'getUnplacedReplicaInformation(string, Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Retorna as informações sobre as réplicas não posicionadas do serviço.
+      Se PartitionId for especificado, o resultado irá conter informações somente sobre réplicas não posicionadas para essa partição.
+      Se PartitionId não for especificado, o resultado conterá informações sobre réplicas não posicionadas para todas as partições desse serviço.
+      Se OnlyQueryPrimaries for definido como true, em seguida, o resultado conterá informações apenas sobre as réplicas primárias e ignorará as réplicas secundárias não alocadas.
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, options?: Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            A identidade do serviço. Essa ID normalmente é o nome completo do serviço sem o ' fabric:' 'fabric:'.
+            A partir da versão 6.0, nomes hierárquicos são delimitados pelo caractere "~".
+            Por exemplo, se o nome do serviço for "fabric: / myapp meuaplicativo/Aplicativo1/svc1", a identidade do serviço será "myapp ~ app1 ~ svc1" em 6.0 + e "myapp meuaplicativo/Aplicativo1/svc1" em versões anteriores.
+        - id: options
+          type:
+            - Models.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_1'
+    name: 'getUnplacedReplicaInformation(string, ServiceCallback<UnplacedReplicaInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, callback: ServiceCallback<UnplacedReplicaInformation>)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            A identidade do serviço. Essa ID normalmente é o nome completo do serviço sem o ' fabric:' 'fabric:'.
+            A partir da versão 6.0, nomes hierárquicos são delimitados pelo caractere "~".
+            Por exemplo, se o nome do serviço for "fabric: / myapp meuaplicativo/Aplicativo1/svc1", a identidade do serviço será "myapp ~ app1 ~ svc1" em 6.0 + e "myapp meuaplicativo/Aplicativo1/svc1" em versões anteriores.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.getUnplacedReplicaInformation_2'
+    name: 'getUnplacedReplicaInformation(string, ServiceFabricClientGetUnplacedReplicaInformationOptionalParams, ServiceCallback<UnplacedReplicaInformation>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getUnplacedReplicaInformation(serviceId: string, options: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams, callback: ServiceCallback<UnplacedReplicaInformation>)'
+      parameters:
+        - id: serviceId
+          type:
+            - string
+          description: |-
+            A identidade do serviço. Essa ID normalmente é o nome completo do serviço sem o ' fabric:' 'fabric:'.
+            A partir da versão 6.0, nomes hierárquicos são delimitados pelo caractere "~".
+            Por exemplo, se o nome do serviço for "fabric: / myapp meuaplicativo/Aplicativo1/svc1", a identidade do serviço será "myapp ~ app1 ~ svc1" em 6.0 + e "myapp meuaplicativo/Aplicativo1/svc1" em versões anteriores.
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<Models.GetUnplacedReplicaInformationResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.getUpgradeOrchestrationServiceState'
     name: getUpgradeOrchestrationServiceState(Models.ServiceFabricClientGetUpgradeOrchestrationServiceStateOptionalParams)
     children: []
@@ -12031,6 +12333,172 @@ items:
       return:
         type:
           - '@azure/servicefabric.MeshVolume'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica'
+    name: 'movePrimaryReplica(string, Models.ServiceFabricClientMovePrimaryReplicaOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Este comando Move a réplica primária de uma partição de um serviço com monitoração de estado, respeitando a todas as restrições.
+      Se o parâmetro de NodeName for especificado, o primário será movido para o nó especificado (se a permissão das restrições).
+      Se o parâmetro de nome do nó não for especificado, a réplica primária será movida em um nó aleatório no cluster.
+      Se o parâmetro IgnoreConstraints é especificado e definido como true, em seguida, o principal será movido independentemente das restrições.
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, options?: Models.ServiceFabricClientMovePrimaryReplicaOptionalParams)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: options
+          type:
+            - Models.ServiceFabricClientMovePrimaryReplicaOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_1'
+    name: 'movePrimaryReplica(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.movePrimaryReplica_2'
+    name: 'movePrimaryReplica(string, ServiceFabricClientMovePrimaryReplicaOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function movePrimaryReplica(partitionId: string, options: ServiceFabricClientMovePrimaryReplicaOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica'
+    name: 'moveSecondaryReplica(string, string, Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Este comando Move a réplica secundária de uma partição de um serviço com monitoração de estado, respeitando a todas as restrições.
+      Parâmetro CurrentNodeName deve ser especificado para identificar a réplica que é movida.
+      Nome do nó de origem deve ser especificado, mas novo nome de nó pode ser omitido e, nesse caso a réplica é movida para um nó aleatório.
+      Se o parâmetro IgnoreConstraints é especificado e definido como true, em seguida, o secundário será movido, independentemente das restrições.
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, options?: Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: currentNodeName
+          type:
+            - string
+          description: Mover o nome do nó de origem para a réplica secundária.
+        - id: options
+          type:
+            - Models.ServiceFabricClientMoveSecondaryReplicaOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_1'
+    name: 'moveSecondaryReplica(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: currentNodeName
+          type:
+            - string
+          description: Mover o nome do nó de origem para a réplica secundária.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.moveSecondaryReplica_2'
+    name: 'moveSecondaryReplica(string, string, ServiceFabricClientMoveSecondaryReplicaOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function moveSecondaryReplica(partitionId: string, currentNodeName: string, options: ServiceFabricClientMoveSecondaryReplicaOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: partitionId
+          type:
+            - string
+          description: A identidade da partição.
+        - id: currentNodeName
+          type:
+            - string
+          description: Mover o nome do nó de origem para a réplica secundária.
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
     package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.postChaosSchedule'
     name: 'postChaosSchedule(ChaosScheduleDescription, Models.ServiceFabricClientPostChaosScheduleOptionalParams)'
@@ -12699,7 +13167,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Isso significa que não é possível recuperar o estado persistente desse nó. Isso geralmente acontece se um disco rígido tiver sido limpo ou se um disco rígido falhar. O nó deve ser para baixo para que essa operação seja bem-sucedida. Esta operação permite que o Service Fabric saiba que as réplicas no nó deixarão de existir e esse Service Fabric deve parar de esperar que essas réplicas retornem. Não execute esse cmdlet se o estado no nó foi removido e se o nó pode retornar com seu estado intacto.
+    summary: 'Isso significa que não é possível recuperar o estado persistente desse nó. Isso geralmente acontece se um disco rígido tiver sido limpo ou se um disco rígido falhar. O nó deve ser para baixo para que essa operação seja bem-sucedida. Esta operação permite que o Service Fabric saiba que as réplicas no nó deixarão de existir e esse Service Fabric deve parar de esperar que essas réplicas retornem. Não execute esse cmdlet se o estado no nó foi removido e se o nó pode retornar com seu estado intacto. A partir 6.5 da malha de serviço, para usar essa API para nós de semente, altere os nós de semente para regular de nós (sem propagação) e, em seguida, invocar essa API para remover o estado do nó. Se o cluster estiver em execução no Azure, depois que o nó de propagação falha, o Service Fabric tentará alterá-lo para um nó de semeação não automaticamente. Para fazer isso acontecer, verifique se o número de nós sem propagação no tipo de nó primário é não menor que o número de nós de semente inativos. Se necessário, adicione mais nós para o tipo de nó primário para fazer isso. Para o cluster autônomo, se o nó de propagação de busca não é esperado para voltar com seu estado intacto, por favor, remova o nó do cluster, consulte https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-cluster-windows-server-add-remove-nodes'
     syntax:
       content: 'function removeNodeState(nodeName: string, options?: Models.ServiceFabricClientRemoveNodeStateOptionalParams)'
       parameters:
@@ -12969,7 +13437,7 @@ items:
     langs:
       - typeScript
     summary: |-
-      Envia um relatório de integridade em um cluster do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e a propriedade na qual ele será relatado.
+      Envia um relatório de integridade em um cluster do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e propriedade na qual ele será relatado.
       O relatório é enviado a um nó de gateway do Service Fabric, que encaminha para o repositório de integridade.
       O relatório pode ser aceito pelo gateway, mas rejeitado pelo repositório de integridade após validação adicional.
       Por exemplo, o repositório de integridade pode rejeitar o relatório devido a um parâmetro inválido, como um número de sequência obsoleto.
@@ -13047,7 +13515,7 @@ items:
     langs:
       - typeScript
     summary: |-
-      Relata o estado de integridade do aplicativo implantado em um nó do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e a propriedade na qual ele será relatado.
+      Relata o estado de integridade do aplicativo implantado em um nó do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e propriedade na qual ele será relatado.
       O relatório é enviado a um serviço, que encaminha para o repositório de integridade de gateway do Service Fabric.
       O relatório pode ser aceito pelo gateway, mas rejeitado pelo repositório de integridade após validação adicional.
       Por exemplo, o repositório de integridade pode rejeitar o relatório devido a um parâmetro inválido, como um número de sequência obsoleto.
@@ -13158,7 +13626,7 @@ items:
     langs:
       - typeScript
     summary: |-
-      Relata o estado de integridade do pacote de serviço do aplicativo implantado em um nó do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e a propriedade na qual ele será relatado.
+      Relata o estado de integridade do pacote de serviço do aplicativo implantado em um nó do Service Fabric. O relatório deve conter as informações sobre a origem do relatório de integridade e propriedade na qual ele será relatado.
       O relatório é enviado a um serviço, que encaminha para o repositório de integridade de gateway do Service Fabric.
       O relatório pode ser aceito pelo gateway, mas rejeitado pelo repositório de integridade após validação adicional.
       Por exemplo, o repositório de integridade pode rejeitar o relatório devido a um parâmetro inválido, como um número de sequência obsoleto.
@@ -13467,7 +13935,7 @@ items:
       Por exemplo, o repositório de integridade pode rejeitar o relatório devido a um parâmetro inválido, como um número de sequência obsoleto.
       Para ver se o relatório foi aplicado no repositório de integridade, execute GetReplicaHealth e verifique se o relatório aparece na seção HealthEvents.
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options?: Models.ServiceFabricClientReportReplicaHealthOptionalParams)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options?: Models.ServiceFabricClientReportReplicaHealthOptionalParams)'
       parameters:
         - id: partitionId
           type:
@@ -13477,7 +13945,7 @@ items:
           type:
             - string
           description: O identificador da réplica.
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 'O tipo de réplica de serviço (ou sem estado) para o qual a integridade está sendo relatada. A seguir está os valores possíveis. Os valores possíveis incluem: ''Sem monitoração de estado'', ''Com monitoração de estado'''
@@ -13502,7 +13970,7 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, callback: ServiceCallback<void>)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, callback: ServiceCallback<void>)'
       parameters:
         - id: partitionId
           type:
@@ -13512,7 +13980,7 @@ items:
           type:
             - string
           description: O identificador da réplica.
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 'O tipo de réplica de serviço (ou sem estado) para o qual a integridade está sendo relatada. A seguir está os valores possíveis. Os valores possíveis incluem: ''Sem monitoração de estado'', ''Com monitoração de estado'''
@@ -13537,7 +14005,7 @@ items:
       - typeScript
     summary: ''
     syntax:
-      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, replicaHealthReportServiceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options: ServiceFabricClientReportReplicaHealthOptionalParams, callback: ServiceCallback<void>)'
+      content: 'function reportReplicaHealth(partitionId: string, replicaId: string, serviceKind: Models.ReplicaHealthReportServiceKind, healthInformation: HealthInformation, options: ServiceFabricClientReportReplicaHealthOptionalParams, callback: ServiceCallback<void>)'
       parameters:
         - id: partitionId
           type:
@@ -13547,7 +14015,7 @@ items:
           type:
             - string
           description: O identificador da réplica.
-        - id: replicaHealthReportServiceKind
+        - id: serviceKind
           type:
             - Models.ReplicaHealthReportServiceKind
           description: 'O tipo de réplica de serviço (ou sem estado) para o qual a integridade está sendo relatada. A seguir está os valores possíveis. Os valores possíveis incluem: ''Sem monitoração de estado'', ''Com monitoração de estado'''
@@ -16251,6 +16719,81 @@ items:
         type:
           - Promise<RestResponse>
     package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Se o detalhamento for definido como true, relatórios detalhados de integridade serão gerados quando as réplicas não podem ser colocadas ou descartadas.
+      Se detalhamento for definido como false, não há relatórios de integridade serão gerados quando as réplicas não podem ser colocadas ou descartadas.
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, options?: Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: O detalhamento dos relatórios de integridade de posicionamento do serviço.
+        - id: options
+          type:
+            - Models.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_1'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, callback: ServiceCallback<void>)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: O detalhamento dos relatórios de integridade de posicionamento do serviço.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceFabricClient.toggleVerboseServicePlacementHealthReporting_2'
+    name: 'toggleVerboseServicePlacementHealthReporting(boolean, ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function toggleVerboseServicePlacementHealthReporting(enabled: boolean, options: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: O detalhamento dos relatórios de integridade de posicionamento do serviço.
+        - id: options
+          type:
+            - '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
+          description: Os parâmetros opcionais
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            O retorno de chamada
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/servicefabric'
   - uid: '@azure/servicefabric.ServiceFabricClient.unprovisionApplicationType'
     name: 'unprovisionApplicationType(string, UnprovisionApplicationTypeDescriptionInfo, Models.ServiceFabricClientUnprovisionApplicationTypeOptionalParams)'
     children: []
@@ -17770,6 +18313,22 @@ references:
       - name: ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
         fullName: ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetClusterHealthUsingPolicyOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.ClusterLoadInfo>
+    name: ClusterLoadInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: ClusterLoadInfo
+        fullName: ClusterLoadInfo
+        uid: '@azure/servicefabric.ClusterLoadInfo'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
+    name: ServiceFabricClientGetClusterLoadOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetClusterLoadOptionalParams
+        fullName: ServiceFabricClientGetClusterLoadOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetClusterLoadOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.ClusterManifest>
     name: ClusterManifest>
     spec.typeScript:
@@ -18106,12 +18665,34 @@ references:
       - name: ServiceFabricClientGetImageStoreContentOptionalParams
         fullName: ServiceFabricClientGetImageStoreContentOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreContentOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.FolderSizeInfo>
+    name: FolderSizeInfo>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: FolderSizeInfo
+        fullName: FolderSizeInfo
+        uid: '@azure/servicefabric.FolderSizeInfo'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
+    name: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+        fullName: ServiceFabricClientGetImageStoreFolderSizeOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreFolderSizeOptionalParams'
   - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootContentOptionalParams'
     name: ServiceFabricClientGetImageStoreRootContentOptionalParams
     spec.typeScript:
       - name: ServiceFabricClientGetImageStoreRootContentOptionalParams
         fullName: ServiceFabricClientGetImageStoreRootContentOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootContentOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
+    name: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+        fullName: ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetImageStoreRootFolderSizeOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.UploadSession>
     name: UploadSession>
     spec.typeScript:
@@ -18676,6 +19257,22 @@ references:
       - name: ServiceFabricClientGetSubNameInfoListOptionalParams
         fullName: ServiceFabricClientGetSubNameInfoListOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientGetSubNameInfoListOptionalParams'
+  - uid: ServiceCallback<@azure/servicefabric.UnplacedReplicaInformation>
+    name: UnplacedReplicaInformation>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: UnplacedReplicaInformation
+        fullName: UnplacedReplicaInformation
+        uid: '@azure/servicefabric.UnplacedReplicaInformation'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
+    name: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+        fullName: ServiceFabricClientGetUnplacedReplicaInformationOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientGetUnplacedReplicaInformationOptionalParams'
   - uid: ServiceCallback<@azure/servicefabric.UpgradeOrchestrationServiceState>
     name: UpgradeOrchestrationServiceState>
     spec.typeScript:
@@ -18726,6 +19323,18 @@ references:
       - name: ServiceFabricClientInvokeInfrastructureQueryOptionalParams
         fullName: ServiceFabricClientInvokeInfrastructureQueryOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientInvokeInfrastructureQueryOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+    name: ServiceFabricClientMovePrimaryReplicaOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientMovePrimaryReplicaOptionalParams
+        fullName: ServiceFabricClientMovePrimaryReplicaOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientMovePrimaryReplicaOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
+    name: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+        fullName: ServiceFabricClientMoveSecondaryReplicaOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientMoveSecondaryReplicaOptionalParams'
   - uid: '@azure/servicefabric.ChaosScheduleDescription'
     name: ChaosScheduleDescription
     spec.typeScript:
@@ -19130,6 +19739,12 @@ references:
       - name: ServiceFabricClientSuspendServiceBackupOptionalParams
         fullName: ServiceFabricClientSuspendServiceBackupOptionalParams
         uid: '@azure/servicefabric.ServiceFabricClientSuspendServiceBackupOptionalParams'
+  - uid: '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
+    name: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+    spec.typeScript:
+      - name: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+        fullName: ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams
+        uid: '@azure/servicefabric.ServiceFabricClientToggleVerboseServicePlacementHealthReportingOptionalParams'
   - uid: '@azure/servicefabric.UnprovisionApplicationTypeDescriptionInfo'
     name: UnprovisionApplicationTypeDescriptionInfo
     spec.typeScript:

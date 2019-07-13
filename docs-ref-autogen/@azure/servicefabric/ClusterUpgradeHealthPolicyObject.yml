@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject'
+    name: ClusterUpgradeHealthPolicyObject
+    fullName: ClusterUpgradeHealthPolicyObject
+    children:
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+      - '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: Define uma política de integridade usada para avaliar a integridade do cluster durante uma atualização de cluster.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentDeltaUnhealthyNodes'
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O percentual máximo permitido de degradação de integridade de nós permitida durante os upgrades do cluster.
+      O delta é medido entre o estado de nós no início da atualização e o estado de nós no momento da avaliação de integridade. A verificação é realizada após a conclusão de cada atualização de domínio de atualização para garantir que o estado global do cluster esteja dentro dos limites tolerados. O valor padrão é 10%.
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterUpgradeHealthPolicyObject.maxPercentUpgradeDomainDeltaUnhealthyNodes'
+    name: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    fullName: maxPercentUpgradeDomainDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O percentual máximo permitido de degradação de integridade de nós de domínio de atualização permitida durante os upgrades do cluster. O delta é medido entre o estado de nós do domínio do upgrade no início do upgrade e o estado dos nós no momento da avaliação de integridade. A verificação é realizada após a conclusão de cada atualização de domínio de atualização para todos os domínios de atualização concluídos para garantir que o estado dos domínios de atualização esteja dentro dos limites tolerados. O valor padrão é 15%.
+    optional: true
+    syntax:
+      content: 'maxPercentUpgradeDomainDeltaUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'

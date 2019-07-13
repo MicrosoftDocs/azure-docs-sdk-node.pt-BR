@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription'
+    name: ClusterHealthChunkQueryDescription
+    fullName: ClusterHealthChunkQueryDescription
+    children:
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'A cluster integridade parte descrição de consulta, que pode especificar as políticas de integridade para avaliar a integridade do cluster e muito expressivos filtros para selecionar quais entidades de cluster para incluir na resposta.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+    name: applicationFilters
+    fullName: applicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define uma lista de filtros que especificam quais aplicativos a serem incluídas no bloco de integridade do cluster retornado.
+      Se nenhum filtro for especificado, nenhum aplicativo será retornado. Todos os aplicativos são usados para avaliar o estado de integridade agregada do cluster, independentemente dos filtros de entrada.
+      A consulta de bloco de integridade do cluster pode especificar vários filtros de aplicativo.
+      Por exemplo, ele pode especificar um filtro para retornar todos os aplicativos com o estado de integridade erro e outro filtro sempre incluir aplicativos de um tipo de aplicativo especificado.
+    optional: true
+    syntax:
+      content: 'applicationFilters?: ApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+    name: applicationHealthPolicies
+    fullName: applicationHealthPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define o mapa de política de integridade do aplicativo usado para avaliar a integridade de um aplicativo ou uma de suas entidades filho.
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicies?: ApplicationHealthPolicies'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicies'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Define uma política de integridade usada para avaliar a integridade do cluster ou de um nó de cluster.
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    name: nodeFilters
+    fullName: nodeFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Define uma lista de filtros que especificam quais nós a serem incluídas no bloco de integridade do cluster retornado.
+      Se nenhum filtro for especificado, nenhum nó serão retornados. Todos os nós são usados para avaliar o estado de integridade agregada do cluster, independentemente dos filtros de entrada.
+      A consulta de bloco de integridade do cluster pode especificar vários filtros de nó.
+      Por exemplo, ele pode especificar um filtro para retornar todos os nós com o estado de integridade erro e outro filtro para incluir sempre um nó identificado por seu nome do nó.
+    optional: true
+    syntax:
+      content: 'nodeFilters?: NodeHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    name: 'ApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: ApplicationHealthStateFilter
+        fullName: ApplicationHealthStateFilter
+        uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicies'
+    name: ApplicationHealthPolicies
+    spec.typeScript:
+      - name: ApplicationHealthPolicies
+        fullName: ApplicationHealthPolicies
+        uid: '@azure/servicefabric.ApplicationHealthPolicies'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter[]'
+    name: 'NodeHealthStateFilter[]'
+    spec.typeScript:
+      - name: NodeHealthStateFilter
+        fullName: NodeHealthStateFilter
+        uid: '@azure/servicefabric.NodeHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription'
+    name: MonitoringPolicyDescription
+    fullName: MonitoringPolicyDescription
+    children:
+      - '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+      - '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve os parâmetros para o monitoramento de uma atualização no modo monitorado.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.failureAction'
+    name: failureAction
+    fullName: failureAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A ação de compensação para executar quando uma atualização monitorada encontra violações de política de integridade ou de política de monitoramento.
+      Inválido indica que a ação de falha é inválida. Reversão Especifica que a atualização começará reverter automaticamente.
+      Manual indica que a atualização será alternado para o modo de atualização não monitorada/manual. Os valores possíveis incluem: 'Inválido', 'Reversão', 'Manual'
+    optional: true
+    syntax:
+      content: 'failureAction?: FailureAction'
+      return:
+        type:
+          - '@azure/servicefabric.FailureAction'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckRetryTimeoutInMilliseconds'
+    name: healthCheckRetryTimeoutInMilliseconds
+    fullName: healthCheckRetryTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A quantidade de tempo para tentar novamente a avaliação de integridade quando o aplicativo ou o cluster está íntegro antes de FailureAction ser executado. Primeiro, é interpretado como uma cadeia de caracteres representando uma duração ISO 8601. Se isso falhar, será interpretado como um número que representa o número total de milissegundos.'
+    optional: true
+    syntax:
+      content: 'healthCheckRetryTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckStableDurationInMilliseconds'
+    name: healthCheckStableDurationInMilliseconds
+    fullName: healthCheckStableDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A quantidade de tempo que o aplicativo ou o cluster deve permanecer íntegro antes que a atualização passe para o próximo domínio de atualização. Primeiro, é interpretado como uma cadeia de caracteres representando uma duração ISO 8601. Se isso falhar, será interpretado como um número que representa o número total de milissegundos.'
+    optional: true
+    syntax:
+      content: 'healthCheckStableDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.healthCheckWaitDurationInMilliseconds'
+    name: healthCheckWaitDurationInMilliseconds
+    fullName: healthCheckWaitDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A quantidade de tempo de espera após a conclusão de um domínio de atualização, antes de aplicar as políticas de integridade.
+      Primeiro, é interpretado como uma cadeia de caracteres representando uma duração ISO 8601. Se isso falhar, será interpretado como um número que representa o número total de milissegundos.
+    optional: true
+    syntax:
+      content: 'healthCheckWaitDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeDomainTimeoutInMilliseconds'
+    name: upgradeDomainTimeoutInMilliseconds
+    fullName: upgradeDomainTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A quantidade de tempo que cada domínio de atualização deve concluir antes de FailureAction ser executado. Primeiro, é interpretado como uma cadeia de caracteres representando uma duração ISO 8601. Se isso falhar, será interpretado como um número que representa o número total de milissegundos.'
+    optional: true
+    syntax:
+      content: 'upgradeDomainTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.MonitoringPolicyDescription.upgradeTimeoutInMilliseconds'
+    name: upgradeTimeoutInMilliseconds
+    fullName: upgradeTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A quantidade de tempo que a atualização geral deve concluir antes de FailureAction ser executado. Primeiro, é interpretado como uma cadeia de caracteres representando uma duração ISO 8601. Se isso falhar, será interpretado como um número que representa o número total de milissegundos.'
+    optional: true
+    syntax:
+      content: 'upgradeTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FailureAction'
+    name: FailureAction
+    spec.typeScript:
+      - name: FailureAction
+        fullName: FailureAction
+        uid: '@azure/servicefabric.FailureAction'

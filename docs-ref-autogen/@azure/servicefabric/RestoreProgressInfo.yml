@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RestoreProgressInfo'
+    name: RestoreProgressInfo
+    fullName: RestoreProgressInfo
+    children:
+      - '@azure/servicefabric.RestoreProgressInfo.failureError'
+      - '@azure/servicefabric.RestoreProgressInfo.restoredEpoch'
+      - '@azure/servicefabric.RestoreProgressInfo.restoredLsn'
+      - '@azure/servicefabric.RestoreProgressInfo.restoreState'
+      - '@azure/servicefabric.RestoreProgressInfo.timeStampUtc'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve o progresso de uma operação de restauração em uma partição.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestoreProgressInfo.failureError'
+    name: failureError
+    fullName: failureError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica a falha ao executar operação de restauração.
+    optional: true
+    syntax:
+      content: 'failureError?: FabricErrorError'
+      return:
+        type:
+          - '@azure/servicefabric.FabricErrorError'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestoreProgressInfo.restoredEpoch'
+    name: restoredEpoch
+    fullName: restoredEpoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Descreve a época em que a partição é restaurada.
+    optional: true
+    syntax:
+      content: 'restoredEpoch?: Epoch'
+      return:
+        type:
+          - '@azure/servicefabric.Epoch'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestoreProgressInfo.restoredLsn'
+    name: restoredLsn
+    fullName: restoredLsn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Restored LSN.
+    optional: true
+    syntax:
+      content: 'restoredLsn?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestoreProgressInfo.restoreState'
+    name: restoreState
+    fullName: restoreState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Representa o estado atual da operação de restauração de partição. Os valores possíveis incluem: ''Invalid'', ''Accepted'', ''RestoreInProgress'', ''Success'', ''Failure'', ''Timeout'''
+    optional: true
+    syntax:
+      content: 'restoreState?: RestoreState'
+      return:
+        type:
+          - '@azure/servicefabric.RestoreState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RestoreProgressInfo.timeStampUtc'
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Carimbo de hora quando a operação foi bem-sucedida ou falhou.
+    optional: true
+    syntax:
+      content: 'timeStampUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FabricErrorError'
+    name: FabricErrorError
+    spec.typeScript:
+      - name: FabricErrorError
+        fullName: FabricErrorError
+        uid: '@azure/servicefabric.FabricErrorError'
+  - uid: '@azure/servicefabric.RestoreState'
+    name: RestoreState
+    spec.typeScript:
+      - name: RestoreState
+        fullName: RestoreState
+        uid: '@azure/servicefabric.RestoreState'
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    spec.typeScript:
+      - name: Epoch
+        fullName: Epoch
+        uid: '@azure/servicefabric.Epoch'

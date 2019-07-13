@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo'
+    name: StatelessServicePartitionInfo
+    fullName: StatelessServicePartitionInfo
+    children:
+      - '@azure/servicefabric.StatelessServicePartitionInfo.healthState'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.instanceCount'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.partitionInformation'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.partitionStatus'
+      - '@azure/servicefabric.StatelessServicePartitionInfo.serviceKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Informações sobre uma partição de um serviço sem monitoração de estado do Service Fabric.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.instanceCount'
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Número de instâncias dessa partição.
+    optional: true
+    syntax:
+      content: 'instanceCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.partitionInformation'
+    name: partitionInformation
+    fullName: partitionInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Informações sobre a identidade da partição, particionamento de esquema e chaves com suporte por ele.'
+    optional: true
+    syntax:
+      content: 'partitionInformation?: PartitionInformationUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionInformationUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.partitionStatus'
+    name: partitionStatus
+    fullName: partitionStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O status da partição de serviço do serviço fabric. Os valores possíveis incluem: ''Invalid'', ''Ready'', ''NotReady'', ''InQuorumLoss'', ''Reconfiguring'', ''Deleting'''
+    optional: true
+    syntax:
+      content: 'partitionStatus?: ServicePartitionStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePartitionStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServicePartitionInfo.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.PartitionInformationUnion'
+    name: PartitionInformationUnion
+    spec.typeScript:
+      - name: PartitionInformationUnion
+        fullName: PartitionInformationUnion
+        uid: '@azure/servicefabric.PartitionInformationUnion'
+  - uid: '@azure/servicefabric.ServicePartitionStatus'
+    name: ServicePartitionStatus
+    spec.typeScript:
+      - name: ServicePartitionStatus
+        fullName: ServicePartitionStatus
+        uid: '@azure/servicefabric.ServicePartitionStatus'

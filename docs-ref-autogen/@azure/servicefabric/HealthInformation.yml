@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.HealthInformation'
+    name: HealthInformation
+    fullName: HealthInformation
+    children:
+      - '@azure/servicefabric.HealthInformation.description'
+      - '@azure/servicefabric.HealthInformation.healthState'
+      - '@azure/servicefabric.HealthInformation.property'
+      - '@azure/servicefabric.HealthInformation.removeWhenExpired'
+      - '@azure/servicefabric.HealthInformation.sequenceNumber'
+      - '@azure/servicefabric.HealthInformation.sourceId'
+      - '@azure/servicefabric.HealthInformation.timeToLiveInMilliSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa informações de relatório de integridade comuns. Ele é incluído em todos os relatórios de integridade enviados ao repositório de integridade em todos os eventos de integridade retornados por consultas de integridade.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A descrição de informações de integridade. Ele representa texto livre usado para adicionar informações legíveis humanas sobre o relatório.
+      O tamanho máximo da cadeia de caracteres da descrição é de 4.096 caracteres.
+      Se a cadeia de caracteres fornecida for maior, será truncada automaticamente.
+      Quando truncada, os últimos caracteres da descrição contêm um marcador "[Truncated]", e o tamanho total da cadeia de caracteres é de 4.096 caracteres.
+      A presença do marcador indica aos usuários que o truncamento ocorreu.
+      Observe que, quando truncada, a descrição tem menos de 4.096 caracteres da cadeia de caracteres original.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown'''
+    syntax:
+      content: 'healthState: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.property'
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      A propriedade das informações de integridade. Uma entidade pode ter relatórios de integridade para propriedades diferentes.
+      A propriedade é uma cadeia de caracteres e não uma enumeração fixa para permitir ao relator flexibilidade para categorizar a condição de estado que dispara o relatório.
+      Por exemplo, um relator com SourceId "LocalWatchdog" pode monitorar o estado do disco disponível em um nó, para poder relatar a propriedade "AvailableDisk" nesse nó.
+      O mesmo relator pode monitorar a conectividade do nó, para que ele possa relatar a "Conectividade" de uma propriedade no mesmo nó.
+      No repositório de integridade, esses relatórios são tratados como eventos de integridade distintos para o nó especificado.
+      Junto com a SourceId, a propriedade identifica exclusivamente as informações de integridade.
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.removeWhenExpired'
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Valor que indica se o relatório é removido do repositório de integridade quando expirar.
+      Se definido como "true", o relatório é removido do repositório de integridade depois de expirar.
+      Se definido como "false", o relatório é tratado como um erro quando expirado. O valor dessa propriedade é "false" por padrão.
+      Quando os clientes enviam relatórios periodicamente, devem definir RemoveWhenExpired como "false" (padrão).
+      Dessa forma, se o gerador de relatórios tem problemas (por exemplo, deadlock) e não pode relatar, a entidade é avaliada no erro quando o relatório de integridade expira.
+      Isso sinaliza a entidade como em um estado de integridade de Erro.
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O número da sequência para este relatório de integridade como uma cadeia de caracteres numérica.
+      O número de sequência de relatório é usado pelo repositório de integridade para detectar relatórios obsoletos.
+      Se não for especificado, um número de sequência será gerado automaticamente pelo cliente de integridade quando um relatório for adicionado.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.sourceId'
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome de origem que identifica o componente do cliente/watchdog/sistema que gerou as informações de integridade.
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.HealthInformation.timeToLiveInMilliSeconds'
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      A duração da validade deste relatório de integridade. Este campo usa o formato ISO8601 para especificar a duração.
+      Quando clientes geram relatórios periodicamente, eles devem enviar relatórios com uma frequência maior do que o tempo de vida.
+      Se os clientes gerarem relatórios sobre a transição, poderão definir o tempo de vida como infinito.
+      Quando o tempo de vida expira, o evento de integridade que contém as informações de integridade é removido do repositório de integridade, se RemoveWhenExpired for true, ou recebe uma avaliação de erro, se RemoveWhenExpired for false.
+      Se não for especificado, o tempo de vida terá como padrão o valor infinito.
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

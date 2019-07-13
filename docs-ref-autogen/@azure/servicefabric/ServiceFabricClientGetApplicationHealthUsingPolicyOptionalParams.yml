@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parâmetros opcionais.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -44,7 +44,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Descreve as políticas de integridade usadas para avaliar a integridade de um aplicativo ou um de seus filhos.
+      Se não estiver presente, a avaliação de integridade usa a política de integridade do manifesto de aplicativo ou a política de integridade padrão.
     optional: true
     syntax:
       content: 'applicationHealthPolicy?: ApplicationHealthPolicy'
@@ -74,7 +76,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar os objetos de estado de integridade dos aplicativos implantados retornados no resultado da consulta de integridade do aplicativo com base no estado de integridade.
+      Os valores possíveis para esse parâmetro incluem o valor de inteiro de um dos seguintes estados de integridade. Serão retornados apenas os aplicativos implantados que corresponderem ao filtro.
+      Todos os aplicativos implantados são usados para avaliar o estado de integridade agregado. Se não for especificado, retorna todas as entradas.
+      Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+      Por exemplo, se o valor fornecido for 6, será retornado o estado de integridade dos aplicativos implantados com um valor OK (2) e Warning (4) de HealthState.
+      - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+      - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+      - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+      - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+      - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+      - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535. Valor padrão: 0.
     optional: true
     syntax:
       content: 'deployedApplicationsHealthStateFilter?: undefined | number'
@@ -89,7 +102,18 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar a coleção de objetos HealthEvent retornados com base no estado de integridade.
+      Os valores possíveis para esse parâmetro incluem o valor de inteiro de um dos seguintes estados de integridade.
+      Somente os eventos que correspondem ao filtro são retornados. Todos os eventos são usados para avaliar o estado de integridade agregado.
+      Se não for especificado, retorna todas as entradas. Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador “OR” bit a bit.
+      Por exemplo, se o valor fornecido for 6, serão retornados todos os eventos com o valor de HealthState de OK (2) e de Aviso (4).
+      - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+      - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+      - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+      - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+      - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+      - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535. Valor padrão: 0.
     optional: true
     syntax:
       content: 'eventsHealthStateFilter?: undefined | number'
@@ -104,7 +128,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Indica se as estatísticas de integridade devem ser retornadas como parte do resultado da consulta. Falso por padrão.
+      As estatísticas mostram o número de entidades filhas nos estados de integridade Ok, Warning e Error.
+      Valor padrão: false.
     optional: true
     syntax:
       content: 'excludeHealthStatistics?: undefined | false | true'
@@ -149,7 +176,17 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |
+      Permite filtrar os objetos de estado de integridade de serviços retornados no resultado da consulta de integridade de serviços com base no estado de integridade.
+      Os valores possíveis para esse parâmetro incluem o valor de inteiro de um dos seguintes estados de integridade.
+      Serão retornados somente os serviços que corresponderem ao filtro. Todos os serviços são usados para avaliar o estado de integridade agregado.
+      Se não for especificado, retorna todas as entradas. Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit. Por exemplo, se o valor fornecido for 6, será retornado o estado de integridade dos serviços com um valor OK (2) e Warning (4) de HealthState.
+      - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+      - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+      - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+      - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+      - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+      - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535. Valor padrão: 0.
     optional: true
     syntax:
       content: 'servicesHealthStateFilter?: undefined | number'
@@ -179,7 +216,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'O tempo limite do servidor para executar a operação em segundos. Esse tempo limite Especifica a duração de tempo que o cliente está disposto a esperar a conclusão da operação solicitada. O valor padrão para esse parâmetro é 60 segundos. Valor padrão: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

@@ -1,0 +1,64 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-keys.RetryOptions'
+    name: RetryOptions
+    fullName: RetryOptions
+    children:
+      - '@azure/keyvault-keys.RetryOptions.maxRetryDelayInMs'
+      - '@azure/keyvault-keys.RetryOptions.retryCount'
+      - '@azure/keyvault-keys.RetryOptions.retryIntervalInMS'
+    langs:
+      - typeScript
+    type: interface
+    summary: Tente novamente a interface de opções.
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.maxRetryDelayInMs'
+    name: maxRetryDelayInMs
+    fullName: maxRetryDelayInMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Opcional. Especifica o atraso máximo permitido antes de tentar novamente uma operação (o padrão é 90 * 1000ms ou anos 90).
+    optional: true
+    syntax:
+      content: 'maxRetryDelayInMs?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.retryCount'
+    name: retryCount
+    fullName: retryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Opcional. Experimente o máximo número de tentativas, o padrão é 3.
+      Um valor de 1 significa 1 try e nenhuma nova tentativa.
+      Um valor menor que 1 significa que o número de repetição de tentativas de padrão.
+    optional: true
+    syntax:
+      content: 'retryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.RetryOptions.retryIntervalInMS'
+    name: retryIntervalInMS
+    fullName: retryIntervalInMS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Opcional. Especifica a quantidade de atraso para usar antes de tentar novamente uma operação (o padrão é 30 s ou 1000ms * 30).
+      O atraso aumenta exponencialmente com cada repetição até um máximo especificado pelo maxRetryDelayInMs.
+    optional: true
+    syntax:
+      content: 'retryIntervalInMS?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/keyvault-keys'

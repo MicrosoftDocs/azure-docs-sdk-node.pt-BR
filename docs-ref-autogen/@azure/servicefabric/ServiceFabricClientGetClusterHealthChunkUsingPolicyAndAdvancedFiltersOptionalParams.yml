@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Parâmetros opcionais.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Descreve as políticas de integridade de cluster e aplicativo usadas para avaliar a integridade do cluster e os filtros para selecionar quais entidades de cluster a ser retornado.
+      Se a política de integridade do cluster estiver presente, ele é usado para avaliar os eventos de cluster e os nós de cluster. Se não estiver presente, os usos de avaliação de integridade a política de integridade do cluster definida no manifesto do cluster ou a política de integridade do cluster padrão.
+      Por padrão, cada aplicativo é avaliado usando sua diretiva de integridade do aplicativo específico, definida no manifesto do aplicativo ou a política de integridade padrão, se nenhuma política é definida no manifesto.
+      Se o mapa de política de integridade do aplicativo for especificado, e ele tem uma entrada para um aplicativo, a política de integridade do aplicativo especificado é usada para avaliar a integridade do aplicativo.
+      Os usuários podem especificar filtros muito flexíveis para selecionar quais entidades de cluster para incluir na resposta. A seleção pode ser feita com base no estado de integridade de entidades e com base na hierarquia.
+      A consulta pode retornar vários níveis filhos das entidades com base em filtros especificados. Por exemplo, ele pode retornar um aplicativo com um nome especificado e para este aplicativo, retornar apenas os serviços que estão em erro ou aviso e todas as partições e réplicas para um desses serviços.
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'O tempo limite do servidor para executar a operação em segundos. Esse tempo limite Especifica a duração de tempo que o cliente está disposto a esperar a conclusão da operação solicitada. O valor padrão para esse parâmetro é 60 segundos. Valor padrão: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

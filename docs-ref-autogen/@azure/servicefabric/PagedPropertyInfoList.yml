@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedPropertyInfoList'
+    name: PagedPropertyInfoList
+    fullName: PagedPropertyInfoList
+    children:
+      - '@azure/servicefabric.PagedPropertyInfoList.continuationToken'
+      - '@azure/servicefabric.PagedPropertyInfoList.isConsistent'
+      - '@azure/servicefabric.PagedPropertyInfoList.properties'
+    langs:
+      - typeScript
+    type: interface
+    summary: A lista paginada das propriedades do Service Fabric em um determinado nome. A lista é paginada quando todos os resultados não couberem em uma única mensagem. O próximo conjunto de resultados pode ser obtido executando a mesma consulta com o token de continuação fornecido nessa lista.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados. O token de continuação é incluído na resposta da API quando os resultados do sistema não couberem em uma única resposta. Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados.
+      Se não houver nenhum mais resultados, o token de continuação não está incluído na resposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.isConsistent'
+    name: isConsistent
+    fullName: isConsistent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Indica se qualquer propriedade sob o nome fornecido foi modificada durante a enumeração.
+      Se houver uma modificação, o valor dessa propriedade é false.
+    optional: true
+    syntax:
+      content: 'isConsistent?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedPropertyInfoList.properties'
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de informações de propriedade.
+    optional: true
+    syntax:
+      content: 'properties?: PropertyInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.PropertyInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PropertyInfo[]'
+    name: 'PropertyInfo[]'
+    spec.typeScript:
+      - name: PropertyInfo
+        fullName: PropertyInfo
+        uid: '@azure/servicefabric.PropertyInfo'
+      - name: '[]'
+        fullName: '[]'

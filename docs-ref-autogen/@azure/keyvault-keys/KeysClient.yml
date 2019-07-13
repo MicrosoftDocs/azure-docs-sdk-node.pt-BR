@@ -1,0 +1,685 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/keyvault-keys.KeysClient'
+    name: KeysClient
+    fullName: KeysClient
+    children:
+      - '@azure/keyvault-keys.KeysClient.backupKey'
+      - '@azure/keyvault-keys.KeysClient.createEcKey'
+      - '@azure/keyvault-keys.KeysClient.createKey'
+      - '@azure/keyvault-keys.KeysClient.createRsaKey'
+      - '@azure/keyvault-keys.KeysClient.deleteKey'
+      - '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+      - '@azure/keyvault-keys.KeysClient.getDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.getKey'
+      - '@azure/keyvault-keys.KeysClient.importKey'
+      - '@azure/keyvault-keys.KeysClient.constructor'
+      - '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeys'
+      - '@azure/keyvault-keys.KeysClient.listKeyVersions'
+      - '@azure/keyvault-keys.KeysClient.pipeline'
+      - '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+      - '@azure/keyvault-keys.KeysClient.restoreKey'
+      - '@azure/keyvault-keys.KeysClient.updateKey'
+      - '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    langs:
+      - typeScript
+    type: class
+    summary: O cliente para interagir com a funcionalidade de chaves do Cofre de chaves
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.backupKey'
+    name: 'backupKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Solicitações que um backup da chave especificada ser baixados para o cliente. Todas as versões da chave serão baixadas. Esta operação requer a permissão de chaves/backup.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      ```
+    syntax:
+      content: 'function backupKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Uint8Array | undefined>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createEcKey'
+    name: 'createEcKey(string, CreateEcKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de criação de chave pode ser usada para criar qualquer tipo de chave no cofre de chaves do Azure. Se a chave denominada já existir, o Azure Key Vault cria uma nova versão da chave. Ele requer a permissão de chaves/criar.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createEcKey("MyKey", { curve: "P-256" });
+      ```
+    syntax:
+      content: 'function createEcKey(name: string, options?: CreateEcKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateEcKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createKey'
+    name: 'createKey(string, JsonWebKeyType, CreateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de criação de chave pode ser usada para criar qualquer tipo de chave no cofre de chaves do Azure. Se a chave denominada já existir, o Azure Key Vault cria uma nova versão da chave. Ele requer a permissão de chaves/criar.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Create an elliptic-curve key:
+      let result = await client.createKey("MyKey", "EC");
+      ```
+    syntax:
+      content: 'function createKey(name: string, keyType: JsonWebKeyType, options?: CreateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: keyType
+          type:
+            - '@azure/keyvault-keys.JsonWebKeyType'
+          description: O tipo da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.createRsaKey'
+    name: 'createRsaKey(string, CreateRsaKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de criação de chave pode ser usada para criar qualquer tipo de chave no cofre de chaves do Azure. Se a chave denominada já existir, o Azure Key Vault cria uma nova versão da chave. Ele requer a permissão de chaves/criar.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.createRsaKey("MyKey", { keySize: 2048 });
+      ```
+    syntax:
+      content: 'function createRsaKey(name: string, options?: CreateRsaKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.CreateRsaKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.deleteKey'
+    name: 'deleteKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de exclusão se aplica a qualquer chave armazenada no cofre de chaves do Azure. DELETE não pode ser aplicado a uma versão individual de uma chave. Esta operação requer a permissão chaves/excluir.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let result = await client.deleteKey("MyKey");
+      ```
+    syntax:
+      content: 'function deleteKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDefaultPipeline'
+    name: 'getDefaultPipeline(ServiceClientCredentials | TokenCredential, NewPipelineOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Um método estático usado para criar um novo objeto de Pipeline com a credencial fornecida.
+    syntax:
+      content: 'static function getDefaultPipeline(credential: ServiceClientCredentials | TokenCredential, pipelineOptions?: NewPipelineOptions)'
+      parameters:
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOptions
+          type:
+            - '@azure/keyvault-keys.NewPipelineOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getDeletedKey'
+    name: 'getDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação obter chave excluída retorna a chave especificada excluída junto com seus atributos.
+      Esta operação requer a permissão de chaves/get.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getDeletedKey("MyDeletedKey");
+      ```
+    syntax:
+      content: 'function getDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.DeletedKey>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.getKey'
+    name: 'getKey(string, GetKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação GET é aplicável a qualquer chave armazenada no cofre de chaves do Azure. Esta operação requer a permissão de chaves/get.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey("MyKey");
+      ```
+    syntax:
+      content: 'function getKey(name: string, options?: GetKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.importKey'
+    name: 'importKey(string, JsonWebKey, ImportKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de importação de chave pode ser usada para importar qualquer tipo de chave para um Azure Key Vault. Se a chave denominada já existir, o Azure Key Vault cria uma nova versão da chave. Esta operação requer a permissão de chaves/importação.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      // Key contents in myKeyContents
+      let result = await client.importKey("MyKey", myKeyContents);
+      ```
+    syntax:
+      content: 'function importKey(name: string, key: JsonWebKey, options?: ImportKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Nome para a chave importada.
+        - id: key
+          type:
+            - '@azure/keyvault-keys.JsonWebKey'
+          description: A chave da web Json
+        - id: options
+          type:
+            - '@azure/keyvault-keys.ImportKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.constructor'
+    name: 'KeysClient(string, ServiceClientCredentials | TokenCredential, ServiceClientOptions | NewPipelineOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: |-
+      Cria uma instância de KeysClient.
+      Exemplo de uso:
+      ```ts
+      import { KeysClient } from "@azure/keyvault-keys";
+      import { EnvironmentCredential } from "@azure/identity";
+
+      let url = `https://<MY KEYVAULT HERE>.vault.azure.net`;
+      let credentials = new EnvironmentCredential();
+
+      let client = new KeysClient(url, credentials);
+      ```
+    syntax:
+      content: 'new KeysClient(url: string, credential: ServiceClientCredentials | TokenCredential, pipelineOrOptions?: ServiceClientOptions | NewPipelineOptions)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: a url base para o Cofre de chaves.
+        - id: credential
+          type:
+            - ServiceClientCredentials | TokenCredential
+          description: ''
+        - id: pipelineOrOptions
+          type:
+            - ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+          description: ''
+          optional: true
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listDeletedKeys'
+    name: listDeletedKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Itera as chaves excluídas no cofre.  O identificador de chave completo e os atributos são fornecidos na resposta. Nenhum valor é retornado para as chaves. Esta operação requer a permissão de chaves/lista.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listDeletedKeys()) {
+        const deletedKey = await client.getKey(keyAttr.name);
+        console.log("deleted key: ", deletedKey);
+      }
+      ```
+    syntax:
+      content: 'function listDeletedKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeys'
+    name: listKeys(GetKeysOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Itera a versão mais recente de todas as chaves no cofre.  O identificador de chave completo e os atributos são fornecidos na resposta. Nenhum valor é retornado para as chaves. Esta operação requer a permissão de chaves/lista.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeys()) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeys(options?: GetKeysOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.listKeyVersions'
+    name: 'listKeyVersions(string, GetKeysOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Itera todas as versões de determinada chave no cofre. O identificador de chave completo, atributos e marcas são fornecidas na resposta. Esta operação requer a permissão de chaves/lista.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      for await (const keyAttr of client.listKeyVersions("MyKey")) {
+        const key = await client.getKey(keyAttr.name);
+        console.log("key version: ", key);
+      }
+      ```
+    syntax:
+      content: 'function listKeyVersions(name: string, options?: GetKeysOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Nome da chave para buscar as versões para
+        - id: options
+          type:
+            - '@azure/keyvault-keys.GetKeysOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.pipeline'
+    name: pipeline
+    fullName: pipeline
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As opções para criar a conexão ao serviço
+    syntax:
+      content: 'pipeline: ServiceClientOptions'
+      return:
+        type:
+          - ServiceClientOptions
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.purgeDeletedKey'
+    name: 'purgeDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de chave de limpeza excluída remove a chave permanentemente, sem a possibilidade de recuperação. Esta operação só pode ser habilitada em um cofre de exclusão reversível habilitado. Esta operação requer a permissão de chaves/limpeza.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.purgeDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function purgeDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.recoverDeletedKey'
+    name: 'recoverDeletedKey(string, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Recupera a chave excluída no cofre especificado. Esta operação só pode ser executada em um cofre de exclusão reversível habilitado. Esta operação requer a permissão de chaves/recuperação.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      await client.deleteKey("MyKey");
+      // ...
+      await client.recoverDeletedKey("MyKey");
+      ```
+    syntax:
+      content: 'function recoverDeletedKey(name: string, options?: RequestOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave excluída.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.restoreKey'
+    name: 'restoreKey(Uint8Array, RequestOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Restaura uma chave de backup e todas as suas versões para um cofre. Esta operação requer a permissão de chaves/restaurar.
+      Exemplo de uso:
+      ```ts
+      let client = new KeysClient(url, credentials);
+      let backupContents = await client.backupKey("MyKey");
+      // ...
+      let key = await client.restoreKey(backupContents);
+      ```
+    syntax:
+      content: 'function restoreKey(backup: Uint8Array, options?: RequestOptions)'
+      parameters:
+        - id: backup
+          type:
+            - Uint8Array
+          description: O blob de backup associado a um pacote de chaves.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.RequestOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.updateKey'
+    name: 'updateKey(string, string, UpdateKeyOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      A operação de atualização altera os atributos especificados de uma chave armazenada existente. Atributos que não são especificados na solicitação permanecem inalterados. O valor de uma chave em si não pode ser alterado. Esta operação requer a permissão de chaves/definir.
+      Exemplo de uso:
+      ```ts
+      let keyName = "MyKey";
+      let client = new KeysClient(url, credentials);
+      let key = await client.getKey(keyName);
+      let result = await client.updateKey(keyName, key.version, { enabled: false });
+      ```
+    syntax:
+      content: 'function updateKey(name: string, keyVersion: string, options?: UpdateKeyOptions)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: O nome da chave.
+        - id: keyVersion
+          type:
+            - string
+          description: A versão da chave.
+        - id: options
+          type:
+            - '@azure/keyvault-keys.UpdateKeyOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<@azure/keyvault-keys.Key>
+    package: '@azure/keyvault-keys'
+  - uid: '@azure/keyvault-keys.KeysClient.vaultBaseUrl'
+    name: vaultBaseUrl
+    fullName: vaultBaseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A URL base para o cofre
+    syntax:
+      content: 'vaultBaseUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/keyvault-keys'
+references:
+  - uid: ServiceClientOptions | @azure/keyvault-keys.NewPipelineOptions
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: 'ServiceClientOptions | '
+        fullName: 'ServiceClientOptions | '
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'
+  - uid: '@azure/keyvault-keys.RequestOptions'
+    name: RequestOptions
+    spec.typeScript:
+      - name: RequestOptions
+        fullName: RequestOptions
+        uid: '@azure/keyvault-keys.RequestOptions'
+  - uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+    name: CreateEcKeyOptions
+    spec.typeScript:
+      - name: CreateEcKeyOptions
+        fullName: CreateEcKeyOptions
+        uid: '@azure/keyvault-keys.CreateEcKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.Key>
+    name: Key>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: Key
+        fullName: Key
+        uid: '@azure/keyvault-keys.Key'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.JsonWebKeyType'
+    name: JsonWebKeyType
+    spec.typeScript:
+      - name: JsonWebKeyType
+        fullName: JsonWebKeyType
+        uid: '@azure/keyvault-keys.JsonWebKeyType'
+  - uid: '@azure/keyvault-keys.CreateKeyOptions'
+    name: CreateKeyOptions
+    spec.typeScript:
+      - name: CreateKeyOptions
+        fullName: CreateKeyOptions
+        uid: '@azure/keyvault-keys.CreateKeyOptions'
+  - uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+    name: CreateRsaKeyOptions
+    spec.typeScript:
+      - name: CreateRsaKeyOptions
+        fullName: CreateRsaKeyOptions
+        uid: '@azure/keyvault-keys.CreateRsaKeyOptions'
+  - uid: Promise<@azure/keyvault-keys.DeletedKey>
+    name: DeletedKey>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: DeletedKey
+        fullName: DeletedKey
+        uid: '@azure/keyvault-keys.DeletedKey'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/keyvault-keys.GetKeyOptions'
+    name: GetKeyOptions
+    spec.typeScript:
+      - name: GetKeyOptions
+        fullName: GetKeyOptions
+        uid: '@azure/keyvault-keys.GetKeyOptions'
+  - uid: '@azure/keyvault-keys.JsonWebKey'
+    name: JsonWebKey
+    spec.typeScript:
+      - name: JsonWebKey
+        fullName: JsonWebKey
+        uid: '@azure/keyvault-keys.JsonWebKey'
+  - uid: '@azure/keyvault-keys.ImportKeyOptions'
+    name: ImportKeyOptions
+    spec.typeScript:
+      - name: ImportKeyOptions
+        fullName: ImportKeyOptions
+        uid: '@azure/keyvault-keys.ImportKeyOptions'
+  - uid: '@azure/keyvault-keys.GetKeysOptions'
+    name: GetKeysOptions
+    spec.typeScript:
+      - name: GetKeysOptions
+        fullName: GetKeysOptions
+        uid: '@azure/keyvault-keys.GetKeysOptions'
+  - uid: 'PagedAsyncIterableIterator<@azure/keyvault-keys.KeyAttributes, @azure/keyvault-keys.KeyAttributes[]>'
+    name: 'KeyAttributes[]>'
+    spec.typeScript:
+      - name: PagedAsyncIterableIterator<
+        fullName: PagedAsyncIterableIterator<
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: ', '
+        fullName: ', '
+      - name: KeyAttributes
+        fullName: KeyAttributes
+        uid: '@azure/keyvault-keys.KeyAttributes'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/keyvault-keys.UpdateKeyOptions'
+    name: UpdateKeyOptions
+    spec.typeScript:
+      - name: UpdateKeyOptions
+        fullName: UpdateKeyOptions
+        uid: '@azure/keyvault-keys.UpdateKeyOptions'
+  - uid: '@azure/keyvault-keys.NewPipelineOptions'
+    name: NewPipelineOptions
+    spec.typeScript:
+      - name: NewPipelineOptions
+        fullName: NewPipelineOptions
+        uid: '@azure/keyvault-keys.NewPipelineOptions'
