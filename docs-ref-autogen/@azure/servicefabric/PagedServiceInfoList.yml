@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedServiceInfoList'
+    name: PagedServiceInfoList
+    fullName: PagedServiceInfoList
+    children:
+      - '@azure/servicefabric.PagedServiceInfoList.continuationToken'
+      - '@azure/servicefabric.PagedServiceInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="11297-101">A lista de serviços no cluster para um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="11297-101">The list of services in the cluster for an application.</span></span> <span data-ttu-id="11297-102">A lista é paginada quando todos os resultados não couberem em uma única mensagem.</span><span class="sxs-lookup"><span data-stu-id="11297-102">The list is paged when all of the results cannot fit in a single message.</span></span> <span data-ttu-id="11297-103">O próximo conjunto de resultados pode ser obtido executando a mesma consulta com o token de continuação fornecido nessa lista.</span><span class="sxs-lookup"><span data-stu-id="11297-103">The next set of results can be obtained by executing the same query with the continuation token provided in this list.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="11297-104">O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados.</span><span class="sxs-lookup"><span data-stu-id="11297-104">The continuation token parameter is used to obtain next set of results.</span></span> <span data-ttu-id="11297-105">O token de continuação é incluído na resposta da API quando os resultados do sistema não couberem em uma única resposta.</span><span class="sxs-lookup"><span data-stu-id="11297-105">The continuation token is included in the response of the API when the results from the system do not fit in a single response.</span></span> <span data-ttu-id="11297-106">Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados.</span><span class="sxs-lookup"><span data-stu-id="11297-106">When this value is passed to the next API call, the API returns next set of results.</span></span>
+      <span data-ttu-id="11297-107">Se não houver nenhum mais resultados, o token de continuação não está incluído na resposta.</span><span class="sxs-lookup"><span data-stu-id="11297-107">If there are no further results, then the continuation token is not included in the response.</span></span>
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedServiceInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="11297-108">Lista de informações do serviço.</span><span class="sxs-lookup"><span data-stu-id="11297-108">List of service information.</span></span>
+    optional: true
+    syntax:
+      content: 'items?: ServiceInfoUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceInfoUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceInfoUnion[]'
+    name: 'ServiceInfoUnion[]'
+    spec.typeScript:
+      - name: ServiceInfoUnion
+        fullName: ServiceInfoUnion
+        uid: '@azure/servicefabric.ServiceInfoUnion'
+      - name: '[]'
+        fullName: '[]'

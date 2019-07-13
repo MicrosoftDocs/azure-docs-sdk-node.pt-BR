@@ -1,0 +1,192 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosParameters'
+    name: ChaosParameters
+    fullName: ChaosParameters
+    children:
+      - '@azure/servicefabric.ChaosParameters.chaosTargetFilter'
+      - '@azure/servicefabric.ChaosParameters.clusterHealthPolicy'
+      - '@azure/servicefabric.ChaosParameters.context'
+      - '@azure/servicefabric.ChaosParameters.enableMoveReplicaFaults'
+      - '@azure/servicefabric.ChaosParameters.maxClusterStabilizationTimeoutInSeconds'
+      - '@azure/servicefabric.ChaosParameters.maxConcurrentFaults'
+      - '@azure/servicefabric.ChaosParameters.timeToRunInSeconds'
+      - '@azure/servicefabric.ChaosParameters.waitTimeBetweenFaultsInSeconds'
+      - '@azure/servicefabric.ChaosParameters.waitTimeBetweenIterationsInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="6ecde-101">Define todos os parâmetros para configurar uma execução do Chaos.</span><span class="sxs-lookup"><span data-stu-id="6ecde-101">Defines all the parameters to configure a Chaos run.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.chaosTargetFilter'
+    name: chaosTargetFilter
+    fullName: chaosTargetFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-102">Lista de entidades de cluster para ter como destino para falhas de Chaos.</span><span class="sxs-lookup"><span data-stu-id="6ecde-102">List of cluster entities to target for Chaos faults.</span></span>
+      <span data-ttu-id="6ecde-103">este filtro pode ser usado para falhas de Chaos de destino somente para determinados tipos de nó ou apenas algumas instâncias de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="6ecde-103">This filter can be used to target Chaos faults only to certain node types or only to certain application instances.</span></span> <span data-ttu-id="6ecde-104">Se ChaosTargetFilter não for usado, Chaos falha em todas as entidades de cluster.</span><span class="sxs-lookup"><span data-stu-id="6ecde-104">If ChaosTargetFilter is not used, Chaos faults all cluster entities.</span></span>
+      <span data-ttu-id="6ecde-105">Se ChaosTargetFilter for usado, Chaos falha apenas as entidades que atendem a especificação de ChaosTargetFilter.</span><span class="sxs-lookup"><span data-stu-id="6ecde-105">If ChaosTargetFilter is used, Chaos faults only the entities that meet the ChaosTargetFilter specification.</span></span>
+    optional: true
+    syntax:
+      content: 'chaosTargetFilter?: ChaosTargetFilter'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosTargetFilter'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6ecde-106">Política de integridade do cluster no passado é usada para validar a integridade do cluster entre iterações do Chaos.</span><span class="sxs-lookup"><span data-stu-id="6ecde-106">Passed-in cluster health policy is used to validate health of the cluster in between Chaos iterations.</span></span> <span data-ttu-id="6ecde-107">Se a integridade do cluster é um erro ou se ocorrer uma exceção inesperada durante a execução de falha – para fornecer ao cluster algum tempo para se recuperar – Chaos aguardará 30 minutos antes da próxima verificação de integridade.</span><span class="sxs-lookup"><span data-stu-id="6ecde-107">If the cluster health is in error or if an unexpected exception happens during fault execution--to provide the cluster with some time to recuperate--Chaos will wait for 30 minutes before the next health-check.</span></span>
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.context'
+    name: context
+    fullName: context
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-108">Descreve um mapa, que é uma coleção de cadeia de caracteres (string) digite os pares chave-valor.</span><span class="sxs-lookup"><span data-stu-id="6ecde-108">Describes a map, which is a collection of (string, string) type key-value pairs.</span></span> <span data-ttu-id="6ecde-109">O mapa pode ser usado para registrar informações sobre a execução do Chaos.</span><span class="sxs-lookup"><span data-stu-id="6ecde-109">The map can be used to record information about the Chaos run.</span></span> <span data-ttu-id="6ecde-110">Não pode haver mais de 100 desses pares e cada cadeia de caracteres (chave ou valor) pode ter no máximo 4095 caracteres.</span><span class="sxs-lookup"><span data-stu-id="6ecde-110">There cannot be more than 100 such pairs and each string (key or value) can be at most 4095 characters long.</span></span>
+      <span data-ttu-id="6ecde-111">Esse mapa é definido pelo iniciador da execução do Chaos para armazenar opcionalmente o contexto sobre a execução específica.</span><span class="sxs-lookup"><span data-stu-id="6ecde-111">This map is set by the starter of the Chaos run to optionally store the context about the specific run.</span></span>
+    optional: true
+    syntax:
+      content: 'context?: ChaosContext'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosContext'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.enableMoveReplicaFaults'
+    name: enableMoveReplicaFaults
+    fullName: enableMoveReplicaFaults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6ecde-112">Habilita ou desabilita o mover primário e mover secundárias falhas.</span><span class="sxs-lookup"><span data-stu-id="6ecde-112">Enables or disables the move primary and move secondary faults.</span></span> <span data-ttu-id="6ecde-113">Valor padrão: true.</span><span class="sxs-lookup"><span data-stu-id="6ecde-113">Default value: true.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableMoveReplicaFaults?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.maxClusterStabilizationTimeoutInSeconds'
+    name: maxClusterStabilizationTimeoutInSeconds
+    fullName: maxClusterStabilizationTimeoutInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-114">A quantidade máxima de tempo de espera para todas as entidades do cluster se tornam estáveis e íntegras.</span><span class="sxs-lookup"><span data-stu-id="6ecde-114">The maximum amount of time to wait for all cluster entities to become stable and healthy.</span></span>
+      <span data-ttu-id="6ecde-115">O Chaos é executado em iterações e no início de cada iteração ele valida a integridade de entidades de cluster.</span><span class="sxs-lookup"><span data-stu-id="6ecde-115">Chaos executes in iterations and at the start of each iteration it validates the health of cluster entities.</span></span>
+      <span data-ttu-id="6ecde-116">Durante a validação, se uma entidade de cluster não está estável e íntegra no MaxClusterStabilizationTimeoutInSeconds, o Chaos gera um evento de falha de validação.</span><span class="sxs-lookup"><span data-stu-id="6ecde-116">During validation if a cluster entity is not stable and healthy within MaxClusterStabilizationTimeoutInSeconds, Chaos generates a validation failed event.</span></span> <span data-ttu-id="6ecde-117">Valor padrão: 60.</span><span class="sxs-lookup"><span data-stu-id="6ecde-117">Default value: 60.</span></span>
+    optional: true
+    syntax:
+      content: 'maxClusterStabilizationTimeoutInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.maxConcurrentFaults'
+    name: maxConcurrentFaults
+    fullName: maxConcurrentFaults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-118">MaxConcurrentFaults é o número máximo de falhas simultâneas induzidas por iteração.</span><span class="sxs-lookup"><span data-stu-id="6ecde-118">MaxConcurrentFaults is the maximum number of concurrent faults induced per iteration.</span></span>
+      <span data-ttu-id="6ecde-119">O Chaos é executado em iterações e duas iterações consecutivas são separadas por uma fase de validação.</span><span class="sxs-lookup"><span data-stu-id="6ecde-119">Chaos executes in iterations and two consecutive iterations are separated by a validation phase.</span></span>
+      <span data-ttu-id="6ecde-120">Quanto maior a simultaneidade, mais agressivo a injeção de falhas, levando a induzindo série mais complexas de estados para revelar bugs.</span><span class="sxs-lookup"><span data-stu-id="6ecde-120">The higher the concurrency, the more aggressive the injection of faults, leading to inducing more complex series of states to uncover bugs.</span></span>
+      <span data-ttu-id="6ecde-121">A recomendação é iniciar com um valor de 2 ou 3 e ter cuidado ao mover para cima.</span><span class="sxs-lookup"><span data-stu-id="6ecde-121">The recommendation is to start with a value of 2 or 3 and to exercise caution while moving up.</span></span>
+      <span data-ttu-id="6ecde-122">Valor padrão: 1.</span><span class="sxs-lookup"><span data-stu-id="6ecde-122">Default value: 1.</span></span>
+    optional: true
+    syntax:
+      content: 'maxConcurrentFaults?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.timeToRunInSeconds'
+    name: timeToRunInSeconds
+    fullName: timeToRunInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6ecde-123">Tempo total (em segundos) para o qual o Chaos será executado antes de parar automaticamente.</span><span class="sxs-lookup"><span data-stu-id="6ecde-123">Total time (in seconds) for which Chaos will run before automatically stopping.</span></span> <span data-ttu-id="6ecde-124">O valor máximo permitido é 4.294.967.295 (System.UInt32.MaxValue).</span><span class="sxs-lookup"><span data-stu-id="6ecde-124">The maximum allowed value is 4,294,967,295 (System.UInt32.MaxValue).</span></span> <span data-ttu-id="6ecde-125">Valor padrão: ''4294967295''.</span><span class="sxs-lookup"><span data-stu-id="6ecde-125">Default value: ''4294967295''.</span></span>'
+    optional: true
+    syntax:
+      content: 'timeToRunInSeconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.waitTimeBetweenFaultsInSeconds'
+    name: waitTimeBetweenFaultsInSeconds
+    fullName: waitTimeBetweenFaultsInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-126">Tempo de espera (em segundos) entre falhas consecutivas dentro de uma única iteração.</span><span class="sxs-lookup"><span data-stu-id="6ecde-126">Wait time (in seconds) between consecutive faults within a single iteration.</span></span>
+      <span data-ttu-id="6ecde-127">Quanto maior o valor, menor a sobreposição entre falhas e mais simples a sequência de transições de estado pelas quais o cluster passa.</span><span class="sxs-lookup"><span data-stu-id="6ecde-127">The larger the value, the lower the overlapping between faults and the simpler the sequence of state transitions that the cluster goes through.</span></span>
+      <span data-ttu-id="6ecde-128">A recomendação é iniciar com um valor entre 1 e 5 e ter cuidado ao mover para cima.</span><span class="sxs-lookup"><span data-stu-id="6ecde-128">The recommendation is to start with a value between 1 and 5 and exercise caution while moving up.</span></span> <span data-ttu-id="6ecde-129">Valor padrão: 20.</span><span class="sxs-lookup"><span data-stu-id="6ecde-129">Default value: 20.</span></span>
+    optional: true
+    syntax:
+      content: 'waitTimeBetweenFaultsInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosParameters.waitTimeBetweenIterationsInSeconds'
+    name: waitTimeBetweenIterationsInSeconds
+    fullName: waitTimeBetweenIterationsInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6ecde-130">Tempo-separação (em segundos) entre as duas iterações consecutivas de Chaos.</span><span class="sxs-lookup"><span data-stu-id="6ecde-130">Time-separation (in seconds) between two consecutive iterations of Chaos.</span></span>
+      <span data-ttu-id="6ecde-131">Quanto maior o valor, menor é a taxa de injeção de falhas.</span><span class="sxs-lookup"><span data-stu-id="6ecde-131">The larger the value, the lower the fault injection rate.</span></span> <span data-ttu-id="6ecde-132">Valor padrão: 30.</span><span class="sxs-lookup"><span data-stu-id="6ecde-132">Default value: 30.</span></span>
+    optional: true
+    syntax:
+      content: 'waitTimeBetweenIterationsInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosTargetFilter'
+    name: ChaosTargetFilter
+    spec.typeScript:
+      - name: ChaosTargetFilter
+        fullName: ChaosTargetFilter
+        uid: '@azure/servicefabric.ChaosTargetFilter'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.ChaosContext'
+    name: ChaosContext
+    spec.typeScript:
+      - name: ChaosContext
+        fullName: ChaosContext
+        uid: '@azure/servicefabric.ChaosContext'

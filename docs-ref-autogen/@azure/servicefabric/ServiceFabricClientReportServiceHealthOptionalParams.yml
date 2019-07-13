@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="ed49b-101">Parâmetros opcionais.</span><span class="sxs-lookup"><span data-stu-id="ed49b-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ce250-101">O sinal que pode ser usado para anular as solicitações.</span><span class="sxs-lookup"><span data-stu-id="ce250-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="ed49b-102">O sinal que pode ser usado para anular as solicitações.</span><span class="sxs-lookup"><span data-stu-id="ed49b-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="ce250-102">{object} [customHeaders] Cabeçalhos de solicitação personalizado que serão aplicados antes que a solicitação é enviada definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="ce250-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="ed49b-103">{object} [customHeaders] Cabeçalhos de solicitação personalizado que serão aplicados antes que a solicitação é enviada definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="ed49b-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -55,7 +55,15 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="ed49b-104">Um sinalizador que indica se o relatório deve ser enviado imediatamente.</span><span class="sxs-lookup"><span data-stu-id="ed49b-104">A flag that indicates whether the report should be sent immediately.</span></span>
+      <span data-ttu-id="ed49b-105">Um relatório de integridade é enviado a um Aplicativo de gateway do Service Fabric, que encaminha para o repositório de integridade.</span><span class="sxs-lookup"><span data-stu-id="ed49b-105">A health report is sent to a Service Fabric gateway Application, which forwards to the health store.</span></span>
+      <span data-ttu-id="ed49b-106">Se "Immediate" for definido como "true", o relatório será enviado imediatamente do Gateway de HTTP para o repositório de integridade, independentemente das configurações de cliente que o Aplicativo de Gateway de HTTP estiver usando.</span><span class="sxs-lookup"><span data-stu-id="ed49b-106">If Immediate is set to true, the report is sent immediately from HTTP Gateway to the health store, regardless of the fabric client settings that the HTTP Gateway Application is using.</span></span>
+      <span data-ttu-id="ed49b-107">Isso é útil para relatórios importantes que precisam ser enviados assim que possível.</span><span class="sxs-lookup"><span data-stu-id="ed49b-107">This is useful for critical reports that should be sent as soon as possible.</span></span>
+      <span data-ttu-id="ed49b-108">Dependendo do tempo e de outras condições, enviar o relatório ainda pode falhar se, por exemplo, o Gateway de HTTP estiver fechado ou a mensagem não alcançar o Gateway.</span><span class="sxs-lookup"><span data-stu-id="ed49b-108">Depending on timing and other conditions, sending the report may still fail, for example if the HTTP Gateway is closed or the message doesn't reach the Gateway.</span></span>
+      <span data-ttu-id="ed49b-109">Se "Immediate" for definido como "false", o relatório será enviado com base nas configurações do cliente de integridade do Gateway de HTTP.</span><span class="sxs-lookup"><span data-stu-id="ed49b-109">If Immediate is set to false, the report is sent based on the health client settings from the HTTP Gateway.</span></span> <span data-ttu-id="ed49b-110">Portanto, ele será agrupado de acordo com a configuração de HealthReportSendInterval.</span><span class="sxs-lookup"><span data-stu-id="ed49b-110">Therefore, it will be batched according to the HealthReportSendInterval configuration.</span></span>
+      <span data-ttu-id="ed49b-111">Esta é a configuração recomendada, pois ela permite que o cliente de integridade otimize a integridade relatando mensagens para o repositório de integridade, bem como para o processamento de relatório de integridade.</span><span class="sxs-lookup"><span data-stu-id="ed49b-111">This is the recommended setting because it allows the health client to optimize health reporting messages to health store as well as health report processing.</span></span>
+      <span data-ttu-id="ed49b-112">Por padrão, relatórios não são enviados imediatamente.</span><span class="sxs-lookup"><span data-stu-id="ed49b-112">By default, reports are not sent immediately.</span></span> <span data-ttu-id="ed49b-113">Valor padrão: false.</span><span class="sxs-lookup"><span data-stu-id="ed49b-113">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'immediate?: undefined | false | true'
@@ -70,7 +78,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ce250-103">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="ce250-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="ed49b-114">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="ed49b-114">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +93,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ce250-104">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="ce250-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="ed49b-115">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="ed49b-115">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +108,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="ce250-105">O número de milissegundos que uma solicitação pode levar antes encerrado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ce250-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="ed49b-116">O número de milissegundos que uma solicitação pode levar antes encerrado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ed49b-116">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +123,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="ed49b-117">O tempo limite do servidor para executar a operação em segundos.</span><span class="sxs-lookup"><span data-stu-id="ed49b-117">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="ed49b-118">Esse tempo limite Especifica a duração de tempo que o cliente está disposto a esperar a conclusão da operação solicitada.</span><span class="sxs-lookup"><span data-stu-id="ed49b-118">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="ed49b-119">O valor padrão para esse parâmetro é 60 segundos.</span><span class="sxs-lookup"><span data-stu-id="ed49b-119">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="ed49b-120">Valor padrão: 60.</span><span class="sxs-lookup"><span data-stu-id="ed49b-120">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

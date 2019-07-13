@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: <span data-ttu-id="8ca07-101">Parâmetros opcionais.</span><span class="sxs-lookup"><span data-stu-id="8ca07-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="a2652-101">O sinal que pode ser usado para anular as solicitações.</span><span class="sxs-lookup"><span data-stu-id="a2652-101">The signal which can be used to abort requests.</span></span>
+    summary: <span data-ttu-id="8ca07-102">O sinal que pode ser usado para anular as solicitações.</span><span class="sxs-lookup"><span data-stu-id="8ca07-102">The signal which can be used to abort requests.</span></span>
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -40,7 +40,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      <span data-ttu-id="8ca07-103">Descreve as políticas de integridade de cluster e aplicativo usadas para avaliar a integridade do cluster e os filtros para selecionar quais entidades de cluster a ser retornado.</span><span class="sxs-lookup"><span data-stu-id="8ca07-103">Describes the cluster and application health policies used to evaluate the cluster health and the filters to select which cluster entities to be returned.</span></span>
+      <span data-ttu-id="8ca07-104">Se a política de integridade do cluster estiver presente, ele é usado para avaliar os eventos de cluster e os nós de cluster.</span><span class="sxs-lookup"><span data-stu-id="8ca07-104">If the cluster health policy is present, it is used to evaluate the cluster events and the cluster nodes.</span></span> <span data-ttu-id="8ca07-105">Se não estiver presente, os usos de avaliação de integridade a política de integridade do cluster definida no manifesto do cluster ou a política de integridade do cluster padrão.</span><span class="sxs-lookup"><span data-stu-id="8ca07-105">If not present, the health evaluation uses the cluster health policy defined in the cluster manifest or the default cluster health policy.</span></span>
+      <span data-ttu-id="8ca07-106">Por padrão, cada aplicativo é avaliado usando sua diretiva de integridade do aplicativo específico, definida no manifesto do aplicativo ou a política de integridade padrão, se nenhuma política é definida no manifesto.</span><span class="sxs-lookup"><span data-stu-id="8ca07-106">By default, each application is evaluated using its specific application health policy, defined in the application manifest, or the default health policy, if no policy is defined in manifest.</span></span>
+      <span data-ttu-id="8ca07-107">Se o mapa de política de integridade do aplicativo for especificado, e ele tem uma entrada para um aplicativo, a política de integridade do aplicativo especificado é usada para avaliar a integridade do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="8ca07-107">If the application health policy map is specified, and it has an entry for an application, the specified application health policy is used to evaluate the application health.</span></span>
+      <span data-ttu-id="8ca07-108">Os usuários podem especificar filtros muito flexíveis para selecionar quais entidades de cluster para incluir na resposta.</span><span class="sxs-lookup"><span data-stu-id="8ca07-108">Users can specify very flexible filters to select which cluster entities to include in response.</span></span> <span data-ttu-id="8ca07-109">A seleção pode ser feita com base no estado de integridade de entidades e com base na hierarquia.</span><span class="sxs-lookup"><span data-stu-id="8ca07-109">The selection can be done based on the entities health state and based on the hierarchy.</span></span>
+      <span data-ttu-id="8ca07-110">A consulta pode retornar vários níveis filhos das entidades com base em filtros especificados.</span><span class="sxs-lookup"><span data-stu-id="8ca07-110">The query can return multi-level children of the entities based on the specified filters.</span></span> <span data-ttu-id="8ca07-111">Por exemplo, ele pode retornar um aplicativo com um nome especificado e para este aplicativo, retornar apenas os serviços que estão em erro ou aviso e todas as partições e réplicas para um desses serviços.</span><span class="sxs-lookup"><span data-stu-id="8ca07-111">For example, it can return one application with a specified name, and for this application, return only services that are in Error or Warning, and all partitions and replicas for one of these services.</span></span>
     optional: true
     syntax:
       content: 'clusterHealthChunkQueryDescription?: ClusterHealthChunkQueryDescription'
@@ -55,7 +61,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="a2652-102">{object} [customHeaders] Cabeçalhos de solicitação personalizado que serão aplicados antes que a solicitação é enviada definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="a2652-102">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="8ca07-112">{object} [customHeaders] Cabeçalhos de solicitação personalizado que serão aplicados antes que a solicitação é enviada definido pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="8ca07-112">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
@@ -70,7 +76,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="a2652-103">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="a2652-103">Callback which fires upon download progress.</span></span>
+    summary: <span data-ttu-id="8ca07-113">Retorno de chamada que é acionada mediante o andamento do download.</span><span class="sxs-lookup"><span data-stu-id="8ca07-113">Callback which fires upon download progress.</span></span>
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -85,7 +91,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="a2652-104">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="a2652-104">Callback which fires upon upload progress.</span></span>
+    summary: <span data-ttu-id="8ca07-114">Retorno de chamada que é acionada mediante o progresso do carregamento.</span><span class="sxs-lookup"><span data-stu-id="8ca07-114">Callback which fires upon upload progress.</span></span>
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -100,7 +106,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="a2652-105">O número de milissegundos que uma solicitação pode levar antes encerrado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="a2652-105">The number of milliseconds a request can take before automatically being terminated.</span></span>
+    summary: <span data-ttu-id="8ca07-115">O número de milissegundos que uma solicitação pode levar antes encerrado automaticamente.</span><span class="sxs-lookup"><span data-stu-id="8ca07-115">The number of milliseconds a request can take before automatically being terminated.</span></span>
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -115,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: '<span data-ttu-id="8ca07-116">O tempo limite do servidor para executar a operação em segundos.</span><span class="sxs-lookup"><span data-stu-id="8ca07-116">The server timeout for performing the operation in seconds.</span></span> <span data-ttu-id="8ca07-117">Esse tempo limite Especifica a duração de tempo que o cliente está disposto a esperar a conclusão da operação solicitada.</span><span class="sxs-lookup"><span data-stu-id="8ca07-117">This timeout specifies the time duration that the client is willing to wait for the requested operation to complete.</span></span> <span data-ttu-id="8ca07-118">O valor padrão para esse parâmetro é 60 segundos.</span><span class="sxs-lookup"><span data-stu-id="8ca07-118">The default value for this parameter is 60 seconds.</span></span> <span data-ttu-id="8ca07-119">Valor padrão: 60.</span><span class="sxs-lookup"><span data-stu-id="8ca07-119">Default value: 60.</span></span>'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

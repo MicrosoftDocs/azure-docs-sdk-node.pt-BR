@@ -1,0 +1,210 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription'
+    name: StatelessServiceUpdateDescription
+    fullName: StatelessServiceUpdateDescription
+    children:
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.correlationScheme'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.defaultMoveCost'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.flags'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.instanceCount'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.loadMetrics'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.placementConstraints'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.scalingPolicies'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.serviceKind'
+      - '@azure/servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="2ccdb-101">Descreve uma atualização para um serviço sem monitoração de estado.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-101">Describes an update for a stateless service.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.correlationScheme'
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-102">O esquema de correlação.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-102">The correlation scheme.</span></span>
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceCorrelationDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.defaultMoveCost'
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2ccdb-103">O custo de movimentação para o serviço.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-103">The move cost for the service.</span></span> <span data-ttu-id="2ccdb-104">Os valores possíveis incluem: ''Zero'', ''Mínimo'', ''Médio'', ''High''</span><span class="sxs-lookup"><span data-stu-id="2ccdb-104">Possible values include: ''Zero'', ''Low'', ''Medium'', ''High''</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: MoveCost'
+      return:
+        type:
+          - '@azure/servicefabric.MoveCost'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="2ccdb-105">Sinalizadores que indica se a outras propriedades são definidas.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-105">Flags indicating whether other properties are set.</span></span> <span data-ttu-id="2ccdb-106">Cada uma das propriedades associadas corresponde a um sinalizador especificado abaixo, que, se definido, indique que a propriedade é especificada.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-106">Each of the associated properties corresponds to a flag, specified below, which, if set, indicate that the property is specified.</span></span>
+      <span data-ttu-id="2ccdb-107">Essa propriedade pode ser uma combinação desses sinalizadores obtidos usando o operador de 'OR' bit a bit.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-107">This property can be a combination of those flags obtained using bitwise 'OR' operator.</span></span>
+      <span data-ttu-id="2ccdb-108">Por exemplo, se o valor fornecido for 6, em seguida, os sinalizadores para ReplicaRestartWaitDuration (2) e QuorumLossWaitDuration (4) são definidos.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-108">For example, if the provided value is 6 then the flags for ReplicaRestartWaitDuration (2) and QuorumLossWaitDuration (4) are set.</span></span>
+      - <span data-ttu-id="2ccdb-109">Nenhum - não indica que todas as outras propriedades são definidas.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-109">None - Does not indicate any other properties are set.</span></span> <span data-ttu-id="2ccdb-110">O valor é zero.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-110">The value is zero.</span></span>
+      - <span data-ttu-id="2ccdb-111">TargetReplicaSetSize/InstanceCount - indica se a propriedade TargetReplicaSetSize (para serviços com monitoração de estado) ou a propriedade InstanceCount (para serviços sem monitoração de estado) está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-111">TargetReplicaSetSize/InstanceCount - Indicates whether the TargetReplicaSetSize property (for Stateful services) or the InstanceCount property (for Stateless services) is set.</span></span> <span data-ttu-id="2ccdb-112">O valor é 1.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-112">The value is 1.</span></span>
+      - <span data-ttu-id="2ccdb-113">ReplicaRestartWaitDuration - indica o ReplicaRestartWaitDuration propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-113">ReplicaRestartWaitDuration - Indicates the ReplicaRestartWaitDuration property is set.</span></span> <span data-ttu-id="2ccdb-114">O valor é 2.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-114">The value is  2.</span></span>
+      - <span data-ttu-id="2ccdb-115">QuorumLossWaitDuration - indica o QuorumLossWaitDuration propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-115">QuorumLossWaitDuration - Indicates the QuorumLossWaitDuration property is set.</span></span> <span data-ttu-id="2ccdb-116">O valor é</span><span class="sxs-lookup"><span data-stu-id="2ccdb-116">The value is</span></span>
+      4.
+      - <span data-ttu-id="2ccdb-117">StandByReplicaKeepDuration - indica que o StandByReplicaKeepDuration propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-117">StandByReplicaKeepDuration - Indicates the StandByReplicaKeepDuration property is set.</span></span> <span data-ttu-id="2ccdb-118">O valor é 8.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-118">The value is 8.</span></span>
+      - <span data-ttu-id="2ccdb-119">MinReplicaSetSize - indica o MinReplicaSetSize propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-119">MinReplicaSetSize - Indicates the MinReplicaSetSize property is set.</span></span> <span data-ttu-id="2ccdb-120">O valor é 16.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-120">The value is 16.</span></span>
+      - <span data-ttu-id="2ccdb-121">PlacementConstraints - indica o PlacementConstraints propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-121">PlacementConstraints - Indicates the PlacementConstraints property is set.</span></span> <span data-ttu-id="2ccdb-122">O valor é 32.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-122">The value is 32.</span></span>
+      - <span data-ttu-id="2ccdb-123">PlacementPolicyList - indica o ServicePlacementPolicies propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-123">PlacementPolicyList - Indicates the ServicePlacementPolicies property is set.</span></span> <span data-ttu-id="2ccdb-124">O valor é</span><span class="sxs-lookup"><span data-stu-id="2ccdb-124">The value is</span></span>
+      64.
+      - <span data-ttu-id="2ccdb-125">Correlação - indica o CorrelationScheme propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-125">Correlation - Indicates the CorrelationScheme property is set.</span></span> <span data-ttu-id="2ccdb-126">O valor é 128.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-126">The value is 128.</span></span>
+      - <span data-ttu-id="2ccdb-127">As métricas - indica o ServiceLoadMetrics propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-127">Metrics - Indicates the ServiceLoadMetrics property is set.</span></span> <span data-ttu-id="2ccdb-128">O valor é 256.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-128">The value is 256.</span></span>
+      - <span data-ttu-id="2ccdb-129">DefaultMoveCost - indica o DefaultMoveCost propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-129">DefaultMoveCost - Indicates the DefaultMoveCost property is set.</span></span> <span data-ttu-id="2ccdb-130">O valor é 512.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-130">The value is 512.</span></span>
+      - <span data-ttu-id="2ccdb-131">ScalingPolicy - indica o ScalingPolicies propriedade está definida.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-131">ScalingPolicy - Indicates the ScalingPolicies property is set.</span></span> <span data-ttu-id="2ccdb-132">O valor é 1024.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-132">The value is 1024.</span></span>
+    optional: true
+    syntax:
+      content: 'flags?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.instanceCount'
+    name: instanceCount
+    fullName: instanceCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-133">A contagem de instâncias.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-133">The instance count.</span></span>
+    optional: true
+    syntax:
+      content: 'instanceCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.loadMetrics'
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-134">As métricas de carga do serviço.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-134">The service load metrics.</span></span>
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.placementConstraints'
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2ccdb-135">As restrições de posicionamento como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-135">The placement constraints as a string.</span></span> <span data-ttu-id="2ccdb-136">As restrições de posicionamento são expressões boolianas nas propriedades de nó, e permitem restringir um serviço a nós específicos com base nos requisitos do serviço.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-136">Placement constraints are boolean expressions on node properties and allow for restricting a service to particular nodes based on the service requirements.</span></span> <span data-ttu-id="2ccdb-137">Por exemplo, para colocar um serviço em nós em que NodeType é azul especifique o seguinte: "NodeColor == blue)".</span><span class="sxs-lookup"><span data-stu-id="2ccdb-137">For example, to place a service on nodes where NodeType is blue specify the following: "NodeColor == blue)".</span></span>'
+    optional: true
+    syntax:
+      content: 'placementConstraints?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.scalingPolicies'
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-138">Políticas de dimensionamento para este serviço.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-138">Scaling policies for this service.</span></span>
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ScalingPolicyDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-139">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="2ccdb-139">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: "Stateless"'
+      return:
+        type:
+          - '"Stateless"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatelessServiceUpdateDescription.servicePlacementPolicies'
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2ccdb-140">As políticas de posicionamento de serviço.</span><span class="sxs-lookup"><span data-stu-id="2ccdb-140">The service placement policies.</span></span>
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescriptionUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: '@azure/servicefabric.ServiceCorrelationDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.MoveCost'
+    name: MoveCost
+    spec.typeScript:
+      - name: MoveCost
+        fullName: MoveCost
+        uid: '@azure/servicefabric.MoveCost'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: '@azure/servicefabric.ScalingPolicyDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    name: 'ServicePlacementPolicyDescriptionUnion[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescriptionUnion
+        fullName: ServicePlacementPolicyDescriptionUnion
+        uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
+      - name: '[]'
+        fullName: '[]'
