@@ -1,0 +1,417 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.StatefulServiceDescription'
+    name: StatefulServiceDescription
+    fullName: StatefulServiceDescription
+    children:
+      - '@azure/servicefabric.StatefulServiceDescription.applicationName'
+      - '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+      - '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+      - '@azure/servicefabric.StatefulServiceDescription.flags'
+      - '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+      - '@azure/servicefabric.StatefulServiceDescription.initializationData'
+      - '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+      - '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+      - '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+      - '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+      - '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceName'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+      - '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+      - '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+      - '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+      - '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve um serviço com monitoração de estado.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.applicationName'
+    name: applicationName
+    fullName: applicationName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome do aplicativo, incluindo o '' fabric:'' ''fabric:''.'
+    optional: true
+    syntax:
+      content: 'applicationName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.correlationScheme'
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O esquema de correlação.
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceCorrelationDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.defaultMoveCost'
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O custo de movimentação para o serviço. Os valores possíveis incluem: ''Zero'', ''Mínimo'', ''Médio'', ''High'''
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: MoveCost'
+      return:
+        type:
+          - '@azure/servicefabric.MoveCost'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Sinalizadores que indica se a outras propriedades são definidas. Cada uma das propriedades associadas corresponde a um sinalizador especificado abaixo, que, se definido, indique que a propriedade é especificada.
+      Essa propriedade pode ser uma combinação desses sinalizadores obtidos usando o operador de 'OR' bit a bit.
+      Por exemplo, se o valor fornecido for 6, em seguida, os sinalizadores para QuorumLossWaitDuration (2) e StandByReplicaKeepDuration(4) são definidos.
+      - Nenhum - não indica que todas as outras propriedades são definidas. O valor é zero.
+      - ReplicaRestartWaitDuration - indica o ReplicaRestartWaitDuration propriedade está definida. O valor é 1.
+      - QuorumLossWaitDuration - indica o QuorumLossWaitDuration propriedade está definida. O valor é
+      2.
+      - StandByReplicaKeepDuration - indica que o StandByReplicaKeepDuration propriedade está definida. O valor é 4.
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.hasPersistedState'
+    name: hasPersistedState
+    fullName: hasPersistedState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Um sinalizador que indica se este é um serviço persistente que armazena estados no disco local.
+      Se for, em seguida, o valor dessa propriedade é true, se não for falsa.
+    syntax:
+      content: 'hasPersistedState: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.initializationData'
+    name: initializationData
+    fullName: initializationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Os dados de inicialização como uma matriz de bytes. Dados de inicialização são passados para instâncias de serviço ou réplicas quando eles são criados.
+    optional: true
+    syntax:
+      content: 'initializationData?: number[]'
+      return:
+        type:
+          - 'number[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.isDefaultMoveCostSpecified'
+    name: isDefaultMoveCostSpecified
+    fullName: isDefaultMoveCostSpecified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indica se a propriedade DefaultMoveCost for especificada.
+    optional: true
+    syntax:
+      content: 'isDefaultMoveCostSpecified?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.minReplicaSetSize'
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O tamanho mínimo do conjunto de réplicas como um número.
+    syntax:
+      content: 'minReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.partitionDescription'
+    name: partitionDescription
+    fullName: partitionDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A descrição da partição como um objeto.
+    syntax:
+      content: 'partitionDescription: PartitionSchemeDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.placementConstraints'
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'As restrições de posicionamento como uma cadeia de caracteres. As restrições de posicionamento são expressões boolianas nas propriedades de nó, e permitem restringir um serviço a nós específicos com base nos requisitos do serviço. Por exemplo, para colocar um serviço em nós em que NodeType é azul especifique o seguinte: "NodeColor == blue)".'
+    optional: true
+    syntax:
+      content: 'placementConstraints?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.quorumLossWaitDurationSeconds'
+    name: quorumLossWaitDurationSeconds
+    fullName: quorumLossWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A duração máxima, em segundos, durante a qual uma partição é permitida em um estado de perda de quorum.'
+    optional: true
+    syntax:
+      content: 'quorumLossWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.replicaRestartWaitDurationSeconds'
+    name: replicaRestartWaitDurationSeconds
+    fullName: replicaRestartWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'A duração, em segundos, entre a inatividade de uma réplica e a criação de uma nova réplica.'
+    optional: true
+    syntax:
+      content: 'replicaRestartWaitDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.scalingPolicies'
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Políticas de dimensionamento para este serviço.
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ScalingPolicyDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceDnsName'
+    name: serviceDnsName
+    fullName: serviceDnsName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O nome DNS do serviço. Ele requer que o serviço de sistema DNS seja habilitada no cluster do Service Fabric.
+    optional: true
+    syntax:
+      content: 'serviceDnsName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceKind'
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'serviceKind: "Stateful"'
+      return:
+        type:
+          - '"Stateful"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceLoadMetrics'
+    name: serviceLoadMetrics
+    fullName: serviceLoadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As métricas de carga do serviço.
+    optional: true
+    syntax:
+      content: 'serviceLoadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O nome completo do serviço com '' fabric:'' ''fabric:''.'
+    syntax:
+      content: 'serviceName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePackageActivationMode'
+    name: servicePackageActivationMode
+    fullName: servicePackageActivationMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'O modo de ativação do pacote de serviço a ser usado para um serviço. Os valores possíveis incluem: ''SharedProcess'', ''ExclusiveProcess'''
+    optional: true
+    syntax:
+      content: 'servicePackageActivationMode?: ServicePackageActivationMode'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePackageActivationMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.servicePlacementPolicies'
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: As políticas de posicionamento de serviço.
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescriptionUnion[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.serviceTypeName'
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Nome do tipo de serviço conforme especificado no manifesto do serviço.
+    syntax:
+      content: 'serviceTypeName: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.standByReplicaKeepDurationSeconds'
+    name: standByReplicaKeepDurationSeconds
+    fullName: standByReplicaKeepDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A definição em quanto tempo as réplicas em espera devem ser mantidas antes de serem removidos.
+    optional: true
+    syntax:
+      content: 'standByReplicaKeepDurationSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.StatefulServiceDescription.targetReplicaSetSize'
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O tamanho do conjunto de réplicas de destino como um número.
+    syntax:
+      content: 'targetReplicaSetSize: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: '@azure/servicefabric.ServiceCorrelationDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.MoveCost'
+    name: MoveCost
+    spec.typeScript:
+      - name: MoveCost
+        fullName: MoveCost
+        uid: '@azure/servicefabric.MoveCost'
+  - uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+    name: PartitionSchemeDescriptionUnion
+    spec.typeScript:
+      - name: PartitionSchemeDescriptionUnion
+        fullName: PartitionSchemeDescriptionUnion
+        uid: '@azure/servicefabric.PartitionSchemeDescriptionUnion'
+  - uid: '@azure/servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: '@azure/servicefabric.ScalingPolicyDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: '@azure/servicefabric.ServiceLoadMetricDescription'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServicePackageActivationMode'
+    name: ServicePackageActivationMode
+    spec.typeScript:
+      - name: ServicePackageActivationMode
+        fullName: ServicePackageActivationMode
+        uid: '@azure/servicefabric.ServicePackageActivationMode'
+  - uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion[]'
+    name: 'ServicePlacementPolicyDescriptionUnion[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescriptionUnion
+        fullName: ServicePlacementPolicyDescriptionUnion
+        uid: '@azure/servicefabric.ServicePlacementPolicyDescriptionUnion'
+      - name: '[]'
+        fullName: '[]'

@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ChaosEventsSegment'
+    name: ChaosEventsSegment
+    fullName: ChaosEventsSegment
+    children:
+      - '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+      - '@azure/servicefabric.ChaosEventsSegment.history'
+    langs:
+      - typeScript
+    type: interface
+    summary: Contém a lista de eventos do Chaos e o token de continuação para obter o próximo segmento.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O parâmetro do token de continuação é usado para obter o próximo conjunto de resultados. O token de continuação é incluído na resposta da API quando os resultados do sistema não couberem em uma única resposta. Quando esse valor for passado para a próxima chamada de API, a API retornará o próximo conjunto de resultados.
+      Se não houver nenhum mais resultados, o token de continuação não está incluído na resposta.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ChaosEventsSegment.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lista de eventos de caos que atendem aos critérios fornecidos pelo usuário.
+    optional: true
+    syntax:
+      content: 'history?: ChaosEventWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.ChaosEventWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ChaosEventWrapper[]'
+    name: 'ChaosEventWrapper[]'
+    spec.typeScript:
+      - name: ChaosEventWrapper
+        fullName: ChaosEventWrapper
+        uid: '@azure/servicefabric.ChaosEventWrapper'
+      - name: '[]'
+        fullName: '[]'

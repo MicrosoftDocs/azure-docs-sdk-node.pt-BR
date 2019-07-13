@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription'
+    name: BasicRetentionPolicyDescription
+    fullName: BasicRetentionPolicyDescription
+    children:
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+      - '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    langs:
+      - typeScript
+    type: interface
+    summary: Descreve a política de retenção básico.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.minimumNumberOfBackups'
+    name: minimumNumberOfBackups
+    fullName: minimumNumberOfBackups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'É o número mínimo de backups a serem retidos em qualquer momento. Se especificado com um não valor igual a zero, os backups não serão excluídos mesmo que os backups passou a duração da retenção e tem o número de backups menor ou igual a ele.'
+    optional: true
+    syntax:
+      content: 'minimumNumberOfBackups?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionDuration'
+    name: retentionDuration
+    fullName: retentionDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'É a duração mínima para o qual um backup criado, permanecerá armazenado no armazenamento e pode ser excluído depois que abrangem de tempo. Ele deve ser especificado no formato ISO8601.'
+    syntax:
+      content: 'retentionDuration: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.BasicRetentionPolicyDescription.retentionPolicyType'
+    name: retentionPolicyType
+    fullName: retentionPolicyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'retentionPolicyType: "Basic"'
+      return:
+        type:
+          - '"Basic"'
+    package: '@azure/servicefabric'

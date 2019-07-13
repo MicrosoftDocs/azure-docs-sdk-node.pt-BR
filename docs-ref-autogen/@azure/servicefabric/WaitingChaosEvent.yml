@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.WaitingChaosEvent'
+    name: WaitingChaosEvent
+    fullName: WaitingChaosEvent
+    children:
+      - '@azure/servicefabric.WaitingChaosEvent.kind'
+      - '@azure/servicefabric.WaitingChaosEvent.reason'
+      - '@azure/servicefabric.WaitingChaosEvent.timeStampUtc'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Descreve um evento que é gerado quando o Chaos está esperando para o cluster ficar pronto para a falha, por exemplo, o Chaos pode estar aguardando a atualização em andamento concluir o Chaos.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "Waiting"'
+      return:
+        type:
+          - '"Waiting"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Descreve por que o WaitingChaosEvent foi gerado, por exemplo, devido a uma atualização de cluster.'
+    optional: true
+    syntax:
+      content: 'reason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.timeStampUtc'
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O carimbo de hora de UTC quando esse evento Chaos foi gerado.
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

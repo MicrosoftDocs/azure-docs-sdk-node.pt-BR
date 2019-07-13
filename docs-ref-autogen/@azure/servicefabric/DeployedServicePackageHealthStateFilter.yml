@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Define os critérios de correspondência para determinar se um pacote de serviço implantado deve ser incluído como um filho de um aplicativo implantado no bloco de integridade do cluster.
+      Os pacotes de serviço implantado são retornados apenas se as entidades pai correspondam a um filtro especificado na descrição de consulta de parte do cluster integridade. O pai implantou o aplicativo e seu aplicativo pai deve ser incluído no bloco de integridade do cluster.
+      Um filtro pode corresponder a zero, implantados de um ou vários pacotes, dependendo de suas propriedades de serviço.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      O filtro para o estado de integridade dos pacotes de serviço implantado. Ele permite selecionar pacotes de serviço implantados se elas corresponderem os estados de integridade desejadas.
+      Os valores possíveis são o valor de inteiro de um dos seguintes estados de integridade. Serão retornados somente os pacotes de serviços implantados que corresponderem ao filtro. Todos os pacotes de serviço implantados são usados para avaliar o estado de integridade agregado do aplicativo primário implantado.
+      Se não for especificado, o valor padrão é None, a menos que a ID do pacote de serviço implantado é especificada.
+      Se o filtro tem valor padrão e a ID do pacote de serviço implantado for especificado, o pacote de serviço implantado correspondente será retornado.
+      Os valores de estado são enumerações baseadas no sinalizador. Assim, o valor pode ser uma combinação desses valores obtidos, usando o operador 'OR' bit a bit.
+      Por exemplo, se o valor fornecido for 6, ela corresponde a pacotes de serviço implantados com o valor de HealthState Okey (2) e Warning (4).
+      - Default – valor padrão. Corresponde a qualquer HealthState. O valor é zero.
+      - None - filtro que não corresponde a qualquer valor de HealthState. Usado para não retornar qualquer resultado em um determinado conjunto de estados. O valor é 1.
+      - Okey - filtro que corresponde à entrada com o valor de HealthState Okey. O valor é 2.
+      - Warning - filtro que corresponde à entrada com HealthState valor Warning. O valor é 4.
+      - Error - filtro que corresponde à entrada com o valor de HealthState Error. O valor é 8.
+      - All - filtro que corresponde à entrada com qualquer valor de HealthState. O valor é 65535. Valor padrão: 0.
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      O nome do manifesto do serviço que identifica os pacotes de serviço implantado que corresponde ao filtro.
+      Se for especificado, o filtro é aplicado apenas para os pacotes de serviço implantado especificada, se houver.
+      Se nenhum pacote de serviço implantado com o nome de manifesto especificado existir, nada será retornado no bloco de integridade de cluster com base nesse filtro.
+      Se houver qualquer pacote de serviço implantado, eles são incluídos no bloco de integridade do cluster se ele respeita as outras propriedades de filtro.
+      Se não os pacotes de serviço especificado, todos implantados que correspondem aos filtros pai (se houver) são levados em consideração e correspondidos em relação os outros membros de filtro, como o filtro de estado de integridade.
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      A ID de ativação de um pacote de serviço implantado que corresponde ao filtro.
+      Se não for especificado, o filtro se aplica a todos os pacotes de serviço implantado que correspondem aos outros parâmetros.
+      Se for especificado, o filtro corresponde a apenas o pacote de serviço implantado com a ID de ativação especificado.
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

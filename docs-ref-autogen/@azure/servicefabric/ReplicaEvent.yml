@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaEvent'
+    name: ReplicaEvent
+    fullName: ReplicaEvent
+    children:
+      - '@azure/servicefabric.ReplicaEvent.category'
+      - '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+      - '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+      - '@azure/servicefabric.ReplicaEvent.kind'
+      - '@azure/servicefabric.ReplicaEvent.partitionId'
+      - '@azure/servicefabric.ReplicaEvent.replicaId'
+      - '@azure/servicefabric.ReplicaEvent.timeStamp'
+    langs:
+      - typeScript
+    type: interface
+    summary: Representa a base para todos os eventos de réplica.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.category'
+    name: category
+    fullName: category
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A categoria de evento.
+    optional: true
+    syntax:
+      content: 'category?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.eventInstanceId'
+    name: eventInstanceId
+    fullName: eventInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O identificador para a instância de FabricEvent.
+    syntax:
+      content: 'eventInstanceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.hasCorrelatedEvents'
+    name: hasCorrelatedEvents
+    fullName: hasCorrelatedEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mostra se houver um disponível de eventos relacionados.
+    optional: true
+    syntax:
+      content: 'hasCorrelatedEvents?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Discriminador polimórfico
+    syntax:
+      content: 'kind: "ReplicaEvent"'
+      return:
+        type:
+          - '"ReplicaEvent"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uma ID interna usada pelo Service Fabric para identificar exclusivamente uma partição. Isso é um GUID gerado aleatoriamente quando o serviço foi criado. A ID de partição é exclusiva e não altera o tempo de vida do serviço. Se o mesmo serviço foi excluído e recriado as IDs de suas partições seria diferente.
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.replicaId'
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ID de uma réplica de serviço com estado. ReplicaId é usada pelo Service Fabric para identificar exclusivamente uma réplica de uma partição. Ele é exclusivo dentro de uma partição e não altera o tempo de vida da réplica. Se uma réplica é removida e outra réplica é criada no mesmo nó para a mesma partição, ele receberá um valor diferente para a id. Às vezes, a id de uma instância de serviço sem monitoração de estado também é conhecida como uma id de réplica.'
+    syntax:
+      content: 'replicaId: number'
+      return:
+        type:
+          - number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaEvent.timeStamp'
+    name: timeStamp
+    fullName: timeStamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: O evento de tempo foi registrado.
+    syntax:
+      content: 'timeStamp: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
