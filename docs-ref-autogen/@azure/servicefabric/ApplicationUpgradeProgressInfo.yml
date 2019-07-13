@@ -1,0 +1,338 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo'
+    name: ApplicationUpgradeProgressInfo
+    fullName: ApplicationUpgradeProgressInfo
+    children:
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.currentUpgradeDomainProgress'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.failureReason'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.failureTimestampUtc'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.name'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.nextUpgradeDomain'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.rollingUpgradeMode'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.startTimestampUtc'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.targetApplicationTypeVersion'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.typeName'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.unhealthyEvaluations'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDescription'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomainDurationInMilliseconds'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomainProgressAtFailure'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomains'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDurationInMilliseconds'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeState'
+      - '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeStatusDetails'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ec6a3-101">Descreve os parâmetros para uma atualização de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-101">Describes the parameters for an application upgrade.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.currentUpgradeDomainProgress'
+    name: currentUpgradeDomainProgress
+    fullName: currentUpgradeDomainProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-102">Informações sobre o domínio de atualização em andamento atual.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-102">Information about the current in-progress upgrade domain.</span></span>
+    optional: true
+    syntax:
+      content: 'currentUpgradeDomainProgress?: CurrentUpgradeDomainProgressInfo'
+      return:
+        type:
+          - '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.failureReason'
+    name: failureReason
+    fullName: failureReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ec6a3-103">A causa de uma falha de atualização que resultaram em FailureAction que está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-103">The cause of an upgrade failure that resulted in FailureAction being executed.</span></span> <span data-ttu-id="ec6a3-104">Os valores possíveis incluem: ''None'', ''Interrupted'', ''HealthCheck'', ''UpgradeDomainTimeout'', ''OverallUpgradeTimeout''</span><span class="sxs-lookup"><span data-stu-id="ec6a3-104">Possible values include: ''None'', ''Interrupted'', ''HealthCheck'', ''UpgradeDomainTimeout'', ''OverallUpgradeTimeout''</span></span>'
+    optional: true
+    syntax:
+      content: 'failureReason?: FailureReason'
+      return:
+        type:
+          - '@azure/servicefabric.FailureReason'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.failureTimestampUtc'
+    name: failureTimestampUtc
+    fullName: failureTimestampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-105">A estimados datetime UTC quando a atualização falhou e FailureAction foi executada.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-105">The estimated UTC datetime when the upgrade failed and FailureAction was executed.</span></span>
+    optional: true
+    syntax:
+      content: 'failureTimestampUtc?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ec6a3-106">O nome do aplicativo de destino, incluindo o '' fabric:'' ''fabric:''.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-106">The name of the target application, including the ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.nextUpgradeDomain'
+    name: nextUpgradeDomain
+    fullName: nextUpgradeDomain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-107">O nome do próximo domínio de atualização a ser processado.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-107">The name of the next upgrade domain to be processed.</span></span>
+    optional: true
+    syntax:
+      content: 'nextUpgradeDomain?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ec6a3-108">O modo usado para monitorar a integridade durante uma atualização sem interrupção.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-108">The mode used to monitor health during a rolling upgrade.</span></span> <span data-ttu-id="ec6a3-109">Os valores são UnmonitoredAuto, UnmonitoredManual e monitorado.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-109">The values are UnmonitoredAuto, UnmonitoredManual, and Monitored.</span></span> <span data-ttu-id="ec6a3-110">Os valores possíveis incluem: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Monitored''.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-110">Possible values include: ''Invalid'', ''UnmonitoredAuto'', ''UnmonitoredManual'', ''Monitored''.</span></span> <span data-ttu-id="ec6a3-111">Valor padrão: ''UnmonitoredAuto''.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-111">Default value: ''UnmonitoredAuto''.</span></span>'
+    optional: true
+    syntax:
+      content: 'rollingUpgradeMode?: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.startTimestampUtc'
+    name: startTimestampUtc
+    fullName: startTimestampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-112">A estimados datetime UTC quando a atualização foi iniciada.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-112">The estimated UTC datetime when the upgrade started.</span></span>
+    optional: true
+    syntax:
+      content: 'startTimestampUtc?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.targetApplicationTypeVersion'
+    name: targetApplicationTypeVersion
+    fullName: targetApplicationTypeVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-113">A versão do tipo de aplicativo de destino (encontrada no manifesto do aplicativo) para a atualização do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-113">The target application type version (found in the application manifest) for the application upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'targetApplicationTypeVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.typeName'
+    name: typeName
+    fullName: typeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-114">O nome de tipo de aplicativo conforme definido no manifesto do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-114">The application type name as defined in the application manifest.</span></span>
+    optional: true
+    syntax:
+      content: 'typeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-115">Lista de avaliações de integridade que resultaram no atual estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-115">List of health evaluations that resulted in the current aggregated health state.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDescription'
+    name: upgradeDescription
+    fullName: upgradeDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ec6a3-116">Descreve os parâmetros para uma atualização de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-116">Describes the parameters for an application upgrade.</span></span> <span data-ttu-id="ec6a3-117">Observe que a descrição de atualização substitui a descrição do aplicativo existente.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-117">Note that upgrade description replaces the existing application description.</span></span> <span data-ttu-id="ec6a3-118">Isso significa que, se o parâmetro não for especificado, os parâmetros existentes nos aplicativos serão substituídos pela lista de parâmetros vazia.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-118">This means that if the parameters are not specified, the existing parameters on the applications will be overwritten with the empty parameters list.</span></span>
+      <span data-ttu-id="ec6a3-119">Isso faria com que o aplicativo usasse o valor padrão dos parâmetros do manifesto de aplicativo.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-119">This would result in the application using the default value of the parameters from the application manifest.</span></span> <span data-ttu-id="ec6a3-120">Se você não quiser alterar quaisquer valores de parâmetro existente, obtenha os parâmetros do aplicativo pela primeira vez usando a consulta de GetApplicationInfo e, em seguida, forneça esses valores como parâmetros neste ApplicationUpgradeDescription.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-120">If you do not want to change any existing parameter values, please get the application parameters first using the GetApplicationInfo query and then supply those values as Parameters in this ApplicationUpgradeDescription.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDescription?: ApplicationUpgradeDescription'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationUpgradeDescription'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomainDurationInMilliseconds'
+    name: upgradeDomainDurationInMilliseconds
+    fullName: upgradeDomainDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-121">A quantidade total estimada de tempo gasto no processamento de domínio de atualização atual.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-121">The estimated total amount of time spent processing the current upgrade domain.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomainDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomainProgressAtFailure'
+    name: upgradeDomainProgressAtFailure
+    fullName: upgradeDomainProgressAtFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-122">Informações sobre o andamento do domínio de atualização no momento da falha de atualização.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-122">Information about the upgrade domain progress at the time of upgrade failure.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomainProgressAtFailure?: FailureUpgradeDomainProgressInfo'
+      return:
+        type:
+          - '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDomains'
+    name: upgradeDomains
+    fullName: upgradeDomains
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-123">Lista de domínios de atualização e seus status.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-123">List of upgrade domains and their statuses.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDomains?: UpgradeDomainInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeDomainInfo[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeDurationInMilliseconds'
+    name: upgradeDurationInMilliseconds
+    fullName: upgradeDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-124">A quantidade total estimada de tempo gasto no processamento da atualização geral.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-124">The estimated total amount of time spent processing the overall upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeState'
+    name: upgradeState
+    fullName: upgradeState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ec6a3-125">O estado do domínio de atualização.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-125">The state of the upgrade domain.</span></span> <span data-ttu-id="ec6a3-126">Os valores possíveis incluem: ''Invalid'', ''RollingBackInProgress'', ''RollingBackCompleted'', ''RollingForwardPending'', ''RollingForwardInProgress'', ''RollingForwardCompleted'', ''Failed''</span><span class="sxs-lookup"><span data-stu-id="ec6a3-126">Possible values include: ''Invalid'', ''RollingBackInProgress'', ''RollingBackCompleted'', ''RollingForwardPending'', ''RollingForwardInProgress'', ''RollingForwardCompleted'', ''Failed''</span></span>'
+    optional: true
+    syntax:
+      content: 'upgradeState?: UpgradeState'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationUpgradeProgressInfo.upgradeStatusDetails'
+    name: upgradeStatusDetails
+    fullName: upgradeStatusDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ec6a3-127">Mais informações detalhadas sobre o status da atualização pendente.</span><span class="sxs-lookup"><span data-stu-id="ec6a3-127">Additional detailed information about the status of the pending upgrade.</span></span>
+    optional: true
+    syntax:
+      content: 'upgradeStatusDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+    name: CurrentUpgradeDomainProgressInfo
+    spec.typeScript:
+      - name: CurrentUpgradeDomainProgressInfo
+        fullName: CurrentUpgradeDomainProgressInfo
+        uid: '@azure/servicefabric.CurrentUpgradeDomainProgressInfo'
+  - uid: '@azure/servicefabric.FailureReason'
+    name: FailureReason
+    spec.typeScript:
+      - name: FailureReason
+        fullName: FailureReason
+        uid: '@azure/servicefabric.FailureReason'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationUpgradeDescription'
+    name: ApplicationUpgradeDescription
+    spec.typeScript:
+      - name: ApplicationUpgradeDescription
+        fullName: ApplicationUpgradeDescription
+        uid: '@azure/servicefabric.ApplicationUpgradeDescription'
+  - uid: '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+    name: FailureUpgradeDomainProgressInfo
+    spec.typeScript:
+      - name: FailureUpgradeDomainProgressInfo
+        fullName: FailureUpgradeDomainProgressInfo
+        uid: '@azure/servicefabric.FailureUpgradeDomainProgressInfo'
+  - uid: '@azure/servicefabric.UpgradeDomainInfo[]'
+    name: 'UpgradeDomainInfo[]'
+    spec.typeScript:
+      - name: UpgradeDomainInfo
+        fullName: UpgradeDomainInfo
+        uid: '@azure/servicefabric.UpgradeDomainInfo'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.UpgradeState'
+    name: UpgradeState
+    spec.typeScript:
+      - name: UpgradeState
+        fullName: UpgradeState
+        uid: '@azure/servicefabric.UpgradeState'

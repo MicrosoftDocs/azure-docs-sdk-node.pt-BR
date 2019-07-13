@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.WaitingChaosEvent'
+    name: WaitingChaosEvent
+    fullName: WaitingChaosEvent
+    children:
+      - '@azure/servicefabric.WaitingChaosEvent.kind'
+      - '@azure/servicefabric.WaitingChaosEvent.reason'
+      - '@azure/servicefabric.WaitingChaosEvent.timeStampUtc'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="51eae-101">Descreve um evento que é gerado quando o Chaos está esperando para o cluster ficar pronto para a falha, por exemplo, o Chaos pode estar aguardando a atualização em andamento concluir o Chaos.</span><span class="sxs-lookup"><span data-stu-id="51eae-101">Describes a Chaos event that gets generated when Chaos is waiting for the cluster to become ready for faulting, for example, Chaos may be waiting for the on-going upgrade to finish.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="51eae-102">Discriminador polimórfico</span><span class="sxs-lookup"><span data-stu-id="51eae-102">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Waiting"'
+      return:
+        type:
+          - '"Waiting"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.reason'
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="51eae-103">Descreve por que o WaitingChaosEvent foi gerado, por exemplo, devido a uma atualização de cluster.</span><span class="sxs-lookup"><span data-stu-id="51eae-103">Describes why the WaitingChaosEvent was generated, for example, due to a cluster upgrade.</span></span>'
+    optional: true
+    syntax:
+      content: 'reason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.WaitingChaosEvent.timeStampUtc'
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="51eae-104">O carimbo de hora de UTC quando esse evento Chaos foi gerado.</span><span class="sxs-lookup"><span data-stu-id="51eae-104">The UTC timestamp when this Chaos event was generated.</span></span>
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'

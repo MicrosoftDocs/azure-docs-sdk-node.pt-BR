@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthState'
+    name: ApplicationHealthState
+    fullName: ApplicationHealthState
+    children:
+      - '@azure/servicefabric.ApplicationHealthState.aggregatedHealthState'
+      - '@azure/servicefabric.ApplicationHealthState.name'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="efe56-101">Representa o estado de integridade de um aplicativo, que contém o identificador do aplicativo e o estado de integridade agregado.</span><span class="sxs-lookup"><span data-stu-id="efe56-101">Represents the health state of an application, which contains the application identifier and the aggregated health state.</span></span>'
+    extends:
+      name: '@azure/servicefabric.EntityHealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthState.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="efe56-102">O estado de integridade de uma entidade do Service Fabric, como o Cluster, nó, aplicativo, serviço, partição, réplica etc. Os valores possíveis incluem: ''Inválido'', ''Okey'', ''Warning'', ''Error'', ''Unknown''</span><span class="sxs-lookup"><span data-stu-id="efe56-102">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthState.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="efe56-103">O nome do aplicativo, incluindo o '' fabric:'' ''fabric:''.</span><span class="sxs-lookup"><span data-stu-id="efe56-103">The name of the application, including the ''fabric:'' URI scheme.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthState'
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: '@azure/servicefabric.EntityHealthState'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
